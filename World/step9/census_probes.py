@@ -77,7 +77,7 @@ CASES = [
     ('D12 Gen 4:24 = [77]  ("sevenfold... seventy and seven" — שבעתים "sevenfold" is an adverb, not read: UNMOVED; the hand had typed [7, 77] and the first run read it)', ('Gen', 4, 24), [77]),
     # THE NUMBERS WALK 3b (2026-09-10): FOUR PRE-EXISTING FALSE READINGS SURFACED BY THE SITTING'S DIFF, typed to FAIL before the rules — the seven-stem's homographs
     ('E1  Gen 41:29 = [7]  ("seven years of great PLENTY" — שָׂבָע with the SIN dot is plenty, not seven; the hand read [7, 7])', ('Gen', 41, 29), [7]),
-    ('E2  Gen 41:34 = [5, 7]  ("a fifth... IN THE SEVEN years of PLENTY" — בְּשֶׁבַע the true seven before the starred plenty-word: UNMOVED; the hand had typed [5] and the first run read the ink)', ('Gen', 41, 34), [5, 7]),
+    ('E2  Gen 41:34 = [7]  ("a fifth... IN THE SEVEN years of PLENTY" — בְּשֶׁבַע the true seven before the starred plenty-word; at 3b the row read [5, 7] with the piel "take a FIFTH" as five — RETYPED at 9b when rule (27) starred the verb: the 3b probe\'s own comment had read the ink as [5, 7] and P27a below holds the seat now)', ('Gen', 41, 34), [7]),
     ('E3  Deut 6:11 = []  ("and you shall eat and be SATED" — the sin dot; was [7])', ('Deut', 6, 11), []),
     ('E4  Gen 25:8 = []  ("old and FULL of days" — the sin dot; was [7])', ('Gen', 25, 8), []),
     ('E5  Exod 22:10 = [2]  ("the OATH of the LORD shall be between the two of them" — שְׁבֻעַת with the qubuts is the oath; was [7, 2])', ('Exod', 22, 10), [2]),
@@ -156,7 +156,7 @@ CASES = [
     ('R26 Num 31:48 = []  (the same phrase: UNMOVED)', ('Num', 31, 48), []),
     ('R27 Exod 28:10 = [6, 1]  ("six of their names on the one stone, and the names of THE six remaining" — the article-numeral with no chain after it: UNMOVED)', ('Exod', 28, 10), [6, 1]),
     ('R28 Deut 19:9 = [3]  ("upon THESE THREE" — UNMOVED)', ('Deut', 19, 9), [3]),
-    ('R29 Num 31:30 = [1]  ("one drawn out of THE fifty" — the ratio\'s fifty silent by the standing rule: UNMOVED, named and left)', ('Num', 31, 30), [1]),
+    ('R29 Num 31:30 = [1/50]  ("one held out of THE fifty" — THE RATIO: named and left at 5b as [1], RETYPED TO FAIL at THE NUMBERS WALK 11b, 2026-09-12: the rate Fraction(1, 50) replaces the one, the fifty never counted)', ('Num', 31, 30), [Fraction(1, 50)]),
     ('R30 Num 16:2 = [250]  ("fifty and two hundred" without the article: UNMOVED)', ('Num', 16, 2), [250]),
     ('R31 Num 16:17 = [250]  (the same: UNMOVED)', ('Num', 16, 17), [250]),
     ('R32 Exod 38:25 = [100, 1775]  (the accounts\' seat of the same 1,775 — R4 UNMOVED)', ('Exod', 38, 25), [100, 1775]),
@@ -210,6 +210,89 @@ ORDS = [   # the ordinal reader must keep "second" and lose the construct
     ('O11 Lev 25:11 ordinals = [50]  ("a jubilee that FIFTIETH year shall be to you" — was [])', ('Lev', 25, 11), [50]),
 ]
 CASES.append(('R43 Num 33:38 = [1]  (the day "on the first" — the numbers reader UNMOVED; the hand had typed this row into the ORDINALS list on the first FAIL run — it read [5], the ordinal reader\'s own answer — a probe typed into the wrong list, retyped here)', ('Num', 33, 38), [1]))
+
+# ---- THE NUMBERS WALK 9b (2026-09-11; NUMBERS_WALK.md "Sitting 9b"): THE OFFERINGS CALENDAR'S THREE RULES, written to FAIL before the code —
+#      (25) THE DISJUNCTIVE ON A UNIT BEFORE "AND" + A UNIT closes the number (M-26 at the conjoined case: the etnachta on "one" before "and
+#      seven lambs" at Num 28:19, on "one" before "and five curtains" at Exod 36:10; the join under a CONJUNCTIVE kept — Gen 8:13's "in the ONE
+#      and six hundredth year", a qadma), measured on the whole Tanakh (twenty-three seats); (26) THE PLENE TENTH-NOUN עשור ("on the tenth" of
+#      the month; "days or ten") = 10 — sixteen seats, one word; (27) THE FIVE-STEM'S THREE HOMOGRAPHS by the points on the stem — the piel "take
+#      a fifth" (a hiriq under the chet, Gen 41:34), the participle "armed" (a qubuts under the mem, Exod 13:18), the noun "a fifth" (a holam
+#      under the chet, Gen 47:26) — words, never numerals ----
+CASES += [
+    ('P25a Num 28:19 = [2, 1, 7]  ("two bulls, and ONE ram, | and seven lambs" — the etnachta on "one" closes before "and seven"; was [2, 8])', ('Num', 28, 19), [2, 1, 7]),
+    ('P25b Exod 36:10 = [5, 1, 1, 5, 1, 1]  ("five curtains one to ONE, | and five curtains... one to one" — the etnachta on the second "one"; was [5, 1, 6, 1, 1])', ('Exod', 36, 10), [5, 1, 1, 5, 1, 1]),
+    ('R50 Gen 8:13 = [601, 1]  ("in the ONE and six hundredth year" — "one" under a qadma, a conjunctive, before "and six": the join KEPT — UNMOVED)', ('Gen', 8, 13), [601, 1]),
+    ('R51 Exod 12:18 = [14, 21]  ("the ONE and twentieth day" — the definite one under a darga before "and twenty": UNMOVED)', ('Exod', 12, 18), [14, 21]),
+    ('R52 Num 1:41 = [41500]  ("one and forty thousand and five hundred" — "one" under a conjunctive before "and forty": UNMOVED)', ('Num', 1, 41), [41500]),
+    ('P26a Num 29:7 = [10]  ("and on the TENTH of this seventh month" — the plene tenth-noun; was [])', ('Num', 29, 7), [10]),
+    ('P26b Lev 23:27 = [10]  ("but on the TENTH of the seventh month is the day of atonements"; was [])', ('Lev', 23, 27), [10]),
+    ('P26c Gen 24:55 = [10]  ("let the maiden stay with us days, or TEN" — the bare noun, a ten of days; was [])', ('Gen', 24, 55), [10]),
+    ('R53 Exod 12:3 = [10]  ("on the TENTH of this month" — the defective form, read 10 since the parser\'s first day: UNMOVED)', ('Exod', 12, 3), [10]),
+    ('P27a Gen 41:34 = [7]  ("and let him take a FIFTH of the land of Egypt in the seven years of plenty" — the piel verb starred; was [5, 7])', ('Gen', 41, 34), [7]),
+    ('P27b Exod 13:18 = []  ("and ARMED went up the children of Israel" — the passive participle starred; was [50])', ('Exod', 13, 18), []),
+    ('P27c Gen 47:26 = []  ("to Pharaoh for the FIFTH part" — the noun starred; was [5])', ('Gen', 47, 26), []),
+    # THE NUMBERS WALK sitting 10b (2026-09-12; NUMBERS_WALK.md "Sitting 10b"): the vows' chapter carries NO numeral — its three OATH-tokens are spelled with the letters of "seven" and the parser STARS them (3b's rule on the seven-stem's homographs, by the vowel points); regressions on the unchanged parser, green before and after
+    ('R54 Num 30:3 = []  ("or SWEARS AN OATH to bind a bond on his soul" — שבעה* starred, the seven-stem\'s oath homograph: UNMOVED)', ('Num', 30, 3), []),
+    ('R55 Num 30:11 = []  ("or bound a bond on her soul BY AN OATH" — בשבעה* starred: UNMOVED)', ('Num', 30, 11), []),
+    ('R56 Num 30:14 = []  ("every vow and every OATH OF binding to afflict a soul" — שבעת* starred: UNMOVED)', ('Num', 30, 14), []),
+]
+
+# ---- THE NUMBERS WALK 11b (2026-09-12; NUMBERS_WALK.md "Sitting 11b"): MIDIAN'S GAP — (28) THE RATIO "ONE OF THE N": a unit ONE (with at most one
+#      non-numeral token after it — the counted noun) followed by "from" in its three forms (מן "from", the poetic מני "from", the מ-prefix on the
+#      numeral) and a numeral phrase (an article-bearing chain, or a bare word after the prefix) is the RATE Fraction(1, N) — the one replaced, the N
+#      never counted (its tokens starred by verse_words); the class measured at the reading (six Bible seats) and its poetic form found beside them
+#      at the compile (Job 9:3, 33:23 — read [1, 1000] since the parser's first day); written to FAIL on the parser 10b left ----
+CASES += [
+    ('K1  Num 31:28 = [1/500]  ("one soul from five the hundreds" — the counted noun between the one and the from-prefixed five, the article on the hundreds; was [1])', ('Num', 31, 28), [Fraction(1, 500)]),
+    ('K2  Num 31:47 = [1/50]  ("the held one from the fifty" — was [1])', ('Num', 31, 47), [Fraction(1, 50)]),
+    ('K3  Eccl 7:28 = [1/1000]  ("one man from a thousand" — the from-prefix on the thousand; was [1])', ('Eccl', 7, 28), [Fraction(1, 1000)]),
+    ('K4  Ezek 45:15 = [1/200]  ("one lamb from the flock, from the two hundred" — the second from carries the numeral, the first a noun; was [1])', ('Ezek', 45, 15), [Fraction(1, 200)]),
+    ('K5  Neh 11:1 = [1/10, 9]  ("one from the ten to dwell in Jerusalem... and nine the parts in the cities"; was [1, 9])', ('Neh', 11, 1), [Fraction(1, 10), 9]),
+    ('K6  Job 9:3 = [1/1000]  ("he could not answer him one of a thousand" — the poetic from; was [1, 1000])', ('Job', 9, 3), [Fraction(1, 1000)]),
+    ('K7  Job 33:23 = [1/1000]  ("an interpreter, one of a thousand" — was [1, 1000])', ('Job', 33, 23), [Fraction(1, 1000)]),
+    ('K8  Judg 16:28 = [1/2]  ("that I may be avenged one [vengeance] of my two eyes" — the from-prefix on the construct two-of; THE CLASS PARTITIVE FORM the corpus diff surfaced as its ninth seat, read and accepted (Sotah 10a:3 the shelf seat of the verse); was [1])', ('Judg', 16, 28), [Fraction(1, 2)]),
+    ('R57 Deut 15:7 = [1]  ("from ONE of your brothers" — the from-prefix on the one itself, no numeral after: UNMOVED)', ('Deut', 15, 7), [1]),
+    ('R58 Gen 2:21 = [1]  ("one of his ribs" — a noun after the from: UNMOVED)', ('Gen', 2, 21), [1]),
+    ('R59 2Sam 24:12 = [3, 1]  ("three things... choose one of them" — a pronoun after the from: UNMOVED)', ('2Sam', 24, 12), [3, 1]),
+    ('R60 Josh 3:12 = [12, 1, 1]  ("twelve men... one man, one man per tribe" — no from, the next numeral stops the search: UNMOVED)', ('Josh', 3, 12), [12, 1, 1]),
+    ('R61 Deut 32:30 = [1, 1002]  ("how could ONE chase A THOUSAND, and TWO put a myriad to flight" — no from between the one and the thousand: the ratio rule leaves it; the join of "a thousand | and two" under the etnachta is a FALSE READING the regression probe found and the class measurement refused a rule for — 163 Tanakh seats of a ten-or-more numeral under a disjunctive before "and" + a numeral, the join RIGHT at every census seat (Num 1:21 = 46,500 the first) and wrong here alone, the parallelism of the poem: FILED in RESEARCH_LOG 2026-09-12, the standing reading typed as the tripwire)', ('Deut', 32, 30), [1, 1002]),
+]
+
+# ---- THE NUMBERS WALK 15b (2026-09-13; NUMBERS_WALK.md "Sitting 15b"): (29) THE BARE DUAL THOUSAND BY THE POINTS ON THE STEM — the dual
+#      אַלְפַּיִם ('two thousand': a sheva under the lamed, a patach with the dagesh in the pe; TWENTY-NINE Tanakh seats measured) had read only inside a
+#      compound (4:36, 4:40, 7:85, Exod 38:29, Dan 8:14 …); BARE it read nothing (Num 35:5 x4, 1 Kgs 7:26, 2 Kgs 18:23, Isa 36:8), the cubit as one
+#      (Josh 3:4), was swallowed (Josh 7:3, Judg 20:45) or read as a thousand (1 Sam 13:2); and the bare PLURAL אֲלָפִים ('thousands': a qamats under
+#      the lamed; 146 seats) after a conjunction took the dual's path — Ps 8:8 'sheep and OXEN' read [2000] since 1b. The rule: verse_words marks the
+#      dual by the points (the dual mark ~), ink_numbers reads the marked dual as 2,000 wherever it stands and the bare plural as a noun. Written to FAIL
+#      on the parser 14b left (nine FAIL measured: ref_runner_measure.out); the regressions unmoved before and after ----
+CASES += [
+    ('D1  Num 35:5 = [2000, 2000, 2000, 2000]  ("two thousand by the cubit" four times — the prefixed cubit no unit-noun mark; was [])', ('Num', 35, 5), [2000, 2000, 2000, 2000]),
+    ('D2  Josh 3:4 = [2000]  ("about two thousand cubits" — the approximation prefix; the cubit consumed as the unit noun; was [1])', ('Josh', 3, 4), [2000]),
+    ('D3  Josh 7:3 = [2000, 3000]  ("about two thousand men or about three thousand men" — the dual then the plural after a unit; was [3000])', ('Josh', 7, 3), [2000, 3000]),
+    ('D4  Judg 20:45 = [5000, 2000]  ("five thousand men … two thousand men" — was [5000])', ('Judg', 20, 45), [5000, 2000]),
+    ('D5  1Sam 13:2 = [3000, 2000, 1000]  ("three thousand … two thousand with Saul … and a thousand with Jonathan" — the dual had read as a thousand: was [3000, 1000])', ('1Sam', 13, 2), [3000, 2000, 1000]),
+    ('D6  1Kgs 7:26 = [2000]  ("two thousand baths it held" — the sea of Solomon; was [])', ('1Kgs', 7, 26), [2000]),
+    ('D7  2Kgs 18:23 = [2000]  ("two thousand horses" — was [])', ('2Kgs', 18, 23), [2000]),
+    ('D8  Isa 36:8 = [2000]  ("two thousand horses" — the parallel; was [])', ('Isa', 36, 8), [2000]),
+    ('D9  Ps 8:8 = []  ("sheep and OXEN, all of them" — the plural\'s consonants after the conjunction, a qamats under the lamed: a NOUN; the false reading [2000] since 1b, surfaced by the class measurement)', ('Ps', 8, 8), []),
+    ('R62 Num 4:36 = [2750]  ("two thousand seven hundred and fifty" — the dual inside a compound: UNMOVED)', ('Num', 4, 36), [2750]),
+    ('R63 Exod 38:29 = [70, 2400]  ("seventy talents and two thousand and four hundred shekels" — the dual with the conjunction: UNMOVED)', ('Exod', 38, 29), [70, 2400]),
+    ('R64 Dan 8:14 = [2300]  ("two thousand and three hundred" — UNMOVED)', ('Dan', 8, 14), [2300]),
+    ('R65 Num 7:85 = [130, 1, 70, 1, 2400]  ("two thousand and four hundred by the shekel of the sanctuary" — the definite ones cut, UNMOVED)', ('Num', 7, 85), [130, 1, 70, 1, 2400]),
+    ('R66 Exod 18:21 = [100, 50, 10]  ("rulers of thousands, rulers of hundreds …" — the bare plural a noun: UNMOVED)', ('Exod', 18, 21), [100, 50, 10]),
+    ('R67 Num 1:46 = [603550]  ("six hundred thousand and three thousands and five hundred and fifty" — the plural after a unit multiplies: UNMOVED)', ('Num', 1, 46), [603550]),
+    ('R68 Exod 32:28 = [3000]  ("about three thousands of men" — the construct after a unit: UNMOVED)', ('Exod', 32, 28), [3000]),
+    ('R69 Num 26:62 = [23000]  ("three and twenty thousand" — UNMOVED)', ('Num', 26, 62), [23000]),
+    ('R70 Ezra 2:3 = [2172]  ("two thousand a hundred seventy and two" — the dual heading a compound without the conjunction: UNMOVED)', ('Ezra', 2, 3), [2172]),
+    # THE CORPUS DIFF READ (15b): TWELVE verses moved for the nine predicted — the eight bare seats and Ps 8:8 as predicted; TWO PAUSAL DUALS the measure's
+    # pe-patach test could not see (a QAMATS under the pe in pause — the lamed's sheva the rule reads): 1 Chr 5:21 and Neh 7:71, both right now; and 1 Chr
+    # 21:5 'a thousand thousands' (אֶלֶף אֲלָפִים = 1,100,000 with the hundred thousand) — read [103000, 470000] since 1b (a FALSE reading: the bare plural
+    # after a thousand had taken the 2,000 path) and [1000, 100000, 470000] now (the plural a noun after the bare thousand — the multiplier form unread):
+    # THE THOUSAND THOUSANDS filed for Chronicles' walk (FOUR seats measured: 1 Chr 21:5, 22:14, 2 Chr 14:8 and Dan 7:10 the Aramaic — 22:14 and 14:8 unmoved by the rule, their plural dropped before and after), the standing reading typed as the tripwire.
+    ('R71 1Chr 5:21 = [50000, 250000, 2000, 100000]  ("donkeys two thousand" — the pausal dual, a qamats under the pe; found by the diff, right by the lamed\'s sheva)', ('1Chr', 5, 21), [50000, 250000, 2000, 100000]),
+    ('R72 Neh 7:71 = [2, 2000, 67]  ("silver minas two thousand" — the pausal dual under the etnachta; found by the diff)', ('Neh', 7, 71), [2, 2000, 67]),
+    ('R73 1Chr 21:5 = [1000, 100000, 470000]  (THE THOUSAND THOUSANDS — "a thousand thousands and a hundred thousand" = 1,100,000; false before (103,000) and false after: the tripwire, the class FILED)', ('1Chr', 21, 5), [1000, 100000, 470000]),
+]
 
 if __name__ == '__main__':
     ok = 0

@@ -20,20 +20,20 @@
 - Onkelos Exod 23:24 — MATERIAL. Idolatry verbs sharpened: "do not
   BOW to their errors (טַעֲוָתְהוֹן) nor SERVE them"; מצבותיהם
   ("their pillars") rendered קָמָתְהוֹן — demolish-and-shatter kept as
-  double verbs (פַגָרָא תְּפַגְרִנוּן וְתַבָּרָא תְתַבַּר).
+  double verbs (פַגָרָא תְּפַגְרִנוּן 'you shall utterly overthrow them' וְתַבָּרָא תְתַבַּר 'and utterly break').
 - Onkelos Exod 23:25 — context-plus. "You shall serve BEFORE the LORD
   your God" (קֳדָם — the service-preposition buffer), bread and water
   made "your FOOD and your DRINK."
 - Onkelos Exod 23:27 — context-plus. "My TERROR (אֵימְתִי)" sent ahead;
   the necks-turned rendering (מְחַזְרֵי קְדָל, "turners of the neck").
 - Onkelos Exod 23:28 — context. הצרעה (the hornet) rendered
-  עֲרָעִיתָא — carried as the creature, not allegorized.
+  עֲרָעִיתָא ('the hornet') — carried as the creature, not allegorized.
 - Onkelos Exod 23:29-31 — context. The little-by-little conquest
   (זְעֵיר זְעֵיר), the borders (Sea of Reeds to the Philistine sea,
   wilderness to the Euphrates) rendered plainly.
 - Onkelos Exod 23:32-33 — MATERIAL. "Cut no COVENANT (קְיָם) with them
   or with their ERRORS"; the closing snare-clause: "they will make
-  you SIN BEFORE ME (יְחַיְבוּן יָתָךְ קֳדָמָי)... it will be a
+  you SIN BEFORE ME (יְחַיְבוּן יָתָךְ קֳדָמָי 'they make you sin before Me')… it will be a
   STUMBLING-BLOCK (תַּקְלָא) to you" — liability vocabulary installed
   where the Hebrew has "sin against Me."
 

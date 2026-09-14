@@ -37,7 +37,7 @@
   cubits, horns of one piece, gold overlay and rim, two rings under
   the rim for the poles; and 37:29: the anointing oil and the
   incense made דְּכֵי עוֹבַד בּוּסְמָנוּ ("PURE, the work of the
-  PERFUMER") — the protected formulas (EX30-06's karet-guarded
+  PERFUMER") — the protected formulas (EX30-06's karet-guarded (guarded by excision) (guarded by excision) (guarded by excision)
   recipes) manufactured by the licensed craft only.
 
 ## Midrash Tanchuma anchored in 37:1-29 — 40 sections
@@ -224,7 +224,7 @@
   bitter water at Marah, and the sin at Shittim is healed by
   shittim-wood in the ark ("through that in which you sinned, you
   shall be healed") — the same-instrument doctrine that the
-  Vayakhel std 8:1 pre-provisioning row states from the other end.
+  Vayakhel std 8:1 pre-provisioning (provided beforehand) row states from the other end.
 - Midrash Tanchuma Buber, Vayakhel 10:2 — dup (build order as run +
   the Rome eyewitness + kapporet-atones + kings' array, std
   10:1-10:3 merged). Opened; the Rome testimony verified word for

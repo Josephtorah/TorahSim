@@ -20,7 +20,7 @@
   becomes "under the THRONE OF HIS GLORY (כָּרְסָא יְקָרֵהּ)" — the
   vision double-buffered (glory-layer + throne inserted); the sapphire
   brickwork made "a work of PRECIOUS STONE," the heavens' clearness
-  kept (לְבָרִירוּ).
+  kept (לְבָרִירוּ 'in clearness').
 - Onkelos Exod 24:11 — MATERIAL. "He laid not His hand on the nobles"
   rendered "there was NO INJURY (נִזְקָא) to the great ones"; "they
   beheld God, and ate and drank" rendered "they SAW the glory of the
@@ -35,16 +35,16 @@
 - Onkelos Exod 24:3 — MATERIAL. The two payloads distinguished: "all
   the WORDS (פִּתְגָמַיָא) of the LORD and all the JUDGMENTS (דִינַיָא)"
   — the narrative + the ordinances of this very parashah named as two
-  deliverables; the people answer with ONE VOICE (קָלָא חַד).
+  deliverables; the people answer with ONE VOICE (קָלָא חַד 'one voice').
 - Onkelos Exod 24:7 — MATERIAL. ספר הברית = סִפְרָא דִקְיָמָא ("the BOOK
   OF THE COVENANT") read ALOUD before the people; נעשה ונשמע rendered
   נַעְבֵּד וּנְקַבֵּל ("we will DO and we will RECEIVE") — acceptance
-  vocabulary, the receiving-verb the Targum uses for obedience
+  vocabulary, the receiving-verb the Targum (the Aramaic translation) uses for obedience
   throughout.
 - Onkelos Exod 24:8 — MATERIAL. The blood thrown on the altar
   לְכַפָּרָא עַל עַמָא ("TO ATONE FOR THE PEOPLE") — the covenant blood
   glossed as atonement inside the verse; "the blood of the covenant
-  which the LORD CUT (דִגְזַר) with you upon all these words."
+  which the LORD CUT (דִגְזַר 'cut') with you upon all these words."
 - Onkelos Exod 24:12 — MATERIAL. The tablets-verse itemized: "the
   TABLETS of stone, and the TORAH and the COMMANDMENT which I have
   written לְאַלָפֵיהוֹן (TO TEACH THEM)" — the teaching-purpose made

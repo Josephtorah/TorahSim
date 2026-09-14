@@ -19,7 +19,7 @@ Ten cases classified against the machine as it stood: A=0, B=7 (one
 partial), C=3. Holdings read in full before classifying: G18-05 (gen_18),
 G14-15 (gen_14), G32-16 (gen_32 — the ten-years law at Gen 16:3 with the
 'no proof, but a hint' grade), G17-11 (gen_17), G06-03 (gen_06 — the lean
-ve-khivshuha ketiv). Two modules compiled (engine.py); re-run: 8 of 8
+ve-khivshuha ketiv, the written form). Two modules compiled (engine.py); re-run: 8 of 8
 answered, 0 mismatches. ONE SPEC ERROR caught BY the engine and corrected
 TO the Mishnah (YEV_6_6_b — male+female divides the houses; correction note
 kept in the row). Full findings: REPORT.md.
@@ -175,7 +175,7 @@ WHO MAY ASK.
 
 ## ROUND 8 — THE KI TISA EXAM (2026-09-01, the rhythm's fifth cycle)
 The largest single-sitting cycle yet: FIVE units derived (corpus 106
-→ 111 — Onkelos 149 verses + Midrash Tanchuma Ki Tisa whole, both
+→ 111 — Onkelos 149 verses + Midrash Tanchuma (the collection) Ki Tisa whole, both
 recensions), stamped under the delegation, and EXAMINED the same
 sitting. MEMBERSHIP: 22 bare Mishnah rows citing Exod 30-34 (19
 read, 3 credits: Sanhedrin 7:6, Makkot 3:2, Pesachim 5:4 —
@@ -690,7 +690,7 @@ resolved by Ravina as partial nullification), F-091 → EX12-33
 second morning from 12:10's own doubled until-morning).
 ANTICIPATIONS — THE TABLE ROUND: EX23-07's word-by-word
 exemption table (seated at derivation) HELD against the whole
-Chagigah cluster; EX13-08's Masorah chain held R. Yosei
+Chagigah cluster; EX13-08's Masorah (the scribal tradition) chain held R. Yosei
 HaGelili's days-not-all-days VERBATIM before Eruvin 96a was
 opened; EX22-10's do-not-reorder file answered Temurah 4a;
 EX23-06's border-status table held the slave and stranger
@@ -813,7 +813,7 @@ across TWO units — BOTH taking their first Talmud-block seats:
 F-103 → EX28-13 (the frontplate's state machine behind
 EX28-06/EX28-11, which HELD — broken=off for all, the peg
 disputed on the verse's own two clauses [R. Yehuda's
-bear-by-contact vs R. Shimon's always-accepting w/ the Yom
+bear-by-contact vs R. Shimon's always-accepting (always susceptible) w/ the Yom
 Kippur linen proof]; the impurity scope w/ R. Yehuda's lone
 permitted arm; acceptance-not-calamity w/ Rav Ashi's dative
 gate; the plate's tamid exported to the tefillin's constant
@@ -918,7 +918,7 @@ is in the keeping is in the remembering") — THE EXACT LAW EX20-18
 has held since round 21: the sugya cites the machine's held seat
 as its OWN working example of the one-utterance pair. FINDINGS —
 four, all exo_20 (ONE unit ritual): F-109 → EX20-20 (the
-image-making scope machine: the replicable-attendants ladder w/
+image-making scope machine: the replicable-attendants (attendants one may copy) ladder w/
 the seven-lamp bar and the Hasmonean iron-tin-silver-gold
 progression; the four faces; the human face by revocalization;
 the four-domain serving census down to the tiny worm; the diagram
@@ -956,7 +956,7 @@ the build baraita now implements. THE CITE GATE FIRED HONESTLY
 mid-ritual — the grouped cite index hid "Zevachim 61b:5" (the
 round-16 lesson repeating) — fixed by naming every segment fully;
 and the gloss lint caught 7 on new content, fixed to 0 (2 legacy
-flags verified pre-existing at HEAD). Rituals COMPLETE (exo_20,
+flags verified pre-existing (there before) at HEAD). Rituals COMPLETE (exo_20,
 130 frozen units, regression 130/130), all 27 runners green,
 standing +4 rebaked (1277 → 1281, one per seat exactly), hash
 8b8fff1fa28953af unmoved, manifests 0 FAILED (13 verified 0

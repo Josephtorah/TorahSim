@@ -80,7 +80,7 @@
   habitation of Thy house" opened.
 - Midrash Tanchuma, Pekudei 2:2 — MATERIAL (light). R. Shimon bar
   Yochai: the Temple below aligned opposite the Temple above (the
-  מְכֻוָּן reading).
+  מְכֻוָּן ('aligned') reading).
 - Midrash Tanchuma, Pekudei 2:3 (⇐ Exod 38:21) — MATERIAL, the
   round's schema crown. THE TABERNACLE EQUALS CREATION, DAY BY DAY:
   day 1 heavens-as-curtain ↔ the tent curtains; day 2 the
@@ -118,7 +118,7 @@
   answer-formula; R. Levi's stopped-lying-lips row.
 - Midrash Tanchuma, Pekudei 3:1 — MATERIAL (light). Bezalel praised
   ABOVE ("see, I have called" — 31:2, to the angels) and BELOW
-  ("see, the LORD has called" — 35:30, to Israel) — the two רְאֵה
+  ("see, the LORD has called" — 35:30, to Israel) — the two רְאֵה ('see') ('see') ('see')
   tokens as two audiences.
 - Midrash Tanchuma, Pekudei 3:2 (⇐ Exod 38:21) — MATERIAL, the
   round's law crown. THE TWO-SIGNATORY RULE: "a faithful man

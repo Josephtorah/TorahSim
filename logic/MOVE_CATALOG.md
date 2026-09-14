@@ -431,6 +431,24 @@ Hebrew); Arakhin 15a:13 then bounds the reading's reach: the punishment
 (14:37) was for the evil report, not for this blasphemy. Recorded with
 the sitting's reading ledger (SH13A-08) and the exam docket's rows.
 
+**Exemplar 10 (2026-09-12, THE NUMBERS WALK sitting 10b — the vows'
+compile, cold_run_vows.py; the SECOND consonant-fragment cousin):** Num
+30:14 אִישָׁהּ יְקִימֶנּוּ ("her husband shall confirm IT") — R. Akiva
+(Nedarim 87b:1) hears יְקִימֶנּוּ ("he shall confirm it") as יָקִים מִמֶּנּוּ
+("he shall confirm PART of it"): the one word cut into two, the mem
+serving both halves, and the law follows the second hearing — a part
+confirmed is the whole confirmed; then "he shall annul it" (יְפֵרֶנּוּ)
+is likened to it by the verse's own juxtaposition, though R. Yishmael
+objects on the page that the annulment verb carries no mem. The Rabbis
+(87b:2) read the juxtaposition the other way: what he annulled he
+annulled, what he confirmed he confirmed, no more. The compiled cell
+carries the three arms as the row partial_annulment (the Mishnah's arm
+R. Yishmael's — Nedarim 11:6). By the catalog's own rule at exemplar 8,
+a THIRD consonant-fragment exemplar registers its own move; this is the
+second (ben Chakinai's "and in YOU" the first), logged here with the
+difference named: not a re-pointing of held consonants but a re-cutting
+of the word's boundary, the mem read twice.
+
 ## M-17 — THE TENSION RESOLUTION (two tokens in one clause pull opposite ways; the law is the geometry satisfying both)
 Registered 2026-09-04 (the Lev 1-8 offering-engine consolidation,
 cold_run_offerings.py). Exemplar: Lev 1:5 writes both וזרקו ("and
@@ -1051,6 +1069,28 @@ generalizes it to four seats (the flood's "no more", the goat-demons',
 is the teacher's; the enumeration is the machine's (logic/MIDDOT.md, the
 Sifrei's own case law on Korach, entry 8).
 
+Exemplar (16) — THE NUMBERS WALK sitting 8 (2026-09-11, the second
+census's reading): THE CENSUS COMMAND AT ITS SECOND SEAT. "Lift the head of
+all the congregation of the children of Israel from twenty years old and
+upward, by their fathers' house, all who go out to the host in Israel"
+(Num 26:2) diffed against 1:2-3: the second seat DROPS five clauses — "by
+their families", "by the number of names", "every male by their polls",
+"you shall count them by their hosts", "you and Aaron" — computed by set
+difference on the DB's tokens; and the addressee changes, "to Moses and
+to Eleazar" for "you and Aaron". The enumeration is the machine's; what
+the drops legislate (the families counted by name at 26:5-51 without the
+polls; the priest's son for the priest) is the reading's, labeled.
+Exemplar (17), the same sitting — NADAB AND ABIHU'S DEATH-NOTICE: "and
+Nadab and Abihu died when they brought near strange fire before the LORD"
+(26:61) diffed against 3:4 — four clauses DROPPED ("before the LORD" the
+first time, "in the wilderness of Sinai", "and they had no sons", "and
+Eleazar and Ithamar served as priests before Aaron their father") and one
+spelling LENGTHENED ("when they brought near" plene); and 26:63 against
+26:64 — one sentence twice, the priest's name and the place the only
+deltas, the second carrying the predicate "and among these there was not a
+man of". Three diffs measured on the bytes, no legislation claimed (the
+predicate is the ink's own).
+
 ## M-24 — THE REPETITION TEST (a law's scope across eras is decided by whether the code writes it twice; the second writing is the edge)
 ⚠ A GENERALIZATION (the link review law, LR3, 2026-09-07): the rule is
 the tradition's own (Sanhedrin 59a:11-13) and its seven exemplars are
@@ -1176,6 +1216,37 @@ before עשר/עשרה ("ten"); census_probes rows for 7:13, 7:14 and the four
 true elevens; the proof the 7:86 checkpoint (12 × 10). **Middah
 correspondence:** none of the thirteen — the Masoretic layer as an
 instrument, the total as its witness.
+**Exemplars 3-4 (THE NUMBERS WALK sitting 9b, 2026-09-11 — the parser's
+rule 25, the compile of Numbers 28-29):** Num 28:19 פָּרִים בְּנֵי בָקָר
+שְׁנַיִם וְאַיִל אֶחָד וְשִׁבְעָה כְבָשִׂים ("two young bulls, ONE ram, AND SEVEN
+lambs") — read as consonants "one and seven" spells EIGHT ([2, 8]); the
+"one" carries the etnachta (the mid-verse pause, a disjunctive) and the
+parse is [2, 1, 7] — the same table the chapter writes at 28:11 and
+28:27 without the conjunction. Exod 36:10 חֲמֵשׁ הַיְרִיעֹת ("five curtains")... אַחַת אֶל
+אֶחָת ("one to one") וְחָמֵשׁ יְרִיעֹת ("AND FIVE curtains") —
+the same cut under the same accent: [5, 1, 1, 5, 1, 1], where the
+parser had read [5, 1, 6, 1, 1] since its first day. THE WHOLE-TANAKH
+MEASUREMENT (scratchpad, 2026-09-11): twenty-three seats of a unit
+followed by "and" + a unit; the bare "one" before "and + unit" under a
+disjunctive at these two Torah seats alone; every compound "one and N"
+of the four books joins under a CONJUNCTIVE (Exod 12:18 a darga; Num
+1:41, 2:16, 2:28, 31:34, 31:39) — and Gen 8:13 בְּאַחַת וְשֵׁשׁ מֵאוֹת שָׁנָה
+("in the ONE AND SIX HUNDREDTH year", a qadma on the "one") is the seat
+that REFUSES an accent-free rule: read apart it would be [1, 600], read
+joined it is 601 and the unit multiplies the hundreds. The rule as
+coded (cold_run_sequence.py's INK block, rule 25): a unit of one to
+nine carrying a disjunctive, followed by "and" + a unit, takes the bar.
+**A note beside the move — the second layer where the third does not
+decide (rule 27, the same sitting):** the five-stem's THREE HOMOGRAPHS
+are told apart by the VOWEL POINTS, not the accents — וְחִמֵּשׁ ("and he
+shall take a fifth", Gen 41:34; a hiriq under the chet — the piel verb,
+read FIVE by the parser since sitting 3b, the register gate's finding),
+חֲמֻשִׁים ("armed", Exod 13:18; Josh 1:14, 4:12; Judg 7:11 — a qubuts
+under the mem: read FIFTY since the parser's first day, found by the
+stem's census), חֹמֶשׁ ("a fifth", Gen 47:26 — a holam under the chet, the
+noun): all three now starred (a refused homograph) and silent; sitting
+1b's points-on-the-stem law at its fourth seat. The corpus-wide diff
+moved EXACTLY the ten verses predicted and no other.
 **Machine form BUILT (2026-09-10, THE NUMBERS WALK sitting 2b — the
 compile of Naso):** cold_run_sequence.py's INK block now carries the
 rule as typed — a "one" or "two" (אחד / אחת / שנים / שתים, with or
@@ -1243,3 +1314,134 @@ Judges, Samuel, Jeremiah and Ruth seats when their engines are asked.
 **Middah correspondence:** none of the thirteen or the thirty-two names
 it as such; nearest E11 (a divided sequence) — the division here is of
 voices, not of order.
+
+## M-28 — THE LETTER READ (a spelling that deviates from its own formula's other seats is read as a data channel — the deviant letters across several verses spelling one word)
+Registered 2026-09-11 (THE NUMBERS WALK sitting 9 — THE OFFERINGS
+CALENDAR; the ledger num_29_fall_festivals_2026-09-11.md, the Sifrei
+on Numbers 150:1; claim PN29A-05). The exemplar: Numbers 29:12-38 —
+the seven days of Sukkot are written as one formula repeated with the
+bulls falling by one, and the formula's closing words are the SAME at
+every day but three: the second day's goat-verse closes "and THEIR
+libations" (וְנִסְכֵּיהֶם, 29:19 — an extra mem) where the other days
+close "and its libation" (וְנִסְכָּהּ); the sixth day's closes "and its
+LIBATIONS" (וּנְסָכֶיהָ, 29:31 — an extra yod; the form's one seat in the
+Bible); the seventh day's pointer-verse reads "according to THEIR
+ordinance" (כְּמִשְׁפָּטָם, 29:33 — an extra mem) where the six others
+read כְּמִשְׁפָּט ("according to the ordinance"). Mem, yod, mem — מַיִם
+("water"): R. Yehudah ben Beteira derives Sukkot's water libation from
+the three letters (the Sifrei 150:1; Taanit 2b-3a; Shabbat 103b), and
+the machine VERIFIED the letters on the tokens of all fifteen verses —
+the five plain days plain, the three deviant days deviant, no fourth.
+The Sifrei carries the move beside two rival derivations of the same
+law (R. Akiva's induction from the seasons; R. Nathan's doubled verb
+"pour a pouring", 28:7 — M-15's kin): a dispute on the SOURCE with the
+law agreed, the dual track kept. **What separates it:** from M-23 (a
+law written twice is diffed seat against seat — whole clauses added,
+dropped, moved) and from M-26 (the accents deciding a number's parse):
+here the unit is the LETTER inside a formula the ink repeats verbatim —
+the deviation is measurable only because the formula is fixed, and the
+letters are read TOGETHER across verses as one word, the ink's own
+notarikon (the reading of scattered letters as a word). It is the
+tradition's declared data channel at its finest grain: a law carried
+by three letters that no clause states. **Machine form:** the formula
+census — the repeated line's tokens compared seat by seat, every
+deviation listed with its letter delta — then the deviations read as a
+string and matched against the tradition's recorded word; the compile
+of the offerings calendar (9b) holds the letters as a checked row and
+the water libation as the law the exam grades (Sukkah 4:9, 48b). Earlier
+kin on the record, not registered as this move: the plene and defective
+spellings at second seats (M-23's exemplars — "the firstborn" 26:5 /
+1:20, "when they brought near" 26:61 / 3:4), the eighty-five letters of
+10:35-36 (a count, not a word), the vav of "brought you up" (Exod 32:4 —
+one letter, one clause). **Middah correspondence:** none of the
+thirteen or the thirty-two names it; nearest E27 (the notarikon, the reading of one word's letters as
+several words) — here run in reverse, letters of several words read as
+one.
+
+## M-29 — THE EXEMPLAR'S LIMBS (the law of a whole FORM is read off its one Torah exemplar, limb by limb: the tradition asks "from where do we learn the laws of all conditions?" and answers "from the condition of the sons of Gad and Reuben")
+
+**The move (2026-09-12, THE NUMBERS WALK 12b — Numbers 32:20-24, 29-30):**
+the tradition does not legislate the law of conditions; it READS it off
+one chapter's stipulation, limb by limb, each limb a feature of the
+exemplar's own verses. Rava: "from where do we learn the laws of all
+conditions? they are derived from the condition of the children of Gad
+and the children of Reuben" (Babylonian Talmud Gittin 75a:11); Rav Adda
+bar Ahava (75a:14) and Rava again (75b:6) run the same sentence. THE
+LIMBS, each at its verse: (1) DOUBLED — "if they pass over ... and if
+they do not pass over" (32:29-30): R. Meir, every condition not doubled
+like this one is no condition (Mishnah Kiddushin 3:4; R. Chanina ben
+Gamliel's objection that the doubling was needed there for its own sake,
+61a:10-61b:8); (2) THE CONDITION BEFORE THE ACTION — "if ... then you
+shall give them the land of Gilead" (32:29 — Gittin 75a:12; Mishnah Bava
+Metzia 94a:3; Abba Chalafta in R. Meir's name 94a:7); (3) THE POSITIVE
+BEFORE THE NEGATIVE — 32:29 before 32:30 (Gittin 75b:6); (4) THE
+CONDITION'S MATTER AND THE ACT'S DISTINCT — to fight, to receive Gilead
+(75a:14-75b:1); (5) A CONDITION THAT CAN BE FULFILLED — R. Yehuda ben
+Teima against the Rabbis, the ruling as him (Bava Metzia 94a:11-14; R.
+Yochanan's "in one's power", Kiddushin 62a:12). Beside them the exemplar
+teaches the ACT'S TIMING — "on condition" is "from now" (Rav Huna in
+Rav's name, Gittin 75b:2): the gift takes effect at once under the
+condition, which is exactly how the chapter writes it (32:33 "and Moses
+gave to them" before any crossing). The exemplar's kin are then
+censused across the books — Cain's "if you do well ... and if you do not"
+(Genesis 4:7), Eliezer's oath (24:41), the blessings and the curses
+(Leviticus 26), Isaiah 1:19-20, the sotah's defective spelling, the
+heifer's third and seventh day (Kiddushin 61b:9-62a:7) — the form found
+wherever the tradition reads a doubled clause. **What separates it:**
+from M-22/M-23 (a rule generalized from a pair of seats, or a law
+written twice diffed) — here ONE paragraph is the whole form's statute,
+and its features are enumerated as limbs (the order of the clauses, the
+arms, the matters, the feasibility), the tradition's own "from where do
+we learn ALL". **Machine form:** the exemplar's verses parsed into arms
+(the positive 32:20-22 and 32:29, the negative 32:23 and 32:30) with
+their order asserted on the tokens; the limbs carried as one DATA row
+(the_conditions_four_limbs — five lines, each with its teacher and its
+verse) and the doubling's dispute as another (doubled_condition — R.
+Meir / R. Chanina, the scope arm monetary / ritual from Shevuot
+36a:27-29); the exam's rows on other conditions (a bill of divorce
+undoubled, the action before the condition, an impossible condition, a
+condition counter to the Torah) graded through the same cells; the
+chapter's own ledger written in the exemplar's shape — the debit open
+under the condition, the grant transferred "from now" (cold_run_gad_
+reuben.py F4 the_condition, F5 the_acceptance_and_the_charge, F6 the_
+grant). **Middah correspondence:** the sugya names none; nearest I3
+(the general rule from one verse — the exemplar as the whole form's
+source), with the doubling itself the kin of E-form readings of a
+repeated clause.
+
+## M-30 — THE RETREAT (two records of one event at two places are reconciled by a movement the ink does not narrate, and the ink's own count of stations is the check: "did Aaron die in Moserah? did he not die at Mount Hor? rather, from where Aaron died they retreated seven stations until Moserah")
+
+**The move (2026-09-12, THE NUMBERS WALK 13b — Numbers 33:30-38 against
+Deuteronomy 10:6-7):** the itinerary sets Aaron's death at Mount Hor
+(33:38) with Moseroth seven camps earlier (33:30) and Bene-jaakan after
+it (33:31); Deuteronomy 10:6 runs "from Beeroth-bene-jaakan to Moserah;
+THERE Aaron died" — the two names in the other order and the death at
+the other place. The tradition does not choose a seat and drop the
+other; it reads a MOVEMENT between them that neither text narrates:
+after the king of Arad came against them at the news of the death, they
+RETREATED seven stations back to Moserah, and the mourning was renewed
+there — so Deuteronomy's "there" is the place of the second mourning,
+not the death (Seder Olam Rabbah 9:2; the chukat runner's row moserah =
+the_retreat_of_seven_stations, sitting 6b). THE CHECK IS THE INK'S OWN
+COUNT: Moseroth is the 27th place on the list and Mount Hor the 34th —
+seven camps apart by index, computed at the reading and asserted at the
+compile (cold_run_journeys.py: PLACES_EN.index('Moseroth') + 7 ==
+PLACES_EN.index('Mount Hor')); the shelf's seven is the itinerary's
+seven. **What separates it:** from M-22 (a rule generalized across
+seats) and from the proleptic name (Hormah named at 21:3, used at
+14:45 — one name, two times): here two seats disagree on WHERE one
+event happened, and the reconciliation is a narrated-nowhere journey
+whose length the list itself supplies. Its kin on the shelf: the
+"backward" count of Moses' death from the crossing's marker (Kiddushin
+38a:5-6 — the tenth of Nisan less thirty-three days) — a date computed
+back along a run; and Rosh Hashanah 2b:13-3a:3's ordering of the
+fortieth year's events by "after he had slain Sihon". **Machine form:**
+the two orders carried as one DATA row (the_deuteronomy_order — the
+retreat's arm and the ink-alone arm), the count asserted on the list's
+indices, the tape untouched (the death's marker stands at 20:28; no
+second line for the retreat, which the ink never narrates — a
+retelling never writes an act twice). **Middah correspondence:** none
+named by the source; the form is a reconciliation of two seats (the
+thirteenth middah's family — two verses that contradict, resolved by a
+third thing — here the third thing is a walk, and the resolver is the
+list's own arithmetic).

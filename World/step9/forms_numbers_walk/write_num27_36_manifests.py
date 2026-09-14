@@ -1,0 +1,110 @@
+#!/usr/bin/env python3
+# THE TENT sitting 4 (2026-09-09) — THE CLAIMS of Numbers 27:1-23 (num_27_zelophehad_joshua, NM27-01..11) and 36:1-13
+# (num_36_heiresses, NM36-01..04), read off the two ledgers of this sitting, every claim LABELED (World/step9/CLAIM_LABELS.md's
+# vocabulary), a machine check where the ink allows — every he_contains substring CUT FROM THE SNAPSHOT STORE'S OWN BYTES
+# (sitting 3's lesson: the hand-typed vowel order is not the store's). Written once (the files must not exist).
+import json, os, re, sqlite3
+ROOT = '<repo-old>'
+OUT27 = f'{ROOT}/logic/oral_audit/manifests/num_27_zelophehad_joshua_claims.json'
+OUT36 = f'{ROOT}/logic/oral_audit/manifests/num_36_heiresses_claims.json'
+for o in (OUT27, OUT36): assert not os.path.exists(o), o
+led27 = open(f'{ROOT}/logic/oral_triage/num_27_zelophehad_joshua_2026-09-09.md', encoding='utf-8').read()
+led36 = open(f'{ROOT}/logic/oral_triage/num_36_heiresses_2026-09-09.md', encoding='utf-8').read()
+ci27 = set(re.findall(r'^(Sifrei Bamidbar \d+:\d+|Onkelos Num 27:\d+)$', led27.split('## CITE INDEX')[1], re.M)); assert len(ci27) == 46, len(ci27)
+ci36 = set(re.findall(r'^(Onkelos Num 36:\d+)$', led36.split('## CITE INDEX')[1], re.M)) | set(re.findall(r'^(Sifrei Bamidbar \d+:\d+) \(credited\)$', led36.split('## CITE INDEX')[1], re.M))
+assert len(ci36) == 16, len(ci36)
+db = sqlite3.connect(f'file:{ROOT}/torah_grok.SNAPSHOT-main-51801ca.sqlite?mode=ro', uri=True)
+def cut(book, ch, v, word, n):
+    """the store's own bytes: the verse's word whose consonantal form is `word` (found, never typed as an index), the longest
+    slash-piece (the stem — a prefix or suffix may sit beside it), its first n characters"""
+    rows = db.execute("SELECT w.idx, w.he FROM words w JOIN verses v ON w.verse_id=v.id WHERE v.book=? AND v.chapter=? AND v.verse=? ORDER BY w.idx", (book, ch, v)).fetchall()
+    plain = lambda h: ''.join(c for c in h if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
+    hit = [(i, h) for i, h in rows if plain(h) == word]
+    assert len(hit) == 1, (book, ch, v, word, hit)
+    idx, he = hit[0]
+    piece = max(he.split('/'), key=len)
+    assert len(piece) >= n, (he, n)
+    return idx, piece[:n]
+def hc(ref, word, n, note):
+    b, cv = ref.split(' '); c, v = map(int, cv.split(':'))
+    idx, sub = cut(b, c, v, word, n)
+    return {"type": "he_contains", "ref": ref, "idx": idx, "contains": sub, "note": note}
+
+C27 = [
+ {"id": "NM27-01", "source": "Sifrei Bamidbar 133:1; Sifrei Bamidbar 133:2; Onkelos Num 27:1", "ref": "Num 27:1",
+  "claim_en": "THE APPROACH AND THE COUNSEL. The daughters heard the land was apportioned to the tribes and not to females and took counsel: not as the mercies of flesh and blood are the mercies of the Place — His are on all (Ps 145:9). The pedigree: as Zelophehad was a firstborn so all of them — worthy daughters of a worthy man; as Joseph held the land dear (Gen 50:25) so they. THE NAMES' TWO ORDERS: 27:1 (with 26:33, Josh 17:3) against 36:11 — 'they were all equal'. Onkelos: 'of the SEED-family of Manasseh'. The feminine 'and they drew near' stands at 27:1 and Josh 17:4 alone — the case and its run (computed).",
+  "middah": "plain (the counsel from the apportionment's exclusion; the pedigree traced for praise; the names' two orders read as equality — E7's pair shape on 27:1 / 36:11, recorded in the note; the ink fact computed)",
+  "check": {"type": "token_count", "where": {"he_plain_joined": "ותקרבנה"}, "expect_total": 1, "expect_refs": ["Num 27:1"], "note": "the feminine approach verb — the Torah's one seat (Josh 17:4 the second in Scripture, off this store)"}},
+ {"id": "NM27-02", "source": "Sifrei Bamidbar 133:3; Onkelos Num 27:2; Onkelos Num 27:3", "ref": "Num 27:2-3",
+  "claim_en": "THE STANDING BEFORE THE COURT, THE DATE, THE IDENTITY ARM. They STOOD (Onkelos: stood — where 9:8's men wait) at the door of the tent of meeting; dated by the roster: 'only in the fortieth year, the year Aaron died' (33:38, Eleazar in the list). 'Before Moses and before Eleazar' — if Moses did not know, would Eleazar? invert the verse (R. Yoshiyah); the study house (Abba Chanin in R. Eliezer's name) — the halt's stage as at 9:6 and 15:33. R. AKIVA: 'wilderness' here / 'wilderness' at 15:32 — the gatherer is Zelophehad (the identity arm's second seat; 113:1's rebuke stands, the arm unassigned). The three congregations: the murmurers, the spies (14:35's 'who gathered', computed), Korach's; 'in his own sin' — he led no one (Onkelos: in his DEBT).",
+  "middah": "I2 (R. Akiva's verbal analogy 'wilderness' 27:3 / 15:32 taught by its teacher — a TRANSFER; the date by the roster from 33:38; the inverted verse or the study house recorded; the congregations by shared words)",
+  "check": hc("Num 27:3", "במדבר", 6, "'in the wilderness' — R. Akiva's shared word with 15:32")},
+ {"id": "NM27-03", "source": "Sifrei Bamidbar 133:4; Onkelos Num 27:4", "ref": "Num 27:4",
+  "claim_en": "THE PLEA RIDES THE LEVIRATE'S WORD. R. Yehuda: 'name' here and 'name' at Deut 25:6 — as name there is inheritance so here; as name there is seed so here. 'Because he has no son' after 'he had no sons' — they were wise and expounded: had there been a son's daughter we would make no claim. R. Natan: the women's strength — 'let us make a head' (14:4) against 'give us a holding'. The plea's verb 'be held back' is the unclean men's (9:7) and the tribes' (36:3-4) — computed; Onkelos renders all three with one idiom.",
+  "middah": "I2 (R. Yehuda's verbal analogy 'name' 27:4 / Deut 25:6 — inheritance and seed; the doubled 'no son' read by the daughters as a son's daughter barring; the shared plea verb computed)",
+  "check": hc("Num 27:4", "יגרע", 5, "'be withheld / diminished' — the three pleas' verb (9:7, 36:3-4)")},
+ {"id": "NM27-04", "source": "Sifrei Bamidbar 133:4; Onkelos Num 27:5", "ref": "Num 27:5",
+  "claim_en": "THE HALT'S THIRD FORM AND THE FOURTH UNCERTAINTY. 'And Moses brought their judgment near before the LORD' — no guard (Lev 24:12, Num 15:34), no 'stand and I will hear' (9:8): the case CARRIED IN by Moses in the causative verb that brings the offerings near (computed: eleven Torah seats); 'their judgment' once in the Tanakh (Onkelos: their CASE). R. Chidka, from Shimon HaShikmoni of R. Akiva's disciples: Moses KNEW that daughters inherit; the question was whether they inherit what is FIT (not yet possessed) as what is HELD — the uncertainty is the SCOPE. The section was fit to be said through Moses; the daughters merited it: merit through the meritorious, liability through the liable.",
+  "middah": "plain (R. Chidka's testimony on what Moses knew and what was asked; the halt's form an ink fact computed — the verb and the once-word)",
+  "check": hc("Num 27:5", "משפט", 4, "'their judgment' — the stem: THE LARGE NUN. The ink writes the word's final nun as a majuscule (Data/Num.xml seg x-large) and the snapshot store drops every large-letter segment of the Torah (four measured: Lev 11:42, Num 27:5, Deut 6:4 twice) — this token ends in a bare slash in the store, the only such token of its 80,052; whole in the XML and the Tanakh DB, where the once-in-the-Tanakh count is computed in the ledger")},
+ {"id": "NM27-05", "source": "Sifrei Bamidbar 134:1; Onkelos Num 27:6; Onkelos Num 27:7", "ref": "Num 27:6-7",
+  "claim_en": "THE OUTPUT: RIGHTLY, THE SECTION WRITTEN ON HIGH, THE THREE PORTIONS. The frame 'and the LORD SAID to Moses, SAYING' (computed: five Torah seats; the block's fourth frame form). 'Rightly do the daughters speak' — 'for so is this section written before Me on high': the rule pre-exists the case; 'happy the man whose words the Place acknowledges' — likewise 36:5, 14:20. 'Given shall be given' = their father's share; 'among their father's brothers' = Hepher's share; 'pass over the inheritance' = the firstborn's double — THREE PORTIONS; R. Eliezer b. Akiva (the Hebrew; the English b. Yaakov): also the uncles' share. Onkelos: 'transfer' at 27:7 against 'give' at 27:9-11.",
+  "middah": "plain (the Sifrei's clause-by-clause assignment of the three portions; the section written before Me; the frame an ink fact computed)",
+  "check": hc("Num 27:6", "לאמר", 4, "'saying' — the frame said-saying, against 15:35's bare said")},
+ {"id": "NM27-06", "source": "Sifrei Bamidbar 134:2; Onkelos Num 27:8", "ref": "Num 27:8",
+  "claim_en": "THE GENERATIONS' RULE AND THE ORDER'S FIRST DEGREES. 'To the children of Israel speak' — the hour told, the generations from the address. 'In all the others GIVE, here PASS OVER' (computed: the transfer verb at 27:8 alone among the inheritance verses) — Rebbi: only a daughter passes an inheritance, her son and husband inheriting her. THE FATHER PRECEDES THE BROTHERS (R. Yishmael b. R. Yose: for a daughter you pass over the father, not for the brothers); the father inherits — a-fortiori from his brothers who come by his power; THE SON'S DAUGHTER AS THE SON — a-fortiori from the daughters 'who were only for the hour'; females as males in every degree and males first — induction from sons and the redeemers (Lev 25:49). Onkelos: 'you shall TRANSFER his possession to his daughter'.",
+  "middah": "I1 (two a-fortioris — the father inherits, the son's daughter as the son from the daughters of Zelophehad; with the father-before-brothers from the transfer verb, Rebbi's transfer-by-a-daughter, and the induction females-as-males recorded)",
+  "check": hc("Num 27:8", "והעברתם", 6, "'and you shall pass over' — the daughter's verb, the Torah's one seat")},
+ {"id": "NM27-07", "source": "Sifrei Bamidbar 134:2; Sifrei Bamidbar 134:3; Onkelos Num 27:9; Onkelos Num 27:10; Onkelos Num 27:11", "ref": "Num 27:9-11",
+  "claim_en": "THE LAST DEGREES, THE WIFE, THE STATUTE. 'Give' to his brothers, to his father's brothers, to his flesh nearest of his family — 'of his family' the FATHER'S (1:2 'by their families, by their fathers' house'); the near in flesh first. THE HUSBAND INHERITS HIS WIFE — R. Akiva from 'of his family, and he shall inherit HER' (the feminine object; 'his flesh, the near' shared with Lev 21:2 alone — computed); R. Yishmael: from 36:8, 36:7, Josh 24:33 (Phinehas's hill in Ephraim) and 1 Chr 2:22 (Yair's cities). 'A STATUTE OF JUDGMENT' — the Torah gave the sages knowledge to rank the near (Onkelos: a DECREE of judgment); the phrase at 27:11 and 35:29 alone (computed).",
+  "middah": "plain (the degrees read clause by clause; R. Akiva's pronoun read of 'her' — the wife; R. Yishmael's route through Phinehas and Yair — E31 the story's silence read, in the note; 1:2 for the father's family; the shared phrases computed)",
+  "check": hc("Num 27:11", "לשארו", 5, "'to his flesh' — Lev 21:2's phrase, the wife's word")},
+ {"id": "NM27-08", "source": "Sifrei Bamidbar 134:4; Sifrei Bamidbar 134:5; Sifrei Bamidbar 135:1; Sifrei Bamidbar 136:1; Sifrei Bamidbar 136:2; Sifrei Bamidbar 136:3; Sifrei Bamidbar 137:1; Sifrei Bamidbar 137:2; Onkelos Num 27:12; Onkelos Num 27:13; Onkelos Num 27:14", "ref": "Num 27:12-14",
+  "claim_en": "MOSES' VIEWING AND HIS RECORDED SIN. Mount Abarim = Reuben's inheritance; Moses rejoiced at entering it, thinking the decree revoked, and poured out supplication — the Sifrei reads Deut 3:23-29 and 34:4 here (its own excursus: the requests refused one by one, the seeing granted; the third pass's material). 'As Aaron was gathered' — Moses desired that death. R. Shimon b. Elazar: Moses and Aaron died by KARET — 'because you did not sanctify Me' (Deut 32:51). Wherever a righteous one's death is told, his sin is told (R. Eliezer HaModai), that none say a hidden corruption. Onkelos: 'you refused My WORD'; Kadesh = Rekem.",
+  "middah": "plain (the narrative's own claims: Reuben's land, the desired death, the karet of the two leaders from Deut 32:51, the sin told with the death; the Sifrei's Deuteronomy excursus recorded as context)"},
+ {"id": "NM27-09", "source": "Sifrei Bamidbar 138:1; Sifrei Bamidbar 139:1; Sifrei Bamidbar 139:2; Onkelos Num 27:15; Onkelos Num 27:16; Onkelos Num 27:17", "ref": "Num 27:15-17",
+  "claim_en": "THE REQUEST FOR A LEADER. The righteous, about to die, set aside their own concerns for the congregation's; 'TO SAY' — tell me whether You appoint leaders: R. Eliezer b. Azaryah's four 'to say' requests each answered (Exod 6:12, Num 12:13, Deut 3:23, here). 'God of the spirits' — all spirits from Him; the living soul in its Owner's hand, at death in the treasury (Job 12:10, 1 Sam 25:29). 'A man over the congregation' = Joshua (Ps 78:25), unnamed lest strife rise between Moses' sons and his brother's sons. 'Who goes out before them' — at the head, in a troop, on the way, in his merits, WITH A COUNT (31:49). Onkelos: 'let the LORD APPOINT'.",
+  "middah": "E10 (the redundant 'to say' read as the request itself — the four seats; the four clauses of going out and coming in each expounded; Joshua identified by Ps 78:25's 'man'; the unnamed against strife)",
+  "check": hc("Num 27:15", "לאמר", 4, "'to say' — the redundant frame the Sifrei reads as the request")},
+ {"id": "NM27-10", "source": "Sifrei Bamidbar 140:1; Sifrei Bamidbar 140:2; Sifrei Bamidbar 141:1; Onkelos Num 27:18; Onkelos Num 27:19; Onkelos Num 27:20; Onkelos Num 27:21", "ref": "Num 27:18-21",
+  "claim_en": "THE COMMISSION. 'Take for YOURSELF' — whom you know worthy (Prov 27:18); 'a man in whom there is spirit' — who bears each one's spirit (Onkelos: the spirit of PROPHECY); 'lay your HAND' (singular — computed against 27:23's plural) — give him an interpreter to ask, expound and RULE in your lifetime, raised to the bench; 'OF your glory' — not all: Moses' face as the sun, Joshua's as the moon; 'stand him before Eleazar'; 'inquire by the judgment of the Urim' — not between himself and himself, not aloud: lips moving, the high priest answering; 'by his mouth they go out and come in' (Onkelos: by his WORD — the court's oracle). Onkelos: 'that they may ACCEPT from him'.",
+  "middah": "E2 (restriction — 'OF your glory' and not all of it, the sun and the moon; 'of him' not aloud; 'by the judgment of the Urim' not between himself; with 'take for yourself' and the interpreter recorded)",
+  "check": hc("Num 27:18", "ידך", 4, "'your hand' singular — the command's one hand")},
+ {"id": "NM27-11", "source": "Sifrei Bamidbar 141:2; Sifrei Bamidbar 141:3; Onkelos Num 27:22; Onkelos Num 27:23", "ref": "Num 27:22-23",
+  "claim_en": "THE INVESTITURE RUN. Moses did it WITH JOY, no regret for his son or his brother's sons; 'took' Joshua with words — the leaders' reward in the world to come; 'he laid his HANDS' (plural — the run exceeds the command's 'your hand', computed) — a full and overflowing vessel (Exod 33:11, Josh 1:8); 'commanded him as the LORD spoke by the hand of Moses' — with joy; Moses' powers unwaned (Deut 34:7). THE OFFICE INSTALLED by the hand-laying in the master's lifetime — the leadership's installing act, owed forward to Deut 34:9's second seat and the sixth book.",
+  "middah": "M-22 (the spec/run delta — the hand commanded at 27:18, the hands laid at 27:23 — read by the Sifrei as the overflowing vessel; the joy, the words, the unwaned powers recorded)",
+  "check": hc("Num 27:23", "ידיו", 4, "'his hands' plural — the run's two hands")},
+]
+C36 = [
+ {"id": "NM36-01", "source": "Onkelos Num 36:1; Onkelos Num 36:2; Onkelos Num 36:3; Onkelos Num 36:4", "ref": "Num 36:1-4",
+  "claim_en": "THE TRIBES' PLEA. The heads of the fathers of Gilead DREW NEAR (the unclean men's verb, 9:6 — computed) and spoke before Moses and the princes: 'the LORD commanded my lord to give the land by LOT... and my lord was commanded BY THE LORD (Onkelos: by the Word) to give Zelophehad's inheritance to his daughters' — the tribes cite the first output as standing law; if they marry into another tribe, 'our inheritance shall be DIMINISHED' (the three pleas' verb — 9:7, 27:4, 36:3-4; Onkelos's one idiom) and added to the other tribe's; 'and if the JUBILEE be' — even the release does not return it (the word's ninth Torah seat, computed: a reference to the release engine).",
+  "middah": "plain (the plea's argument read as it stands: the lot, the first ruling cited, the diminishing, the jubilee's reach; the shared verbs computed)",
+  "check": hc("Num 36:4", "היבל", 5, "'the jubilee' — the tribes' reach for the release")},
+ {"id": "NM36-02", "source": "Sifrei Bamidbar 134:1; Onkelos Num 36:5; Onkelos Num 36:6", "ref": "Num 36:5-6",
+  "claim_en": "THE SECOND OUTPUT'S FRAME AND THE THING. 'And Moses COMMANDED the children of Israel BY THE MOUTH OF THE LORD, saying' — no 'and the LORD said': the output relayed in Moses' mouth (the phrase's eighteen Torah seats, Lev 24:12's halt among them — computed); 'RIGHTLY the tribe of the sons of Joseph speak' — 27:7's word, the Sifrei's pair (134:1). 'THIS IS THE THING that the LORD commanded' (the formula's eight Torah seats, computed); 'as is good in their eyes they shall be wives' (Onkelos: to whoever is FITTING) — the permission; 'ONLY to the family of their father's tribe' — the limit.",
+  "middah": "plain (the frame and the formula as ink facts computed; the Sifrei's pairing of the two 'rightly' seats; permission and limit read as they stand — the reach rule waits for the Talmud at the compile)",
+  "check": hc("Num 36:5", "פי", 3, "'the mouth' — by the mouth of the LORD, Moses' frame")},
+ {"id": "NM36-03", "source": "Sifrei Bamidbar 134:2; Onkelos Num 36:7; Onkelos Num 36:8; Onkelos Num 36:9", "ref": "Num 36:7-9",
+  "claim_en": "THE TRANSFER BARRED, THE CLEAVING, THE DAUGHTER'S INHERITANCE. 'An inheritance shall not GO AROUND from tribe to tribe' (Onkelos: circulate); 'each man to his fathers' tribe's inheritance shall the children of Israel CLEAVE' — Gen 2:24's verb (computed). 'Every daughter who inherits an inheritance from the tribes' — the daughter inherits her MOTHER (Sifrei 134:2); with 36:7 the route R. Yishmael takes to the husband's inheritance (Phinehas's hill, Yair's cities). 36:9 repeats the bar with 'ANOTHER tribe'.",
+  "middah": "plain (the bar and the cleaving as they stand; the Sifrei's seat for the daughter inheriting her mother; the repeated bar at 36:9 — E10's shape, in the note)",
+  "check": hc("Num 36:7", "ידבקו", 6, "'shall cleave' — Gen 2:24's verb on the tribe's land")},
+ {"id": "NM36-04", "source": "Sifrei Bamidbar 133:2; Onkelos Num 36:10; Onkelos Num 36:11; Onkelos Num 36:12; Onkelos Num 36:13", "ref": "Num 36:10-13",
+  "claim_en": "THE EXECUTION AND THE COLOPHON. 'As the LORD commanded Moses, SO DID the daughters' — the report formula of Lev 24:23 and Num 15:36 on the fourth case: the execution is the daughters' own marriage. 'Mahlah, TIRZAH, Hoglah, Milcah and NOAH' — the second order (computed against 26:33, 27:1, Josh 17:3; the Sifrei: all equal); 'to the sons of their UNCLES' (Onkelos: their father's brothers); 'their inheritance REMAINED on the tribe of their father's family' — the ledger's close in the ink. 36:13: 'in the plains of Moab by the Jordan of Jericho' — Deut 1:5's site (computed): the book closes where the third pass opens.",
+  "middah": "plain (the report formula, the second order, the remaining inheritance and the colophon read as ink facts computed; the Sifrei's equality reading credited)",
+  "check": hc("Num 36:11", "תרצה", 4, "Tirzah SECOND — the names' second order")},
+]
+LABELS = {'plain', 'ink', 'H'} | {f'I{i}' for i in range(1, 14)} | {f'E{i}' for i in range(1, 33)}
+for cs, ci in ((C27, ci27), (C36, ci36)):
+    for c in cs:
+        for s in c['source'].split('; '):
+            assert s in ci, (c['id'], s)
+        code = c['middah'].split(' ')[0]
+        assert code in LABELS or re.fullmatch(r'M-\d\d', code), code
+        assert re.fullmatch(r'^(ink|plain|H|I\d{1,2}|E\d{1,2}|M-\d\d)(?:\s*\(.*\))?\s*$', c['middah']), c['middah']
+assert [c['id'] for c in C27] == ['NM27-%02d' % i for i in range(1, 12)] and [c['id'] for c in C36] == ['NM36-%02d' % i for i in range(1, 5)]
+open(OUT27, 'w', encoding='utf-8').write(json.dumps(C27, indent=1, ensure_ascii=False) + '\n')
+open(OUT36, 'w', encoding='utf-8').write(json.dumps(C36, indent=1, ensure_ascii=False) + '\n')
+for o, cs in ((OUT27, C27), (OUT36, C36)):
+    print('wrote', o, '| claims', len(cs), '| checks', sum('check' in c for c in cs), '| labels', [c['middah'].split(' ')[0] for c in cs])
+    for c in cs:
+        if 'check' in c and c['check']['type'] == 'he_contains': print('   ', c['id'], c['check']['ref'], c['check']['idx'], repr(c['check']['contains']))

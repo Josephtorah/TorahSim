@@ -78,6 +78,7 @@ books as run logs, Heaven's ledger closing across books, the land's rest debt co
 | 4 THE CURSOR | resume by REPLAYING the journal to a verse and handing back a live world — no saved state file, the journal the only truth; the tape stored as a segment with verse addresses so a position in it is a position in the text; new submissions append a new segment whose chain continues from the last line | the sequence runner split into stitch-the-tape and run-from-a-cursor; the tape segment | one sitting |
 | 5 SCENARIOS | the existing case files injected as labeled SCENARIO events into the live world at a chosen verse, the Mishnah row the expected answer — the world as the oracle | the case files routed through the live world | one sitting |
 | 6 THE READBACK (named 2026-09-09, D12; no design yet) | the text re-read against the ledger the run left — the third pass the shelf records (the repetition in the plains of Moab; understanding after the forty-year run): Deuteronomy's repetition of the laws read against the run's ledger first, the prophets' indictments against the open entries after (the effects law's target) | its design section waits for Deuteronomy | unsized |
+| 7 THE LOOP THAT WAITS (opened 2026-09-14, the owner: "ok go 1"; the design sections below) | (a) WRITE AS YOU GO — every journal line on disk and in the index at the end of its block (D14 THE SEAL); (b) THE STEPPER — the tape driven at the event grain with a pause; (c) THE PORT — a queue the loop reads between steps, the text its first producer | world_engine.py (one hook), world_journal.py (the live sink, the audit), the sequence runner (attach), live_probes.py | one sitting each |
 
 ORDER: 1 → 2 → 3 → 4 → 5. The sink first because it is cheapest and makes every run auditable at once;
 installation before the cursor, because a resumable world with every law in force from creation would save the
@@ -788,6 +789,110 @@ it has had its bound closed (the scenario's Num 27:5 — after the tape's last m
 is refused with the base named; the refusal is the honest answer until a design that journals the bound's right edge as
 its own later line (a candidate for step 6's sitting).
 
+OPEN ITEM (2026-09-12, THE NUMBERS WALK sitting 11b — Midian's compile; RESEARCH_LOG 2026-09-12 item 5; COMPILE_DEBT's sitting-11b box (i)):
+THE CURSOR'S AUDIT AND THE LATER CLOSE. cursor_probes.py fell from 6/6 to 1/6 (K3 alone passes) with no line of the cursor or the journal
+changed. The cause: the first close on the tape AFTER the probes' cursor (Num 27:1) of an entry written BEFORE it — moses' the_trumpets
+(written at 10:2, closed by value at 31:6) and israel_people's harass_the_midianites (25:17, closed at 31:7). Step 1's sink journals the
+engine's log after the run, and the log holds each ledger entry BY REFERENCE (world_engine._write appends the entry dict itself); World.close
+writes closed_by / closed_day INTO THAT DICT, so the base segment's run.write line for the trumpets carries a close the replay to Num 27:1
+has not reached — the prefix differs at event 2635 and every chain after it (474 of 3,108 lines; "the base or the engine has moved" — and a
+rerun of the tape reproduces the same base). Ten sittings passed because every earlier close of an older entry lay on the same side of the
+cursor as the entry. Not the runner's fault and not the gate's: step 1's assumption that a write line is immutable meets step 4's audit at
+the first backward close. THE DECISION IS THE OWNER'S — (a) snapshot the entry at write time (log a copy) and journal the close as ITS OWN
+LINE (run.close, a tenth log class registered in World/journal/registers/event_kinds.yaml; the ledger view's closed_by / day_closed read from
+it; the journal gate's counts gain a column; the RUN tuple's closes slot unchanged — it reads the ledger), or (b) the audit modulo the
+close fields (which empties the chain's meaning at those lines). Recommended (a): the close IS an act of the tape and belongs in the journal
+as a line of its own, as the RUN tuple already counts it. Until the word: the cursor gate RED, every other gate green.
+RESOLVED THE SAME DAY (2026-09-12; the owner: "I accept your recommendation"): (a) built — the design and the as-built follow.
+
+## Step 1's amendment — THE CLOSE LINE (the design, 2026-09-12; the owner: "I accept your recommendation" on the open item above;
+## written BEFORE the register's row, the probes and the code — the loop's own order)
+
+WHAT CHANGES, IN ONE PICTURE. A debt opened in one chapter and paid in a later one is TWO moments of the run. Step 1 recorded them
+as one line — the write line holding the ledger entry itself, so the payment's note landed inside the line written at the debt
+(the design of step 1 said so plainly: "the payload as it stands at the run's end"). Step 4's audit assumed the opposite — that a
+line, once written, never changes — and the first backward close (Num 31:6 paying Num 10:2) proved the two designs cannot both
+hold. The amendment: A WRITE LINE IS A SNAPSHOT AT WRITE TIME, AND A CLOSE IS A LINE OF ITS OWN.
+
+1. THE ENTRY'S OWN ORDINAL. Every ledger entry is stamped at write with `seq` — the world's write counter (0, 1, 2 … in the order
+   of _write's calls, retro-writes and timer fires included). It is the entry's name inside the run: the write line carries it in
+   its data, the close line names it. Deterministic (the log's order is the run's order), so two runs stamp the same ordinals and
+   the replay reproduces them.
+2. THE WRITE LINE A SNAPSHOT. World._write logs a COPY of the entry (dict(entry)) — the entry's state at the moment of writing:
+   effect, subject, value, op, day, year, open (True for a debit / heaven / body entry), written_by, seq. Nothing written later
+   reaches it. The one deliberate exception: the event's BOUND list, shared by the event and its effects and closed by the next
+   forward marker — the copy is shallow and the list stays shared, exactly as step 1 designed it (the cursor's bound rule of
+   sitting 1b already forbids a cursor inside a bound, so the audit never sees a half-closed bound).
+3. THE CLOSE LINE. World.close, when it finds and closes an entry, still writes closed_by / closed_day / open=False INTO THE LEDGER
+   ENTRY (the daemons and the checkpoints read the ledger — that contract is untouched) and THEN logs a tenth class, ('CLOSE', day,
+   payload): {subject: the entity's registry id, effect, entry_seq: the closed entry's seq, value: the entry's value, note: the
+   closer (the closing act's verse note — the same string closed_by holds), written_day: the entry's day, written_by: the entry's
+   writer, closed_by_daemon: the daemon consuming when the close was made (None for a scene's own close)}. A close that finds no
+   entry logs nothing (it returns False, as before) — the runner's own world stays silent where the tape's world closes.
+4. THE JOURNAL. world_journal.KINDS gains ('CLOSE', 'run.close') — registered in World/journal/registers/event_kinds.yaml BEFORE the
+   probe (the register's own rule); _append_log converts it: subj the entity through the registry, prov.unit the closing daemon (or
+   `tape` for a scene's close), prov.ref the note (it opens with the closing verse). The gate's tuple gains run.close from the
+   runner's own class census (the "log classes" line, as run.row entered at 8b). The RUN tuple is UNTOUCHED — its closes slot
+   reads the ledger, as before; the journal's run.close lines must equal the world's closed entries, and the gate says so.
+5. THE LEDGER VIEW. run_ledger becomes a LEFT JOIN of the write rows to the close rows on (source, subj, data.seq = data.entry_seq):
+   `open` = 0 when a close row exists, else the write's own open; `day_closed` = the close row's op; `closed_by` = the close row's
+   note; two new columns `entry_seq` and `close_seq`. run_docket, the ask-tool's four questions (`ledger`, `open`, `who`,
+   `custody`) and _state read the view and change not one line. The views gate gains the pair `closed` (ledger rows carrying a
+   close) = `closes` (run.close lines whose write lies in the same source), printed per source; a close whose write lies in ANOTHER
+   source (a cursor segment paying a base entry — the legitimate case this whole item is about) is counted as `foreign` and must
+   find its write somewhere in the index (a global check), never a per-source failure.
+6. THE CURSOR'S AUDIT — NOT ONE LINE CHANGES. The replay to a verse now reproduces the base's prefix byte for byte because the base's
+   write lines are snapshots; the close lines of later chapters lie past the fork. cursor_probes K1-K6 are this amendment's
+   acceptance test, unchanged.
+7. THE PROBES, WRITTEN FIRST AND RUN TO FAIL: journal_probes.py J7 — on a small world with one debt and its payment across a marker,
+   (a) the write line's data carries `seq` and NO closer, `open` true; (b) exactly one run.close line, its entry_seq the write's seq,
+   its day the payment's, its subject the registry id, its note the closer; (c) a sink taken BEFORE the payment is a byte-identical
+   PREFIX of the sink taken after (the audit's own property, on the smallest world); (d) the index counts run.close and the ledger
+   view shows the entry closed with the day and the closer from the join; J3's exclusion set names run.close as J7's class (as
+   run.row is P6's). view_probes.py V1 RETYPED to the new invariant (the write row without a closer; the close row with the day and
+   the closer; the view joining them) — it PASSES on the old code today and must FAIL before the code lands. Every other probe
+   (V2-V6, the population, installation, sequence, clock and register probes) must pass UNCHANGED — they read the views or the
+   ledger, never the write line's close fields.
+8. WHAT IS NOT DONE HERE. D7's merge (one database from the journal) and step 6 THE READBACK stay owed; the ask-tool's per-source
+   worlds stay per source (a cursor world's ledger question reads its own segment — the merge's business). The entry ordinal is a
+   RUN-LOCAL name, not a corpus id.
+
+## As built — step 1's amendment THE CLOSE LINE (2026-09-12, the same sitting; the owner: "I accept your recommendation"; the design
+## above first, then the register's row, the probes to FAIL, then the code in three files)
+
+THE ORDER HELD: the design section; run.close registered in World/journal/registers/event_kinds.yaml (the tenth run kind; 37 kinds);
+journal_probes.py J7 written and run to FAIL on the engine that logged the entry itself (6/7 — its note: no `seq` on the write line, no
+close line, the prefix differing on the closer), J3's exclusion set naming run.close as J7's class (as run.row is P6's); view_probes.py V1
+RETYPED to the new invariant and run to FAIL (5/6); cursor_probes.py 1/6 as the day's baseline. THE CODE, exactly as designed: (1)
+world_engine.py — World._entry_seq (the write counter), entry['seq'] stamped in _write, the log line a dict(entry) SNAPSHOT (the shallow
+copy keeping the event's shared bound list, as step 1 designed), World.close logging ('CLOSE', day, {subject, effect, entry_seq, value,
+note, written_day, written_by, closed_by_daemon, case_source}) AFTER writing closed_by / closed_day / open into the ledger entry (the
+daemons' and checkpoints' contract untouched; a close that finds nothing logs nothing); (2) world_journal.py — KINDS ('CLOSE',
+'run.close'); _append_log's branch (subj through the registry, prov.unit the closing daemon or `tape`, prov.ref the note); _tuple_of
+reading run.close from the runner's own "log classes" line; view_counts / views_gate the pair closed = closes (the source's own) with the
+foreign count printed; (3) World/journal/run_views.sql — run_ledger the LEFT JOIN of the write rows to the close rows on (source, subj,
+data.seq = data.entry_seq): open 0 on a join, day_closed the close row's day, closed_by its note, entry_seq and close_seq the two lines'
+names; run_docket, the ask-tool's questions and _state unchanged.
+
+THEN THE PROBES: journal_probes 6/7 → 7/7 after ONE HONEST RETYPE of J7's own form — its first sink stood INSIDE an open bound (after the
+event at day 30, before the marker at 33) and the prefix differed on the shared bound list, exactly as the design's item 2 says it must;
+the first sink moved to the marker (the cursor's bound rule of sitting 1b), the second sink three lines longer; view_probes 6/6 (V2-V6
+unchanged — they read the view); population 9/9, installation 6/6, sequence 4/4, clock green, unchanged. THE TAPE RERUN: RUN (1259, 66,
+52, 0, 12, 1505, 29, 311, the four pairs, 120) UNMOVED, 10/10; the running segment 3,187 → 3,307 lines (+120 close lines = the RUN tuple's
+closes slot; the "log classes" census now names CLOSE 120). cursor_probes 0/6 against the OLD base on disk (a base the old engine wrote
+differs from the new replay from its first close — "rerun the tape, then resume", as the refusal says) → 6/6 against the regenerated
+base: K1 the prefix of 3,221 lines byte-identical below Num 27:1; K2 the appended segment chained at the fork; K3 the whole tape 3,307;
+K4 two appends identical; K5 the views gate counting the cursor segment (closed 0 = closes 0, foreign 0 — the daughters' scenario closes
+nothing); K6 the scenario line. THE JOURNAL GATE GREEN — four segments byte-identical across two processes, chains verified, the index
+13,168 rows, the running world's counts MATCH the RUN tuple with run.close 120, the views gate per source closed 120 = closes 120 (foreign
+0) on the three seed worlds and 114 = 114 on THE REST. The register gate --strict GREEN (DECLARED 103; register_probes 7/7 — the ledger's
+closed_by untouched), census 187/187, the daemon and dependency gates GREEN; the sweep (53 runners) after — its count in NUMBERS_WALK.md
+"Sitting 11b — AS BUILT". WHAT IT COST: three files, one new probe, one retyped probe, one register row; no runner touched, no tuple
+moved. WHAT IT TAUGHT: step 1's own design note ("a WRITE line holds the same dict object as the ledger entry, so a later close is
+visible in its own line") was the seed of the fault, written down on 2026-09-09 and read past for ten sittings — a design sentence
+that names a mutation of the past is a debt, not a feature; and a probe's first sink must stand at a marker, because the bound is the one
+shared thing the snapshot keeps by design.
+
 ## Numbers' opening block — THE TENT (opened 2026-09-09; the block's own file World/step9/THE_TENT.md)
 
 The four cases the code did not cover run on the tape one sitting each, the blasphemer first (Leviticus, already derived and
@@ -835,3 +940,487 @@ hanging, the same-day burial) to Deuteronomy. Sitting 4 (Num 27 + 36, where step
 Every compaction point from #107 on carries THE LOOP as a named item until step 4 lands; every "NEXT" line in the
 state doc and memory names it beside T1. CHRONICLE.md (the design thread's screen) reads the index of step 2 when
 it is built; that folder is not ours to edit — the design thread reads this file.
+
+## The ninth class, the fifth registry, the fifth view and the fifth question — THE POPULATION TABLE (as built at THE NUMBERS WALK
+## sitting 8b, 2026-09-11; the design in World/step9/NUMBERS_WALK.md "Sitting 8b"; the speculation ARCHITECTURE/DATABASE_SPECULATION.md)
+
+The loop's memory gained a TABLE beside its ledger. The owner's recommendation taken 2026-09-11 ("Ok go"): the population table built
+inside the compile of the second census, minimal and honest, the backward seeding filed.
+- THE ENGINE: World.tables — the tables of the FIFTH REGISTRY World/step9/population_schema.yaml (the columns the ink's own words: tribe,
+  family, gentilic, level, count, threshold, person, father, mother, status, the delta's from/to/explained/unexplained; three grains —
+  counted, named, delta — each with its required and optional columns). World.row(table, row): a daemon writes a row WHILE CONSUMING AN
+  EVENT — a row written by hand is refused (the law in code); the row validated against the schema (a known table, a known grain, every
+  required column, no unknown column), stamped written_by / day / year / table, appended to the table, logged as the class ROW.
+  World.population(**where): the daemons' query by equality — the census daemon reads its own chapter-1 rows to declare the deltas at 26.
+  A row is not a ledger entry (no op, no open, no close, no counterparty) and moves no count of the RUN tuple; a subject of a row is not an
+  entity (the tribes and the families stay names; the persons the roll names enter the table, the registry unchanged).
+- THE JOURNAL: the NINTH log class ROW → run.row (world_journal.KINDS; the register World/journal/registers/event_kinds.yaml); the sink's
+  line for a row — subj the row's subject through the registry (a named row's person id, a counted row's tribe name), unit the writing
+  daemon, ref the verse the row was written from, data the row as stamped.
+- THE FIFTH VIEW run_population (World/journal/run_views.sql): one row per run.row — grain, as_of (the census the row belongs to), tribe,
+  family, level, person, father, status, count, delta, unexplained, day, year, written_by, verse; the views gate's population check (the
+  view's rows = the run.row lines, derived from the table's own counts on every world).
+- THE FIFTH QUESTION `population [<tribe>]` (world_journal.ask): every row of the running world in the run's order, or one tribe's — the
+  ask-tool's fifth answer beside ledger / open / who / custody.
+- THE PROBES: population_probes.py (P1-P9 — written first, 0/9 on the unchanged engine, 9/9 after: the rows and their writer, the refusal
+  by hand, the three schema refusals, the query, the daemon's own delta rows from its rows, the sink's run.row lines, the view and the gate,
+  the question, the RUN counts unmoved); journal_probes J3 amended (the seven engine classes the probe world exercises are KINDS less
+  run.skip and run.row — the ninth class exercised by P6); journal 6/6 and view 6/6 unmoved.
+- THE FIRST WRITER AND THE FIRST READERS: law_second_census (cold_run_second_census.py) writes the first roll's rows on the SHARED kinds
+  census_taken and levites_counted (rows only, no effect — an empty watch), the second roll's rows, the deltas (declared: the tape's
+  explanations by CALL beside the ink's number, the remainder labeled unexplained) and the named rows at its lines; the daughters' row
+  (26:33 — "had no sons, only daughters" on the table BEFORE the plea at 27:1) and Jochebed's row (26:59 — CJ3b's ink witness) are the
+  table's first consumers; the sequential run's CP1-CP9 grade the table on the tape.
+- FILED: the backward seeding (the ark's kind table, Genesis 10's nations, Genesis 46's roster by name) — a COMPILE_DEBT line naming the
+  consumer that would call for it (a daemon querying a person before Numbers 1); the second pass after Deuteronomy the natural seat.
+
+## THE REGISTER GATE — the design (2026-09-11, the sitting after the discussion step; the owner: "Yes let's do 1,3 then 2 in the next
+## sitting" → "Does 2 build the database structure?" (no — a checker) → "Ok go"; written after the measurements and BEFORE the probes, the
+## probes before the code — 1b's order)
+
+THE IDEA (ARCHITECTURE/DATABASE_SPECULATION.md section 4): the text writes its own test oracle — footers carrying checksums, receipts closing
+commands, footers stamping law blocks, headers opening registers — and the machine was not running it. The gate reads those formulas OFF THE
+TANAKH DB (the lemma column; the numerals by the step-9 parser) and checks what the engine already holds: the population table, the ledger,
+the installation registry. It ADDS NO TABLE, NO ROW, NO COLUMN. Its one new file is a dispositions registry in the daemon gate's form.
+
+THE MEASUREMENTS (scratchpad register_gate_measure.py on the running world, before this paragraph): 1,481 ledger entries, 114 of them CLOSED
+(a close flips `open` on the debit and stamps closed_by — a note beginning with the closing verse — and closed_day; every closed_by names a
+verse); the table's 136 rows at five as_of values (Num 1:17-19, 3:16, 26:5-51, 26:57-62, 26:63-65 — THE EVENT'S verse, not the count line's);
+81 lines carry a numeral beside "the counted" (6485) or "souls" (5315) — 12 with a ROW at the same chapter (Num 26's tribes and the Levites),
+27 with the row at ANOTHER as_of (Num 1:21-43 whose rows sit at as_of 1:17-19; Num 2's restatements of chapter 1; Num 3:22, 3:34, 3:39), 41
+with NONE; and the ink VARIES ITS COUNT-NOUN — Num 3:28's 8,600 sits beside "the number" (4557), not "the counted", and Simeon's 22,200 at
+26:14 beside NO count-noun (the bare footer "these are the families of the Simeonites, 22,200"); the 58 receipts on the running world:
+9 CLOSE-AT-VERSE (Lev 24:23, Num 1:19, 3:42, 3:51, 8:3, 8:22, 15:36, 20:27, 27:11), 18 WRITE-AT-VERSE (the act on the ledger, no command-debit
+closed — the sanctuary's and the milluim's receipts), 5 EVENT-AT-VERSE, 5 CLOSE-IN-CHAPTER, 21 NONE (13 inside the compiled books — Exod 7:6,
+7:10, 39:1, 40:19, Lev 8:4, 9:7, 10:15, 16:34, Num 31:7, 31:31, 31:41, 31:47, 36:10 — and Deuteronomy's 8); the nine "these are the statutes /
+commandments / judgments / words / testimonies" lines: two are HEADERS by their verb ("which you shall set before them" Exod 21:1; "which you
+shall observe" Deut 12:1), seven FOOTERS; the blocks by the daemons' given_at: (start, Exod 21:1] 11, (Exod 21:1, Lev 26:46] 32, (Lev 26:46,
+27:34] 1, (Lev 27:34, Num 30:17] 11, (Num 30:17, 36:13] 0, Deuteronomy's four 0; the 68 register headers fall in eighteen chapters, three of
+which have rows (Num 1: 12, Num 3: 4, Num 26: 120).
+
+THE FOUR CENSUSES (each read off the DB; each seat classified by the world; GREEN classes need nothing, every other class needs a declared why):
+- A. THE COUNT LINES — a line carrying a count-noun ("the counted" 6485, "the number" 4557, "souls" 5315) OR a register footer ("these are the
+  families / sons / counted of" with a numeral). Each numeral on the line is classed by THE UNIT RULE, the ink's own grammar of a number followed
+  by its noun: a numeral run (the NUMY words) followed within two tokens by a UNIT NOUN — year 8141, day 3117, month 2320, gerah 1626, talent
+  3603, shekel 8255, city 5892, man 376 — is a MEASURE (an age, a threshold, a duration, a rate, a headcount of men), not a count; the rest are
+  COUNTS. The parser's values are paired to the runs in order; when the pairing fails (a year-word holding a phrase open) every value is a COUNT
+  (it surfaces as debt rather than dropping silently). A line whose numerals are all measures is MEASURE-ONLY (listed, no why). A count is
+  ROW when a counted row of the population table carries that count with its as_of in the line's chapter, LEDGER when a `counted` status on
+  the ledger carries that value (the totals live there since 8b — Israel 603,550 / 601,730, the firstborn 22,273, the Levites), ELSEWHERE when
+  the row or status exists but at another chapter (Num 2's restatements; Exod 38:26's 603,550), NONE otherwise. GREEN: ROW, LEDGER.
+- B. THE RECEIPTS — a line with כַּאֲשֶׁר צִוָּה יְהוָה ("as the LORD commanded": k/834 + 6680 + 3068 within three tokens). CLOSE when a ledger
+  entry is closed by a closed_by naming the verse or a closed entry's case_source contains it; ACT when an entry's case_source contains the
+  verse and none closed (the act on the ledger, no command-debit); EVENT when an event's case_source contains the verse and nothing was written;
+  CHAPTER when a close sits in the chapter but not at the verse; NONE. GREEN: CLOSE.
+- C. THE FOOTERS — the "these are the statutes / commandments / judgments / words / testimonies" lines (428 + 2706 / 4687 / 4941 / 1697 / 5713).
+  HEADER when the line's verb is a second-person imperfect (you shall set / observe), else FOOTER. A footer's block is (the previous footer or
+  header, this footer]; a header's block (this header, the next footer]. The block's STAMP is the place word on the line (Sinai 5514, Moab 4124,
+  the Jordan 3383, none). DAEMONS when at least one daemon's given_at lies in the block (the daemons listed with their installed_by beside the
+  stamp — a listing, the registry's own), EMPTY otherwise. GREEN: DAEMONS.
+- D. THE REGISTERS — the 68 "these are + generations / names / sons / families / the counted" headers grouped by chapter (eighteen registers).
+  ROWS when the table has rows whose as_of chapter is that chapter; NONE otherwise. GREEN: ROWS.
+
+THE DISPOSITIONS (World/step9/register_dispositions.yaml — four maps counts / receipts / footers / registers, keyed by the seat — a verse for A-C,
+a chapter for D — each {class, why}): the gate VERIFIES the declared class equals the computed one — a declaration that differs is a LIE and
+FAILS; a declaration on a seat the world has since paid (computed GREEN) is STALE and FAILS (the daemon gate's exactness: the file may never
+overstate or understate the world); an undeclared non-green seat is DEBT — printed, exit 0 — until `--strict`, when the debt itself fails
+(claim_labels_census.py's form). `--emit` prints yaml stubs for every undeclared seat with its computed class, the why left to be typed
+FROM THE READING of the print, never generated.
+
+THE OUTPUT: coverage first (the four tallies by class), then the seats by census, then the DEBT list, then THE REGISTER GATE: GREEN | FAILED.
+Writes World/step9/REGISTER_INDEX.md each run (documentation, never runtime). Exit 0 on green or debt-only (non-strict), 1 on a lie, a stale
+declaration, or debt under --strict. Run from the repo root: `python3 World/step9/register_census.py [--strict] [--emit] [--no-index]`.
+
+WHERE IT RUNS: at every compile sitting's gates step, beside the daemon, dependency, installation and journal gates (THE_STEPS' compile
+checklist gains the line) — NOT in run_cold_all.py: the sweep's contract is unchanged this sitting (the gate builds the running world, ~90 s).
+
+THE PROBES (register_probes.py, R1-R6, written BEFORE the code and run to FAIL — ImportError, 0/6 — then 6/6 after): R1 the count-line census
+and the unit rule (Gen 46:15's 33 a COUNT; Num 1:3's 20 a MEASURE — "years" follows; Num 26:14's 22,200 a COUNT with no count-noun, by the
+footer form; Exod 38:26's 20 a MEASURE and 603,550 a COUNT); R2 the receipts (58 seats; Num 1:19 CLOSE, Exod 39:5 EVENT, Num 31:7 NONE on the
+running world); R3 the footers (nine lines; Exod 21:1 and Deut 12:1 HEADER; Lev 26:46 stamped sinai, Num 36:13 moab and EMPTY); R4 the registers
+(68 headers, eighteen chapters; Num 26 ROWS, Gen 46 NONE); R5 the dispositions' law (a lie FAILS; a stale declaration FAILS; an undeclared debt
+seat passes non-strict and FAILS strict — on synthetic files); R6 the whole gate on the running world non-strict exits 0 with the tallies as
+literals typed from the first run's print. The running world built ONCE per probe run (CS.run_world).
+
+THE PREDICTION (typed here, checked at the first run): count lines 81 by the two count-nouns + Num 3:28 and its kin by "the number" + the
+footers' bare seats (26:14) — the census larger than 81, the exact count read at the run; receipts 58 with 9 CLOSE; footers 9 (7 + 2), blocks
+with daemons 4, EMPTY 5; registers 18 with 3 ROWS. The first run is a FINDING, not a failure to fix by hand: an ACT without a close is the
+ledger's own debt (the command never written as a debit, or never closed) — declared with its why, never faked closed.
+
+## As built — THE REGISTER GATE (2026-09-11; the owner: "Ok go" on the recommendation's item 2; the design above written first, the probes
+## to FAIL 0/6 before the code, then 6/6; the gate GREEN under --strict with 104 declared seats)
+
+THE FILES: World/step9/register_census.py (the gate — read_ink / running_world / count_lines / receipts / footers / register_headers, the four
+class_* functions, verify, gate; --strict / --emit / --no-index), register_probes.py (R1-R6), register_dispositions.yaml (the 104 whys),
+REGISTER_INDEX.md (written each run). Nothing built into the engine: no table, no row, no column, no daemon.
+
+THE FIRST RUN READ (non-strict, --emit): 118 debt seats, 0 fails — and the reading found the finder's own faults before the world's: ten count
+lines UNPAIRED because the run-finder matched number-word stems inside PROPER NAMES and ORDINALS (Issachar's שש "six" inside יששכר "Issachar",
+ושנים "and second" at Num 2:16, ושני "and the years of" at Exod 6:16, השבעי "the seventh" at Exod 12:15) — the token census's homograph lesson at a
+third seat. THE FIX: the finder now runs on THE PARSER'S OWN TOKENS (cold_run_sequence.verse_words, aligned one-to-one with the DB's words), whose
+markers decide — a STAR is a homograph the points refused (not a numeral), a percent sign a fraction, an at sign the unit noun as one, the hash /
+caret / tilde forms their own keys in UNITS — and two rules of the ink joined the unit rule: THE DUALS carry their unit inside the token
+("two years" שנתים, "two days", "two cubits", "twice") and are measures; and ONE IS NEVER A CHECKSUM ("one soul", "one man for his father's house",
+"on the first of the month" — a register's total is never one). Second run: no UNPAIRED line; 104 debt seats — counts NONE 21 / ELSEWHERE 14
+(41 MEASURE-ONLY, 29 ROW, 3 LEDGER green), receipts NONE 21 / ACT 18 / EVENT 5 / CHAPTER 5 (9 CLOSE green), footers EMPTY 5 (4 DAEMONS), registers
+NONE 15 (3 ROWS). Every why typed from the reading of the print (scratchpad write_register_dispositions.py — the classes taken from the gate's
+computation, never typed; verify() clean before the write); the strict run GREEN; the probes 6/6.
+
+WHAT THE GATE FOUND ON THE WORLD (the ledger's honest state, now declared, not fixed by hand):
+- THE SPEC'S COMMANDS ARE NOT DEBITS — 18 receipts whose act is on the ledger at the verse (the veil hung, the bread set, the lamps, the incense,
+  the tamid, the washing, the garments' blocks, the milluim's blood, the eighth day's acceptance, the omer jar, the tablets, Aaron's staff) with
+  NOTHING CLOSED, because the command each answers is a specification (Exodus 25-31, Leviticus 8's instructions) the tape never wrote as a
+  debit; plus 5 receipts whose event fires and writes nothing at the verse. The command-and-receipt pair closes only where the command was
+  itself an EVENT (Num 1:19, 3:42, 3:51, 8:3, 8:22, 20:27, and the tent's cases 24:23, 15:36, 27:11) — nine CLOSE. Filed as a debt CLASS
+  (COMPILE_DEBT.md): a debit per spec command would let these receipts close.
+- THE STORY'S SCENE GAPS — receipts with no event at the verse: Exod 7:6, 7:10 (the staff-serpent), 39:1 (the garments' heading), 40:19 (the tent
+  spread), Lev 8:4 (the assembly); Lev 16:34's "and he did as the LORD commanded" with no narrated rite; Num 36:10's receipt ONE VERSE BEFORE the
+  act (the marriage fires at 36:11-12 — declared, not moved).
+- THE RECEIPT INSIDE A COMMAND — Lev 9:7, 10:15, Num 26:4: the formula quoted inside a command or a speech, not a receipt of an act.
+- THE REGISTERS THE TABLE DOES NOT HOLD: the camps (Num 2 — the Bamidbar runner's four sums as cells), the service roll (Num 4 — Naso's cells),
+  the shekel account (Exod 38 — a metals ledger), Genesis 46's four sub-totals and the 66 / 70 (the Joseph runner's ROSTERS and CJ3b), the
+  spies' and the princes' name lists; Genesis' eight name trees (the named grain on the tape and in the entity registry); chapters 30-36 and
+  Deuteronomy not yet walked. Each a declared seat; the seeding stays FILED.
+- THE PARSER'S NEXT HOMOGRAPH — Gen 41:34 וְחִמֵּשׁ ("and let him take a fifth") read as FIVE: the tithe-verb class (a verb on a numeral stem);
+  filed for the parser's next teaching (RESEARCH_LOG.md).
+
+THE LAW OF THE DISPOSITIONS IN FORCE: a declared class that differs from the computed one FAILS (a lie); a declaration on a seat the world has
+since paid FAILS (stale — delete the line when a runner pays the seat); an undeclared non-green seat is debt, FAIL under --strict. The gate
+runs at every compile sitting's gates step (THE_STEPS' compile checklist), not in run_cold_all.py.
+
+## THE LIVING DATABASE AND THE LOOP THAT WAITS — the discussion of 2026-09-14 (NO RULING YET; recorded in the map so it cannot slip a fifth time — the lesson of "How it slipped" above; the owner: "we really need to get this done right. make sure you record")
+
+THE OWNER'S WORDS (2026-09-14, after the project review; DISCUSSION, NO RULING YET — the owner's law: discussion is not a ruling): "What I want to
+do now is review our discussion about creating the real time inputs that make this a simulation, period. We keep putting it off." Then, on the
+shell I proposed: "I don't want to input anything, I want it to update a living database. Later we will create an interface to the database that
+will show the current states at all times. I'm not ready to input any data. In fact, I think the data will come from a second pass or even a third
+pass. It may even create its own data. We just don't know. But I need a live database showing the current state of things. What I might want is a
+step through process." Then: "I know a simulation needs inputs. We will decide what those are later. But assuming this is a simulation what
+components do I need that we don't have now." Then: "I think we had this very discussion and partially built a loop didn't we? scan the files."
+And at the close: "we really need to get this done right. make sure you record."
+
+THE SCAN (2026-09-14; the files read: THE_WORLD.md's idea log, World/step9/THE_LOOP.md whole, the state doc, ARCHITECTURE/DATABASE_SPECULATION.md,
+ARCHITECTURE/CHRONICLE.md, World/step9/world_journal.py and World/journal/worldledger.py): THE SAME DISCUSSION FOUR TIMES, A PART BUILT EACH TIME,
+THE SAME PIECE LEFT OUT EACH TIME.
+  1. 2026-08-24/25 (THE_WORLD.md): the ruling "the journal is the truth, the database an index rebuilt from it"; a world player built in the
+     mockups folder (two passes, compile then run, one world; retired at D10); the idea log names "the gap between replay and live simulation" and
+     "the world clock as the loop's heartbeat, not yet mounted". Never mounted.
+  2. 2026-09-03 (THE_WORLD.md, the night rider, the owner's words): "a simulator is a LOOP that runs whether or not anyone asks"; FIVE constructs
+     named as missing — (1) a main loop over TIME, (2) mutable state, (3) laws as daemons, (4) timers, (5) the diff engine as a checkpoint stream.
+     Four of the five exist today (the ledgers change; 62 daemons fire unasked; 66 timers set, 52 fired; 208 checkpoints). THE FIRST WAS NOT
+     BUILT: the engine drives over the tape's rows and exits.
+  3. 2026-09-05: CHRONICLE, the observation deck — design only, by the owner's word (ARCHITECTURE/CHRONICLE.md "Status").
+  4. 2026-09-09 (THE_LOOP.md, the PERMANENT ruling): "a loop that keeps its state between inputs" — steps 1-5 built (the sink, the index with
+     its five views, installation, the cursor, scenarios); thirteen decisions D1-D13 taken; step 6 THE READBACK named with no design; the step-4
+     row chose REPLAY, NO SAVED STATE FILE. The resident world was never on the decision list. 2026-09-13 (the peer thread): "never deferred, only
+     never decided".
+  MEASURED TODAY: world_journal.py writes the segment ONCE, at the run's end (seg.write; "data — the payload as it stands at the run's end");
+  the index is drop-and-rebuilt after (--reindex; the gate). So inside a run there is no "now" on disk. The five run views (run_population,
+  run_ledger, run_timers, run_clock, run_docket in World/journal/run_views.sql) already DEFINE the current state; they are only ever fed a
+  finished run. Fourteen timers stand pending at the tape's end and nothing can fire them (time moves only at a verse's marker).
+
+THE PICTURE AGREED IN DISCUSSION (a simulation needs six things; we have three whole, one in half, two not at all):
+  HAVE — a state (entities, ledgers, timers, the clock, the population table, the docket, the installed laws); rules that fire on inputs through
+  ONE DOOR (World.submit; consequences to the ledger, never the tape — THE FENCE); a history you can trust (the journal, chained, replayable,
+  audited byte for byte).
+  HALF — memory between moments: the journal written at the end, the database rebuilt after; the views that define "now" exist but are never
+  current.
+  MISSING — (a) A LOOP THAT WAITS: today the tape is a script that runs to the end; a simulation takes one step, writes the state, PAUSES, takes
+  the next. (b) A PORT FOR INPUTS: today only the runners' own lines enter, from inside the code; a simulation reads its next input from a place
+  outside itself, a queue checked between steps — the text the first producer, a second pass the second, whatever the owner decides the third;
+  the port decides nothing about what the inputs are.
+
+THE RECOMMENDATION (mine, for the owner's word; each one sitting; no runner's logic moves; the audit stays):
+  1. WRITE AS YOU GO — the journal line on disk the moment the engine logs it, and the database updated line by line with the same rows the
+     rebuild makes, so at any pause the database IS the state; at the end the gate still rebuilds from scratch and must match byte for byte.
+  2. THE LOOP WITH A PAUSE (the stepper) — the same tape driven at the grain of ONE EVENT, grouped by verse or day when watching; the cursor is
+     already replay-to-a-verse, the stepper is the cursor with a pause instead of a stop; at the pause the database is current and anything can
+     read it (the ask tool now, the interface later).
+  3. THE PORT — the queue the loop reads between steps, with the text as its only producer for now; every later pass writes to the same database
+     under its own run name (the index already carries `source`); a pass that creates its own data enters through the same one door.
+  TO LEAVE OPEN (two questions, decided later): whether time may advance without a verse's marker (the fourteen pending timers); the window to
+  watch it all (CHRONICLE's design). NOT TO BUILD: a saved state file, a hand-input shell, a second database beside the journal.
+  THE ORDER when the word comes: the loop's own — the design section in THE_LOOP.md first, the probes to FAIL, then the code; before Deuteronomy
+  or after is the owner's call.
+
+WHAT THE OWNER MUST DECIDE (nothing moves before the word): (i) build the three, in that order, or a different cut; (ii) the grain of a step —
+I would take the event as the atom; (iii) what "current state" shows — the five views as they are, plus the entities, the installed laws and the
+checkpoints as they fall; (iv) before or after Deuteronomy.
+
+- [ ] THE LOOP THAT WAITS (opened 2026-09-14, the owner: "ok go 1"; step 7 in the table): (a) [x] WRITE AS YOU GO — BUILT 2026-09-14 (D14 THE SEAL; the design and the as-built below); (b) [x] THE STEPPER — BUILT 2026-09-14 (D15 THE TAPE AS A GENERATOR; World/step9/world_stepper.py; the design and the as-built below); (c) [ ] THE PORT — NEXT on the owner's word (its design section here first, the probes to FAIL, then the code).
+
+## Step 7 THE LOOP THAT WAITS — part (a) WRITE AS YOU GO: the design (2026-09-14; the owner: "ok go 1" on the three-part
+## recommendation of the section above; written AFTER the measurements and BEFORE the probes, the probes before the code — the loop's own order)
+
+THE WORD AND THE FOUR CALLS: the owner's "ok go 1" opens the loop that waits, three parts one sitting each — (a) WRITE AS YOU GO
+(this sitting), (b) THE STEPPER, (c) THE PORT. The four calls listed in the section above ride as recommended, each open to his
+overruling: the three in that order; the grain of a step THE EVENT (measured below to be the engine's own atomic block); "current
+state" the five views as they are, the entities, the installed laws and the checkpoints owed to (b); before Deuteronomy.
+
+THE MEASUREMENTS (2026-09-14; the scripts in World/step9/forms_numbers_walk/loop_2026-09-14/ — loop_measure_mutation.py; the tape
+timed; the index and file costs benchmarked; every number below from a print):
+  1. THE TAPE: a full run 93 s wall, of which the running world's own run is 0.8 s and the module import 81.8 s (every runner's
+     guards and probes at import). The four worlds' segments 3,362 / 3,362 / 3,358 / 3,362 lines; the index 20,049 rows over 8
+     segments; the running world's ten classes: event 1,279, write 1,527, retro_write 12, timer_set 66, timer_fire 52,
+     timer_cancel 0, marker 157, skip 0, row 148, close 121 (= 3,362).
+  2. THE PAYLOADS MOVE AFTER THE ENGINE LOGS THEM — measured line by line on the running world with three snapshots of every log
+     line: at append, at the end of the OUTERMOST ENGINE CALL (submit, marker, advance, close, row, cancel_timers returning at depth
+     0 — THE BLOCK), and at the run's end (what the sink writes today):
+       - INSIDE the block one key changes: EVENT.fired_by on 1,140 lines — the consumers are stamped as the daemons run, after the
+         line is appended and before the call returns;
+       - AFTER the block one key changes: `bound`, its RIGHT EDGE, closed by the next forward marker — EVENT 1,195, WRITE 1,391,
+         TIMER-SET 50, TIMER-FIRE 37 lines; MARKER, CLOSE, ROW and RETRO-WRITE never move;
+       - 26 lines differ from the masked run-end form because their bound was ALREADY CLOSED when sealed — thirteen TIMER-FIRE lines and their thirteen WRITE lines, every one a timer fired inside a LATER marker's walk (the fire's block is that marker's advance) carrying the bound of the event that SET the timer, closed long before the fire — e.g. line 656 [747874, 747875], lines 2585-2592 the four fires of day 894698 with a bound of one day [894698, 894698]; the print in loop_measure_mutation2.out.
+     So: A LINE IS FINAL AT THE END OF ITS BLOCK, except its bound's right edge, which is a later marker's fact.
+  3. NO READER OF THE JOURNAL READS `bound`: not world_journal.py, not run_views.sql, not the probe files (sequence_probes P4 and
+     clock_probes read the IN-MEMORY event's bound; the tape's checkpoints C3c, C3c-literal and C9 test the in-memory interval —
+     the engine's close of the shared list stays as it is). The ARCHITECTURE docs describe the bound (the design thread's).
+  4. THE COSTS: 3,362 index inserts with a commit per line 1.55 s (per ten 0.11 s; one commit 0.01 s); 3,362 line appends with
+     the file held open and flushed per line 0.01 s (opened and fsynced per line 0.12 s). A commit per line on four worlds is about
+     six seconds on a ninety-three-second run — the grain is affordable at the line.
+  5. THE FOURTEEN PENDING TIMERS at the tape's end (day 908,718): seven of Midian's purification (the third day 908,721 and the
+     seventh 908,725, the corpse uncleanness of seven days — on the men of war and the captives, Num 31:19-20) and seven of the
+     altar's musaf period timers (908,725 to 908,988; Num 28:1-29:39). The nearest due is three days past the tape's end and nothing
+     walks the clock there — the open question "time without a marker" stays open, now with its list.
+
+THE DECISION D14 — THE SEAL (this sitting's one design decision, taken on measurement 2; the owner may overrule): A JOURNAL LINE IS
+SEALED AT THE END OF ITS BLOCK and never changes after. Its bound is written AS IT STOOD AT THE SEAL — [the last marker, null] for a
+line sealed inside an open bound — and the right edge is THE NEXT FORWARD MARKER LINE'S DAY in the same segment: a DERIVED fact,
+never written back, exactly as a ledger entry's close has been its own line since THE CLOSE LINE. This pays the debt THE CLOSE LINE
+named ("the event's shared bound list kept by design" — a design sentence naming a mutation of the past): after this sitting nothing
+in the journal moves after it is written. THE COST, said plainly: the base segments' bytes change ONCE (2,673 lines of the
+running world lose a right edge that the marker line after them carries; the data is derived and gitignored); the RUN and REST
+tuples count lines, not bytes, and do not move; the cursor's audit is re-run after the tape (the standing watch). The engine's
+in-memory bound list keeps closing as before — the checkpoints read it.
+
+THE DESIGN:
+  (1) THE HOOK IN THE ENGINE — one additive construct: World.journal (None by default) and a decorator on the six entry points
+      that, AFTER the call returns at depth 0 (in a `finally`, so a refusal mid-block still seals the lines logged before it),
+      calls self.journal.flush(). The exam worlds attach nothing and pay nothing (D9). No verdict, no write, no count moves.
+  (2) THE LIVE SINK — world_journal.LiveSink, attach(world, source, out_dir=None):
+        the BODY FILE <segment>.live in the data dir — the segment's lines only, appended and flushed at every seal; the header
+          is written at the seal of the run (the segment file as today: header + the same bytes; the body file removed);
+        the SEGMENT in memory — worldledger.Segment, the chain computed per line as today; ONE conversion (_append_log, unchanged);
+        the LIVE INDEX — the one database World/journal/data/world.sqlite (or the run's WORLD_JOURNAL_DIR): the events table and
+          the five views as they are; at attach the table is built from every segment on disk if it is absent (a fresh checkout)
+          and THIS SOURCE'S old rows are deleted; at every seal each new line is INSERTed with the row the rebuild makes and
+          COMMITTED — the single writer is the sink, and the rebuild must reproduce it (the audit).
+      flush(): the log's new lines (world.log[n:]) converted, chained, appended, inserted, committed. seal(): the header + the
+      lines written as the segment file; the audit run; returns (path, lines, coerced) as sink() does. sink(world, source, out_dir)
+      is kept for a world that ran WITHOUT a sink (the probes' small worlds): it attaches now and seals the whole log at once —
+      a LATE SEAL, the bounds as they stand — so every old caller still works and says which form it got.
+  (3) THE AUDIT, at every seal and inside the gate — RED on any miss:
+        (i) the chain verifies from genesis over the sealed file;
+        (ii) the lines equal the log's length, one journal line per log line;
+        (iii) THE INDEPENDENT CONVERSION: the same log converted afresh at the run's end equals the sealed lines on EVERY field but
+             the bound's right edge — the one named exception, its count printed (the lines whose bound closed after their seal);
+        (iv) the index rebuilt from the sealed segment into a temporary database equals the live rows of that source, row for row,
+             every column;
+        (v) the gate's two processes stay byte-identical (segments and, new, the live rows).
+  (4) THE DATABASE IS THE STATE: at any seal the events rows of the running source are exactly the lines sealed so far and the five
+      views over them are current — `--ask` answers between blocks with nothing new to build. The run's closing reindex of the
+      whole database is REPLACED by audit (iv) on the run's own sources; the L0-L2 layers and the older L3 sources stay as indexed.
+  (5) THE CURSOR under the seal: run_to attaches a sink IN MEMORY (no file, no index — the audit's form); the replayed lines are
+      sealed at their blocks; cursor_segment compares them to the base's prefix (byte-identical or refused, as before) and writes
+      the appended segment from the lines after the fork — one sealing rule on both sides of the fork.
+  (6) NOT BUILT HERE, owed to (b) and (c): the pause; the port; a bounds view (derivable from the marker lines; built if "current
+      state" needs it); the checkpoints on the journal (printed lines today); the import cost (81.8 s) as the stepper's fixed price —
+      the pause must live inside one process.
+
+THE PROBES (World/step9/live_probes.py; written BEFORE the code and run to FAIL on the unchanged engine — every one a FAIL first):
+  L1 THE BODY FILE IS LIVE: a probe world with a live sink; after each of three blocks (a marker, a submit that writes a debit, a
+     submit whose daemon closes it) the body file holds exactly the lines sealed so far and its chain verifies from genesis.
+  L2 THE INDEX IS LIVE: at the same three points the events rows for the source equal the lines so far, and run_ledger shows the
+     debit OPEN after the second block and CLOSED after the third — the ask tool's answer between blocks.
+  L3 THE SEAL'S FORM: the sealed EVENT line carries fired_by complete and its bound [x, null]; the marker line closing it follows
+     with the right edge as its day; a timer fired inside a later marker's walk carries its bound closed (the 26's form).
+  L4 THE SEAL AND THE AUDIT: seal() writes the segment (header + the same bytes), removes the body file, verify() passes, and the
+     audit passes — lines = the log; the fresh conversion equal on every field but the right edge, with the count of closed-after
+     lines printed; the rebuilt index equal to the live rows.
+  L5 DETERMINISM THROUGH THE LIVE PATH: two live runs of one probe world in two directories are byte-identical (segments and rows).
+  L6 THE CRASH-SAFE TRACE: a refusal raised inside a daemon mid-block leaves the lines sealed before it on disk, the body file's
+     prefix verifying — the run's history survives the run.
+  L7 THE EXAM WORLDS PAY NOTHING: a World with no journal logs as before — no attribute, no file, no row.
+  After the code: journal_probes 7/7, cursor_probes 6/6 AFTER the tape is re-run (the standing watch), view_probes, installation
+  probes, population_probes, sequence_probes, clock_probes as they stand; the tape 10/10; the journal gate GREEN with the audit
+  lines; the register gate untouched (no compile); the sweep 57/57 in the background.
+
+THE ORDER: this design → the probes to FAIL → the engine's hook → the sink and the audit → the runner's attach line (run_world) and
+the cursor's → the tape run → the probes → the gates → the sweep → the records (this file's as-built and the table's row 7,
+THE_WORLD.md, COMPILE_DEBT.md's box, THE_STEPS's loop section, THE_BRIEFING, RESUME, memory, the recovery file, the state doc).
+
+## As built — step 7 (a) WRITE AS YOU GO (2026-09-14, the same sitting; the owner: "ok go 1"; the design above first, the probes to FAIL
+## 0/7, then the code in four files, then 7/7 with no probe changed)
+
+THE PROBES FIRST: World/step9/live_probes.py L1-L7 written from the design and run on the unchanged engine — 0/7 (six on "world_journal has no
+attribute attach", L7 on the missing World.journal), then 7/7 after the code.
+THE CODE (the forms in World/step9/forms_numbers_walk/loop_2026-09-14/ — loop_measure_mutation.py the measurement, patch_live_sink.py the patch
+with every replacement asserted once):
+  - world_engine.py: `import functools`; World.journal = None; the decorator _sealed on submit, marker, advance, close, row, cancel_timers —
+    after the call returns at depth 0, in a finally, the attached sink's flush(); nothing else in the engine moved (the daemon gate and the
+    dependency gate GREEN after it: 62 daemons, 427 WRAPPED, open aliases 3; the link census 455 / 48 / 9 / 143 of 482 + 173, 224 live edges on file).
+  - World/journal/worldledger.py: row_of(ev, source) — the index's row has ONE home; index_sqlite uses it.
+  - world_journal.py: LiveSink (attach; flush — the one conversion, the chain, the body file <segment>.live appended and flushed, the rows
+    INSERTed and committed per block; seal — the header + the same bytes, the body removed, the world detached, THE AUDIT), attach,
+    ensure_index (the table built from every segment on disk when absent, the views), rows_of, l3_sources, verify_body (a headerless body's
+    chain), audit ((i) the chain, (ii) lines = the log, (iii) the independent conversion equal on every field but the bound's right edge with
+    its count, (iv) the rebuilt index equal to the live rows), live_report; sink() kept for every old caller — a live sink seals, the
+    cursor's in-memory sink writes its sealed lines, a world that ran with no sink takes THE LATE SEAL and says so; cursor_segment's audit
+    reads the in-memory sink's sealed lines; the gate reads the live rows of both processes BEFORE its rebuild and demands them identical
+    and equal to the rebuilt rows.
+  - cold_run_sequence.py: WJ.attach before the tape in run_world, run_to (memory_only) and rest_world; the closing reindex retired for
+    live_report (--reindex stays by hand).
+THE TAPE UNDER THE SEAL (one run, 98.4 s wall): 10/10 — every seal LIVE: the running world 3,362 lines in 1,533 blocks, the chain VERIFIED,
+the fresh conversion EQUAL on every field but the right edge (closed after the seal: 2,673 — the measurement's own count; the 26 already-closed
+lines were never among the differing ones), the rebuilt index EQUALS the live rows; descent_literal 3,362 / 1,533 / 2,673; covenant_pieces
+3,362 / 1,533 / 2,639; THE REST 3,358 / 1,531 / 2,673; JOURNAL INDEX (live): 20,049 rows, every source current (the four worlds and the old
+cursor segment's 4 rows). RUN unmoved (1279, 66, 52, 0, 12, 1527, 33, 318, the four pairs, 121); THE REST exact.
+THE PROBES AFTER: live 7/7; journal 7/7 (J7's "earlier sink a prefix of the later" holds by construction now); cursor 6/6 after the tape (K1's
+prefix from the in-memory sink's sealed lines, byte-identical to the new base); view 6/6; installation 6/6; population 9/9; sequence 4/4;
+clock 22/22.
+THE JOURNAL GATE: GREEN — four segments byte-identical across two processes, chains VERIFIED; THE LIVE INDEX line new: 4 sources, 13,444 rows written line by line at their blocks, the two processes' rows IDENTICAL, the rebuilt index EQUALS the live rows; the running world's counts MATCH the RUN tuple; the five views MATCH on every source (ledger 1,539 = writes; timers 66 = sets, fired 52, pending 14; clock 157; docket 4; population 148; closed 121 = closes).
+THE SWEEP: 57/57 runners green, 6,378 graded cells (unchanged from 15b's close; the dependency gate 251 required edges / 174 pointers, 338 live import edges, 482 + 173 on file; the daemon gate 62 daemons, 427 WRAPPED, open aliases 3).
+WHAT THE DATABASE IS NOW: World/journal/data/world.sqlite is written line by line as the tape runs — at any block's end the events rows of the
+running world are the lines sealed so far and the five views over them are current; `--ask` answers between blocks. The run's closing rebuild
+is gone; the rebuild is the audit, in a temporary file, at every seal and in the gate.
+THE COST PAID: the base segments' bytes changed once — the bound's right edge null on 2,673 lines of the running world, the marker line after
+them carrying the day; no reading, no verdict, no count moved; the cursor's audit re-run and green.
+OWED TO (b) THE STEPPER: the pause between blocks (the flush is the seam); the import cost (81.8 s) the stepper's fixed price — the pause lives
+inside one process; the cursor's own appended lines live (late-converted today); a bounds view if "current state" needs it; the checkpoints
+on the journal (printed lines today).
+LESSONS: A PAYLOAD MOVES AFTER THE LOG — before a sink writes early, take three snapshots of every line (at append, at the block's end, at
+the run's end) and read which keys move; the block is the seal's grain, and the late-moving key becomes a derived fact read from the later
+line. A COUNT DERIVED FROM A MEASUREMENT IS RETYPED FROM THE INSTRUMENT'S OWN PRINT — "about 2,647" (2,673 less the 26) was wrong: the 26
+were never among the differing lines; the seal printed 2,673 and the design was corrected before the record.
+
+## Step 7 THE LOOP THAT WAITS — part (b) THE STEPPER: the design (2026-09-14; the owner: "ok go b" after part (a)'s close and his question
+## "is that a simulation?" — answered: the history never changes, the state changes with every line, and nothing yet WAITS; written AFTER the
+## measurements and BEFORE the probes, the probes before the code — the loop's own order)
+
+THE MEASUREMENTS (2026-09-14; the census by grep over the tape section of cold_run_sequence.py, lines 687-2316; part (a)'s prints):
+  1. THE TAPE IS ONE ENGINE CALL PER LINE: 1,630 lines between the sentinels — 1,507 engine calls (w.submit 1,279, w.marker 157, w.close 71),
+     118 comment lines, no multi-line call (0 lines end in a comma or a bracket); a marker's line carries its assert_ink and its M entry
+     before the call; no advance, row, cancel or checkpoint call in the tape.
+  2. THE CHECKPOINTS ARE NOT IN THE TAPE: they are computed in run() AFTER the tape from the marker table M and the finished world (c3() and
+     the block at line 2641 on) — "the checkpoints as they fall" would be a rewrite of that block into the stitched tape (the stitcher's), OWED
+     and named here; a pause shows the state, not the checkpoints.
+  3. THE BLOCKS OF PART (a) ON THE RUNNING WORLD: 1,533 flushes that sealed lines = 1,507 tape lines + 26 marker walks whose advance() fired
+     timers (the fires sealed by advance's own flush inside the marker's call). So a TAPE LINE is the natural step: the marker with the timers
+     it fires is one line and one step; an event with its consequences is one line and one step; a close is one line and one step.
+  4. THE COST: the import 81.8 s of a 93 s run; the running world's own run 0.8 s — the replay to any verse costs under a second, and a stepping
+     session is ONE PROCESS (the import its fixed price, paid once).
+  5. A THREAD WAS CONSIDERED AND REFUSED: the seal's flush is a seam where a worker thread could wait on a gate, but a paused thread can never
+     stop BEFORE a line (it learns of a line after the engine ran it), needs a call-depth flag in the engine to make a marker one step, and
+     brings threads into a deterministic instrument. A GENERATOR does all of it with no engine change (below).
+
+THE DECISION D15 — THE TAPE AS A GENERATOR (this sitting's one design decision; the owner may overrule): the stitched tape's source is
+transformed at load — every engine-call line is prefixed with `yield (<the verse of the call>, <the line's ordinal>); ` — and executed as a
+GENERATOR: each next() runs exactly one tape line (one outermost engine call, the seal of part (a) writing its lines to disk and into the
+database inside it) and then yields the verse of the NEXT call before running it. The pause is between two next() calls: no thread, no
+event, no engine change; the world stands still, every line so far sealed, the database current. Because the generator yields BEFORE a
+call, the stepper can stop at the LEFT EDGE of a verse exactly as the cursor does (the cursor's stop_before is not used — it aborts the
+tape; the stepper resumes it). The transform is guarded: the yields must equal the calls counted (1,507 on today's tape) and the
+transformed source must compile; the stitcher's one-call-per-line form (measurement 1) is the contract, asserted at every load.
+
+THE DESIGN — World/step9/world_stepper.py (no runner's logic moves; the engine untouched; the journal untouched):
+  (1) THE WORLD: built as run_to builds it (the registry map, every daemon, installation on the running setting, the creation epoch), the live
+      sink of part (a) attached under ITS OWN SOURCE `cold_run_sequence/stepper` (the segment L3_run_cold_run_sequence_stepper.jsonl, the rows
+      under that source) — the base run's rows and segment are never touched by a stepping session; a session that ends early seals a PARTIAL
+      segment (a valid segment: its header counts its lines) and the audit of part (a) runs on it.
+  (2) THE GENERATOR: transform(source_text) → the tape's function as a generator; the stepper reads the same tape section rest_world reads
+      (between the sentinels), transforms it, executes it in the runner's namespace, and holds the generator.
+  (3) THE STEP — step(by='call' | 'verse' | 'chapter' | 'marker' | 'day' | a verse address): next() until the criterion is met, then pause:
+        call     one tape line;
+        verse    every line at the current call's verse (the next line's verse differs);
+        chapter  every line in the current call's (book, chapter);
+        marker   through the next marker line (the date with the timers it fires);
+        day      until the clock's day has moved (a marker that walked it);
+        a verse  until the NEXT call's verse is at or after it — THE LEFT EDGE, the cursor's own position.
+      from_verse at construction replays to that left edge with no pause (under a second). run() steps to the end. close() seals.
+  (4) THE REPORT at every pause (the state, from the live database and the world): the step's ordinal; the lines run (their verses and
+      kinds) and the lines sealed (the journal classes); the NEXT call's verse (the left edge the world stands at); the clock (the day, the
+      creation date, the exodus-era date); the entities, the open entries, the pending timers, the docket's open custody; and on request
+      (--show open | ledger <entity> | custody | timers) the rows read FROM THE DATABASE under the stepper's source through the five views —
+      the database is the state, shown from the database.
+  (5) THE AUDIT — THE REPLAY IS THE AUDIT, at every step: when the base segment of the running setting is on disk, every line the stepper
+      seals must equal the base's line at the same ordinal (the sink's sealed event against the base's canon) — a difference REFUSES the
+      session at that ordinal, named, exactly as the cursor is refused; a session run to the end leaves a segment whose lines are the base's
+      byte for byte (the header names its own source). No base on disk: no audit, said so in every report.
+  (6) THE COMMAND LINE: `python3 World/step9/world_stepper.py [--from <verse>] [--to <verse>] [--by call|verse|chapter|marker|day] [--steps N]
+      [--show open|ledger <entity>|custody|timers] [--pause]` — prints a report per step; --pause waits for Enter between steps (a CONTROL
+      word, never a data event — the port of part (c) is the only door for inputs; this is not a hand-input shell); without --to or --steps
+      it runs to the end as a watch.
+  (7) THE SEAM FOR (c) THE PORT: between two next() calls the loop will read its queue and submit what it finds through World.submit — the
+      same one door — before the next tape line; the stepper's `between` hook is where the port will hang. Not built here.
+  (8) NOT BUILT, owed: the checkpoints as they fall (measurement 2 — the stitcher's rewrite); time without a marker (the fourteen pending
+      timers stand; the stepper never moves the clock); the window (CHRONICLE).
+
+THE PROBES (World/step9/step_probes.py; written BEFORE the code and run to FAIL — every one a FAIL first, S1-S8; the probe tape a SOURCE
+TEXT of six lines over live_probes' daemons, transformed like the real tape):
+  S1 THE GENERATOR: transform(source) yields once per engine-call line, BEFORE the call, with the call's verse; the yields equal the calls
+     (6); one next() runs exactly one call (the log grows by that call's lines and no more).
+  S2 STEP BY CALL: six steps seal 1, 2, 2, 1, 3, 3 lines (a marker; a submit with a timer set; a submit with a debit; a marker; a marker
+     whose walk fires the timer; a submit whose daemon closes the debit); at every pause the body file and the live rows hold exactly the
+     lines so far; the seventh step reports the end; the segment sealed, the audit ok.
+  S3 THE GRAINS: by 'verse' the two calls at Exod 19:5 are one step; by 'marker' the calls through each marker are one step; by 'day' a step
+     ends when the clock moved; by the verse address 'Exod 24:1' the stepper stops at the LEFT EDGE — four lines run, the day 12, the next
+     call Exod 24:1, nothing of it run.
+  S4 FROM A VERSE: Stepper(from_verse='Exod 24:1') replays to the left edge with no pause; its first report shows the position, six lines
+     sealed, and the debit OPEN in the live database under the stepper's source.
+  S5 THE AUDIT: a base written by a straight run of the same probe tape through the live sink; a stepper with that base reports every step
+     audited; a stepper over a CHANGED tape (one subject altered) is REFUSED at the step where they diverge, the ordinal named.
+  S6 THE EARLY CLOSE: close() after two steps seals a partial segment of three lines, the audit ok, the body file gone, the base untouched,
+     the live rows three.
+  S7 THE STATE FROM THE DATABASE: at a pause the report carries the clock day, the verse reached, the next verse, the entities, the open
+     entries and the pending timers; `ledger the_court` read from the live database under the stepper's source shows the debit OPEN after the
+     third line and CLOSED (day 20) after the sixth.
+  S8 THE REAL TAPE'S CONTRACT: the transform of cold_run_sequence's own tape section (read as text, never imported) compiles and yields
+     exactly 1,507 times — 1,279 submits + 157 markers + 71 closes, the census of measurement 1.
+  After the code: live_probes 7/7, journal 7/7, cursor 6/6 (the base unchanged by a stepping session), the others as they stand; the tape
+  10/10; the journal gate GREEN; the sweep 57/57; THE REAL RUN: a session from the left edge of Num 27:1 stepped by verse through chapter 27
+  and a session run to the end, its segment's lines the base's byte for byte.
+
+THE ORDER: this design → the probes to FAIL → world_stepper.py → the probes → the real sessions → the gates → the sweep → the records.
+
+## As built — step 7 (b) THE STEPPER (2026-09-14, the same sitting; the owner: "ok go b"; the design above first, the probes to FAIL 0/8,
+## then the code in ONE new file, then 8/8 — and a ninth probe after the first real session's miss)
+
+THE PROBES FIRST: World/step9/step_probes.py S1-S8 written from the design and run on the unchanged tree — 0/8 ("No module named
+world_stepper"), then 8/8 after the code with one probe expectation corrected BEFORE the code on the engine's own rule (S7: a timer's
+subject is not an entity until the fire writes it — the court alone after three calls, not two entities).
+THE CODE: World/step9/world_stepper.py — transform(source) (the yield prefix on every engine-call line, one call per line asserted),
+tape_section(path), class Stepper (the real tape or a source text; the world built as run_to builds it; the live sink of part (a) attached
+under the session's own source cold_run_sequence/stepper; the generator; step(by, until) with the six grains; the audit against the base at
+every call; the report; show(open | ledger | custody | timers) from the database; close() the seal), print_report, main (--from --to --by
+--steps --show --pause --quiet). No engine, journal, registry or runner file moved: the sitting's whole diff is two new files (the
+stepper and its probes) and the records. Lints 0 on both.
+THE REAL SESSIONS (World/step9/forms_numbers_walk/loop_2026-09-14/loop_sessions.sh; the prints in the state doc's #172):
+  A. `--from 'Num 27:1' --to 'Num 28:1' --by verse`: THE REPLAY to the left edge of Num 27:1 — 1,465 lines run, 3,221 sealed (the cursor's own
+     fork, K1's 3221), the world standing before Num 27:1 at day 908,718 = (2488, 6, 1) creation / (40, 6, 1) exodus, 301 entities, 181 open
+     entries, 0 pending timers, audited against the base: yes; then THREE STEPS by verse through the chapter — 27:1 (the reading-placed marker
+     and the daughters' approach 27:1-4, one verse: marker + event + write, 3 lines); 27:5 the judgment brought near (event + write) with
+     the court's CUSTODY ROW appearing in --show custody (the_court, the daughters, law_tent, open); 27:6-11 the statute declared (event +
+     close + write), the custody row gone — and the session STOPPED AT THE LEFT EDGE OF Num 28:1, sealed as a partial segment of 3,229 lines
+     in 1,495 blocks, the audit ok (the first run of the session, before the quoting fix below, showed four steps: the None labels split 27:1
+     from 27:1-4).
+  B. `--by marker --quiet`: the whole tape in 158 steps (157 markers; the last step 41 lines from the last marker to Num 36:11), 3,362 lines
+     sealed as the whole tape; THE BODIES COMPARED — the session's segment against the base line for line after the header: IDENTICAL, 3,362
+     lines each, the same chain head 5c482e02f82ea462 (the headers differ in the source's name alone).
+  THE MISS THE FIRST SESSIONS FOUND: thirty-two of the tape's sources are written in DOUBLE QUOTES (the stitcher's repr when the text holds
+  an apostrophe) and the stepper's verse pattern read single quotes only — "the world stands before None" at 27:1-4 and 27:6-11; the three
+  patterns now read either quote; S9 added AFTER the miss (every call of the real tape yields a verse — no None; 1,507 yields by book);
+  session A rerun clean (the state doc's #172 has both prints).
+THE TAPE AFTER THE SESSIONS: 10/10; the live report lists the session as a fifth source — cold_run_sequence/stepper 3,362 rows = 3,362 lines
+MATCH beside the four worlds (23,411 rows in the one database after session B; after session A's rerun the same source 3,229 rows =
+3,229 lines MATCH, 23,278 rows — the live report reprinted). THE PROBES AFTER: live 7/7, journal 7/7, cursor 6/6 (the base untouched by
+the sessions), step 9/9. THE GATES: no engine, journal or runner file moved — the daemon gate, the dependency gate, the journal gate and the
+sweep stand as at part (a)'s close (57/57 at 6,378).
+WHAT A PAUSE IS NOW: between two tape lines the world stands still, every line so far is on disk and in the database, the five views are
+current under the session's source, and the report says where the world stands (the next call's verse), what day it is, what is open and
+what is pending; --show reads the rows from the database. The port of part (c) hangs at exactly this pause.
+OWED, named: the checkpoints as they fall (the stitcher's rewrite of run()'s checkpoint block into the tape); the cursor's own appended
+lines live; time without a marker (the stepper never moves the clock); the window (CHRONICLE); the import (81.8 s) as every session's
+fixed price.
+LESSONS: A GENERATOR BEATS A THREAD for a pause — it yields BEFORE the call it is about to make, so the left edge is exact and the tape
+resumes; measure the tape's shape (one call per line) and make it the contract, asserted at every load. A PATTERN READS THE STITCHER'S OWN
+QUOTING — the repr writes double quotes when the text holds an apostrophe; a real session showed the None the probe tape could not.

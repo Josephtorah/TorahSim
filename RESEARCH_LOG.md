@@ -2208,3 +2208,697 @@ the plain-token print, never from memory of the pointed line.
 7. THE MEASUREMENT PASS ON THE PROBE TOKENS: six of the hand's forms fell before the runner was typed — בערבות (the plene "plains"), ואך ("but only" with
    its vav), מעודך ("from your existence" — the hand's "from your youth" was the gloss, not the token), לבדד ("alone" with its lamed), ותרועת ("and the
    shout of"), שפטי ("the judges of").
+
+## 2026-09-11 — A SIXTH MISTYPED HEAD AND A CITATION WITH THE WRONG BOOK, THE WRITTEN-AND-READ PAIR REVERSED BETWEEN THE TWO CENSUSES, THE ONE GENTILIC WITHOUT ITS YOD, THE PARSER READING A WHOLE PORTION, AND JOCHEBED'S VERB WITHOUT ITS SUBJECT (THE NUMBERS WALK sitting 8, the second census's reading)
+
+1. THE SIXTH MISTYPED HEAD. The Sifrei on Numbers export heads piska 132's third row "(Bamidbar 26:25)" and the row quotes "Only by lot shall the land be
+   divided" — 26:55's clause (26:25 is Issachar's count); the Hebrew row opens with אַךְ ("only"), 26:55's first word. Placed by its quotation, as the five
+   before it (62 "3:24", 19 "5:298", 34 "6:150", 80 "10:30", 110 "15:15-17"). TWO CITATIONS INSIDE THE ROWS: row 1's "(Ibid. 59) To a man, according to his
+   numbers, shall his inheritance be given" is 26:54's clause (26:59 is Jochebed); row 3's "(Judges 15:13) And to Calev ben Yefuneh was given a portion... by
+   word of the L-rd to Joshua" is JOSHUA 15:13 — the wrong BOOK (Judges 15 is Samson's); the Hebrew row cites (שופטים א) Judges 1:20 and (יהושע יט) Joshua 19
+   alone — the English inserted the Joshua verse with the wrong book name. Read to their verses.
+2. THE WRITTEN-AND-READ PAIR REVERSED. "The called of the congregation" stands at 1:16 and 26:9; the snapshot store carries TWO ADJACENT TOKENS at each seat,
+   the unpointed one the written form (the store's convention since sitting 1): at 1:16 קריאי ("the called", read form first in the store's order) then קרואי;
+   at 26:9 קרואי then קריאי — the written form at one census is the read form at the other. The Tanakh DB keeps one form per seat (קריאי at 1:16, קרואי at
+   26:9); 16:2's קראי ("the called of the assembly") a third spelling with no pair. Measured on the store's tokens.
+3. THE ONE GENTILIC WITHOUT ITS YOD. Sixty-eight family forms in chapter 26 carry the article and the gentilic yod ("the Hanochite"); "the family of the
+   Imnah" (26:44, הַיִּמְנָה — "the Imnah", the name itself with the article) is the one article-form of sixty-six that lacks it; the translation writes the bare
+   name at every seat and shows no delta. Measured on every token after "family of" (seventy-eight).
+4. THE PARSER READ A WHOLE PORTION. Seventeen number verses in chapter 26, every one right on the first measurement — the twelve counts summing to the ink's
+   601,730 ("six hundred thousand AND A THOUSAND" — 1b's "and a thousand adds"), the 250, the two twenties, the 23,000 — the first portion of the walk with no
+   gap on its own numbers: the census grammar taught at Bamidbar reads its second seat. The arithmetic the compile will check: five tribes fell (61,020), seven
+   rose (59,200), the whole −1,820; Simeon's 37,100 against the plague's 24,000 — 13,100 unexplained.
+5. JOCHEBED'S VERB WITHOUT ITS SUBJECT. 26:59 "Jochebed daughter of Levi, אֲשֶׁר יָלְדָה אֹתָהּ לְלֵוִי בְּמִצְרָיִם" ("whom she bore — her — to Levi in Egypt"): the verb
+   tagged perfect feminine singular, the object "her", NO SUBJECT — the mother unnamed; "bore her" the Bible's one seat of the two words; the translation keeps
+   it subjectless (דִּילֵדַת יָתַהּ — "whom she bore her"). "In Egypt" is the ink's datum beneath the shelf's answer to the seventy of Genesis 46:26-27 (sixty-six,
+   then seventy — the tape's CJ3b open by one since the Joseph sitting): the exam's row (Bava Batra 123a), the reading's fact.
+6. GENESIS 46 AGAINST NUMBERS 26, MEASURED. Five Genesis names absent from the census (Ohad, Becher of Benjamin, Gera, Rosh, Ishvah), nine renamed (Jemuel →
+   Nemuel, Zohar → Zerah, Ziphion → Zephon — the form is the word "to the north", לְצָפוֹן ("to the north"), whose other seats are Ezekiel 40:23, 42:4 and
+   Isaiah 43:6 — Ezbon → Ozni, Iob → Jashub, Ehi → Ahiram, Muppim → Shephupham, Huppim → Hupham, Hushim → Shuham), two moved down a generation (Ard and Naaman,
+   Benjamin's sons at Genesis 46:21 and Bela's at 26:40); Simeon's summary alone without the count-word; three tribe-heads opening their first name bare
+   (Hanoch, Tola, Iezer). The tradition's readings of the deltas are the exam's; the deltas themselves are the ink's, computed on every token of both chapters.
+7. THE CHAPTER'S OWN TWO-DEATH SENTENCE FOR KORACH. 26:10 repeats 16:32's "the earth opened its mouth and swallowed them" (the two seats alone) and adds
+   "AND KORACH, in the death of the company, when the fire consumed the two hundred and fifty" — the roster names him among the swallowed and sets him at the
+   fire in one verse; "and they became a sign" — נֵס ("a pole", "a banner"), the serpent's pole-word (21:8-9) and the LORD-is-my-banner's (Exod 17:15), the
+   noun's Torah four. CK4 (Korach's death-mode, OPEN on the tape since sitting 5b) has its ink at 26:10.
+
+## 2026-09-11 — THE SHELF EXPORT'S CHAPTERS UNDER AN EMPTY KEY, "MOSES AND ELEAZAR" AT TEN SEATS NOT SEVEN, ARD BARE ON THE ROLL, AND THE TOKEN CENSUS'S HOMOGRAPHS AMONG THE FAMILY NAMES (THE NUMBERS WALK sitting 8b, the compile of the second census; the docket logic/oral_triage/num_26_second_census_exam_2026-09-11.md)
+
+1. THE EXPORT'S CHAPTERS UNDER AN EMPTY KEY. The Seder Olam Rabbah export's "text" is a DICTIONARY, not a list — two keys, "Introduction" (an empty list) and
+   "" (the empty string), the thirty chapters under the empty key. The docket scan's chapter lookup (a list index) printed NO SUCH NODE for chapters 9 and 10
+   until the shape was measured; the five rows (9:1-2, 10:1-3) entered by address after the fix. A FIFTH DEFECT CLASS of the shelf export beside the mistyped
+   heads, the mistyped citations inside rows, the translator stopping mid-row and the English reversing a frame: the export's TREE SHAPE differs by work.
+2. "MOSES AND ELEAZAR" ADJACENT AT TEN SEATS. The reading's prose (sitting 8) said the pair stands at "seven seats from 20:28"; the compile's measurement on
+   the DB — the tokens משה ("Moses") and ואלעזר ("and Eleazar"), or משה ואל אלעזר ("Moses and to Eleazar"), adjacent — finds TEN in Numbers: 20:28 (the
+   succession's own verse), 26:1, 26:3, 26:63, 31:12, 31:13, 31:31, 31:51, 31:54, 32:2. The reading counted another form; the runner's assert typed from the print;
+   the reading ledger carries the correction row (append-only).
+3. ARD BARE ON THE ROLL. 26:40 "and the sons of Bela were ARD and Naaman; [of Ard] the family of the Ardite, of NAAMAN the family of the Naamite" — the DB
+   writes אַרְדְּ ("Ard") bare and לְנַעֲמָן ("of Naaman") with the preposition: the roll gives Ard's family its gentilic without repeating his name under the
+   preposition. The runner's first assert fell on the hand's לארד ("of Ard" — the preposition the ink does not write there); the typed fact retyped from the verse.
+4. THE TOKEN CENSUS'S HOMOGRAPHS AMONG THE FAMILY NAMES. The dependency gate's type census read three family names as institution tokens: Becher (26:35,
+   Ephraim's family — the first-fruits stem בכר), Shillem (26:49, Naphtali's — the peace offering's stem שלם), and "Reuben the firstborn" (26:5 — the firstborn's
+   redemption): each dispositioned FALSE with its name; and the land's "inheritance" (26:53-56, 26:62) as the family engine's institution — VIA the Zelophehad
+   runner. A roll of proper names is a field of homographs for a stem census; the gate names them, the file answers each.
+
+## 2026-09-11 — THE INK'S FIVE STRUCTURES MEASURED: THE FAMILY KEY ABSENT FROM THE NAMED REGISTERS, TWO CHECKSUMS THAT DIFFER FROM THEIR PARTS,
+## THE HEADER-AND-FOOTER FORM, AND THE RECEIPT FORMULA (the discussion after THE NUMBERS WALK sitting 8b; ARCHITECTURE/DATABASE_SPECULATION.md section 4)
+
+1. THE FAMILY KEY IS NOT KEPT AT EVERY STEP. The word מִשְׁפָּחָה ("family") has 185 tokens in the Torah, 174 through Numbers 26: minted at Gen 8:19
+   לְמִשְׁפְּחֹתֵיהֶם ("by their families" — the exit from the ark, the word's first seat), used in the nations table (Gen 10: five), ABSENT from Genesis
+   5, Genesis 11, Genesis 46 and Exodus 1 — the registers that run on names, sons, begot, years, died — back at Exodus 6:14-27 (six), then Numbers
+   159 of the 185 (chapter 26 alone 94). The speculation file's lineage table (section 1: "each step keeps the family column") is corrected on the
+   record: the ink alternates a COUNTED grain keyed by family and a NAMED grain keyed by name, and joins them at Exodus 6, Numbers 3 and Numbers 26.
+   Measured on the lemma column, every token.
+2. THE HEADER-AND-FOOTER FORM. A verse-initial אֵלֶּה ("these are") heads 101 verses; 68 head one of five register nouns (sons 22, names 14, families 12,
+   the counted 9, generations 11). By the numeral on the line: generations 9 open / 2 close, names 13 / 1, sons 17 / 5 (Gen 46:15, 18, 22, 25 the
+   sub-totals; Num 26:41), families 2 / 10 (each tribe's row in 26 closed by its count), the counted 6 / 3 (Num 1:44, 2:32, 26:51 the grand totals).
+   The record format is header → rows → footer with the checksum; the header noun names the grain.
+3. THE CHECKSUMS. Nine registers declare totals beside their parts; by the parser at every seat, seven match (Gen 5 per row 10/10 with Noah; Exod
+   38:25-28 the 603,550 half-shekels; Num 1; Num 2 nested twice; Num 3's firstborn 273 and 1,365; Num 4's 8,580; Num 7's twelve-fold row; Num 26) and
+   two DIFFER — Genesis 46's parts sum to 70 against the declared 66 (46:26), then 70 (46:27); Numbers 3's houses sum to 22,300 against the declared
+   22,000 (3:39) — both the seats where the tradition supplies a hidden row (Bava Batra 123a; Bekhorot 5a), both DIVERGE cells in the engine already.
+   Genesis 11:10-26 writes NO totals: the checksum column dropped at Shem's line. The ark writes per-kind counts and no total.
+4. MEMBERSHIP AS OF AN EVENT, AT THE BOUNDARIES ONLY. "Went out of the ark" Gen 8:16, 8:19, 9:10, 9:18; "came into Egypt" Gen 46:6-8, 46:26-27, Exod 1:1;
+   "came out of the land of Egypt" at the census heads Num 1:1 and 26:4; "the counted … in the wilderness of Sinai" Num 1:19 and 26:64 and NOWHERE
+   ELSE; "the number of names" Num 1 fourteen times, 3:40, 3:43, 26:53; "lift the head" Exod 30:12, Num 1:2, 4:2, 4:22, 26:2, 31:26, 31:49. The ink
+   never carries a count forward — twelve declared deltas between the censuses, none explained by arithmetic, the changes named (Er, Onan, Dathan,
+   Abiram, Korach, his sons, the daughters, Caleb, Joshua).
+5. THE LAW BLOCK'S STAMPS. וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר ("and the LORD spoke to Moses, saying") opens 83 verses (Exod 11, Lev 32, Num 39, Deut 1);
+   "and the LORD said to Moses" 67 (Exod 42, Num 21). The nine footers "these are the statutes / commandments / judgments / words" stamp place and
+   channel: "in Mount Sinai by the hand of Moses" Lev 26:46, 27:34 (Lev 25:1 opening); "in the plains of Moab" Num 36:13; "between a man and his wife"
+   Num 30:17 a scope. The case form: Num 27:5 "brought their judgment before the LORD" → 27:11 "a statute of judgment"; 27:21 the Urim as the query.
+6. THE RECEIPT. כַּאֲשֶׁר צִוָּה יְהוָה אֶת־מֹשֶׁה ("as the LORD commanded Moses") closes 58 lines — Exodus 22 (chapter 39 eight, 40 seven), Leviticus 11
+   (chapter 8 six), Numbers 17, Deuteronomy 8 — eleven with "so did he / they" on the same line (Exod 7:6, 7:10, 7:20, 12:28, 12:50, 39:43, Num 8:3,
+   8:22). The command verb צִוָּה ("commanded") 252 tokens (Deut 88, Exod 54, Num 48, Lev 35, Gen 27). The ledger's debit-and-close is the ink's own pair.
+7. THE MEASUREMENT'S OWN MISS. The date-row filter demanded year AND month AND day on one line and found two; the ink's formula "on the first of the
+   second month, in the second year" (Num 1:1) carries no day-word. The tape's 157 markers are the count. Filed so the register gate does not repeat it.
+
+## 2026-09-11 — THE REGISTER GATE'S FIRST RUN: THE FINDER'S OWN HOMOGRAPHS, THE PARSER'S STAR AS THE SIGNAL, ONE IS NEVER A CHECKSUM, THE FIFTH-VERB
+## READ AS FIVE, AND THE RECEIPTS' CENSUS ON THE LEDGER (THE_LOOP.md "THE REGISTER GATE")
+
+1. THE FINDER'S OWN HOMOGRAPHS. The first run-finder matched number-word stems by regex on the DB's consonantal words and paired the runs to the
+   parser's values; ten count lines came back UNPAIRED because the stems live inside PROPER NAMES and ORDINALS — יששכר ("Issachar") holds שש
+   ("six"), וּשְׁנִים ("and second", Num 2:16) and וּשְׁנֵי ("and the years of", Exod 6:16) hold שני, הַשְּׁבִיעִי ("the seventh", Exod 12:15) holds שבע. The
+   token census's lesson (a roll of names is a field of homographs) at a third seat, on our own instrument.
+2. THE PARSER'S STAR IS THE SIGNAL. cold_run_sequence.verse_words returns one token per DB word and MARKS its decisions: a star on a word the points
+   refused as a numeral (ושנים*, ושני*, השבע*), a hash on a suffixed numeral (שני# for שניהם "the two of them"), a caret on the construct two, a
+   tilde on a dual, a percent on a fraction, an at sign on the unit noun as one, a bar on the disjunctive. The gate's finder now reads those
+   marks instead of guessing: no UNPAIRED line remains on 108 count lines. Measured: the tokens align one-to-one with the DB's words at every
+   count line (a mismatch falls to UNPAIRED, never silent).
+3. ONE IS NEVER A CHECKSUM. Eleven count lines carry the numeral one beside "soul" or "the number" — "one soul" (Lev 4:27, 5:4, 5:17, Num 15:27,
+   35:30), "one man for his father's house" (Num 1:44), "on the first of the month" (Num 1:18), "one of the commandments" (Num 15:12) — the law's
+   individual or a date, never a register's total. The rule joined the unit rule (a numeral followed by year / day / month / gerah / talent /
+   shekel / city / man is a measure) and the duals (the unit inside the token: שנתים "two years"). 41 of the 108 lines are measure-only.
+4. THE FIFTH-VERB READ AS FIVE. Gen 41:34 וְחִמֵּשׁ אֶת־אֶרֶץ מִצְרַיִם ("and let him take a fifth of the land of Egypt") — the parser returns 5: a verb on
+   the numeral stem, the tithe-verb's class (עַשֵּׂר "tithe" read as ten, taught at 4b). Filed for the parser's next teaching with its probe; the
+   gate carries the seat declared.
+5. THE COUNT-NOUN VARIES. The ink's checksum lines say "the counted" (פְּקֻדֵיהֶם — Num 1, 2, 26), "the number" (בְּמִסְפַּר — Num 3:28's 8,600, 3:43's
+   22,273), "souls" (נֶפֶשׁ — Genesis 46's five totals, Exod 1:5, Num 31's persons), or NOTHING (Simeon's bare footer at 26:14: "these are the
+   families of the Simeonites, 22,200"). A gate anchored on one noun would miss a tribe; the union of the three nouns and the footer form reads
+   all 108.
+6. THE RECEIPTS' CENSUS ON THE LEDGER. Fifty-eight "as the LORD commanded" lines: nine close a ledger entry at the verse (every one where the
+   command was itself an event or a tent case); eighteen have the ACT on the ledger with nothing closed — the command a specification the tape
+   never wrote as a debit; five fire an event that writes nothing at the verse; five have a close in the chapter, not at the verse; twenty-one
+   have nothing (five story-scene gaps, one unnarrated rite, three formulas quoted inside commands, twelve in unwalked chapters). The ink's
+   command-and-receipt pair is a ledger form the machine writes only where the command was an event: a debt class, now declared.
+
+## 2026-09-11 — THE OFFERINGS CALENDAR'S READING: THE ETNACHTA (THE MID-VERSE PAUSE) NOT TAKEN BEFORE A CONJOINED NUMERAL, THE PLENE TENTH SILENT,
+## THE WATER LIBATION'S THREE LETTERS VERIFIED, THE SHELF'S ENGLISH DROPPING A SPEAKER, AND LEVITICUS 23 AT ITS SECOND SEAT (THE NUMBERS WALK sitting 9)
+
+1. THE PARSER'S GAP (23) — THE DISJUNCTIVE ON "ONE" BEFORE "AND + NUMERAL". 28:19 וְאַיִל אֶחָד וְשִׁבְעָה כְבָשִׂים ("and one ram and seven lambs") reads
+   [2, 8]: the etnachta (the mid-verse pause, the verse's strongest disjunctive) sits on אֶחָד ("one"), but the bar rule of 2b (M-26) emits the bar only before a
+   BARE numeral — here "seven" carries the conjunction, no bar is emitted, and ink_numbers joins one and seven. 28:27's identical "one" with the etnachta before
+   the bare "seven" takes the bar and reads [2, 1, 7]; 28:11's "one ram, lambs sons of a year, seven" reads right by the noun between. "One and-seven" adjacent is
+   28:19's alone in the Bible (computed). Owed to the compile with a probe: a disjunctive on a numeral closes the phrase before "and + numeral" too.
+2. THE PARSER'S GAP (24) — THE PLENE TENTH-DAY NOUN. 29:7 בֶּעָשׂוֹר ("on the tenth [day]") spelled with the vav is SILENT; Exodus 12:3's defective בֶּעָשֹׂר reads 10
+   (rule 16, 4b); the plene form's Torah seats Leviticus 16:29, 23:27, 25:9 and Numbers 29:7 — every one silent — and six in Joshua, Kings, Jeremiah and Ezekiel
+   (computed). Owed to the compile with a probe; the ordinal "the seventh [month]" beside it reads right.
+3. THE WATER LIBATION'S THREE LETTERS, VERIFIED ON THE TOKENS. The seven days' goat-verses close וְנִסְכָּהּ ("and its libation") at days 1, 3, 4, 5, 7 and the eighth
+   (29:16, 22, 25, 28, 34, 38); the second day closes וְנִסְכֵּיהֶם ("and their libations", 29:19 — an extra mem); the sixth וּנְסָכֶיהָ ("and its libations", 29:31 — an
+   extra yod, the form's ONE seat in the Bible); the pointer-verses read כְּמִשְׁפָּט ("according to the ordinance") at six days (29:18, 21, 24, 27, 30, 37) and
+   כְּמִשְׁפָּטָם ("according to their ordinance") at the seventh alone (29:33 — an extra mem): mem, yod, mem — מַיִם ("water"), R. Yehudah ben Beteira's derivation
+   (the Sifrei 150:1; Taanit 2b-3a; Shabbat 103b) holds letter for letter on fifteen verses, no fourth deviation. Registered as move M-28 THE LETTER READ.
+4. THE ENGLISH DROPS A SPEAKER — A SIXTH DEFECT CLASS OF THE SHELF EXPORT. Sifrei 142:2's Hebrew: "these are the words of R. Yoshiyah. R. Yonatan said to him:
+   in this sense we have not yet heard it. R. YOSHIYAH SAID TO HIM: since it says 'command...'" — the answer (the freed term for the identity) is R. Yoshiyah's;
+   the English reads "These are the words of R. Yoshiyah. R. Yonathan said: In this sense we have not yet heard it used. But, why is it written..." — the second
+   "said to him" dropped, the answer run into the objector's mouth. Beside the five classes on record (mistyped heads, mistyped citations inside rows, the
+   translator stopping mid-row, the English reversing a frame, the tree shape differing by work), a sixth: the attribution changed by an omitted speech-marker.
+5. THE SHELF'S OTHER ROW DEFECTS ON 28-29, read to their verses: (a) 149:1's HEBREW proof-text quotes "bulls, sons of the herd, TWELVE, rams two" — Sukkot's
+   second day (29:17) — where the row expounds Shavuot's 28:27 ("two bulls, one ram"; the English right): a garbled quotation in the Hebrew; (b) the "even one"
+   rule at 147:1, 149:1, 150:1, 151:2 is proved in the Hebrew from LEVITICUS 23:8 / 23:36 ("seven days you shall offer a fire-offering") every time — the English
+   rewrites the citation as the Numbers verse at 147:1 and 149:1 and keeps Leviticus at 150:1: the proof-text's BOOK changed by the translator (a citation class
+   at a new seat); (c) 150:1's "R. Yehudah" is R. YEHUDAH BEN BETEIRA in the Hebrew — the name shortened; (d) 143:3's Hebrew reads של חג ("of the festival") where
+   the sense and the English have the TABLE (השלחן, "the table" — the showbread's) — a garbled word; and the English INSERTS "When is this so? When the altar had
+   not been inaugurated. But if it had been inaugurated, even the first may be offered in the evening" — a clause the Hebrew row does not carry (the Mishnah
+   Menachot 4:4's answer supplied by the translator); (e) 147:1's Hebrew derives the food-work permission by the IDENTITY "holy convocation" (here and Exodus
+   12:16) — the English cites Exodus 12:16 without the middah; (f) 149:1's English cites "Vayikra 27:18" for Leviticus 23:18 (Shavuot's other table); (g) 142:3's two
+   rows name DIFFERENT corners of the altar for the two temidim (the English northwest / northeast; the Hebrew northeast / southwest); (h) 142:2's fourth item —
+   "My sweet savor" — is the libations in the English, the showbread's frankincense dishes in the Hebrew.
+6. LEVITICUS 23 AT ITS SECOND SEAT, MEASURED (M-23's census on the shared tokens per verse pair): 28:16 = 23:5 six of eight ("at dusk" dropped); 28:17 = 23:6 nine of
+   ten (the festival's name dropped, "you shall eat" made "shall be eaten"); 28:18 = 23:7 nine of nine ("shall be to you" dropped); 28:25 = 23:8 eight of eleven
+   (the offering clause gone); 28:26 = 23:21 nine of sixteen; 29:1 = 23:24 ten of seventeen ("a memorial of blowing" → "a day of blowing"); 29:7 = 23:27 ten of
+   fifteen ("the day of atonements" dropped); 29:12 = 23:34 eight of nineteen ("the festival of booths" dropped); 29:35 = 23:36 nine of ten; 29:39 = 23:37 two of
+   eleven (the close rewritten). The offerings are the NEW column at every day; the Sabbath's musaf and the new moon's whole register are new (Leviticus 23:3's
+   Sabbath has no offering; Leviticus 23 has no new moon — computed).
+7. ONKELOS'S OWN NAMES ON THE CALENDAR, cut from the shelf's bytes: "in your weeks" (28:26, one seat) rendered בְּעַצְרָתֵיכוֹן ("in your assemblies") — Shavuot
+   named ATZERET by the translation, the word the ink gives Sukkot's eighth day (29:35) and Pesach's seventh (Deuteronomy 16:8); "a day of blowing" rendered
+   יוֹם יַבָּבָא ("a day of wailing") — sitting 3's finding at the trumpets at its third seat; "a tenth of the ephah" rendered "one of ten in THREE SEAHS" (28:5) — the
+   measure converted; "strong drink" (28:7) rendered "old wine"; "in its month" (28:14) "at its renewal"; "afflict your souls" (29:7) "you shall fast"; "a pleasing
+   aroma" "to be accepted with favor" at eleven of eleven seats.
+8. THE THIRTEEN GOATS AND THE ONE "TO THE LORD". The heads of the two chapters' thirteen goat-lines computed: the new moon's alone reads "a sin offering TO THE
+   LORD" (28:15); three say "to atone for you" (28:22, 28:30, 29:5); nine are bare "a sin offering"; and the line's form alternates inside Sukkot — "a goat of
+   goats, one, a sin offering" at days 1, 2, 4, "a goat, a sin offering, one" at days 3, 5, 6, 7, 8 — a measured pattern, no claim beyond it.
+9. THE REGISTER: ONE narrative verb in seventy verses (28:1's "and He spoke"); 28:2-29:39 is one speech; 30:1's "and Moses said to the children of Israel according
+   to ALL that the LORD commanded Moses" closes it — a receipt-frame in a form the register gate does not count among its 58 ("according to all that", not "as").
+
+## 2026-09-11 — THE OFFERINGS CALENDAR'S COMPILE (THE NUMBERS WALK sitting 9b): THE PARSER'S THREE RULES AND THE TEN MOVED VERSES, THE FIVE-STEM'S
+## HOMOGRAPHS BY THE POINTS, THE ALTAR TOKEN'S TWO SEATS, THE TALMUD'S TOKEN FACTS COMPUTED ON THE INK, AND BEN AZZAI'S CENSUS AS AN ADDRESSEE CENSUS
+1. THE PARSER (cold_run_sequence.py's INK block, rules 25-27; census_probes.py 159 → 171): (25) a unit of one to nine under a DISJUNCTIVE accent before
+   "and" + a unit takes the bar — Num 28:19 [2, 8] → [2, 1, 7], Exod 36:10 [5, 1, 6, 1, 1] → [5, 1, 1, 5, 1, 1] (read wrong since the parser's first day);
+   measured on the whole Tanakh: twenty-three seats of unit + "and" + unit, the bare "one" under a disjunctive at these two Torah seats alone, every compound
+   "one and N" of the four books joined under a CONJUNCTIVE, and Gen 8:13's "the one and six hundredth year" (a qadma) the seat that refuses an accent-free
+   rule; (26) the plene tenth-day noun עשור ("the tenth") = 10 — sixteen seats in the Tanakh, one word (the tenth-day noun twelve times incl. Lev 16:29, 23:27,
+   25:9, Num 29:7; Gen 24:55 "days or ten"; the Psalms' ten-stringed); (27) THE FIVE-STEM'S THREE HOMOGRAPHS starred by their vowel points — the piel "take a
+   fifth" (Gen 41:34, a hiriq; read FIVE since 3b — the register gate's finding), the participle "armed" (Exod 13:18; Josh 1:14, 4:12; Judg 7:11 — a qubuts under
+   the mem; read FIFTY since the first day, found by the stem's census), the noun "a fifth" (Gen 47:26, a holam). THE CORPUS-WIDE DIFF (5,853 verses) MOVED
+   EXACTLY THE TEN PREDICTED and no other; the old probe E2 (Gen 41:34 = [5, 7]) RETYPED to [7] with its reason. The design typed "ten probes to fail" and the
+   run showed eight (the ten were the diff's verses): the count read at the run.
+2. THE REGISTRY MIS-HOMING (a debt, not fixed here): the row the_altar_of_moses ("the altar Moses built, 'the LORD is my banner'", Exod 17:15) homes the scene
+   token 'the-altar' for BOTH that altar (the exodus story's one line) and the tabernacle's burnt-offering altar — the erection's tamid_owed at Exod 40:29, the
+   incense-shekel's anointing and purging, Korach's plating, the eighth day's fire, and now the eight musaf timers. One id, two altars. A registry sitting owed:
+   split the token (the corpus hash may cover the registry table — measure before). The runner writes on 'the-altar' as the erection does, and CT9 records it.
+3. THE TALMUD'S TOKEN FACTS COMPUTED ON THE INK (cold_run_musafim.py): the thirteen goat lines — eleven "AND a goat", TWO bare "a goat" at 28:30 (Shavuot) and
+   29:11 (Yom Kippur) — EXACTLY Shevuot 10a:11's statement; the one "to the LORD" at 28:15 (Shevuot 9a:7); the seven day-heads of Sukkot "AND on the second
+   day"... and the eighth "ON the eighth day" without the conjunction (Sukkah 47a:9); "besides" twelve seats, "according to the ordinance" six + "their
+   ordinance" two, "by their number" seven, "the continual" fifteen, "without blemish" fifteen, "to the LORD" nineteen, "and their libations" eleven, "and its
+   libations" one, "to atone" three, "these" two — the reading's counts confirmed by script; the stacks — SIXTEEN lambs on the first of Tishri (2 + 7 + 7; Arakhin
+   13a:10) and TWENTY-TWO for Shabbat with the two days of Rosh Hashanah (6 + 2 + 7 + 7; Menachot 49b:5 — the docket's crown had typed "a Sukkot Sabbath" from
+   memory; the runner's first typed stack came out 20 and the page was read again: the correction appended to the docket); the watches' division a FUNCTION of the
+   declining table — (16, 8, 6, 2), (15, 9, 5, 4) ... (10, 14, 0, 14), 70 = 24 × 2 + 22 (Sukkah 55b:1-8).
+4. THE WATER LIBATION'S LETTERS IN CODE (M-28): the first computation took the LAST letter of all three words and read a he — the yod of 29:31's "and its
+   libations" is the penultimate letter; and the letters as written are a CLOSED mem, a yod, a CLOSED mem (םים): the word "water" needs the first mem OPEN — Rav
+   Chisda's "a closed letter rendered open is valid" (Shabbat 103b:12, 103b:16) is not commentary on the move, it is a step the code must take (MAYIM_RAW → MAYIM).
+5. BEN AZZAI'S CENSUS IS AN ADDRESSEE CENSUS (Sifrei 143:2; Menachot 110a): the runner typed zero other names for Leviticus 1-7 and read TWO seats off the print —
+   2:13 "the salt of the covenant of YOUR GOD" (the covenant's) and 4:22 "the commandments of the LORD HIS GOD" (an apposition on the Name) — neither an
+   offering's addressee; no offering "to God" in the span or in Leviticus 1-7 (computed), the span's other names zero. The dictum holds as stated ("with all the
+   offerings... the special Name"), not as a bare token count.
+6. THE ENGINE'S FIRST PERIOD TIMERS ON THE TAPE: law_musafim sets eight musaf_owed timers with period = the Calendar's key (sabbath, month, passover_1,
+   atzeret, rosh_hashanah, yom_kippur, sukkot_1, shemini); the dues from (40, 6, 1) computed by clock.next(key) — (40, 6, 8), (40, 7, 1), (41, 1, 15), (41, 3, 6),
+   (40, 7, 1), (40, 7, 10), (40, 7, 15), (40, 7, 22); law_moadim's sanctify_day carried the period form but no world had set one before the erection's epoch was
+   walked this far. A PENDING TIMER IS NOT A LEDGER ENTRY — the daemon's read-note ("the tamid's debt READ — open since...") lives on the timer until the fire; the
+   narrative tripwire's first run read the ledger and found nothing.
+7. THE ORDINALS ARE NOT CARDINALS: the runner's first date assertions typed [1, 14] for 28:16 ("in the FIRST month, on the fourteenth") and [7, 1] for 29:1 — the
+   parser's ink_numbers skips the month-ordinals (ink_ordinals holds them): [14], [1], [10], [15, 7] read off the print, as the diff's own [10] at 29:7 had said.
+8. THE SHELF'S SPELLING: the topic list's key "Mishnah_Taanit" does not exist on the export; the work is "Mishnah_Ta_anit" and Mishnah Taanit 4:2 (the watches'
+   institution on 28:2) entered the docket through the link scan as "Mishnah Ta anit 4:2". Mishnah Beitzah 2:4 was read at its printing inside Beitzah 19a:11.
+9. THE DOCKET'S SHAPE: 1,280 rows = 135 link rows in 26 works + 1,145 topic rows (20 Mishnah rows by address + THIRTY-SIX folio ranges read WHOLE — 1,125
+   segments); LAW 309 / DERIVATION 146 / DISPUTE 113 / CONTEXT 712 / OUTSIDE 0; 191 credited with a quick look; the walk's largest; the parts written per
+   200-line chunk of the dump so no reading was lost at a compaction (the docket read across compaction #139-#140).
+
+## 2026-09-12 — THE VOWS' READING (THE NUMBERS WALK sitting 10): THE SEVENTH MISTYPED HEAD, THE ENGLISH SUPPLYING THE MISHNAH, A CITATION AND A
+## SPEAKER WRONG, THE LAW IN MOSES' VOICE, FIVE DOUBLED VERBS, THE CLOCK AS THE CHAPTER'S ONLY NUMBER, AND ONKELOS' ONE ROOT
+
+Numbers 30:1-17 read on Onkelos whole and the Sifrei on Numbers piskaot 153-156 by position (logic/oral_triage/num_30_vows_2026-09-12.md; the
+measurement scripts vows_dump.py, vows_measure1.py, the asserts vows_ink.py in the scratchpad). Every finding computed on the bytes.
+1. THE SEVENTH MISTYPED HEAD: the export heads piska 156 "(Bamidbar 30:14)" while its first row quotes "and if her husband be silent, silent to her from
+   day to day" — 30:15's words ("from day to day" stands at 30:15 alone in the Torah; its one other Bible seat 1 Chronicles 16:23). The sixth was 132:3's
+   "26:25" for 26:55 (sitting 8).
+2. THE ENGLISH SUPPLIES THE MISHNAH (153:3, 153:4): "if he were twelve years and one day old, his vows are examined", "those of a girl of eleven are
+   examined", and the identity's content "ki yafli" (the nazirite verse's distinct utterance) — the Hebrew row of 153:3 reads the identity "vow"-"vow" as
+   "a vow with a freewill offering beside it" and carries no "examined" clause; the Hebrew of 153:4 carries no identity for the woman at all. The
+   inserted-clause class (143:3's inauguration clause, sitting 9), from Mishnah Niddah 5:6 and the Talmud's reading.
+3. A CITATION AND A SPEAKER WRONG IN THE ENGLISH (153:3): "(II Kings 4:20) 'As the L-rd lives, and as you (King David) live'" for the Hebrew's "מלכים ב ב"
+   (2 Kings 2) — the words "as the LORD lives and as your soul lives, I will not leave you" stand at 2 Kings 2:2, 2:4, 2:6 (Elisha to Elijah) and 4:30 (the
+   Shunammite to Elisha); no verse 4:20 carries them and David never speaks them.
+4. THE HEBREW'S OWN GARBLES: 153:7 names the disputant "ר' יוחנן" (R. Yochanan) where the English and the Sifrei's standing pair have R. Yonatan, and its
+   conclusion reads "אף האב אין מיפר" ("so THE FATHER annuls only the unconfirmed") where the argument's target is the husband (the English right); 155:1
+   breaks off "אף האב יכול:" ("so the father can:").
+5. THE ENGLISH DROPS THREE THINGS: an attribution — 154:1's Hebrew closes "דברי ר' ישמעאל" ("the words of R. Yishmael"), absent from the English (the sixth
+   defect class, a speaker dropped, at a second seat); a conclusion — 154:2's Hebrew ends "מגיד הכתוב שנתנה רשות להפר כל היום" ("Scripture tells that leave was
+   given to annul all the day"), the English stops at "shall stand"; a lemma — 154:3's Hebrew opens on 30:13's "all that proceeds from her lips ... shall not
+   stand — to exclude the caretaker", the English opens at "her husband has annulled them".
+6. THE LAW IN MOSES' VOICE: chapter 30 has NO "the LORD spoke to Moses" — its two narrative verbs are 30:1 "and Moses SAID" and 30:2 "and Moses SPOKE to the
+   heads of the tribes ... this is the thing which the LORD commanded"; the formula stands at eight Bible seats (Exodus 16:16, 16:32, 35:4; Leviticus 8:5, 9:6,
+   17:2; Numbers 30:2, 36:6), and its two Numbers seats are exactly the book's two law chapters without a divine frame (computed on the frames of every
+   chapter of Numbers: 1-21, 25-28, 31, 33-35 carry one). The daemon's installed_by for such a law is a form to decide at the compile.
+7. THE RECEIPT THAT CLOSES A SPEECH: "according to all that the LORD commanded Moses" stands at seven seats — Exodus 39:32, 39:42; Numbers 1:54, 2:34, 8:20,
+   9:5 close ACTS (the tabernacle finished, the census, the camp, the Levites' cleansing, the Passover), and 30:1 alone follows "and Moses SAID" — a receipt on
+   a speech (computed on the first word of every seat). The register gate's receipt census counts "as the LORD commanded" lines; 30:1's form ("according to
+   ALL that") is a class of one — the 9b debt (v)'s measurement, to declare at 30b.
+8. FIVE DOUBLED VERBS IN ONE CHAPTER (the infinitive absolute before its finite form, read off the morphology): "swear an oath" (30:3), "be, she shall be"
+   (30:7 — Jeremiah 15:18 its one kin), "annul, he annuls" (30:13, 30:16 — the form's two Bible seats, both here), "be silent, he is silent" (30:15, one seat);
+   Onkelos keeps every doubling; the Sifrei reads three of them (R. Akiva's part-is-whole, the silence to vex, and "after his hearing" freed).
+9. THE CLOCK IS THE CHAPTER'S ONLY NUMBER: the parser reads no cardinal and no ordinal in seventeen verses and STARS the three oath-tokens (30:3, 30:11, 30:14 —
+   the seven-stem's homograph, 3b's rule holding at three new seats: no gap); "on the day of his hearing" four seats, all here; "from day to day" (30:15) two
+   Bible seats — the Chronicler's 1 Chronicles 16:23 keeps the Torah's preposition where its Psalm parallel (96:2) and Esther 3:7 write the other, and Onkelos
+   renders 30:15 with the Psalm's form; "after his hearing" one seat.
+10. ONKELOS' ONE ROOT: the translation renders the OATH by the stand-root ("establishes an establishment" 30:3; "by an establishment" 30:11; "every establishment
+   of a bond" 30:14), the CONFIRMING by the same root (30:5-15) and "the statutes" of 30:17 by it too (קימיא, "the establishments") — the Hebrew's three roots
+   (stand, swear, statute) one in the Aramaic; "her husband" rendered "her OWNER" at all nine seats; "restrained" rendered "turned away"; "annul" rendered
+   "void"; "and the LORD will forgive her" made passive behind the buffer, "from before the LORD it shall be forgiven her".
+11. THE STORE'S SHORT STEMS: the chapter has no six-letter stem-piece, so the manifest's check words take the word's LONGEST PIECE WHOLE (four and five
+   letters: "the tribes", "an oath", "restrained", "the utterance of", "a widow", "is silent", "the statutes") — sitting 9's rule kept in its content (a prefix
+   fragment is no check word) with its floor measured; all seven verified.
+12. THE cd LESSON, THE EIGHTH INSTANCE: the verifier run inside a compound command after a cd to the scratchpad — "no such table: words" — rerun from the
+   repo root by absolute path, 7 verified.
+
+## 2026-09-12 — THE VOWS' COMPILE (THE NUMBERS WALK sitting 10b): THE RECEIPT FINDER'S SECOND FORM AT ELEVEN SEATS, THE GATE'S EDGE THE IMPORTS NEVER
+## NAMED, THREE EMPTY SEGMENTS ON THE SHELF, THE STATE MACHINE ON THE ENGINE'S OWN INTERFACE, AND THE GUARD THAT REFUSES A NAME
+
+Numbers 30:1-17 compiled (World/step9/cold_run_vows.py 147/147; law_vows the 57th daemon; NUMBERS_WALK.md "Sitting 10b" design + as-built; the docket
+logic/oral_triage/num_30_vows_exam_2026-09-12.md, 1,047 rows). Every finding computed on the bytes.
+1. THE RECEIPT FINDER'S SECOND FORM: the register gate censused "as the LORD commanded" (כַּאֲשֶׁר צִוָּה, k/834 + 6680 + 3068) and missed 30:1's
+   "according to ALL that the LORD commanded" (כְּכֹל אֲשֶׁר צִוָּה יְהוָה, k/3605 + 834 + 6680 + 3068) — ELEVEN Torah seats (Gen 7:5; Exod 39:32, 39:42,
+   40:16; Num 1:54, 2:34, 8:20, 9:5, 30:1; Deut 1:3, 1:41), 58 → 69 receipts; nine of the eleven non-green on the running world, each read and declared
+   (Gen 7:5 the receipt BEFORE the chapter's closing acts; Exod 39:32 / 39:42 / Num 9:5 the ACT class — the spec's commands are not debits; Exod 40:16 the
+   one-verse offset before the erection, as Num 36:10; Num 1:54 the Levites' charge, a statute; 30:1 THE CLASS OF ONE — a receipt on a speech). A THIRD FORM
+   remains uncensused: the Genesis receipts with the other Name ("according to all that GOD commanded him", 6:22, 7:9, 7:16 — Elohim) — filed.
+2. THE GATE'S EDGE THE IMPORTS NEVER NAMED: the dependency census demanded vows → ordinances on the widow token at 30:10 (its two homes Exod 22:21 and
+   Lev 21:14 / 22:13) though the runner imports nothing of the ordinances — the same word, no homograph; declared VIA priesthood, where the status
+   "a widow or a divorced woman" is defined (the exact pair's three Torah seats computed: Lev 21:14, Lev 22:13, Num 30:10; Exod 22:21 pairs her with the
+   orphan). The token census sees what an author's imports do not — the rule 8 census earning its place a second time this walk.
+3. THREE EMPTY SEGMENTS ON THE SHELF: the export carries Nedarim 66b:9, 79a:10 and 13b:6 with NO TEXT — a segment address with an empty body, a defect class
+   beside the mistyped heads and the dropped speakers; the docket carries them as OUTSIDE (a verdict class for a row with nothing to grade).
+4. THE STATE MACHINE ON THE ENGINE'S OWN INTERFACE: the vow's confirm / annul machine needed NO engine change — `_write` puts an effect with a due past
+   now on w.timers; `advance` fires it; `cancel_timers(subject, effect, note)` and `close(eid, effect, note, value=)` are the restraint; the timer IS the
+   pending confirmation and its fire IS the confirmation (silence on the hearing day → vow_confirmed at day + 1); the scene's counts (set 8 / fired 5 /
+   cancelled 3 / pending 0; 46 entities) predicted by script before the runner ran and matched first run.
+5. THE GUARD THAT REFUSES A NAME: the honest-pairing guard reads LITERAL expected values only — the scene's tuple passed as the Name SCENE_PREDICTED was
+   refused; the tuple inlined. The rule was written for the exam's verdict strings; it holds for tuples too, and the refusal is the guard working.
+6. THE SLICE INDEX FROM THE PRINT, A SECOND INSTANCE: `SOTAH_UNCLEAN[0][:19]` prints nineteen characters; eighteen were typed from memory — the one miss of
+   the first graded run (146/147), retyped from the print.
+7. THE DOCKET'S PARTS ARE ON DISK: thirteen verdict parts A-M written one per chunk of the 3,143-line dump, the writer assembling them with coverage
+   COMPUTED — the compaction point #143 written before the docket cost nothing; the whole sitting ran across it and one more compaction inside the literals
+   step, the state doc's checkpoint and the parts carrying it.
+8. THE YAML'S OWN QUOTING: a header phrase with un-doubled single quotes inside a single-quoted scalar made register_dispositions.yaml refuse to load — the
+   gate exit 1 and register_probes 5/6 read as the evidence, the nine whys repaired by doubling the quotes; a registry write is parsed before it is trusted.
+9. THE LAW IN MOSES' VOICE AT THE REGISTRY: law_vows is installed_by boot with the class named in its comment (30:2 and 36:6 the book's two law chapters with
+   no divine frame; Moses' relay erects no institution) — the second pass's D2 decides whether the relay is itself an installing act; the debt filed.
+10. R. AKIVA'S "PART OF IT" (Nedarim 87b:1): יְקִימֶנּוּ ("he shall confirm it") heard as יָקִים מִמֶּנּוּ ("he shall confirm PART of it") — M-16's tenth
+   exemplar and its SECOND consonant-fragment cousin (the word's boundary re-cut, the mem read twice); the catalog's own rule at exemplar 8 says a third
+   registers its own move.
+
+## 2026-09-12 — MIDIAN'S READING (THE NUMBERS WALK sitting 11): THE EXPORT'S TWO FILES AGAINST EACH OTHER AT TWELVE ROWS — AN ARM REVERSED, AN ANCESTOR
+## INSERTED, THE TALMUD AND THE MISHNAH SUPPLIED, A RULE ABOUT RULES DROPPED; THE SHELF SILENT ON 165 VERSES; THE FRACTION CLASS'S SIX SEATS; THE STORE'S
+## SIX STRONG'S HOMONYMS; AND THE INK'S OWN CHECKSUMS ON THE SPOIL
+
+Numbers 31:1-54 read (logic/oral_triage/num_31_midian_2026-09-12.md; NUMBERS_WALK.md "Sitting 11"; the unit num_31_midian frozen, 206 units). Every finding
+computed on the bytes (midian_ink.py's asserts; midian_measure1.py's print).
+1. THE SIFREI'S HEADS CHECKED AGAINST THE ROWS' OWN CITATIONS BY SCRIPT: piskaot 157 (31:1) and 158 (31:22), twelve rows, each row's first citation its own
+   verse in order — no mistyped head in this chapter (ROW_CITES); the next head 159 is 35:9: NO ROW FROM 31:25 TO 35:8 — 165 verses (31:25-54 thirty, 32 forty-two,
+   33 fifty-six, 34 twenty-nine, 35:1-8 eight) with no row of the spine: the fifth silent stretch of the walk.
+2. 157:3 — THE ENGLISH REVERSES AN ARM: the Hebrew reads "24,000 — the words of R. Yishmael; R. Akiva says 12,000; why 'for all the tribes of Israel'? TO INCLUDE
+   the tribe of Levi"; the English drops R. Yishmael's name, gives R. Akiva "to EXCLUDE the tribe of Levi", and cites "and there were handed over" as his proof
+   where the Hebrew cites "for all the tribes you shall send". A new defect class beside the reversed frame of 123:1 (Chukat): the arm itself reversed.
+3. 157:4 — THE ENGLISH INSERTS AN ANCESTOR AGAINST THE ROW'S OWN PROOF: "his mother's father" is proved in the Hebrew by Genesis 37:36 "and the Medanites sold
+   him to Egypt" — Joseph (Phinehas's mother of Putiel's daughters, Exodus 6:25); the English inserts "(Yithro, viz. Shemot 2:16)", a citation the Hebrew lacks;
+   and the proof text's own word is "the MEDANITES" — Keturah's other son (Genesis 25:2 names Medan and Midian as brothers), where 37:28 has "Midianite men,
+   merchants": the Sifrei reads the brothers as one, the ink keeps them two.
+4. 157:5 — THE ENGLISH SUPPLIES THE TALMUD: R. Natan's Hebrew "by a COURT they killed him" (Joshua 13:22's "among their slain") becomes "with the four judicial
+   death penalties" (Sanhedrin 106b's Rav); "Abba Chanin in the name of R. ELAZAR" becomes "R. Eliezer"; the Hebrew assigns the idolatry to "their cities in their
+   dwellings" and two readings to "their castles" — the English puts the idolatry on the castles, Onkelos's assignment ("their houses of worship").
+5. 157:6 — A RULE ABOUT RULES DROPPED: the Hebrew reads 31:17's second "kill" two ways — R. Yishmael's "to close the subject", and "the one fit for intercourse is
+   killed — the one who has lain all the more? If you say so you punish by inference; therefore 'kill' is written, to teach that WE DO NOT PUNISH BY INFERENCE";
+   the English keeps the first, drops the second whole with R. Yishmael's name, and cites "(31:7)" for 31:17.
+6. 157:7 — the English replaces the Hebrew's conclusion ("they do not come into the category of uncleanness") with "(see Chukath #126)". 157:9 — the English drops
+   R. Yoshiyah's name on "in the name of its sayer" (Esther 2:22). 158:2 — the English supplies Mishnah Avodah Zarah 5:12's split (knives, spits and grills
+   whitened; pots and kettles boiled) where the Hebrew lists five vessels under "comes into the fire" with no split, and gives one a-fortiori for the Hebrew's two.
+7. 157:8 — THE IDENTITY'S LEG RUN BACKWARD IN THE HEBREW: "as the garment said THERE (Leviticus 11:32) has every goat-work like sack, so the garment HERE" — but
+   "work of goats" is 31:20's word, not Leviticus's; the English runs "as here, so there", the direction the ink allows.
+8. 158:3 — THE HEBREW MISQUOTES A LEMMA AND A CITATION: "therefore it says 'and they shall wash their garments'" is 8:7's form (the Levites), not 31:24's "and you
+   shall wash your garments"; "(19:19) 'slain by the sword'" names 19:16's phrase (19:19 is the row's second proof, "until the evening"); the English cites
+   "Vayikra 19:19" for Bamidbar — a book wrong, as sitting 8's Judges for Joshua.
+9. THE PARSER'S FRACTION CLASS "ONE OF THE N" — six Bible seats measured before any claim: Num 31:28 "one soul of the five hundred" [1]; 31:30 and 31:47 "one held
+   of the fifty" [1]; Ecclesiastes 7:28 "one of a thousand" [1]; Ezekiel 45:15 "one of the flock, of the two hundred" [1]; Nehemiah 11:1 "one of the ten" [1, 9]
+   (the nine parts read, the ten not). Named and left at census_probes R29; the compile's probes.
+10. THE INK'S OWN CHECKSUMS: 675,000 / 72,000 / 61,000 / 32,000 (840,000, every total a multiple of a thousand); ÷ 2 = 337,500 / 36,000 / 30,500 / 16,000 at both
+    seats; ÷ 500 = 675 / 72 / 61 / 32 (840) — exact; the Levites' one-of-fifty NEVER STATED AS A NUMBER — 6,750 / 720 / 610 / 320 (8,400, ten times the priest's)
+    computed; 16,750 shekels; the receipt "as the LORD commanded Moses" at four seats in the chapter — the most of any Numbers chapter (41 seats in the Bible;
+    Exodus 39 and 40 seven each, Leviticus 8 five).
+11. THE STORE'S GLOSSES ARE STRONG'S HOMONYMS AT SIX WORDS: "in-drought" for the sword (31:8 — the gloss's six Torah seats all "by the sword"), "the-transitively-
+    -the-jaws" for the prey (the word's Torah seats all Numbers 31's), "and-crack-off" for the wrath-verb (five Torah seats), "sin" for the reflexive purify-verb
+    (31:19, 20, 23 — and chapter 19's four seats, owed), "and-trample" for the washing of garments (twenty Torah seats), "seasons" for the tent of MEETING (31:54 —
+    the appointed-times homograph at 142 seats, so by reference only). Rows added to logic/glosses/word_gloss_overrides.yaml (by_gloss where every Torah seat is
+    the one word, by_ref where not); the frozen unit and the machine truth untouched (the display layer's law).
+12. THE RETELLINGS MEASURED: Joshua 13:21-22 (the five kings "the princes of Midian... the princes of Sihon, dwelling in the land"; Balaam "the SOOTHSAYER"; "to
+    their slain" for 31:8's "upon their slain" — the word's three Bible seats); Joshua 22:17 (Phinehas: "the plague in the congregation of the LORD" — the clause's
+    only other seat); Judges 21:10-12 (twelve thousand sent; "every male and every woman who has known lying with a male you shall devote"; four hundred virgins —
+    "lying with a male" at this chapter's three seats and Jabesh-gilead's two alone in the Bible); Judges 8:5, 12, 26 ("the kings of Midian" — Gideon's two;
+    1,700 shekels of Midianite gold); Exodus 30:16 ("for the children of Israel for a memorial before the LORD, to atone for your souls" — 31:54's six words in
+    another order, 31:50's "to atone for our souls"); Exodus 35:22 (the donation's gold list sharing the ring and the kumaz — the clasp); 1 Samuel 30:24-25 and
+    Joshua 22:8 (the equal shares — the ink's kin, no row of the declared shelf linking them: observed, not linked).
+13. THE TRUMPETS' ONE NARRATIVE SEAT IN THE TORAH: the trumpet-word's Torah seats are 10:8, 9, 10 (the law) and 31:6 (the run) — "the trumpets of alarm" with
+    2 Chronicles 13:12 alone; "the Midianites" with the article at 25:17 and 31:2 alone (the command and its run); "the deliver-root" at 31:5 and 31:16 alone in
+    the Torah; the tribute-word's six Bible seats all here; the prey-word's six, five here; tin's one Torah seat (31:22), lead's two (Exodus 15:10, 31:22).
+
+
+## 2026-09-12 — MIDIAN'S COMPILE (THE NUMBERS WALK sitting 11b): THE RATIO CLASS TAUGHT AND THE DIFF'S NINTH SEAT, A FALSE JOIN MEASURED AND REFUSED A RULE,
+## THE REGISTER GATE'S NINTH SEAT FILLED BY A DAEMON'S VERSE, TWO HOMOGRAPHS TOLD BY THE POINTS, AND THE CURSOR'S AUDIT BROKEN BY A LATER CLOSE
+1. THE RATIO CLASS "one of the N" (the parser's rule 28; World/step9/cold_run_sequence.py's verse_words post-pass): the corpus-wide OLD-AGAINST-NEW DIFF over
+   all 23,213 verses of the Tanakh MOVED NINE — the eight predicted (Num 31:28, 31:30, 31:47; Ecclesiastes 7:28; Ezekiel 45:15; Nehemiah 11:1; Job 9:3, 33:23)
+   and JUDGES 16:28 "that I may be avenged one [vengeance] of my two eyes" — now Fraction(1, 2), the class's PARTITIVE form (Sotah 10a:3 the shelf's seat: one
+   eye's vengeance now, the other's in the world to come); read and accepted as census_probes K8. The rate REPLACES the one (אחד/N%, the parser's fraction
+   mark); the denominator's tokens are STARRED — a rate is a measure, never a count (register_probes R7: Num 31:28 leaves the count census, no gate line changed).
+2. DEUTERONOMY 32:30's FALSE JOIN: "how should one chase a thousand, and two put ten thousand to flight" reads [1, 1002] — "a thousand | and two" joined under
+   the etnachta (the mid-verse pause). THE CLASS WAS MEASURED BEFORE ANY RULE: 163 Tanakh seats of a ten-or-more numeral under a disjunctive accent before
+   "and" + a numeral — the join RIGHT at every census seat (the compound numerals of the registers) and wrong at this poetic seat alone. No rule (one seat
+   against 162 is a patch, not a class); the false reading typed as the standing tripwire (census_probes R61) and filed for Deuteronomy's walk, where the
+   poem's parallelism may teach it.
+3. THE REGISTER GATE'S NINTH SEAT: the footer Num 36:13's block (Num 30:17, 36:13] was declared EMPTY at the register gate sitting; law_midian's given_at
+   Num 31:21 fills it — the footer turns DAEMONS by the daemon's registration alone (the footer class is the registry's, the count and receipt classes the
+   world's). Nine seats paid at one sitting (31:35 / 31:36 / 31:40 / 31:46 LEDGER on the four thing parties; 31:7 / 31:31 / 31:41 / 31:47 CLOSE; 36:13 DAEMONS),
+   each key AND body deleted (the law of the dispositions); DECLARED 112 -> 103.
+4. TWO HOMOGRAPHS TOLD BY THE POINTS at the dependency census, both FALSE: Num 31:26 אֲבוֹת "fathers" (the chataf-patach under the aleph; lemma 1 — the
+   heads of the fathers' houses) against Leviticus 19:31 / 20:6 הָאֹבֹת "the mediums" (the cholam; lemma 178) — the sanctions engine's molech_ov token by the
+   letters alone; Num 31:23 בְּמֵי נִדָּה "with the water of niddah" — the water of sprinkling, the heifer's phrase at four Torah seats all in 19 and 31
+   (lemma 5079 shared with Leviticus 15:19's menstruant): the clocks engine's token by the letters alone, and THE SHELF ITSELF SPLITS THE SENSE AT THIS VERY
+   VERSE — Bar Kappara reads "the water of niddah" as the water a menstruant immerses in, forty se'ah (Avodah Zarah 75b:8-9) — recorded as an arm of the
+   runner's DATA row immersion_source, no call.
+5. THE CURSOR'S AUDIT AND THE LATER CLOSE (THE LOOP steps 1 and 4; World/step9/cursor_probes.py fell from 6/6 to 1/6 at this sitting with no line of the
+   cursor or the journal changed): the first close on the tape AFTER the probes' cursor (Num 27:1) of an entry written BEFORE it — moses' the_trumpets (written
+   at 10:2, closed by value at 31:6) and israel_people's harass_the_midianites (25:17, closed at 31:7). The engine's log holds the ledger entry BY REFERENCE
+   (world_engine._write: self.log.append(('WRITE', now, entry))) and World.close writes closed_by / closed_day INTO THE SAME DICT; the journal sinks the log
+   after the run, so the base segment's run.write line at event 2635 carries a close the replay to the cursor has not reached — the prefix differs there and
+   every chain after it (474 of 3,108 lines; "the base or the engine has moved; rerun the tape" — rerun, the same). Diagnosed by diff (K1's base against a
+   run_to('Num 27:1') sink into a temp dir; the first differing line's data the trumpets' entry with closed_by "Num 31:6 —"). Every earlier close of an
+   older entry lay on the SAME side of the cursor as the entry (Chukat's 21:4 on Shelach's 14:25 — both before 27:1; the daughters' marriages on 27:1-11's
+   rows — both after), which is why the audit held through ten sittings. NOT the runner's fault and NOT the gate's: THE LOOP step 1's assumption that a
+   write line is immutable meets step 4's audit at the first backward close. The fix is a DESIGN DECISION — (a) snapshot the entry at write time and journal
+   the close as its own line (run.close, a tenth log class; the ledger view's closed_by / day_closed then read from it; the journal gate's counts gain a
+   column), or (b) audit modulo the close fields (which empties the chain's meaning). Recommended (a). The gate stays RED until the owner's word (COMPILE_DEBT's
+   sitting-11b box (i); THE_LOOP.md's open item).
+6. THE DOCKET'S SHELF DEFECTS: Avodah Zarah 76b:5 — the tractate's colophon exported as a text segment (the docket's one OUTSIDE row); the Jerusalem Talmud
+   Terumot 4:3:3's thirty / fifty / sixty confusions carry the editor's scribal-error notes inside the text — read as the shelf's own, not adjudicated.
+7. THE SCOPE OF A PRINT IS PART OF THE NUMBER: the receipt formula "as the LORD commanded Moses" was measured for NUMBERS (thirteen seats) and typed into
+   the runner as a whole-Torah census (thirty-eight) — the first graded run refused it, retyped to the print's own scope. And a callee's DATA row read for a
+   key it never carried (the Balak runner's cozbi_and_zur: value + source, no settings) — read the row's keys before typing the read (the runner names the
+   row's value as its one setting).
+   ADDENDUM TO ITEM 5 (the same day; the owner: "I accept your recommendation"): THE CLOSE LINE BUILT — the tenth log class run.close
+   (World.close logs its own line naming the entry by its write ordinal `seq`; the write line a SNAPSHOT at write time), the ledger view a
+   join of the two, the journal gate's new pair closed = closes; cursor_probes 6/6 again against the regenerated base (the old base, written
+   by the old engine, differs from the new replay at its first close — "rerun the tape, then resume"); the RUN tuple unmoved. The probe's
+   own lesson: J7's first sink stood inside an open bound and the prefix differed on the shared bound list — the design's own exception
+   (the cursor's bound rule of sitting 1b); the first sink moved to the marker. THE_LOOP.md "Step 1's amendment — THE CLOSE LINE".
+
+## 2026-09-12 — GAD AND REUBEN'S READING (THE NUMBERS WALK sitting 12): THE SHELF SILENT, PROVED BY POSITION, AND ITS THREE CROSS-CITING ROWS — ONE QUOTING
+## THE VERSE'S PAIR IN THE OTHER ORDER; A WRITTEN-AND-READ PAIR AT 32:7; THE STORE'S GLOSSES AT ELEVEN WORDS; ONKELOS'S BUFFER MEASURED ON THE WHOLE BOOK;
+## AND THE RETELLINGS MEASURED
+
+Numbers 32:1-42 read (logic/oral_triage/num_32_gad_reuben_2026-09-12.md; NUMBERS_WALK.md "Sitting 12"; the unit num_32_gad_reuben frozen, 207 units). Every
+finding computed on the bytes (gad_ink.py's asserts; gad_measure1.py's print).
+1. THE SHELF'S SILENCE PROVED BY POSITION AND SCANNED WHOLE: no piska of the Sifrei on Numbers stands between 158 (31:22) and 159 (35:9); the whole export
+   (161 piskaot, both files) scanned for any row citing chapter 32 — three rows of OTHER chapters: 86:1 (on 11:2) and 95:1 (on 11:21) cite 32:1, 106:1 (on
+   12:14) cites 32:37-38. Credited with a quick look (read whole at sitting 3), never counted as rows on the chapter.
+2. THE ROWS' QUOTATION REORDERS THE VERSE'S PAIR: both 86:1 and 95:1 quote 32:1 in Hebrew as "and much cattle had the sons of GAD and the sons of REUBEN"
+   (ומקנה רב היה לבני גד ולבני ראובן — "much cattle... Gad... Reuben"), where the verse reads "the sons of REUBEN and the sons of GAD" — the chapter's own
+   order of 32:2-33 (Gad first six times) carried by the citing rows into the one verse that has Reuben first; the English rows keep Reuben first at 95:1 and
+   Gad first at 86:1. A shelf word-order variant, filed beside the mistyped heads and the misquoted lemmas.
+3. 32:7 A WRITTEN-AND-READ PAIR: the store carries the written form and the read form of "you discourage" side by side (תנואו/ן "you discourage", written;
+   תניאו/ן, read) — fourteen tokens for the DB's thirteen, the one verse of the chapter whose counts differ (the per-verse count the finder; 1:16's pair the
+   walk's first); the DB writes the written form WITHOUT ITS POINTS (the raw token unpointed among pointed neighbors) — the DB's convention for the written
+   form, read off the bytes.
+4. THE HINDER-ROOT'S TOKENS AND THE SUBSTRING TRAP: the root of "discourage" (32:7, 9) and "disallow" (30:6, 9, 12) — six Torah tokens in chapters 30 and 32,
+   the noun at 14:34 ("my alienation") and Job 33:10; a census on the root's two letters catches "the hated wife" (Deuteronomy 21:15-17), "we have been
+   foolish" (12:11) and "I will provoke them" (Deuteronomy 32:21): the token set named, the letters refused (the lesson banked).
+5. "ARMED" AND "FIFTY" ONE SPELLING: Joshua's "chamushim" (1:14; 4:12; Exodus 13:18; Judges 7:11) and the numeral "fifty" share their consonants; the DB's
+   morphology reads each (a participle / a cardinal), and the points differ — the u-vowel under the second letter and no doubling dot in the armed; the
+   i-vowel and the doubled third letter in the numeral; both carry the i-vowel in their second syllable (a discriminating mark is chosen after the whole
+   word's points are read).
+6. ONKELOS'S BUFFER MEASURED ON THE WHOLE BOOK: "before the LORD" rendered "before the PEOPLE of the LORD" (קדם עמא דיי "before the people of the LORD") at
+   32:20, 21, 22, 27, 29, 32 — every seat of the phrase in Onkelos Numbers is this chapter's, all six martial (the arming, the crossing, the subduing, the
+   war); the three legal seats keep "before the LORD" (32:22 twice, 32:23). 1 Chronicles 22:18 has the double in the ink: "and the land is subdued before the
+   LORD and before his people".
+7. THE STORE'S GLOSSES AT ELEVEN WORDS: "and-eye" for the answer-verb (32:31 — the gloss's 37 tokens mix the answer-verb's forms with "and-the-eyes-of"),
+   "and-be" for the approach-verb (32:16 — 544 tokens, nearly all "to be"; the approach-verb's two forms among them), "and-glow" for the anger (32:10, 13),
+   "in-pasture" for the wilderness (32:13, 15), "and-waver" for "he made them wander", "multiplication" for "brood", "to-scrape-together" for "to add",
+   "and-decay" for "you will destroy", "from-?" for "from Kadesh" (19 tokens of the gloss — every one a place name with the prefix), "?" for the pieces of
+   Atroth Shophan, Beth Nimrah, Beth Haran, Baal Meon and "villages of", "revolve" for "their names being changed": overridden BY REFERENCE at the chapter's
+   seats (logic/glosses/word_gloss_overrides.yaml); the frozen unit and the machine truth untouched.
+8. THE PARSER: two numbers in the chapter (32:11 [20], 32:13 [40]), no gap; the retellings' numbers by the same parser — Joshua 4:13's 40,000 against 26:7 +
+   26:18 + 26:34 ÷ 2 = 110,580; 1 Chronicles 5:18's 44,760; 1 Chronicles 2:22-23's 23 and 60; Judges 10:4's three thirties; Deuteronomy 3:4's 60; 2:14's 38.
+9. THE RETELLINGS MEASURED: Deuteronomy 3:12-20 ("armed before your BROTHERS" for "before the LORD"; "I know that you have much cattle" quoting 32:1;
+   "until the LORD gives rest to your brothers" for 32:18's "until every man has inherited"); Joshua 1:12-18 ("remember the word which Moses commanded";
+   "all that you have commanded us we will do"); 4:12-13 ("armed before the children of Israel as Moses spoke to them"; "about forty thousand armed for the
+   host before the LORD"); 22:1-9 ("you have kept all that Moses commanded you"; "divide the spoil of your enemies with your brothers"; "by the commandment
+   of the LORD by the hand of Moses"); Judges 5:16-17 (Reuben "sat among the sheepfolds", Gilead "abode beyond the Jordan"); 8:11 (Nobah and Jogbehah on
+   Gideon's route); 11:10, 36 (the Gileadites' "so will we do"; Jephthah's daughter's "as has gone out of your mouth"); Joshua 13:15-31 (Dibon in Reuben's
+   allotment, Heshbon on Gad's border, Beth Peor in Reuben's — Moses' grave "opposite Beth Peor", Deuteronomy 34:6, against the Sifrei 106:1's Gad from
+   33:21); Isaiah 15-16, Jeremiah 48, Ezekiel 25:9 (ten of the chapter's cities as Moab's); 1 Chronicles 2:21-23 (Jair the grandson of Hezron of Judah by
+   Machir's daughter — against 32:41's "son of Manasseh"), 5:8-9, 18, 25-26 (Reuben "at Aroer as far as Nebo and Baal Meon"; the two and a half exiled
+   first); 2 Kings 10:33 (Hazael's Gilead — the one other seat with Gad before Reuben).
+10. THE TRIBES' ORDER: Reuben before Gad at 32:1 and at every seat of the pair outside the chapter but 2 Kings 10:33 (Deuteronomy 3:12, 16, 29:7; Joshua's
+    fourteen; 34:14; 1 Chronicles 5:26); Gad before Reuben at 32:2, 6, 25, 29, 31, 33 and in the building (32:34 before 32:37).
+11. THE KINGS' FORMULA'S FIRST SEAT: "did evil in the eyes of the LORD" (הרע בעיני יהוה "the evil in the eyes of the LORD") stands fifty-three times in the
+    Bible; its first seat in the canonical order is 32:13, the Torah's other four Deuteronomy's (4:25, 9:18, 17:2, 31:29).
+
+## 2026-09-12 — GAD AND REUBEN'S COMPILE (THE NUMBERS WALK sitting 12b): THE TALMUD'S PREMISE ON 32:3'S TRANSLATION AGAINST THE STORE'S ONKELOS; AN EMPTY
+## SEGMENT AT BAVA METZIA 94a:15; THE HALF-TRIBE PHRASE WITH TWO TRIBE-NOUNS
+
+1. THE SHELF'S ASSUMPTION AGAINST THE STORE'S TARGUM (the Aramaic translation). Berakhot 8b:1 teaches the rule of reading each verse twice with its translation once "even for a
+verse like Ataroth and Dibon and Jazer ... (Numbers 32:3), comprised entirely of names of places that are identical in Hebrew and Aramaic". The local
+Onkelos (the reading's ledger row at 32:3, sitting 12) renders the nine by ARAMAIC names and keeps the Hebrew forms only at 32:38; Nebo it calls "the
+burial place of Moses". The Talmud's premise about the Targum (the Aramaic translation) of this verse is not the store's Targum (the same, Onkelos). Filed as a class: the shelf describes a translation
+the store does not carry (the store's Onkelos is one recension; the sugya's premise may be another's, or the sugya's own hyperbole). No adjudication.
+2. AN EMPTY SEGMENT IN THE EXPORT. Bava Metzia 94a:15 is a blank row in the local Babylonian Talmud export (the docket's OUTSIDE verdict — the row owed its
+verdict like any row). The class already on record (Avodah Zarah 76b:5 a colophon exported as a segment; Chovah Section 7 row 11 empty in the Sifra):
+the export's gaps are counted, never skipped.
+3. THE HALF-TRIBE PHRASE'S TWO TRIBE-NOUNS. "Half the tribe of Manasseh" with 32:33's tribe-noun (שֵׁבֶט "tribe") stands at twenty Bible seats (Deuteronomy
+3:13; Joshua 1:12, 4:12, 12:6, 13:7, 13:29, 18:7, 22:7-21; 1 Chronicles 5:18-26, 12:38, 27:20 — measured at the runner's first run, the design's
+"nineteen" retyped); 34:14-15 use the OTHER tribe-noun (מַטֵּה "tribe") for the same half tribe, and Joshua 22:9 the first with the article. The two
+nouns for "tribe" split the phrase's seats; a census of either alone understates.
+
+## 2026-09-12 — THE JOURNEYS' READING (THE NUMBERS WALK sitting 13): THE CITATION SCAN'S TWO BLIND SPOTS (THE ABBREVIATION AND THE MARK); THE ITINERARY
+## AGAINST DEUTERONOMY 10:6-7; THE PARSER'S TWO DATE READERS ON THE TWO FULL DATES; REKEM IN TWO LANGUAGES; THE STORE'S GLOSSES AT TWENTY-ONE WORDS
+
+Numbers 33:1-56 read (logic/oral_triage/num_33_journeys_2026-09-12.md; NUMBERS_WALK.md "Sitting 13"; the unit num_33_journeys frozen, 208 units). Every
+item below is computed in the sitting's scripts (jou_ink.py's asserts; jou_measure1.py / jou_measure2.py the prints).
+1. THE CITATION SCAN'S TWO BLIND SPOTS. The "found by position" clause scans the whole Sifrei export for rows citing the chapter. The first scan looked for
+   "(Bamidbar 33:n)" in the English and for the chapter mark with a straight quote in the Hebrew, and reported ZERO cross-citing rows. The export cites
+   a verse of the same book as "(Ibid. 33:38)" and the Hebrew row writes the chapter with the GERSHAYIM (the double-stroke mark, ״) — the widened scan
+   found ONE row (133:3 on 27:2, dating the daughters by 33:38), and two false "Ibid. 33" hits whose book is another (Genesis 33:4 at 69:2, Jeremiah
+   33:1 at 151:1 — the abbreviation's referent is the row's last-named book, read to its verse). The class: a citation scanner must read the export's
+   abbreviation AND its punctuation marks, and a report of zero is worth only the coverage line that names the forms scanned (THE_STEPS Step 2's rule,
+   met on the shelf's own citations).
+2. THE ITINERARY AGAINST DEUTERONOMY 10:6-7. Deuteronomy runs "from Beeroth-bene-jaakan to Moserah; THERE AARON DIED and was buried" and then "to
+   Gudgodah, and from Gudgodah to Jotbathah"; the itinerary runs Moseroth (33:30) THEN Bene-jaakan (33:31) then Hor-haggidgad and Jotbathah, and puts
+   Aaron's death at Mount Hor (33:38), seven camps after Moseroth by index. Two orders and two places in the ink itself; the declared shelf (the Sifrei on
+   Numbers, Onkelos) is silent on both; filed as an OBSERVED divergence for the compile's docket (the eight backward journeys of the tradition if the local
+   Talmud carries them) and for Deuteronomy's own reading. No adjudication.
+3. THE PARSER'S TWO DATE READERS. The Torah writes the fortieth year twice in full: 33:38 בִּשְׁנַת הָאַרְבָּעִים "in the year of THE forty" with בַּחֹדֶשׁ הַחֲמִישִׁי "in the fifth month" — the
+   article-bearing ORDINAL forms, read by ink_ordinals as [40, 5] with the day [1] by ink_numbers — and Deuteronomy 1:3 בְּאַרְבָּעִים שָׁנָה "in forty year" with
+   בְּעַשְׁתֵּי עָשָׂר חֹדֶשׁ "in eleven month", the CARDINAL forms, read by ink_numbers as [40, 11, 1] with ink_ordinals empty. Both read right; a date checkpoint
+   that takes one reader misses the other form. Noted for the compile's checkpoints at Deuteronomy.
+4. REKEM IN TWO LANGUAGES. Onkelos renders Kadesh as רְקַם "Rekem" at ten seats of Onkelos Numbers (13:26; 20:1, 14, 16, 22; 27:14; 32:8's "Rekem Geah" for
+   Kadesh-barnea; 33:36, 37; 34:4); the Hebrew's own רֶקֶם "Rekem" is a Midianite king at 31:8, rendered by the same consonants in the Aramaic — a scan of
+   the translation for the place-name counts the king unless it reads the Hebrew beside it. Likewise "the graves of those who demanded" for
+   Kibroth-hattaavah at all four seats of the name (11:34, 35; 33:16, 17), "Hor the mountain" at 33:37-41 and 34:8, "the fords of the Abarim" at 21:11
+   (plene) and 33:44-45, "with bared head" for the high hand at 15:30 and 33:3 alone. The second measurement pass searched the POINTED Aramaic for these
+   and found nothing at eleven seats — the points strip first (the shelf-search lesson, now on the translation).
+5. A PISKA'S HEAD AND ITS ROWS. Piska 112's head row cites 15:27 and its second row is on 15:30 (the high hand); an assert typed "112 is on 15:30" from
+   the row's verse fell. The head is the first row's citation; the rows walk on.
+6. THE STORE'S GLOSSES AT TWENTY-ONE WORDS (the display layer, logic/glosses/word_gloss_overrides.yaml, by reference): "and-grave" for וַיִּכְתֹּב "and he
+   wrote" (33:2), "the-pretermission" for הַפֶּסַח "the Passover" (33:3), "be-high-actively" for רָמָה "high" (33:3), "sentence" for שְׁפָטִים "judgments" (33:4),
+   "eye" for עֵינֹת "springs" (33:9), "in-cord" for בִּגְבוּל "in the border" (33:44), "and-wander-away" for וְאִבַּדְתֶּם "and you shall destroy" (33:52),
+   "figure" / "pouring-over" / "elevation" for the figured stones, the molten images and the high places (33:52), "desolate" for תַּשְׁמִידוּ "you shall
+   demolish" (33:52), "in-pebble" for בְּגוֹרָל "by lot" (33:54), "jut-over" for תּוֹתִירוּ "you leave over" (33:55), "to-brier" for לְשִׂכִּים "as thorns" (33:55),
+   "and-cramp" for וְצָרְרוּ "and they shall harass" (33:55), "compare" for דִּמִּיתִי "I thought" (33:56), and the "?" at the halves of Pi-hahiroth, Baal-zephon,
+   Kibroth-hattaavah, Beth-jeshimoth and Abel-shittim. The frozen unit untouched.
+7. TWO HOMOGRAPHS TOLD BY THE MORPHOLOGY. בָּמֹתָם "their high places" (33:52) is the consonants of בְּמֹתָם "at their death" (Leviticus 11:31-32, 6:7) — a
+   plural noun with a suffix here, a preposition and a noun there; and מַשְׂכִּיּוֹת "figured" at Psalm 73:7 is another token than מַשְׂכִּית "figured" at
+   Leviticus 26:1 and מַשְׂכִּיֹּתָם "their figured stones" at 33:52 — an exact-token census counts two Torah seats, not three.
+
+## 2026-09-12 — THE JOURNEYS' COMPILE (THE NUMBERS WALK sitting 13b): TWO HOMOGRAPHS THE RUNNER MEASURE FOUND; SEDER OLAM'S MANUSCRIPTS ON AARON'S MONTH;
+## THE EXPORT'S CHAPTER HEADINGS AS ROWS; THE TAPE'S VALUE HEADS; THE GLOBAL COUNTS OVER A LEDGER
+
+1. "THAT IS KADESH" / "IT IS HOLY". The reading's row counted "the identity clause at five Bible seats" for the pair הוּא קָדֵשׁ ("that is Kadesh" / "it is
+holy"); the runner measure listed the five — Genesis 14:7 and Numbers 33:36 are the PLACE ("En-mishpat, that is Kadesh"; "the wilderness of Zin, that is
+Kadesh"), Exodus 30:32, Leviticus 25:12 and 27:30 read "it is HOLY" (the anointing oil, the jubilee, the tithe). The same consonants, another word, told by
+the vowel points and the sense; the reading ledger's CORRECTIONS block appended (append-only). The class: a two-token census on the consonants counts
+homographs; the store's morphology (Np for the place) is the instrument.
+2. "THE WILDERNESS OF ETHAM" / "SPEAKING WITH THEM". The bare pair מִדְבַּר אִתָּם has ONE seat in the Bible — Exodus 34:33, "when Moses finished SPEAKING with
+them" (the participle מְדַבֵּר and the pronoun) — while the itinerary's "in the wilderness of Etham" (33:8) carries its prefix (בְּמִדְבַּר, "in the wilderness of"). A place-name census
+that strips the prefix finds another word; the prefixed form is the seat. The reading's claim ("each name one seat") holds for the prefixed form.
+3. SEDER OLAM RABBAH ON AARON'S MONTH. The export's 10:2 reads "Miriam died on the tenth of Nisan, and Aaron on the FIRST OF AV, and Moses on the seventh of
+Adar"; the translator's note records that the French manuscripts have "first of Tammuz" against the Talmud's placing. The ink fixes the month — 33:38's
+ordinal [40, 5], the fifth month, Av — and the tape's marker at 20:28 is built from it: a manuscript variant on a date the Torah states in full is
+OBSERVED and not adjudicated; the export's own editorial line that "the remaining 38 years are without record except for the list of stations (Numbers
+33)" states the design's premise for the itinerary as a data list.
+4. THE SEDER OLAM EXPORT'S HEADINGS AS ROWS. Its 9:1 and 10:1 are the strings "Chapter 9" and "Chapter 10", and 10:3 an editorial line ("This is where the
+chapter ends and so does part 1 of Seder Olam") — three rows verdicted OUTSIDE, owed their verdicts like any row (8b's fifth defect class, the text under an
+empty key, again).
+5. THE TAPE'S VALUE HEADS. The checkpoint that reads the tape's sixteen camps against the itinerary's list split each status's value at its first comma,
+semicolon, parenthesis or dash and matched the head by equality; the plains' status ("the plains of Moab across the Jordan of Jericho (22:1) — …") runs
+on past the name, and the head fell to unmatched: the match is by PREFIX. A value's head is the daemon's own sentence, not the registry's name.
+6. THE GLOBAL COUNTS OVER A LEDGER. Two earlier checkpoints (CV2 the count of commanded entries on israel_people and the newest entry's value; CX2 Israel's
+other open commanded entries) moved by the chapter's two debits though entities and closes stood unmoved — the design's "none should move" had grepped the
+entity and close counts alone. Widened: a global count is any count over a ledger; grep every count over one effect on one party before the tape run.
+
+## 2026-09-12 — THE BORDERS' READING (THE NUMBERS WALK sitting 14): THE HEBREW IBID IS "THERE"; THE MARKS' ORDER ON THE INK'S ASSERTS; THE WRITTEN
+## SINGULAR READ PLURAL; THE STORE'S GLOSS FAMILIES BY CENSUS; THE FLOOR OF FOUR CODE POINTS; THE BORDER'S OWN VERB AND ITS PROVERBS HOMOGRAPH
+
+Numbers 34:1-29 read (logic/oral_triage/num_34_borders_2026-09-12.md; NUMBERS_WALK.md "Sitting 14"; the unit num_34_borders frozen, 209 units). Every
+item below is computed in the sitting's scripts (bor_ink.py's asserts; bor_measure1.py / bor_measure2.py the prints).
+1. THE HEBREW IBID IS "THERE". The Sifrei export's Hebrew rows cite a verse of the last-named book as שָׁם "there" followed by the chapter mark — (שם ל"ד)
+   "(ibid. 34)" — where the English writes "(Ibid. 34:2)". Sitting 13's widened scan took the English "Ibid." and the Hebrew mark with the book's name
+   and the gershayim; it would have missed a Hebrew row citing this chapter by "there" alone. The scan now takes FOUR forms; the one row citing 34:2
+   (1:2) was found by the English form and confirmed by the Hebrew's "there"; two Hebrew "there 34" hits are Exodus 34:30 (1:7) and Exodus 34:20 (118:1,
+   unparenthesized in the export), read to their verses. The class: the coverage line names four forms, and a Hebrew row's "there" is read to the row's
+   last-named book like the English "Ibid.".
+2. THE MARKS' ORDER ON THE INK'S ASSERTS. Eight pointed comparisons fell on the first typed pass: the DB's raw order of the vowel points differs from
+   the canonical order (the dagesh written before or after the vowel; the meteg after the sheva) — בְּֽנַחֲלָה "as an inheritance" (34:2) carries a meteg, הַגָּדוֹל
+   "the great" (34:6) the dagesh before the qamats in the raw and after it in the canonical. Sitting 7 met the same class on the ledger's cuts (twelve
+   asserts, NFC on both sides); the ink's pointed comparisons now go through one helper that normalizes both sides (NFC) and keeps the meteg the print
+   shows. Where the raw order already is canonical (וּמָחָה "and it shall reach", לָעָיִן "to Ain") the comparison passed either way — the fault is silent
+   until it bites.
+3. THE WRITTEN SINGULAR READ PLURAL. 34:4 וְהָיָה תוֹצְאֹתָיו "and it shall be its goings-out" is written with the singular verb and read with the plural (the
+   snapshot store carries both tokens, ו/היה then וְ/הָיוּ֙; the Tanakh DB carries the written form, morphology HC/Vqq3ms) — the chapter's one
+   written-and-read pair; the clause's four other seats (34:5, 8, 9, 12) are written plural. Joshua 15:4 carries the identical clause with the written
+   singular (the DB's token; the store holds no Joshua, its reading unmeasured here). The class (sitting 12's): a pair is one token more in the store.
+4. THE STORE'S GLOSS FAMILIES BY CENSUS. The display layer's rows are written by reference where a gloss stands at other words elsewhere and BY GLOSS
+   where the store's every token of the gloss is the one word — the census FIRST, on the exact gloss strings: "cord" (19 tokens, all the border-word),
+   "the-cord" (8), "and-cord" (4), "to-cord" (3), "from-cord" (1), "in-cord" (2); "the-powder" (4, all the salt); "hidden" (8, all the north); "Daniel"
+   (25, all Dan); "Non" (16, all Nun); "from-pasture" (8); "front-suffix" (13); "sunrise-suffix" (9); "from-region-across" (8); "exit-him/its" (4);
+   "in-pebble" (4); "the-seas" (35, all singular); "the-Jordan-suffix" (1); "to-boundary-her/its" (2); "Kadeshbarnea" (6); and the broken
+   "inherit--mode-of-descent)" family (a stray parenthesis at every stem of the inheritance root, eight gloss strings). A substring census reaches
+   "according" through the letters of "cord" — the assert names the six rewritten glosses, never the family. Twenty-eight by-gloss rows and thirty-one
+   by-reference rows; the frozen unit untouched.
+5. THE FLOOR OF FOUR CODE POINTS. A manifest check is the word's longest store-piece whole, floor four code points: וּמָחָה "and it shall reach" cuts to
+   מחה (three), מִמַּטֶּה "from a tribe" to מטה (three), לְנַחֵל "to apportion" to נחל (three), שְׁנֵי "two of" to שני (three) — none can be a check; another word of the
+   verse was chosen each time (Chinnereth, the plain stem's "they shall divide", Israel, "and he spoke"). Noted so the next manifest chooses first.
+6. THE BORDER'S OWN VERB AND ITS PROVERBS HOMOGRAPH. תְּתָאוּ "you shall mark out" (34:7, 8) and וְהִתְאַוִּיתֶם "you shall mark out for yourselves" (34:10) are the
+   verb's three Bible seats; Proverbs 23:3, 23:6 and 24:1 write תִּתְאָו "do not desire" with the same consonants — the Hitpael of the desire-root, told
+   apart by the points (the tsere under the tav against the qamats under the alef) and the morphology (HVpi2mp against HVtj2ms). Joshua's borders use
+   תָּאַר "was drawn" (15:9, 11; 18:14, 17) — another root. A consonantal census of the border's verb counts six; the morphology three.
+7. ONKELOS'S TWO SPELLINGS OF HOR IN ADJACENT VERSES. The export's Onkelos writes הר טורא "Hor the mountain" at 34:7 and הור טורא at 34:8 — the same
+   mountain (the north border's), two spellings; chapters 20-21 carry the first, chapter 33 the second. A scan of the translation for the name takes
+   both (sitting 13 found five of one form; this sitting six of the other).
+
+## 2026-09-13 — THE BORDERS' COMPILE (THE NUMBERS WALK sitting 14b): TWO CENSUSES OF ONE LABEL; THE EIGHT NAMES A MIXED MEASURE; THE GATE'S CATCH AT THE
+## READING'S OWN SEAT; REKEM THE MISHNAH'S EAST; GINNOSAR THE LOTTERY'S NAME; THE ROW'S SHAPE
+
+1. TWO CENSUSES OF ONE LABEL. The runner's first run fell on "the land of Canaan (with the article) — thirteen Torah seats": the measure's label sat on the
+bare pair אֶרֶץ כְּנַעַן ("the land of Canaan", thirteen Torah seats) while the exact pair הָאָרֶץ כְּנָעַן ("THE land Canaan" — the article on the land, none
+on the name) has Numbers 34:2 alone. The reading's claim was the exact pair's (one seat) and stands; the compile typed both censuses apart. The same
+class fell twice more the same sitting — the side-word (the reading's "eighteen Torah seats" is the word's family with its prefixes; the bare token
+פְּאַת has five: 34:3, 35:5, and Leviticus 19:9 and 23:22 the field's CORNER, 19:27 the beard's — homographs by sense the family count hid) and Elizaphan
+(four seats by token, six by lemma — Exodus 6:22 and Leviticus 10:4 spell the same Kohathite "Elzaphan"). The lesson: type the census the print made,
+not the label's; a token census and a lemma census are two instruments.
+2. THE EIGHT NAMES WERE A MIXED MEASURE. The reading's "eight names stand nowhere else (Elidad, Jogli, Ephod, Shiphtan, Parnach, Azzan, Ahihud, Pedahel)"
+took Ephod by lemma (his token is the vestment's at Exodus 28:15, 39:8) and Chislon and Shelomi by token (their lemmas are single-seat; Chislon's token
+is Joshua 15:10's Chesalon, Shelomi's "my peace-offerings" at Leviticus 10:14) — and missed Hanniel, only-here by token (1 Chronicles 7:39 spells his
+namesake otherwise) though not by lemma. The two clean censuses: EIGHT BY TOKEN (Elidad, Hanniel, Ahihud, Pedahel, Jogli, Shiphtan, Parnach, Azzan), TEN
+BY LEMMA (the eight less Hanniel, plus Ephod, Chislon, Shelomi). The reading ledger's CORRECTIONS block appended; the fact set stands, the measure is named.
+3. THE GATE'S CATCH AT THE READING'S OWN SEAT. The dependency gate demanded borders → family for the inheritance token at six seats — 34:2, 13, 14, 15, 17
+and 34:5 — and 34:5's token is נַחְלָה מִצְרָיִם, "the BROOK of Egypt": the inheritance's consonants under another word's points, the reading's own find,
+now caught by the token census as a demand and declared inside the VIA row as a homograph by sense. The gate also demanded borders → offerings at
+34:27 — שְׁלֹמִי "Shelomi" (Ahihud's father) against שְׁלָמַי "my peace-offerings": FALSE, a homograph by token. Two homographs the gate found where the
+reading had named one.
+4. REKEM IS THE MISHNAH'S EAST. Onkelos renders Kadesh-barnea "Rekem Geah" at 34:4 (the reading's find); Mishnah Gittin 1:2 draws the borders for the bills'
+law "from Rekem eastward" — the translation's name of the chapter's south-east corner is the Mishnah's east point. And Bava Batra 122a:6 has the lottery
+name Naphtali's boundary GINNOSAR — Onkelos's word for 34:11's sea of Chinnereth ("the sea of Gennesar", its one seat): the shelf's lottery names a
+region by the translation's word for the chapter's east point. Both DATA, no verdict; both the translation's vocabulary meeting the shelf's.
+5. THE GADITE IS THE KID. The gentilic הַגָּדִי ("the Gadite", 34:14 — the pair's first seat with the Reubenite) is by token also "the kid" (Genesis 38:23,
+Judges 14:6): six seats by token, a homograph the reading's "thirteen in the Bible" for the pair did not name. Filed with the walk's homograph class.
+6. THE ROW'S SHAPE FOLLOWS THE FIRST WRITER'S. The borders runner's twelve named rows omitted the optional `father` column for Eleazar (34:17 names no
+father); the tape's first run fell at CP7's own view of the daughters' rows, which reads r['father'] by key — the second census runner's rows carry the
+column as None. The column is always present now. A table's optional column is optional in the schema and expected by the views: the first writer's
+shape is the table's.
+7. THE REGISTER SEAT PAID BY ROWS. The register gate's Num 34 seat (the headers "these are the names of the men" at 34:17 and 34:19) was declared NONE
+since the gate's birth with the why "chapters 34-36 not yet walked"; the population table's named grain was built at 26 for "the persons the roll names",
+and this is the first roll reached since. The borders runner writes the twelve as rows while consuming the dividers' line; the gate's class flips to ROWS
+(green) and the declaration, now STALE, is deleted — key and body. CP1's totals moved 136 → 148, the one global count the sitting moved, grepped first.
+
+## 2026-09-13 — THE REFUGE CITIES' READING (THE NUMBERS WALK sitting 15): THE SIFREI'S HEBREW FILE DUPLICATES A BLOCK; THE ENGLISH ROW IS NOT THE
+## HEBREW ROW AT ONE ADDRESS; "THIRTY" FOR TWENTY-THREE; THE RULE ABOUT RULES DROPPED A SECOND TIME; THE BARE DUAL THOUSAND; THE BASE LEMMA'S PREFIX;
+## THE STORE'S "EYE" FOR THE ANSWER-VERB
+
+Numbers 35:1-34 read (logic/oral_triage/num_35_refuge_cities_2026-09-13.md; NUMBERS_WALK.md "Sitting 15"; the unit num_35_refuge_cities frozen, 210
+units). Every item below is computed in the sitting's scripts (ref_ink.py's asserts; ref_measure1.py / ref_measure2.py the prints).
+1. THE HEBREW FILE DUPLICATES A BLOCK. The Sifrei on Numbers export's Hebrew piska 160 carries fourteen rows where the English carries ten: its rows
+   11-14 are 161:1-4 again, byte-near-identical — the dash character (U+2013 against the hyphen) the one systematic difference, 160:11 dropping the
+   kaf of "whoever smites" ל מכה ("smites") for כל מכה ("whoever smites"), 161:4 alone parenthesizing its Kings citation. The English file has no such block. A new defect class
+   for the export (after the mistyped heads, the translator's gaps, the verse division, the reversed frame, the dropped speaker, the supplied
+   Mishnah): A DUPLICATED BLOCK across two piskaot in one file. The ledger's grain is the English's sixteen rows; the four duplicates are read as their
+   twins and named; the coverage line carries both counts (16 and 20). The Hebrew 161:5 ends with the export's colophon — "the book of Numbers is
+   completed; blessed is the man who trusts in the LORD" (Jeremiah 17:7's words) — absent from the English.
+2. THE ENGLISH ROW IS NOT THE HEBREW ROW AT 160:5. The Hebrew 160:5 is the induction from the three instruments ("stone is not like wood, wood not like
+   stone, neither like iron — the common feature: it can kill; the commandment is in the avenger's hand"); the English 160:5 is two sentences on the
+   court-appointed avenger (the Hebrew's 160:7 tail, which the English 160:7 also carries), and the English 160:6 opens with the Hebrew 160:5's
+   induction before its own. The address is the same, the content transposed. The class: the two files are read at every row and the ledger says
+   which carries what.
+3. "THIRTY" FOR TWENTY-THREE, AND "[27]". The Hebrew 160:8 closes "the expounders of the marked words said: the three 'congregations' written in the
+   section teach that capital cases are by TWENTY-THREE" (בעשרים ושלשה "by twenty-three"); the English writes "adjudicated by thirty" and cites the
+   tokens as "one in [24] and two in [27]" — the ink's congregation-tokens stand at 35:24, 35:25 (twice) and 35:12. The English also supplies the
+   Mishnah's "acquittal is with a majority of one, and incrimination by a majority of two" where the Hebrew says "as witnesses are two, so the judges,
+   and a court is not evenly balanced — add one" (the supplied-Mishnah class, Sanhedrin 1:6).
+4. THE RULE ABOUT RULES DROPPED A SECOND TIME. The Hebrew 160:3: "but I can derive iron a fortiori — except that we do not punish by inference; therefore
+   it says 'if with an instrument of iron ... he is a murderer', to teach that WE DO NOT PUNISH BY INFERENCE" — שאין עונשים מן הדין ("we do not punish by inference"). The English carries
+   the a-fortiori and replaces the refusal with a different objection ("just as a stone must fill the hand, so iron"). Sitting 11 found the same rule
+   dropped at 157:6; the class recurs — the export's English drops the meta-rule and keeps the case.
+5. THE CITATIONS. 159:1's English "(Devarim 12:29)" where the Hebrew says "Deuteronomy 19" — the clause "when the LORD your God cuts off the nations"
+   stands at both 12:29 and 19:1, and 19:1 opens the refuge chapter (the Hebrew's is the apt seat); its "(Ibid. 26:3)" for "at the Jordan, Jericho" where
+   the Hebrew names Numbers 36 (36:13; the phrase's seven seats); 160:3's Hebrew "Exodus 11" for 21:18; 160:10's English "(37)" and "(38)" for verses 27
+   and 28; 161:1's English "Whence is this derived? From 'And you shall not take ransom'" with no Hebrew counterpart; 159:1's English "viz. Shemot 21:15"
+   supplied; 160:2's Hebrew misquoting Joshua 20:7 — "Kiriath-arba, that is Hebron, IN THE LAND OF CANAAN" for the ink's "in the hill country of Judah" —
+   and its a-fortiori "all the more he is not exiled" dropped by the English.
+6. THE BARE DUAL THOUSAND. אַלְפַּיִם "two thousand" (the patach and the dagesh in the pe, the sheva under the lamed) against אֲלָפִים "thousands" (the qamats
+   under the lamed): the dual stands at 26 Bible seats, the plural at 116. The parser (cold_run_sequence.ink_numbers) reads the dual only when a
+   hundreds-group follows — 4:36's 2,750, 4:40's 2,630, 7:85's 2,400, Exodus 38:29's 2,400, Ezra's and Nehemiah's rows — and misses it bare: 35:5's four
+   "two thousand by the cubit" read nothing; 1 Kings 7:26's "two thousand baths", 2 Kings 18:23's and Isaiah 36:8's "two thousand horses" nothing; Joshua
+   3:4's "about two thousand cubits" reads [1] (the cubit as one after the unread numeral); Joshua 7:3's and Judges 20:45's are swallowed; 1 Samuel
+   13:2's "two thousand with Saul" reads 1000. The parser's own comments name the seat ("the dual, Num 35:5" at line 437; "Num 35:5's 'two thousand
+   cubits'" at line 504) — the gap was known and left; sitting 1b's owed line "Num 35:5's two thousand cubits". Onkelos reads the dual, supplying תרין ("two") at all four seats. The class named for the compile (15b): the bare dual before a unit noun, with the approximation prefix, or alone.
+7. TWO KIN READINGS BEYOND THE CHAPTER. Ezekiel 45:2 "five hundred by five hundred" reads [1000, 50] — the parser joins the pair across the preposition
+   "by" (בְּ); Exodus 27:9 "fine twined linen" reads six — שֵׁשׁ "linen" and שֵׁשׁ "six" carry the same pointing, a homograph by context only (the
+   following "twined" decides). Both filed for the parser's next teaching; neither this chapter's.
+8. THE BASE LEMMA CARRIES A PREFIX. The Tanakh DB's lemma column writes the prefix with the number — "c/4054" (and-pasture-land), "l/…", "d/…" — and a
+   letter for homonyms ("1350 a", "3724 a"): a census by the exact string undercounts a family (the pasture-land word's Torah seats came out three of
+   six; the refuge word four of twenty). The base lemma is the string after the last slash, letter kept; the token family by substring overcounts the
+   other way (Leviticus 2:16's "its grits" under the pasture-land's consonants). Both instruments printed, the base lemma the assert's.
+9. THE STORE'S "EYE" FOR THE ANSWER-VERB. The snapshot store glosses the root "answer / testify" as "eye" at ten Torah tokens — Genesis 41:16 "God shall
+   answer", Exodus 20:16 and Deuteronomy 5:20 "you shall not answer [as a false witness]", Exodus 23:2, 32:18's "the sound of answering", Numbers 21:17
+   "sing", 35:30 "shall testify", Deuteronomy 19:18 — Strong's homonym עין ("eye") assigned to the verb ענה ("answer"). 35:30's rewritten by reference; the
+   other nine filed for a display sitting. The mixed families found the same way — "cover" (the screen, the sparing, the ransom), "the-strike" (the
+   smiter and the smitten woman), "and-judge" (the judging and the praying), "and-stretch" (the stretching and the measuring), "dash-in-pieces" (the
+   murder-root and the scattering) — every one rewritten by reference, never by gloss.
+10. THE SHELF WRITES THE MURDERER PLENE. The Sifrei's Hebrew rows write רוצח / הרוצח ("a murderer" / "the murderer") with the vav at every quotation; the ink writes רצח / הרצח ("a slayer" / "the slayer") defective at all twenty seats of the chapter, plene only at Deuteronomy 4:42, Joshua 20:3, 6 and Job 24:14 — the shelf's spelling is its own, as
+   sitting 12 found for the word order.
+
+## 2026-09-13 — THE REFUGE CITIES' COMPILE (THE NUMBERS WALK sitting 15b — AND WITH IT NUMBERS CLOSES): THE PAUSAL DUAL; THE THOUSAND THOUSANDS; THE MYRIAD-WORD;
+## A SEAT AND A TOKEN; THE REGISTER GATE'S TILDE; THE STITCHER'S RESERVED FIELD; THE GATE'S EXPLICIT BRANCHES; THE VAV-FORM WITNESS; THE COUNTERPARTY'S ENTITY
+
+1. THE PAUSAL DUAL. The measurement pass found the bare dual thousand (אַלְפַּיִם, "two thousand") by the patach (the vowel point) under the pe: 29 tokens. The rule was written on
+the SHEVA UNDER THE LAMED instead (the same instrument as 1b's "two" — the dual ending's own mark), and the corpus diff over every verse found two more:
+1 Chronicles 5:21 and Nehemiah 7:71, where the dual stands at the verse's pause with a QAMATS under the pe (אֲלָפָיִם, "two thousand" at the pause). The patach test cannot see a pausal
+form; the sheva test reads both. The class is 31 tokens in 28 verses; both pausal seats read right the first time and are R71-R72. Lesson: measure a class
+with the widest instrument (the diff over every verse) before typing its count; a regex on one vowel is a narrower instrument than the rule it measures for.
+2. THE THOUSAND THOUSANDS. אֶלֶף אֲלָפִים ("a thousand thousands" = 1,000,000; 1 Chronicles 21:5, 22:14, 2 Chronicles 14:8, Daniel 7:10) reads wrong before and
+after rule 29 (22:14: [103000, 470000] → [1000, 100000, 470000]): the plural "thousands" after a unit "thousand" is a MULTIPLIER the parser's grouping does not
+know. No Torah seat; filed with R73 holding the present read as a tripwire — the rule is owed to the book that reaches it. The myriad-word (רִבּוֹא,
+Ezra 2:64, Nehemiah 7:66, 7:70 — "two myriads" the same dual form on another noun) filed beside as the class's cousin.
+3. A SEAT IS A VERSE, A TOKEN A TOKEN. The reading said "26 seats", the measure "29 tokens", the diff "31 tokens in 28 verses", and the design typed
+"twenty-one compound seats" for eighteen compound TOKENS — four numbers of one class at three grains, one of them a hand's slip. The runner asserts the
+grain with the number everywhere (MURDER_TOK_35 twenty tokens against MURDER_T twenty-one verses). Name the grain.
+4. THE REGISTER GATE'S TILDE. The parser marks the dual measures ("two cubits", "two days", "twice") with a tilde, and the register gate's numeral-run test
+reads any tilde as "a unit inside the token" — a MEASURE. Rule 29 marks the bare dual thousand with the same tilde. The strict gate fired the same hour:
+Num 4:36's 2,750 Kohathites and 4:40's 2,630 Gershonites — count lines declared NONE with a why — came back "MEASURE-ONLY … STALE". The gate's test now
+excepts the dual thousand (a NUMBER's dual, a count). Lesson: a mark is shared, a meaning is not — a new use of a mark is a new case for every reader of
+the mark; grep the mark's readers before reusing it.
+5. THE STITCHER'S RESERVED FIELD. The narrative's second line carried `'until': 'the death of the high priest'` and the stitcher fell re-basing it: `until` is
+a scene-clock DAY the stitcher re-bases, `day` the clock (a42f518's banked lesson "a count field is named days, never until", met now at a TERM). The field
+is `term`. The recorder ran twice.
+6. THE GATE'S PARSER READS EXPLICIT BRANCHES ONLY (O3's lesson met at a new form). The daemon dispatched three exam kinds through one `if k in (...)` with one
+shared effects dict; the daemon gate parsed none of them — two kinds "watched by NO daemon", one kind's effects wider than declared. One `if k == ...` per
+kind with its own literal W dict; the yaml's watches retyped from the gate's print (killer_case carries commanded and returns_to_his_possession;
+refuge_statute_case carries flees_to_refuge and no exempt).
+7. THE VAV-FORM WITNESS. The runner's assert typed "the bare consonants עד are 'until' at 12, 25, 28, 32 and 'witness' at 30 — the lemmas decide". The DB:
+35:30's witness is וְעֵד ("and a witness") — the vav on it; the bare token עד inside the chapter is the preposition at every seat (5704). The homograph
+claim is typed from the DB's tokens (the vav-form carries the witness), never from the reading's eye.
+8. THE COUNTERPARTY'S ENTITY. The scene's prediction counted 25 exam persons + the land = 26 entities; the engine made 25: the unexecuted shedder's row
+writes land_polluted_by_blood ON THE LAND with the shedder as COUNTERPARTY (the design's own decision), so nothing is written on him and no entity is
+made. Count the written-on parties, never the submitted subjects — the borders' narrative had taught it for the tape (moses and israel subjects, no
+write, no entity); the scene met it at a case.
+9. "THE PRIEST" BARE INSIDE THE PLENE PHRASE. "until the death of the priest" typed at three seats missed Joshua 20:6, whose "until the death of the high
+priest" contains the bare phrase — a prefix phrase's census includes every longer phrase it opens. Four seats.
+10. DEUTERONOMY NEVER SAYS "REFUGE". The refuge-word (מִקְלָט, lemma 4733) has twenty Bible verses; the Torah's eleven are all in this chapter; Deuteronomy
+4:41-43 and 19:1-13 name the cities and the flight without the word. Joshua 20-21 and Chronicles 6 carry it. Filed for that book's compile.

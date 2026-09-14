@@ -126,7 +126,7 @@
 - Midrash Tanchuma, Ki Tisa 4-8 (with Buber 3-4) — context-plus:
   the lifted-head wordplay (the census-idiom read as PARDON — David's
   own "lifter of my head"; forgiveness through Moses); the navel
-  and wheat figures; the matron and R. Yosi (the pairing-of-couples
+  and wheat figures; the matron and R. Yosi (the pairing-of-couples, the matchmaking,, the matchmaking,, the matchmaking,
   since creation); Aaron humbled and exalted by the same word ZEH;
   the purple-robe parable (Israel the coronation garment); the king
   checking on his son hourly. Enrichment recorded, one line each.

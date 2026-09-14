@@ -68,6 +68,13 @@ class Segment:
         return chain == head["chain_head"]
 
 
+def row_of(ev, source):
+    """the index's row for one envelope event — ONE home for the row's shape (THE LOOP step 7 (a) WRITE AS YOU GO, 2026-09-14:
+    the live sink writes the same row the rebuild makes, and the rebuild must reproduce it)"""
+    return (ev["s"], ev["op"], ev["layer"], ev["kind"], ev["subj"], canon(ev["data"]),
+            ev["prov"].get("unit"), ev["prov"].get("ref"), ev["chain"], source)
+
+
 def index_sqlite(db_path, segment_paths):
     """Rebuild the index from segments (drop-and-rebuild, corpus pattern)."""
     db = sqlite3.connect(db_path)
@@ -91,11 +98,7 @@ def index_sqlite(db_path, segment_paths):
             source = header.get("source")
             for line in f:
                 ev = json.loads(line)
-                c.execute("INSERT INTO events VALUES (?,?,?,?,?,?,?,?,?,?)",
-                          (ev["s"], ev["op"], ev["layer"], ev["kind"],
-                           ev["subj"], canon(ev["data"]),
-                           ev["prov"].get("unit"), ev["prov"].get("ref"),
-                           ev["chain"], source))
+                c.execute("INSERT INTO events VALUES (?,?,?,?,?,?,?,?,?,?)", row_of(ev, source))
                 n += 1
     db.commit()
     db.close()

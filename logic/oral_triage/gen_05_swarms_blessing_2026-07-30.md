@@ -17,7 +17,7 @@ earn are bounded by its chain status. Not binding religious law.
 
 **Protocol note (§4.1):** Tier-A full reads = the chain primaries (BR 7:1–4 and 11:3, the
 five Bavli/two JT sugyot, Mekhilta Shirah, Mishnah Yevamot, PDRK 4:3), all 16 translation
-verses (Onkelos — read at derive time, Tafsir Rasag, Targum Jonathan; no Targum Jerusalem
+verses (Onkelos — read at derive time, Tafsir Rasag, Targum Jonathan (the Aramaic translation); no Targum Jerusalem
 links on this span), and everything anchored to the [OPEN]-flagged tokens (the taninim
 ktiv: BB 74b:5 + promotion to 74b:6–8; BR 7:4; the missing receipt; the mood-split
 clause). Tier-B snippet triage for the rest, with promotion on trigger. Verdict vocabulary
@@ -73,12 +73,12 @@ and dup-resolution discipline as in the gen_01 ledger.
 | 42 | Midrash Sekhel Tov, Bereshit 24:67:31 | chain_anthology | context | the seven wedding blessings 'corresponding to the blessings with which the Holy One blessed Adam and Eve — va-yevarekh otam Elohim', the printed cite pointing at OUR 1:22 — the formula lineage anchored to the day-5 instance |
 | 43 | Midrash Shmuel 5:6 | chain_compilation | dup-of:Mekhilta DeRabbi Yishmael, Tractate Shirah 8:16 | the ein-tzur catalogue with czar-ba-mayim |
 | 44 | Midrash Tanchuma Buber, Bereshit 12:1 | chain_compilation | dup-of:Bereshit Rabbah 1:3 | R. Chanina: angels created ON THE FIFTH — 've-of yeofef' + 'u-vi-shtayim yeofef (Isa 6:2)' — the yeofef–seraph verb pairing (also Yalkut 5:4, MT 24:3); the rare polel shared with Isaiah queued as an echo candidate |
-| 45 | Midrash Tanchuma Buber, Chukat 15:3 | chain_compilation | dup-of:Bereshit Rabbah 7:2 | the fish-shechitah episode in the Solomon frame |
+| 45 | Midrash Tanchuma Buber, Chukat 15:3 | chain_compilation | dup-of:Bereshit Rabbah 7:2 | the fish-shechitah (the fish's slaughter) episode in the Solomon frame |
 | 46 | Midrash Tanchuma, Bereshit 4:4 | chain_compilation | context | the blessing-inventory motif (shabbat, the chayot and ofot, adam, the sheratzim, sustenance) — the BLESS series enumerated; printed cite mispoints to 1:25 |
 | 47 | Midrash Tanchuma, Pekudei 9:2 | chain_compilation | enrichment | Israel's fertility in Egypt computed at 600,000-per-birth FROM OUR VERB: 'of the fish it is written YISHRETZU (1:20), and there (Exod 1:7) VA-YISHRETZU' — the sharatz-echo as fertility benchmark; written-echo candidate queued (Gen 1:20-21 ↔ Exod 1:7) |
 | 48 | Midrash Tehillim 117:1 | chain_compilation | dup-of:Mekhilta DeRabbi Yishmael, Tractate Shirah 8:16 | czar-in-water inside the rain doxology |
 | 49 | Midrash Tehillim 148:2 | chain_compilation | enrichment | Psalm 148's praise ORDER derived from our inventory: 'who praises first? the one GREATER than his fellows — the TANINIM (va-yivra… ha-gedolim) — therefore they praise first: taninim ve-khol tehomot' — the over-delivered item's leading position read liturgically (delta #2 corroboration) |
-| 50 | Midrash Tehillim 18:26 | chain_compilation | dup-of:Mekhilta DeRabbi Yishmael, Tractate Shirah 8:16 | the ein-tzayyar catalogue |
+| 50 | Midrash Tehillim 18:26 | chain_compilation | dup-of:Mekhilta DeRabbi Yishmael, Tractate Shirah 8:16 | the ein-tzayyar ('there is no artist like our God') catalogue |
 | 51 | Midrash Tehillim 18:9 | chain_compilation | not-bearing | afafuni/ofefuni homily — troubles 'fly at' David like the of; lexeme anchor |
 | 52 | Midrash Tehillim 24:3 | chain_compilation | dup-of:Bereshit Rabbah 1:3 | Resh Lakish: angels on day 5 from ve-of yeofef ↔ Isa 6:2 |
 | 53 | Mishnah Yevamot 6:6 | chain_primary | enrichment | the procreation MITZVAH anchored to the HUMAN blessing (1:28): 'the man is commanded, not the woman'; R. Yochanan b. Beroka from the formula's OTAM: 'of BOTH it says va-yevarekh otam' — the law's silence on OUR 1:22 treats the creature-blessing as empowerment, not obligation: the chain's own mood-vs-force distinction (the TIR-027 note; BLESS-not-SPECS corroborated); day-6 dossier flagged forward |

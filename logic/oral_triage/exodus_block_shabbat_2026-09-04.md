@@ -196,7 +196,7 @@ Append-only. Span: Exodus 16, 20:9-10, 31:12-17, 35:1-3, 36:6.
   Zeira's whole-meal slice; the eruv-loaf reused — one
   commandment done with it, let another be done.
 - Shabbat 117b:11 — MATERIAL (docket). THREE MEALS from the three
-  todays of 16:25 (אכלהו היום... היום... היום — "eat it TODAY, for
+  todays of 16:25 (אכלהו היום ('eat it today') … היום … היום — "eat it TODAY, for
   TODAY is Shabbat; TODAY you will not find it"): Rabbis three
   meals counting the night's; R. Chidka FOUR, the todays all
   daytime. The fire-rescue cap tracks the remaining meals: evening

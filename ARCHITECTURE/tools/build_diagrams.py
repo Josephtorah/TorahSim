@@ -111,7 +111,7 @@ class SVG:
 # ---------------------------------------------------------------- 1. layers
 def layers():
     s = SVG(980, 560)
-    s.text(490, 30, "The six layers of the compiled code, and how data moves between them",
+    s.text(490, 30, "The six layers of the compiled code, and how data moves between them (counts of 2026-09-13)",
            14, INK, bold=True)
     # row 1
     s.box(30, 60, 260, 120, "0  INK", [
@@ -119,32 +119,32 @@ def layers():
         "the whole Hebrew Bible, read-only"], GOLD)
     s.box(360, 60, 260, 120, "1  SPEC  (frozen units)", [
         "logic/units/*.yaml, one claim set per span",
-        "158 frozen: Genesis 73, Exodus 41, Leviticus 44",
+        "210 frozen: Genesis 73, Exodus 41, Leviticus 49, Numbers 47",
         "rendered as assert-backed logic/py_units/*.py"], GOLD)
     s.box(690, 60, 260, 120, "2  WORLD  (the fold)", [
         "corpus_world.py + entity_registry.yaml",
-        "158 units -> 1,809 facts, 557 events,",
-        "341 demands (191 open), standing 1,608",
+        "210 units -> 1,809 facts,",
+        "341 demands (191 open), standing 2,163",
         "hash 8b8fff1fa28953af"], GOLD)
     # row 2
     s.box(30, 300, 260, 130, "3  CODE  (cold runs)", [
         "World/step9/cold_run_*.py",
-        "14 spans, 59 compiled functions",
-        "294/294 cells on the latest run",
+        "57 runners, 427 compiled functions",
+        "6,378 graded cells, 57/57 on the sweep",
         "every verdict carries registry effects"], RED)
     s.box(360, 300, 260, 130, "4  TEST  (the exam)", [
         "*_rules.py + cases_*.yaml + vocabulary.yaml",
-        "45 rounds, 1,317/1,317",
-        "41 rules modules, 45 case files",
+        "47 rounds, 1,595/1,595; the union-rule dockets",
+        "43 rules modules, 47 case files",
         "158 dimensions, 1,501 values"], BLUE)
     s.box(690, 300, 260, 130, "5  RUNTIME  (the engine)", [
         "World/step9/world_engine.py",
         "entities with ledgers, laws as daemons,",
-        "timers, the diff engine",
-        "5 daemons wrapped, 6 recorded scenes"], BLUE)
+        "timers, the calendar, the journal, the diff engine",
+        "62 daemons; one tape, 1,279 events, 157 dates"], BLUE)
     # registries strip
     s.box(30, 480, 920, 60, "cross-cutting registries", [
-        "effect_vocabulary.yaml (58 effects, 8 ledger ops)  ·  MOVE_CATALOG.md (M-01..M-18)  ·  "
+        "effect_vocabulary.yaml (1,012 effects, 8 ledger ops)  ·  MOVE_CATALOG.md (M-01..M-30)  ·  "
         "MIDDOT.md  ·  findings F-001..  ·  entity_registry.yaml"], SOFT, title_size=12)
     # arrows
     s.arrow(290, 120, 360, 120, "derive (Step 2-3)")
@@ -167,7 +167,7 @@ def layers():
 # ------------------------------------------------------ 2. span dependencies
 def dependencies():
     s = SVG(1210, 880)
-    s.text(605, 28, "The 14 compiled spans and every cross-span edge the code or its reports name",
+    s.text(605, 28, "The 14 compiled spans of 2026-09-05 and every cross-span edge named then (the 57 of 2026-09-13: DEPENDENCIES.md)",
            14, INK, bold=True)
     s.text(130, 70, "BOOKS REACHED, NOT COMPILED", 12, SOFT, bold=True)
     s.text(450, 62, "EXODUS", 13, GOLD, bold=True)
@@ -394,5 +394,41 @@ def yoma():
     s.write("07_yom_kippur_order.svg")
 
 
+# ----------------------------------------------- 8. the fourth book's runners
+def numbers_runners():
+    """The eighteen runners of the book of Numbers in scroll order, each with its span, its score as printed on the
+    2026-09-13 rerun (catalog_facts.json), and the earlier programs it calls live (DEPENDENCY_INDEX.md)."""
+    import json, re
+    facts = json.load(open(os.path.join(os.path.dirname(HERE), "catalog_facts.json"), encoding="utf-8"))["spans"]
+    dep = open(os.path.join(os.path.dirname(os.path.dirname(HERE)), "World", "step9", "DEPENDENCY_INDEX.md"), encoding="utf-8").read()
+    calls = {}
+    for sec in re.split(r"\n(?=## cold_run_)", dep):
+        m = re.match(r"## (cold_run_\w+)\.py — (.*)", sec.split("\n", 1)[0])
+        if not m: continue
+        co = re.search(r"- calls out \(live\): (.*)", sec)
+        calls[m.group(1)] = (m.group(2).strip(), co.group(1).strip() if co else "none")
+    order = ["bamidbar", "naso", "beha", "pesach_sheni", "shelach", "mekoshesh", "korach", "chukat", "balak", "second_census",
+             "zelophehad", "musafim", "vows", "midian", "gad_reuben", "journeys", "borders", "refuge"]
+    cols, w, h, gx, gy = 3, 380, 96, 400, 112
+    rows = (len(order) + cols - 1) // cols
+    s = SVG(40 + cols * gx, 70 + rows * gy + 30)
+    s.text(s.w / 2, 28, "The fourth book's eighteen runners, in scroll order: span, score on the 2026-09-13 rerun, and the programs each calls live", 13.5, INK, bold=True)
+    for i, k in enumerate(order):
+        r, c = divmod(i, cols)
+        x, y = 20 + c * gx, 50 + r * gy
+        name = "cold_run_%s" % k
+        span, co = calls.get(name, ("", "none"))
+        sl = (facts.get(name) or {}).get("score_line") or ""
+        m = re.search(r"(\d+/\d+)", sl)
+        span_short = span if len(span) <= 52 else span[:49] + "..."
+        callees = [c_.strip() for c_ in co.split(",")] if co != "none" else []
+        line1 = "calls: " + ", ".join(callees[:6]) + (" ..." if len(callees) > 6 else "") if callees else "calls: none"
+        line2 = "      " + ", ".join(callees[6:12]) + (" ..." if len(callees) > 12 else "") if len(callees) > 6 else ""
+        lines = [span_short, "%s cells" % m.group(1) if m else "(no matrix line)", line1] + ([line2] if line2 else [])
+        s.box(x, y, w, h, name, lines, GOLD, title_size=12, line_size=10)
+    s.text(s.w / 2, s.h - 12, "Every call is a live import the dependency gate verified; the labels and teachers are in DEPENDENCIES.md and THE_LINKS.md.", 10.5, SOFT, italic=True)
+    s.write("08_numbers_runners.svg")
+
+
 if __name__ == "__main__":
-    layers(); dependencies(); ox(); slave(); affliction(); installation(); yoma()
+    layers(); dependencies(); ox(); slave(); affliction(); installation(); yoma(); numbers_runners()

@@ -62,7 +62,7 @@ scope; the book spine silent over the chapter, recorded; the
 parashah boundary at 27:19 noted, the unit read whole).
 
 ## SPINE AMENDMENT, same day (the delegated ruling — see the exo_25
-## ledger's header note): Midrash Tanchuma joins Onkelos for Exod
+## ledger's header note): Midrash Tanchuma (the collection) joins Onkelos for Exod
 ## 25-40. The altar sections attributed here, read IN FULL.
 
 - Midrash Tanchuma, Terumah 10 — MATERIAL (light), the letter and

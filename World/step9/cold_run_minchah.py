@@ -397,7 +397,7 @@ def breaking(kind, offerer='israelite'):
 
 def leaven(case):
     if case == 'any_meal_offering_leavened':
-        return cell('transgression', I, 'כל המנחה... לא תעשה חמץ (ALL the meal offering... shall not be made '
+        return cell('transgression', I, 'כל המנחה (all the meal offering) … לא תעשה חמץ (ALL the meal offering... shall not be made '
                     'leavened, 2:11) — Menachot 5:2 quotes the clause', ['barred_from_it', 'lashes'])
     if case == 'per_step':
         return cell('kneading_shaping_baking_each', M, 'the ink bans the WHOLE ("shall not be made"); Lev 6:10 '
@@ -433,7 +433,7 @@ def salt(case):
 
 def presentation(kind):
     if kind in ('soleth', 'griddle', 'pan', 'cakes', 'wafers'):
-        return cell('required', I, 'והבאת את המנחה אשר יעשה מאלה... והגישה אל המזבח (the meal offering made OF '
+        return cell('required', I, 'והבאת את המנחה (you shall bring the meal offering) אשר יעשה מאלה (made of these) … והגישה אל המזבח (the meal offering made OF '
                     'THESE... present it to the altar, 2:8) — the five kinds by the deictic', ['presented'])
     if kind in ('omer', 'jealousy'):
         return cell('waving_and_presentation', P, 'the presentation from 2:8\'s rule (Sifra Chapter 13 5-6 '

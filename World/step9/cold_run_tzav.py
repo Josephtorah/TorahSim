@@ -7,7 +7,7 @@
 # and the installation transaction. Ink first (code/data separation);
 # the Mishnah's rows are the answer sheets fed at run time; the
 # Sifra's recorded arguments are the labeled compile moves (the
-# law-midrash spine read the same sitting). Effects from birth,
+# law-midrash (the rabbinic reading) spine read the same sitting). Effects from birth,
 # targeting the world_engine contract. Read-only; model layer.
 
 # ---- THE HONEST-PAIRING GUARD (sitting C retrofit, 2026-09-05) ------------
@@ -230,7 +230,7 @@ def rejection_machine(case, params):
                    ['burn_remainder', 'purge_deadline'])
     if q == 'piggul_time':
         ink('7:18', '"if eaten shall be eaten on the third day, it '
-            'shall NOT BE ACCEPTED (לא ירצה)... REJECTED (פגול) shall '
+            'shall NOT BE ACCEPTED (לא ירצה "it shall not be accepted")... REJECTED (פגול "rejected") shall '
             'it be, and the soul that eats of it shall bear its sin"')
         move('Sifra, Tzav, Section 8 1', 'R. Eliezer\'s "incline your '
              'ear": the verse speaks of the THOUGHT at the offering, '

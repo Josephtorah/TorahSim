@@ -36,7 +36,7 @@ faced their own sugyot, and every table held:
   the two-eyes vocalization pair, Acherim's caravan census, the
   one-Master slaves, the prosthesis feet, no-halves — the table
   was already right, the sugyot supplied the derivations.
-- **EX13-08** (the Masorah chain on the tefillin verse) held R.
+- **EX13-08** (the Masorah, the scribal tradition, chain on the tefillin verse) held R.
   Yosei HaGelili's days-not-all-days law VERBATIM — "FROM days,
   not ALL days: excluding Sabbaths and festivals" stood in the
   frozen unit's own prose before Eruvin 96a was opened. R.
@@ -86,7 +86,7 @@ dispute about when the firstborn machine turns on.
   salvage window; the first morning from the juxtaposed
   firstfruits-word).
 - **F-089 → EX23-15** (exo_23): the rest clauses (the sabbatical
-  verbs split with the two-hoeings refinement; the
+  verbs split with the two-hoeings (the two diggings) refinement; the
   uncircumcised-slave dispute; the resident stranger; the
   idol-name four-channel file).
 - **F-090 → EX34-10** (exo_34): the pilgrimage warranty on

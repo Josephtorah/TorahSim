@@ -1,0 +1,50 @@
+# population_schema.yaml — THE FIFTH REGISTRY: the POPULATION TABLE's columns (THE NUMBERS WALK sitting 8b, 2026-09-11; the design in
+# World/step9/NUMBERS_WALK.md "Sitting 8b"; the speculation ARCHITECTURE/DATABASE_SPECULATION.md). Every column is a word the ink writes;
+# every grain is a shape the text itself keeps — the counted rows (Numbers 1 and 26: a tribe with its number; a family with its gentilic and
+# NO number, because the ink gives none), the named rows (the persons the roll names, with the clause the ink writes about them), the delta
+# rows (declared at the second census from the table's own rows: the tape's explanations beside the ink's number, the remainder labeled).
+# The engine (world_engine.World.row) REFUSES a row whose grain is not here, whose required column is missing, or whose column is unknown;
+# a row is written only by a daemon consuming an event — never by hand. No invented individual: a count is a number on a row.
+tables:
+  population:
+    en: "the population table — two grains in one chapter: 'these are the counted of the children of Israel, six hundred thousand and a thousand seven hundred and thirty' (Num 26:51 — a number on a row) beside 'and the name of Amram's wife was Jochebed the daughter of Levi, whom she bore to Levi in Egypt' (26:59 — a person's row); the schema the ink's own columns, read at sitting 8 (logic/oral_triage/num_26_second_census_2026-09-11.md)"
+    columns:
+      grain:     {en: "the row's grain — counted | named | delta", he: ""}
+      as_of:     {en: "the census the row belongs to — the verse of the event that wrote it (the marker's semantics: membership as of a count)", he: "אֵלֶּה פְּקוּדֵי בְנֵי יִשְׂרָאֵל (these are the counted of the children of Israel — Num 26:51)"}
+      subject:   {en: "the row's subject for the journal — a counted row's tribe name, a named row's person token (the registry's id where one exists)", he: ""}
+      tribe:     {en: "the tribe — the ink's name, not an entity (no registry row is a tribe)", he: "לִשְׁמוֹת מַטּוֹת אֲבֹתָם יִנְחָלוּ (by the names of the tribes of their fathers they shall inherit — Num 26:55)"}
+      family:    {en: "the family — 'of Hanoch, the family of the Hanochite' (26:5); seventy-eight 'family of' tokens in chapter 26, none in chapter 1; None on a tribe's total row", he: "לַחֲנֹךְ מִשְׁפַּחַת הַחֲנֹכִי (of Hanoch, the family of the Hanochite — Num 26:5)"}
+      gentilic:  {en: "the family's gentilic form as written ('the Hanochite'); one family without its yod ('the family of the Imnah', 26:44)", he: "הַחֲנֹכִי (the Hanochite — Num 26:5)"}
+      level:     {en: "house | family — Levi's three houses at 26:57 (the Gershonite, the Kohathite, the Merarite) beside the five families at 26:58; the fathers' houses of 26:2", he: "לְבֵית אֲבֹתָם (by their fathers' houses — Num 26:2)"}
+      count:     {en: "the number the ink writes — 'their counted were forty and three thousand and seven hundred and thirty' (26:7); None where the ink writes none (every family of chapter 26)", he: "וַיִּהְיוּ פְקֻדֵיהֶם (and their counted were — Num 26:7)"}
+      threshold: {en: "the count's threshold as written — 'from twenty years old and upward' (26:2), 'from a month old and upward' (26:62)", he: "מִבֶּן עֶשְׂרִים שָׁנָה וָמָעְלָה (from twenty years old and upward — Num 26:2)"}
+      person:    {en: "the person's name as the roll writes it — 'by the number of names' (26:53)", he: "בְּמִסְפַּר שֵׁמוֹת (by the number of names — Num 26:53)"}
+      father:    {en: "the father — 'Eleazar son of Aaron' (26:1), 'Zelophehad son of Hepher' (26:33)", he: "וּצְלָפְחָד בֶּן חֵפֶר (and Zelophehad son of Hepher — Num 26:33)"}
+      mother:    {en: "the mother where the ink names her — 'the name of Amram's wife was Jochebed' (26:59)", he: "וְשֵׁם אֵשֶׁת עַמְרָם יוֹכֶבֶד (and the name of Amram's wife was Jochebed — Num 26:59)"}
+      status:    {en: "the clause the ink writes about the person — 'and Er and Onan died in the land of Canaan' (26:19), 'and the sons of Korach did not die' (26:11), 'had no sons, only daughters' (26:33), 'whom she bore to Levi in Egypt' (26:59), 'when they brought near strange fire' (26:61), 'except Caleb son of Jephunneh and Joshua son of Nun' (26:65)", he: "לֹא הָיוּ לוֹ בָּנִים כִּי אִם בָּנוֹת (he had no sons, only daughters — Num 26:33)"}
+      from_verse: {en: "a delta row's first census — the as_of of the earlier counted row"}
+      to_verse:  {en: "a delta row's second census — the as_of of the later counted row"}
+      delta:     {en: "the later count less the earlier — DECLARED by the ink's two numbers, never derived (Simeon 59,300 -> 22,200 = -37,100)"}
+      explained: {en: "the tape's explanations by CALL — a list of {source, count, tribe_by} (the Peor plague's 24,000 at 25:9, its tribe the shelf's claim)"}
+      unexplained: {en: "the remainder the ink does not explain — labeled, never resolved (Simeon's -13,100 beyond the plague)"}
+      source:    {en: "the verse the row was written from — the consumed event's case_source"}
+      note:      {en: "a free note beside a row (the Torah's one defective 'begot' at 26:58; the reversed written-and-read pair at 26:9)"}
+    grains:
+      counted:
+        required: [grain, as_of, subject, tribe, family, count, source]
+        optional: [gentilic, level, threshold, note]
+        en: "a tribe with its number, or a family (or a house) with its gentilic and no number — Numbers 1:20-46, 3:22-39, 26:5-51, 26:57-62"
+      named:
+        required: [grain, as_of, subject, person, tribe, status, source]
+        optional: [family, father, mother, note]
+        en: "a person the roll names with the clause the ink writes — Numbers 26:9-11, 26:19, 26:29-33, 26:46, 26:59-61, 26:65"
+      delta:
+        required: [grain, as_of, subject, tribe, from_verse, to_verse, delta, explained, unexplained, source]
+        optional: [note]
+        en: "the second census's declared difference per tribe with the tape's explanations beside it and the remainder labeled"
+    stamped_by_the_engine: [written_by, day, year, table]
+    law:
+      - "a row is written by a daemon consuming an event — World.row refuses a row written by hand (no daemon on the stack)"
+      - "a row is not a ledger entry: no op, no open, no close, no counterparty; it moves no count of the RUN tuple"
+      - "a row is the log's own class ROW, journaled as run.row, read back by the view run_population and the question `population`"
+      - "no invented individual: a counted row carries the number the ink writes or None; a named row carries a person the ink names"

@@ -23,7 +23,7 @@ machinery to the border — enumerated, held for the exam.
 | BR 63:8 | speaks HERE: the other half of the spelling pair (complete vs incomplete days; teomim/tomim full-vs-defective) — read at gen_39's span, now paired [ink-level; the two wombs cross-witnessed] |
 | BR 41:7 | speaks HERE: "voracious appetite will be fed from his own flesh" — the immorality-idiom chain that binds Lot's verse to OUR chapter's vocabulary; carried |
 | BR 60:15 | terse: the veil idiom's Rebecca seat; carried |
-| BR 61:4 | terse: the Ketura-perfumed-with-mitzvot naming pattern; carried |
+| BR 61:4 | terse: the Ketura-perfumed-with-mitzvot (perfumed with commandments) naming pattern; carried |
 | BR 71:5 | terse: the TWO STAFFS — priesthood and kingship share anointment, mateh, salt-covenant — the staff-pledge's dynastic vocabulary; carried |
 | BR 74:5 | terse: right/left ordering frame; carried |
 | BR 79:1 | terse: six-troubles frame; carried |

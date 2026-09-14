@@ -49,7 +49,8 @@ def law_probe(event, world):
 
 
 def probe_world():
-    """a small world exercising all seven log classes: EVENT, WRITE, TIMER-SET, TIMER-FIRE, TIMER-CANCEL, MARKER, RETRO-WRITE"""
+    """a small world exercising the seven engine log classes: EVENT, WRITE, TIMER-SET, TIMER-FIRE, TIMER-CANCEL, MARKER, RETRO-WRITE (the
+    eighth, SKIP, is installation_probes.py's; the ninth, ROW, population_probes.py's — THE NUMBERS WALK 8b, 2026-09-11)"""
     w = WE.World(era='probe', epoch='count', registry={'the-people': 'israel_people'})
     w.laws = [law_probe]
     w.marker('Exod 19:1', 10, value='the third month')
@@ -108,7 +109,7 @@ def j3():
     # THE LOOP step 3 (2026-09-09): the sink's eighth class, run.skip, is exercised by installation_probes.py I1 (a from_event world sunk
     # and indexed); this probe world has no installation, so the seven engine classes it exercises are KINDS less run.skip — and every
     # class the sink can write, the eighth included, must be in the register
-    seven = set(WJ.KINDS.values()) - {'run.skip'}
+    seven = set(WJ.KINDS.values()) - {'run.skip', 'run.row', 'run.close'}   # THE NUMBERS WALK 8b (2026-09-11): the ninth class run.row (a population-table row) is exercised by population_probes.py P6 — this probe world writes no row; THE LOOP step 1's amendment (2026-09-12): the tenth class run.close (a ledger entry's close as its own line) is exercised by J7 below — this probe world closes nothing
     unregistered_kinds = sorted(k for k in WJ.KINDS.values() if k not in ids)
     return not missing and not unregistered_kinds and len(kinds) == 7 and set(kinds) == seven, 'kinds written %s; unregistered %s; sink classes %d (all registered: %s)' % (
         dict(kinds), missing or 'none', len(WJ.KINDS), not unregistered_kinds)
@@ -150,6 +151,56 @@ def j6():
     ok = idx == dict(log_counts) and writers.get('law_probe', 0) == 4 and None not in writers and on_subject >= 8
     return ok, 'index %s vs log %s; writers %s; lines on israel_people %d' % (idx, dict(log_counts), writers, on_subject)
 
+
+
+# ---- THE LOOP step 1's amendment — THE CLOSE LINE (2026-09-12; THE_LOOP.md "Step 1's amendment — THE CLOSE LINE"; the owner: "I accept
+# ---- your recommendation"): the tenth class, written to FAIL on the engine that logs the ledger entry itself ----
+def law_probe_close(event, world):
+    """a debt opened at the custody act and paid at the output (view_probes' pair of kinds; registered effects only)"""
+    if event['kind'] == 'custody_three_days':
+        return [{'effect': 'declaration_owed', 'subject': 'the-court', 'counterparty': event['subject'], 'amount': None, 'due': None,
+                 'source_law': 'probe', 'case_source': event['case_source']}]
+    if event['kind'] == 'statute_set':
+        world.close('the-court', 'declaration_owed', event['case_source'])
+        return [{'effect': 'rule_installed', 'subject': 'the-tabernacle', 'counterparty': None, 'amount': None, 'due': None,
+                 'value': 'law_probe_close', 'source_law': 'probe', 'case_source': event['case_source']}]
+    return []
+
+
+@probe('J7 a close is its own line: the write line a snapshot with no closer, the close line naming the entry, the earlier sink a byte-identical prefix of the later, the index counting run.close and the ledger view joining the two')
+def j7():
+    import world_journal as WJ
+    w = WE.World(era='probe', epoch='count', registry={'the-court': 'the_court'})
+    w.laws = [law_probe_close]
+    w.marker('Lev 24:12', 30, value='the custody')
+    w.submit({'kind': 'custody_three_days', 'subject': 'the-blasphemer', 'case_source': 'Lev 24:12 — probe: the custody act'})   # the debt opens at 30
+    w.marker('Lev 24:13', 33, value='the output')                                                                                # the forward marker CLOSES the event's bound — the first sink stands at a marker, as the cursor's bound rule (sitting 1b) requires; a sink inside an open bound differs on the shared bound list by design (THE_LOOP.md, the amendment's item 2 — the first form of this probe fell on exactly that, 2026-09-12)
+    with tempfile.TemporaryDirectory() as d:
+        p1, n1, _ = WJ.sink(w, source='journal_probes/close', out_dir=d)
+        before = open(p1, encoding='utf-8').read().split('\n')
+        w.submit({'kind': 'statute_set', 'subject': 'moses', 'case_source': 'Lev 24:13 — probe: the output'})                    # the debt is paid at 33
+        p2, n2, _ = WJ.sink(w, source='journal_probes/close', out_dir=d)
+        after = open(p2, encoding='utf-8').read().split('\n')
+        evs = [json.loads(l) for l in after[1:] if l.strip()]
+        db = os.path.join(d, 'probe.sqlite')
+        WJ.index(db, [p2]); WJ.views(db)
+        idx = WJ.counts(db)
+        c = sqlite3.connect(db)
+        led = c.execute("select open, day_closed, closed_by from run_ledger where effect = 'declaration_owed'").fetchall()
+        c.close()
+    writes = [e for e in evs if e['kind'] == 'run.write' and e['data'].get('effect') == 'declaration_owed']
+    closes = [e for e in evs if e['kind'] == 'run.close']
+    wd = writes[0]['data'] if writes else {}
+    entry = w.entities['the_court'].ledger[0]
+    prefix = after[1:n1 + 1] == before[1:n1 + 1]
+    ok = (len(writes) == 1 and 'closed_by' not in wd and 'closed_day' not in wd and wd.get('open') is True and 'seq' in wd
+          and len(closes) == 1 and closes[0]['data'].get('entry_seq') == wd.get('seq') and closes[0]['op'] == 33 and closes[0]['subj'] == 'the_court'
+          and str(closes[0]['data'].get('note', '')).startswith('Lev 24:13') and closes[0]['prov'].get('unit') == 'law_probe_close'
+          and prefix and n2 == n1 + 3 and idx.get('run.close') == 1
+          and led == [(0, 33, 'Lev 24:13 — probe: the output')]
+          and entry.get('open') is False and entry.get('closed_day') == 33)
+    return ok, 'write line data keys %s; close lines %d %s; prefix identical %r (%d then %d lines); index run.close %r; the view %s; the ledger entry open %r closed_day %r' % (
+        sorted(wd), len(closes), [(e['op'], e['subj'], e['data'].get('entry_seq'), e['prov'].get('unit')) for e in closes], prefix, n1, n2, idx.get('run.close'), led, entry.get('open'), entry.get('closed_day'))
 
 if __name__ == '__main__':
     ok = sum(1 for _, o, _ in results if o)

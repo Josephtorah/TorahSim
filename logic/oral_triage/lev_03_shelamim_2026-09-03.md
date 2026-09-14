@@ -54,7 +54,7 @@
 - Sifra, Vayikra Dibbura DeNedavah, Chapter 18 3 (Lev 3:6) — context: the ma'aser refutation leg
 - Sifra, Vayikra Dibbura DeNedavah, Chapter 18 4 (Lev 3:7) — MATERIAL: ⚠ TYPE CONVERSION AT A TIME BOUNDARY: 'if a LAMB' includes the pesach for the fat-tail; and A PESACH PAST ITS TIME IS OFFERED AS SHELAMIM — the object changes class when its window closes. The clearest state-machine rule in the chapter.
 - Sifra, Vayikra Dibbura DeNedavah, Chapter 18 5 (Lev 3:7) — context: the individual/congregation exclusion re-argued for the flock
-- Sifra, Vayikra Dibbura DeNedavah, Chapter 19 1 (Lev 3:9) — duplicate: not-under-its-name (lo-lishmah) validity + intent terms — duplicate of the cattle-side row at 3:9
+- Sifra, Vayikra Dibbura DeNedavah, Chapter 19 1 (Lev 3:9) — duplicate: not-under-its-name (lo-lishmah 'not for its own sake') validity + intent terms — duplicate of the cattle-side row at 3:9
 - Sifra, Vayikra Dibbura DeNedavah, Chapter 19 2 (Lev 3:17) — material (terse): fat-near-the-tail: R. Akiva includes; R. Yehudah's two-interdict structure — recorded pair
 - Sifra, Vayikra Dibbura DeNedavah, Chapter 19 3 (Lev 3:9) — MATERIAL: FAT-TAIL REMOVAL SPEC: whole, opposite the kidneys ('above' them), not with the spine.
 - Sifra, Vayikra Dibbura DeNedavah, Chapter 19 4 (Lev 3:9) — material (terse): sheep wall-fat is not offered (the cattle-verse repetition excludes it)

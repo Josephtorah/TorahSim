@@ -83,7 +83,7 @@ DATA = {
     'warning_names_the_death': {
         'value': 'not_required',
         'settings': {
-            'not_required': "the warning must name the transgression and its liability to death, not the mode — the first tanna, who derives forewarning from the wood-gatherer, executed though Moses did not know the mode (Sanhedrin 80b:5)",
+            'not_required': "the warning must name the transgression and its liability to death, not the mode — the first tanna (the anonymous Mishnah voice), who derives forewarning from the wood-gatherer, executed though Moses did not know the mode (Sanhedrin 80b:5)",
             'required': "the defendant is not executed unless the witnesses told him by which death he would die — Rabbi Yehuda (Sanhedrin 80b:5, 8b:5; the wood-gatherer a provisional edict)"},
         'source': "the ink's repetition (15:33) teaches the warning and its specifying the LABOR (Sifrei 113:1); the death's naming is the tradition's own fork on this case"},
     'hanging_after_stoning': {

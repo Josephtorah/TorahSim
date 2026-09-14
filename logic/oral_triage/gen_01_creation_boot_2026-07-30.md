@@ -46,7 +46,7 @@ outside_chain (29, observation pass).
 | 19 | Bereshit Rabbah 2:4 | chain_primary | enrichment | Resh Lakish: the four exiles mapped on tohu/vohu/choshekh/tehom; "ruach… merachefet" = spirit of Messiah hovering, in the merit of repentance-likened-to-water — the INVARIANT (hovering) read as standing potential |
 | 20 | Bereshit Rabbah 2:5 | chain_primary | enrichment | deeds of wicked (tohu) vs righteous (or): "I would not know which He desires — until va-yar… ki-tov" — the chain reading the TEST verdict as the disambiguating information; mirrors our TESTS register |
 | 21 | Bereshit Rabbah 3:1 | chain_primary | enrichment | R. Yehuda vs R. Nechemiah: light first (lamps to build by) or world first (lamps to adorn) — build-order machloket over our t0→t1 sequencing |
-| 22 | Bereshit Rabbah 3:2 | chain_primary | **material** | GRAMMAR: "not with toil… by the word; 've-haya or' (and light SHALL BE) is NOT written — rather VA-YEHI or (and light WAS): it already was" — chain-primary derivation from the wayyiqtol mood that the result is instantaneous-complete: grounds our RESULT latency-0 reading (sister to BR 3:7's seder-zemanim mood argument) |
+| 22 | Bereshit Rabbah 3:2 | chain_primary | **material** | GRAMMAR: "not with toil… by the word; 've-haya or' (and light SHALL BE) is NOT written — rather VA-YEHI or (and light WAS): it already was" — chain-primary derivation from the wayyiqtol mood that the result is instantaneous-complete: grounds our RESULT latency-0 reading (sister to BR 3:7's seder-zemanim (the order of times) mood argument) |
 | 23 | Bereshit Rabbah 3:3 | chain_primary | not-bearing | homiletic pairing (joy in speech / word in season = ki-tov) |
 | 24 | Bereshit Rabbah 3:4 | chain_primary | enrichment | whence light? He wrapped Himself in it like a garment (taught in a whisper); or: from the Temple's place — the or-source traditions beside or-ha-ganuz |
 | 25 | Bereshit Rabbah 3:5 | chain_primary | enrichment | R. Simon COUNTS: "or/light appears five times here — against the five books of Torah" — the chain doing occurrence-counting over exactly our unit's span |
@@ -87,7 +87,7 @@ outside_chain (29, observation pass).
 | 60 | Tamid 32a:3-4 | chain_primary | dup-of:Tamid 32a:3 | fetched range row overlapping segments 3 and 4 |
 | 61 | Tamid 32a:4 | chain_primary | enrichment | "light first or darkness first? — this matter HAS NO SOLUTION"; the Gemara notes the text indicates darkness (1:2 before 1:3) yet the Elders withhold — the chain itself marking darkness-priority as textually suggested but guarded/open, mirroring our NOTE_PRESUPPOSED [OPEN] |
 | 62 | Pesachim 2a:3 | chain_primary | enrichment | or as verb vs noun disambiguated ("ha-boker or," Gen 44:3 = "the morning lightened"); plus Rav's rule: enter/leave a city "with ki tov" — the Gen 1:4 goodness of light as a safety marker (cf. row 39) |
-| 63 | Pesachim 2a:5 | chain_primary | enrichment | parallel sugya to Megillah 20b:2-3: "advancing light called Day" proposed and rejected by the choshekh-symmetry + stars-out contradiction — literal label reading of 1:5 confirmed in a second locus |
+| 63 | Pesachim 2a:5 | chain_primary | enrichment | parallel sugya to Megillah 20b:2-3: "advancing light called Day" proposed and rejected by the choshekh-symmetry (the darkness symmetry) + stars-out contradiction — literal label reading of 1:5 confirmed in a second locus |
 | 64 | Pesachim 88a:5 | chain_primary | not-bearing | ingathering-of-exiles day "as great as the day heavens and earth were created," gezerah shavah yom (Hos 2:2) <-> yom echad (Gen 1:5) — homiletic verbal analogy on the day label |
 | 65 | Rosh Hashanah 32a:19 | chain_primary | material (already cited) | third ten-utterances witness, adding the architecture: bereshit = ONE utterance creating all matter at once, "after which all matter was formed into separate entities by the other nine" — e1 as bulk-create, later utterances as differentiation; extends ORAL_e1_maamar |
 | 66 | Shabbat 10a:5 | chain_primary | context | judge who judges truly = partner in creation; gezerah shavah erev/voker (Exod 18:13 <-> Gen 1:5) yields the part-of-day-counts rule — halakhic application of the day formula |
@@ -102,7 +102,7 @@ outside_chain (29, observation pass).
 | 75 | Avodah Zarah 29a:5 | chain_primary | not-bearing | medical mnemonic: remedy-in-water remembered by "ruach Elohim hovering over the waters" — mnemonic use only |
 | 76 | Chullin 83a:15 | chain_primary | enrichment | mishnah: for oto-ve-et-beno ("an animal and its offspring"), "the day follows the night," by ben Zoma's gezerah shavah on yom echad (Gen 1:5 <-> Lev 22:28) — the commit formula's erev-first composition made an operative legal day-boundary (pairs with row 57) |
 | 77 | Sotah 12a:17 | chain_primary | not-bearing | Moses' birth fills the house with light, tov (Exod 2:2) <-> tov (Gen 1:4) — homiletic transfer of the light-goodness association |
-| 78 | Sukkah 49a:2 | chain_primary | not-bearing | al-tikrei ("do not read") wordplay: bereshit -> bara shit ("He created the drainpipe") — a marked, deliberate re-tokenization for an altar homily; the chain flags its own departures from plain segmentation |
+| 78 | Sukkah 49a:2 | chain_primary | not-bearing | al-tikrei ("do not read") wordplay: bereshit -> bara shit ("He created the drainpipe") — a marked, deliberate re-tokenization (a re-cutting of the word) for an altar homily; the chain flags its own departures from plain segmentation |
 | 79 | Jerusalem Talmud Chagigah 2:1:2 | chain_primary | not-bearing | exposition-restriction rules for arayot ("sexual prohibitions") — sugya frame only; no creation content in this segment |
 | 80 | Jerusalem Talmud Chagigah 2:1:3 | chain_primary | enrichment | "nor the Creation to two" (esoteric guard) + R. Yehudah bar Pazi's initial-state cosmology: "originally the world was WATER IN WATER — what is the reason? God's wind was hovering over the water (1:2)"; then the support stack (land on water, water on mountains, mountains on wind, wind on storm) — the chain giving the {P}-state physical content from our INVARIANT line |
 | 81 | Jerusalem Talmud Chagigah 2:1:4 | chain_primary | enrichment | closing Sepphorean gloss: tohu ("chaos") = "darkness and murkiness" — a lexical gloss on the state predicate (translator flags possible text corruption; noted) |
@@ -151,7 +151,7 @@ outside_chain (29, observation pass).
 | 124 | Vayikra Rabbah 27:1 | chain_primary | not-bearing | moral typology: Gehenna is darkness, the depths are darkness ("darkness upon the surface of the depths," 1:2), the wicked are darkness — "let darkness cover darkness" |
 | 125 | Vayikra Rabbah 31:8 | chain_primary | enrichment | R. Berekhya reads the 1:2 -> 1:3 juxtaposition as derivation: "if FROM THE DARKNESS I created light for you, do I require your light?" — light-out-of-darkness as source claim; with the eye-orb analogy (one sees through the black, not the white) |
 | 126 | Vayikra Rabbah 33:6 | chain_primary | enrichment | inter-source certification: R. Yosei b. Chanina explains Nebuchadnezzar's hatzeda by "the TRANSLATION of tohu va-vohu is TZADEYA" — the midrash quoting the Targum's rendering (row 106) as the established standard gloss |
-| 127 | Vayikra Rabbah 36:1 | chain_primary | enrichment | the order machloket with R. Elazar b. R. Shimon's GENERAL RULE: where a fixed ordering is inverted exactly once (heavens/earth, Moses/Aaron, father/mother… six pairs), the inversion teaches the two are EQUIVALENT — a stated hermeneutic principle for order variation; plus RSHBY's potter detail (a closed vessel thrown first, then top separated from bottom) and Beit Hillel's hayetah-pluperfect argument again |
+| 127 | Vayikra Rabbah 36:1 | chain_primary | enrichment | the order machloket with R. Elazar b. R. Shimon's GENERAL RULE: where a fixed ordering is inverted exactly once (heavens/earth, Moses/Aaron, father/mother… six pairs), the inversion teaches the two are EQUIVALENT — a stated hermeneutic principle for order variation; plus RSHBY's potter detail (a closed vessel thrown first, then top separated from bottom) and Beit Hillel's hayetah-pluperfect ('it had been', the pluperfect) argument again |
 | 128 | Vayikra Rabbah 36:4 | chain_primary | enrichment | be-reshit expounded "for the sake of reshit": reshit = ISRAEL from Jer 2:3 ("Israel… the FIRST of His crop") and reshit = Moses (Deut 33:21) — the chain's own lexical basis for the Gen 1:1 <-> Jer 2:3 echo candidate in our table |
 | 129 | Pesikta DeRav Kahana 7:5 | chain_primary | enrichment | R. Yochanan ben Zakkai in the midnight analysis: "we find both night and day called YOM — va-yehi erev va-yehi voker yom echad" — the day-label's scope covers the night (label-scope note on the LEDGER unit) |
 | 130 | Pesikta DeRav Kahana 12:24 | chain_primary | enrichment | (he-only text) the alef's twenty-six-generation complaint: "I am first of the letters, yet You created the world with the BET — bereshit bara"; answered: "I will repay you — the Torah opens with alef: Anokhi" — the opening-letter design decision with DEFERRED REPAYMENT at Sinai: the same anomaly-repayment pattern as the echad/Mishkan answer (row 29; cf. rows 10, 102) |
@@ -207,7 +207,7 @@ outside_chain (29, observation pass).
 | 180 | Midrash Lekach Tov, Genesis 1:1:15 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
 | 181 | Midrash Lekach Tov, Genesis 1:1:16 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
 | 182 | Midrash Lekach Tov, Genesis 1:1:17 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
-| 183 | Midrash Lekach Tov, Genesis 1:1:18 | chain_anthology | not-bearing | tov-le-khol homily |
+| 183 | Midrash Lekach Tov, Genesis 1:1:18 | chain_anthology | not-bearing | tov-le-khol ('good to all') homily |
 | 184 | Midrash Lekach Tov, Genesis 1:1:19 | chain_anthology | dup-of:Megillah 9a:12 | Ptolemy change; adds the author's word-order-custom parallel from Lev 1:2 (the Name not placed first) |
 | 185 | Midrash Lekach Tov, Genesis 1:1:20 | chain_anthology | not-bearing | R. Yitzchak's why-not-start-from-ha-chodesh (koach ma'asav) — canon-structure homily |
 | 186 | Midrash Lekach Tov, Genesis 1:1:21 | chain_anthology | enrichment | author's grammar on the be- frame: bare reshit would read as construct (like reshit degankha) leaving the Name unstated — BE-reshit bara = 'at the head of all deeds He created': TIME_ANCHOR-adjacent analysis |
@@ -217,7 +217,7 @@ outside_chain (29, observation pass).
 | 190 | Midrash Lekach Tov, Genesis 1:1:25 | chain_anthology | dup-of:Bereshit Rabbah 1:10 | the bet = two worlds |
 | 191 | Midrash Lekach Tov, Genesis 1:1:26 | chain_anthology | dup-of:Bereshit Rabbah 1:3 | sole agent — levado (Isa 44:24) |
 | 192 | Midrash Lekach Tov, Genesis 1:1:27 | chain_anthology | dup-of:Bereshit Rabbah 3:2 | ba-maamar ve-lo bi-ygia (Ps 33:6), generalized to e1 |
-| 193 | Midrash Lekach Tov, Genesis 1:1:28 | chain_anthology | enrichment | lexical note: Elohim from el = power/might (tzidkatekha ke-harerei el) |
+| 193 | Midrash Lekach Tov, Genesis 1:1:28 | chain_anthology | enrichment | lexical note: Elohim from el = power/might (tzidkatekha ke-harerei el = 'your righteousness is like the mighty mountains') |
 | 194 | Midrash Lekach Tov, Genesis 1:1:29 | chain_anthology | dup-of:Bereshit Rabbah 14:1 | Elohim = judge (din); adds Jer 33:25 (creation conditional on the covenant) as prooftext |
 | 195 | Midrash Lekach Tov, Genesis 1:1:30 | chain_anthology | enrichment | a bereshit CONCORDANCE: exactly three in Tanakh — Gen 1:1, Jer 26:1 (Yehoyakim), Jer 28:1 (Zedekiah) — 'for He sought to return the world to tohu but for His mercy': the anthology's own rare-word echo table tying Gen 1:1 to the Jeremiah bereshit verses (cf. rows 74, 131; echo-graph evidence) |
 | 196 | Midrash Lekach Tov, Genesis 1:1:31 | chain_anthology | dup-of:Bereshit Rabbah 1:14 | the et inclusions (R. Akiva), with segue into the ten things |
@@ -247,7 +247,7 @@ outside_chain (29, observation pass).
 | 220 | Midrash Lekach Tov, Leviticus 1:1:1 | chain_anthology | not-bearing | author's Leviticus preface (Torah's fruit) |
 | 221 | Midrash Lekach Tov, Leviticus 9:1:2 | chain_anthology | not-bearing | Kohelet homily on Adam; anchor artifact |
 | 222 | Midrash Sekhel Tov, Bereshit 44:3:2 | chain_anthology | dup-of:Mekhilta DeRabbi Yishmael, Tractate Pischa 11:15 | ki-tov travel rule with the author's own paraphrase |
-| 223 | Midrash Sekhel Tov, Shemot 12:20:42 | chain_anthology | dup-of:Pesachim 2a:3 | the or = naghei/leilei bedikat-chametz sugya |
+| 223 | Midrash Sekhel Tov, Shemot 12:20:42 | chain_anthology | dup-of:Pesachim 2a:3 | the or = naghei/leilei bedikat-chametz (the search for leaven) sugya |
 | 224 | Midrash Sekhel Tov, Shemot 16:1:2 | chain_anthology | context | weekday cycle 'ordered from the six days' — calendar use of yom echad |
 | 225 | Midrash Sekhel Tov, Shemot 18:13:4 | chain_anthology | dup-of:Mekhilta DeRabbi Yishmael, Tractate Amalek 4:1 | judge-as-partner |
 | 226 | Midrash Sekhel Tov, Shemot 2:2:2 | chain_anthology | dup-of:Sotah 12a:17 | Moses named Tov |
@@ -276,7 +276,7 @@ outside_chain (29, observation pass).
 | 249 | Yalkut Shimoni on Torah 306:3 | chain_anthology | not-bearing | Mishpatim homily; anchor artifact |
 | 250 | Yalkut Shimoni on Torah 378:6 | chain_anthology | dup-of:Vayikra Rabbah 31:8 | do-I-need-your-light (menorah) |
 | 251 | Yalkut Shimoni on Torah 520:3 | chain_anthology | not-bearing | Mishkan erected on Rosh Chodesh — timing material (cf. row 29's repayment locus) |
-| 252 | Yalkut Shimoni on Torah 528:3 | chain_anthology | not-bearing | wine gematria homily |
+| 252 | Yalkut Shimoni on Torah 528:3 | chain_anthology | not-bearing | wine gematria (letter-count) homily |
 | 253 | Yalkut Shimoni on Torah 547:4 | chain_anthology | dup-of:Bereshit Rabbah 8:1 | achor va-kedem; merachefet = Messiah-spirit |
 | 254 | Yalkut Shimoni on Torah 750:25 | chain_anthology | enrichment | havdalah as INVIOLABLE BOUNDARY paradigm: 'can you mix day with night? as He separated light from darkness, so He separated Israel from the nations' — the SEPARATE operator made covenant template; compiles a Balaam-cycle primary not yet read |
 | 255 | Yalkut Shimoni on Torah 766:5 | chain_anthology | not-bearing | Balaam homily; anchor artifact |
@@ -383,7 +383,7 @@ outside_chain (29, observation pass).
 | 356 | Midrash Tanchuma Buber, Bereshit 4:7 | chain_compilation | dup-of:Bereshit Rabbah 1:12 | Ben Azzai: He mentioned His works BEFORE His name (bereshit bara, then Elohim) — the word-order humility reading |
 | 357 | Midrash Tanchuma Buber, Bereshit 5:1 | chain_compilation | dup-of:Bereshit Rabbah 1:1 | amon / Prov 8:30 — the Torah-blueprint reading |
 | 358 | Midrash Tanchuma Buber, Bereshit 6:1 | chain_compilation | dup-of:Bereshit Rabbah 1:13 | RSHBY's offering word-order rule (to-the-LORD placed after) |
-| 359 | Midrash Tanchuma Buber, Bereshit 7:1 | chain_compilation | dup-of:Jerusalem Talmud Berakhot 9:1:8 | the minim's how-many-deities challenge answered from the singular verb |
+| 359 | Midrash Tanchuma Buber, Bereshit 7:1 | chain_compilation | dup-of:Jerusalem Talmud Berakhot 9:1:8 | the minim's how-many-deities (how many gods) challenge answered from the singular verb |
 | 360 | Midrash Tanchuma Buber, Bereshit 8:1 | chain_compilation | dup-of:Bereshit Rabbah 1:14 | akh/rak exclusions, et/gam inclusions — the R. Yishmael / R. Akiva exchange |
 | 361 | Midrash Tanchuma Buber, Bo 2:1 | chain_compilation | not-bearing | source of Egypt's plague-darkness (darkness above vs Gehinnom) — plague homily citing the 1:2 darkness traditions |
 | 362 | Midrash Tanchuma Buber, Bo 6:1 | chain_compilation | not-bearing | plagues destined for Edom; anchor artifact |
@@ -405,7 +405,7 @@ outside_chain (29, observation pass).
 | 378 | Midrash Tanchuma, Beha'alotcha 5:1 | chain_compilation | not-bearing | menorah after the princes' offerings; anchor artifact |
 | 379 | Midrash Tanchuma, Bereshit 1:1 | chain_compilation | dup-of:Bereshit Rabbah 1:1 | 'with reshit = with wisdom He founded the earth' (Prov 3:19) — the blueprint reading |
 | 380 | Midrash Tanchuma, Bereshit 1:8 | chain_compilation | enrichment | Resh Lakish's TENAI at its Tanchuma locus: only day six takes the definite article — yom HA-shishi — creation held conditional on Israel's acceptance of Torah (cf. row 279; flagged for the day-6 unit) |
-| 381 | Midrash Tanchuma, Bereshit 4:1 | chain_compilation | context | yelamdenu-question frame opening the Bereshit cycle |
+| 381 | Midrash Tanchuma, Bereshit 4:1 | chain_compilation | context | yelamdenu-question (the 'let our master teach us' opening) frame opening the Bereshit cycle |
 | 382 | Midrash Tanchuma, Bereshit 5:1 | chain_compilation | dup-of:Bereshit Rabbah 1:10 | why the account begins with bet and not alef |
 | 383 | Midrash Tanchuma, Bo 2:3 | chain_compilation | not-bearing | Egypt's darkness-magic homily |
 | 384 | Midrash Tanchuma, Chayei Sara 3:6 | chain_compilation | enrichment | the missing TEST on day 2 explained: 'about that day it is not written ki tov' because Gehenna's fire was created then — the chain's reason for the very gap gen_02's S6 fires on (parallel to BR 4:6, already cited in gen_02's oral notes) |
@@ -415,7 +415,7 @@ outside_chain (29, observation pass).
 | 388 | Midrash Tanchuma, Matot 6:1 | chain_compilation | not-bearing | exaltation homily, standard recension |
 | 389 | Midrash Tanchuma, Nasso 19:1 | chain_compilation | not-bearing | twenty-six generations sustained by kindness; day-1 anchor incidental |
 | 390 | Midrash Tanchuma, Pekudei 2:3 | chain_compilation | enrichment | 'the Tabernacle is EQUAL to the creation of the world' — with the day-by-day verse correspondence table (day 1 bereshit <-> the spread curtains…): the fullest form of the creation<->Mishkan pairing (rows 29, 48, 103, 117) |
-| 391 | Midrash Tanchuma, Shemot 17:1 | chain_compilation | enrichment | hayetah read as PRE-DESIGNATION ('many things designated before entering the world'); choshekh (1:2) identified as the angel of death — a qatal-semantics move on the STATE_BLOCK verb plus symbolic overlay |
+| 391 | Midrash Tanchuma, Shemot 17:1 | chain_compilation | enrichment | hayetah read as PRE-DESIGNATION ('many things designated before entering the world'); choshekh (1:2) identified as the angel of death — a qatal-semantics (the perfect verb's sense) move on the STATE_BLOCK verb plus symbolic overlay |
 | 392 | Midrash Tanchuma, Shemot 22:1 | chain_compilation | dup-of:Megillah 9a:12 | the Ptolemy alterations, ten-changes recension |
 | 393 | Midrash Tanchuma, Shmini 5:1 | chain_compilation | not-bearing | wine commandment homily |
 | 394 | Midrash Tanchuma, Shmini 9:1 | chain_compilation | dup-of:Bereshit Rabbah 42:3 | the vayehi-=-grief tradition from the exile |
@@ -450,7 +450,7 @@ outside_chain (29, observation pass).
 | 423 | Bamidbar Rabbah 18:4 | chain_compilation | not-bearing | Korach's tallit narrative |
 | 424 | Bamidbar Rabbah 18:7 | chain_compilation | dup-of:Midrash Tanchuma Buber, Korach 10:2 | 'Morning' — He set boundaries in His world |
 | 425 | Bamidbar Rabbah 1:1 | chain_compilation | dup-of:Vayikra Rabbah 27:1 | righteousness/mountains, judgments/deep |
-| 426 | Devarim Rabbah 2:13 | chain_compilation | dup-of:Jerusalem Talmud Berakhot 9:1:8 | the minim's how-many-authorities challenge; singular bara answer |
+| 426 | Devarim Rabbah 2:13 | chain_compilation | dup-of:Jerusalem Talmud Berakhot 9:1:8 | the minim's how-many-authorities (how many powers) challenge; singular bara answer |
 | 427 | Esther Rabbah, Petichta 11 | chain_compilation | dup-of:Bereshit Rabbah 42:3 | the vayhi-=-trouble tradition from the Exile |
 | 428 | Kohelet Rabbah 1:2:1 | chain_compilation | not-bearing | havel havalim, David and Solomon explaining each other; day-1 anchor incidental |
 | 429 | Midrash Tehillim 139:4 | chain_compilation | dup-of:Bereshit Rabbah 8:1 | the two-faces creation of Adam |
@@ -476,7 +476,7 @@ outside_chain (29, observation pass).
 | 449 | Shemot Rabbah 1:20 | chain_compilation | dup-of:Sotah 12a:17 | Moses' birth and tov |
 | 450 | Shemot Rabbah 25:6 | chain_compilation | not-bearing | none-like-You manna homily |
 | 451 | Shemot Rabbah 2:4 | chain_compilation | dup-of:Midrash Tanchuma, Shemot 17:1 | haya read as pre-designation ('everyone of whom haya is written was fated…') |
-| 452 | Shemot Rabbah 30:13 | chain_compilation | dup-of:Bereshit Rabbah 14:1 | created with justice — with the explicit name-contrast: 'H'-created is NOT stated, but ELOHIM-created' (cf. row 406's din-then-rachamim) |
+| 452 | Shemot Rabbah 30:13 | chain_compilation | dup-of:Bereshit Rabbah 14:1 | created with justice — with the explicit name-contrast: 'H'-created is NOT stated, but ELOHIM-created' (cf. row 406's din-then-rachamim = justice then mercy) |
 | 453 | Shemot Rabbah 34:2 | chain_compilation | not-bearing | the Ark preceded the vessels as light preceded the creations — analogy use |
 | 454 | Shemot Rabbah 35:1 | chain_compilation | not-bearing | cedars-of-Lebanon homily |
 | 455 | Shemot Rabbah 50:1 | chain_compilation | dup-of:Jerusalem Talmud Chagigah 2:1:3 | 'when He created His world it was entirely water' — the initial-state cosmology again |
@@ -491,7 +491,7 @@ outside_chain (29, observation pass).
 | 464 | Bereshit Rabbati, Parashat Bereshit 61 | chain_compilation | enrichment | the bet of bereshit + the lamed of yisrael (Torah's last letter) = LEV ('heart', 32) — Torah framed by its first and last letters; plus the reshit = challah/tithes/first-fruits merit list (VR 36:4 family variant) |
 | 465 | Bereshit Rabbati, Parashat Bereshit 66 | chain_compilation | enrichment | light, fire, and water all created FROM THE WISDOM OF TORAH (prooftexts per element); then the deliberation 'if I put the light with the darkness…' — a boundary-design deliberation preceding the SEPARATE operator |
 | 466 | Bereshit Rabbati, Parashat Noah 15 | chain_compilation | enrichment | the explicit identification: 'WHICH wind did He pass over the earth (Gen 8:1)? THE wind that was hovering over them from their beginning — ve-ruach Elohim merachefet (1:2) — and once He passed it, AT ONCE they rested': the INVARIANT's agent reused as the Flood's restore instrument (strongest form of row 368) |
-| 467 | Midrash Aggadah, Exodus 21:1:2 | chain_compilation | dup-of:Mekhilta DeRabbi Yishmael, Tractate Amalek 4:1 | judge-as-partner |
+| 467 | Midrash Aggadah (the collection), Exodus 21:1:2 | chain_compilation | dup-of:Mekhilta DeRabbi Yishmael, Tractate Amalek 4:1 | judge-as-partner |
 | 468 | Midrash Aggadah, Exodus 2:2:5 | chain_compilation | dup-of:Sotah 12a:17 | Moses' birth fills the house with light |
 | 469 | Midrash Aggadah, Exodus 40:17:1 | chain_compilation | not-bearing | Nisan / Mishkan-erection timing (parallel of row 171) |
 | 470 | Midrash Aggadah, Genesis 1:1:1 | chain_compilation | not-bearing | Jeremiah 31 measuring homily |

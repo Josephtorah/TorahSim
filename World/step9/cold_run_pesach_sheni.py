@@ -163,7 +163,7 @@ def second_passover(case, data):
     if ask == 'impurity_override':
         ink('9:10', '"any man who is unclean by a corpse... shall keep a Passover" — the second exists FOR the unclean')
         move('Sifrei Bamidbar 70:1', '"its whole reason is his being unclean at the first — shall he come and keep it in impurity?"; '
-             'Tosefta Pesachim 8:3; Pesachim 95b:5 (the first tanna against R. Yehuda)')
+             'Tosefta Pesachim 8:3; Pesachim 95b:5 (the first tanna, the anonymous Mishnah voice, against R. Yehuda)')
         return out('does not override impurity', ['barred_from_it'])
     if ask == 'congregation':
         ink('9:6', '"and there were MEN (אנשים) who were unclean" — individuals')

@@ -138,14 +138,14 @@ def consecrate(thing, owner='israelite', to='unspecified'):
         return cell('holy_altar', I, 'ואם בהמה אשר יקריבו ממנה קרבן ליהוה — כל אשר יתן ממנו ליהוה יהיה קדש (a beast '
                     'of which they bring an offering... all he gives of it SHALL BE HOLY, 27:9)', ['consecrated'])
     if thing == 'unfit_animal':
-        return cell('holy_upkeep_valued_by_priest', I, 'ואם כל בהמה טמאה אשר לא יקריבו ממנה קרבן... והעמיד... והעריך '
+        return cell('holy_upkeep_valued_by_priest', I, 'ואם כל בהמה טמאה (and if any impure beast) אשר לא יקריבו ממנה קרבן (of which no offering is brought) … והעמיד (he shall stand it) … והעריך '
                     'הכהן (an impure beast not offered — stood before the priest, valued good or bad, 27:11-12) '
                     '— the value class, not the altar', ['consecrated'])
     if thing == 'house':
-        return cell('valued_by_priest', I, 'ואיש כי יקדש את ביתו... והעריכו הכהן (a man sanctifies his house — the '
+        return cell('valued_by_priest', I, 'ואיש כי יקדש את ביתו (a man sanctifies his house) … והעריכו הכהן (and the '
                     'priest values it, good or bad, as he values it so it stands, 27:14)', ['consecrated'])
     if thing == 'firstborn':
-        return cell('cannot_be_sanctified_to_the_altar', I, 'אך בכור... לא יקדיש איש אתו... ליהוה הוא (a firstborn '
+        return cell('cannot_be_sanctified_to_the_altar', I, 'אך בכור (but a firstborn) … לא יקדיש איש אתו (no man shall sanctify it) … ליהוה הוא (a firstborn '
                     '— no man shall sanctify it; it IS the LORD\'s, 27:26)', [FX.NONE])
     if thing == 'firstborn_for_value':
         return cell('value_consecration_yes', M, 'the two verses — "you SHALL sanctify" (Deut 15:19) and "no man '
@@ -162,7 +162,7 @@ def consecrate(thing, owner='israelite', to='unspecified'):
 
 def substitute(case, **k):
     if case == 'attempted':
-        return cell('both_holy', I, 'לא יחליפנו ולא ימיר אתו... ואם המר ימיר בהמה בבהמה והיה הוא ותמורתו יהיה קדש '
+        return cell('both_holy', I, 'לא יחליפנו ולא ימיר אתו (he shall not exchange it nor substitute it) … ואם המר ימיר בהמה בבהמה (and if he does substitute beast for beast) והיה הוא ותמורתו יהיה קדש '
                     '(he shall not exchange it nor substitute it... and if he DOES substitute beast for beast, '
                     'it AND ITS SUBSTITUTE shall be holy, 27:10) — the ban and its outcome in one clause; '
                     'Temurah 1:1: "not that a man may, but if he did, it takes — and he receives forty"',
@@ -316,7 +316,7 @@ def tithe(case):
                     '11: tenth})[11] -> %r — the name uprooted from the tenth, so the eleventh is a peace '
                     'offering [IMPORT, live call]' % TN['eleventh_called_tenth'], ['consecrated'])
     if case == 'land_tithe_status':
-        return cell('holy_to_the_LORD', I, 'וכל מעשר הארץ... ליהוה הוא קדש ליהוה (all the tithe of the land... it is '
+        return cell('holy_to_the_LORD', I, 'וכל מעשר הארץ (all the tithe of the land) … ליהוה הוא קדש ליהוה (all the tithe of the land... it is '
                     'the LORD\'s, holy to the LORD, 27:30)', ['consecrated'])
     return cell('no_case', I, '', [FX.NONE])
 

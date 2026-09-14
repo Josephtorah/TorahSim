@@ -71,7 +71,7 @@ silence rule at 34:5 (credit 80:6); the deathbed echo (credit 99:7).
 ## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
 Append-only addition, on the same law and for the same reason as the
 keys appended to the fourteen sweep ledgers and to the Vayera, Chayei
-Sarah, Toledot and Vayetze ledgers on 2026-08-30. This ledger records
+Sarah, Toledot ('generations') and Vayetze ledgers on 2026-08-30. This ledger records
 its Onkelos track in the compact row form ("O1 · 34:1"), which the
 unit-level cite validator cannot match: a cite is valid only when the
 literal source string appears in a triage ledger. This block's Onkelos

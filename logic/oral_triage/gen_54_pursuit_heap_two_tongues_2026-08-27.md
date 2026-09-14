@@ -70,7 +70,7 @@ unpacked epithet (row 7 + O4); the combativeness/clean-hands exhibit
 ## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
 Append-only addition, on the same law and for the same reason as the
 keys appended to the fourteen sweep ledgers and to the Vayera, Chayei
-Sarah and Toledot ledgers on 2026-08-30. This ledger records its Onkelos
+Sarah and Toledot ('generations') ledgers on 2026-08-30. This ledger records its Onkelos
 track in the compact row form ("O1 · 31:22"), which the unit-level cite
 validator cannot match: a cite is valid only when the literal source
 string appears in a triage ledger. This block's Onkelos verses are

@@ -89,7 +89,7 @@ FRESH, one verdict row each. Append-only. Span: Exodus 12:8, 12:17-20,
 
 ### The tefillin's received form (Menachot 34b, 37a, 29b, 44a)
 - Menachot 34b:1 — MATERIAL (docket). THE FOUR COMPARTMENTS FROM
-  THE KETIV: R. Yishmael counts the totafot spellings — לטטפת
+  THE KETIV (the written form): R. Yishmael counts the totafot spellings — לטטפת
   defective here (13:16), defective at Deut 6:8, FULL at Deut 11:18
   (counts two) — four mentions, four compartments. The scribal
   datum EX13-15 holds, now at its derivation.

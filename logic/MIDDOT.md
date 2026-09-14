@@ -911,6 +911,398 @@ narrative strength. By cluster:
 - THE RETELLING AS THE RULE'S PROOF (Avodah Zarah 4b:4-5; Berakhot 7a:13; Sanhedrin 105b:6): Micah 6:5 "know the righteous acts of the LORD" is
   read as the proof that God was not angry all Balaam's days — a prophet's retelling standing as evidence for the narrative's hidden parameter
   (the moment of anger), beside the ink's own back-reference at 31:16 for the counsel.
+- THE INCLUSION READ WIDE, THEN FOUR EXCLUSIONS BY FOUR VERSES (Sifrei Bamidbar 132:1 on Numbers 26:53, THE NUMBERS WALK sitting 8, 2026-09-11): "to these shall
+  the land be apportioned" — "I would understand that ALL are included: Israelites, priests, Levites, proselytes, women, bondsmen, the indeterminate, the
+  hermaphrodite"; then each class is put out by its own verse — the priests by 18:20 ("in their land you shall not inherit"), the Levites by 18:24 ("in the midst
+  of the children of Israel they shall not inherit"), proselytes and bondsmen by 26:55 ("by the names of the tribes of their fathers"), women and the rest by
+  26:54 ("to a MAN according to his numbers"): the ribui-and-miut ladder (an inclusion and a limitation) run on four seats, and the ink carries the first two
+  exclusions' reason in its own sentence — 26:62's two "for"s ("for they were not counted... for no inheritance was given them"). The women's exclusion is the
+  premise the daughters of 27 plead against, and 26:33 is the roster's row for it.
+- WHO "THESE" ARE — THE FOUR-WAY DISPUTE AS A PARAMETER ROW (Sifrei Bamidbar 132:1; Bava Batra 117a): R. Yoshiyah — the land was apportioned to THOSE WHO LEFT
+  EGYPT ("by the names of the tribes of their fathers"; "to these" excludes minors); R. Yonatan — to THOSE WHO ENTERED ("to these"; "by the names of their
+  fathers" teaches that God CHANGED THIS INHERITANCE from every other: "everywhere the living inherit the dead, here THE DEAD INHERIT THE LIVING"), with Rebbi's
+  parable of the two priest-brothers at the granary (the portions pass UP to the dead fathers and are re-divided); R. Shimon b. Elazar — to THESE AND TO THESE,
+  each man with his class, a man of both with both, "so that both verses are satisfied" (I13's form: two verses that pull apart, a third view that keeps both).
+  In the engine: land_divided_among = left_egypt / entered / both — a data row, the dispute carried, no arm chosen.
+- "ONLY" EXCLUDES THE TWO THE CENSUS EXCEPTS (Sifrei Bamidbar 132:3 on 26:55, E2 — the restrictor as a limitation): "ONLY by lot" — Joshua and Caleb took their
+  portions "by the mouth of the LORD" (Joshua 15:13, 19:49-50; Judges 1:20), not by the lot; and 26:65's "except Caleb son of Jephunneh and Joshua son of Nun" —
+  14:30's clause verbatim — names the same two: the land's restrictor and the roll's exception are one pair (the export's "Judges 15:13" is Joshua's; the head
+  "26:25" is 26:55's — recorded).
+- THE ESTIMATE — "BETWEEN MANY AND FEW" READ AS WORTH (Sifrei Bamidbar 132:4 on 26:56; Bava Batra 122a): the land was apportioned "by estimate" — a kor's-space
+  of poor land against a seah's-space of good — so that "many and few" is a second axis (value) beside the count's (size): the shelf reads one clause on two
+  axes, and the ink's "by the mouth of the lot" keeps the placing apart from the sizing (Joshua 19:50 giving the mouth its owner).
+- THE LOT HAS A MOUTH (the ink's own phrase, 26:56, one seat; Onkelos keeps it; Bava Batra 122a's lot that "cries out" is the shelf's reading of it): "by the
+  mouth of the lot shall his inheritance be divided" — a mouth given to the lot as to the LORD ("by the mouth of the LORD", 9:18-23): recorded as the ink's, the
+  lore the exam's.
+- THE IDENTITY ON A FREED TERM (Sifrei Bamidbar 142:2 on Numbers 28:2, THE NUMBERS WALK sitting 9, 2026-09-11; I2): "in its appointed time" stands at the tamid
+  (28:2) and at the Pesach (9:2, 9:3) — the phrase's three Torah seats, computed; R. Yoshiyah: the tamid's "in its appointed time" is not needed for the tamid's
+  own Sabbath (28:9 already gives the Sabbath its lambs), so the term is FREED (מופנה, "free") for the identity — as the tamid overrides the Sabbath, so the Pesach;
+  R. Yonatan's objection ("in this sense we have not heard it") answered by the freeing argument itself; the English row drops the answering speaker (recorded).
+  The rule of the freed term: an identity of expression teaches only when one of its two terms is redundant in its own verse — Pesachim 66a's Hillel the exam's seat.
+- "TWO PER DAY" READ AS "OPPOSITE THE DAY" (Sifrei 142:3 on 28:3, ben Azzai): a phrase whose plain job is done by the next verse (28:4 gives the morning and the
+  evening) is freed for a second content — the slaughter's place fixed by the sun's position; the two rows name different corners (recorded); Tamid 4:1 the exam.
+- THE ONE SPECIFICATION GOVERNS EVERY UNQUALIFIED SEAT (Sifrei 142:5 on 28:5, I3 — the generalization from one case): "flour" is wheat because Exodus 29:2 says
+  "wheat flour" once — "since flours are said in the Torah unqualified and Scripture specified at one of them, so every flour in the Torah is wheat"; the same form
+  extends "beaten oil" from the meal offering to the lamp (Leviticus 24:2). The ink: "beaten oil" at the tamid's two seats alone, computed.
+- THE LIKENING DISPUTED IN ITS SCOPE (Sifrei 143:1 on 28:6): "the continual burnt offering made at Mount Sinai" likens Sinai's olah to the tamid — the anonymous
+  row for the libations, R. Yossi HaGelili only for "a pleasing aroma": a hekkesh (likening by juxtaposition in one verse) whose REACH is the dispute, the law agreed.
+- "X ON ITS X" — THE DAY PASSED, THE OFFERING PASSED (Sifrei 144:2 on 28:10, 145:2 on 28:14): "the burnt offering of the Sabbath on its Sabbath" and "of the month
+  in its month" (one seat each; their pair together at Isaiah 66:23, computed) read as limits — not the eve's on the day, not this day's on another: the possessive
+  as a restrictor (E-class), the general rule "once its day passed, its offering is void" drawn from two seats; Berakhot 26a the exam's.
+- OUT OF THE CLASS FOR A STRINGENCY, TWICE (Sifrei 144:1 on 28:9, 145:1 on 28:11; I10): the Sabbath and the new moon were both inside "the one lamb in the
+  morning" and are each taken out for a stringency — the musaf; and the analogy "learn the new moon's number from the Sabbath's two" is REFUSED by the verse's
+  "another number" (two bulls, a ram, seven lambs): the refused analogy the Sifrei's standing form (147:2 refuses "Sukkot's decline for Pesach" by "as these").
+- THE COMMUNAL, NOT THE INDIVIDUAL (Sifrei 144:1): "the service overrides the Sabbath" proved from the Sabbath's musaf is limited by context — "in what does the
+  passage speak? the communal" — the individual's offering does not override; the context rule (I12) closing an inference's reach.
+- THE MINIMUM OF A PLURAL IS TWO (Sifrei 145:2 on 28:14): "for the months of the year" against the reading of "your months" as the plural's minimum, two — the
+  counting rule the shelf applies to every bare plural; the ink's phrase two seats (Exodus 12:2 the calendar's first verse, computed).
+- THE AVAILABILITY LADDER, FOUR TIMES FROM ONE LEVITICUS VERSE (Sifrei 147:1, 149:1, 150:1, 151:2 on 28:19, 28:27, 29:13, 29:36): "bulls found and no rams, rams
+  and no lambs — offer what is found, even one; when all are found, the full number" — the "I might think... it is therefore written" ladder stated at every
+  table of the calendar, the Hebrew's proof-text LEVITICUS 23:8 / 23:36 each time (the English rewrites it as the Numbers verse at two seats — recorded): the
+  Sifrei on Numbers proving Numbers' tables from Leviticus — a cross-book TEACHER for the compile's edge 28-29 → Leviticus 23 (the link review law's reference
+  class); Menachot 4:4 the exam's.
+- THE IDENTITY "HOLY CONVOCATION" FOR THE FOOD-WORK (Sifrei 147:1 on 28:18; I2): the Hebrew derives the festival's food-preparation permission by identity with
+  Exodus 12:16's "holy convocation" ("only what every soul must eat"); the English cites the verse without the middah (recorded). The ink: "laborious work" at
+  the six festival days against "any work" at Yom Kippur, the Sabbath and Leviticus 23:31 — the permission written as a delta of two phrases, computed.
+- THREE SOURCES, ONE LAW — THE WATER LIBATION (Sifrei 150:1 on 29:12-33; Taanit 2b): R. Akiva by induction from the seasons (the omer for the grain, the firstfruits
+  for the trees, water for the rains), R. Yehudah ben Beteira by THE LETTER READ (the second day's "and their libations", the sixth's "and its libations", the
+  seventh's "according to their ordinance" — mem, yod, mem, "water"; M-28 registered, the letters VERIFIED on the tokens of all fifteen verses), R. Nathan by the
+  doubled verb "pour a pouring" (28:7; E10-class): a dispute on the SOURCE with the law agreed — the dual track carries the three, the compile holds the letters as a
+  checked row and the law as the exam's (Sukkah 4:9). The English shortens R. Yehudah ben Beteira to "R. Yehudah" (recorded).
+- THE WORD'S SENSE FROM ITS USE ELSEWHERE (Sifrei 151:1 on 29:35): "assembly" (עצרת, "withholding") read as CONFINEMENT from Jeremiah's "I am confined" (36:5)
+  and "while he was still confined" (33:1) — the pilgrim withheld from leaving; and the first day the same by the shared "holy convocation" (an "it follows" on the
+  common term). The ink: the word's three Torah seats — Sukkot's eighth day twice and Pesach's seventh (Deuteronomy 16:8), computed; Onkelos "a gathering".
+- THE FRAME AS A CLOSER (Sifrei 152:1 on 29:39-30:1, R. Yishmael): "and Moses said to the children of Israel according to all that the LORD commanded Moses" (30:1)
+  is read as PUNCTUATION — it closes the calendar so that 30:2's "and Moses spoke to the heads of the tribes" opens the vows and is not read with 29:39's "besides
+  your vows": a structural rule about the ink's own paragraph boundaries — the "these" footer (29:39) and the receipt-frame (30:1) closing a register, the form the
+  architecture measurement counted (ARCHITECTURE/DATABASE_SPECULATION.md section 4).
+- BEN AZZAI'S NAME CENSUS (Sifrei 143:3 on 28:8): "with all the offerings in the Torah it is not written Elohim or El or Shaddai or Tzevaot but the Tetragrammaton
+  alone — no opening for the heretics"; a claim about the whole Torah's offering-verses, checkable — in the two chapters "to the LORD" at every offering and Elohim
+  never (computed); the compile's row for the whole Torah.
+- THE EXAM DOCKET OF 28-29 (THE NUMBERS WALK sitting 9b, 2026-09-11; logic/oral_triage/num_28_29_musafim_exam_2026-09-11.md — 1,280 rows): the rules-about-rules
+  the Babylonian Talmud states while running these verses, logged where the machinery runs:
+  · A VERBAL ANALOGY PREFERS THE IDENTICAL FORM (Menachot 45b:18-20; I2): "they shall be" (Lev 23:20) is learned from "they shall be" (23:17), not from "there
+    shall be" (23:18) — non-identical forms serve only where no identical term exists (the school of R. Yishmael's veshav / uva the counter-case); the
+    preference order inside the second middah.
+  · ONE AMPLIFICATION AFTER ANOTHER RESTRICTS (Menachot 89a:3; the amplification-and-restriction family): "with oil" twice at the thanks offering's loaves —
+    a half-log, not more; the rule's seat beside the three log of the tamid's oil.
+  · THE METHOD FORK NAMED AS A TANNAITIC DISPUTE (Sukkah 50b:5): Rebbi expounds by GENERALIZATIONS AND DETAILS (I4-I8's family), R. Yosei b. Yehuda by
+    AMPLIFICATIONS AND RESTRICTIONS — the two rival engines on one verse (the sanctuary block's fork at its Sukkah seat).
+  · JUXTAPOSITION YIELDS TO THE VERBAL ANALOGY WHEN BOTH STAND (Rosh Hashanah 34a:5): "if there were no verbal analogy I would have derived by juxtaposition;
+    now that it is derived by the analogy the juxtaposition is not needed" — the same baraita changing its method; a precedence rule between I2 and the
+    adjacency reading.
+  · NO JUXTAPOSITION FROM A JUXTAPOSITION IN CONSECRATED MATTERS (Shevuot 10a:9, R. Yochanan): the festivals' goats are not learned each from its
+    neighbour (Pesach's from the new moon's, Shavuot's from Pesach's) — every goat runs DIRECTLY to the first; the "and a goat" conjunction the device
+    (Shevuot 9b:2, 10a:8), and Shavuot's and Yom Kippur's goats WITHOUT the conjunction (10a:11) — the token fact the runner computes off the ink (28:30, 29:11).
+  · THE TWO BARS ON A BINYAN AV (Chagigah 6a:11, 6a:13): an INDIVIDUAL'S offering is not learned from the COMMUNAL (Shavuot's set), and a matter FOR ALL
+    GENERATIONS is not learned from a ONE-TIME matter (the princes' dedication) — Beit Hillel and Beit Shammai each closing the other's analogy.
+  · THE LAMED'S DOUBLE YIELD (Shevuot 9a:8-9): "a sin offering TO the LORD" (28:15) yields both Reish Lakish's "an atonement for My diminishing the moon" and
+    "a sin the LORD alone knows" — "of the LORD" would serve the one, "for the LORD" the other: one preposition, two conclusions (the E-class on a particle).
+  · THE FIXED-TIME ANALOGY (Shevuot 9a:10, the school of R. Yishmael): the new moon's goat and Yom Kippur's are both brought AT A FIXED TIME, so they atone
+    alike — the period timers' own property as a middah's ground.
+  · GRASPED MANY, GRASPED NOTHING (Rosh Hashanah 4b:15; Chagigah 17a:8): between two analogies (Shavuot to Pesach's seven or to Sukkot's eight) the SMALLER
+    number is taken — seven is inside eight; the tie-breaker between rival identities.
+  · THE COUNT'S UNIT IS THE SANCTIFICATION'S SPAN (Rosh Hashanah 5a:4; Chagigah 17b:7, Rabba b. Shmuel): count thirty days and sanctify the month with
+    offerings — a day; count from Pesach and sanctify Shavuot — a week: the redress's length read off the counting unit.
+  · THE FREED TERM AT ITS EXAM SEAT (Pesachim 66a:3-12): Hillel's "in its appointed time" / "in its appointed time" — the identity the Sifrei 142:2 stated
+    (the entry above) run by the Talmud on the Pesach's override of the Sabbath, "more than two hundred" the year's count computable from the tables.
+- THE VOWS' CHAPTER (THE NUMBERS WALK sitting 10, 2026-09-12; the Sifrei on Numbers 153-156 on 30:2-17; logic/oral_triage/num_30_vows_2026-09-12.md):
+  the Sifrei's own case law read on the chapter's rows —
+  · THE HEADS FIRST BY THE IDENTITY "BLOWING" (153:1): I2 on 10:3-4 supplies the princes' gathering-place; the one specified speech (30:2 "to the heads of
+    the tribes") governs every unqualified speech (the I3 form); R. Yonatan finds the order at Exodus 34:31-32 and FREES the phrase — which then teaches
+    "the release of vows is by experts alone": a rule the ink never states, the Sifrei's own addition on a freed term (the data channel, labeled).
+  · "THIS IS THE THING" AS A LIMITER AGAINST TWO A-FORTIORI (153:2): the husband annuls, the sage permits — each inference would give the one the other's
+    office; the formula refuses both (the verse refusing the inference, as at 145:1 and 147:2).
+  · THE MINOR EXCLUDED, THE AGE FIXED BY THE IDENTITY WITH THE NAZIRITE (153:3, I2 "vow"-"vow" with 6:2): thirteen years and a day — the export's two
+    files differing on the identity's content (the English carrying the Mishnah's distinct utterance, the Hebrew "a vow with a freewill offering").
+  · "IN ANY EVENT" (מכל מקום, "in any case" — 153:3, 153:4, 154:1): a second clause read to strip a condition the first might carry — "to bind a bond, in
+    any event" (no "to the LORD" needed); "in her husband's house, in any event" (even the forbidden marriage of a widow to a high priest).
+  · A HINT, NOT A PROOF (זכר לדבר, "a remembrance for the matter" — 153:3): vows as by the king's life, oaths as by the King — "though there is no proof, a
+    hint" from 2 Kings 2:2: the shelf grading its own evidence.
+  · THE REFUSED A-FORTIORI OF R. ELIEZER (153:3, 153:10): annulling the wife's vows before she makes them — refused by "on his soul" and "which is upon
+    her"; the sages' second ground the PARALLEL REACH of two verbs on one object (30:14): what can come to confirmation can come to annulment, what cannot,
+    cannot.
+  · TWO TRANSGRESSIONS ON ONE VOW (153:4): "he shall not profane" here and "you shall not delay" at Deuteronomy 23:22 — a cross-book count of the
+    prohibitions one act breaks.
+  · THE WOMAN LIKENED TO THE MAN BY ADJACENCY (153:4): "and a woman" following 30:3 — both transgress both (the E-class likening by juxtaposition).
+  · THE AGE BY TWO EXCLUSIONS (153:4): "a woman" excludes the minor, "in her youth" excludes the mature — "how is this resolved?" the middle band, twelve
+    years and a day.
+  · THE CHAPTER GLOSSES ITSELF (153:4, 153:7, 153:9, 154:1): "a bond" is an oath from 30:11's "by an oath"; "restraint" is annulment from 30:9's adjacent
+    pair; 30:7 is the betrothed because 30:11 has the married; "the utterance" is an oath by I2 with Leviticus 5:4's "to utter with the lips" (one seat).
+  · THE THREE LIMITERS ON HEARING (153:5, 153:8, 154:2): the deaf excluded from "hear"; the report by others counted from the neighbor verse's "on the day
+    of his hearing"; "to her" — he must intend her.
+  · CONFIRMED FOR ONE HOUR, NEVER ANNULLED (153:5, 153:8, 154:2): the "how do I uphold both verses?" form resolving "shall stand" against "restrain" —
+    the confirmation irreversible, the annulment's window the day.
+  · THE ENGINE OF THE FOOTER (153:6, 153:7, 155:1, 156:3): the induction refused ("no — this may be true of the husband, who..."), the a-fortiori refused
+    by a difference (the husband annuls in her maturity; the father's authority becomes exclusive), and THE LIKENING (hekkesh) OF 30:17 "you are compelled
+    to liken" (על כרחך, "against your will") the father to the husband and the husband to the father — the chapter's rule-about-rules: where reasoning
+    fails between two parties, the verse that names both decides; run at four rows.
+  · "I REASONED AND REVERSED" (דנתי וחלפתי, "I judged and I exchanged" — 155:1): the Sifrei NAMES ITS OWN MOVE — the induction run both ways, the reversal
+    refuted by "in her youth in her father's house", the first reasoning "merited" back, itself refuted, then the hekkesh.
+  · THE FORGIVENESS A-FORTIORI AND ITS PARABLE (153:6): the vow annulled unknown to her and broken willfully needs forgiveness — all the more the standing
+    vow; one who meant to eat swine and ate lamb.
+  · THE MESSENGER DISPUTE (153:6, 154:3): R. Yoshiyah — "her father restrained her": his act, not her assurance, not a caretaker's; R. Yonatan — "in every
+    place a man's messenger is as himself" (Kiddushin 41b): a general principle against a verse's restrictor, carried dual-track.
+  · THE TWO SILENCES (154:2, 156:1): the single "was silent to her" the silence to confirm, the doubled "silent, silent ... from day to day" the silence
+    to vex — two forms, two laws (the E10 class on a doubled verb).
+  · THE DEADLINE'S TWO SETTINGS (156:1): "from day to day" — to nightfall by the verse's own close "on the day of his hearing", or twenty-four hours
+    (R. Shimon ben Yochai reading the same words) — the dispute the compile carries as the annulment clock's parameter.
+  · THE AFFLICTION FILTER (155:1): 30:14 restricts 30:9's "the vow upon her" to vows of self-affliction; 30:17 adds "between him and her"; R. Yoshiyah's
+    common feature (vows no one else can release for her) against R. Yonatan's case-list (the fruits of the world; of the province; of this shopkeeper).
+  · THE PART IS THE WHOLE ON A DOUBLED OBJECT (155:1): R. Akiva from "he shall confirm IT ... he shall annul IT" — as a part confirms the whole, a part
+    annuls the whole; R. Yishmael: the annulment whole only; the bound — one vow ("figs and grapes") against two ("figs — and again grapes").
+  · "AFTER HIS HEARING" FREED BY ITS NEIGHBOR (156:2): 30:15 already carries the hearing, so 30:16's "after his hearing" means after his confirmation.
+  · THE MEASURE OF GOOD EXCEEDS THE MEASURE OF PUNISHMENT (156:2): the a-fortiori's standing ratio (the one who causes his fellow to stumble takes his
+    place; all the more the one who brings him merit) — a recorded parameter of the tradition, not of the ink.
+  · THE FATHER'S REACH BOUNDED BY "IN HER YOUTH IN HER FATHER'S HOUSE" (156:3): the restriction that keeps the two-way likening from reaching her maturity
+    in his house; R. Yishmael — the betrothed maiden, her father and her husband annulling together.
+
+- THE VOWS' DOCKET (THE NUMBERS WALK sitting 10b, 2026-09-12; logic/oral_triage/num_30_vows_exam_2026-09-12.md — 1,047 rows; the rules about rules the
+  Talmud states while running chapter 30's clauses, read in Shevuot, Nedarim, Rosh Hashanah and Yoma):
+  · THE METHOD FORK WITH ITS LINEAGES (Shevuot 26a:6-9): the oath of utterance's scope run by BOTH engines on one verse — R. Yishmael's school (the general
+    and the particular) against R. Akiva's (amplification and restriction), each teacher's derivation traced to his master (R. Yishmael served R. Nechunya
+    ben HaKanah who expounded the whole Torah by the general-and-particular; R. Akiva served Nachum of Gimzo who expounded it by amplification-and-restriction)
+    — the middah choice a LINEAGE, recorded as a model parameter beside the verdicts (the fork's third seat after the sanctuary constants and the capital
+    modes blocks).
+  · "I WILL REVERSE IT" (Shevuot 26a:11): the Sifrei's reversed induction of 155:1 ("I reasoned and reversed") answered in the Talmud's own idiom — the
+    a-fortiori's terms exchanged to test it, the exchange refuted by the verse's restrictor: the tradition's named test on an inference, at a second seat.
+  · TWO VERSES AS ONE (Shevuot 26b:18): "for evil or for good" — the two clauses read as ONE verse for the oath's scope (the past and the future both in it);
+    a clause pair counted as a single teaching unit — the E-class rule on what a "verse" is for a count.
+  · THE PROFANE IS NOT LEARNED FROM THE SACRED (Shevuot 26b:20): the oath of utterance (a profane matter) cannot be learned from the oath of testimony's
+    sacred setting — a bar on the analogy by the domain of its source; the vows' machine keeps its own verbs.
+  · R. YOSHIYAH AND R. YONATAN ON THE CONJUNCTION (Shevuot 27a:15-16): "his father and his mother" — the vav read as AND (both together, R. Yoshiyah) or as
+    OR (either, R. Yonatan) — the same pair that splits the messenger's annulment (Sifrei 153:6, 154:3): one dispute on a particle, two chapters' law.
+  · THE IDENTICAL-FORM PREFERENCE (Yoma 76a:1; at 9b's docket for the calendar, here for the affliction-root): "afflict" at 30:14 learned from Leviticus
+    23's "you shall afflict your souls" — the identity taken between two seats of the SAME form before any other.
+  · GRASPED MANY, GRASPED NOTHING (Rosh Hashanah 4b:15): the delay ban's clock (Deuteronomy 23:22 by the vow_deadline row) — the three festivals, not the
+    year; the tie-breaker as at 9b, here bounding a TIMER's period.
+  · THE VERSE JUXTAPOSES ANNULMENT TO CONFIRMATION (Nedarim 87b:1-2): the same juxtaposition read by R. Akiva to carry "part of it" from the confirming verb
+    to the annulling one, and by the Rabbis to keep each verb to its own act — a hekkesh (the likening; no I-code) argued in both directions on one pair of
+    words (M-16's tenth exemplar in MOVE_CATALOG.md).
+  · CONFIRMED FOR ONE HOUR, NEVER ANNULLED (Nedarim 69a-70a; the Sifrei 153:5): the state machine's irreversibility as the tradition's own rule — the
+    machine's vow_confirmed status has no cancel; the dilemmas of 70a:4 (the "and I" after her naziriteship) UNRESOLVED and left so.
+  · THE HEARING IS THE INK'S OWN TRIGGER (Nedarim 72b:3-73a:1, TEIKU): "on the day of his hearing" — whether he may annul without hearing left open on the
+    page; the machine requires the hearing and records the open (the row hearing_required = unresolved).
+
+- MIDIAN'S CHAPTER (THE NUMBERS WALK sitting 11, 2026-09-12; the Sifrei on Numbers 157-158 on 31:1-24 — no row from 31:25 to 35:8;
+  logic/oral_triage/num_31_midian_2026-09-12.md): the Sifrei's own case law read on the chapter's rows —
+  · THE NAME READ TWICE AND THE PRIORITY ASKED (157:1): "from the Midianites" — but Moab began (22:4, 22:7)? the old feud read off Genesis 36:35 and the
+    parable of the two dogs; the gentilic's letters read as "contended" and "counseled" — the narrative middot's name-reading; the ink's own fact beside it:
+    "the Midianites" with the article at the command (25:17) and the run (31:2) alone in the Bible.
+  · "ARM" BY THE LEXICAL IDENTITY (157:2): the imperative's one seat fixed by Deuteronomy 3:18's "armed shall you pass over" — I2's lexical form (a word's
+    sense from its other seat); "afterward you shall be gathered" read as the plain sequence: Moses' death contingent on the war.
+  · THE DOUBLED NUMERAL DISPUTE (157:3): "a thousand to a tribe, a thousand to a tribe" — R. Yishmael reads the doubling twice (24,000), R. Akiva once (12,000,
+    the ink of 31:5's own sum; the parser's distributive [1000, 1000]); "for ALL the tribes" the E-class amplifier — to include the tribe of Levi (the Hebrew;
+    the English reversed); the passive "were delivered" read for its agent three ways (the men, others, conscription). The export's defects at this row
+    (RESEARCH_LOG).
+  · "THE HOLY" AND "HIS HAND" BY IDENTITY (157:4): the holy vessels = the ark from 4:20; "in his hand" = his domain from 21:26 and Genesis 24:10 — I2 on a
+    common word at two seats; the ancestor by descent (the Hebrew's Joseph, the English's Jethro inserted).
+  · THE SECOND NAMING, THE RETELLING FOR THE MODE, THE FRAME FOR A CAUSE (157:5): "the five kings" named again — as one in counsel, one in punishment (the
+    "why repeated" form); Balaam's mode read off Joshua 13:22 (R. Natan: by a court — the Hebrew); "Moses and Eleazar went out" read for its cause (the
+    youths snatching); "Moses was wroth" — the stigma hangs on the great; "by the word of Balaam" — the counsel spelled out.
+  · THE REFUSED A-FORTIORI ON A PENALTY (157:6): "every woman who has known a man" — fit for intercourse, by the "uphold both verses" form on 31:18; the
+    second "kill" read two ways: R. Yishmael — a repeated verb CLOSES THE SUBJECT (a structural rule: the paragraph's boundary); the other reading — the
+    a-fortiori (the fit one killed, the one who has lain all the more) is barred, for WE DO NOT PUNISH BY INFERENCE (ain onshin min ha-din, the rule about
+    rules at Sanhedrin 54a and Makkot 5b): the penalty must be written — the English drops it whole; R. Shimon ben Yochai's proselyte under three from "keep
+    alive for yourselves".
+  · THE TENT'S STRAW EXCLUDED, THE CAPTIVES LIKENED (157:7): 19:14's "all that is in the tent" — straw and twigs do not enter the category (piska 126's
+    exclusion repeated); "you and your captives" — as you are children of the covenant, so your captives, for the sprinkling (an analogy on the pronoun pair).
+  · THE FREED-WORD IDENTITY RUN TWO WAYS (157:8): Leviticus 11:32's "skin or sack" against 31:20's "garment, skin, goat-work, wood" — the a-fortiori refused
+    both ways ("do we derive from the stringent to be lenient and stringent with it?"), "garment" declared FREED (mufneh — unneeded in its own verse) to form
+    the gezerah shavah (the verbal identity): goat-work like sack carried to the creeping thing's law, "spun and woven" carried to the dead's — the band, the
+    belt and the ass's girth in, cords and ropes out. The Hebrew's first leg runs backward (goat-work is 31:20's word); the English the way the ink allows.
+    The identity's license: the freed word (MIDDOT.md under I2 — Pesachim 66a: no identity of one's own).
+  · ANGER BEGETS ERROR AT THREE PLACES, AND "IN THE NAME OF ITS SAYER" (157:9): why Eleazar speaks the heifer's statute — Moses came to anger and to error
+    (Leviticus 10:16, Numbers 20:10, 31:14 — R. Elazar; the wrath-verb with Moses as subject stands at Exodus 16:20, Leviticus 10:16, 31:14: two shared),
+    or Moses gave him leave, or R. Yoshiyah's attribution rule from Esther 2:22 (the English drops the name) — rules about the lawgiver and the teacher.
+  · "ONLY" DIVIDES, AND THE ANALOGY ON A SHARED FEATURE (158:1): the metals as vessels not lumps — Israel's dead and Midian's slain both defile, so both
+    defile vessels only (the "you reason" form on a common feature); R. Yose HaGelili: the E-class limiter "only".
+  · THE LISTS AS SPECIFICATION, THE IMMERSION BY A-FORTIORI (158:2): the vessels of fire and of water listed (the Sifrei's data channel — "because of the
+    gentiles' absorptions"); if what needs no sprinkling needs immersion, what needs sprinkling all the more — I1; the English supplying the Mishnah's
+    whitening / boiling.
+  · THE TWO-WAY LIKENING OF THE CAMP AND THE EVENING (158:3): the sword unclean seven days from "slain by the sword" (19:16); vessels-man-vessels from the
+    garments' washing; 31:24 and 19:19 likened BOTH WAYS (the camp's bar exported, the evening imported) — the likening (hekkesh, no I-code) as the vows'
+    footer used it; the Hebrew's misquoted lemma and the English's wrong book (RESEARCH_LOG).
+
+- MIDIAN'S DOCKET (THE NUMBERS WALK sitting 11b, 2026-09-12; logic/oral_triage/num_31_midian_exam_2026-09-12.md — 451 rows; the rules about rules the
+  docket found at their Talmud seats):
+  · THE FREE-WORD CONDITION OF THE VERBAL ANALOGY (Shabbat 64a:16-19): a verbal analogy (the second middah, I2) on FREE terms cannot be refuted; on terms
+    free from ONE side only the Sages dispute whether it can — "garment and leather" freed on the creeping animal's side by Leviticus 22:4-5's
+    juxtaposition to Leviticus 15:17 and on the corpse's side too (the priesthood docket's rows credited): the analogy between Leviticus 11:32 and
+    Numbers 31:20 run BOTH WAYS (64a:7-8, 64a:15; Bava Kamma 25b:6) — the teacher of the edge midian -> shemini (link: transfer), the Sifrei 157:8's
+    freed-word identity at its Talmud seat.
+  · WE DO NOT PUNISH BY INFERENCE (Makkot 5b:11-16; Sanhedrin 54a:17): no penalty on an a-fortiori (I1's limit) — "you have taught us, our teacher, that
+    one does not administer punishment based on an a-fortiori inference; the punishment must be stated" (the sister of both parents, Leviticus 20:17);
+    nor a prohibition by inference (5b:14), nor lashes (the verbal analogy "wicked / wicked", Numbers 35:31 / Deuteronomy 25:2 — 5b:15), nor exile
+    ("murderer / murderer", 35:21 / 35:11 — 5b:16); Abaye and Rava's fork on the father's brother (Sanhedrin 54a:17). The Sifrei 157:6's reading of
+    31:17's doubled "kill" (R. Yoshiyah) at its seat, against R. Yishmael's structural "to close the subject" — the runner's DATA row punish_by_inference.
+  · IN THE NAME OF ITS SAYER (Megillah 15a:20): whoever reports a saying in the name of its sayer brings redemption to the world (Esther 2:22) — the
+    Sifrei 157:9's closing rule at its Talmud seat; the export dropped R. Yoshiyah's name at that very row (the reading's finding).
+  · ANGER BEGETS ERROR (Pesachim 66b:6-9): the angry scholar's wisdom departs (Moses — 31:14 "and Moses was wroth", then 31:21's statute in Eleazar's
+    mouth), the angry prophet's prophecy (Elisha, 2 Kings 3:14-15), whoever is angry is lowered (Eliab, 1 Samuel 17:28 / 16:7), the haughty too (Hillel,
+    66b:6) — the Sifrei 157:9's three seats of Moses' anger at their Talmud seat; and ELEAZAR LOWERED FOR RULING BEFORE HIS TEACHER (Eruvin 63a:24 —
+    "commanded to my father's brother, not to me"): the priest's relay read by the shelf as a fault, the installed_by class's own witness.
+  · "NEVERTHELESS" DIVIDES, "AND IT SHALL BE PURE" ADDS (Avodah Zarah 75b:7-11): the particle אַךְ "only / nevertheless" at 31:23 EXCLUDES the third and
+    seventh day's sprinkling for the vessels (Bar Kappara) — the Sifrei 158:1's move at its seat; "and it shall be pure" ADDS immersion in forty se'ah
+    (Rava); both clauses needed (75b:10-11) — a particle read as an exclusion beside a clause read as an addition; "the water of niddah" split from the
+    heifer's water to the menstruant's (75b:9) — the DATA row immersion_source.
+  · THE NOVELTY THAT TEACHES NOTHING (Pesachim 44b:14-16): the Rabbis refuse to derive "the taste as the substance" from the vessels of Midian because
+    their purging is itself a NOVELTY (a taste that taints, forbidden here alone) — a rule about sources: no principle is drawn from a chiddush (a
+    novelty); R. Akiva derives from it (44b:13; Nazir 37b:1); R. Meir's detriment principle on the same verses (Avodah Zarah 67b:6).
+  · ITS COUNTERPART REVEALS ABOUT IT (Avodah Zarah 76a:7-8): two mishnayot each stating part of a rule supply each other (Abaye, on the spit whitened
+    here and purged for sacrificial meat at Zevachim 97a) — refused by Rava when each has only part; a rules-about-rules form on supplementing texts.
+  · THE ONE-TIME LAW IS NO SOURCE (Menachot 77b:20): Midian's teruma "not one of ten, and not practiced for all generations" — no rate derived from it:
+    the temporal scope of a verse as a bar on transfer (the daemon's installed_by class witnessed — the division's rates instruct this spoil alone).
+  · ALL YOU TAKE ELSEWHERE SHALL BE LIKE THIS (Jerusalem Talmud Terumot 4:3:2): R. Levi reads 31:30's one of fifty as the terumah's AVERAGE — a rate
+    carried from a one-time instruction to a standing measure (Mishnah Terumot 4:3's fiftieth); the Torah's own measure NONE (R. Mana, 4:3:8) — a
+    TRANSFER taught, the reading's "one of fifty" on the local shelf after all.
+
+  · FROM A NEGATIVE STATEMENT THE POSITIVE — R. MEIR'S REFUSAL (Nedarim 11a:2; Shevuot 36a:25-29; the Numbers walk 12b, 2026-09-12): R. Meir does not
+    infer the unstated arm ("from a negative you may not infer the positive") — the corollary of his doubled-condition rule from Gad and Reuben's
+    stipulation (Mishnah Kiddushin 3:4); its SCOPE disputed: monetary matters only, ritual matters inferred (36a:27), or nowhere — the sotah's
+    "hinnaki" written and "chinnaki" read supplying the second arm (36a:29; Kiddushin 62a:2-3): a rule about inference with its own two settings.
+  · THE DOUBLED FORM'S CENSUS ACROSS THE BOOKS (Kiddushin 61b:9-62a:7): the exemplar's kin read one by one — Cain's IF (Genesis 4:7), Eliezer's oath
+    (24:41), the blessings and the curses (Leviticus 26:3 / 26:15), Isaiah 1:19-20, the sotah (Numbers 5:19), the heifer's third and seventh day (19:12):
+    on R. Meir's view each teaches the doubling; on R. Chanina ben Gamliel's each second arm is needed for its own sake — a form read the same way at
+    every seat, the two readings kept.
+  · "ON CONDITION" IS "FROM NOW" (Gittin 75b:2 — Rav Huna in Rav's name): an act stated "on condition" takes effect at once, the condition fulfilled
+    later — the grant of 32:33 given before the crossing, the exemplar's own timing; a rule about the reach of a clause in time.
+  · A CONDITION COUNTER TO THE TORAH (Mishnah Bava Metzia 94a:2; R. Yehuda 94a:5): void on a non-monetary matter; in monetary matters the parties may
+    agree — the reach of stipulation against the written law, the bailees' case.
+  · THE ONE-TIME LAW, AGAIN — THE EXODUS GENERATION'S TITLE (Bava Batra 119b:3-4, credited): Exodus 6:8's "heritage" read both ways — an inheritance
+    from the fathers AND a generation that bequeaths without inheriting, "You will bring THEM in" (Exodus 15:17) — the scope of a promise read on its
+    own grammar; the shelf's frame for chapter 32's oath retold.
+- THE JOURNEYS' DOCKET (THE NUMBERS WALK sitting 13b, 2026-09-12; logic/oral_triage/num_33_journeys_exam_2026-09-12.md — 196 rows; the rules about rules the
+  docket carries, each at its row):
+  · THE VERBAL ANALOGY AT A DATE — "THE FORTIETH YEAR" / "THE FORTIETH YEAR" (Rosh Hashanah 2b:10-11; I2, the gezerah shavah — the shared word): 33:38's
+    date names its epoch ("of the going out from the land of Egypt"), Deuteronomy 1:3's does not; the tradition carries the epoch across by the shared
+    phrase in Rav Pappa's form ("the twentieth year" / "the twentieth year") — a TRANSFER with its teacher named; the engine's Calendar reads both dates
+    in one year by its own registered epoch, so the transfer is reproduced without being assumed.
+  · TWO VERSES THAT COME AS ONE TEACH NO PRECEDENT (Kiddushin 37b:6-9 — the king's "when you come … and inherit and settle" and the first fruits' the same
+    form; a rule about rules, no I-code among the thirteen): when the Torah states a qualification at two seats, the pair does not generalize to a third
+    — the two schools of R. Yishmael split on whether the pair was necessary (each seat needed for its own sake) or superfluous (and so teaching).
+  · THE FOUR SENSES OF "KI" AND "DO NOT READ" (Rosh Hashanah 3a:2 — Reish Lakish's four: if, perhaps, but, because; R. Abbahu's "do not read 'and they
+    saw' but 'and they were seen'"): a lexical rule and a vocalization rule read together on 20:29 to place the clouds' departure at Aaron's death — the
+    ground of the chukat runner's row arad_heard.
+  · THE HEH FOR THE LAMED (Yevamot 13b:6 — R. Nechemya and the school of R. Yishmael: a word needing a lamed at its head takes a heh at its end — Elimah,
+    Mitzraimah, Diblathaimah): a grammar rule of the ink, its examples the itinerary's own tokens (33:9, 33:46); the list keeps the ending.
+  · A DATE COMPUTED BACKWARD FROM A RUN'S MARKER (Kiddushin 38a:5-6; Seder Olam Rabbah 10:2): Moses' death on the seventh of Adar from the tenth of Nisan
+    (Joshua 4:19) less thirty days' mourning and three days' preparation — the shelf's own retrograde marker (Pesachim 6b:7's kin), with "this day"
+    (Deuteronomy 31:2) closing the count to the day (38a:7; Exodus 23:26 "the number of your days I will fill").
+  · THE RETREAT (Seder Olam Rabbah 9:2 — M-30): two seats of one death reconciled by a movement the ink does not narrate, the list's own count the check.
+  · THE PRIVATE ALTAR'S ERAS DECIDE A SENSE (Mishnah Zevachim 14:4-8): "high places" in the Mishnah are Israel's own altars by era — permitted, forbidden,
+    permitted, forbidden, forbidden forever; 33:52's "their high places" the Canaanites' to demolish (Leviticus 26:30's curse in the same verb): one word,
+    two objects, the docket's topic rows read to tell them apart and the gemara cut as another runner's.
+- THE BORDERS' DOCKET (THE NUMBERS WALK sitting 14b, 2026-09-13; logic/oral_triage/num_34_borders_exam_2026-09-13.md — 171 rows; the rules about rules the
+  docket carries, each at its row):
+  · THE ADJACENT VERSE CLASSES THE COMMANDMENTS (Kiddushin 37a:4-6 — the baraita on Deuteronomy 12:1-2; the adjacency rule, the case law's own family):
+    "in the land" would confine every commandment, "all the days that you live upon the earth" would extend every one — "go and learn from what is stated
+    in the next verse": the idolatry's ban is an obligation of the body and applies everywhere, so every obligation of the body applies everywhere and
+    every obligation of the land inside the border alone (Rav Yehuda's classing, 37a:3); the exceptions by tradition (orlah and diverse kinds, 37a:1),
+    the new crop disputed (37a:7-15 — R. Eliezer's "even" read two ways, decided by Abaye's "who disagrees with R. Eliezer? R. Yishmael"). The chapter's
+    border is the rule's OBJECT; the classing is Deuteronomy's and the readback's.
+  · "ONLY" EXCLUDES THE TWO WHO DIVIDE (Bava Batra 122a:12 on 26:55, read whole at this docket; E2 — the restrictor as a limitation): "ONLY by lot" — Joshua
+    and Caleb took not by the lot they administer but by the LORD's word (Timnath-serah, Joshua 19:50) and by Moses' oath (Hebron, Joshua 14:13); the
+    two dividers of 34:17 and 34:19 the two the restrictor excepts — the exclusion read against its own administrators.
+  · THE LAW OF AGENCY ASKED OF A VERSE AND REFUSED (Kiddushin 42a:6-8 on 34:18): Rav Giddel in Rav's name founds agency on "one prince from each tribe you
+    shall take to divide the land" — refused, "how can you understand this as agency? minors have no agency, and the princes divided for adults and
+    minors alike"; the verse kept for another rule (the court's steward for orphans, "to their disadvantage and to their benefit"): a derivation tested
+    against a case it cannot cover and re-seated — the form of a refused source.
+  · A VERBAL ANALOGY NOT RECEIVED IS NOT USED (Sanhedrin 16a:7-9): the false prophet before the seventy-one by "presumptuously" / "presumptuously" (Deuteronomy
+    18:20; 17:12) — but the elder's presumptuousness is a death penalty by twenty-three; Reish Lakish's "word" / "word" (17:10; 18:20) instead; and why
+    not return the elder to seventy-one by the first analogy? "this tanna derives by 'word' / 'word' and not by 'presumptuously' / 'presumptuously', as he
+    did not receive it as a tradition" — I2's own constraint (Pesachim 66a: no verbal analogy of one's own) stated inside a sugya on the courts.
+  · ONE WORD READ TWO WAYS ON A BORDER (Gittin 8a:4-7 on 34:6): "and its border" — R. Yehuda: the sea itself directly across the land is the land; the
+    Rabbis: the word teaches the islands within a string from Turei Amnon to the River of Egypt (the Tosefta Terumot 2:12's picture) — the same word
+    the ground of both arms, each side's reading stated with what the other does with the word ("and the Rabbis, what do they do with 'and its
+    border'?").
+  · ONE BORDER ROUND ABOUT AGAINST THE JORDAN CANAAN'S (Bekhorot 55a:10 on 34:12; 55a:14 on 34:15): the tithe's flocks on both banks — "this shall be your
+    land by its borders round about" makes the land one border with the tribes' demarcations inside it; R. Shimon ben Yochai reads "beyond the Jordan
+    AT JERICHO" — as Jericho is Canaan's, the river is Canaan's: the inclusio's closer and the "at Jericho" pair each carried as a rule.
+  · THE LOTTERY'S TWO RECEPTACLES (Bava Batra 122a:3-6, credited, read whole here): "only by lot" (26:55) and "by the mouth of the lot" (26:56) reconciled by
+    the picture — Eleazar with the Urim, Joshua and all Israel before him, the tribes' names in one receptacle and the twelve regions' boundaries in the
+    other, the lot of each confirming the Urim's word: two verses' instruments made one procedure; the dividers of 34:17 the procedure's persons.
+  · A LIKENESS REFUSED BY WHAT THE FIRST CASE NEEDED (Sanhedrin 16a:2-3): Ulla's "as the beginning was by seventy-one, so a border dispute" — refused
+    because the beginning also needed the lots, the Urim and all Israel present, which a later dispute does not: a likeness tested against every
+    feature of its exemplar, not the one feature named.
+  · WE DO NOT PUNISH BY INFERENCE, A SECOND INSTANCE (Sifrei Bamidbar 160:3 on 35:16): "if the stone and the wood make him liable, iron the more —
+    except that one does not punish from an inference; therefore 'iron' is written": the a-fortiori (I1) refused on a penalty, the verse supplying what
+    the inference may not — sitting 11's rule (157:6) at a second seat; the export's English drops the sentence both times.
+  · THE INDUCTION FROM THREE FATHERS AND ITS LIMIT (Sifrei Bamidbar 160:5 Hebrew, 160:6 on 35:16-20): "stone is not like wood, wood not like stone,
+    neither like iron, iron not like the two — the common feature: it can kill, and if he killed, the commandment is in the avenger's hand — so
+    anything that can kill" (the building-block prototype from three verses, I3's form); and the same induction used to EXCLUDE — pushed into water
+    or fire, a dog or a snake set on him: the three kill by the killing things themselves, so the indirect killing is not in the class, "his judgment
+    is given to Heaven" — the heaven entry's own case; the English carries the induction one row down from the Hebrew.
+  · THE JUXTAPOSITION THAT DISQUALIFIES, CARRIED BY A LIKENESS AND AN A-FORTIORI (Sifrei Bamidbar 160:8 on 35:23-24): "he was not his enemy" beside "the
+    congregation shall judge" — haters unfit to judge (I12, the adjacent clause); kin from "between the smiter and the avenger"; and witnesses by the
+    likeness of the two "kill by" clauses (kill by judges, kill by witnesses) and by I1 — judges do not decide the facts and are unfit, witnesses decide
+    them, all the more.
+  · THE COURT'S NUMBER FROM THE TOKENS (Sifrei Bamidbar 160:8 on 35:24-25): "the congregation shall judge", "the congregation shall deliver" — ten and
+    ten (Numbers 14:27's ten spies the congregation, the exam's Sanhedrin 2a); and three more from Exodus 23:2's inclining, "as witnesses are two, so
+    the judges, and a court is not even — add one": twenty-three; the Hebrew's number, the English's "thirty" a defect.
+  · THE PROTOTYPE "WITNESS MEANS TWO" (Sifrei Bamidbar 161:1 on 35:30): "and one witness — this builds a father: wherever 'witness' is written, two are
+    meant, unless Scripture specifies 'one'" (I3 from the specified case to the bare word); the ink's bare plural "witnesses" at 35:30 the seat.
+  · THE RANSOM REFUSED BY A CONTRAST OF HANDS (Sifrei Bamidbar 161:1 on 35:31): Exodus 21:30's ransom is for a death at Heaven's hand (the ox's owner);
+    "I might think the same for a death by man's hand — 'you shall not take ransom'": the verse read against its kin, the kin's setting named.
+  · THE NOTARIKON ON A VERB (Sifrei Bamidbar 161:3 on 35:33): "for the blood, it pollutes (יַחֲנִיף) the land" — R. Yoshiyah splits the verb into two words,
+    "it rests wrath (יחון אף) on the land": E30 (the word read as an abbreviation of two) on a verb of the ink — the exemplar beside the compile
+    debt's noun (MIDDOT's sitting L4b entry).
+  · THE A-FORTIORI ACROSS THE TWO MEASURES (Sifrei Bamidbar 160:10 on 35:26): R. Elazar ben Azariah — "if under the lesser measure, punishment, one step
+    beyond the border forfeits the soul, how much more under the greater measure, reward": I1 with the tradition's own premise that the measure of good
+    exceeds the measure of punishment (the exam's Sanhedrin 100b), the doubled infinitive "going out he goes out" the seat.
+  · THE STEM READ (Sifrei Bamidbar 161:5 on 35:34): Deuteronomy 30:3 "the LORD will RETURN (וְשָׁב) with your captivity" — "'and he will bring back' is not
+    written but 'and he will return'": the simple stem against the causative (the ink's form the simple, computed), the Presence read as one of the
+    returning captives; the grammar of the stem as the ground of a reading (M-27's kin — the form decides).
+  · THE TWO-WAY UNCERTAINTY (Sifrei Bamidbar 160:8 on 35:23): Issi ben Akiva on "without seeing ... not his enemy" — "his stringency is his leniency and
+    his leniency his stringency: you cannot make him liable to death — perhaps unwitting; you cannot make him liable to exile — perhaps wilful": a
+    case that no verdict reaches from the facts, carried as a row with neither (the TEIKU shape without the word).
+  · THE TIMING READ FROM THE CONTEXT (Sifrei Bamidbar 159:1 on 35:10-11): "you shall appoint cities" — after inheritance and settlement, not at the entry,
+    by Deuteronomy 19:1's "when the LORD your God cuts off the nations" (the refuge chapter's own opening; the English cites 12:29, the clause's other
+    seat): I12, the adjacent law's timing clause read into this one; and the Jordan's status a dispute of two readings of one phrase (R. Yonatan: not
+    of Canaan; R. Shimon ben Yochai: as Jericho, so the Jordan — 36:13).
+- THE REFUGE CITIES' DOCKET (THE NUMBERS WALK sitting 15b, 2026-09-13; logic/oral_triage/num_35_refuge_cities_exam_2026-09-13.md — 666 rows; the rules about
+  rules the docket carries, each at its row):
+  · A CHAIN OF VERBAL ANALOGIES WITH ONE END IN THIS CHAPTER (Eruvin 51a:8 — Rav Chisda; the Sabbath block's own row, credited here): place (Exodus 16:29) /
+    place (21:13) / flee (21:13) / flee (35:26) / border (35:26) / border (35:27) / outside (35:27) / OUTSIDE (35:5 — "you shall measure from outside the city
+    two thousand cubits"): eight links, each pair a shared token, the Sabbath limit's measure fetched from the Levite city's; and 51a:9's refusal of the
+    ninth — "outside" from "outside", not from "outward" (35:4's thousand): a chain is only as long as its exact tokens.
+  · TEN AND TEN AND THREE — A COUNT BUILT FROM TWO TOKENS AND A THIRD VERSE (Sanhedrin 2a:14-2b:1; Mishnah Sanhedrin 1:6; the Sifrei 160:8): "the
+    congregation shall judge" (35:24) and "the congregation shall deliver" (35:25) — a congregation is ten (14:27's ten spies); a majority of two to convict
+    ("after the many to incline", Exodus 23:2, read with 23:2's "do not follow the many for evil") and one so the court is odd: twenty-three. The exemplar of
+    the count of mentions joined to an arithmetic rule: the Sifrei states the sum, the Mishnah its parts, the Gemara the third verse.
+  · WHERE A MEASURE IS WRITTEN AND WHERE IT IS NOT (Sanhedrin 76b:12-13 on 35:16-18): "in hand … whereby he may die" at the stone and the wood, absent at the
+    iron — Shmuel: iron of any size kills; Rebbi's baraita: "revealed and known before Him who spoke and the world came to be … therefore the Torah gave it
+    no measure"; the Gemara's edge: only when he stabbed. THE SILENCE READ AS A RULE, and bounded — the omitted clause teaches by its absence, but only as far
+    as the reason for the absence reaches.
+  · THE INDUCTION FROM THREE (the Sifrei 160:3-5; the binyan av): the stone, the wood, the iron — "what is common to the three: they can kill" — extended to
+    every instrument that can kill; its limit stated in the same breath: the water, the fire, the snake, whose judgment is Heaven's. A father built from
+    three verses names the feature it carries and the class it leaves.
+  · A RESTRICTION AFTER A RESTRICTION AMPLIFIES (Makkot 9b:5-8; Bava Kamma 86b:17-19): "without seeing" (35:23) and "without knowledge" (Deuteronomy 19:4) —
+    R. Yehuda reads the first as excluding the blind; R. Meir reads the two together as amplifying and includes him. The rule's exemplar at a case whose
+    two arms are both on the shelf (the DATA row the_blind_killer).
+  · TWO VERSES THAT COME AS ONE TEACH NOTHING (Sanhedrin 45b:12): the murderer ("the avenger of blood shall put him to death", 35:19-21) and the avenger —
+    no principle of "the one obligated in the deed's first stage completes it" is drawn from their pair; and the court appoints an avenger where there is
+    none ("when he meets him", 45b:13). The constraint on generalization stated inside the chapter's own two rows.
+  · "THE TORAH SPOKE IN THE LANGUAGE OF MEN" ON A DOUBLED INFINITIVE (Makkot 12a:13-15 on 35:26 "if going out he goes out"): the doubled verb read as
+    deliberate-or-unwitting exit by one baraita, refused by Abaye for the other — the end is not severer than the beginning; the same mark (Genesis 27:30's
+    twin) that teaches elsewhere teaches nothing here because the rule it would yield contradicts the law's shape.
+  · WE DO NOT PUNISH BY INFERENCE — A THIRD SEAT (Makkot 5b:15-16; the Sifrei 157:6 and 160:3): the lashed excluded by "wicked" / "wicked" (35:31; Deuteronomy
+    25:2) and the exiled by "murderer" / "murderer" (35:21; 35:11) from an a fortiori's reach — the analogies stand in for the inference the rule refuses;
+    the chapter's two halves joined by its one root at the rule's own seat.
+  · THE COUNT OF MENTIONS (Makkot 11a:12; Mishnah Makkot 2:6): "the death of the high priest" three times — 35:25, 35:28 twice — the three high priests
+    whose deaths return the exile (the anointed, the many-garmented, the relieved); R. Yehuda's fourth from 35:32's bare "the priest". A count of a phrase's
+    seats read as a count of the law's subjects, the fourth from a variant form.
+  · THE PLURAL'S MINIMUM IS TWO UNLESS "ONE" IS WRITTEN (the Sifrei 161:1 on 35:30; Sanhedrin 33b:15): "by the mouth of witnesses" — two by the prototype;
+    "one witness shall not testify against a soul to die" — and R. Yosei son of R. Yehuda's "to die": not to convict, but he may answer to acquit. The
+    prototype rule for a bare plural stated at its seat, the exception cut by the verse's own last word.
+  · THE OFFICE THAT SHOULD HAVE PLEADED (Makkot 11a:14; 11b:11 — Rava): why does the high priest's death release the exile? the high priests should have
+    pleaded for mercy that no one kill unwittingly in their days, and did not; the second high priest — he should have pleaded for the verdict. A reason
+    supplied for a term the ink states without one; the reason then decides the cases the ink does not (the priest appointed after the verdict).
+  · HEAVEN'S DEATH IS COMMUTED, MAN'S NEVER (Ketubot 37b:12 — R. Yishmael son of R. Yochanan ben Beroka): "you shall take no ransom for the life of a
+    murderer" (35:31) against the ox's owner's ransom (Exodus 21:30) — those executed at Heaven's hand give money and are atoned; those the court executes,
+    never ("dedicated of men shall not be redeemed", Leviticus 27:29). Two seats reconciled by the agent of the death, not by the deed.
+  · THE HEIFER YIELDS TO THE FOUND KILLER (Mishnah Sotah 9:7; Sotah 47b:2; Ketubot 37b:6): the heifer broken and then the murderer found — he is executed:
+    "except by the blood of him who shed it" (35:33); a procedure completed does not spend the atonement the verse assigns to the shedder's blood.
 ## Exodus block campaign — owner's word "Do 3")
 
 The campaign's exam rounds banked RULES-ABOUT-RULES on the corpus's

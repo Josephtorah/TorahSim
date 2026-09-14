@@ -38,6 +38,7 @@ BOOK_REPORTS = {
                "COVENANT", "CONDUCT", "INK", "SANCTUARY", "VESTMENTS", "SERVICE", "DECALOGUE", "FESTIVALS",
                "MISHPATIM_COMPILATION", "BACKFILL"],
     "Leviticus": ["CODE_EXECUTION"],
+    "Numbers": [],
 }
 EXTRA_BLOCK_REPORTS = {   # portion -> reports whose subject is that portion's span
     "Bo": ["PESACH", "LEAVEN", "MATZA", "EGYPT"], "Yitro": ["DECALOGUE", "COURTS"],
@@ -59,6 +60,8 @@ PARASHAH_GLOSS = {
     "Vayikra": "and He called", "Tzav": "command", "Shemini": "the eighth", "Tazria": "she conceives",
     "Metzora": "the leper", "Acharei Mot": "after the death", "Kedoshim": "holy ones", "Emor": "say",
     "Behar": "on the mount", "Bechukotai": "in My statutes",
+    "Bamidbar": "in the wilderness", "Naso": "take a count", "Beha'alotcha": "when you raise", "Shelach": "send",
+    "Korach": "Korah", "Chukat": "the statute", "Balak": "Balak", "Pinchas": "Phinehas", "Matot": "tribes", "Masei": "journeys",
 }
 
 
@@ -318,9 +321,9 @@ def main():
          'as written and the claims checked there. Open a claim\'s <i>evidence</i> for its full text, its source row, and the check '
          'the machine ran; open <i>the verse\'s letters</i> for the Hebrew with its English and the two cantillation arms. '
          'Links marked &rarr; leave the page for the unit\'s own files and the block\'s records. '
-         'Generated 2026-09-05 from the frozen units: %d units, %d verses.</p>' % (n_units, n_steps),
+         'Generated 2026-09-13 from the frozen units: %d units, %d verses.</p>' % (n_units, n_steps),
          '<nav><input id="q" placeholder="search blocks, units, verses, code, and claims ..."> '
-         '<a href="#Genesis">Genesis</a><a href="#Exodus">Exodus</a><a href="#Leviticus">Leviticus</a> '
+         '<a href="#Genesis">Genesis</a><a href="#Exodus">Exodus</a><a href="#Leviticus">Leviticus</a><a href="#Numbers">Numbers</a> '
          '<a href="#" id="openall">open all</a><a href="#" id="closeall">close all</a> '
          '<label><input type="checkbox" id="codetoggle"> show code under every verse</label></nav>']
     cur = None

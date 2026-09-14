@@ -22,7 +22,7 @@ Verdict key (the Genesis triage's four kinds):
 - CREDIT — already held by the machine (a seated claim, a compiled
   function's own sugya, a module oracle, or an in-triage duplicate of a
   row already verdicted).
-- AGGADAH — narrative/homiletic expansion of Exodus: reading-shelf
+- AGGADAH (the narrative lore) — narrative/homiletic expansion of Exodus: reading-shelf
   material.
 - QUOTE — the verse serves as lexicon, mnemonic, dialectic leg, or
   liturgical recitation for a matter not derived from Exodus.

@@ -12,7 +12,7 @@
   removed בְּאוּכְלֵיהּ ("with its FOOD") — the translation VOTES in the
   crop-contents dispute (contents, not plumage) against the feather
   reading; 1:17 the standing acceptance formula again. The
-  fingernail rite and wall-wringing carried plainly.
+  fingernail rite and wall-wringing (the wringing at the altar's wall) carried plainly.
 
 ## Sifra rows at this block — 32 rows, every one verdicted
 

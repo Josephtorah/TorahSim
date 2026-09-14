@@ -17,10 +17,10 @@
   office's own perpetuity: וּתְהֵי לְהוֹן כְּהֻנְתָּא לִקְיָם עָלָם
   ("and the priesthood shall be theirs as an EVERLASTING STATUTE").
   The fill-the-hand idiom again rendered as OFFER THEIR OFFERING
-  (וּתְקָרֵב קֻרְבָּנָא — 29:9, 29:29, 29:33, 29:35): a seven-day
+  (וּתְקָרֵב קֻרְבָּנָא 'and you shall bring near the offering' — 29:9, 29:29, 29:33, 29:35): a seven-day
   sacrament creating an office.
 - Onkelos Exod 29:10 + 29:15 + 29:19-21 — MATERIAL. THE HANDS AND THE
-  BODY IN THE RITE: וְיִסְמוֹךְ ... יָת יְדֵיהוֹן עַל רֵישׁ ("and they
+  BODY IN THE RITE: וְיִסְמוֹךְ ('and he shall lean') … יָת יְדֵיהוֹן עַל רֵישׁ ("and they
   shall LEAN their hands on the head") — the leaning-rite's first
   corpus appearance, three times, Aaron AND his sons together; the
   blood-map on the persons — right EAR-TIP, right THUMB, right BIG
@@ -118,7 +118,7 @@
   ("WHEREVER Scripture says LI, 'for Me'"), it stands FOREVER — and
   Buber 9:1 gives the full census: the firstborn, the silver and
   gold, the kingship, the land, Israel, the Levites, and THE
-  PRIESTHOOD (לְכַהֵן לִי — our 29:1) each with its verse. The
+  PRIESTHOOD (לְכַהֵן לִי 'to serve Me as priest' — our 29:1) each with its verse. The
   token-law behind the everlasting-statute renderings. Riding: the
   EXCLUSIVITY clause (to THEM and not to others, this tribe and no
   other) and the purity curriculum ("he began teaching them how they

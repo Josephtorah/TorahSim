@@ -1,4 +1,5 @@
--- run_views.sql — THE FOUR RUN VIEWS (THE LOOP step 2's remainder, 2026-09-09; decision D8; the design in
+-- run_views.sql — THE RUN VIEWS (THE LOOP step 2's remainder, 2026-09-09; decision D8; the population view 2026-09-11; the ledger's
+-- close join 2026-09-12 — THE CLOSE LINE; the design in
 -- World/step9/THE_LOOP.md "Step 2 THE INDEX — the remainder"). SQL VIEWS over worldledger's events table, created at every
 -- reindex after the table is rebuilt (World/step9/world_journal.py views()) — rebuilt from the events table, never written
 -- directly; json_extract over the row's `data` (the payload as it stood at the run's end). Every view carries `source` (the
@@ -8,25 +9,57 @@ DROP VIEW IF EXISTS run_docket;
 DROP VIEW IF EXISTS run_ledger;
 DROP VIEW IF EXISTS run_timers;
 DROP VIEW IF EXISTS run_clock;
+DROP VIEW IF EXISTS run_population;
 
--- THE LEDGER: one row per ledger write (run.write, run.retro_write) — the entity, the effect, the day written, the day closed
--- (the engine's closed_day stamp) and the closer (the closing act's verse note), the writing daemon, the verse
-CREATE VIEW run_ledger AS
-SELECT source, seq, subj AS entity,
-       json_extract(data, '$.effect')       AS effect,
-       json_extract(data, '$.op')           AS ledger_op,
-       op                                   AS day_written,
-       json_extract(data, '$.year')         AS year,
-       json_extract(data, '$.value')        AS value,
-       json_extract(data, '$.counterparty') AS counterparty,
-       json_extract(data, '$.open')         AS open,
-       json_extract(data, '$.closed_day')   AS day_closed,
-       json_extract(data, '$.closed_by')    AS closed_by,
-       unit                                 AS written_by,
-       ref                                  AS verse,
-       kind
+-- THE POPULATION TABLE (THE NUMBERS WALK 8b, 2026-09-11; World/step9/NUMBERS_WALK.md "Sitting 8b"): one row per run.row — a daemon's
+-- write into the fifth registry's table (World.row; population_schema.yaml): the grain (counted / named / delta), the census it belongs
+-- to (as_of), the tribe, the family and its level, the person with father and status, the count, the delta with its unexplained remainder,
+-- the writing daemon, the verse. The FIFTH VIEW; the question `population [<tribe>]` reads it.
+CREATE VIEW run_population AS
+SELECT source, seq, subj AS subject,
+       json_extract(data, '$.grain')       AS grain,
+       json_extract(data, '$.as_of')       AS as_of,
+       json_extract(data, '$.tribe')       AS tribe,
+       json_extract(data, '$.family')      AS family,
+       json_extract(data, '$.level')       AS level,
+       json_extract(data, '$.person')      AS person,
+       json_extract(data, '$.father')      AS father,
+       json_extract(data, '$.status')      AS status,
+       json_extract(data, '$.count')       AS count,
+       json_extract(data, '$.delta')       AS delta,
+       json_extract(data, '$.unexplained') AS unexplained,
+       op                                  AS day,
+       json_extract(data, '$.year')        AS year,
+       unit                                AS written_by,
+       ref                                 AS verse
 FROM events
-WHERE kind IN ('run.write', 'run.retro_write');
+WHERE kind = 'run.row';
+
+-- THE LEDGER: one row per ledger write (run.write, run.retro_write) — the entity, the effect, the day written, the day closed and
+-- the closer, the writing daemon, the verse. SINCE THE LOOP step 1's amendment THE CLOSE LINE (2026-09-12; THE_LOOP.md): the write row is
+-- a SNAPSHOT at write time and carries no closer; the close is its own line (run.close) naming the entry by its write ordinal
+-- (data.seq = data.entry_seq), and this view JOINS the two on (source, subj, ordinal) — open = 0 when a close row exists, day_closed the
+-- close row's day, closed_by the close row's note; entry_seq and close_seq the two lines' own names
+CREATE VIEW run_ledger AS
+SELECT w.source, w.seq, w.subj AS entity,
+       json_extract(w.data, '$.effect')       AS effect,
+       json_extract(w.data, '$.op')           AS ledger_op,
+       w.op                                   AS day_written,
+       json_extract(w.data, '$.year')         AS year,
+       json_extract(w.data, '$.value')        AS value,
+       json_extract(w.data, '$.counterparty') AS counterparty,
+       CASE WHEN c.seq IS NOT NULL THEN 0 ELSE json_extract(w.data, '$.open') END AS open,
+       c.op                                   AS day_closed,
+       json_extract(c.data, '$.note')         AS closed_by,
+       w.unit                                 AS written_by,
+       w.ref                                  AS verse,
+       w.kind,
+       json_extract(w.data, '$.seq')          AS entry_seq,
+       c.seq                                  AS close_seq
+FROM events w
+LEFT JOIN events c ON c.kind = 'run.close' AND c.source = w.source AND c.subj = w.subj
+                   AND json_extract(c.data, '$.entry_seq') = json_extract(w.data, '$.seq')
+WHERE w.kind IN ('run.write', 'run.retro_write');
 
 -- THE TIMERS: one row per run.timer_set (a period timer's re-arm is its own set), joined LEFT to its fire and to its cancel on
 -- (source, entity, effect, the due day = the fire's day / the cancel's recorded due): fired | cancelled | pending

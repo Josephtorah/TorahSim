@@ -165,7 +165,12 @@ TOK = [
  # Lev 20:22) and the suffixed 'שבתו' ('his idleness', Exod 21:19) are NOT in the sabbath pattern; the poured blood's 'ישפך'
  # (the sin offering's base, Lev 4) shares its consonants with 'shall be shed' (Gen 9:6) and is dispositioned FALSE by name.
  ('sabbath',      r'^ו?[הבכמ]?ה?שבת(ון|ות|תי|תיכם|כם|ה)?$', {'pre_sinai'}),
- ('circumcision', r'^ו?(המול|ימול|נמול|נמלו|וימל|ימל|מלתם|ומלתם|ומלתה|למול|מלה|נמלים|המלות|ערל|ערלה|ערלת|ערלתו|ערלתם|ערלים|ערלכם|הערל|וערל|וערלתם|לערל|ערלי)$', {'pre_sinai'}),
+ ('circumcision', r'^ו?(' + '|'.join([
+        'המול', 'ימול', 'נמול', 'נמלו', 'וימל', 'ימל',                    # 'circumcise' — the verb's forms
+        'מלתם', 'ומלתם', 'ומלתה', 'למול', 'מלה', 'נמלים', 'המלות',        # 'circumcise' — with suffixes and prefixes
+        'ערל', 'ערלה', 'ערלת', 'ערלתו', 'ערלתם', 'ערלים', 'ערלכם',        # 'foreskin', 'uncircumcised'
+        'הערל', 'וערל', 'וערלתם', 'לערל', 'ערלי',                         # 'foreskin' — with prefixes
+    ]) + ')$', {'pre_sinai'}),
  ('life_blood',   r'^בנפשו$', {'sanctions', 'pre_sinai'}),   # 'its blood in its life' — Gen 9:4 and Lev 17:14 alone in the Tanakh: each the other's home
  ('shed',         r'^ו?(שפך|ישפך|שפכו|תשפך|שפכתי|ישפכו)$', {'pre_sinai'}),
  ('fruitful',     r'^ו?(פרו|רבו|הפריתי)$', {'pre_sinai'}),

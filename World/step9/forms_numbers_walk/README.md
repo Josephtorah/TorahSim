@@ -1,0 +1,2 @@
+# THE NUMBERS WALK'S SITTING FORMS (copied 2026-09-12 from the session scratchpad <scratch> before the thread closed).
+# Working scripts, never records: the recorder seq_record.py and the stitcher seq_stitch.py (every compile sitting), the measurement / dump / ink / rows / ledger-writer forms of each reading sitting, the add_types_*.py and write_*_docket.py forms of each compile sitting, the docket verdict parts. Copy the latest form to the new scratchpad and edit there; run repo tools by absolute path from the repo root.

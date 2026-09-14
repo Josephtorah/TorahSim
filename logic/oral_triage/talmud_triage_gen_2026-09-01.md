@@ -13,7 +13,7 @@ Verdict key:
   no Mishnah row above it: case-row candidates for the Step 9 exam.
 - CREDIT — the statement is already held by the machine (a seated claim,
   a module oracle, or an in-triage duplicate of a row already verdicted).
-- AGGADAH — narrative/homiletic expansion of Genesis: reading-shelf
+- AGGADAH (the narrative lore) — narrative/homiletic expansion of Genesis: reading-shelf
   material, much of it parallel to Bereshit Rabbah rows already read.
 - QUOTE — the verse serves as lexicon, mnemonic, or dialectic leg for a
   matter not derived from Genesis.

@@ -49,14 +49,14 @@ THE PIECES, assembled exactly as the owner suspected:
 ## Specimen 2 — the audit function (module: the EX38-02 audit
 ## constitution; Mishnah Shekalim 3:2's cluster)
 
-- II Kings 12:16 (Joash's chest): וְלֹא יְחַשְּׁבוּ אֶת הָאֲנָשִׁים... כִּי
+- II Kings 12:16 (Joash's chest): וְלֹא יְחַשְּׁבוּ אֶת הָאֲנָשִׁים ('they did not reckon with the men') … כִּי
   בֶאֱמֻנָה הֵם עֹשִׂים ("they did not RECKON with the men into whose
   hand they gave the money... for they dealt in FAITHFULNESS") —
   the audit-waiver-for-the-proven-faithful, the exact clause our
   Exod 38 reading met when the spine (Midrash Tanchuma, Pekudei 5:3
   and the Buber parallel) cited this very verse at Moses' books.
-- II Kings 22:7 (Josiah, ~a century later): אַךְ לֹא יֵחָשֵׁב אִתָּם
-  הַכֶּסֶף... כִּי בֶאֱמוּנָה הֵם עֹשִׂים — THE SAME FUNCTION CALLED
+- II Kings 22:7 (Josiah, ~a century later): אַךְ לֹא יֵחָשֵׁב אִתָּם ('only there was no reckoning with them')
+  הַכֶּסֶף ('the silver') … כִּי בֶאֱמוּנָה הֵם עֹשִׂים ('for they dealt faithfully') — THE SAME FUNCTION CALLED
   AGAIN, near-verbatim signature: two recorded invocations of one
   rule, generations apart.
 - Ezra 8:34 (the return): בְּמִסְפָּר בְּמִשְׁקָל לַכֹּל וַיִּכָּתֵב כָּל
@@ -123,7 +123,7 @@ THE PIECES, assembled exactly as the owner suspected:
 - Nehemiah 8:8: וַיִּקְרְאוּ בַסֵּפֶר בְּתוֹרַת הָאֱלֹהִים מְפֹרָשׁ ("they
   read in the book, in the Torah of God, MADE DISTINCT") —
   Babylonian Talmud Megillah 3a and Nedarim 37b (both in the
-  recorded web) compile this word as THE TARGUM: the public
+  recorded web) compile this word as THE TARGUM (the Aramaic translation): the public
   reading with translation. The root is the very clear-script
   token (כְּתַב מְפָרַשׁ, "script made distinct") our Onkelos reading
   tracked across the engravings of Exod 39 — the instrument that

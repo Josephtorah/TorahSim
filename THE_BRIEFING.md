@@ -14,7 +14,27 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   baked into an epub.
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
-## SCOREBOARD (as of 2026-09-11, latest)
+## SCOREBOARD (as of 2026-09-14, latest)
+- **THE STEP-THROUGH EXISTS — THE LOOP'S STEP 7 (b) THE STEPPER BUILT: THE TAPE RUNS ONE CALL AT A TIME, STOPS AT ANY VERSE'S LEFT EDGE, RESUMES, AND AT EVERY PAUSE THE STATE IS READ FROM THE DATABASE** (2026-09-14, on your "ok go b"; World/step9/THE_LOOP.md "Step 7 ... part (b)"; World/step9/world_stepper.py): measured first — the tape is 1,507 engine calls on 1,507 lines and the checkpoints are computed after the run, not on it — so the tape runs as a generator that yields the verse of each call before making it (decision D15; no thread, no engine change); step by call, verse, chapter, marker, day, or to a verse; the replay is the audit at every call; step_probes.py 0/8 then 9/9 (the ninth added after the first real session read a double-quoted source as no verse); the real sessions: chapter 27 stepped by verse from the left edge of 27:1, the whole tape by marker in 158 steps with its segment the base's body byte for byte; the tape 10/10 after, every probe file green. Next on your word: (c) the port — the queue the loop reads at the pause, the text its first producer.
+- **THE DATABASE IS LIVE — THE LOOP'S STEP 7 (a) WRITE AS YOU GO BUILT: EVERY JOURNAL LINE LANDS ON DISK AND IN THE DATABASE THE MOMENT ITS BLOCK ENDS, AND NOTHING IN THE JOURNAL MOVES AFTER IT IS WRITTEN** (2026-09-14, on your "ok go 1"; World/step9/THE_LOOP.md "Step 7 THE LOOP THAT WAITS — part (a)"): measured first — which payloads move after the engine logs them (the consumers inside the block, the bound's right edge after it), so the seal is at the block's end and the right edge is the next marker line's fact (decision D14); the audit at every seal (the chain, the count, an independent conversion, the rebuilt index equal to the live rows); live_probes.py 0/7 then 7/7; the tape 10/10 with the running world's 3,362 lines sealed in 1,533 blocks; the journal gate GREEN with its new live-index line (13,444 rows written line by line, the two processes identical); the cursor's audit green on the new base; every gate green. Next on your word: (b) the stepper — the pause between blocks; then (c) the port.
+- **THE REFUGE CITIES COMPILED — SITTING 15b DONE, AND WITH IT NUMBERS CLOSES: THE BARE DUAL THOUSAND TAUGHT (RULE 29 — 35:5'S FOUR "TWO THOUSAND" READ AT LAST, THE CORPUS DIFF FINDING TWO PAUSAL DUALS THE MEASURE HAD MISSED), THE LEVITE CITIES AND THE SIX CITIES TWO DEBITS ON THE PEOPLE OPEN TO JOSHUA, THE TERM "UNTIL THE DEATH OF THE HIGH PRIEST" AN EVENT-KEYED ENTRY CLOSED BY THE DEATH ACT — NOT A TIMER, THE LAND POLLUTED A STATUS ON THE LAND, "IN WHOSE MIDST I DWELL" THE BOOK'S INCLUSIO READ BACK TO 5:3** (2026-09-13; NUMBERS_WALK.md "Sitting 15b"): cold_run_refuge.py the 57th runner (51/51), law_refuge the 62nd daemon; the docket 666 rows — the Sabbath limit is this chapter's measure (Rav Chisda's chain of eight verbal analogies), the court of twenty-three from the congregation-tokens, the iron needs no measure, the three high priests, no ransom and why the ox has one; RUN (1279, 66, 52, 0, 12, 1527, 33, 318, four pairs, 121) predicted and matched first tape run; the sweep 57/57 at 6378; every gate green (the register gate after teaching its tilde test the dual thousand). NUMBERS 1:1-36:13 READ, FROZEN, COMPILED AND ON THE TAPE. Next on the owner's word: the next book.
+- **THE REFUGE CITIES READ AND FROZEN — SITTING 15 DONE, THE WALK'S LAST READING IN NUMBERS: THE SIFREI RETURNS AND ITS TWO FILES DISAGREE, THE PARSER'S GAP ON "TWO THOUSAND" IS MEASURED AT LAST, AND THE BOOK'S LAW CLOSES ON THE WORDS IT OPENED WITH** (2026-09-13, on your "Go"; World/step9/NUMBERS_WALK.md "Sitting 15"). Chapter 35 read as one unit on Onkelos and the Sifrei's last three piskaot — sixteen rows read in both files, the Hebrew found to repeat a block and the English to swap a row and miscount a court. The parser read seven number verses and missed the bare "two thousand" four times — the dual it reads only in a compound; Onkelos reads it. "In whose midst I dwell" at 5:3 and 35:34 is the book's inclusio. Fourteen claims, the 210th frozen unit, the corpus at 2163 with the hash unmoved. Next: the compile (15b), and with it Numbers closes.
+- **THE BORDERS COMPILED — SITTING 14b DONE: THE LAND'S EXTENT IS ONE STATUS ON THE LAND (THE FOUR SIDES A DATA ROW), MOSES' RESTATEMENT WRITES NOTHING (THE GRANT READ BACK, JOSHUA 14:2'S RECEIPT OUTSIDE THE TORAH), THE DIVIDERS NAMED ARE A STATUS AND A DEBIT ON THE PARTY CHAPTER 32 CHARGED AND TWELVE NAMED ROWS IN THE POPULATION TABLE — THE FIRST REGISTER PAID BY ROWS SINCE THE TABLE WAS BUILT** (2026-09-13; NUMBERS_WALK.md "Sitting 14b"): cold_run_borders.py the 56th runner (56/56), law_borders the 61st daemon; the docket 171 rows — the lottery's two receptacles as the dividers at work, Naphtali's boundary named by the translation's word for this chapter's sea, the sea and the Jordan each a border two ways, the law of agency refused and the steward kept, Rekem the Mishnah's east; RUN (1277, 66, 52, 0, 12, 1525, 32, 318, four pairs, 121) predicted and matched first tape run; the sweep 56/56 at 6327; every gate green. Numbers 1:1-34:29 read, frozen, compiled and on the tape. Next: chapter 35 (the refuge cities; the Sifrei returns at 35:9).
+- **THE BORDERS READ AND FROZEN — SITTING 14 DONE: THE CHAPTER'S OWN VERB STANDS NOWHERE ELSE, JUDAH'S BORDER IN JOSHUA IS THIS CHAPTER'S SOUTH SIDE, THE SPIES WALKED THE BORDER'S LENGTH, AND CALEB IS SEATED AMONG THE DIVIDERS IN THE WORDS THAT SENT HIM AS A SPY** (2026-09-12, on your "Go"; World/step9/NUMBERS_WALK.md "Sitting 14"). Chapter 34 read as one unit on Onkelos whole — the Sifrei has no piska on it, and the one row elsewhere that cites it (on "command", credited) agrees with the ink's count of five. The parser read its three number verses, no gap. Thirteen claims, the 209th frozen unit, the corpus at 2149 with the hash unmoved. Next: the compile (14b), then chapter 35 (the refuge cities — the Sifrei returns at 35:9).
+- **THE JOURNEYS COMPILED — SITTING 13b DONE: THE ITINERARY IS A RECORD WRITTEN AT THE RUN'S END — THE FORTY-TWO STATIONS A DATA LIST (NO CAMP WRITTEN TWICE), THE RUN OF EXODUS 12:12 TOLD HERE ALONE AS A STATUS ON EGYPT, THE COMMAND'S TWO DEBITS OPEN BY DESIGN TO JOSHUA, AND THE SHELF'S RETREAT OF SEVEN STATIONS EQUAL TO THE LIST'S OWN COUNT (2026-09-12).** Chapter 33 compiled on the walk's compile shape: cold_run_journeys.py 53/53 (five cells, ten engines called), law_journeys the 60th daemon; three lines on the tape at the counter's day — the writing (its value the forty-two, built from the ink), the departure retold with the judgments on the gods (Exodus narrates the firstborn and never the gods; the itinerary alone records that run, forty years on; the firstborn's plague stays open, a burial is no removal), the command in the divine voice (dispossess and possess; destroy the figured stones, the molten images and the high places — the figured stone's own ban at Leviticus 26:1 found UNCOMPILED and filed; the lot's debit of chapter 26 cited, not rewritten). The dates checkpointed against the tape's own markers (the departure the exodus marker's; Aaron's death the marker at 20:28 built from this chapter, 123 = 83 + 40). The docket 196 rows: Seder Olam's fortieth-year walk with THE RETREAT OF SEVEN STATIONS to Moserah — and Moseroth stands seven camps before Mount Hor on the list (M-30); Rosh Hashanah's proof of the era's New Year from this chapter's date, reproduced by the engine's Calendar; the morrow of the Passover at both ends; Moses' seventh of Adar computed backward; the private altar's eras read to decide the sense of "high places" and the gemara cut as another runner's. RUN (1274, 66, 52, 0, 12, 1522, 31, 318, four pairs, 121) predicted and matched first run; every gate green; the sweep 55/55 at 6271. Numbers 1:1-33:56 read, frozen, compiled and on the tape. Next: chapter 34, the borders.
+- **THE JOURNEYS READ AND FROZEN — SITTING 13 DONE: THE CHAPTER COUNTS ITS FORTY-TWO ON ITS OWN VERBS, AARON'S DEATH-DATE IS THE VERSE THE TAPE ALREADY READS, THE JUDGMENTS ON EGYPT'S GODS ARE RECORDED ONLY HERE, AND THE STATIONS RETELL EXODUS WORD FOR WORD WITH SMALL CHANGES** (2026-09-12, on your "Go"; World/step9/NUMBERS_WALK.md "Sitting 13"). Chapter 33 read as one unit on Onkelos whole — the Sifrei has no row on it, proved by position; the scan for rows citing it was widened after a first pass reported zero, and found the one row that dates the daughters by Aaron's death (56 sources, one ledger, no cut miss, the lint clean first write). The parser: five number verses, every one read, no gap — 33:38's date is (40, 5, 1), the tape's own marker for 20:28. The finds: forty-two "journeyed" and forty-two "camped" — the first departure and the last camp each told twice, so forty-two places; Aaron's 123 = 83 + 40 and Moses' 120 = 80 + 40; "on their gods the LORD executed judgments" the run of Exodus 12:12 nowhere else; "the morrow of the Passover" out of Egypt here and into the land's bread at Joshua 5:11; eleven stations named nowhere else; 33:6 is Exodus 13:20 plus one word, Etham for Shur, Rithmah for Paran; Deuteronomy 10 runs two stations the other way and puts the death at Moserah (observed); 33:54 restates the lot's rule with the verb's number switching; the high places' demolition is Leviticus 26:30's curse in the same verb; the thorns and pricks come back reversed in Joshua 23:13. Twelve claims verified and seated, the ritual complete, 208 units, standing 2136, the hash unmoved. Next: the compile, then chapter 34.
+- **GAD AND REUBEN COMPILED — SITTING 12b DONE: THE STIPULATION RUNS AS A DEBT OPEN BY DESIGN TO A RELEASE OUTSIDE THE TORAH, THE CHAPTER IS THE SHELF'S SOURCE FOR THE WHOLE LAW OF CONDITIONS, THE UTTERANCE RULE'S SECOND SEAT IS PAID BY A CALL INTO THE VOWS, AND THE COUNT OF THE TWO AND A HALF IS READ OFF THE POPULATION TABLE** (2026-09-12, on your "Go" after the #149 rereads; World/step9/NUMBERS_WALK.md "Sitting 12b" design + as-built). The docket 319 rows: five limbs of the law of conditions read off this chapter's verses, "on condition" as "from now" the timing the chapter itself writes; the runner 74/74; the tape's twelve lines with one close and two debits open to Joshua 22; the RUN tuple predicted and matched first run; every gate green, the register gate with nothing to pay; the sweep 54/54. Numbers 1:1-32:42 read, frozen, compiled and on the tape. Next: chapter 33's reading.
+- **GAD AND REUBEN READ AND FROZEN — SITTING 12 DONE: THE LORD NEVER SPEAKS IN THE CHAPTER, THE VOWS' VERB IS THE DISCOURAGING VERB, THE UTTERANCE RULE HAS ITS SECOND SEAT, AND THE CONDITION IS DOUBLED TWICE** (2026-09-12, on your "Go"; World/step9/NUMBERS_WALK.md "Sitting 12"). Chapter 32 read as one unit on Onkelos whole — the Sifrei has no row on it, proved by position, and the three rows of other chapters that cite it credited (42 sources, one ledger, no cut miss, the lint clean first write). The parser: two numbers, both read, no gap. The finds: no divine frame in forty-two verses, so Moses' stipulation is "that which the LORD has spoken" (Joshua 22:9 agrees); "discourage the heart" and "he disallowed her" (chapter 30) share one root, all its Torah tokens in these two chapters; "that which has gone out of your mouth you shall do" (32:24) is the vows' own rule (30:3) — the seat the last compile filed forward, found; the condition doubled twice — the Mishnah's exemplar of a stipulation (Kiddushin 3:4); Onkelos softens "before the LORD" to "before the people of the LORD" at every martial seat, and the Chronicler writes the double himself (1 Chronicles 22:18); "clear before the LORD and before Israel"; the oath of chapter 14 retold with "swore" supplied and the Kings' formula "did evil in the eyes of the LORD" at its first seat; Gad before Reuben six times; the cattle before the children, reversed by Moses; the commission of Joshua 14:1 named; the cities eight and six, two crossed between the tribes in Joshua, ten Moab's in the prophets, Nobah and Jogbehah on Gideon's route against Midian; Jair's two lineages. Ten claims verified and seated, the ritual complete, 207 units, standing 2124, hash unmoved; the compile next.
+- **MIDIAN COMPILED — SITTING 11b DONE: THE WAR RUNS AS THIRTEEN LINES THAT CLOSE THREE OLD DEBTS BY THE TEXT'S OWN RECEIPTS, THE PARSER READS A RATE AND NEVER COUNTS ITS DENOMINATOR, THE SPOIL'S ARITHMETIC IS CHECKED ON FOUR THING PARTIES, THE REGISTER GATE PAYS NINE SEATS, AND THE CURSOR'S AUDIT BREAKS ON A CLOSE THAT REWROTE THE PAST** (2026-09-12, on your "Go" after the #145 rereads; World/step9/NUMBERS_WALK.md "Sitting 11b" design + as-built). The ratio class "one of the N" taught first and the whole Tanakh diffed (nine verses read); the docket 451 rows (Mishnah Avodah Zarah 5 whole, seventeen folio ranges — the vessels of Midian the shelf's laboratory for the kashering rule); cold_run_midian.py 99/99, law_midian the 58th daemon, the scene and the narrative predicted by script and matched first run; the RUN tuple predicted in the design and matched first tape run, THE REST exact, CX1-CX9 MATCH; every gate green but ONE — the cursor's audit (a design item filed for your word). Numbers 1:1-31:54 read, frozen, compiled and on the tape. Next: chapter 32 — the reading, then its compile.
+- **MIDIAN READ AND FROZEN — SITTING 11 DONE: THE COMMAND AND ITS RUN SHARE ONE WORD, THE SPOIL'S ARITHMETIC IS EXACT AND THE LEVITES' SHARE IS NEVER WRITTEN, THE OFFICERS' GOLD RUNS THE HALF-SHEKEL'S OWN WORDS, AND THE SHELF FALLS SILENT FOR 165 VERSES** (2026-09-12, on your "ok go" in the new thread; World/step9/NUMBERS_WALK.md "Sitting 11"). Chapter 31 read as one unit on Onkelos whole and the Sifrei's two piskaot by position (66 sources, one ledger, no cut miss); every head checked against its rows' own citations by script; the two files read against each other at every row — the English reversed an arm, inserted an ancestor, supplied the Talmud and the Mishnah, dropped the rule "we do not punish by inference". The parser: right on the muster, the kings, the schedule, the four totals, the halves, the tributes and the shekels; silent on "one of the five hundred" — the fraction class, six seats in the Bible, named for the compile. The finds: "the Midianites" stands twice in the Bible — the command and the vengeance; the trumpets' one narrative seat in the Torah; Joshua 13's retelling of the kings and Balaam; Jabesh-gilead running the sentence; the totals halve and the halves divide by five hundred exactly, and the Levites' 8,400 is computed, never written; the officers' gold speaks Exodus 30:16's six words. Eleven claims verified and seated, the ritual complete, 206 units, standing 2114, hash unmoved; the compile next.
+- **THE VOWS COMPILED — SITTING 10b DONE: A VOW IS A DEBT TOWARD HEAVEN, THE HEARING DAY IS THE ENGINE'S OWN TIMER, THE FATHER OR HUSBAND'S SILENCE IS ITS FIRE, AND THE REGISTER GATE FOUND A RECEIPT FORMULA IT HAD NEVER COUNTED** (2026-09-12, on your "Go"; World/step9/NUMBERS_WALK.md "Sitting 10b" design + as-built). cold_run_vows.py 147/147 — seven cells, the confirm/annul state machine on the engine's existing timers (set 8 / fired 5 / cancelled 3, predicted by script and matched first run), the authority table from the ink, the delay ban and the sotah's "bear her iniquity" by CALL, the Talmud's two open questions carried as "unresolved" rows; law_vows the 57th daemon, installed by boot with its class named (a law given in Moses' voice — the second pass decides); the docket 1,047 rows; the tape's one line and its RUN tuple predicted and matched first run, THE REST exact, CV1-CV9 MATCH; every gate green, the sweep 52/52 at 6,045 cells. The gate's finds: the receipt finder's SECOND FORM ("according to ALL that the LORD commanded" — eleven Torah seats, 30:1 the only one on a speech), and an edge the imports never named (the widow's word homed at Exodus 22). Numbers 1:1-30:17 read, frozen, compiled and on the tape. Next: chapter 31.
+- **THE VOWS READ AND FROZEN — SITTING 10 DONE: A LAW GIVEN IN MOSES' VOICE WITH NO DIVINE FRAME, FIVE DOUBLED VERBS IN ONE CHAPTER, THE CLOCK AS THE CHAPTER'S ONLY NUMBER, AND THE SIFREI'S ENGINE IS THE FOOTER** (2026-09-12, on your "Go" after the #141 rereads; World/step9/NUMBERS_WALK.md "Sitting 10"). Chapter 30 read as one unit on Onkelos whole and the Sifrei's four piskaot by position (34 sources, one ledger, no cut miss, lint clean on the first write); the export's seventh mistyped head caught by the row's own quotation, the English supplying the Mishnah at two rows, a citation and a speaker wrong. The parser: no cardinal, no ordinal, the three oath-tokens starred as the seven-stem's refused homograph — no gap. The finds: the chapter has no "the LORD spoke to Moses" — "this is the thing which the LORD commanded" marks exactly the book's two such law chapters (30 and 36), and 30:1's receipt is the one of seven that closes a speech; two "when" cases and seven "and if" branches, the draft's nine rows exactly; five doubled verbs, every one kept by Onkelos; "on the day of his hearing" at four seats and "from day to day" at two in the Bible (the Chronicler keeping the Torah's preposition where the Psalm's differs) — the deadline the Sifrei sets two ways, nightfall or twenty-four hours, the compile's parameter; "and the LORD will forgive her" at its three Bible seats all here; the widow and the priest's daughter sharing a pair of words; Onkelos rendering oath, confirmation and statute by one root. The Sifrei's engine: where the induction and the a-fortiori fail between father and husband, 30:17's "between a man and his wife, between a father and his daughter" decides, at four rows — and it names its own move, "I reasoned and reversed". Seven claims verified and seated, the ritual complete: 205 units, standing 2103, hash unmoved, the fold predicted and matched. Next: the vows' compile (30b), then chapter 31.
+- **THE OFFERINGS CALENDAR COMPILED — SITTING 9b DONE: ONE SPEECH BECAME ONE TABLE, THE FIRST PERIOD TIMERS RUN ON THE TAPE, THE TALMUD'S OWN TOKEN FACTS WERE COMPUTED ON THE INK AND MATCHED, AND THE THREE-LETTER WORD NEEDED THE SCRIBE'S RULE IN CODE BEFORE IT SPELLED "WATER"** (2026-09-11, on your "Ok go"; World/step9/NUMBERS_WALK.md "Sitting 9b" design + as-built). The exam docket 1,280 rows (36 folio ranges read whole); the parser's three rules and the ten moved verses; cold_run_musafim.py 110/110 — the tamid, the master row, the dates and the goats' routing all BY CALL, nine pointers internal, the watches a function, the seventy and the stacks summed; eight musaf_owed period timers on the altar, the dues predicted and matched first run; the tape's RUN tuple matched FIRST RUN, THE REST exact, CT1-CT9 MATCH; every gate green. Filed: the altar token homes two altars; the musaf debit's lapse rule; the dotted tenth.
+- **THE OFFERINGS CALENDAR READ AND FROZEN — SITTING 9 DONE: THE WATER LIBATION'S THREE LETTERS VERIFIED ON THE INK, LEVITICUS 23 AT ITS SECOND SEAT WITH THE OFFERINGS AS THE NEW COLUMN, ONKELOS NAMING SHAVUOT "ATZERET", AND TWO PARSER GAPS NAMED** (2026-09-11, on your "I agree continue"; World/step9/NUMBERS_WALK.md "Sitting 9"). Chapters 28-29 read as three units on Onkelos whole and the Sifrei's eleven piskaot by position (93 sources, three ledgers, no cut miss); the parser measured on fifty-four number verses, right at all but one — the mid-verse pause on "one" not taken before "and seven", and the plene "tenth" silent; twenty-one claims verified and seated, three rituals complete, 204 units, standing 2096, hash unmoved; a new move M-28 THE LETTER READ; the compile next.
+- **THE REGISTER GATE IS BUILT AND GREEN — THE TEXT'S OWN CHECKSUMS, RECEIPTS, FOOTERS AND HEADERS NOW RUN AGAINST THE MACHINE, AND THE FIRST RUN NAMED THE LEDGER'S DEBT: THE SPEC'S COMMANDS ARE NOT DEBITS** (2026-09-11, on your "Ok go"; World/step9/register_census.py; THE_LOOP.md "THE REGISTER GATE"). Four censuses off the Tanakh database (108 count lines, 58 receipts, 9 footers, 68 register headers) checked against the population table, the ledger and the installation registry; probes 0/6 to 6/6; 104 seats declared with a why, a lie or a stale line fails; nothing built into the engine.
+- **THE INK'S OWN ARCHITECTURE MEASURED — THE DISCUSSION STEP DONE: THE TEXT WRITES ITS REGISTERS WITH HEADERS, FOOTERS AND CHECKSUMS, FIXES MEMBERSHIP AS OF AN EVENT, STAMPS ITS LAW BLOCKS AND CLOSES ITS COMMANDS WITH RECEIPTS; THE FAMILY KEY IS ABSENT FROM THE NAMED REGISTERS** (2026-09-11, on your "Yes let's do 1,3 then 2 in the next sitting"; ARCHITECTURE/DATABASE_SPECULATION.md section 4). Nothing built: the findings recorded, the seeding's design settled as a register at its own marker with no roll-forward, and THE REGISTER GATE next — the ink's own footers and receipts run against the table and the ledger.
+- **THE POPULATION TABLE IS BUILT AND THE SECOND CENSUS FILLS IT — SITTING 8b DONE: A DAEMON WRITES ROWS, NEVER BY HAND; THE DELTAS ARE DECLARED, NOT DERIVED; THE DAUGHTERS' ROW STANDS ON THE TABLE BEFORE THEIR PLEA** (2026-09-11, on your "Ok go" after the database discussion; World/step9/NUMBERS_WALK.md "Sitting 8b"). The engine's fifth registry (the columns the ink's own words), the ninth log class, the fifth view and question; the runner 70/70, the tape 10/10 with CP1-CP9, the sweep 50/50 at 5,788; Simeon's 13,100 beyond the plague labeled unexplained; Jochebed's row the witness the seventy's missing one waited on; the backward seeding filed on your call.
+- **THE SECOND CENSUS READ AND FROZEN — SITTING 8 DONE: THE PARSER READ A WHOLE CHAPTER WITHOUT A GAP, GENESIS 46 MEASURED AGAINST NUMBERS 26 NAME BY NAME, AND JOCHEBED'S VERB HAS NO SUBJECT** (2026-09-11, on your "Go" after the #132 rereads; World/step9/NUMBERS_WALK.md "Sitting 8"). Chapter 26 read on Onkelos whole and the Sifrei's one piska (four rows on the land — quick-looked at THE TENT, read whole now; the export's head "26:25" for 26:55 the sixth mistyped head, a citation naming Judges for Joshua): 69 sources, one ledger at computed coverage, the roster rows built from the tokens themselves. The engine's parser read all seventeen number verses right on the first measurement — the twelve tribe counts summing to the ink's 601,730 as chapter 1's sum to 603,550 — so the deltas are now the machine's: five tribes fell, seven rose, the whole down 1,820, and Simeon's 37,100 is 13,100 more than the Peor plague could take even if every dead man were his (a gap the compile will label, not fill). The descent roster of Genesis 46 against the census roster: five names gone, nine renamed (Ziphion is now Zephon, the word for north), two moved down a generation, Er and Onan's death-clause word for word at both. Korach is named among the swallowed and set at the fire in one verse — the ink for the tape's open question on how he died; "a sign" is the serpent's pole-word; "the called of the congregation" is 1:16's written-and-read pair reversed. Eight women in a census of men, Zelophehad's daughters named before their plea ("no sons, only daughters" is a row of the census the case of 27 will query), Jochebed "whom she bore — her — to Levi in Egypt" with no subject for the verb — and that "in Egypt" is the datum under the tradition's answer to the seventy of Genesis 46, the tape's one open divergence there. The land by count and by lot, the lot given a mouth; the Levites five families for eight; the close one sentence twice with the predicate that no man is on both rolls. Honest catches: ten typed facts fell at once on the assert driver (two were homographs, one a find); the verifier wants the manifest's path from the repo root; a label is one code and one parenthesis to its end. Scoreboard: 201 units, standing 2075, hash unmoved; 54 daemons; the sweep unmoved at 49/49, 5,718 cells; Numbers 1:1-25:19 on the tape, 26 read and frozen. Next: the second census's compile (8b), with the population-table design on your word.
 - **BALAK COMPILED — SITTING 7b DONE: THE ZEALOTS' RULE ENTERS THE TAPE BY A DEED, THE PARSER READS THE PLENE THREE AND THE CALF'S THREE THOUSAND, AND A CLOSE WITHOUT A NAME TOOK ANOTHER RUNNER'S OPEN PLAGUE** (2026-09-11, on your "Go" after the #131 rereads; World/step9/NUMBERS_WALK.md "Sitting 7b"). The exam docket 199 rows by the union rule — the whole Balaam discussion of Sanhedrin 105a-106b and the Jerusalem Talmud's two law-sections read row by row; the parser taught two rules (22:32's vav-spelled "three"; Exod 32:28's "about three thousands of men" = 3,000 — read 3 since the parser's first day), 159/159 probes, the corpus diff moving exactly the four probed verses; cold_run_balak.py 105/105 on its first graded run with twelve engines called live — the covenant's "lest you whore after their gods" clause runs at Shittim, the judges of 25:5 are Jethro's 78,600 (each executing two, the Jerusalem Talmud's 157,200), Aaron's "and the plague was stayed" at Phinehas's spear, Phinehas not a priest until the deed (Zevachim 101b) — the priesthood engine's "sons of Aaron" row his named exception; THE ZEALOTS' RULE ("one who cohabits with an Aramean woman, zealots strike him" — with its four limits: during the act, self-defense, not taught, a law from Sinai) installed on the tent BY THE DEED and ratified by the covenant — THE TENT's form at a second seat with no halt and no docket; the forty-one lines on the tape undated (no marker: the ink and Seder Olam give no day), RUN matched on the second run after two honest reads — the engine's close without a value closed KORACH'S plague (17:8-15, never closed by its daemon: a filed debt) and a status entry cannot close at all (Zimri's act in progress retyped a BODY entry); THE REST reproduced 6b exactly; nine checkpoints MATCH; every gate green; the sweep 49/49 runners at 5,718 cells. Numbers 1:1-25:19 read, frozen, compiled and on the tape; next chapter 26, the second census.
 
 - **BALAK READ AND FROZEN — SITTING 7 DONE: THE SHELF SILENT ON THE WHOLE BALAAM STORY, THE AKEDAH'S MORNING AT BALAAM'S, THE CURSE BALAK ASKED FOR SPELLED INTO THE TENT WHERE THE PLAGUE STOPPED, AND THE EXPORT JOINING A HALF-VERSE INTO THE NEXT CHAPTER** (2026-09-11, on your "Continue" after the #130 rereads; NUMBERS_WALK.md "Sitting 7"). Numbers 22:1-25:19 read at the parashah grain with the drafts' own edges (22:1 and 25:10-19 read with their drafts): the Sifrei has no piska on 22-24 (computed on every head) and one on 25 — 131, five rows — so the seer's chapters were read on Onkelos alone; 120 sources, four ledgers, coverage computed. THE FINDS, computed: Balaam's morning is Abraham's (Gen 22:3's saddling and two young men); the satan-word's two Torah seats both here; God comes by night to Abimelech, Laban and Balaam alone; the LORD "refuses" in Pharaoh's verb, Balaam "has sinned" in Pharaoh's confession; the word-formula six times, its verb turning; the ass struck "three feet", the blessings counted "three times"; the three stands are the well-road's last three stations, the third the god of 25:3; the parable-tellers' word paid; Samuel over Agag restates "God is not a man"; the serpent and the omen one pointed word; 24:9 is Judah's blessing but two words; Jeremiah 48:45 fuses 21:28 and 24:17; Onkelos makes the tents land and the star a king; Daniel quotes "ships from Kittim"; Shittim is the tabernacle's timber; Exodus 34:15-16 runs at 25:1-2 with its feminine "their gods" at both seats alone; Balak's "curse for me" and the alcove of 25:8 one skin; Aaron's plague-clause and atonement-verb at Phinehas's; the sotah's jealousy-word in the priest's deed; Zur among Midian's five kings; "harass" is Haman the Agagite's title. The parser: ten right, the plene "three" a new gap, and the calf's 3,000 found read 3. The shelf: 25:19 joined into 26:1 by the export (a fourth defect class), two mistyped citations in one row, the adjacency rule disputed on the verse (R. Akiva against Rebbi), "and he atoned" read future against the tag. 40 claims verified, 40 operators seated, four rituals green, 200 frozen units, standing 2063 as predicted, hash unmoved; gloss_lint 0 on the ledgers first run. Next: Balak's compile (7b), then chapter 26.
@@ -450,6 +470,292 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   Next alongside it: Leviticus (new spine — Sifra).
 
 ## ENTRIES (newest first)
+
+### 2026-09-14 — THE STEP-THROUGH: THE TAPE ONE CALL AT A TIME, THE STATE READ FROM THE DATABASE AT EVERY PAUSE
+
+What changed: the tape used to run start to end and exit. Now a session
+runs it one engine call at a time — or by verse, chapter, date, day, or
+to any verse's left edge — and between two calls the world stands
+still. Every line so far is on disk and in the database, and the
+report reads what is open, what is pending and what day it is from the
+database itself. A session can stop early; its segment is sealed and
+audited like any run.
+
+How: the stitched tape is one engine call per line (measured: 1,507
+calls on 1,507 lines), so at load every call line is prefixed with a
+yield of the verse it is about to run. The function becomes a generator;
+the pause is between two next() calls; no thread, no change to the
+engine. Because the yield comes before the call, the session can stop
+exactly at a verse's left edge, as the cursor does, and unlike the
+cursor it resumes. The replay is the audit: every line the session
+seals must equal the base run's line at the same ordinal, or the
+session is refused there.
+
+Going forward: the port — the queue the loop reads at this pause, with
+the text as its first producer — is the last of the three, on your
+word, design first. The checkpoints as they fall are owed to the
+stitcher (today they are computed after the run).
+
+### 2026-09-14 — THE DATABASE IS LIVE: THE JOURNAL IS WRITTEN AS THE TAPE RUNS, AND THE PAST NEVER MOVES AGAIN
+
+What changed: until today the engine wrote its journal once, at the end
+of a run, and the database was rebuilt after — inside a run there was no
+"now" on disk. Now every line lands on disk and in the database at the
+end of the block that made it (an event with its consequences; a date
+with the timers it fires), and the line never changes after.
+
+Why: your words of 2026-09-14 — a living database showing the current
+state at all times, no hand inputs, a step-through later. A database
+that is current only after the run cannot show a state; one written as
+the run goes can.
+
+What it took: a measurement before the design. Three snapshots of every
+line showed exactly two things move after the engine logs a line — the
+list of daemons that fired (inside the block) and the closing edge of
+the date-window an event sits in (at the next date). So the seal is at
+the block's end, and the closing edge is read from the next date line
+instead of being written back — the same shape as the close line of
+2026-09-12. The audit at every seal proves the live path against a
+fresh rebuild, and the gate proves it across two processes.
+
+Going forward: the stepper (a pause between blocks) and the port (the
+queue the loop reads between steps) are the next two sittings, each on
+your word, design first.
+
+### 2026-09-12 — THE JOURNAL'S PAST IS NOT IMMUTABLE: A CLOSE REWRITES AN OLD LINE, AND THE CURSOR'S AUDIT CAUGHT IT
+
+What changed. At Midian's compile the war closed three debts that older chapters had opened — the trumpets commanded at
+Numbers 10:2, the Midian debt of 25:17, Moses' own of 31:2 — each by the text's receipt "as the LORD commanded Moses." The
+tape ran green in every slot the design predicted. Then the cursor gate, which replays the tape to a verse and demands a
+byte-identical journal prefix, went red without one line of it touched. The reason is plain once seen: the engine keeps
+each ledger entry as one record, the journal writes that record after the run, and a close writes its note INTO the same
+record. So the journal's line for the trumpets, written at chapter 10, already carries the close from chapter 31 — and a
+replay stopped at chapter 27 cannot reproduce it. Ten sittings never hit this because every earlier close sat on the same
+side of the cursor as the entry it closed.
+
+Why it matters. The journal was built as the audit of the run: same events, same chains, byte for byte. That promise
+assumed a write line never changes. The text itself says otherwise — a debt opened in one chapter is paid in a later one,
+and the machine must record BOTH moments as their own lines, not overwrite the first with the second.
+
+What it means going forward. The fix is a design decision, yours: snapshot each entry when it is written and journal every
+close as a line of its own (the run tuple already counts closes as acts of the tape), or loosen the audit to ignore the
+close fields (which hollows out the chain). The recommendation is the first. Until the word, the cursor gate stays red and
+is reported so; every other gate is green.
+
+Your word, the same day: "I accept your recommendation." Built on the loop's own order — the design in the map, the new
+line registered, the probes written to fail, then the code in three files. A debt and its payment are now two lines in the
+journal, each dated where it happens; the ledger view joins them; the rewind's audit is byte-identical again (six of six), the
+journal gate green with a new column that says the closes on the ledger equal the close lines in the journal, and not one
+count of the run moved.
+
+### 2026-09-11 — THE OFFERINGS CALENDAR COMPILED: ONE TABLE, EIGHT CLOCKS, AND THE TALMUD'S TOKEN FACTS CHECKED ON THE INK
+
+You said "Ok go" and the compile of chapters 28-29 ran to its close across two
+compaction points (World/step9/NUMBERS_WALK.md "Sitting 9b"). Three things are
+new in kind.
+
+First, the calendar is ONE TABLE with its parts borrowed by live call, never
+retyped: the daily lambs from the sanctuary engine, the row of tenths and
+hin-fractions from chapter 15's engine (the same parse, read not re-declared),
+the festival dates from Leviticus 23's engine, the sin offerings' routing from
+the Day of Atonement's. Nine "according to the ordinance" pointers all point
+inside the span, to that one row. The daemon sets EIGHT PERIOD TIMERS on the
+altar at the command's verse — the Sabbath, the month, and the six festival
+keys — the first period timers the tape has ever carried; their due dates were
+predicted from the design and matched on the first run.
+
+Second, the Talmud names facts about these verses' letters, and the machine
+computed them off the ink and matched: thirteen goat lines, eleven with "AND a
+goat" and exactly two bare — Shavuot's and Yom Kippur's, as Shevuot 10a says;
+the eighth day's heading without its conjunction, as Sukkah 47a says; the one
+goat "to the LORD" at the new moon; sixteen lambs on the first of Tishri and
+twenty-two for the three days, the sums the tractates compute. The three-letter
+"water" (the reading's crown) turned out to need the scribe's own rule inside
+the code: the letters as written are a closed mem, a yod, a closed mem, and
+Rav Chisda's "a closed letter rendered open is valid" is the step that spells
+the word.
+
+Third, the misses were the lesson. The runner reached 110/110 on the eighth
+run; seven readings between — a probe typed without its vav, the month-ordinals
+taken for cardinals, the last letter taken for the penultimate, a stack summed
+from memory that the page (Menachot 49b) corrected, ben Azzai's "the special
+Name at every offering" measured and found to be an ADDRESSEE census (two
+non-addressee mentions of "God" in Leviticus 1-7, none in the span). Each is in
+RESEARCH_LOG.md; none was patched around.
+
+Filed for later: the registry homes Exodus 17's altar and the tabernacle's
+under one id (the timers sit on it — a registry sitting owed); the musaf
+debit's lapse ("its day passed, its sacrifice is invalid") is not yet an
+engine rule; the dotted tenth of 29:15 is not on this store. Next: chapter 30,
+the vows.
+
+### 2026-09-11 — THE OFFERINGS CALENDAR: THE TEXT SPELLS A LAW IN THREE LETTERS, AND THE MACHINE CHECKED THEM
+
+You said "I agree continue" and the walk resumed at chapter 28. Chapters 28
+and 29 are the offerings calendar: the daily lambs, the Sabbath, the new moon,
+Pesach, the day of the firstfruits, the day of blowing, the day of affliction,
+Sukkot's seven days and the eighth. They were read in one pass as three units
+on Onkelos and the Sifrei's eleven sections found by position (World/step9/
+NUMBERS_WALK.md "Sitting 9").
+
+What the reading found. The oldest of the tradition's arguments for the water
+libation of Sukkot says the law is spelled in three stray letters: the second
+day's line says "their libations" where the others say "its libation", the
+sixth day's says "its libations", and the seventh day's says "their ordinance"
+where the others say "the ordinance" — mem, yod, mem, the word for water.
+The machine checked all fifteen lines token by token. The three deviations
+stand exactly where the tradition says, and nowhere else. That is a new kind
+of move for the catalog (M-28, the letter read): a law carried by spelling
+inside a formula the text repeats verbatim.
+
+Leviticus 23 gave the calendar its dates; Numbers 28-29 restates the dates
+and adds the offerings as a new column. The machine counted the shared words
+verse by verse, and found two registers Leviticus never wrote: the Sabbath's
+offering and the new moon's whole entry. The new moon's line is the master
+table (three tenths for a bull, two for a ram, one for a lamb; half, a third,
+a quarter of a hin of wine), and every later day of the calendar points back
+to it with the words "according to the ordinance" — the text's own
+cross-reference, seven times.
+
+Two things the parser could not read, named for the compile: "one ram AND
+seven lambs" came out as eight, because the pause mark on "one" is not yet
+taken as a break before a numeral that carries "and"; and "the tenth" of the
+seventh month, spelled with an extra letter, was silent. The shelf's export
+showed a new kind of defect too: the English translation drops a speaker in
+one dispute, so the answer reads as the objector's.
+
+What it means going forward. The compile of these chapters will hold the
+calendar as one table with the master row cited by pointer, teach the parser
+the two gaps, and carry the three letters as a checked row. Then chapter 30.
+
+### 2026-09-11 — THE REGISTER GATE: THE TEXT'S OWN TEST ORACLE RUNS AGAINST THE MACHINE
+
+You said "Ok go" on the recommendation's second item, after asking whether it
+would build the database structure (it does not: it checks). The measurement of
+the day before had shown that the text writes its own tests — footers carrying
+checksums, receipts closing commands, footers stamping law blocks, headers
+opening registers — and that the machine was not running them. Now it does.
+
+What changed in how we work. A new gate, register_census.py, reads four
+formulas straight off the Tanakh database and checks what the engine holds:
+- every count line ("their counted were 46,500", "all the souls... thirty-three")
+  must find its number on the population table or the ledger;
+- every receipt ("as the LORD commanded Moses, so did he") must find a closed
+  entry on the ledger at that verse;
+- every law-block footer ("these are the statutes... in Mount Sinai") must have
+  laws installed inside its block;
+- every register header ("these are the generations of") must find rows in its
+  chapter.
+A seat the world does not satisfy needs a declared reason in a dispositions
+file, in the same form as the daemon gate's. A reason that lies about the
+world fails the gate. A reason left standing after the world has paid the seat
+fails the gate too. The gate runs at every compile sitting from now on.
+
+What the first run found. Before anything about the world, it found my own
+instrument's fault: the number-word finder was matching stems inside proper
+names (Issachar carries "six") and ordinals ("the seventh"). The fix reads the
+parser's own tokens, which mark every word the points refused as a numeral.
+Two rules of the ink joined: a number followed by its unit (years, days,
+shekels, men) is a measure, not a count; and one is never a checksum ("one
+soul", "one man for his father's house"). Then the world: of 58 receipts, nine
+close a ledger entry, and eighteen have the act on the ledger with nothing
+closed, because the command they answer is a specification (the sanctuary's,
+the priests' investiture) that the tape never wrote as a debit. That is the
+ledger's honest debt, now declared as a class rather than faked closed. The
+gate also listed every register the table does not hold (the camps, the service
+roll, the shekel account, Genesis 46), each with its reason, and caught one more
+parser homograph: "let him take a fifth" read as five.
+
+What it means going forward. The text's own arithmetic is a standing check, not
+a one-time measurement. When a runner pays a seat, its reason line is deleted
+and the gate confirms the payment. Chapter 28 is next, with this gate at its
+compile.
+
+### 2026-09-11 — THE INK'S OWN ARCHITECTURE, MEASURED: THE TEXT WRITES ITS TABLES WITH HEADERS, FOOTERS AND CHECKSUMS, AND IT WRITES ITS OWN TEST ORACLE
+
+You asked whether the Torah is meant to be coded the way the population table
+codes it, and then whether the intended architecture can be determined. The
+answer came from measurement on every token of the Torah, not from memory
+(ARCHITECTURE/DATABASE_SPECULATION.md section 4).
+
+What we now believe about the design. The text uses five structures, consistently:
+- A register opens with a header ("these are the generations of", "these are the
+  names of") and closes with a footer that carries the checksum ("these are the
+  families of Simeon ... 22,200"). Sixty-eight such headers, twenty-one of them
+  closes with a number. That is a table with a header row and a totals row.
+- Nine registers declare totals beside their parts. Seven add up. Two do not
+  (Genesis 46's 66 against parts summing to 70; Numbers 3's 22,000 against
+  22,300), and both are exactly where the tradition supplies a hidden row. The
+  machine already holds both as DIVERGE cells. A total that does not add up is
+  how the ink writes a row it does not name.
+- Membership is fixed as of an event, and only at the register boundaries: out
+  of the ark, into Egypt, out of Egypt, "the counted in the wilderness of Sinai"
+  (at 1:19 and 26:64 and nowhere else). The text never carries a count forward;
+  it re-counts whole and names the exceptions. A register is a snapshot.
+- A law block opens with "and the LORD spoke to Moses, saying" (83 times) and
+  closes with a footer stamping the place and the channel ("in Mount Sinai by
+  the hand of Moses", "in the plains of Moab").
+- A command is answered by a receipt, "as the LORD commanded Moses, so did he"
+  (58 lines). That pair is the ledger's debit and close.
+
+One correction to our own earlier report: the family key is not kept at every
+step. It is minted at the ark's exit, absent from the registers that run on
+names (Genesis 5, 11, 46, Exodus 1), and carries Numbers. The ink alternates a
+counted grain keyed by family and a named grain keyed by name — the two grains
+the table was built with, found in the text rather than chosen.
+
+What it means going forward. The data architecture is the ink's, not ours: the
+population table, the tape's markers, the declared deltas, the installation
+registry and the ledger each match one of the five structures. The seeding
+question is settled by the same measurement: the ark is a register at its own
+marker, and nothing rolls forward from it into Numbers — so it will be built as
+a snapshot when a consumer calls for it, and not before. The next sitting turns
+the ink's own devices into a gate: every footer with a number must find its row
+on the table, every receipt must find its close on the ledger, every stamped
+footer must match the law's recorded place. The first run will fail, and what it
+fails on is the ledger's honest debt.
+
+### 2026-09-11 — THE MACHINE GETS A POPULATION TABLE, AND THE SECOND CENSUS FILLS IT
+
+You asked to discuss the database option again and then said "Ok go" on the
+recommendation: build the table inside the compile of chapter 26, minimal and
+honest, and file the seeding backward (the ark, Genesis 10, Genesis 46) for a
+later pass. Sitting 8b did that (World/step9/NUMBERS_WALK.md "Sitting 8b").
+
+What changed in the machine: the world engine now carries a TABLE beside its
+ledger. Its columns are a registry of the ink's own words — tribe, family, the
+number of names, the counted, son of, the clauses the roll writes about a person
+("died in the land of Canaan", "had no sons, only daughters", "born to Levi in
+Egypt"). A row is written only by a daemon consuming an event; a row written by
+hand is refused by the engine itself. A row is not a ledger entry and moves none
+of the tape's counts; it is its own class in the log, journaled, and read back by
+a fifth view and a fifth question ("population" — all rows, or one tribe's).
+
+What the second census wrote into it: the twelve tribes at both censuses with the
+parser's numbers (603,550 and 601,730), fifty-seven families with their gentilics
+and NO number (the ink gives none, so the table keeps none), twenty-nine persons
+the roll names, and the deltas — DECLARED, never derived. Simeon's fall of 37,100
+is explained in part by the Peor plague's 24,000 (fetched from the Balak runner;
+the tribe the tradition's claim, not the ink's), and 13,100 stays labeled
+unexplained; the Levites' rise of 1,000 and every other tribe's change are wholly
+unexplained and say so. The first readers of the table are the daughters of
+Zelophehad — their row "had no sons, only daughters" stands on the table BEFORE
+their plea at 27:1, and the inheritance engine answers from it — and Jochebed,
+whose row "born to Levi in Egypt" is the ink witness the seventy's missing one
+waited on since the Joseph chapters; that checkpoint stays DIVERGE on purpose,
+because the row is a witness, not a resolution.
+
+The honest catches of the sitting, each read off an instrument: the roll's Ard
+stands bare where the hand typed a preposition; "Moses and Eleazar" stand
+adjacent at ten seats, not the reading's seven; the stitcher placed the census's
+first line by the marker's own class; three of the roll's family names are
+homographs of institution tokens (Becher, Shillem, "the firstborn") and the
+dependency gate named them; and two loops in the runner had to become literal
+lines because the daemon gate reads literals only. The docket read 264 Talmud
+rows, the runner passed 70 of 70, the tape 10 of 10 with nine new checkpoints,
+the sweep 50 of 50 runners at 5,788 cells. Nadab and Abihu have no
+entity on the tape (the eighth day's fire wrote on no person) — a debt named,
+not hidden. Next on the ruling: chapter 28.
 
 ### 2026-09-11 — THE HEIFER IS WRITTEN IN OTHER RITES' WORDS, AND THE MACHINE CANNOT YET READ "TWICE"
 

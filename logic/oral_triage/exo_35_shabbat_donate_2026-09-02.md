@@ -40,7 +40,7 @@
 - Onkelos Exod 35:25-26 — MATERIAL. THE WOMEN'S OWN CRAFT: וְכָל
   אִתְּתָא חַכִּימַת לִבָּא בִּידָהָא מְעַזְלָא ("every WISE-HEARTED woman
   spun WITH HER HANDS") — the wisdom vocabulary applied to women's
-  labor; and 35:26 the goats-hair spinners דְּאִתְרְעֵי לִבְּהֶן...
+  labor; and 35:26 the goats-hair spinners דְּאִתְרְעֵי לִבְּהֶן ('whose hearts moved them') …
   בְּחָכְמָא ("whose hearts moved them WITH WISDOM") — the spine will
   read the spinning-from-the-backs-of-the-goats claim here (outside
   declared scope; the wisdom-token is on the ink).

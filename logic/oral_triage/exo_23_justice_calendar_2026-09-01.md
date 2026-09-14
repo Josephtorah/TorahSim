@@ -44,7 +44,7 @@
   RIS — as the duty-distance (both verses kept, a number minted
   between them); "lying" — not a habitual lier-down; "under its
   load" — not more than its load; UNLOADING AND LOADING both Torah
-  (R. Yoshiyah both-in-perikah + the a-fortiori; R. Yehudah b.
+  (R. Yoshiyah both-in-perikah (both verses in the unloading) + the a-fortiori; R. Yehudah b.
   Beteira splits the verses; R. Yishmael: as unloading is Torah so
   loading is Torah); PRIORITY CONFLICTS RECORDED: Israel's donkey
   under a gentile's load — unload; gentile's donkey under Israel's

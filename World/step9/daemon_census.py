@@ -29,7 +29,7 @@ What daemon_dispositions.yaml must DECLARE, and the gate verifies:
                          with the function (or, for a table-shaped runner, with
                          the module) — the wrap's live check, as CALL's is the
                          live import;
-                OWED     why names a wrap-worklist line of COMPILE_DEBT.md before
+                OWED     why names a wrap worklist line of COMPILE_DEBT.md before
                          "|" — the generated worklist (--debt);
                 NONE     why says why no daemon is owed (reserved for the wraps);
   unfired:    every watched kind no tape submits, with a why;

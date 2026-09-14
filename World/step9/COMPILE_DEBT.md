@@ -682,6 +682,9 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
       THE AUGUST JOURNAL MOVED INTO THE REPO 2026-09-09 (the owner: "add it to github"): World/journal/ — worldledger.py, build_world.py,
       run_cases.py, registers/, primary/ tracked; data/ gitignored; rebuilt in place, determinism GREEN, one August tree checklist line
       (forming/filling symmetry) FAILS against today's 163 units — filed for the loop's first sitting; the sink imports worldledger from there.
+      ⚠ 2026-09-14 THE LIVING DATABASE AND THE LOOP THAT WAITS — discussed, NO RULING: write as you go, the stepper, the port (THE_LOOP.md's last section, an unticked box; the recovery file section 19); nothing moves before the owner's word.
+      STEP 7 (a) WRITE AS YOU GO BUILT 2026-09-14 (the owner: "ok go 1"; THE_LOOP.md "Step 7 THE LOOP THAT WAITS — part (a)" design + as-built; D14 THE SEAL — a journal line sealed at the end of its block, on disk and in the one database, never changed after; the audit at every seal; live_probes.py 0/7 → 7/7; the tape 10/10; the journal gate GREEN with the live-index line; the cursor 6/6 on the new base). OWED on the owner's word: (b) THE STEPPER, then (c) THE PORT — each its design section first.
+      STEP 7 (b) THE STEPPER BUILT 2026-09-14 (the owner: "ok go b"; THE_LOOP.md "Step 7 ... part (b)" design + as-built; D15 THE TAPE AS A GENERATOR — World/step9/world_stepper.py, one call per step or by verse / chapter / marker / day / to a verse's left edge; the state read from the database at every pause; the replay the audit at every call; step_probes.py 0/8 → 9/9; the real sessions: chapter 27 by verse, the whole tape by marker with its segment the base's body byte for byte). OWED on the owner's word: (c) THE PORT — its design section first; and the checkpoints as they fall (the stitcher's rewrite), named.
 - [x] THE CLAIMS LABEL DEBT (CLOSED 2026-09-09 at B5 — 2,838 of 2,838 labeled, the gate --strict green) — 2,838 frozen claims carried the middah field on 36; the untaught links among them cannot be found
       by script; the label mandatory on every claim seated from LR1 on; the backfill an unbounded debt, named here
       O11 OPENED 2026-09-08 (the record World/step9/CLAIM_LABELS.md; the gate logic/solo_tools/claim_labels_census.py):
@@ -734,7 +737,7 @@ owner's ruling: THE DAEMON CAMPAIGN (D9 below), then Numbers on the walk.
 ## OWED FORWARD — the family code's Sinai seats (declared at sitting G2, 2026-09-06;
 ## the census homes them at runners that do not exist yet, so the gate cannot require the
 ## edges — they are declared OWED anyway, the repetition test's forward half)
-- [ ] Num 27:1-11 + 36:1-12 — THE INHERITANCE ORDER (the daughters of Zelophehad;
+- [x] Num 27:1-11 + 36:1-12 — THE INHERITANCE ORDER (the daughters of Zelophehad;
       Bava Batra 8:2 quotes 27:8) — owed by G2's 48:6 'in their inheritance'; THE TENT'S OUTPUT (2026-09-09, THE_LOOP.md "The tent as the
       run's interrupt"): a case the code did not cover, halted in custody, brought before the LORD (27:5), answered as a general
       rule in the case's name (Sanhedrin 8a:5; Bava Batra 110b:4) — with the blasphemer (Lev 24:12), the wood-gatherer (Num 15:34)
@@ -969,3 +972,528 @@ follows the last check mark.
 ## closes are three) — the Korach runner's next touch; the two court debits of 25:4-5 (hang the heads on Moses, slay the yoked on the court) OPEN forever — the ink
 ## narrates no hanging; the block on Balaam never closed (22:12); 25:19's half-verse the second census's marker (the next reading); Simeon's 59,300 -> 22,200 the
 ## checkpoint at 26:14 by CALL from the census's compile; Balaam's death (31:8) and the Midian command's run (31:2, 31:7) at Matot.
+## SITTING 8 (2026-09-11, THE SECOND CENSUS'S READING — Numbers 26:1-65; NUMBERS_WALK.md "Sitting 8"): OWED TO THE COMPILE (8b) — (a) THE PARSER: NOTHING NEW (the
+## chapter's seventeen number verses read right, the twelve counts summing to 601,730; 1b's census grammar at its second seat — no probe owed); (b) THE FUNCTIONS —
+## THE TWO CENSUSES AS TABLES: tribe rows (tribe, families, count) at chapters 1 and 26 with the deltas computed at both seats, and the CHECKPOINTS the ink sets:
+## Simeon 59,300 -> 22,200 against the plague entry's 24,000 (DIVERGE by 13,100 — a labeled gap; the Sifrei's "of his tribe" the exam's row), the total 601,730
+## against 603,550 (-1,820), the Levites 23,000 against 3:39's 22,000; THE FAMILY TABLE — 57 + 8 rows keyed to Genesis 46 (five absent, nine renamed, two moved a
+## generation; the deltas as data rows); THE DAUGHTERS' ROW (26:33 "no sons, only daughters") feeding the Zelophehad runner's premise by CALL — the case of 27
+## answered from the census's row; JOCHEBED'S ROW (26:59 "in Egypt") feeding the Joseph runner's CJ3b (the seventy's missing one — the ink's witness, the shelf's
+## answer Bava Batra 123a as a data row); THE LAND'S LAW (26:52-56): size by count and place by lot as two functions, land_divided_among a parameter with three
+## settings (Sifrei 132:1 — R. Yoshiyah / R. Yonatan / R. Shimon b. Elazar), "only" excluding Joshua and Caleb (132:3), the estimate (132:4), Joshua 14-19 and
+## 17:1-6 the run citations; THE LEVITE FAMILIES five against chapter 3's eight (a table delta — Shimei, Amram, Izhar, Uzziel out, Korah's in); THE MEMBERSHIP
+## PREDICATE (26:64-65) as a checkpoint — no entity of the first roll's counted on the second, the decree of 14:29-35 consumed, Caleb and Joshua the exceptions;
+## THE POPULATION-TABLE DESIGN (ARCHITECTURE/DATABASE_SPECULATION.md section 3) on the owner's word; (c) THE TAPE — 25:19's "after the plague" READING-PLACED
+## (no day in the ink or on the shelf; Seder Olam to be searched), the lines page_order after Balak's undated stretch; the events (the command, the count, the
+## land's law, the Levite count, the predicate); the families NOT entities until a daemon writes on them; KORACH'S PLAGUE ENTRY STILL OPEN (law_korach's debt from
+## 7b — CK4's ink at 26:10 now on the record); the edges census -> bamidbar (chapter 1's rows), -> korach (16:32's clause, the 250), -> balak (the 24,000),
+## -> zelophehad / family (26:33 -> 27:1), -> joseph (Genesis 46; CJ3b), -> primeval (Gen 9:10), -> chukat (Eleazar), -> shelach (the decree), sequence -> census;
+## the exam docket by the union rule (Bava Batra 117a-123a, 143b; Sotah 12a-13a; Sanhedrin 110a; Mishnah Bava Batra 8:1-2, 7:1-4; Yoma 73b; Seder Olam 9-10).
+
+## SITTING 8b (2026-09-11, THE COMPILE OF THE SECOND CENSUS AND THE POPULATION TABLE — Numbers 25:19-26:65; NUMBERS_WALK.md "Sitting 8b" design + as-built): THE SITTING-8 BOX
+## ABOVE PAID — (a) the parser: nothing owed, none taught (the chapter re-measured right at every seat); (b) THE TWO CENSUSES AS TABLES: cold_run_second_census.py
+## (the 50th runner, law_second_census the 55th daemon) 70/70 on the second graded run, THE POPULATION TABLE built as engine state (World.tables; the fifth registry
+## population_schema.yaml; World.row never by hand; the ninth log class ROW -> run.row; the fifth view run_population; the fifth question `population`; probes 0/9 -> 9/9)
+## with the two rolls as counted rows (12 + 4 + 69 + 9), the deltas DECLARED (Simeon -37,100 explained by the plague's 24,000 by CALL, -13,100 labeled; the Levites +1,000
+## labeled; the other eleven wholly unexplained), the family table 57 with gentilics keyed to Genesis 46 (five absent, nine renamed, two moved), the daughters' row (26:33)
+## and Jochebed's row (26:59) by CALL to zelophehad and joseph (CP7, CP8 — CJ3b's witness, the verdict DIVERGE kept), the land's two functions with land_divided_among READ
+## from the Zelophehad runner's row (three settings), the membership predicate CP5 on the table against the ledger's death entries, the Levite families five for eight;
+## (c) THE TAPE: 25:19's marker READING-PLACED at (40, 6, 1) (Seder Olam 9:2's order), the five lines, RUN (1244, 52, 52, 0, 12, 1469, 26, 302, the four pairs, 114) matched on
+## the second tape run, THE REST 7b's exactly, CP1-CP9, the sweep 50/50 at 5,788; the edges second_census -> bamidbar, balak, korach, shelach, zelophehad, joseph, chukat,
+## shemini_day CALL, family VIA zelophehad, moadim / offerings / pesach FALSE (Becher, Shillem, the firstborn son), the 26:4 pointer RUN_CITATION, sequence -> second_census
+## the registration. STILL OWED / NEW: KORACH'S PLAGUE ENTRY (17:11) OPEN — 7b's line stands; DATHAN'S, ABIRAM'S AND KORACH'S put_to_death BODY ENTRIES OPEN on the tape
+## (the swallowing is the death — law_korach closes none: a close by the deed at 16:32-33 owed); NADAB AND ABIHU NO ENTITY (Lev 10:1-2's fire wrote on no person — the
+## shemini-day runner owes the two named rows their ledger entries); 27:12-23 NOT COMPILED (Joshua's appointment; 27:21 'the judgment of the Urim' = 26:56's lot's mouth —
+## the daughters' runner spans 27:1-11 and 36): a readback line; the land's debit divide_the_land OPEN to Joshua 14-19 (the readback); THE BACKWARD SEEDING FILED (the
+## owner's call 2026-09-11; under discussion, no direction taken): the ark's kind table (Gen 6:19-20, 7:2-3, 7:14, 8:19), the nations table (Gen 10), Genesis 46's roster by name (the Joseph runner's ROSTERS) —
+## built when a daemon queries a person before Numbers 1; "kinds do not mix" a data row until Lev 19:19; the ark-roster link a HYPOTHESIS cell (class H), no teacher.
+## THE SEEDING'S DESIGN SETTLED 2026-09-11 (the owner: "Yes let's do 1,3 then 2 in the next sitting", after the ink's architecture was measured —
+## ARCHITECTURE/DATABASE_SPECULATION.md section 4; STILL FILED, NOTHING BUILT): each earlier register is A REGISTER AT ITS OWN MARKER — the ark's rows the
+## COUNTED grain keyed by KIND (as_of Gen 7:14-16 the boarding, 8:19 the exit "by their families"; per-kind counts, sevens and twos, NO total — the ink writes
+## none), the nations table the counted grain keyed by family, tongue, land, nation (as_of Gen 10:32, its footer), Genesis 46 the NAMED grain (as_of 46:8-27,
+## the four sub-totals 33 / 16 / 14 / 7 its checksums, the declared 66 and 70 beside them — CJ3b's DIVERGE kept); NO ROLL-FORWARD from any of them into Numbers
+## 1: the ink never carries a count forward, it re-counts whole at a marker and names the exceptions, so the table's rows at Numbers 1 stay the ink's own
+## numbers and no earlier register feeds them. Built only when a consumer calls (unchanged); the register gate (the next sitting) lists the ark's and the
+## nations' footers among the closes with no row and a declared reason.
+
+## THE REGISTER GATE SITTING (2026-09-11, after the discussion step; THE_LOOP.md "THE REGISTER GATE — the design" + "As built"; the owner: "Ok go"):
+## register_census.py GREEN under --strict (104 declared seats), register_probes.py 0/6 -> 6/6. THE DEBT CLASSES THE GATE SURFACED (each seat declared
+## in register_dispositions.yaml — DELETE a seat's line when a runner pays it, the gate says STALE until it is gone): (a) THE SPEC'S COMMANDS ARE NOT
+## DEBITS — 18 ACT + 5 EVENT receipts (Exod 16:34, 34:4, 39:5-43, 40:21-32, Lev 8:9-29, 9:10, Num 17:26; Exod 7:20) whose act is on the ledger with
+## nothing closed: a debit per spec command (the sanctuary spec Exod 25-31, the milluim's instructions Lev 8, the jar, the tablets, the staff) would
+## let them close — a wrap item for the sanctuary / milluim / story runners; (b) THE STORY'S SCENE GAPS — Exod 7:6, 7:10, 39:1, 40:19, Lev 8:4 fire no
+## event at the receipt's verse; Lev 16:34's rite unnarrated; Num 36:10's receipt one verse before the act (declared, not moved); (c) THE REGISTERS
+## WITHOUT ROWS — the camps (Num 2), the service roll (Num 4), the shekel account (Exod 38), Genesis 46 / Exod 1 (the seventy), the name trees of
+## Genesis: each a register at its own marker under the seeding's design, built only when a consumer calls; (d) THE PARSER'S FIFTH-VERB HOMOGRAPH —
+## Gen 41:34 "take a fifth" read as five (the tithe-verb class): teach at the next parser sitting with a probe; (e) 27:15-23 (Joshua) uncompiled
+## — the 8b line stands; (f) chapters 30-36 and Deuteronomy: the walk's own future (Num 31's booty counts, 34's princes, 36:13's Moab block, the
+## eight Deuteronomy receipts and four footers).
+
+## SITTING 9 (2026-09-11, THE OFFERINGS CALENDAR — Numbers 28:1-29:39 READ AND FROZEN; NUMBERS_WALK.md "Sitting 9"): OWED TO THE COMPILE (9b) on 1b's order:
+## (a) THE PARSER — two probes to FAIL: (23) THE DISJUNCTIVE ON "ONE" BEFORE "AND + NUMERAL" (28:19 [2, 8] → [2, 1, 7]: the etnachta, the mid-verse pause, as the
+## bar before a conjoined numeral; the corpus diff read); (24) THE PLENE TENTH-DAY NOUN (בעשור "on the tenth" → 10 at Lev 16:29, 23:27, 25:9, Num 29:7; the Prophets'
+## six seats); AND the fifth-verb homograph (Gen 41:34 "take a fifth" read as five — the register gate's finding, the tithe-verb class). (b) THE FUNCTIONS — THE
+## CALENDAR AS ONE TABLE: the tamid (Exod 29:38-42 by CALL to the sanctuary runner — the second seat's deltas as data), the Sabbath's musaf, the new moon's MASTER
+## ROW (the tenths and hins per animal — Shelach's libation table 15:4-10 by CALL), the festival days by POINTER to the master row ("according to the ordinance"
+## ×7, "by their number" — RUN_CITATION / CALL: the compile's cross-reference form written in the calendar's own text), Pesach's constant table ×7 ("as these"),
+## Shavuot's second set beside Lev 23:18's (the moadim runner by CALL — Leviticus 23 the dates' spec, the offerings the new column: the edge Lev 23 → Num 28-29 as
+## M-23's second seat, the shared tokens per pair the data), the Tishri three (1, 1, 7) with the STACKS (the new moon's beneath the first of Tishri — 29:6; Lev
+## 16's goat beneath the tenth — 29:11 "the sin offering of the atonements" by CALL to the acharei runner), Sukkot's declining bulls (13..7 = SEVENTY a computed
+## checkpoint; rams 14, lambs 98, goats 7; the tenths and hins summed and labeled ours), the eighth day's own table; THE WATER LIBATION'S LETTERS as a CHECKED ROW
+## (M-28) with the three sources a parameter (the source disputed, the law agreed — Sukkah 4:9 the exam); ben Azzai's Name census as a whole-Torah row (every
+## offering-verse's divine name); the thirteen goats' heads with the new moon's "to the LORD" (Shevuot 9a); "besides" ×12 as the stack structure; 29:39 "these you
+## shall do" the calendar's CLOSE (the register gate's footer class — a row for the register gate's D census? the headers of 28-29 carry no "these are" but the
+## footer; declare). (c) THE TAPE — NO narrative event in 28-29 (the LORD's one speech; 28:1 the one frame): the laws INSTALLED at 28:1 (given_at Num 28:1;
+## installed_by — the tent's call or boot, decided at the design); the daily / weekly / monthly / festival offerings as the calendar's own TIMERS (the moadim
+## runner's dates by CALL — the tamid daily is the clock's own tick, the musafim fire on the calendar's dates); 30:1's receipt-frame read with the next draft.
+## (d) THE EXAM DOCKET by the union rule: Menachot 4:4, 44b-45b, 49a-50a, 65b-66a, 68b, 87a-88a, 110a; Mishnah Tamid 4:1 and Yoma 62b; Pesachim 58a-59a, 66a, 77a,
+## 80b-81a, 95b; Shabbat 103b, 132b; Taanit 2b-3a; Sukkah 34a, 44a, 47a-48b, 55b; Shevuot 1:4-5, 9a-13a; Rosh Hashanah 4b-5a, 16a, 32a-34a; Beitzah 12a, 19a-20b;
+## Chagigah 6a-b, 17a-18a; Berakhot 26a; Arakhin 13a; Zevachim 110b; Mishnah Menachot 4:2-4, 6:6-7, 8:4-5, 9:2-5, 10:6, Shekalim 4:1, Sukkah 4:9, Beitzah 2:4,
+## Temurah 2:1. (e) TO CHECK AT THE DESIGN: World/step9/cold_run_offerings.py — the Lev 1-8 offering-engine consolidation of 2026-09-04 stands UNTRACKED in the tree
+## (never committed, not in DAEMON_ORDER?): its status measured before the calendar's engine is designed (the callee for the offering kinds).
+
+## SITTING 9b (2026-09-11, THE COMPILE OF THE OFFERINGS CALENDAR — NUMBERS_WALK.md "Sitting 9b" design + as-built): SITTING 9's BOX PAID — (a) the parser's two
+## probes AND the fifth-verb homograph: rules 25-27 (census_probes 171/171; the corpus diff's ten verses read, no other moved); (b) THE FUNCTIONS —
+## cold_run_musafim.py 110/110 (seven cells + the watches; the tamid by CALL to the incense-shekel engine's fourteen cells, the master row by CALL to
+## Shelach's TABLE / LOGS / MONTH_ROW (READ, never re-declared), the days by POINTER — nine, all INTERNAL, from the gate's own stubs —, Leviticus 23 by CALL to
+## the moadim engine (the dates, the classes, the omer, the two sets), the stacks (16 on Tishri's first, 22 for the three days), the seventy, the letters a
+## CHECKED ROW with the four sources a parameter, ben Azzai's census an ADDRESSEE census (the two non-addressee seats of Leviticus 1-7 read off the print),
+## the thirteen goats with their vav (eleven / two bare — Shevuot 10a:11 confirmed on the ink), "besides" ×12, 29:39 the CLOSE); (c) THE TAPE — law_musafim
+## the 56th daemon, installed_by called_from_the_tent (law_moadim's form), the ONE speech line at (40, 6, 1) page_order, EIGHT PERIOD TIMERS of musaf_owed on
+## the altar keyed to the Calendar (the first on the tape; the dues matched the prediction first run), the tamid's debt READ and never rewritten; the
+## register gate: no seat of 28-29 (no count line, no receipt, no header — 30:1's frame with the next draft); (d) THE DOCKET 1,280 rows by the union rule;
+## (e) CORRECTED: cold_run_offerings.py is TRACKED (committed 250b168, in DAEMON_ORDER, law_offerings on file) — the box's "untracked" was a stale status
+## snapshot, read at the measurements before the design.
+## NEW DEBT (9b): (i) THE ALTAR TOKEN'S TWO SEATS — the registry row the_altar_of_moses (Exod 17:15) homes 'the-altar' for the tabernacle's burnt-offering
+## altar too (the erection's tamid_owed, the incense-shekel's anointing and purging, Korach's plating, the eighth day's fire, the eight musaf timers): a REGISTRY
+## SITTING to split the token (measure whether the corpus hash covers the registry table first); CT9 records the shared seat. (ii) THE MUSAF DEBIT'S LAPSE —
+## "its day passed, its sacrifice is invalid" (Berakhot 26a:17; Sifrei 144:2's "on its Sabbath"): a fired musaf_owed stays OPEN on the ledger until an
+## offering closes it; the engine has no lapse-at-the-day's-end — an engine rule owed before the first fire lands on the tape (the first due (40, 6, 8)
+## is ahead of the counter). (iii) THE DOTTED TENTH at 29:15 (Menachot 87b:5) — the puncta are not on this DB (with the large letters' debt: the store's
+## dropped marks, RESEARCH_LOG THE TENT sitting 4). (iv) THE VOWS' DEADLINE CLOCK (Deut 23:22 "you shall not delay", Beitzah 19b:8-13; Rosh Hashanah 4b) —
+## the row vow_deadline recorded; the clock belongs to chapter 30's compile (the vows). (v) 30:1's receipt-frame "according to ALL that the LORD commanded"
+## read with the next draft (the register gate's B census does not count it — a form to declare or to teach the gate). (vi) THE TRUMPETS OVER THE TEMIDIM
+## AND MUSAFIM (Num 10:10; 2 Chr 5:13 at Sukkah 51a:13) — the beha runner's cell, no token of 28-29 names them: no edge (the docket's row credited to beha).
+## (vii) the docket scan's Mishnah list keyed "Mishnah_Taanit" — the export spells Mishnah_Ta_anit (fix the list's key at the next scan).
+##
+## SITTING 10 — THE VOWS' READING (2026-09-12; NUMBERS_WALK.md "Sitting 10"; logic/oral_triage/num_30_vows_2026-09-12.md; the unit num_30_vows FROZEN) — OWED
+## TO THE COMPILE (30b, on 1b's order with the register gate at the gates step): (a) THE VOW AS A LEDGER ENTRY — the case kinds from the ink's own heads (a man's
+## vow or oath, 30:3; a daughter's in her father's house, 30:4-6; the betrothed's, 30:7-9; the widow's or divorcee's, 30:10; the married woman's, 30:11-13; the
+## affliction-oath, 30:14-16) with the CONFIRM / ANNUL state machine — silence on the hearing day confirms (irreversible: "confirmed for one hour, never
+## annulled"), restraint on that day annuls (the LORD forgives — an effect on her ledger), a vow never heard stands; (b) THE DAY-OF-HEARING TIMER — the
+## annulment window with TWO RECORDED SETTINGS (to nightfall from "on the day of his hearing"; twenty-four hours, R. Shimon ben Yochai) — a calendar_parameters
+## row, never a constant; the hearing (his own or by report) the trigger; "from day to day" and "after his hearing" the ink's two phrases; (c) THE AUTHORITY
+## TABLE — the father (in her youth, in his house; not in her maturity), the husband (the betrothed: jointly with the father; the married: alone, over vows of
+## affliction and vows between him and her — the filter of 30:14 + 30:17), none (the widow or divorcee from marriage; the mature daughter) — the father↔husband
+## likening of 30:17 the table's own rule; (d) ANNULMENT AFTER CONFIRMATION — "he shall bear her iniquity" (30:16): an effect written on the HUSBAND's ledger
+## (the suspected wife's phrase 5:31 by CALL to the sotah runner); (e) THE DELAY BAN BY CALL — Deuteronomy 23:22's "you shall not delay" (the 9b debt (iv): the
+## vow_deadline row of the musafim runner READ by CALL; Rosh Hashanah 4b's three festivals the clock; Deuteronomy 23 not compiled — OWED or PARAMETER at the
+## dependency census); (f) 30:1's RECEIPT-FRAME — "according to ALL that the LORD commanded Moses" after "and Moses SAID": a class of one for the register
+## gate to declare (the 9b debt (v)), measured at the reading; (g) THE SAGE'S RELEASE — the Sifrei's own addition ("by experts alone", 153:1), never in the
+## ink: an answer-sheet row, never code; the partial annulment (R. Yishmael / R. Akiva, 155:1) a dispute fork; the messenger (R. Yoshiyah / R. Yonatan) a
+## dispute fork; (h) THE EXAM DOCKET by the union rule — Mishnah Nedarim chapters 9-11 by topic + Nedarim 66a-87b + the link rows (Shevuot 20a-27a, Niddah
+## 45b-46a, Kiddushin 41b-42a, Rosh Hashanah 4a-6a, Chagigah 10a, Nedarim 10a-13b, 77b-78a); (i) THE PARSER — no gap; the runner's probes assert the three
+## starred oath-tokens (the seven-stem's refused homograph at 30:3, 30:11, 30:14) and the empty cardinal list; (j) THE EDGES the census will demand — the
+## nazirite's vow-identity (6:2 — naso), the sotah's "bear her iniquity" (5:31 — naso), the oath of utterance (Leviticus 5:4 — the lev_05 runner), the priest's
+## daughter "a widow or a divorced woman ... as in her youth" (Leviticus 22:13 — the priesthood runner), Deuteronomy 23:22-24 (not compiled), Numbers 32:24's
+## "what has gone out of your mouth you shall do" (the next portion — forward); (k) THE DAEMON law_vows — given_at Num 30:2 with NO divine frame: the
+## installation registry's installed_by field needs a value for a law relayed in Moses' voice ("this is the thing which the LORD commanded") — the form
+## decided at the types step, with 36:6 the same class; (l) THE TAPE — no narrative event in the chapter (Moses' speech at the counter's day, no marker);
+## the law installed at 30:2; the daughter/wife cases the scene's LITERAL submits from the Mishnah's rows.
+##
+## SITTING 10b (2026-09-12, THE COMPILE OF THE VOWS — NUMBERS_WALK.md "Sitting 10b" design + as-built): SITTING 10's BOX PAID — (a) THE VOW AS A LEDGER ENTRY —
+## cold_run_vows.py 147/147 (seven cells F1 the_man … F7 the_statutes; the state machine on the engine's own interface: vow_uttered → vow_bound debit toward
+## heaven valued by the vow label; vow_heard silent → a TIMER vow_confirmed due day + 1, or at once on confirm words; vow_restrained → cancel_timers + close +
+## vow_annulled; after the fire → iniquity_borne on the HUSBAND; the scene's tuple predicted by script and matched first run — timers set 8 / fired 5 /
+## cancelled 3 / pending 0); (b) THE DAY-OF-HEARING TIMER — the calendar_parameters row vow_annulment_window (to_nightfall; the twenty-four-hour arm of R.
+## Shimon ben Yochai recorded, UNEXERCISED), hearing_due(world) = day + 1; (c) THE AUTHORITY TABLE — REQUIRED = the man / the mature / the widow none; the
+## daughter her father; the betrothed her father AND husband; the married her husband over affliction / between (30:14 + 30:17); the wrong authority writes
+## NOTHING; (d) "he shall bear her iniquity" written on the husband, 5:31 by CALL to the naso runner's sotah; (e) THE DELAY BAN BY CALL — the musafim runner's
+## vow_deadline row READ (three festivals in any order); Deuteronomy 23:22-24 NOT compiled and NOT demanded by the token census (no token of 30:1-17 homes
+## there — the edge is Deuteronomy's own, below); (f) 30:1's RECEIPT-FRAME — the register gate's finder taught the SECOND FORM ("according to ALL that the
+## LORD commanded", eleven Torah seats; 58 → 69 receipts), 30:1 declared THE CLASS OF ONE (the only receipt on a speech; nothing to close) — the 9b debts
+## (iv) and (v) PAID; (g) THE SAGE'S RELEASE a DATA row (sage_release, never code); the partial annulment (R. Yishmael / R. Akiva / the Rabbis, three arms)
+## and the messenger (R. Yoshiyah / R. Yonatan) dispute forks as rows with the arms; (h) THE DOCKET 1,047 rows by the union rule (241 LAW; three OUTSIDE — the
+## export's empty segments); (i) THE PARSER no gap — R54-R56 the starred oath-tokens (174/174); (j) THE EDGES — five CALL (naso, vayikra5, priesthood, musafim,
+## moadim) + the registration + ONE the census demanded past the imports: vows → ordinances [widow] at 30:10, declared VIA priesthood (the status word's
+## definition at Leviticus 22:13; Exod 22:21 pairs the widow with the orphan); (k) THE DAEMON law_vows — given_at Num 30:2, installed_by BOOT with the class
+## NAMED (a law relayed in Moses' voice with no divine frame; 36:6 the same class); (l) THE TAPE — ONE line vows_law_spoken page_order at (40, 6, 1), no
+## marker, one write (commanded on israel_people, the tenth); RUN (1246, 60, 52, 0, 12, 1470, 28, 302, four pairs, 114) predicted and matched first tape run;
+## THE REST 9b's exactly; CV1-CV9 MATCH; every gate green; THE REGISTER GATE --strict GREEN after the nine second-form seats were declared from the print
+## (DECLARED 112).
+## NEW DEBT (10b): (i) THE SECOND PASS'S INSTALLED_BY QUESTION — a law in Moses' voice (30:2, 36:6) is installed_by boot NOW with the class named in the
+## registry comment; D2's second pass after Deuteronomy decides whether Moses' relay is itself an installing ACT on an institution entity (then 30:2's line
+## would install law_vows and the boot row retire). (ii) DEUTERONOMY 23:22-24 — the delay ban's own compile (its clock the three festivals, Rosh Hashanah 4b;
+## "what has gone out of your lips you shall keep" the utterance rule's second seat): until then vow_deadline is READ by CALL from the musafim runner. (iii)
+## NUMBERS 32:24 "what has gone out of your mouth you shall do" — the next portion's seat for F1's utterance rule (chapter 32's compile, forward). (iv) THE
+## TWO TEIKU ROWS — divorce_as (a divorce after the hearing as silence or as confirmation — Nedarim 71b:2-72a:8, unresolved) and hearing_required (may the
+## husband annul WITHOUT hearing — Nedarim 72b:3-73a:1, unresolved): the machine requires the hearing (the ink's own trigger) and a restraint with no pending
+## timer writes nothing; both rows carry 'unresolved' as their value — a scenario that asks either question gets the open, never a verdict. (v) THE
+## TWENTY-FOUR-HOUR ARM — vow_annulment_window's second setting unexercised; a scenario on the row's other value is owed when a case asks it. (vi) THE RECEIPT
+## FINDER'S THIRD FORM — the Genesis receipts with the other Name ("according to all that GOD commanded him", Gen 6:22, 7:9, 7:16 — Elohim, not the
+## Tetragrammaton) are NOT censused (the finder reads 3068 only): measure and teach at Genesis' register seats (off the walk's path; filed). (vii) DEUT 1:41's
+## RECEIPT IN THE PEOPLE'S OWN MOUTH ("we will go up and fight, according to all that the LORD our God commanded us"), refused by 1:42-43 — a class to declare
+## at Deuteronomy's reading (declared NONE now with the note). (viii) THE EXPORT'S EMPTY SEGMENTS — Nedarim 66b:9, 79a:10, 13b:6 carry no text: the docket's
+## OUTSIDE class; the shelf's defect list (RESEARCH_LOG). (ix) A NEW MOVE OR NOT — R. Akiva's "he shall confirm PART of it" (Nedarim 87b:1) is M-16's second
+## consonant-fragment cousin (after ben Chakinai's, exemplar 8); the catalog's own rule: a THIRD registers its own move.
+
+## SITTING 11 — MIDIAN'S READING (2026-09-12; NUMBERS_WALK.md "Sitting 11"; logic/oral_triage/num_31_midian_2026-09-12.md; the unit num_31_midian FROZEN) — PAID AT 11b (2026-09-12: every item (a)-(n) run as designed, the as-built in NUMBERS_WALK.md "Sitting 11b — AS BUILT"; the forward items — (e)'s Deuteronomy 20-21, (f)'s lev_11 vessels cell, (n)'s display glosses — carried into the 11b box below) — THE BOX AS WRITTEN AT THE READING, OWED
+## TO THE COMPILE (11b, on 1b's order with the register gate at the gates step): (a) THE MIDIAN DEBIT CLOSED — the Balak runner's commanded
+## 'harass_the_midianites' on israel_people (25:17) closed BY VALUE at 31:7's receipt "as the LORD commanded Moses" (the first of the chapter's four; the
+## 7b lesson: a close without a value takes another runner's entry); (b) BALAAM'S DEATH — 31:8 closes the ass's sword clause (the balak runner's
+## balaam_death row, two settings: by the sword at Midian / Rav's four modes); the five kings' deaths (Zur Cozbi's father — the registry's zur; the other
+## four new or a party); Joshua 13:21-22's retelling a RUN_CITATION with its three deltas; (c) THE TRUMPETS' DEBIT — the beha runner's open trumpets debit
+## (10:9's war clause) RUN at 31:6 "the trumpets of alarm in his hand" with NO SOUNDING NARRATED: the debit's class declared from the print (a run by
+## carrying, or left open — the design decides, 2 Chronicles 13:12 the phrase's other seat); (d) THE MUSTER — a count cell: 1,000 × 12 = 12,000 (31:5),
+## R. Yishmael's 24,000 a DATA setting (the doubling twice), Levi in or out a data row (the Hebrew "include", the English "exclude"); "were delivered" the
+## three readings as data; (e) THE SENTENCE — the case kinds from 31:17-18 (every male among the little ones; every woman who has known a man; the little
+## ones among the women kept) against Deuteronomy 20:13-14's war law (NOT COMPILED — OWED or PARAMETER at the census) and 21:10-14's captive woman (forward);
+## Judges 21:10-12 the RUN_CITATION (12,000 sent; the phrase; 400 kept); the Sifrei's "fit for intercourse" and R. Shimon ben Yochai's proselyte under three
+## as data rows; the a-fortiori refused on a penalty a rules-about-rules row (Sanhedrin 54a, Makkot 5b); (f) THE PURIFICATION BY CALL into the heifer runner
+## (chukat: the water of separation, the third-and-seventh-day timers, the sword's seven days at 19:16, the camp entry vs 19:19's evening) — the seven days
+## outside the camp a TIMER on the warriors; "you and your captives" the captives' sprinkling; the four materials by CALL into the carcass runner (lev_11:
+## Leviticus 11:32's list, sack for goat-work the delta — spun and woven the Sifrei's data); (g) THE KASHERING RULE a NEW CELL — the six metals (tin's one
+## Torah seat, lead's two), "everything that comes into the fire through the fire, and with the water of sprinkling; what does not, through water" — Mishnah
+## Avodah Zarah 5:12 and Avodah Zarah 75b-76b (the vessels of Midian — the whole sugya's seat) its docket; the whitening / boiling / rinsing / immersion as
+## data rows (the English's split is the Mishnah's, the Hebrew's one list the Sifrei's); Eleazar's statute "which the LORD commanded Moses" (31:21) —
+## installed_by a THIRD FORM beside boot and the verse: the priest's voice citing Moses (decided at the types step; the Sifrei's three readings data);
+## (h) THE FRACTION CLASS TAUGHT FIRST — census_probes R29 ("one held of the fifty" UNMOVED [1]) retyped to FAIL with 31:28, 31:47, Ecclesiastes 7:28,
+## Ezekiel 45:15 and Nehemiah 11:1 (read [1, 9] — the nine parts read, the ten not) beside it; the read form decided at the design (Fraction(1, 500) beside
+## the one, or the pair); the corpus diff read verse by verse after the rule; (i) THE DIVISION — the halving cell (31:27; "those who took the war" vs the
+## congregation), THE TRIBUTE cell (one of five hundred of the warriors' half to the priest — "the LORD's heave-offering", the half-shekel's phrase), THE
+## LEVITES' cell (one of fifty of the congregation's half — "who keep the charge of the tabernacle", 1:53's charge by CALL into bamidbar; Jerusalem Talmud
+## Terumot 4:3's "one of fifty" a data row if on the local shelf); THE ARITHMETIC AS CHECK CELLS — the four totals ÷ 2 = the halves (both seats), the halves
+## ÷ 500 = the tributes (675 / 72 / 61 / 32 = 840), the Levites' UNWRITTEN shares computed (6,750 / 720 / 610 / 320 = 8,400, ten times the priest's), every
+## total a multiple of a thousand; the soldiers' private plunder (31:53) outside the count; (j) THE REGISTER GATE'S EIGHT SEATS PAID from the print — the
+## receipts 31:7 (CLOSE — the Midian debit), 31:31 / 31:41 / 31:47 (the division's command 31:26-30 and its runs: a spec/run pair), the count lines 31:35,
+## 31:36, 31:40, 31:46 (the spoil's persons are captives, not Israel's population — the class the print gives; each paid seat's KEY AND BODY deleted);
+## (k) THE OFFICERS' GOLD BY CALL into the half-shekel engine (incense_shekel: the count taken with none missing, "to atone for our souls" — Exodus 30:15-16's
+## words; "a memorial before the LORD" — 30:16's; no_plague_at_counting / half_shekel_owed the cells to read) — a REFERENCE by the shared words; the five
+## ornaments and the 16,750 shekels a ledger value on the tent; Shabbat 64a-b the docket (the kumaz, the clasp; the atonement "for our souls"); (l) THE TAPE —
+## the chapter undated: its lines page_order after chapter 30's line at (40, 6, 1), no marker; "afterward you shall be gathered to your people" a SEQUENCE
+## constraint — Moses' death after the war (a checkpoint at Deuteronomy 34); the events: the command (speech), the muster and the sending (acts), the war
+## (act — closes the debit), the kings and Balaam killed (act), the spoil brought (act), the wrath (speech), the sentence (speech), Eleazar's statute (speech —
+## a law), the division (speech), the runs (acts with receipts), the gold (act); the entities midian, balaam, zur, eleazar, pinchas existing; (m) THE EDGES
+## the census will demand — balak (the debit, Balaam, Zur, the plague, "the matter of Peor"), beha (the trumpets), chukat (the heifer's water, the schedule,
+## the sword), lev_11 (the vessels), incense_shekel (the ransom), bamidbar (the charge), naso? (the sotah's "treachery against the LORD" — 5:6), Deuteronomy
+## 20:13-14 and 21:10-14 (not compiled — forward), Judges 21 and Joshua 13 (run citations), 1 Samuel 30:24-25 and Joshua 22:8 (OBSERVED at the reading — no
+## teacher on the declared shelf: no link, or a labeled HYPOTHESIS); (n) THE DISPLAY LAYER, NOT THE COMPILE'S — chapter 19's four "sin" glosses of the
+## purify-verb (19:12 ×2, 13, 20) carry the same Strong's homonym as 31:19-23's: override rows owed at a display sitting.
+
+
+## SITTING 11b — THE COMPILE OF MIDIAN (2026-09-12; NUMBERS_WALK.md "Sitting 11b" design + as-built; the owner: "Go" after the #145 rereads; the sitting-11
+## box (a)-(n) PAID): cold_run_midian.py 99/99 (seven cells, six engines CALLED — balak, beha, chukat, shemini, incense_shekel, bamidbar), law_midian the 58th
+## daemon (given_at Num 31:21; installed_by boot with THE THIRD RELAYED FORM named), the tape's THIRTEEN lines page_order at (40, 6, 1) with six closes BY
+## VALUE and six timers by chukat's dues; RUN (1259, 66, 52, 0, 12, 1505, 29, 311, four pairs, 120) predicted and matched first tape run; THE REST 10b's
+## exactly; CX1-CX9 MATCH; the parser's rule (28) THE RATIO "one of the N" (nine verses moved, all read); THE REGISTER GATE --strict GREEN with the nine seats
+## PAID (each key and body deleted; DECLARED 103); every gate green but the cursor's (i).
+## NEW DEBT (11b): (i) THE CURSOR'S AUDIT AND THE LATER CLOSE — cursor_probes.py 1/6 (K3 alone passes) with no line of the cursor changed: the first close on
+## the tape AFTER the probes' cursor (Num 27:1) of an entry written BEFORE it (the trumpets 10:2 -> 31:6; the Balak debit 25:17 -> 31:7); the engine's log holds
+## the ledger entry by reference and close() writes closed_by / closed_day into it, so the journal's run.write line carries the entry's FINAL state and the
+## replay to the cursor can never be byte-identical (RESEARCH_LOG 2026-09-12, item 5). A DESIGN DECISION (THE LOOP steps 1 and 4): the recommended fix a
+## write-time snapshot in the log and a run.close line of its own (a tenth log class; the ledger view's closed_by / day_closed read from it; the journal gate's
+## counts gain a column) — the owner's word; the gate RED until then. PAID THE SAME DAY (2026-09-12; the owner: "I accept your recommendation"): THE CLOSE LINE built
+## in three files on THE LOOP's order — THE_LOOP.md "Step 1's amendment — THE CLOSE LINE" (design + as-built); run.close the tenth class; the write line a snapshot;
+## journal_probes J7, view_probes V1 retyped, cursor_probes 6/6 again; the journal gate GREEN with closed = closes; the RUN tuple unmoved. (ii) THE LEVITICUS 11 RUNNER'S VESSELS CELL — cold_run_shemini.py has no cell for 11:32's
+## list (vessel of wood, garment, skin, sack; "into water it shall be brought"; unclean until evening): 31:20's four materials compared ON THE DB in the Midian
+## runner and the carcass GRADE read by CALL; the cell owed at shemini (the edge midian -> shemini a TRANSFER taught — Shabbat 64a:7-8, 64a:15; Bava Kamma
+## 25b:6; Sifrei 157:8). (iii) DEUTERONOMY 20:13-14 AND 21:10-14 — the war law's women and little ones (this chapter stricter on both) and the captive woman:
+## NOT COMPILED, forward to Deuteronomy's walk; Sotah 43a:9's priest anointed for war speaking on Deuteronomy 20:5 with it (the sentence of 31:17-18 stays
+## commanded on the-officers-of-the-host OPEN FOREVER — a command with no narrated run, by design, not a debt). (iv) THE SECOND PASS'S INSTALLED_BY — THE THIRD
+## RELAYED FORM: a statute in the PRIEST'S voice citing the LORD's command to Moses (31:21) installed_by boot with the class named beside 30:2's (Moses' voice, no
+## divine frame) and 36:6's (the relayed output); Menachot 77b:20 witnesses the division's rates as "not practiced for all generations" and Eruvin 63a:24 reads
+## the relay as a fault — D2's second pass decides whether such a statute installs at all and by what act. (v) DEUTERONOMY 32:30's JOIN — the parser reads "a
+## thousand | and two" as [1, 1002] under the etnachta (the mid-verse pause): the class measured (163 Tanakh seats right, this poetic seat alone wrong) — no rule;
+## census_probes R61 types the false reading as the tripwire; Deuteronomy's walk may teach the poem's parallelism. (vi) THE BALAK ROWS' SHAPE — BK.DATA's
+## cozbi_and_zur and midian_command_run carry value + source with no settings (rows for facts, not parameters); the Midian runner reads the value as the row's
+## one setting; whether every DATA row must carry settings is a registry rule for the second pass. (vii) THE DISPLAY LAYER — chapter 19's four "sin" glosses
+## of the purify-verb (the reading's (n)) still owed at a display sitting. (viii) 1 SAMUEL 30:24-25 / JOSHUA 22:8 — the equal halves OBSERVED at 31:27, no row
+## of the declared shelf links them: no link filed (THE LINK REVIEW LAW); a teacher may appear at Samuel's reading. (ix) THE JERUSALEM TALMUD'S RECENSION —
+## Terumot 4:3:3's thirty / fifty / sixty confusions (the editor's notes inside the text) read as the shelf's own, not adjudicated: levites_rate_reading's arms
+## carry them. (x) FIVE EARLIER CHECKPOINTS RETYPED BY THE SITTING'S OWN ARITHMETIC — CL8 (the Midian debit CLOSED), CT2 (timers 66), CT9 / CV2 / CV9
+## (entities 311, closes 120): a checkpoint that declares a count "UNMOVED" moves at the next sitting that moves it — the form should declare the count AS OF
+## its sitting (a checkpoint-writing convention, for THE_STEPS' compiler block at the next sitting).
+
+## SITTING 12 — GAD AND REUBEN'S READING (2026-09-12; NUMBERS_WALK.md "Sitting 12"; logic/oral_triage/num_32_gad_reuben_2026-09-12.md; the unit
+## num_32_gad_reuben FROZEN) — OWED TO THE COMPILE (12b, on 1b's order with the register gate at the gates step): (a) THE STIPULATION'S LEDGER SHAPE —
+## the two tribes' request (32:1-5) a plea; Moses' condition (32:20-24) opens a DEBIT on the two tribes (to cross armed before the LORD until the land is
+## subdued) with the possession ENTITLED on it (32:22 "this land shall be yours for a possession") and the negative arm's outcome a DATA row (32:23 "you
+## have sinned... your sin will find you"; 32:30 "they shall have possessions among you in Canaan"); the acceptance (32:25-27, 31-32) the commitment; the
+## grant (32:33) written as TRANSFERS to three parties (the kingdoms of Sihon and Og from the chukat runner's conquests, 21:24, 35); the RELEASE a RUN
+## OUTSIDE THE TORAH — Joshua 22:1-9 ("you have kept all that Moses commanded you... return to your tents") — the Jabesh-gilead class: the debit stays OPEN
+## on the tape by design (as the captives' sentence does), declared in the design, Joshua 22:2-4, 9 the RUN_CITATION; (b) THE DOUBLED CONDITION as the
+## exam's rule — Mishnah Kiddushin 3:4 (the stipulation doubled, the positive before the negative, the condition before the act: R. Meir against R.
+## Chanina ben Gamliel) with Kiddushin 61a-62a, Bava Metzia 94a, Gittin 75a-b, Nedarim 11a its docket; the second doubling (32:29-30) to the commission —
+## the vows' docket's forward edge (10b) PAID here; (c) THE UTTERANCE RULE'S SECOND SEAT — 32:24 "that which has gone out of your mouth you shall do" by
+## CALL into the vows' runner (cold_run_vows's 30:3 cell): 10b's filed debt (Deuteronomy 23:22-24 and 32:24) paid at 12b; Jephthah's daughter (Judges
+## 11:36) a RUN_CITATION; (d) THE CLEARANCE — 32:22 "clear before the LORD and before Israel" a STATUS effect (registered first) with Mishnah Shekalim 3:2 +
+## Yoma 38a its docket (the two Exodus dockets' rows re-read); (e) THE OATH RETOLD — checkpoints against chapter 14's tape lines (the shelach runner's
+## forty years and its pending thirty-eight, the doomed generation "from twenty years old and upward" — the census formula by CALL into bamidbar / census2;
+## "until all the generation was consumed" against Deuteronomy 2:14's thirty-eight years at the tape's counter; the verb "swore" supplied — a data note);
+## Caleb "the Kenizzite" (Genesis 15:19's nation) a DATA row (Sotah 11b-12a's Caleb if on the shelf); (f) THE TWO AND A HALF'S COUNT — 26:7 + 26:18 + 26:34
+## ÷ 2 = 110,580 by CALL into the second census, Joshua 4:13's "about forty thousand" a RUN_CITATION (the ink's own ratio, no shelf row); 1 Chronicles
+## 5:18's 44,760; (g) THE CITIES as DATA rows — the nine asked (32:3), Gad's eight and Reuben's six built (32:34-38), the two renamed (Nebo, Baal Meon —
+## the exam's idol-names if a row is found), the two crossed in Joshua 13 (Dibon, Heshbon), Dibon Gad (33:45-46 — the next chapter's own witness, a
+## forward pointer), the prophets' ten (Isaiah 15-16, Jeremiah 48, Ezekiel 25:9 — run citations of Moab's later hold); (h) MACHIR, JAIR AND NOBAH — three
+## acts (took Gilead, took the villages, took Kenath) with the grant to Machir (32:40) a transfer; Jair's TWO LINEAGES a DATA row (32:41's "son of
+## Manasseh" against 1 Chronicles 2:21-22's grandson of Hezron); Havvoth Jair's six seats; (i) THE REGISTRY ROWS — the sons of Gad, the sons of Reuben,
+## the half tribe of Manasseh (34:14-15's next seats), Machir, Jair, Nobah; THE HOMOGRAPH TRAPS: Jair the judge (Judges 10), Jair Mordecai's father (Esther
+## 2:5), Machir son of Ammiel (2 Samuel 9), Nobah the place (Judges 8:11); (j) THE REGISTER GATE — no receipt "as the LORD commanded" and no count line in
+## the chapter (32:11's twenty and 32:13's forty are the oath's, not a census): the gate's seats in 32 measured at the compile's measurements step, declared
+## from the print; (k) THE TAPE — the chapter undated: its lines page_order after chapter 31's thirteen at (40, 6, 1), no marker; the events: the request
+## (speech), the rebuke (speech — the oath quoted, no divine frame), the offer (speech), the condition (speech — a law-like stipulation in Moses' voice),
+## the acceptance (speech), the commission (speech), the grant (act — three transfers), the building (acts), Machir–Jair–Nobah (acts); the entities moses,
+## eleazar, joshua, caleb existing; (l) THE DAEMON — a chapter with NO DIVINE FRAME: if a law is registered (the stipulation's rule), installed_by BOOT with
+## the class NAMED as 30:2's (a law in Moses' voice) — the second pass's D2 to decide; the alternative: no daemon, the stipulation a case on the tent's
+## form (a plea brought to Moses, Eleazar and the princes — 27:2's triad) — decided at the design; (m) THE EDGES the census will demand — vows (the
+## utterance, the hinder-root), shelach (the spies, Eshcol, Kadesh Barnea, Caleb, the forty years), chukat (Sihon, Og, Jazer, "its daughters"), census2
+## (26:7, 18, 29-34), zelophehad (Machir's line 27:1, 36:1), balak (25:3-4's anger phrases), bamidbar (the census formula), incense_shekel (Exodus 30:14's
+## formula seat); Deuteronomy 3:12-20 and Joshua 1:12-18, 4:12-13, 22:1-9 forward run citations; Judges 5:16, 8:11, 11:10, 36, Genesis 13, 44:16, 1
+## Chronicles 22:18 OBSERVED — no link, or a labeled HYPOTHESIS; (n) THE DOCKET by the union rule — Kiddushin 3:4 + 61a-62a, Bava Metzia 94a, Gittin
+## 75a-b, Nedarim 11a, Shevuot 36a; Shekalim 3:2 + Yoma 38a, Pesachim 13a; Bava Batra 117a-122a (the division of the land — the two and a half); Sotah
+## 34b-35a; Sanhedrin 111a; the Tanchuma on the cattle before the children OUTSIDE the declared spine; (o) THE DISPLAY LAYER, NOT THE COMPILE'S — the
+## store's "and-eye" for the answer-verb and "and-be" for the approach-verb stand at many seats beyond this chapter (37 and 544 tokens of the two glosses,
+## most of the second the verb "to be"): a display sitting's census, the chapter's eleven seats overridden by reference at the reading.
+## SITTING 12b — THE COMPILE OF GAD AND REUBEN (2026-09-12; NUMBERS_WALK.md "Sitting 12b" design + as-built; the owner: "Go" after the #149 rereads; the
+## sitting-12 box (a)-(o) PAID): cold_run_gad_reuben.py 74/74 (eight cells, five engines CALLED — vows, shelach, chukat, second_census, bamidbar),
+## law_gad_reuben the 59th daemon (given_at Num 32:20; installed_by boot with the class named — a stipulation in Moses' voice with no divine frame, 30:2's
+## class), the tape's TWELVE lines page_order at (40, 6, 1) with ONE close BY VALUE (the build debit) and TWO debits OPEN BY DESIGN (the crossing, the
+## commission's charge — the release Joshua 22:1-9 outside the Torah); RUN (1271, 66, 52, 0, 12, 1518, 30, 318, four pairs, 121) predicted and matched first
+## tape run; THE REST 11b's exactly; CY1-CY9 MATCH; THE REGISTER GATE --strict GREEN with nothing to pay; every gate green. THE NEW DEBTS: (i) THE RELEASE
+## OUTSIDE THE TORAH — the-sons-of-gad-and-reuben's cross_armed_before_the_lord_until_the_land_is_subdued and the-dividers-of-the-land's
+## give_them_gilead_if_they_cross stand OPEN on the tape by design (Joshua 1:12-18, 4:12-13, 22:1-9 the runs; the same class as the captives' sentence
+## 31:17 and Caleb's Hebron 14:24): STEP 6 THE READBACK's item — a run outside the Torah closing a Torah debit; (ii) THE JUBILEE'S REACH EAST — 'for a
+## holding' (32:5, 22, 29, 32) dispositioned PARAMETER to yovel (the east as the holding's PLACE): whether the jubilee's return (Lev 25:10, 13) reaches
+## holdings beyond the Jordan is a question no row of the docket carries — a registry sitting or Deuteronomy's; (iii) THE INSTALLED_BY CLASS (D2, the
+## second pass): law_gad_reuben installed_by boot with the class named — a stipulation in Moses' voice with no divine frame (30:2's class at a second seat,
+## beside 31:21's priest's relay and 36:6's relayed output); (iv) DEUTERONOMY 3:12-20 and JOSHUA 1:12-18, 22:1-9 — the retellings and the release compiled
+## at Deuteronomy and (for Joshua) at THE READBACK: Deuteronomy 3:18's "you" extending the crossing to half Manasseh (the DATA row half_manassehs_
+## stipulation), 3:20's "until the LORD gives rest" the release's own words at Joshua 22:4; (v) CALEB THE KENIZZITE — the shelf's stepfather Kenaz (Sotah
+## 11b; Temurah 16a) outside this docket: the DATA row caleb_the_kenizzite carries the ink's arm alone — Deuteronomy 1:36's Caleb or Joshua 14:6's the seat
+## to pay it; (vi) THE CATTLE BEFORE THE CHILDREN — the Tanchuma's reading OUTSIDE the declared spine: the DATA row the_order_of_the_offer carries the
+## ink's two orders alone (a Tanchuma pass a spine sitting's business); (vii) THE DISPLAY LAYER — as the sitting-12 box's (o): the store's "and-eye" and
+## "and-be" at many seats beyond this chapter (a display sitting's census); (viii) JAIR'S TWO LINEAGES AND THE JUDGE — 1 Chronicles 2:21-23's Hezron and
+## Judges 10:3-5's Jair (thirty cities "called Havvoth-jair to this day") stand as DATA rows with the ink's arms; the Prophets' and the Writings' own runs
+## (Joshua 13:30, 1 Kings 4:13) at THE READBACK. Filed this sitting for the walk's watches (memory): THE STITCHER'S RESERVED FIELD NAMES (a submit field
+## named `until` is re-based as a day — the recorder ran twice), A CHECKPOINT PREFIX IS A NAMESPACE (the design's CG1-CG9 renamed CY1-CY9 — Genesis's
+## block holds CG), EVERY GLOBAL-COUNT CHECKPOINT IS RETYPED FROM ONE GREP READ WHOLE (CT9 missed at the first pass), AN ENTITY IS A WRITTEN-ON PARTY.
+
+## SITTING 13 — THE JOURNEYS' READING (2026-09-12; NUMBERS_WALK.md "Sitting 13"; logic/oral_triage/num_33_journeys_2026-09-12.md; the unit
+## num_33_journeys FROZEN) — OWED TO THE COMPILE (13b, on 1b's order with the register gate at the gates step): (a) THE STATIONS' SHAPE — the design's
+## question: a DATA LIST of the forty-two places (Rameses and forty-one camps, each with its first telling's verse and its run citations — the dated
+## stations are ALREADY MARKERS on the tape: Rameses / Succoth (Exodus 12:37), Sin (16:1), Sinai (19:1), Kibroth-hattaavah and Hazeroth (11:34-35), Paran
+## (12:16), Kadesh (20:1), Mount Hor (20:22), Oboth and Iye-abarim (21:10-11), the plains of Moab (22:1)), or tape lines for the itinerary's OWN stations
+## (the eleven named nowhere else, the Red Sea camp, Dophkah, Alush, Rithmah, Zalmonah, Punon) — a RETELLING NEVER WRITES AN ACT TWICE (the tape's lines
+## for chapter 33 page_order at (40, 6, 1) after chapter 32's twelve, no new marker unless the design places one); (b) 33:2 MOSES WROTE — an act (the
+## four writings: Exodus 24:4's on the tape at the covenant? measured); (c) THE RUN OF EXODUS 12:12 — "on their gods the LORD executed judgments" (33:4):
+## if the exodus story's spec (12:12 "I will execute judgments") left a DEBIT open on Heaven's docket, 33:4 closes it BY VALUE forty years on (the crown to
+## look for at the measurements); 33:3's date a dated retelling of the exodus marker (the fifteenth of the first month — the tape's own day, checked);
+## (d) 33:38-39 THE DATE CHECKPOINT — the itinerary's (40, 5, 1) against the tape's marker at 20:28 (built from this verse — the compile asserts the
+## identity from the tape's side); Aaron's 123 against Exodus 7:7's 83 on the ledger (+ 40 by the era) and Moses' 120; (e) 33:40 ARAD a RUN_CITATION of
+## the chukat runner's line at (40, 5, 1) (taken_captive) — the hearing alone; Rosh Hashanah 2b-3a's reading (the news of Aaron's death) the docket's;
+## (f) THE COMMAND 33:50-56 — a law in the DIVINE voice (given_at 33:50, installed_by the verse — the first daemon of the walk since 30:2's class that is
+## NOT in Moses' voice): the dispossession a DEBIT on israel_people (commanded: drive out the inhabitants) OPEN BY DESIGN — its runs Joshua's (the
+## Jabesh-gilead class again, THE READBACK's item), Joshua 23:13 and Judges 2:3 the negative arm's runs; the iconoclasm's THREE OBJECTS — the figured stone
+## by CALL into the runner that compiled Leviticus 26:1 (the tochacha's or the behar's — measured), the molten image the calf's word (Exodus 32:4's runner),
+## the high places against Leviticus 26:30's curse EFFECT (the same verb — a spec/curse pair on one object); "possess the land and dwell in it" a status;
+## (g) THE LOT by CALL into the second census's cell (C2.the_land('by_lot') — VIA second_census as at 32:18) — 33:54's restatement with the verb's number
+## switching a DATA row; (h) THE NEGATIVE ARM (33:55-56) a DATA row (the outcome "thorns in your eyes and pricks in your sides"; "as I thought to do to
+## them" — Isaiah 14:24's phrase) with no verdict on the tape; (i) THE REGISTER GATE — "by the mouth of the LORD" at 33:2 and 33:38 (the cloud's and the
+## census's receipt class of chapters 3-4 and 9): the gate's seats in 33 measured at the compile's measurements step, declared from the print; no count
+## line, no "as the LORD commanded"; (j) THE DEUTERONOMY DIVERGENCE a DATA row — Deuteronomy 10:6-7's order (Bene-jaakan then Moserah) and its place for
+## Aaron's death against 33:30-31 and 33:37-38 (the local Talmud scanned for the eight backward journeys; the Jerusalem Talmud's rows if local);
+## (k) THE EDGES the census will demand — exodus_story (12:37, 13:20, 14:2, 15:22-27, 16:1, 17:1, 19:2; 12:12's spec), beha (10:12, 11:34-35, 12:16),
+## shelach (13:3, 26), chukat (20:1, 20:22-29, 21:1-11), balak (22:1, 25:1), second_census (26:52-56), zelophehad (27:12), gad_reuben (32:34 Dibon),
+## tochacha (Leviticus 26:1, 26:30), holiness (19:4), the calf's runner (Exodus 32:4); Deuteronomy 10:6-7, 1:2-3, 34:7; Joshua 5:10-12, 23:13; Judges
+## 2:3; 1 Kings 6:1 forward; Genesis 14:7, Psalm 77:21, Isaiah 14:24, Nehemiah 9:11 OBSERVED — no link, or a labeled HYPOTHESIS; (l) THE DOCKET by the
+## union rule — Rosh Hashanah 2b-3a (the first of Av; Arad's hearing), Kiddushin 37b-38a (the morrow of the Passover, the manna's ceasing — Joshua 5:11),
+## Seder Olam 9-10 if local, Bava Batra 117a-122a (credited to the second census's docket), Megillah 22b (the figured stone, Leviticus 26:1), Zevachim
+## 112b-119b (the high places' eras), the link rows for 33:4, 33:38, 33:52-55; the Tanchuma on the forty-two OUTSIDE the declared spine; (m) THE DISPLAY
+## LAYER, NOT THE COMPILE'S — the store's "the-pretermission" for the Passover, "in-pebble" for the lot and "and-grave" for wrote stand at seats beyond
+## this chapter (a display sitting's census); the chapter's twenty-one seats overridden by reference at the reading; (n) THE PARSER — no rule owed; THE
+## DATE READER'S TWO FORMS (33:38's article-bearing ordinals against Deuteronomy 1:3's cardinals) noted for Deuteronomy's date checkpoints, not a gap here.
+## SITTING 13b — THE COMPILE OF THE JOURNEYS (2026-09-12; NUMBERS_WALK.md "Sitting 13b" design + as-built; the owner: "Go" after the #152 rereads; the
+## sitting-13 box (a)-(n) PAID — (a) the stations a DATA ROW built from the DB, the tape's camps read against it; (b) the writing the chapter's own act,
+## the four writings a DATA row; (c) the run of Exodus 12:12 the act's FIRST telling — no debit stood open, a status on Egypt written; (d) the date
+## checkpoint CZ5 — the marker's (40, 5, 1) and the ages' checksum; (e) Arad a run citation, CZ6; (f) the command's daemon with two debits OPEN BY DESIGN,
+## the three objects by CALL and by OWED; (g) the lot by CALL, cited not rewritten, CZ7; (h) the negative arm a DATA row with the shelf's three runs;
+## (i) the register gate's two seats measured — the mouth-phrase not a class, nothing to pay; (j) the Deuteronomy divergence a DATA row with the shelf's
+## retreat; (k) the edges declared — ten CALL, one OWED, the census's three demands read; (l) the docket 196 rows by the union rule with the cut declared;
+## (m) the display layer as filed; (n) no parser rule): cold_run_journeys.py 53/53 (five cells, ten engines CALLED — exodus_story, pesach, beha, shelach,
+## chukat, balak, second_census, gad_reuben, erection, holiness), law_journeys the 60th daemon (given_at Num 33:50; installed_by boot with the class named
+## — a law in the divine voice spoken in the plains of Moab), the tape's THREE lines page_order at (40, 6, 1) with NO close and TWO debits OPEN BY DESIGN;
+## RUN (1274, 66, 52, 0, 12, 1522, 31, 318, four pairs, 121) predicted and matched first tape run; THE REST 12b's exactly; CZ1-CZ9 MATCH; THE REGISTER
+## GATE --strict GREEN with nothing to pay; every gate green. THE NEW DEBTS: (i) LEVITICUS 26:1-2's OWN COMPILE — the idols, the graven image, the pillar,
+## the figured stone; the sabbaths and the sanctuary: NO CELL in the tochacha runner (its span declares 26:1-46; the dependency gate's own advisory names
+## 26:1-2 uncited); journeys → tochacha OWED on the figured stone and the high places' curse (26:30 — 'your high places' in the tochacha's token table
+## only); Megillah 22b:11-13 (Ulla's stone floor; the outstretched limbs) the first exam rows for that sitting; (ii) THE DISPOSSESSION AND THE IMAGES —
+## israel_people's commanded dispossess_the_inhabitants_and_possess_the_land and destroy_their_images stand OPEN on the tape by design: the runs Joshua's
+## (Joshua 4 the crossing's purpose — Sotah 34a:5; 23:13 and Judges 2:3 the negative arm's runs; 2 Kings 23 the images' last): STEP 6 THE READBACK's
+## items beside the crossing's debit of 32 and Caleb's Hebron; (iii) THE INSTALLED_BY CLASS (D2, the second pass): law_journeys installed_by boot with
+## the class named — a law in the divine voice in the plains of Moab; law_musafim at 28:1 in the same plains stands called_from_the_tent (9b's choice):
+## the two settings side by side, D2 to unify; (iv) DEUTERONOMY — 10:6-7's order and Moserah (the DATA row the_deuteronomy_order; the Sifrei on
+## Deuteronomy not declared), 1:3's cardinal date by the number reader (a date checkpoint at Deuteronomy takes both readers), 34:7's 120 (Moses' death),
+## 11:31's "when you pass over the Jordan", 7:5 and 12:2-3's iconoclasm lists (by CALL into the erection runner now; Deuteronomy's own compile later);
+## (v) JOSHUA 5:10-12 — the morrow of the Passover at the run's other end and the manna's ceasing: the exodus story's manna (Exodus 16:35 'forty years')
+## carries no timer to (41, 1, 16) — the provision's end fires at THE READBACK; (vi) THE HOMOGRAPHS FILED FROM THE RUNNER MEASURE — "that is Kadesh" /
+## "it is holy" (three of the pair's five seats; the reading ledger's CORRECTIONS block appended) and "the wilderness of Etham" / "speaking with them"
+## (Exodus 34:33): a bare pair is not a place name without its prefix — the census lesson; (vii) THE DISPLAY LAYER — as the sitting-13 box's (m). Filed
+## this sitting for the walk's watches (memory): A GLOBAL COUNT IS ANY COUNT OVER A LEDGER (CV2 and CX2 moved on Israel's commanded entries — grep every
+## count over one effect on one party, not the entity and close counts alone), THE VIA ROW CARRIES ITS TARGET (`via:` — the gate reads "VIA None" without
+## it), THE TAPE'S VALUE HEAD IS MATCHED BY PREFIX (the plains' status runs past the head's split), A TOKEN TYPED FROM MEMORY FALLS ON ITS OWN LESSON'S
+## VERSE (Joshua 23:13's lamed), THE HAND'S TALLIES AGAINST THE MACHINE'S COLUMNS (twenty / eighteen typed where the DATA row counts eighteen / seventeen).
+
+## SITTING 14 — THE BORDERS' READING (2026-09-12; NUMBERS_WALK.md "Sitting 14"; logic/oral_triage/num_34_borders_2026-09-12.md; the unit
+## num_34_borders FROZEN) — OWED TO THE COMPILE (14b, on 1b's order with the register gate at the gates step): (a) THE FOUR SIDES AS A DATA ROW — the
+## border's named points in order (the south 34:3-5: the wilderness of Zin, Edom, the Salt Sea, the ascent of Akrabbim, Zin, Kadesh-barnea, Hazar-addar,
+## Azmon, the brook of Egypt, the sea; the west 34:6: the great sea; the north 34:7-9: the great sea, Mount Hor, Lebo-hamath, Zedad, Ziphron, Hazar-enan;
+## the east 34:10-12: Hazar-enan, Shepham, Riblah, Ain, the sea of Chinnereth, the Jordan, the Salt Sea) with their kin seats (Joshua 15:1-4, 12; Ezekiel
+## 47:15-20) and the two Mount Hors (the chukat runner's two_mount_hors row cited, not rewritten); the spec of the land's extent spoken, no act on the tape
+## unless the design places the spec as ONE line (the journeys' shape: a list-valued write on the people); the four promised extents (Genesis 15:18, Exodus
+## 23:31, Deuteronomy 1:7, 11:24; Joshua 1:4) and Ezekiel's order DATA rows with no verdict; (b) THE LOT — 34:2's "shall fall to you as an inheritance" and
+## 34:13's "you shall inherit by lot" cite the second census's cell (C2.the_land('by_lot') — VIA second_census, as at 32:18 and 33:54); (c) THE NINE AND A
+## HALF — 34:13-15's "the two tribes and the half tribe have taken their inheritance" is a RUN CITATION of the Gad runner's grant on the tape (32:33's three
+## holding_given transfers; the two and a half's 110,580 off the population table) — read the ledger's own lines, write nothing twice; Joshua 14:2's receipt
+## "as the LORD commanded by the hand of Moses" quoting 34:13 OUTSIDE THE TORAH — THE READBACK's class (the Jabesh-gilead and the release at Joshua 22 kin);
+## (d) THE COMMISSION 34:16-29 — the dividers named (Eleazar, Joshua, the ten princes): a tape line whose value is the list (as journeys_written's), or a
+## DATA row; NO ENTITY for a named-but-not-written-on party (12b's lesson); the ten princes against chapter 1's twelve, the spies' twelve and Joshua 22:14's
+## ten as DATA; (e) THE REGISTER GATE'S NUM 34 HEADERS SEAT — "these are the names of the men" at 34:17 and 34:19 (the register-header class), declared NONE
+## with the why "chapters 34-36 NOT YET WALKED": PAID (the roster as the line's value) or HELD with the why refreshed at the gates step (10b's lesson); no
+## count line, no receipt, no footer in the chapter (measured at the reading: the closer 34:29 is not the receipt form); (f) THE PARSER — no rule owed; the
+## distributive doubling reads [1, 1] (right: two tokens, "each" the idiom's sense) — a class named, not a gap; the construct "two of" at 34:15 and "nine" at
+## 34:13 right; (g) THE EDGES the census will demand — second_census (26:52-56), gad_reuben (32:33, 32:19), shelach (13:6 Caleb, 13:21 the spies' range,
+## 14:30, 14:38), chukat (20:22-23 Mount Hor — the OTHER Hor; the two-Hors row), bamidbar (1:5-15 the roster's form, 1:10 Ammihud), naso (7:11 the
+## distributive), korach (17:21 the rods' distributive), zelophehad (27:19-22 Eleazar and Joshua), journeys (33:51, 33:54), the erection runner (Exodus
+## 27:9, 27:13 the court's south and east sides — REFERENCE by the side-word and "eastward, toward the sunrise"), the sotah runner (5:23 the blotting verb —
+## FALSE, a homograph by sense: the border reaches, the priest blots), Genesis 14:3 (the Salt Sea's identity clause) and 15:18 (the covenant's river)
+## OBSERVED; Joshua 13:7, 14:1-2, 15:1-12, 18:20, 19:49-51, 21:5-6, 22:14, Ezekiel 47:13-20, 48:1, 28, 1 Kings 8:65, 2 Kings 14:25 FORWARD — no link, or a
+## labeled HYPOTHESIS; (h) THE DOCKET by the union rule — Gittin 8a (34:6's "and its border": the islands in the sea; the borders of the land for the
+## commandments), Kiddushin 36b-37a (the commandments bound to the land), Mishnah Sheviit 6:1 and 9:2 (the three lands), Bava Batra 117a-122a (credited to
+## the second census's docket), Sanhedrin 16a (the tribe's court and its prince), the link rows for 34:2 (Sifrei 1:2 credited), 34:6, 34:13, 34:18; the
+## Tosefta of the boundaries (Sheviit 4:11) if local; (i) THE DISPLAY LAYER — done at the reading (fifty-nine rows); the store's bare "seas" gloss beyond
+## the chapter (the sea and the seas one gloss) a display sitting's census; (j) THE CHECKPOINT PREFIX — grepped before naming (CZ taken at 13b; CG Genesis's);
+## (k) THE TWO ORDERS — Numbers' south-west-north-east against Ezekiel's north-east-south-west, and the roster's order against the twelve, DATA rows.
+## SITTING 14b — THE COMPILE OF THE BORDERS (2026-09-13; NUMBERS_WALK.md "Sitting 14b" design + as-built; the owner: "Go" after the #155 rereads; the
+## sitting-14 box (a)-(k) PAID — (a) the four sides a DATA ROW built from the DB and ONE STATUS on the land of Canaan (the standing place entity), the
+## points by side with their Joshua 15 and Ezekiel 47 kin, the two Mount Hors READ from the chukat runner, the promised extents and Ezekiel's order DATA
+## rows with no verdict; (b) the lot by CALL — VIA second_census at 34:2 and 34:13, the open debit cited a third time, CW3; (c) the nine and a half a RUN
+## CITATION of 32:33's three transfers, 110,580 by CALL, CW4 — the restatement writes nothing; Joshua 14:2's receipt outside the Torah; (d) the commission
+## a STATUS and a DEBIT on the standing party the_dividers_of_the_land (12b's row; no entity for the ten princes) and TWELVE NAMED ROWS in the population
+## table; (e) THE REGISTER GATE'S NUM 34 HEADERS SEAT PAID — the roll's persons as rows (as_of Num 34:17-29), the NONE declaration deleted, the gate's D
+## section ROWS 12; (f) the parser — no rule owed, the doubling [1, 1]; (g) the edges declared — nine CALL by reference, the census's two demands read
+## (family VIA at six seats with 34:5's brook a homograph by sense; offerings FALSE at 34:27 — Shelomi against the peace offerings); the erection runner's
+## court sides corrected to the sanctuary_build runner's span, no demand made; (h) the docket 171 rows by the union rule with the Tosefta found local;
+## (i) the display layer as filed; (j) the checkpoint prefix CW grepped free; (k) the two orders DATA rows): cold_run_borders.py 56/56 (five cells, nine
+## engines CALLED — second_census, gad_reuben, shelach, chukat, bamidbar, naso, korach, zelophehad, journeys), law_borders the 61st daemon (given_at Num
+## 34:1; installed_by boot with the class named — a law in the divine voice relayed at 34:13 in 36:5's form), the tape's THREE lines page_order at
+## (40, 6, 1) with NO close, 3 writes and 12 rows; RUN (1277, 66, 52, 0, 12, 1525, 32, 318, four pairs, 121) predicted and matched first tape run; THE
+## REST 13b's exactly; CW1-CW9 MATCH; CP1 retyped 136 -> 148 (the one global count moved); THE REGISTER GATE --strict GREEN with the seat paid; every gate
+## green. THE NEW DEBTS: (i) THE DIVIDERS' DEBIT OPEN BY DESIGN — the_dividers_of_the_land's commanded divide_the_inheritance_to_the_children_of_israel_in_
+## canaan stands OPEN beside its Gilead charge (32:28-30): the runs Joshua 14:1 (the triad divides), 17:14-18 (Joseph's claim answered), 19:51 (the lot
+## before the LORD at Shiloh — "they finished dividing the land"), and Caleb's Hebron (14:13) and the daughters' holding (17:4) paid before the same
+## court: STEP 6 THE READBACK's items beside the crossing's debit of 32 and the dispossession of 33; (ii) THE RELAY'S FORM (D2, the second pass): 34:13's
+## "and Moses commanded the children of Israel" is 36:5's form, and 36:5's is the installing act command_relayed (THE TENT sitting 4) — law_borders stands
+## boot with the class named; whether a relay in this form installs is D2's question, the DATA row the_relay_form its record; (iii) NUMBERS 27:12-23
+## UNCOMPILED (8b's owed line, met again): Sanhedrin 16a:16-17 reads Joshua's commission verse (27:21 — "he shall stand before Eleazar the priest and ask
+## counsel of the Urim") for the king's war; the same pair the chapter's dividers repeat; its first exam rows filed here; (iv) DEUTERONOMY — 12:1-2's
+## classing of the land-bound commandments (Kiddushin 37a:4-6; the DATA row the_land_bound_rule carries the rule, no cell classes the commandments), 34:4's
+## "this is the land" from Nebo (the phrase's Torah seats 34:2, 34:13, Deuteronomy 34:4), 1:7 and 11:24's extents (DATA, no verdict), 3:17's Chinnereth
+## — the book's own compile later; (v) JOSHUA 13-19, 21 — the runs of the four sides (15:1-12 Judah's border, 18:20 and 19:49 "by its borders" the closers,
+## 13:7 and 14:2 the nine and a half, 21:5-8 the Levite cities by lot) and 22:14's ten princes (the embassy's doubling) — THE READBACK's; Ezekiel 47-48
+## (the four sides from the north; Ginnosar's kin at 19:35) and 1 Kings 8:65 / 2 Kings 14:25 (the kingdom's measure by the chapter's two ends) forward;
+## (vi) THE SHELF'S OWN BORDER LINES (Mishnah Gittin 1:2 — Rekem, Ashkelon, Akko; Sheviit 6:1 — the two holdings' lines; the Tosefta 4:4's "two lands";
+## Gittin 8a:4-6's string from Turei Amnon to the River of Egypt) are DATA rows with no cell: a border for a commandment (the bills, the sabbatical
+## produce) is a legal reach the readback measures against the ink's one border, not a line the tape draws; (vii) THE HOMOGRAPHS FILED FROM THE RUNS —
+## the bare side-word's Leviticus seats (the field's corner 19:9, 23:22; the beard's 19:27), the Gadite = the kid (Genesis 38:23; Judges 14:6), Ephod the
+## person against the vestment, Shelomi against the peace offerings (the gate's own catch), the brook's consonants against the inheritance's (34:5 — the
+## gate's catch at the reading's own seat), Ain against "the eye" (Ezekiel 12:12), the Reubenite's six and the Gadite's six by token: every one a token
+## census against a lemma census — the two censuses typed apart; (viii) THE DISPLAY LAYER — as the sitting-14 box's (i). Filed this sitting for the walk's
+## watches (memory): TWO CENSUSES OF ONE LABEL (the bare pair against the exact pair; the token against the lemma; the family against the token) — type
+## the census the print made, not the label's; A MIXED MEASURE IS NO MEASURE (the reading's "eight names" took one name by lemma and two by token — the
+## compile computes both clean censuses and files the delta); THE ROW'S SHAPE FOLLOWS THE FIRST WRITER'S (the optional column present as None — the
+## view reads it by key); A REGISTER SEAT IS PAID BY ROWS (the gate's green class; the declaration deleted, key and body); THE FOURTH INSTANCE OF THE
+## HAND'S TALLY (the side-word's eighteen typed from the reading's family count against the token's five).
+
+## SITTING 15 — THE REFUGE CITIES' READING (2026-09-13; NUMBERS_WALK.md "Sitting 15"; logic/oral_triage/num_35_refuge_cities_2026-09-13.md; the unit
+## num_35_refuge_cities FROZEN — the walk's last reading in Numbers) — OWED TO THE COMPILE (15b, on 1b's order with the register gate at the gates step):
+## (a) THE BARE DUAL THOUSAND — the parser reads the dual "two thousand" (the patach, the vowel point, and the dagesh, the dot, in the pe) only when a hundreds-group follows; bare,
+## before a unit noun or with the approximation prefix, it reads nothing (35:5 ×4; 1 Kings 7:26; 2 Kings 18:23; Isaiah 36:8), reads the following cubit
+## as one (Joshua 3:4), is swallowed (Joshua 7:3; Judges 20:45) or misread as a thousand (1 Samuel 13:2): probes to FAIL on every one, the plural's 116
+## seats unmoved, the corpus diff read verse by verse (4b's owed line "Num 35:5's two thousand cubits" PAID by the teaching); (b) THE LEVITE CITIES as
+## the law's table — forty-eight = six + forty-two; the measure's thousand (35:4) and two thousand (35:5) as DATA with the exam's settings (Eruvin 51a's
+## square, Sotah 27b — the Sabbath limit's measure, the Sabbath block's ledger naming the seats); the four sides in the camp's order a DATA row; the
+## proportional rule by CALL to the second census's cell (26:54's rule at its third seat); Joshua 21's run outside the Torah — THE READBACK's (the
+## request 21:2 quoting the spec under "by the hand of Moses"; the tally 21:41; the four lots summing to 48; Bezer's row bare); the register gate NOTHING
+## TO PAY (no Num 35 seat declared; the index's two lines MEASURE-ONLY green); (c) THE SIX CITIES — a DATA row of three and three (the names from
+## Deuteronomy 4:43 and Joshua 20:7-8 outside the chapter, no verdict); the appointment a debit OPEN BY DESIGN to Joshua 20 (Deuteronomy 4:41's three by
+## Moses inside the Torah, uncompiled — forward); the Sifrei's "no refuge until all six are set apart" as DATA; (d) THE MURDERER AND THE MANSLAYER — the
+## case table from the ink's own tokens: the instruments (iron at any size; the stone and the wood with the size clause "whereby he may die" — the size a
+## PARAMETER, the Sifrei's "fills the hand" / "can kill"), the manners (thrust, threw, struck with the hand), the intents (hatred, lying-in-wait, enmity
+## against suddenly, without enmity, without lying-in-wait, unseen, not his enemy nor seeking his harm); the verdicts — a murderer (death by the avenger
+## after the court), a manslayer (exile), neither (Issi ben Akiva's two-way uncertainty — a TEIKU-shaped row); the effects — exiled_to_refuge, put_to_death,
+## the burglar's has_blood / no_blood reused (O7's effect at its second seat), the avenger's license; the water, the fire and the snake "to Heaven" as the
+## heaven entry; the court of twenty-three from the tokens as DATA (Sanhedrin 1:4); (e) THE TERM — "until the death of the high priest" a TIMER keyed to
+## the office's holder (Eleazar since 20:28 — the chukat runner's succession; his death at Joshua 24:33 OUTSIDE the Torah: the term OPEN on the tape by
+## design, THE READBACK's); Makkot 11a's three high priests as DATA; the anointing clause the definition (Leviticus 21:10); (f) THE BORDER CASE — the
+## fugitive outside the limit, the avenger's no-blood (the burglar's clause); Onkelos's court-first clause as the exam's reading (DATA); (g) THE WITNESSES
+## — "by the mouth of witnesses" two by the prototype (the Sifrei's rule — the rule itself the shelf's, Deuteronomy 17:6 and 19:15 the spec, uncompiled —
+## forward); "one witness" for acquittal and for the oath as DATA (Shevuot 4:1); (h) NO RANSOM — against Exodus 21:30's ransom (the ox runner's cell by
+## CALL — the Mishpatim head's kofer) for the murderer, and for the fugitive; the condemned man's liabilities as DATA (Sanhedrin 71b); (i) THE LAND —
+## polluted by blood (a status on the land of Canaan), atoned only by the shedder's blood (Genesis 9:6 by REFERENCE to the primeval runner's blood law);
+## the heifer's other passive (Deuteronomy 21:8 — forward, the book's own compile); "you shall not defile the land" against Leviticus 18:25-28 (the
+## arayot runner — REFERENCE); "in whose midst I dwell" by REFERENCE to 5:3's camp (the naso runner's effect) — the book's inclusio a checkpoint; (j) THE
+## EDGES the census will demand — exodus (21:12-14 the place to flee; 22:1-2 the burglar's blood), lev24 (24:17 the smiter of a soul), shelach / vayikra5
+## (unwittingly — the sin offering's word), naso (5:3; 6:9 suddenly), second_census (26:54), journeys (33:51, 33:54), borders (34:2 the land; the sides'
+## order), zelophehad (27:11 a statute of judgment), gad_reuben (32's cities beyond the Jordan), chukat (20:22-29 Aaron's death and Eleazar's robes),
+## balak (23:4, 16 "met" — FALSE by sense), the primeval runner (9:6 the blood; 3:15 enmity — FALSE by sense), bamidbar (the camp's order of the sides —
+## REFERENCE), the tabernacle's "any instrument" (FALSE), the erection's sides (REFERENCE); Deuteronomy 4:41-43, 19:1-13, 21:1-9, Joshua 20, 21 FORWARD —
+## no link, or a labeled HYPOTHESIS; (k) THE DOCKET by the union rule — Mishnah Makkot 2:1-8 with Makkot 7a-13a (the manslayer's tractate whole),
+## Sanhedrin 1:4 with 2a-b, 9:1-2 with 76b-79a, 3:4 with 27b, 45b, Bava Kamma 4:5 with 40a-41a, Ketubot 37b, Eruvin 4:3 and 5:1-5 with 51a, Sotah 27b and
+## 9:7, Arakhin 9:8 with 33b, Shevuot 4:1, Yoma 23a, Megillah 29a, Yevamot 46b, the link rows for 35:2, 11, 12, 16, 19, 24, 25, 30, 31, 33; (l) THE
+## DISPLAY LAYER — done at the reading (152 rows); the store's "eye" for the answer-verb at nine other Torah tokens and the mixed gloss families ("cover",
+## "the-strike", "and-judge", "and-stretch", "dash-in-pieces") a display sitting's census; (m) THE TWO KIN PARSER READINGS FILED — Ezekiel 45:2's "five
+## hundred by five hundred" joined to 1,000 (the preposition inside a pair of measures), Exodus 27:9's "fine twined linen" read as six (the same pointing
+## as "six" — a homograph by context, the next teaching's); THE CHECKPOINT PREFIX grepped before naming (CW taken at 14b).
+## SITTING 15b — THE COMPILE OF THE REFUGE CITIES (2026-09-13; NUMBERS_WALK.md "Sitting 15b" design + as-built; the owner: "Go" after the #158 rereads; the
+## sitting-15 box (a)-(m) PAID — (a) THE BARE DUAL THOUSAND TAUGHT as rule 29 (the sheva, the vowel point, under the lamed marks the dual; probes D1-D9 to FAIL 9/9, then 208/208
+## with R62-R73; the corpus diff read verse by verse — twelve moved, none a marker; the two pausal duals found by the diff; 4b's owed line PAID); (b) THE
+## LEVITE CITIES as the law's table — 48 = 6 + 42 asserted, the measures a DATA row with three settings (R. Akiva, R. Eliezer son of R. Yosei HaGelili, the
+## Mishnah in Arakhin), the four sides THE CAMP'S ORDER by CALL, 26:54's rule by CALL at its third seat, ONE debit on the people OPEN to Joshua 21 (whose four
+## lots the parser sums to 48 and whose tally reads [48]), the register gate NOTHING TO PAY; (c) THE SIX CITIES a DATA row of three and three with the names
+## OUTSIDE the chapter by seat, the appointment ONE debit OPEN to Deuteronomy 4:41 and Joshua 20:7-8; (d) THE MURDERER AND THE MANSLAYER — the case table from
+## the tokens (the instruments, the manners, the intents), the size a PARAMETER with the iron's exemption, the sword by CALL, flees_to_refuge and has_blood
+## REUSED, Issi ben Akiva's 'unresolved'; (e) THE TERM — NOT a timer: an EVENT-KEYED open BODY entry dwells_in_refuge valued the office-holder (Eleazar by
+## CALL), CLOSED BY VALUE when the daemon consumes high_priest_died (the scene's three terms set and closed by two deaths; no manslayer on the tape); the three
+## high priests as DATA; (f) THE BORDER CASE has_blood = no_blood reused, Onkelos' court-first clause as DATA; (g) THE WITNESSES two by the prototype, one for
+## acquittal, as DATA; (h) NO RANSOM twice against the ox's ransom by the live call M1.has_lemma on Exodus 21:30 beside the EFFECTS row, the talion's money by
+## CALL; (i) THE LAND polluted — a STATUS on the land of Canaan; Genesis 9:6 by CALL into the primeval runner's Cain cells; Leviticus 18:25-28 by CALL; the
+## inclusio 5:3 by CALL with presence_dwells READ; (j) the edges — fifteen CALL by reference, balak FALSE, the census's three demands read (family VIA
+## second_census; pre_sinai VIA primeval; yovel PARAMETER carries place); (k) the docket 666 rows by the union rule in eight parts; (l) the display layer as
+## filed at the reading; (m) the kin readings filed): cold_run_refuge.py 51/51 (five cells, fifteen engines CALLED), law_refuge the 62nd daemon (given_at Num
+## 35:1; installed_by boot with the class named — the divine voice in the plains of Moab), the tape's TWO lines page_order at (40, 6, 1) with NO close and 2
+## writes; RUN (1279, 66, 52, 0, 12, 1527, 33, 318, four pairs, 121) predicted and matched first tape run; THE REST 14b's exactly; CR1-CR9 MATCH first run; CV2,
+## CX2 and CW3 retyped (12 -> 14 commanded, 5 -> 7 open); THE REGISTER GATE --strict GREEN with nothing to pay (its tilde test taught the dual thousand);
+## every gate green. AND WITH IT NUMBERS CLOSES. THE NEW DEBTS: (i) THE TWO DEBITS OPEN BY DESIGN — give_the_levites_cities_and_pasture_lands (Joshua 21:1-42:
+## the request 21:2 quoting the spec, the four lots, the tally 21:41) and appoint_six_cities_of_refuge (Deuteronomy 4:41-43 Moses' three INSIDE the Torah —
+## that book's compile closes nothing, 'six shall they be'; Joshua 20:7-8 the six): STEP 6 THE READBACK's items beside 32's crossing, 33's dispossession and
+## 34's division; (ii) THE TERM'S CLOSER OUTSIDE THE TORAH — Joshua 24:33 Eleazar's death: no dwells_in_refuge entry stands on the tape to close, the form
+## proved in the scene (three terms, two deaths); the office's succession after Eleazar (Phinehas — Judges 20:28) THE READBACK's; (iii) THE THOUSAND
+## THOUSANDS (1 Chronicles 21:5, 22:14, 2 Chronicles 14:8, Daniel 7:10) — wrong before and after rule 29, R73 the tripwire: a rule owed to the book that reaches
+## it; the myriad-word (Ezra 2:64, Nehemiah 7:66, 7:70) filed beside; (iv) DEUTERONOMY — 19:1-13 the refuge law's twin (the roads, the three more cities, the
+## forest, 'and live' 4:42, the enemy's exile), 21:1-9 the heifer (the measure-verb's third Torah seat at 21:2; Mishnah Sotah 9 the exam), 17:6 and 19:15 the
+## witnesses' spec, 25:2's 'wicked' for the lashes (Makkot 5a, Sanhedrin 10a), 24:16 the kin, 12:1-2's classing, 4:41-43 Moses' three — the book's own
+## compile; JOSHUA 20-21 the runs, 20:6 quoting 35:12 — THE READBACK's; (v) THE SIZE THAT CAN KILL a PARAMETER (Sanhedrin 76b — the stab against the blow; the
+## Sifrei's induction from three) with no cell reading a weight: the exam's rows DATA; (vi) THE COURT OF TWENTY-THREE built from the tokens as DATA (Sanhedrin
+## 1:6; 2a-2b) — no court entity on the tape (the_court in force since Exodus 18:25 by the tent daemon; its size a later design's); (vii) THE RENT (Makkot
+## 13a:2-3 — R. Yehuda / R. Meir on 35:6 and 35:11) and THE SOJOURNER'S EXILE (Makkot 9a — Rav Kahana against the baraita) parameter rows with no verdict
+## fetched; (viii) THE DISPLAY LAYER as the sitting-15 box's (l) — the store's "eye" for the answer-verb and the mixed gloss families a display sitting's
+## census; (ix) THE REGISTER GATE'S TILDE — the gate now tells the marked dual thousand (a count) from the dual measures (a unit inside the token); a third
+## tilde class, if the parser ever marks one, must be typed into the same test. Filed this sitting for the walk's watches (memory): THE CLASS'S COUNT IS THE
+## WIDEST INSTRUMENT'S (a regex on one vowel found 29, the diff over every verse 31 — measure a class on the whole corpus before typing its count); A SEAT IS
+## A VERSE, A TOKEN A TOKEN (the reading's 26, the measure's 29, the diff's 31 three grains of one class — name the grain with the number); THE GATE'S PARSER
+## READS EXPLICIT BRANCHES ONLY (a kind dispatched through `k in (...)` is a kind no daemon watches — one `if k ==` per kind, one literal W per branch); A
+## RESERVED FIELD NAME IS THE STITCHER'S (`until` is a scene-clock day, `day` the clock — name the ink's term `term`); THE MARK IS SHARED, THE MEANING IS
+## NOT (the parser's tilde on the dual thousand met the register gate's tilde test for dual measures — a new use of a mark is a new case for every reader
+## of the mark); A COUNTERPARTY IS NO ENTITY (the shedder who is only a counterparty gets no ledger and no entity — count the written-on parties);
+## THE VAV-FORM (the bare consonants עד are "until" at every chapter seat; "and a witness" wears the vav — a homograph claim is typed from the DB's
+## tokens, never from the reading's eye).

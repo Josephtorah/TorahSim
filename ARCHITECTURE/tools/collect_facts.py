@@ -44,19 +44,40 @@ for _, op in reg_ids:
 facts["layers"]["effects_by_ledger_op"] = ops
 
 # ---- run every cold run, read-only ----------------------------------------
-for path in sorted(glob.glob(os.path.join(STEP9, "cold_run_*.py"))):
+# 2026-09-13: a runner's OWN lines are the LAST it prints — the runners it imports print theirs first (the first-match
+# read of 2026-09-05 took an imported runner's matrix for the fourth book's); the runs go in a pool of six, and every
+# output is saved beside this file's scratch (COLLECT_OUT, if set) so a later reading needs no rerun.
+from concurrent.futures import ThreadPoolExecutor   # threads: each run is a subprocess; a process pool re-imports this script under spawn
+
+def _run(path):
+    p = subprocess.run([sys.executable, path], cwd=STEP9, capture_output=True, text=True)
+    return path, p.returncode, p.stdout + p.stderr
+
+_paths = sorted(glob.glob(os.path.join(STEP9, "cold_run_*.py")))
+_save = os.environ.get("COLLECT_OUT")
+with ThreadPoolExecutor(max_workers=int(os.environ.get("COLLECT_WORKERS", "6"))) as ex:
+    _results = dict((pth, (rc, out)) for pth, rc, out in ex.map(_run, _paths))
+for path in _paths:
     name = os.path.basename(path)[:-3]
     src = open(path, encoding="utf-8").read()
-    p = subprocess.run([sys.executable, path], cwd=STEP9, capture_output=True, text=True)
-    out = p.stdout + p.stderr
-    rec = {"exit": p.returncode, "lines": len(src.splitlines()),
+    rc, out = _results[path]
+    if _save:
+        os.makedirs(_save, exist_ok=True)
+        open(os.path.join(_save, name + ".out"), "w", encoding="utf-8").write(out)
+    rec = {"exit": rc, "lines": len(src.splitlines()),
            "top_level_defs": re.findall(r"^def (\w+)\(", src, re.M)}
-    m = re.search(r"(MATRIX:.*|RESULT:.*|\w+ PASS: .*|PASS 2: .*|\w+ MACHINE: .*|\w+ COMPLETE: .*)", out)
-    rec["score_line"] = m.group(1).strip() if m else None
-    m = re.search(r"((?:PASS-2 |PROVENANCE )?FRACTIONS.*)", out)
-    rec["fractions_line"] = m.group(1).strip() if m else None
-    m = re.search(r"LEDGER OPS.*", out)
-    rec["ledger_ops_line"] = m.group(0).strip() if m else None
+    # THE SWEEP'S OWN RULE (run_cold_all.py): the runner's score is the LAST line matching its SCORE regex — an imported
+    # runner prints earlier, and a runner may import late; the fractions and ledger-ops lines are read only AFTER that line
+    SCORE = re.compile(r"(\d+)\s*/\s*(\d+)\s*(?:cells|checkpoints|match|test)")
+    olines = out.split("\n"); idx = [i for i, l in enumerate(olines) if SCORE.search(l)]
+    if idx:
+        i = idx[-1]; rec["score_line"] = olines[i].strip()[:220]
+        after = olines[i + 1:i + 8]
+        fr = [l for l in after if "FRACTIONS" in l]; lo = [l for l in after if l.startswith("LEDGER OPS")]
+        rec["fractions_line"] = fr[0].strip() if fr else None
+        rec["ledger_ops_line"] = lo[0].strip() if lo else None
+    else:
+        rec["score_line"] = rec["fractions_line"] = rec["ledger_ops_line"] = None
     rec["functions_graded"] = re.findall(r"FUNCTION: (.+?)\s+\(answer sheet: (.+?)\)", out)
     rec["effects_named_in_source"] = sorted(
         k for k, _ in reg_ids if re.search(r"['\"]%s['\"]" % re.escape(k), src))
@@ -69,7 +90,7 @@ frozen = [u for u in units if re.search(r"^\s*status: frozen", open(u, encoding=
 facts["layers"]["unit_files"] = len(units)
 facts["layers"]["units_frozen"] = len(frozen)
 facts["layers"]["units_frozen_by_book"] = {
-    b: sum(1 for u in frozen if os.path.basename(u).startswith(b + "_")) for b in ("gen", "exo", "lev")}
+    b: sum(1 for u in frozen if os.path.basename(u).startswith(b + "_")) for b in ("gen", "exo", "lev", "num", "deu")}   # the fourth book added 2026-09-13
 facts["layers"]["py_renderings"] = len(glob.glob(os.path.join(ROOT, "logic", "py_units", "*.py")))
 facts["layers"]["rules_modules"] = len(glob.glob(os.path.join(STEP9, "*_rules.py")))
 facts["layers"]["case_files"] = len(glob.glob(os.path.join(STEP9, "cases_*.yaml")))

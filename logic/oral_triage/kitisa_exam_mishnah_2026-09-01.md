@@ -90,10 +90,10 @@
   PRECEDENCE TABLE: refused redemption — neck broken with a cleaver
   from behind, buried; REDEMPTION PRECEDES BREAKING; DESIGNATION
   precedes redemption (quoting our own Exod 21:8 — the maidservant's
-  אֲשֶׁר לֹא יְעָדָהּ וְהֶפְדָּהּ); yibbum FORMERLY preceded
+  אֲשֶׁר לֹא יְעָדָהּ וְהֶפְדָּהּ 'whom he has not designated, he shall let her be redeemed'); yibbum FORMERLY preceded
   chalitzah, and NOW — with intention decayed — chalitzah precedes
   (a precedence that FLIPPED in history); the owner precedes all in
-  redemption. A cross-domain duty-ordering algebra. Held nowhere →
+  redemption. A cross-domain duty-ordering (which duty first) algebra. Held nowhere →
   finding F-044, seated EX34-07. Module firstling_species.
 - Mishnah Eduyot 7:1 (⇐ Exod 34:20) — MATERIAL (light). The
   testimony of R. Yehoshua and R. Tzadok: a donkey-firstling that

@@ -27,7 +27,7 @@
   ("and I will DWELL among them") rendered וְאַשְׁרֵי שְׁכִנְתִּי
   בֵּינֵיהוֹן ("and I will make MY PRESENCE dwell AMONG THEM") — the
   indwelling routed through the שְׁכִנְתָּא ("Shekhinta," the
-  Presence-layer), the same double-buffering exo_24 recorded for the
+  Presence-layer), the same double-buffering (two layers held at once) exo_24 recorded for the
   vision; and the AMONG-THEM stands in translation as in the ink: the
   dwelling lands in the PEOPLE, not in the building the verse just
   commissioned. The sanctuary is made קֳדָמַי ("before Me").
@@ -38,7 +38,7 @@
   rows Mishnah Shevuot 2:2 + Mishnah Sanhedrin 1:5 anchor HERE at
   25:9 — king, prophet, and the 71 required; the 71-docket is already
   seated at EX18-14). The pattern itself: תבנית rendered דְּמוּת
-  ("likeness") — Moses is SHOWN (מַחֲזֵי) a likeness, twice.
+  ("likeness") — Moses is SHOWN (מַחֲזֵי 'shown') a likeness, twice.
 - Onkelos Exod 25:15 — MATERIAL, the parashah's first standing
   prohibition. לא יסרו ממנו ("they shall not be removed from it")
   rendered לָא יְעִדּוּן מִנֵּיהּ — the ark's poles NEVER leave their
@@ -52,8 +52,8 @@
   every future command is spoken (יָת כָּל דִּי אֲפַקֵּד — "all that I
   shall command you to the sons of Israel").
 - Onkelos Exod 25:30 — MATERIAL. לחם פנים ("bread of the Face")
-  rendered לְחֵם אַפַּיָּא... תְּדִירָא ("the bread of the FACE before
-  Me CONTINUALLY") — the תדיר continuity-token: the table carries a
+  rendered לְחֵם אַפַּיָּא ('the bread of the face') … תְּדִירָא ("the bread of the FACE before
+  Me CONTINUALLY") — the תדיר ('continual') continuity-token: the table carries a
   standing duty, not a one-time setting. TESTING-shelf pointers: the
   showbread's dimensions and exchange procedure are the case rows of
   Mishnah Menachot 11:4 + 11:5 + 11:7 on our 25:23-30.
@@ -112,7 +112,7 @@ Mishnah Menachot 11:7
   Israel" — he neither hears nor speaks); שוטה ("the incompetent")
   from ידבנו לבו ("whose heart makes him willing" — his heart cannot
   volunteer); קטן ("the minor") from כל איש ("every MAN"); one who
-  separates what is not his from מאת כל איש... תקחו ("from each
+  separates what is not his from מאת כל איש ('from every man') … תקחו ("from each
   man... TAKE" — from your own); the gentile separating an
   Israelite's from בני ישראל ("the sons of Israel"). The
   disqualification table of the terumah laws (Mishnah Terumot 1:1's
@@ -162,7 +162,7 @@ Mishnah Menachot 11:7
   order, carried with the ordering doctrine named.
 - Midrash Tanchuma Buber, Terumah 1-6 — read in full; content
   parallel to the standard recension's 2-7 as noted above (the
-  five-disqualified table verbatim at Buber 2; the thirteen-count at
+  five-disqualified table, the same one, verbatim at Buber 2; the thirteen-count at
   Buber 4; the tachash at Buber 5; the kingdoms at Buber 6).
 
 **read: 54 of 54 — COMPLETE** (40 Onkelos verses + 14 Tanchuma

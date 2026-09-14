@@ -37,6 +37,7 @@
 
 import bisect
 import collections
+import functools
 import os
 import re
 import yaml
@@ -78,6 +79,16 @@ INSTALL_PARAMS, INSTALLING_ACTS = _INST['parameters'], _INST['installing_acts']
 INSTALL_FIELDS = ('given_at', 'installed_by')
 INSTALL_VALUES = ('boot', 'pending')       # the two non-act values: in force from creation; the installing act not yet on the tape (counted)
 BOOK_ORDER = {'Gen': 1, 'Exod': 2, 'Lev': 3, 'Num': 4, 'Deut': 5}
+
+# THE POPULATION TABLE (THE NUMBERS WALK sitting 8b, 2026-09-11; NUMBERS_WALK.md "Sitting 8b — THE POPULATION TABLE — THE DESIGN"; the
+# speculation ARCHITECTURE/DATABASE_SPECULATION.md): THE FIFTH REGISTRY — population_schema.yaml names the tables, their columns (the
+# ink's own words) and their grains (counted / named / delta) with the required and optional columns. World.row validates every row
+# against it; the schema is data, never a constant in code. The table is engine STATE (World.tables), queried by daemons during the
+# run (World.population) and journaled afterward as the log's own class ROW (run.row — the fifth view run_population reads it back).
+_POP_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'population_schema.yaml')
+with open(_POP_PATH, encoding='utf-8') as _f:
+    POP_SCHEMA = yaml.safe_load(_f)['tables']
+POP_STAMPS = ('written_by', 'day', 'year', 'table')
 
 
 def verse_key(src):
@@ -494,6 +505,22 @@ class CursorReached(Exception):
     line names a verse AT OR AFTER World.stop_before — the tape replayed to a position in the text and stopped at its left edge"""
 
 
+def _sealed(fn):
+    """THE LOOP step 7 (a) WRITE AS YOU GO (2026-09-14; THE_LOOP.md "Step 7 ... part (a)", decision D14 THE SEAL): an entry point of
+    the engine is a BLOCK — when the outermost call returns (depth 0; in a finally, so a refusal raised mid-block still seals the lines
+    logged before it) the attached journal seals the log's new lines: on disk and in the index at once. A world with no journal
+    (the exam worlds, D9) pays nothing. Nothing here reads or writes the world: the hook observes the log and decides nothing."""
+    @functools.wraps(fn)
+    def sealed(self, *a, **k):
+        try:
+            return fn(self, *a, **k)
+        finally:
+            j = getattr(self, 'journal', None)
+            if j is not None and self._depth == 0:
+                j.flush()
+    return sealed
+
+
 class World:
     def __init__(self, era, epoch=None, registry=None, installation=None):
         self.clock = Clock(era, epoch=epoch)
@@ -510,6 +537,8 @@ class World:
         self.laws = []        # the daemon registry
         self.timers = []      # (fire_day, effect_dict) — a timer with a `period` re-arms at its fire
         self.log = []
+        self.journal = None      # THE LOOP step 7 (a) WRITE AS YOU GO (2026-09-14): the attached live sink (world_journal.attach), sealing the log's lines at the end of every block; None on every world that journals nothing
+        self._entry_seq = 0      # THE LOOP step 1's amendment THE CLOSE LINE (2026-09-12): every ledger entry's own ordinal, stamped at write — the write line carries it, the close line names it
         # THE CLOCK SITTING (2026-09-07): the bound and the marker (CLOCK.md section 4)
         self._last_marker = 0        # the last forward marker's day — every later event's bound opens here
         self._open_bounds = []       # the bound lists still open, SHARED by the event, its effects, timers, fires
@@ -521,6 +550,9 @@ class World:
         self.watch = collections.OrderedDict()
         self._depth = 0
         self._consuming = None
+        # THE POPULATION TABLE (THE NUMBERS WALK 8b, 2026-09-11): the tables of the fifth registry, each a list of rows written by daemons
+        # (World.row) — not the ledger: no op, no open, no close; a row moves no count of the RUN tuple and is the log's own class ROW
+        self.tables = {t: [] for t in POP_SCHEMA}
         if installation is not None:
             self.install(installation)
 
@@ -605,6 +637,7 @@ class World:
         return collections.OrderedDict((n, w.get('skipped', 0)) for n, w in self.watch.items())
 
     # -- construct 3: dispatch — every law fires, unasked -------------
+    @_sealed
     def submit(self, event):
         EV.validate([event['kind']])                  # the tape carries registered types only
         if self.stop_before is not None:              # THE LOOP step 4: the cursor — a line at or after the verse is the future
@@ -685,25 +718,71 @@ class World:
         op = FX.REGISTRY[eff['effect']]['ledger_op']
         entry = dict(eff, op=op, day=now, year=self.clock.year,
                      open=(op in ('debit', 'heaven', 'body')))
+        entry['seq'] = self._entry_seq                 # THE CLOSE LINE (2026-09-12): the entry's run-local name (the world's write counter, retro-writes and fires included)
+        self._entry_seq += 1
         ent.ledger.append(entry)
         if op == 'status':
             ent.status[eff['effect']] = eff.get('value', True)
+        # THE LOOP step 1's amendment THE CLOSE LINE (2026-09-12; THE_LOOP.md): the log holds a SNAPSHOT of the entry at write time — a later
+        # close writes into the ledger entry, never into this line (the shallow copy keeps the event's shared bound list, as step 1 designed)
         if eff.get('due') is not None and eff['due'] < now:   # a due already past (a retrograde stretch): written now, named
-            self.log.append(('RETRO-WRITE', now, entry))
+            self.log.append(('RETRO-WRITE', now, dict(entry)))
         else:
-            self.log.append(('WRITE', now, entry))
+            self.log.append(('WRITE', now, dict(entry)))
 
+    @_sealed
     def close(self, eid, effect, note, value=None):
         """an entry closes when the text records the closing act; with `value` the entry whose value matches closes
         (O8 S1, 2026-09-08: the frogs' removal closes the FROGS' plague entry, not the first open plague — probe 18)"""
-        for e in self.entity(eid).ledger:
+        ent = self.entity(eid)
+        for e in ent.ledger:
             if e['effect'] == effect and e.get('open') and (value is None or e.get('value') == value):
                 e['open'] = False
                 e['closed_by'] = note
                 e['closed_day'] = self.clock.day      # THE LOOP step 2's remainder (2026-09-09): the day it closed, beside the closer — the ledger view's day_closed
+                # THE LOOP step 1's amendment THE CLOSE LINE (2026-09-12; THE_LOOP.md; the owner's word on the cursor's audit): the close is a LINE OF
+                # ITS OWN — the tenth log class — naming the entry by its seq; the ledger entry above keeps the fields the daemons and checkpoints read
+                self.log.append(('CLOSE', self.clock.day, {'subject': ent.eid, 'effect': effect, 'entry_seq': e.get('seq'), 'value': e.get('value'),
+                                                           'note': note, 'written_day': e.get('day'), 'written_by': e.get('written_by'),
+                                                           'closed_by_daemon': self._consuming, 'case_source': e.get('case_source')}))
                 return True
         return False
 
+    # -- THE POPULATION TABLE (THE NUMBERS WALK 8b, 2026-09-11; NUMBERS_WALK.md "Sitting 8b"): the rows and the query --------------
+    @_sealed
+    def row(self, table, row):
+        """a daemon writes a ROW of a table of the fifth registry (population_schema.yaml) while consuming an event — NEVER BY HAND:
+        a call with no daemon consuming (self._consuming unset) is refused. The row is validated against the schema (a known table; a
+        known grain; every required column present; no unknown column), stamped written_by / day / year / table, appended to the table
+        and logged as the class ROW (journaled as run.row). A row is not a ledger entry — no op, no open, no close, no counterparty — and
+        moves no count of the RUN tuple; the daemons read the table back through population(). Returns the stamped row."""
+        if self._consuming is None:
+            raise SystemExit('THE POPULATION TABLE: a row of %r is written by a daemon consuming an event, never by hand (population_schema.yaml law 1)' % table)
+        if table not in POP_SCHEMA:
+            raise SystemExit('THE POPULATION TABLE: %r is not a table of population_schema.yaml (the tables: %s)' % (table, ', '.join(POP_SCHEMA)))
+        sch = POP_SCHEMA[table]
+        grain = row.get('grain')
+        if grain not in sch['grains']:
+            raise SystemExit('THE POPULATION TABLE: grain %r is not a grain of %s (the grains: %s)' % (grain, table, ', '.join(sch['grains'])))
+        g = sch['grains'][grain]
+        missing = [c for c in g['required'] if c not in row]
+        if missing:
+            raise SystemExit('THE POPULATION TABLE: a %s row of %s lacks its required column(s) %s' % (grain, table, ', '.join(missing)))
+        unknown = [c for c in row if c not in g['required'] and c not in g.get('optional', ()) and c not in POP_STAMPS]
+        if unknown:
+            raise SystemExit('THE POPULATION TABLE: a %s row of %s carries unknown column(s) %s — the schema is the fifth registry, amended before use' % (grain, table, ', '.join(unknown)))
+        entry = dict(row, written_by=self._consuming, day=self.clock.day, year=self.clock.year, table=table)
+        self.tables[table].append(entry)
+        self.log.append(('ROW', self.clock.day, entry))
+        return entry
+
+    def population(self, table='population', **where):
+        """the rows of a table matching every given column by equality (a value of None matches a None column) — the daemons' instrument
+        (the census daemon reads its own chapter-1 rows to declare the deltas at chapter 26); a missing column never matches"""
+        rows = self.tables.get(table, [])
+        return [r for r in rows if all(k in r and r[k] == v for k, v in where.items())]
+
+    @_sealed
     def cancel_timers(self, subject, effect, note):
         """a later TEXT event voids a pending timer (the pierced slave's
         'forever' voids his six-year exit — Exod 21:5-6): the interface
@@ -720,6 +799,7 @@ class World:
         self.timers = kept
         return cut
 
+    @_sealed
     def marker(self, verse, day, value=None, era=None, new_year_month=None, proleptic=False, placement='text_constrained'):
         """THE MARKER (CLOCK.md section 4): the text's own date stamp sets the clock. A marker at or after the
         counter walks advance(day) and CLOSES every open bound at it; a marker EARLIER than the counter is
@@ -766,6 +846,7 @@ class World:
         return day
 
     # -- construct 4: time advances; due timers fire; a period re-arms --
+    @_sealed
     def advance(self, to_day):
         if to_day > self.clock.day:
             self._dated = None                               # the clock moves: the retrograde stretch is over

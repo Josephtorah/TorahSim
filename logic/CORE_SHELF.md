@@ -221,7 +221,7 @@ corroboration is looked for at the spine.
 
 `logic/onkelos_genre_2026-08-30/` (expansion + retention per verse,
 against Onkelos's own prose baseline; ketiv/qere rows dropped; three
-differently-versified chapters excluded and named — 184 of 187 Torah
+differently-versified chapters (their verse divisions differ) excluded and named — 184 of 187 Torah
 chapters survive). Reproducible by the two scripts there.
 
 The six Torah poems were named **in advance from genre, not picked

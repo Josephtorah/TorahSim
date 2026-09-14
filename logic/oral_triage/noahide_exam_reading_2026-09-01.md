@@ -29,12 +29,12 @@
   Rav: a Noahide is EXECUTED for THREE — forbidden relations, bloodshed,
   blasphemy (the גש"ר letter-mnemonic).
 - Babylonian Talmud Sanhedrin 57a:10 — context. Dialectic on extending
-  the three (learning from bloodshed / from איש איש).
+  the three (learning from bloodshed / from איש איש 'any man').
 - Babylonian Talmud Sanhedrin 57a:11 — MATERIAL. Rav Sheshet, the school
   of Rav: executed for FOUR (idolatry joins).
 - Babylonian Talmud Sanhedrin 57a:12 — MATERIAL. Challenge from the
   baraita (warned but not killed for idolatry); Rav Nachman bar Yitzchak:
-  אזהרה שלהן זו היא מיתתן — THEIR PROHIBITION IS THEIR DEATH-LIABILITY.
+  אזהרה שלהן זו היא מיתתן ('their prohibition is their death') — THEIR PROHIBITION IS THEIR DEATH-LIABILITY.
   The principle 58b:25 reuses for the Sabbath row.
 - Babylonian Talmud Sanhedrin 57a:13 — MATERIAL (credit: already read at
   the triage as G21-11's source). Rav Huna, Rav Yehudah, all Rav's
@@ -45,7 +45,7 @@
 - Babylonian Talmud Sanhedrin 57a:15 — context. Resolution: the tail
   ("an Israelite from a gentile — permitted") forced the head's phrasing.
 - Babylonian Talmud Sanhedrin 57b:2 — MATERIAL. R. Yaakov bar Acha's
-  aggadah-book baraita: a Noahide is executed by ONE judge, on ONE
+  aggadah-book (the lore book) baraita: a Noahide is executed by ONE judge, on ONE
   witness, WITHOUT forewarning, on a MAN's testimony and not a woman's,
   EVEN A RELATIVE's; by R. Yishmael — even for a fetus.
 - Babylonian Talmud Sanhedrin 57b:6 — MATERIAL. The school of Menashe:
@@ -113,7 +113,7 @@
   blood") — whose blood is distinct from its flesh; swarming creatures
   excluded from the limb ban.
 - Babylonian Talmud Sanhedrin 59b:17 — context. Fish do labor — Rachavah's
-  query (driving with a goat and a shibbuta-fish).
+  query (driving with a goat and a shibbuta-fish (a river fish)).
 - Babylonian Talmud Sanhedrin 59b:19 — context. Fowl do labor — Rabbah
   bar Rav Huna's query (threshing with geese and chickens).
 - Babylonian Talmud Sanhedrin 59b:21 — context. R. Shimon ben Menasya's

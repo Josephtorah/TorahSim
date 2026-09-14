@@ -128,4 +128,4 @@ breaking-reasons section, unbroken on its own line —
 Midrash Tanchuma, Ki Tisa 30
 — R. Ishmael's a-fortiori, R. Akiva's He-commanded, the torn-contract
 defense (recorded in the exo_34 sitting-notes as the
-wrath-pacified frame).
+wrath-pacified (the wrath appeased) frame).

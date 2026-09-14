@@ -2,7 +2,7 @@
 """build_program_outline.py — the program itself, outlined in scroll order.
 
 Walks every FROZEN unit in canonical order (Genesis 1:1 through the last
-frozen Leviticus span) and writes, for each unit, what its code does:
+frozen Numbers span; the fourth book added 2026-09-13) and writes, for each unit, what its code does:
 every step in verse order with the machine operators it installs
 (PRECONDITION_STATE, EVENT, DECLARE, RESULT, REGISTRY_INSTALL, STATUTE,
 HANDLER, CASE, TEST, ...), the witness readings it records, and the
@@ -34,7 +34,7 @@ sys.path.insert(0, ROOT)
 import corpus_world as cw          # read-only: frozen_units_in_canonical_order()
 import gloss_db                    # read-only: build_translit_gloss()
 
-BOOK = {"gen": "Genesis", "exo": "Exodus", "lev": "Leviticus"}
+BOOK = {"gen": "Genesis", "exo": "Exodus", "lev": "Leviticus", "num": "Numbers"}
 REFBOOK = {"Gen": "Genesis", "Exod": "Exodus", "Lev": "Leviticus", "Num": "Numbers", "Deut": "Deuteronomy"}
 STEP_LABEL = {
     "ETNACHTA_SPLIT": "top split", "TREE_CLAIM": "claim",
@@ -65,6 +65,45 @@ COMPILED = [
     ("lev_16", "cold_run_yoma.py 18/18"),
     ("lev_23", "cold_run_moadim.py 24/24"),
     ("lev_24_blasphemer", "cold_run_lev24.py 23/23 (exports talion(), called by Mishpatim)"),
+    # the fourth book (2026-09-13), the scores from catalog_facts.json's rerun
+    ("num_01", "cold_run_bamidbar.py 66/66"),
+    ("num_02", "cold_run_bamidbar.py 66/66"),
+    ("num_03", "cold_run_bamidbar.py 66/66"),
+    ("num_04_kehat", "cold_run_bamidbar.py 66/66"),
+    ("num_04_gershon_merari", "cold_run_naso.py 274/274"),
+    ("num_05", "cold_run_naso.py 274/274"),
+    ("num_06", "cold_run_naso.py 274/274"),
+    ("num_07", "cold_run_naso.py 274/274"),
+    ("num_08", "cold_run_beha.py 154/154"),
+    ("num_09", "cold_run_pesach_sheni.py 26/26"),
+    ("num_10", "cold_run_beha.py 154/154"),
+    ("num_11", "cold_run_beha.py 154/154"),
+    ("num_12", "cold_run_beha.py 154/154"),
+    ("num_13", "cold_run_shelach.py 172/172"),
+    ("num_14", "cold_run_shelach.py 172/172"),
+    ("num_15_offerings_laws", "cold_run_shelach.py 172/172"),
+    ("num_15_wood_tzitzit", "cold_run_mekoshesh.py 34/34"),
+    ("num_16", "cold_run_korach.py 155/155"),
+    ("num_17", "cold_run_korach.py 155/155"),
+    ("num_18", "cold_run_korach.py 155/155"),
+    ("num_19", "cold_run_chukat.py 159/159"),
+    ("num_20", "cold_run_chukat.py 159/159"),
+    ("num_21", "cold_run_chukat.py 159/159"),
+    ("num_22", "cold_run_balak.py 105/105"),
+    ("num_23", "cold_run_balak.py 105/105"),
+    ("num_24", "cold_run_balak.py 105/105"),
+    ("num_25", "cold_run_balak.py 105/105"),
+    ("num_26", "cold_run_second_census.py 70/70"),
+    ("num_27", "cold_run_zelophehad.py 55/55"),
+    ("num_28", "cold_run_musafim.py 110/110"),
+    ("num_29", "cold_run_musafim.py 110/110"),
+    ("num_30", "cold_run_vows.py 147/147"),
+    ("num_31", "cold_run_midian.py 99/99"),
+    ("num_32", "cold_run_gad_reuben.py 74/74"),
+    ("num_33", "cold_run_journeys.py 53/53"),
+    ("num_34", "cold_run_borders.py 56/56"),
+    ("num_35", "cold_run_refuge.py 51/51"),
+    ("num_36", "cold_run_zelophehad.py 55/55"),
 ]
 
 
@@ -330,7 +369,7 @@ document.getElementById('closeall').onclick=()=>document.querySelectorAll('detai
 def main():
     units = cw.frozen_units_in_canonical_order()
     outlined = [unit_outline(uid, d) for uid, d in units]
-    by_book = {"Genesis": [], "Exodus": [], "Leviticus": []}
+    by_book = {"Genesis": [], "Exodus": [], "Leviticus": [], "Numbers": []}
     for h, steps in outlined:
         by_book.setdefault(h["book"], []).append((h, steps))
     tot = {"units": len(outlined), "steps": sum(h["n_steps"] for h, _ in outlined),
@@ -350,13 +389,13 @@ def main():
     # index
     idx = ["# PROGRAM OUTLINE — what the code does, Genesis 1:1 onward", "",
            "Generated %s from the frozen units in canonical order. %d units, %d verse-steps, %d operators, %d claims."
-           % ("2026-09-05", tot["units"], tot["steps"], tot["ops"], tot["claims"]),
+           % ("2026-09-13", tot["units"], tot["steps"], tot["ops"], tot["claims"]),
            "", legend, "",
            "The step-by-step outline is in three files: [Genesis](PROGRAM_GENESIS.md), [Exodus](PROGRAM_EXODUS.md), "
-           "[Leviticus](PROGRAM_LEVITICUS.md); or all at once in [PROGRAM_OUTLINE.html](PROGRAM_OUTLINE.html), "
+           "[Leviticus](PROGRAM_LEVITICUS.md), [Numbers](PROGRAM_NUMBERS.md); or all at once in [PROGRAM_OUTLINE.html](PROGRAM_OUTLINE.html), "
            "which folds each unit and has a search box. The same walk said in plain English, one bullet per "
            "verse, is [PLAIN_OUTLINE.md](PLAIN_OUTLINE.md).", ""]
-    for book in ("Genesis", "Exodus", "Leviticus"):
+    for book in ("Genesis", "Exodus", "Leviticus", "Numbers"):
         rows = by_book.get(book, [])
         idx += ["## %s — %d units" % (book, len(rows)), "",
                 "| Unit | Span | What it covers | Steps | Operators | Claims | Compiled function |", "|---|---|---|---|---|---|---|"]
@@ -367,7 +406,7 @@ def main():
     open(os.path.join(OUT, "PROGRAM_OUTLINE.md"), "w", encoding="utf-8").write("\n".join(idx))
 
     # per-book markdown
-    for book in ("Genesis", "Exodus", "Leviticus"):
+    for book in ("Genesis", "Exodus", "Leviticus", "Numbers"):
         rows = by_book.get(book, [])
         L = ["# PROGRAM — %s, step by step" % book, "", legend, "",
              "Back to the [index](PROGRAM_OUTLINE.md).", ""]
@@ -377,15 +416,15 @@ def main():
 
     # one html
     H = ['<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">',
-         "<title>Program Outline, Genesis through Leviticus</title>", CSS, "</head><body>",
+         "<title>Program Outline, Genesis through Numbers</title>", CSS, "</head><body>",
          "<h1>The program, outlined: what the code does from Genesis 1:1 onward</h1>",
          '<p class="legend">%s</p>' % html.escape(legend),
-         '<p class="legend">%d units · %d verse-steps · %d operators · %d claims · generated 2026-09-05 from the frozen units in canonical order.</p>'
+         '<p class="legend">%d units · %d verse-steps · %d operators · %d claims · generated 2026-09-13 from the frozen units in canonical order.</p>'
          % (tot["units"], tot["steps"], tot["ops"], tot["claims"]),
          '<nav><input id="q" placeholder="search every unit, step, operator, and claim ..."> '
-         '<a href="#Genesis">Genesis</a><a href="#Exodus">Exodus</a><a href="#Leviticus">Leviticus</a> '
+         '<a href="#Genesis">Genesis</a><a href="#Exodus">Exodus</a><a href="#Leviticus">Leviticus</a><a href="#Numbers">Numbers</a> '
          '<a href="#" id="openall">open all</a><a href="#" id="closeall">close all</a></nav>']
-    for book in ("Genesis", "Exodus", "Leviticus"):
+    for book in ("Genesis", "Exodus", "Leviticus", "Numbers"):
         rows = by_book.get(book, [])
         H.append('<h2 id="%s">%s — %d units</h2>' % (book, book, len(rows)))
         for i, (h, steps) in enumerate(rows):

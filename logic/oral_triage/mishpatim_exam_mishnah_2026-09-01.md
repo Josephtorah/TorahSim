@@ -25,7 +25,7 @@
   beit-seah assessment; R. Shimon's finished-fruit valuation.
 - Mishnah Bava Kamma 6:4 — MATERIAL. Fire agency (via the incompetent
   → exempt in man's court, liable in Heaven's; the flame-bringer; the
-  fanner; wind-fanned all exempt); QUOTES our Exod 22:5; the
+  fanner; wind-fanned (fanned by the wind) all exempt); QUOTES our Exod 22:5; the
   fence/road/river cut and THE DISTANCE TANNAIM — R. Elazar b.
   Azariah, R. Eliezer 16, R. Akiva 50, R. Shimon all-by-the-blaze —
   the Mekhilta's table verbatim.
@@ -87,7 +87,7 @@
   SHAVUOT — the Tzevoim-mountain offering refused, QUOTING our 23:16
   ("the harvest feast, the firstfruits of your labors").
 - Mishnah Bikkurim 1:9 — MATERIAL. RESPONSIBILITY UNTIL THE TEMPLE
-  MOUNT from our 23:19's own tail — ראשית... תביא בית ה' — the
+  MOUNT from our 23:19's own tail — ראשית ('the first') … תביא בית ה' — the
   bring-verb read as liability-until-delivery.
 - Mishnah Chagigah 1:1 — MATERIAL. THE APPEARANCE-EXEMPTION TABLE
   VERBATIM (deaf, deranged, minor, tumtum, androgynos, women,
@@ -150,7 +150,7 @@
   row extended by the case shelf).
 - Mishnah Sanhedrin 4:2 — MATERIAL. Capital deliberation BEGINS FROM
   THE SIDE (the junior speaks first); purity cases from the great —
-  the lo-taaneh clause read as do-not-dispute-the-master.
+  the lo-taaneh ('you shall not answer') clause read as do-not-dispute-the-master.
 - Mishnah Sanhedrin 4:4 — context. The three student rows;
   ordination mechanics.
 - Mishnah Sanhedrin 7:4 — MATERIAL. The stoned list INCLUDES THE
@@ -222,5 +222,5 @@ TALLY: 59 rows read in full — 47 MATERIAL, 1 dup-credit, 2 credits
 (San 10:3 pilot; Shabbat 1:4 context), 9 context/not-bearing. The
 morning's Mekhilta reading anticipated the case shelf: the fire
 tannaim, the intent dispute, the four keepers, swear-not-pay, the
-appearance table, the meat-in-milk positions, the pesach-chametz
+appearance table, the meat-in-milk positions, the pesach-chametz (Passover and leaven)
 positions, and act-stands-though-forbidden all appear in BOTH.

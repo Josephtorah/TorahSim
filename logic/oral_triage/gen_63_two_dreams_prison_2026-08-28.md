@@ -4,7 +4,7 @@
 Spine default (Bereshit Rabbah + Onkelos). Append-only. Not binding
 religious law. This block closes the parashah at 40:23 — and closes
 it almost entirely on credits: the sitting's earlier blocks
-pre-answered the prison chapter (7 of its 10 midrash sources were
+pre-answered the prison chapter (7 of its 10 midrash (rabbinic) sources were
 owned upstream today).
 
 **ENUMERATED:** 1,405 sources. **DECLARED: 33** = 2 fresh + 1

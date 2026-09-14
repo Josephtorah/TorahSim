@@ -117,8 +117,10 @@ def q(db, sql, *args):
         c.close()
 
 
-@probe('V1 the index carries each row\'s source, and a closed entry carries closed_day beside closed_by')
+@probe('V1 the index carries each row\'s source; the write row carries NO closer (a snapshot at write), the close row carries the day and the closer, and the ledger view joins them')
 def v1():
+    # THE LOOP step 1's amendment — THE CLOSE LINE (2026-09-12; THE_LOOP.md): RETYPED from "a closed entry carries closed_day beside closed_by"
+    # (the write line held the ledger entry itself) to the new invariant — written to FAIL on the engine that logs the entry by reference
     w = probe_world()
     court = w.entities[REG['the-court']]
     owed = [e for e in court.ledger if e['effect'] == 'declaration_owed']
@@ -126,9 +128,16 @@ def v1():
         db = build(w, d)
         srcs = q(db, 'select distinct source from events')
         n = q(db, 'select count(*) from events where source = ?', SOURCE)[0][0]
-    ok = srcs == [(SOURCE,)] and n == len(w.log) and len(owed) == 1 and owed[0].get('closed_day') == 33 and owed[0].get('open') is False
-    return ok, 'sources %s; rows with the source %d of %d log lines; the docket entry closed_day %r, open %r' % (
-        srcs, n, len(w.log), owed[0].get('closed_day') if owed else None, owed[0].get('open') if owed else None)
+        wrow = q(db, "select data from events where source = ? and kind = 'run.write' and json_extract(data, '$.effect') = 'declaration_owed'", SOURCE)
+        crow = q(db, "select op, subj, json_extract(data, '$.note'), json_extract(data, '$.entry_seq'), unit from events where source = ? and kind = 'run.close'", SOURCE)
+        vrow = q(db, "select open, day_closed, closed_by from run_ledger where source = ? and effect = 'declaration_owed'", SOURCE)
+    wd = json.loads(wrow[0][0]) if wrow else {}
+    ok = (srcs == [(SOURCE,)] and n == len(w.log) and len(owed) == 1 and owed[0].get('closed_day') == 33 and owed[0].get('open') is False
+          and 'closed_by' not in wd and 'closed_day' not in wd and wd.get('open') is True
+          and len(crow) == 1 and crow[0][0] == 33 and crow[0][1] == 'the_court' and str(crow[0][2]).startswith('Lev 24:13') and crow[0][3] == wd.get('seq') and crow[0][4] == 'law_probe'
+          and vrow == [(0, 33, 'Lev 24:13 — probe: the output')])
+    return ok, 'sources %s; rows with the source %d of %d log lines; the ledger entry closed_day %r open %r; the write row keys %s; the close rows %s; the view %s' % (
+        srcs, n, len(w.log), owed[0].get('closed_day') if owed else None, owed[0].get('open') if owed else None, sorted(wd), crow, vrow)
 
 
 @probe('V2 run_ledger\'s rows equal the write rows; the closed entry shows its day and its closer')

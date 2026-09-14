@@ -1,0 +1,106 @@
+# ---- F3's facts: Moses' restatement ----
+RELAY = seats('ויצו משה את בני ישראל'); NINE_HALF = seats('לתשעת המטות וחצי המטה'); NINE_HALF_OTHER = seats('לתשעת השבטים וחצי השבט'); NINE_CONSTRUCT = seats('לתשעת'); TWO_HALF = seats('שני המטות וחצי המטה')
+assert RELAY == ['Num 34:13', 'Num 36:5'], RELAY                                                                                        # THE RELAY'S FORM — two Torah seats; 36:5's the installing act command_relayed (THE TENT sitting 4)
+assert NINE_HALF == ['Josh 14:2', 'Num 34:13'] and NINE_HALF_OTHER == ['Josh 13:7'] and NINE_CONSTRUCT == ['Josh 13:7', 'Josh 14:2', 'Num 34:13'] and TWO_HALF == ['Josh 14:3', 'Num 34:15'], (NINE_HALF, NINE_HALF_OTHER, NINE_CONSTRUCT, TWO_HALF)   # "nine" in the construct three Bible seats, every one the nine tribes
+assert words(34, 13)[16:20] == words(14, 2, 'Josh')[-4:] == ['לתשעת', 'המטות', 'וחצי', 'המטה'], (words(34, 13), words(14, 2, 'Josh'))          # JOSHUA 14:2 QUOTES 34:13's words under "as the LORD commanded by the hand of Moses"
+RECEIPT_HAND = seats('כאשר צוה יהוה ביד משה'); RECEIPT_NUM = seats('כאשר צוה יהוה את משה', ('Num',)); BY_HAND = seats('ביד משה')
+assert RECEIPT_HAND == ['Josh 14:2', 'Josh 21:8'] and len(RECEIPT_NUM) == 13 and not any(s.startswith('Num 34:') for s in RECEIPT_NUM) and len(BY_HAND) == 31, (RECEIPT_HAND, RECEIPT_NUM, len(BY_HAND))   # NO receipt in the chapter — the run's receipt Joshua 14:2's, outside the Torah
+MATTEH = [(v, t) for _, v in SPAN for t, l in zip(_V[('Num', 34, v)], _L[('Num', 34, v)]) if l == '4294']; SHEVET = [(v, t) for _, v in SPAN for t, l in zip(_V[('Num', 34, v)], _L[('Num', 34, v)]) if l == '7626']
+assert len(MATTEH) == 18 and SHEVET == [] and [l for t, l in zip(_V[('Num', 32, 33)], _L[('Num', 32, 33)]) if l in ('4294', '7626')] == ['7626'], (len(MATTEH), SHEVET)   # ONE TRIBE-NOUN — the staff-word eighteen times, the other never; 32:33's the neighbour
+TOOK = seats('לקחו נחלתם'); REUBENITE = seats('הראובני'); GADITE = seats('הגדי'); HALF_MAN_MATTEH = seats('חצי מטה מנשה'); HALF_MAN_SHEVET = seats('חצי שבט מנשה'); BEYOND = seats('מעבר לירדן ירחו'); BY_LOT_T = seats('בגורל', TORAH); INHERIT_HIT = seats('תתנחלו')
+assert TOOK == ['Josh 13:8', 'Josh 18:7', 'Num 34:14', 'Num 34:15'], TOOK                                                               # "took their inheritance" four Bible seats — always the two and a half
+assert REUBENITE == ['1Chr 11:42', '1Chr 12:38', '1Chr 26:32', 'Josh 13:8', 'Num 26:7', 'Num 34:14'] and GADITE == ['1Chr 12:9', '2Kgs 10:33', '2Sam 23:36', 'Gen 38:23', 'Judg 14:6', 'Num 34:14'], (REUBENITE, GADITE)   # the Gadite's token is also "the kid" (Genesis 38:23, Judges 14:6) — a homograph by token
+assert HALF_MAN_MATTEH == ['1Chr 6:56'] and words(34, 14)[12:15] == ['וחצי', 'מטה', 'מנשה'] and HALF_MAN_SHEVET == ['1Chr 5:23', 'Josh 22:13', 'Josh 22:15'], (HALF_MAN_MATTEH, HALF_MAN_SHEVET)
+assert BEYOND == ['Num 22:1', 'Num 34:15'] and BY_LOT_T == ['Num 26:55', 'Num 33:54', 'Num 34:13', 'Num 36:2'] and INHERIT_HIT == ['Ezek 47:13', 'Num 33:54', 'Num 34:13'], (BEYOND, BY_LOT_T, INHERIT_HIT)
+# ---- F4's facts: the dividers ----
+NAMES_MEN = seats('אלה שמות האנשים'); TRIAD = seats('אלעזר הכהן ויהושע בן נון'); INHERIT_QAL = seats('ינחלו'); TO_DIVIDE = seats('לנחל'); TO_DIVIDE_LAND = seats('לנחל את הארץ')
+assert NAMES_MEN == ['Num 13:16', 'Num 34:17'] and words(34, 19)[:3] == ['ואלה', 'שמות', 'האנשים'], (NAMES_MEN, words(34, 19))          # "these are the names of the men" — the spies' roster and this (34:19 with the conjunction)
+assert TRIAD == ['Josh 14:1', 'Josh 19:51', 'Num 34:17'], TRIAD                                                                         # ELEAZAR THE PRIEST AND JOSHUA SON OF NUN as one phrase — three Bible seats: this and Joshua's two runs
+assert INHERIT_QAL == ['Num 18:23', 'Num 18:24', 'Num 26:55', 'Num 34:17', 'Num 35:8', 'Prov 3:35', 'Prov 28:10'] and TO_DIVIDE_LAND == ['Josh 19:49', 'Num 34:18'], (INHERIT_QAL, TO_DIVIDE_LAND)
+assert TO_DIVIDE == ['2Chr 29:16', '2Chr 30:14', 'Jer 47:2', 'Josh 15:7', 'Josh 17:9', 'Josh 19:49', 'Num 34:18', 'Num 34:29'], TO_DIVIDE   # one skin: "to the brook" (five seats), the plain "to divide" (34:18; Joshua 19:49), the intensive (34:29) — THE POINTS DECIDE
+assert _PT[('Num', 34, 18)][6] == NF('לִנְחֹ֥ל') and _PT[('Num', 34, 29)][4] == NF('לְנַחֵ֥ל'), (_PT[('Num', 34, 18)][6], _PT[('Num', 34, 29)][4])   # the plain infinitive at 34:18, the intensive's at 34:29 (NFC both sides)
+PIEL_RUNS = seats('נחלו'); PIEL_MOSES = seats('נחל משה')
+assert {'Josh 14:1', 'Josh 19:51'} <= set(PIEL_RUNS) and 'Josh 13:32' in PIEL_MOSES, (PIEL_RUNS, PIEL_MOSES)                                # the intensive stem's other three seats Joshua's runs (13:32 Moses'; 14:1 and 19:51 Eleazar and Joshua's)
+assert words(34, 17)[4:8] == ['ינחלו', 'לכם', 'את', 'הארץ'] and words(34, 29)[4:8] == ['לנחל', 'את', 'בני', 'ישראל'], (words(34, 17), words(34, 29))   # THE OBJECT SWITCHES WITH THE STEM — the land at 34:17-18, the people at 34:29
+DOUBLING = words(34, 18)[:5]; ONE_PRINCE_PAIR = seats('נשיא אחד נשיא אחד'); ONE_MAN_PAIR = seats('איש אחד איש אחד')
+assert DOUBLING == ['ונשיא', 'אחד', 'נשיא', 'אחד', 'ממטה'] and ONE_PRINCE_PAIR == ['Josh 22:14'] and ONE_MAN_PAIR == ['Josh 3:12', 'Josh 4:2', 'Josh 4:4', 'Num 13:2'], (DOUBLING, ONE_PRINCE_PAIR, ONE_MAN_PAIR)   # THE DISTRIBUTIVE DOUBLING — the spies, Joshua's stones and embassy
+KIN = {k: ink_numbers(verse_words(*k)) for k in (('Num', 13, 2), ('Num', 7, 11), ('Num', 17, 21), ('Josh', 3, 12), ('Josh', 4, 2), ('Josh', 4, 4), ('Josh', 22, 14), ('Josh', 14, 2), ('Josh', 13, 7), ('Josh', 14, 3), ('Josh', 14, 4), ('Ezek', 47, 13), ('1Kgs', 8, 65))}
+assert KIN == {('Num', 13, 2): [1, 1], ('Num', 7, 11): [1, 1], ('Num', 17, 21): [1, 1, 12], ('Josh', 3, 12): [12, 1, 1], ('Josh', 4, 2): [12, 1, 1], ('Josh', 4, 4): [2, 1, 1], ('Josh', 22, 14): [10, 1, 1], ('Josh', 14, 2): [9], ('Josh', 13, 7): [9], ('Josh', 14, 3): [2], ('Josh', 14, 4): [2], ('Ezek', 47, 13): [12], ('1Kgs', 8, 65): [7, 7, 14]}, KIN   # the parser at the kin — the doubling read [1, 1] everywhere; the nine and the two at Joshua's runs
+# ---- F5's facts: the roster ----
+CALEB_FIVE = seats('למטה יהודה כלב בן יפנה'); CALEB_JEPH = seats('כלב בן יפנה'); PRINCE_NUM = seats('נשיא', ('Num',)); PRINCE_34 = [s for s in PRINCE_NUM if s.startswith('Num 34:')]
+assert CALEB_FIVE == ['Num 13:6', 'Num 34:19'] and words(13, 6) == words(34, 19)[3:8] == ['למטה', 'יהודה', 'כלב', 'בן', 'יפנה'], (CALEB_FIVE, words(13, 6), words(34, 19))   # CALEB'S FIVE WORDS — the spy's line at the dividers'
+assert CALEB_JEPH == ['1Chr 4:15', 'Deut 1:36', 'Josh 14:6', 'Num 13:6', 'Num 14:30', 'Num 26:65', 'Num 32:12', 'Num 34:19'], CALEB_JEPH
+assert len(PRINCE_NUM) == 23 and PRINCE_34 == ['Num 34:18', 'Num 34:22', 'Num 34:23', 'Num 34:24', 'Num 34:25', 'Num 34:26', 'Num 34:27', 'Num 34:28'], (len(PRINCE_NUM), PRINCE_34)   # THE TITLE at seven roster rows — dropped at Judah's, Simeon's, Benjamin's
+TRIBE = {'3063': 'judah', '8095': 'simeon', '1144': 'benjamin', '1835': 'dan', '4519': 'manasseh', '669': 'ephraim', '2074': 'zebulun', '3485': 'issachar', '836': 'asher', '5321': 'naphtali', '7205': 'reuben', '1410': 'gad', '3878': 'levi', '3130': 'joseph'}
+def _tribe_of(book, ch, vs):
+    ts = [TRIBE[l] for l in _L[(book, ch, vs)] if l in TRIBE]
+    return ts[-1] if ts else None                                                                          # the LAST tribe lemma of the verse (34:23 names Joseph then Manasseh)
+ROSTER = []
+for v in range(19, 29):
+    ws, ls, ms = _V[('Num', 34, v)], _L[('Num', 34, v)], _M[('Num', 34, v)]
+    nps = [(w, l) for w, l, m in zip(ws, ls, ms) if 'Np' in m and l not in TRIBE]
+    assert len(nps) == 2, (v, nps)                                                                                                     # every roster row names a prince and his father
+    ROSTER.append({'verse': v, 'tribe': _tribe_of('Num', 34, v), 'prince': nps[0][0], 'prince_lemma': nps[0][1], 'father': nps[1][0], 'father_lemma': nps[1][1], 'title': 'נשיא' in ws, 'sons_of': 'בני' in ws, 'conjunction': ws[0].startswith('ו')})
+assert [r['tribe'] for r in ROSTER] == ['judah', 'simeon', 'benjamin', 'dan', 'manasseh', 'ephraim', 'zebulun', 'issachar', 'asher', 'naphtali'], [r['tribe'] for r in ROSTER]
+assert [r['prince'] for r in ROSTER] == ['כלב', 'שמואל', 'אלידד', 'בקי', 'חניאל', 'קמואל', 'אליצפן', 'פלטיאל', 'אחיהוד', 'פדהאל'] and [r['father'] for r in ROSTER] == ['יפנה', 'עמיהוד', 'כסלון', 'יגלי', 'אפד', 'שפטן', 'פרנך', 'עזן', 'שלמי', 'עמיהוד'], ROSTER
+assert [r['title'] for r in ROSTER] == [False, False, False, True, True, True, True, True, True, True] and [r['sons_of'] for r in ROSTER] == [False, True, False, True, True, True, True, True, True, True] and [r['conjunction'] for r in ROSTER] == [True, True, False, True, False, True, True, True, True, True], ROSTER   # the title dropped for three; "the children of" absent at Judah's and Benjamin's; the conjunction absent at Benjamin's and at Joseph's heading
+PRINCE_SEATS = {r['prince']: lemma_seats(r['prince_lemma']) for r in ROSTER}; FATHER_SEATS = {r['father']: lemma_seats(r['father_lemma']) for r in ROSTER}
+ONLY_HERE_LEMMA = [n for n, s in list(PRINCE_SEATS.items()) + list(FATHER_SEATS.items()) if s == ['Num 34:%d' % v for v in range(19, 29) if n in words(34, v)]]
+ONLY_HERE_TOKEN = [n for n in [r['prince'] for r in ROSTER] + [r['father'] for r in ROSTER] if all(s.startswith('Num 34:') for s in tok(n))]
+assert ONLY_HERE_TOKEN == ['אלידד', 'חניאל', 'אחיהוד', 'פדהאל', 'יגלי', 'שפטן', 'פרנך', 'עזן'] and len(ONLY_HERE_TOKEN) == 8, ONLY_HERE_TOKEN   # EIGHT names nowhere else BY TOKEN — Hanniel among them (1 Chronicles 7:39 spells his namesake otherwise), Ephod not (the vestment's token at Exodus 28:15, 39:8): the third run read
+assert set(ONLY_HERE_LEMMA) == (set(ONLY_HERE_TOKEN) - {'חניאל'}) | {'אפד', 'כסלון', 'שלמי'} and len(ONLY_HERE_LEMMA) == 10, ONLY_HERE_LEMMA   # TEN BY LEMMA — Ephod the person (641), Chislon (Joshua 15:10's Chesalon another lemma), Shelomi ("my peace-offerings" another) in; Hanniel out (his lemma at 1 Chronicles 7:39): the reading's "eight" (Ephod in, Hanniel out) was a MIXED measure — filed at the compile
+assert PRINCE_SEATS['שמואל'] and len(PRINCE_SEATS['שמואל']) == 120 and PRINCE_SEATS['שמואל'][0] != 'Num 34:20' and 'Num 34:20' in PRINCE_SEATS['שמואל'], (len(PRINCE_SEATS['שמואל']), PRINCE_SEATS['שמואל'][:3])   # SHEMUEL — the prophet's name (one hundred twenty verses by lemma), its first seat here
+assert len(PRINCE_SEATS['כלב']) == 35 and FATHER_SEATS['עמיהוד'] == ['1Chr 7:26', '1Chr 9:4', 'Num 1:10', 'Num 2:18', 'Num 7:48', 'Num 7:53', 'Num 10:22', 'Num 34:20', 'Num 34:28'], (len(PRINCE_SEATS['כלב']), FATHER_SEATS['עמיהוד'])   # AMMIHUD — three tribes' fathers' name (Ephraim's Elishama 1:10; Simeon's; Naphtali's)
+assert FATHER_SEATS['אפד'] == ['Num 34:23'] and tok('אפד') == ['Exod 28:15', 'Exod 39:8', 'Num 34:23'] and tok('כסלון') == ['Josh 15:10', 'Num 34:21'] and PRINCE_SEATS['קמואל'] == ['1Chr 27:17', 'Gen 22:21', 'Num 34:24'], (FATHER_SEATS['אפד'], tok('אפד'), tok('כסלון'), PRINCE_SEATS['קמואל'])   # Ephod the vestment's consonants; Chislon Judah's north-border Chesalon; Kemuel Nahor's son's name
+assert PRINCE_SEATS['אליצפן'] == ['1Chr 15:8', '2Chr 29:13', 'Exod 6:22', 'Lev 10:4', 'Num 3:30', 'Num 34:25'] and tok('אליצפן') == ['1Chr 15:8', '2Chr 29:13', 'Num 3:30', 'Num 34:25'] and PRINCE_SEATS['פלטיאל'] == ['2Sam 3:15', 'Num 34:26'] and PRINCE_SEATS['בקי'] == ['1Chr 5:31', '1Chr 6:36', 'Ezra 7:4', 'Num 34:22'] and len(PRINCE_SEATS['חניאל']) == 2, (PRINCE_SEATS['אליצפן'], PRINCE_SEATS['פלטיאל'], PRINCE_SEATS['בקי'], PRINCE_SEATS['חניאל'])   # Elizaphan SIX by lemma (Exodus 6:22's and Leviticus 10:4's Elzaphan the same Kohathite), four by token — the fourth run read: a token list typed against a lemma census
+GOD_NAMES = [r['prince'] for r in ROSTER if r['prince'].startswith('אל') or r['prince'].endswith('אל')]; GOD_FATHERS = [r['father'] for r in ROSTER if r['father'].startswith('אל') or r['father'].endswith('אל')]
+assert GOD_NAMES == ['שמואל', 'אלידד', 'חניאל', 'קמואל', 'אליצפן', 'פלטיאל', 'פדהאל'] and GOD_FATHERS == [], (GOD_NAMES, GOD_FATHERS)   # SEVEN of the ten carry God's name, none of the fathers
+JOSHUA_TRIBE = _tribe_of('Num', 13, 8)
+assert JOSHUA_TRIBE == 'ephraim' and words(13, 8)[:2] == ['למטה', 'אפרים'], (JOSHUA_TRIBE, words(13, 8))                                  # Joshua's tribe from 13:8's line (the spies' roster) — the row's column computed
+def _order(rng):
+    o = []
+    for k in rng:
+        if k not in _V: continue
+        for l in _L[k]:
+            if l in TRIBE and TRIBE[l] not in o: o.append(TRIBE[l])
+    return o
+LISTS = collections.OrderedDict([('Gen 29-30', [('Gen', 29, v) for v in range(31, 36)] + [('Gen', 30, v) for v in range(1, 25)]), ('Gen 35:23-26', [('Gen', 35, v) for v in range(23, 27)]), ('Gen 46:8-25', [('Gen', 46, v) for v in range(8, 26)]), ('Gen 49', [('Gen', 49, v) for v in range(3, 28)]), ('Exod 1:2-4', [('Exod', 1, v) for v in range(2, 5)]), ('Num 1:5-15', [('Num', 1, v) for v in range(5, 16)]), ('Num 1:20-43', [('Num', 1, v) for v in range(20, 44)]), ('Num 2', [('Num', 2, v) for v in range(3, 32)]), ('Num 7:12-83', [('Num', 7, v) for v in range(12, 84)]), ('Num 10:14-27', [('Num', 10, v) for v in range(14, 28)]), ('Num 13:4-15', [('Num', 13, v) for v in range(4, 16)]), ('Num 26:5-50', [('Num', 26, v) for v in range(5, 51)]), ('Deut 27:12-13', [('Deut', 27, v) for v in (12, 13)]), ('Deut 33', [('Deut', 33, v) for v in range(6, 25)]), ('Josh 13-19', [('Josh', c, v) for c in range(13, 20) for v in range(1, 60)]), ('Ezek 48:1-7, 23-27', [('Ezek', 48, v) for v in list(range(1, 8)) + list(range(23, 28))])])
+ORDERS = collections.OrderedDict((n, _order(rng)) for n, rng in LISTS.items())
+ROSTER_ORDER = [r['tribe'] for r in ROSTER]
+def _restrict(o): return [t for t in o if t in ROSTER_ORDER]
+MATCHES = [n for n, o in ORDERS.items() if _restrict(o) == ROSTER_ORDER]
+assert MATCHES == [] and len(ORDERS) == 16, (MATCHES, ORDERS)                                                                          # THE ORDER MATCHES NO OTHER ROSTER (sixteen lists, restricted to the roster's ten)
+MAN_BEFORE_EPH = [n for n, o in ORDERS.items() if 'manasseh' in o and 'ephraim' in o and o.index('manasseh') < o.index('ephraim')]
+ZEB_BEFORE_ISS = [n for n, o in ORDERS.items() if 'zebulun' in o and 'issachar' in o and o.index('zebulun') < o.index('issachar')]
+assert MAN_BEFORE_EPH == ['Gen 46:8-25', 'Num 26:5-50', 'Josh 13-19', 'Ezek 48:1-7, 23-27'] and ZEB_BEFORE_ISS == ['Gen 49', 'Deut 33'], (MAN_BEFORE_EPH, ZEB_BEFORE_ISS)   # Manasseh before Ephraim as the second census and Genesis 46 in the Torah (Joshua's east half and Ezekiel's north outside it); Zebulun before Issachar as the two blessings alone
+LOTS_19 = [_tribe_of('Josh', 19, v) for v in (10, 17, 24, 32)]
+assert LOTS_19 == ['zebulun', 'issachar', 'asher', 'naphtali'] == ROSTER_ORDER[-4:], (LOTS_19, ROSTER_ORDER)                             # THE FOUR NORTHERN TRIBES in the order Joshua's lots fall (19:10, 17, 24, 32)
+CLOSER = seats('אלה אשר צוה יהוה'); SPOKE_NUM = seats('וידבר יהוה אל משה לאמר', ('Num',))
+assert CLOSER == ['Num 34:29'] and len(SPOKE_NUM) == 32 and {'Num 34:1', 'Num 34:16'} <= set(SPOKE_NUM), (CLOSER, len(SPOKE_NUM))         # the closer's form without a noun — one seat; no receipt
+# ---- THE CALLEES (live import edges; the design's cells by name; every value typed from bor_compile_measure.out) ----
+C2_LOT = C2.the_land({'ask': 'by_lot'}, C2.DATA); C2_ONLY = C2.the_land({'ask': 'only_excludes'}, C2.DATA); C2_MOUTH = C2.the_land({'ask': 'lots_mouth'}, C2.DATA); C2_THIRTEEN = C2.the_land({'ask': 'thirteen_tribes'}, C2.DATA); C2_HELD = C2.the_land({'ask': 'possession_before_assignment'}, C2.DATA)
+assert C2_LOT[0] == 'the place by lot — Joshua 14-19 the run' and C2_LOT[1] == ['commanded'] and C2_ONLY[0] == "Joshua and Caleb excluded from the lot — 26:65's two" and C2_ONLY[1] == ['exempt'], (C2_LOT, C2_ONLY)   # THE CALL: the lot's cell — 34:2 and 34:13 cite it; "only" excludes the two dividers' portions
+assert C2_MOUTH[0] == "the lot's mouth is the oracle's — two receptacles before Eleazar" and C2_THIRTEEN[0] == 'twelve now, thirteen to come' and C2_HELD[0] == 'in possession before assignment — the rows are holdings before the lot' and C2.DATA['division_by']['value'] == 'tribes', (C2_MOUTH, C2_THIRTEEN, C2_HELD)
+GR_COMM = GR.the_acceptance_and_the_charge({'ask': 'the_commission'}, GR.DATA); GR_THREE = GR.the_grant({'ask': 'three_parties'}, GR.DATA); GR_COUNT = GR.the_grant({'ask': 'the_count'}, GR.DATA); GR_NOTLOT = GR.the_grant({'ask': 'not_by_lot'}, GR.DATA); GR_HELD = GR.the_grant({'ask': 'land_held'}, GR.DATA)
+assert GR_COMM[0].startswith('Eleazar the priest, Joshua son of Nun and the heads of the fathers of the tribes (32:28)') and GR_COMM[1] == ['commanded'] and GR.TRIAD_32 == ['Num 32:28'] and GR.TRIAD_JOSH == ['Josh 14:1'], (GR_COMM, GR.TRIAD_32, GR.TRIAD_JOSH)   # THE CALL: the commission's charge — the same triad
+assert GR_THREE[0].startswith('to the sons of Gad, to the sons of Reuben and to half the tribe of Manasseh (32:33) — three transfers') and GR_THREE[1] == ['holding_given'] and GR_COUNT[0].startswith("the two and a half's count — 43,730 + 40,500 + 52,700 ÷ 2 = 110,580"), (GR_THREE, GR_COUNT)   # THE CALL: the grant's three transfers and the count
+assert GR_NOTLOT[0].startswith("the east by Moses' word, not by lot") and GR_HELD[0].startswith('in possession before assignment'), (GR_NOTLOT, GR_HELD)
+COUNT_TWO_HALF = 43730 + 40500 + 52700 // 2
+assert COUNT_TWO_HALF == 110580 and '110,580' in GR_COUNT[0], COUNT_TWO_HALF
+SL_ONE = SL.spies({'ask': 'one_per_tribe'}, SL.DATA); SL_EQUAL = SL.spies({'ask': 'joshua_caleb_equal'}, SL.DATA); SL_FOURTH = SL.spies({'ask': 'fourth_order'}, SL.DATA); SL_EXC = SL.decree({'ask': 'exceptions'}, SL.DATA); SL_CALEB = SL.decree({'ask': 'caleb_entitlement'}, SL.DATA); SL_PORTIONS = SL.decree({'ask': 'spies_portions'}, SL.DATA)
+assert SL_ONE[0] == '12 — one man per tribe, princes; Levi absent' and SL_EQUAL[0] == 'equal — Caleb first at 13:6, Joshua at 13:8 (Tosefta Keritot 4:7)' and SL_FOURTH[0].startswith('a fourth order of the twelve'), (SL_ONE, SL_EQUAL, SL_FOURTH)   # THE CALL: the spies' doubling and roster
+assert SL_EXC[0] == 'Caleb and Joshua (14:24, 14:30); the children brought in (14:31)' and SL_EXC[1] == ['exempt'] and SL_CALEB[0].startswith('holding_owed — Hebron; PAID at Josh 14:13-14') and SL_PORTIONS[0].startswith("Joshua and Caleb lived in the ten's portions"), (SL_EXC, SL_CALEB, SL_PORTIONS)
+assert SL.SPY_TRIBES == ['ראובן', 'שמעון', 'יהודה', 'יששכר', 'אפרים', 'בנימן', 'זבולן', 'יוסף', 'דן', 'אשר', 'נפתלי', 'גד'], SL.SPY_TRIBES
+CK_TWO = CK.edom_and_hor({'ask': 'two_mount_hors'}, CK.DATA)
+assert CK_TWO[0] == "two Mount Hors — Aaron's at Edom's border, the northern border's (34:7-8)", CK_TWO                                # THE CALL: the chukat runner's row NAMES THIS CHAPTER
+CB_ORDERS = CB.census({'ask': 'orders'}, CB.DATA)
+assert CB_ORDERS[0] == 'three orders in the portion; Gad moves from eleventh to third' and CB.TRIBES == ['reuben', 'simeon', 'gad', 'judah', 'issachar', 'zebulun', 'ephraim', 'manasseh', 'benjamin', 'dan', 'asher', 'naphtali'], (CB_ORDERS, CB.TRIBES)   # THE CALL: the roll's three orders
+NS_PER_DAY = NS.dedication({'ask': 'per_day'}, NS.DATA); NS_ERASURE = NS.sotah({'ask': 'scroll_erasure'}, NS.DATA)
+assert NS_PER_DAY[0].startswith('one prince per day') and NS.NAMES == ['נחשון', 'נתנאל', 'אליאב', 'אליצור', 'שלמיאל', 'אליסף', 'אלישמע', 'גמליאל', 'אבידן', 'אחיעזר', 'פגעיאל', 'אחירע'] and NS_ERASURE[0] == 'written whole, erased at once', (NS_PER_DAY, NS.NAMES, NS_ERASURE)   # THE CALL: 7:11's doubling; the twelve of chapter 1; the sotah's blot (the other sense of 34:11's token)
+assert not set(NS.NAMES) & {r['prince'] for r in ROSTER}, 'NO PRINCE OF CHAPTER 1 among the ten'
+KR_STAFFS = KR.plague_and_staffs({'ask': 'staffs_count'}, KR.DATA)
+assert KR_STAFFS[0].startswith("12 — a staff for a father's house") and KR.STAFFS_21 == [1, 1, 12] and KR.ONE_ONE == [1, 1], (KR_STAFFS, KR.STAFFS_21, KR.ONE_ONE)   # THE CALL: 17:21's rods by prince and tribe
+ZL_RUN = ZL.the_daughters({'ask': 'the_run'}, ZL.DATA); ZL_REACH = ZL.the_daughters({'ask': 'reach'}, ZL.DATA); ZL_TEN = ZL.inheritance_order({'ask': 'ten_parts'}, ZL.DATA)
+assert ZL_RUN[0].startswith('given in the sixth book by the mouth of the LORD') and ZL_RUN[1] == ['holding_owed'] and ZL_REACH[0] == 'this generation — the one that divided the land' and ZL_TEN[0].startswith("ten — six fathers' houses"), (ZL_RUN, ZL_REACH, ZL_TEN)   # THE CALL: the daughters' holding paid before Eleazar and Joshua (Joshua 17:4)
+JO_LOT = JO.the_command({'ask': 'the_lot_restated'}, JO.DATA); JO_PASS = JO.the_command({'ask': 'when_you_pass'}, JO.DATA); JO_DWELL = JO.the_command({'ask': 'possess_and_dwell'}, JO.DATA)
+assert JO_LOT[0].startswith('the lot restated to the people (33:54)') and JO_PASS[0].startswith('when you pass over the Jordan into the land of Canaan (33:51)') and JO_DWELL[0].startswith('possess the land and dwell in it'), (JO_LOT, JO_PASS, JO_DWELL)   # THE CALL: 33:51's entry clause, 33:54's restatement

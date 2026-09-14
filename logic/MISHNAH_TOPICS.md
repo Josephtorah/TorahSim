@@ -34,10 +34,10 @@ hairline of what-is-part-of-what (Stems). Topic order, never verse order.
 **4. Mishnah, Mixtures** — כלאים ("mixtures") · 9 ch — forbidden mixing of species.
 1 non-kilayim ("mixtures") pairs · 2 seed ratios; replanting · 3 vegetable beds · 4 vineyard bald-spots, fences · 5 ruined vineyards; spacing · 6 espalier definitions · 7 layered vines · 8 benefit bans; animal pairings (plow/draw) · 9 wool-and-linen garments
 
-**5. Mishnah, Seventh Year** — שביעית ("seventh") · 10 ch — the land's sabbatical.
+**5. Mishnah, Seventh Year** — שביעית ("seventh") · 10 ch — the land's sabbatical. — 6:1 and 9:2 READ 2026-09-13 (THE NUMBERS WALK sitting 14b, the borders' docket: THE THREE LANDS — what those who came up from Babylon held, what those who came up from Egypt held, beyond; Judea, Transjordan, Galilee for the removal — the shelf's own holdings' lines inside Numbers 34's one border; credited from the Sheviit topic docket of 2026-09-05, a quick look here; the Tosefta 4:4 and 4:12 read beside)
 1 orchard plowing cutoff · 2 grain-field cutoff · 3 manure, quarrying · 4 gathering wood/stones · 5 multi-year fruits; tool sales · 6 three land zones · 7 covered species classes · 8 produce use and sale · 9 herbs; removal regions · 10 debt release; the prosbul workaround
 
-**6. Mishnah, Priestly Gifts** — תרומות ("gifts set apart") · 11 ch — the priest's share of produce.
+**6. Mishnah, Priestly Gifts** — תרומות ("gifts set apart") · 11 ch — the priest's share of produce. — 4:3 READ 2026-09-12 (THE NUMBERS WALK sitting 11b, the Midian docket: the measure of terumah — generous one fortieth, the House of Shammai one thirtieth, THE AVERAGE ONE FIFTIETH, stingy one sixtieth; the Levites' one of fifty at Num 31:30 the average's own number by R. Levi, Jerusalem Talmud Terumot 4:3:2; the Torah's own measure none, 4:3:8).
 1 who may not separate · 2 pure-for-impure · 3 wrong separations; order · 4 proportions · 5 impure admixtures · 6 unwitting eater: principal + fifth · 7 deliberate eater · 8 status flips mid-act; exposed liquids · 9 sown terumah · 10 taste transfer (onion in lentils) · 11 permitted uses; no waste
 
 **7. Mishnah, Tithes** — מעשרות ("tithes") · 5 ch — when produce becomes tithable.
@@ -62,13 +62,13 @@ hairline of what-is-part-of-what (Stems). Topic order, never verse order.
 **12. Mishnah, Sabbath** — שבת ("Sabbath") · 24 ch — the labor system. — ch 19 READ WHOLE 2026-09-06 (sitting G1: circumcision on the Sabbath — Gen 17:12's eighth day, the ladder to twelve). — 7:1-2 credited 2026-09-09 (THE TENT sitting 3: the great rule and the thirty-nine at the wood-gatherer's docket; the gatherer's labor a parameter row — detaching, carrying, gathering).
 1 carrying transfers; eve rules · 2 lamp fuels · 3 stovetop warming · 4 insulating · 5 animal gear · 6 personal wear · 7 THE GREAT RULE: the 39 labors · 8 carrying minimums · 9 derivations; more minima · 10 storing; carrying styles · 11 throwing between domains · 12 building/writing minima · 13 weaving; trapping · 14 eight creatures; healing bans · 15 knots · 16 fire rescue of scrolls · 17 vessel handling (muktzeh) · 18 clearing space; birthing · 19 circumcision overrides · 20 straining; fodder · 21 carrying child-with-stone · 22 broken cask; washing · 23 borrowing; waiting for dark · 24 nightfall on the road
 
-**13. Mishnah, Merging Domains** — עירובין ("mergers") · 10 ch — extending Sabbath domains.
+**13. Mishnah, Merging Domains** — עירובין ("mergers") · 10 ch — extending Sabbath domains. — 4:3, 5:1-5 read 2026-09-13 (THE NUMBERS WALK sitting 15b: the city squared and the two thousand measured — the Levite city's measure at Numbers 35:5 the Sabbath limit's).
 1 alley fixes · 2 well enclosures · 3 the eruv food and placement · 4 forced beyond limits; four cubits · 5 city extension; measuring · 6 gentile or denier in the courtyard · 7 windows and walls between courtyards · 8 boundary partnerships; water · 9 roofs as one domain · 10 found tefillin; misc reliefs
 
 **14. Mishnah, Passover** — פסחים ("Passovers") · 10 ch — leaven and the lamb.
 1 the night-14 search · 2 benefit window; disposal · 3 leaven species · 4 eve-of-festival work customs · 5 slaughter shifts · 6 Sabbath overrides · 7 roasting; impurity cases · 8 who registers on a lamb · 9 Second Passover · 10 the seder night: four cups, the questions — ch 9 READ WHOLE 2026-09-09 (THE TENT sitting 2, the second Passover's exam: 9:1-4 consumed, 9:5 credited, 9:6-11 routed to the Passover engine's registration module; Tosefta Pesachim 8 beside it).
 
-**15. Mishnah, Shekels** — שקלים ("shekels") · 8 ch — the Temple tax and treasury. READ WHOLE 2026-09-06 (sitting E4 — the incense-and-shekel docket, all 52 rows verdicted against Exod 30:11-16).
+**15. Mishnah, Shekels** — שקלים ("shekels") · 8 ch — the Temple tax and treasury. READ WHOLE 2026-09-06 (sitting E4 — the incense-and-shekel docket, all 52 rows verdicted against Exod 30:11-16). — 3:2 re-read 2026-09-12 (THE NUMBERS WALK sitting 12b: the clearance — 'a person must appear justified before people as before the Omnipresent', Num 32:22; Yoma 38a and Pesachim 13a its other seats).
 1 Adar announcements · 2 exchange; surpluses · 3 chamber withdrawals · 4 what the fund buys · 5 officers and seals · 6 the thirteen chests · 7 found money and meat · 8 Jerusalem purity presumptions
 
 **16. Mishnah, Day of Atonement** — יומא ("the Day") · 8 ch — the high priest's day.
@@ -105,26 +105,26 @@ hairline of what-is-part-of-what (Stems). Topic order, never verse order.
 **25. Mishnah, Marriage Contracts** — כתובות ("written [settlements]") · 13 ch — the marriage deed. — ch 5 READ WHOLE 2026-09-06 (sitting G2: the bride's year against 24:55's 'days or ten').
 1 wedding days; virginity claims · 2 evidence presumptions; captives · 3 the fined seducer · 4 father's rights; husband's duties · 5 amounts; her work; refusal · 6 her finds; dowries · 7 vow-based divorces; blemishes · 8 property that falls to her · 9 waivers; oaths · 10 several wives collecting · 11 the widow's sales · 12 supporting the stepdaughter · 13 Admon's rulings; Land-of-Israel clauses
 
-**26. Mishnah, Vows** — נדרים ("vows") · 11 ch — binding and releasing speech. — ch 3 READ WHOLE 2026-09-06 (sitting G1: 3:11's thirteen covenants counted off Gen 17).
+**26. Mishnah, Vows** — נדרים ("vows") · 11 ch — binding and releasing speech. — ch 3 READ WHOLE 2026-09-06 (sitting G1: 3:11's thirteen covenants counted off Gen 17). — ch 9-11 READ WHOLE 2026-09-12 (THE NUMBERS WALK sitting 10b: the vows' exam docket — the sage's release, the father's and the husband's annulment, the affliction vows; Nedarim 64a-91b read whole beside them).
 1 vow substitutes · 2 non-binding formulas · 3 four released classes; robbers' vows · 4 scope of benefit-vows · 5 partners' property · 6 food-term scope · 7 term scope continued · 8 time-window scope · 9 openings for release · 10 the betrothed girl: father and husband · 11 annullable classes; the widow
 
 **27. Mishnah, Nazirite** — נזיר ("set-apart one") · 9 ch — the vowed abstainer.
 1 substitutes; durations · 2 odd formulas; conditions · 3 the thirty-day default; overlaps · 4 chained vows; the wife's vow · 5 mistaken consecration · 6 the three prohibitions; completion offerings · 7 corpse impurity vs the count · 8 two nazirites, one doubt · 9 gentiles, women, slaves; Samuel
 
-**28. Mishnah, Suspected Wife** — סוטה ("the strayed") · 9 ch — the ordeal and its cousins.
+**28. Mishnah, Suspected Wife** — סוטה ("the strayed") · 9 ch — the ordeal and its cousins. — 5:3, 9:7 read 2026-09-13 (THE NUMBERS WALK sitting 15b: R. Akiva's day on the thousand and the two thousand; the heifer yielding to the found killer).
 1 the warning; measure-for-measure · 2 the offering and scroll · 3 the drinking; merit delays · 4 who does not drink · 5 the water tests him too · 6 witnesses after seclusion · 7 any-language vs holy-tongue recitations · 8 the war-priest's speech; who returns home · 9 the broken-neck heifer; rites that ceased
 
-**29. Mishnah, Divorce Documents** — גיטין ("divorce deeds") · 9 ch — the get and its delivery.
+**29. Mishnah, Divorce Documents** — גיטין ("divorce deeds") · 9 ch — the get and its delivery. — 1:1-2 READ 2026-09-13 (THE NUMBERS WALK sitting 14b, the borders' docket: the agent's declaration for a bill from overseas, and Rabbi Yehuda's BORDERS FOR THE BILLS' LAW — from Rekem eastward, from Ashkelon southward, from Akko northward; Rekem the translation's name of Numbers 34:4's Kadesh-barnea; Gittin 8a:1-11 the gemara read whole — the sea within the border or the islands by the string)
 1 the agent from abroad · 2 writing and witnessing validity · 3 written-for-her; presumptions of life · 4 recalled agents; world-repair decrees · 5 collection tiers; ways of peace · 6 receive-vs-deliver agency · 7 the incapacitated husband; conditions · 8 the thrown get; the old get · 9 restrictive divorces; signatures; presumptions
 
-**30. Mishnah, Betrothal** — קידושין ("consecrations") · 4 ch — acquiring the bond. — ch 1-2 READ WHOLE 2026-09-06 (sitting G2: the woman acquired on Machpelah's field; land by money, deed, and possession as the chapter's three acts; the servant as the agent).
+**30. Mishnah, Betrothal** — קידושין ("consecrations") · 4 ch — acquiring the bond. — ch 1-2 READ WHOLE 2026-09-06 (sitting G2: the woman acquired on Machpelah's field; land by money, deed, and possession as the chapter's three acts; the servant as the agent). — 3:4 READ 2026-09-12 (THE NUMBERS WALK sitting 12b: the doubled condition's exemplar — R. Meir's "every condition not doubled like the condition of the sons of Gad and Reuben is no condition" against R. Chanina ben Gamliel; the sugya Kiddushin 61a-62a read whole with Gittin 75a-b, Bava Metzia 94a, Nedarim 11a, Shevuot 36a — the five limbs of the law of conditions off Num 32:20-30).
 1 acquisition modes (woman, slave, land); mitzvah classes · 2 agency; mistaken terms · 3 conditions; double-dealing agents; doubts · 4 the ten lineages from Babylon; seclusion; trades ethics
 
 ---
 
 ## Order 4 — Damages — נזיקין ("damages") · 10 tractates
 
-**31. Mishnah, First Gate** — בבא קמא ("first gate") · 10 ch — torts.
+**31. Mishnah, First Gate** — בבא קמא ("first gate") · 10 ch — torts. — 4:5 read 2026-09-13 (THE NUMBERS WALK sitting 15b: the ox that killed a man — the ransom the refuge cities' chapter refuses for the murderer).
 1 the four fathers of damage · 2 foot and tooth norms; warned vs innocuous · 3 public-domain obstacles; collisions · 4 the serial gorer; ox kills a person · 5 goring the pregnant cow; the pit · 6 the penned flock; fire spread · 7 double and fourfold-fivefold payments · 8 the five injury payments · 9 transformed stolen goods; restitution + fifth · 10 stolen goods downstream
 
 **32. Mishnah, Middle Gate** — בבא מציעא ("middle gate") · 10 ch — property between people.
@@ -133,25 +133,25 @@ hairline of what-is-part-of-what (Stems). Topic order, never verse order.
 **33. Mishnah, Last Gate** — בבא בתרא ("last gate") · 10 ch — neighbors, sales, inheritance. — ch 8 READ WHOLE 2026-09-06 (sitting G2: who inherits and the order; Jacob's testament as 8:5's case in the gift form). ch 8 CREDITED and re-opened 2026-09-09 (THE TENT sitting 4: the inheritance order compiled at its Numbers seat, Num 27:8-11 — 8:2 quotes 27:8, 8:3 the daughters' three portions; num_27_inheritance_exam_2026-09-09.md); 9:1 credited, 9:2 read (the tumtum); the Talmud's chapter 'there are those who inherit' (108b-121b) opened per gap.
 1 courtyard partitions · 2 distancing nuisances · 3 possession-years (chazakah) · 4 what a house sale includes · 5 the ship-sale inventory; acquiring movables · 6 seed and path defaults · 7 land-measure sales · 8 inheritance lines; the firstborn's double · 9 sons and daughters; deathbed gifts · 10 document formats (plain, tied)
 
-**34. Mishnah, Courts** — סנהדרין ("Sanhedrin") · 11 ch — court structure and capital law. — ch 6 READ WHOLE 2026-09-09 (THE TENT sitting 3: the stoning protocol from the platform to the grave — the wood-gatherer, num_15_mekoshesh_exam_2026-09-09.md; 6:1 and 6:3 credited from the blasphemer's exam); 5:1 read (the examinations — "did you warn him"); 7:1, 7:4, 7:8 credited (the four deaths, the stoned census, the Sabbath profaner's criterion).
+**34. Mishnah, Courts** — סנהדרין ("Sanhedrin") · 11 ch — court structure and capital law. — ch 6 READ WHOLE 2026-09-09 (THE TENT sitting 3: the stoning protocol from the platform to the grave — the wood-gatherer, num_15_mekoshesh_exam_2026-09-09.md; 6:1 and 6:3 credited from the blasphemer's exam); 5:1 read (the examinations — "did you warn him"); 7:1, 7:4, 7:8 credited (the four deaths, the stoned census, the Sabbath profaner's criterion). — 1:6, 3:4-5, 9:1-2 read 2026-09-13 (THE NUMBERS WALK sitting 15b: the twenty-three from the congregation-tokens; the kin and the haters off the bench; the beheaded and the intent's table at the refuge cities' docket).
 1 courts of 3, 23, 71 · 2 the high priest and the king · 3 choosing judges; disqualifications · 4 capital vs monetary procedure · 5 the seven interrogations · 6 stoning procedure; confession · 7 the four executions; stoning class · 8 the rebellious son · 9 the burning class; murderers · 10 all Israel has a share — and who doesn't · 11 the strangling class; rebellious elder; false prophet
 
-**35. Mishnah, Lashes** — מכות ("lashes") · 3 ch — witnesses, exile, stripes.
+**35. Mishnah, Lashes** — מכות ("lashes") · 3 ch — witnesses, exile, stripes. — ch 2 READ WHOLE 2026-09-13 (THE NUMBERS WALK sitting 15b: the manslayer's chapter at the refuge cities' docket — the downward motion, the permission and the office, the father and the son, the six cities and the roads, the three high priests, the border and the tree, the Levite exiled, the honor and the rent; num_35_refuge_cities_exam_2026-09-13.md).
 1 scheming witnesses · 2 exile cities for accidental killers · 3 the lash-liable list; forty minus one
 
-**36. Mishnah, Oaths** — שבועות ("oaths") · 8 ch — the oath system.
+**36. Mishnah, Oaths** — שבועות ("oaths") · 8 ch — the oath system. — 4:1 read 2026-09-13 (THE NUMBERS WALK sitting 15b: the oath of testimony's parties beside 35:30's one witness).
 1 classes two-that-are-four; impurity awareness · 2 Temple entry while impure · 3 utterance and vain oaths · 4 the testimony oath · 5 the deposit oath · 6 the judges' oath; thresholds · 7 those who swear and collect · 8 THE FOUR KEEPERS matrix (Exodus 22's ladder as a table)
 
 **37. Mishnah, Testimonies** — עדויות ("testimonies") · 8 ch — the opinion archive.
 1 earliest Shammai/Hillel disputes · 2 Chanina's four attestations · 3 Dosa's disputes · 4 Shammai-lenient lists · 5 more reversals; Akavya's stand · 6 Yehudah ben Bava's five · 7 Yehoshua and Tzadok's attestations · 8 final attestations; Elijah comes to make peace
 
-**38. Mishnah, Idolatry** — עבודה זרה ("foreign worship") · 5 ch — living beside pagans. — ch 3-4 READ WHOLE 2026-09-06 (sitting E5, the erection docket: the calf's nullification, the asherim of 34:13)
+**38. Mishnah, Idolatry** — עבודה זרה ("foreign worship") · 5 ch — living beside pagans. — ch 3-4 READ WHOLE 2026-09-06 (sitting E5, the erection docket: the calf's nullification, the asherim of 34:13) — ch 5 READ WHOLE 2026-09-12 (THE NUMBERS WALK sitting 11b, the Midian docket: 5:12 the vessels of Midian — the kashering modes by use, whiten / boil / polish and immerse all, the ink's fire-and-water at Num 31:23 the trunk; Avodah Zarah 75b-76b the sugya read whole).
 1 pre-festival trade bans · 2 their animals, foods, oils · 3 which images are forbidden · 4 the Merkulis stones; nullification · 5 libation wine; mixtures
 
 **39. Mishnah, Fathers (ethics)** — אבות ("fathers") · 6 ch — the wisdom tractate. — ch 5 READ WHOLE 2026-09-06 (sitting G1: the ten utterances against the ink's ten 'and God said'; the bow at twilight).
 1 the chain from Sinai; pair maxims · 2 Rabbi; Yochanan ben Zakkai's five students · 3 Akavya's three; awe and Torah · 4 Ben Zoma's who-is-wise · 5 the tens: utterances, generations, trials · 6 acquiring Torah (the added chapter)
 
-**40. Mishnah, Erroneous Rulings** — הוריות ("rulings") · 3 ch — when the court itself errs.
+**40. Mishnah, Erroneous Rulings** — הוריות ("rulings") · 3 ch — when the court itself errs. — 3:4 read 2026-09-13 (THE NUMBERS WALK sitting 15b: the anointed against the many-garmented — the high priest whose death releases the exile).
 1 the erring court; who relied · 2 the anointed priest's bull; the ruler · 3 precedence orders (whose offering, whose rescue)
 
 ---
@@ -159,7 +159,7 @@ hairline of what-is-part-of-what (Stems). Topic order, never verse order.
 ## Order 5 — Holy Things — קדשים ("holy things") · 11 tractates
 
 **41. Mishnah, Animal Offerings** — זבחים ("slaughtered offerings") · 14 ch — the altar's law.
-1 wrong-name slaughter validity · 2 disqualified receivers; wrong-time intent · 3 valid slaughterers; intent splits · 4 blood applications; intent targets · 5 THE PLACES of every offering (the map chapter) · 6 top-of-altar; bird offerings · 7 bird mix-ups · 8 mixtures with the condemned · 9 the altar sanctifies what's fit · 10 precedence: frequent first · 11 blood on the garment · 12 priests' shares; hides · 13 slaughtering outside · 14 offering outside; the altar-history eras
+1 wrong-name slaughter validity · 2 disqualified receivers; wrong-time intent · 3 valid slaughterers; intent splits · 4 blood applications; intent targets · 5 THE PLACES of every offering (the map chapter) · 6 top-of-altar; bird offerings · 7 bird mix-ups · 8 mixtures with the condemned · 9 the altar sanctifies what's fit · 10 precedence: frequent first · 11 blood on the garment · 12 priests' shares; hides · 13 slaughtering outside · 14 offering outside; the altar-history eras — ch 14 mishnayot 4-8 READ 2026-09-12 (THE NUMBERS WALK 13b, the journeys' docket: the private altars' eras decide the SENSE of Numbers 33:52's high places as the Canaanites', not Israel's; the gemara 112b-119b sized at 265 segments and cut as the erection runner's docket)
 
 **42. Mishnah, Grain Offerings** — מנחות ("grain gifts") · 13 ch — flour, loaves, and the omer.
 1 wrong-name handfuls · 2 intent chains (piggul) · 3 partial intent; component interdependence · 4 independent components (the blue and white threads) · 5 matzah default; preparation · 6 which get the handful · 7 the thanksgiving loaves · 8 sourcing grades (flour, oil, wine) · 9 Temple measures · 10 the omer rite; the new-grain ban · 11 the two loaves; the showbread · 12 vows and redemption · 13 vow interpretation; Onias' temple; "much or little — direct the heart"
@@ -170,7 +170,7 @@ hairline of what-is-part-of-what (Stems). Topic order, never verse order.
 **44. Mishnah, Firstborn** — בכורות ("firstborns") · 9 ch — firstling animals and sons. — ch 1 READ WHOLE 2026-09-06 (sitting E5, the erection docket: the firstling donkey at 34:20's second seat) — ch 8 READ WHOLE 2026-09-06 (sitting G2: the firstborn for inheritance and for the priest — Perez by the head, 49:3's phrase at Deut 21:17).
 1 the donkey firstborn · 2 purchases from gentiles; doubts · 3 unknown histories · 4 care duration; experts · 5 blemished-firstling sales · 6 the disqualifying blemish list · 7 the same blemishes in priests · 8 inheritance-firstborn vs priest-firstborn; redemption · 9 the animal tithe: tenth under the rod
 
-**45. Mishnah, Valuations** — ערכין ("valuations") · 9 ch — vowing persons and fields. — ch 2 READ WHOLE 2026-09-06 (sitting G1: 2:2's eight to twelve).
+**45. Mishnah, Valuations** — ערכין ("valuations") · 9 ch — vowing persons and fields. — ch 2 READ WHOLE 2026-09-06 (sitting G1: 2:2's eight to twelve). — 9:8 read 2026-09-13 (THE NUMBERS WALK sitting 15b: the Levite cities' fields, lots and houses unchangeable — Leviticus 25:34 at Numbers 35:2-7).
 1 who values and is valued · 2 bounds: no less, no more; Temple music asides · 3 leniency and severity paradoxes · 4 means of the vower; timing · 5 weight-vows and limb-vows · 6 orphans' assessments; seizures · 7 field consecration and jubilee math · 8 off-jubilee consecrations; the devoted (cherem) · 9 jubilee returns; walled-city houses
 
 **46. Mishnah, Substitution** — תמורה ("exchange") · 7 ch — swapping the consecrated.
@@ -195,10 +195,10 @@ hairline of what-is-part-of-what (Stems). Topic order, never verse order.
 
 ## Order 6 — Purities — טהרות ("purities") · 12 tractates
 
-**52. Mishnah, Vessels** — כלים ("vessels") · 30 ch — what can become impure, and when.
+**52. Mishnah, Vessels** — כלים ("vessels") · 30 ch — what can become impure, and when. — 11:1 and 15:1 READ 2026-09-12 (THE NUMBERS WALK sitting 11b, the Midian docket: metal vessels susceptible flat or hollow, broken clean, remade reverting — the six metals of Num 31:22 on the answer sheet; vessels of wood, leather, bone and glass — receptacles only, 31:20's vessel of skin and of wood).
 1 the impurity fathers; the ten holiness zones · 2 clay: receptacles only · 3 clay hole sizes · 4 unstable pottery · 5 ovens · 6 hearths · 7 firepots · 8 partitioned ovens · 9 embedded needle in the oven · 10 sealed-lid protection · 11 metal: flat and hollow alike; remade keeps its state · 12 rings, hooks, beams · 13 blades and shears · 14 metal minima · 15 large wooden ware · 16 when a vessel is finished enough · 17 owner-class size standards · 18 the chest; bed parts · 19 dismantled beds; ropes · 20 cushions, sacks, saddles · 21 loom contact points · 22 tables and benches · 23 ball, last, amulet; riding vs sitting · 24 the threes: three shields, three tables… · 25 backs vs insides · 26 sandals and hides: intention fixes · 27 cloth by five names; sizes · 28 scraps and patches · 29 cords and fringes lengths · 30 glass; "happy are you, Vessels — entered impure, left pure"
 
-**53. Mishnah, Tents** — אהלות ("tents") · 18 ch — corpse impurity under one roof.
+**53. Mishnah, Tents** — אהלות ("tents") · 18 ch — corpse impurity under one roof. — 1:2-3 READ 2026-09-12 (THE NUMBERS WALK sitting 11b, the Midian docket, CREDITED to the Chukat docket: the removes — vessels touching a corpse and their touchers seven days, the third until evening; the sword like the slain at Num 31:19-22).
 1 chains of seven-day vs evening impurity · 2 what conveys in a tent · 3 divided quantities joining · 4 the free-standing wardrobe · 5 the oven through the roof · 6 people and vessels as tents · 7 impurity in the wall; the birthing exit · 8 conveys-and-blocks classes · 9 the hive series · 10 the hatchway · 11 the split house · 12 the board on the oven · 13 window sizes · 14 the ledge · 15 thick blankets; stacked boards · 16 movables as conveyors; searching for graves · 17 the plowed grave-field · 18 harvesting it; gentile dwellings; checked houses
 
 **54. Mishnah, Skin Afflictions** — נגעים ("plagues") · 14 ch — the tzaraat protocol.

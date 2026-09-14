@@ -2066,3 +2066,100 @@ so no scene token moved; the sweep at the sitting's close is the proof.
   new lines appended on the base's chain — and THE FIRST SCENARIO — the daughters' levirate dilemma run at the left edge of 27:5 before
   the output, 3/3 against the Mishnah (World/step9/scenarios.yaml the primary record; cursor_probes.py 6/6). Numbers' opening block closes;
   the loop's steps 1-5 built, step 6 THE READBACK and D7's merge owed. (World/step9/THE_TENT.md section 4 + 4a; THE_LOOP.md's as-built.)
+
+### 2026-09-11 — THE INK'S ARCHITECTURE MEASURED (the discussion after sitting 8b; the owner: "can we determine the intended architecture" → "Yes let's do 1,3 then 2 in the next sitting")
+
+The record is ARCHITECTURE/DATABASE_SPECULATION.md section 4. Measured on every token of the Torah: the text writes its registers with a header
+("these are the generations of", "the names of") and a footer carrying the checksum ("these are the families of X … their counted N" — 68 register
+headers, 21 of them closes with a number); nine registers declare totals and two differ from their parts (Genesis 46's 66 against 70; Numbers 3's
+22,000 against 22,300), both exactly where the tradition supplies a hidden row; membership is fixed as of an event at the register boundaries only
+("the counted in the wilderness of Sinai" at 1:19 and 26:64 and nowhere else); the family key is minted at the ark's exit (8:19), ABSENT from the
+named registers (Genesis 5, 11, 46, Exodus 1) and carries Numbers (159 of 185 tokens) — two grains, the table's own, found in the ink; law blocks
+open with the speech formula (83 "spoke … saying" + 67 "said") and close with footers stamping place and channel (Sinai, Moab); 58 receipts "as the
+LORD commanded Moses" close commands, eleven with "so did he" on the line. The schema insight above (Genesis 1 as schema-then-records, 2:1's "all
+their host" the close) is the same device at the book's first register. The ink never rolls a count forward: it re-snapshots at a marker and names
+the exceptions — so a register is a snapshot, and the ark is a register at its own marker. Decided on the owner's word: the findings recorded (1);
+the seeding's design settled as a register at its own marker with no roll-forward, nothing built (3); THE REGISTER GATE next (2) — the ink's own
+footers and receipts run against the table and the ledger, in the build queue's spirit of the text as its own test oracle.
+
+### 2026-09-14 — THE LIVING DATABASE AND THE LOOP THAT WAITS (the discussion after the project review; NO RULING YET; the map: World/step9/THE_LOOP.md, the same section; the recovery file section 19)
+
+THE OWNER'S WORDS (2026-09-14, after the project review; DISCUSSION, NO RULING YET — the owner's law: discussion is not a ruling): "What I want to
+do now is review our discussion about creating the real time inputs that make this a simulation, period. We keep putting it off." Then, on the
+shell I proposed: "I don't want to input anything, I want it to update a living database. Later we will create an interface to the database that
+will show the current states at all times. I'm not ready to input any data. In fact, I think the data will come from a second pass or even a third
+pass. It may even create its own data. We just don't know. But I need a live database showing the current state of things. What I might want is a
+step through process." Then: "I know a simulation needs inputs. We will decide what those are later. But assuming this is a simulation what
+components do I need that we don't have now." Then: "I think we had this very discussion and partially built a loop didn't we? scan the files."
+And at the close: "we really need to get this done right. make sure you record."
+
+THE SCAN (2026-09-14; the files read: THE_WORLD.md's idea log, World/step9/THE_LOOP.md whole, the state doc, ARCHITECTURE/DATABASE_SPECULATION.md,
+ARCHITECTURE/CHRONICLE.md, World/step9/world_journal.py and World/journal/worldledger.py): THE SAME DISCUSSION FOUR TIMES, A PART BUILT EACH TIME,
+THE SAME PIECE LEFT OUT EACH TIME.
+  1. 2026-08-24/25 (THE_WORLD.md): the ruling "the journal is the truth, the database an index rebuilt from it"; a world player built in the
+     mockups folder (two passes, compile then run, one world; retired at D10); the idea log names "the gap between replay and live simulation" and
+     "the world clock as the loop's heartbeat, not yet mounted". Never mounted.
+  2. 2026-09-03 (THE_WORLD.md, the night rider, the owner's words): "a simulator is a LOOP that runs whether or not anyone asks"; FIVE constructs
+     named as missing — (1) a main loop over TIME, (2) mutable state, (3) laws as daemons, (4) timers, (5) the diff engine as a checkpoint stream.
+     Four of the five exist today (the ledgers change; 62 daemons fire unasked; 66 timers set, 52 fired; 208 checkpoints). THE FIRST WAS NOT
+     BUILT: the engine drives over the tape's rows and exits.
+  3. 2026-09-05: CHRONICLE, the observation deck — design only, by the owner's word (ARCHITECTURE/CHRONICLE.md "Status").
+  4. 2026-09-09 (THE_LOOP.md, the PERMANENT ruling): "a loop that keeps its state between inputs" — steps 1-5 built (the sink, the index with
+     its five views, installation, the cursor, scenarios); thirteen decisions D1-D13 taken; step 6 THE READBACK named with no design; the step-4
+     row chose REPLAY, NO SAVED STATE FILE. The resident world was never on the decision list. 2026-09-13 (the peer thread): "never deferred, only
+     never decided".
+  MEASURED TODAY: world_journal.py writes the segment ONCE, at the run's end (seg.write; "data — the payload as it stands at the run's end");
+  the index is drop-and-rebuilt after (--reindex; the gate). So inside a run there is no "now" on disk. The five run views (run_population,
+  run_ledger, run_timers, run_clock, run_docket in World/journal/run_views.sql) already DEFINE the current state; they are only ever fed a
+  finished run. Fourteen timers stand pending at the tape's end and nothing can fire them (time moves only at a verse's marker).
+
+THE PICTURE AGREED IN DISCUSSION (a simulation needs six things; we have three whole, one in half, two not at all):
+  HAVE — a state (entities, ledgers, timers, the clock, the population table, the docket, the installed laws); rules that fire on inputs through
+  ONE DOOR (World.submit; consequences to the ledger, never the tape — THE FENCE); a history you can trust (the journal, chained, replayable,
+  audited byte for byte).
+  HALF — memory between moments: the journal written at the end, the database rebuilt after; the views that define "now" exist but are never
+  current.
+  MISSING — (a) A LOOP THAT WAITS: today the tape is a script that runs to the end; a simulation takes one step, writes the state, PAUSES, takes
+  the next. (b) A PORT FOR INPUTS: today only the runners' own lines enter, from inside the code; a simulation reads its next input from a place
+  outside itself, a queue checked between steps — the text the first producer, a second pass the second, whatever the owner decides the third;
+  the port decides nothing about what the inputs are.
+
+THE RECOMMENDATION (mine, for the owner's word; each one sitting; no runner's logic moves; the audit stays):
+  1. WRITE AS YOU GO — the journal line on disk the moment the engine logs it, and the database updated line by line with the same rows the
+     rebuild makes, so at any pause the database IS the state; at the end the gate still rebuilds from scratch and must match byte for byte.
+  2. THE LOOP WITH A PAUSE (the stepper) — the same tape driven at the grain of ONE EVENT, grouped by verse or day when watching; the cursor is
+     already replay-to-a-verse, the stepper is the cursor with a pause instead of a stop; at the pause the database is current and anything can
+     read it (the ask tool now, the interface later).
+  3. THE PORT — the queue the loop reads between steps, with the text as its only producer for now; every later pass writes to the same database
+     under its own run name (the index already carries `source`); a pass that creates its own data enters through the same one door.
+  TO LEAVE OPEN (two questions, decided later): whether time may advance without a verse's marker (the fourteen pending timers); the window to
+  watch it all (CHRONICLE's design). NOT TO BUILD: a saved state file, a hand-input shell, a second database beside the journal.
+  THE ORDER when the word comes: the loop's own — the design section in THE_LOOP.md first, the probes to FAIL, then the code; before Deuteronomy
+  or after is the owner's call.
+
+WHAT THE OWNER MUST DECIDE (nothing moves before the word): (i) build the three, in that order, or a different cut; (ii) the grain of a step —
+I would take the event as the atom; (iii) what "current state" shows — the five views as they are, plus the entities, the installed laws and the
+checkpoints as they fall; (iv) before or after Deuteronomy.
+
+### 2026-09-14 — STEP 7 (a) WRITE AS YOU GO BUILT: THE DATABASE IS LIVE (the owner: "ok go 1" on the entry above; the map: World/step9/THE_LOOP.md "Step 7 THE LOOP THAT WAITS — part (a)" design + as-built)
+
+The living database the entry above asked for exists as of today for the part that needs no inputs: every journal line lands on disk and in
+World/journal/data/world.sqlite AT THE END OF ITS BLOCK — the engine's outermost call returning — and never changes after (decision D14 THE
+SEAL: the bound's right edge is the next marker line's fact, never written back; the debt THE CLOSE LINE named is paid). The audit at every
+seal: the chain, the count, an independent conversion equal on every field but that edge, the index rebuilt from the sealed segment equal to
+the live rows. Measured first: which payloads move after the log (the consumers inside the block, the bound after it) — the block is the seal's
+grain. The tape 10/10 under it; the running world 3,362 lines in 1,533 blocks; live_probes.py 0/7 → 7/7; the journal gate GREEN with its new
+live-index line. NEXT on the owner's word: (b) THE STEPPER — the pause between blocks; then (c) THE PORT.
+
+### 2026-09-14 — STEP 7 (b) THE STEPPER BUILT: THE TAPE ONE CALL AT A TIME, AND THE STATE READ FROM THE DATABASE AT EVERY PAUSE (the owner: "ok go b"; the map: World/step9/THE_LOOP.md "Step 7 ... part (b)" design + as-built)
+
+The step-through the entry of 2026-09-14 asked for exists: World/step9/world_stepper.py runs the stitched tape as a GENERATOR (decision D15 —
+every engine-call line yields the verse it is about to run, so the pause falls between two lines and the stepper can stop at a verse's left
+edge exactly as the cursor does, and resume), one call per step, or by verse, chapter, marker, day, or to a verse; at every pause the world
+stands still, every line so far is on disk and in the one database under the session's own source, and the report reads the state from the
+database. The replay is the audit: every sealed line must equal the base's at the same ordinal or the session is refused there. Measured
+first: the tape is 1,507 engine calls on 1,507 lines, and the checkpoints are computed after the run, not on it (owed to the stitcher). The
+real sessions: chapter 27 stepped by verse from the left edge of 27:1 (the replay 3,221 lines, three steps, the court's custody row shown at
+27:5 and gone after 27:6-11, stopped at the left edge of 28:1);
+the whole tape by marker in 158 steps, its segment the base's body byte for byte. step_probes.py 0/8 → 9/9. NEXT on the owner's word:
+(c) THE PORT — the queue the loop reads at this pause, the text its first producer.

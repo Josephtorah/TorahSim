@@ -696,7 +696,7 @@ OP = {b: cell(owner_price(b), A if b <= 25 else A, 'ויסף חמשית (27:19) 
 # ---- THE INTEREST SCOPE — brother and foreigner ---------------------
 def interest_scope(borrower):
     if borrower == 'brother':
-        return cell('barred', I, 'אל תקח מאתו נשך ותרבית... וחי אחיך עמך (25:36) — your BROTHER', ['interest_barred'])
+        return cell('barred', I, 'אל תקח מאתו נשך ותרבית (take no interest or increase from him) … וחי אחיך עמך (25:36, that your brother may live with you) — your BROTHER', ['interest_barred'])
     if borrower == 'foreigner':
         return cell('permitted', M, 'IMPORT EDGE (M-07): לנכרי תשיך ולאחיך לא תשיך (to the foreigner you '
                     'may lend at interest, to your brother not — Deut 23:21); Mishnah Bava Metzia 5:6\'s '

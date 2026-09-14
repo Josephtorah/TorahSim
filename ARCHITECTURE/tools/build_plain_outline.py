@@ -281,19 +281,19 @@ CSS = base.CSS.replace("li.machine code{background:#e4eedd}li.note code{backgrou
 def main():
     units = cw.frozen_units_in_canonical_order()
     outlined = [unit_plain(uid, d) for uid, d in units]
-    by_book = {"Genesis": [], "Exodus": [], "Leviticus": []}
+    by_book = {"Genesis": [], "Exodus": [], "Leviticus": [], "Numbers": []}
     for h, rows in outlined:
         by_book.setdefault(h["book"], []).append((h, rows))
     n_units = len(outlined); n_steps = sum(h["n_steps"] for h, _ in outlined)
 
     idx = ["# THE PROGRAM IN PLAIN ENGLISH — what the code does, verse by verse", "",
-           "Generated 2026-09-05 from the frozen units in canonical order: %d units, %d verses." % (n_units, n_steps), "",
+           "Generated 2026-09-13 from the frozen units in canonical order: %d units, %d verses." % (n_units, n_steps), "",
            LEGEND, "",
            "The verse-by-verse text is in [Genesis](PLAIN_GENESIS.md), [Exodus](PLAIN_EXODUS.md), and "
-           "[Leviticus](PLAIN_LEVITICUS.md), or all at once in [PLAIN_OUTLINE.html](PLAIN_OUTLINE.html), "
+           "[Leviticus](PLAIN_LEVITICUS.md), [Numbers](PLAIN_NUMBERS.md), or all at once in [PLAIN_OUTLINE.html](PLAIN_OUTLINE.html), "
            "which folds each unit and has a search box. The same walk with the operators as the code writes "
            "them is [PROGRAM_OUTLINE.md](PROGRAM_OUTLINE.md).", ""]
-    for book in ("Genesis", "Exodus", "Leviticus"):
+    for book in ("Genesis", "Exodus", "Leviticus", "Numbers"):
         rows = by_book.get(book, [])
         idx += ["## %s — %d units" % (book, len(rows)), "", "| Span | What it covers | What the span does | Compiled function |", "|---|---|---|---|"]
         for h, _ in rows:
@@ -302,7 +302,7 @@ def main():
         idx.append("")
     open(os.path.join(OUT, "PLAIN_OUTLINE.md"), "w", encoding="utf-8").write("\n".join(idx))
 
-    for book in ("Genesis", "Exodus", "Leviticus"):
+    for book in ("Genesis", "Exodus", "Leviticus", "Numbers"):
         rows = by_book.get(book, [])
         L = ["# THE PROGRAM IN PLAIN ENGLISH — %s" % book, "", LEGEND, "", "Back to the [index](PLAIN_OUTLINE.md).", ""]
         for h, r in rows:
@@ -313,11 +313,11 @@ def main():
          "<title>The Program in Plain English</title>", CSS, "</head><body>",
          "<h1>The program in plain English: what the code does, verse by verse</h1>",
          '<p class="legend">%s</p>' % html.escape(LEGEND),
-         '<p class="legend">%d units · %d verses · generated 2026-09-05 from the frozen units in canonical order.</p>' % (n_units, n_steps),
+         '<p class="legend">%d units · %d verses · generated 2026-09-13 from the frozen units in canonical order.</p>' % (n_units, n_steps),
          '<nav><input id="q" placeholder="search every verse, action, note, and claim ..."> '
-         '<a href="#Genesis">Genesis</a><a href="#Exodus">Exodus</a><a href="#Leviticus">Leviticus</a> '
+         '<a href="#Genesis">Genesis</a><a href="#Exodus">Exodus</a><a href="#Leviticus">Leviticus</a><a href="#Numbers">Numbers</a> '
          '<a href="#" id="openall">open all</a><a href="#" id="closeall">close all</a></nav>']
-    for book in ("Genesis", "Exodus", "Leviticus"):
+    for book in ("Genesis", "Exodus", "Leviticus", "Numbers"):
         rows = by_book.get(book, [])
         H.append('<h2 id="%s">%s — %d units</h2>' % (book, book, len(rows)))
         for i, (h, r) in enumerate(rows):

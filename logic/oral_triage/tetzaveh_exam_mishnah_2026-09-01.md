@@ -59,7 +59,7 @@
   BELLS") — and ANYONE: אֶלָּא שֶׁדִּבְּרוּ חֲכָמִים בַּהֹוֶה ("the
   sages spoke of the prevalent case") — the ba-hoveh canon again,
   already held corpus-wide (the stoned-rooster seat). The bell-word
-  is our 28:34's own זֹג token running in Sabbath adornment law.
+  is our 28:34's own זֹג ('bell') token running in Sabbath adornment law.
   Compiled (module bell_adornment); no new seat — the canon is held,
   the token noted.
 - Mishnah Zevachim 8:12 (⇐ Exod 28:38) — MATERIAL, quotes the
@@ -84,7 +84,7 @@
   LIFTED," our 29:27 verbatim): the four motions computed from the
   verse's own two verbs, each doubled — horizontal from the
   wave-verb, vertical from the lift-verb. Waving in the EAST,
-  bringing-near in the WEST, wavings first; the showbread needs
+  bringing-near (the offering's approach) in the WEST, wavings first; the showbread needs
   neither. EX29-04 holds the row by name; the motion-derivation and
   the census are the new leg → finding F-040, seated EX29-13. Module
   waving_procedure, with the computed verdict.

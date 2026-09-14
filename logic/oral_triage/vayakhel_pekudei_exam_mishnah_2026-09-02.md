@@ -25,7 +25,7 @@
   on the court. Class B on EX35-01. Module capital_schedule.
 - Mishnah Shevuot 1:1 (⇐ Exod 36:6) — MATERIAL, new. The
   two-that-are-four census: oaths, uncleanness-awarenesses, THE
-  CARRYINGS-OUT OF SHABBAT (יְצִיאוֹת הַשַּׁבָּת שְׁתַּיִם שֶׁהֵן אַרְבַּע),
+  CARRYINGS-OUT OF SHABBAT (יְצִיאוֹת הַשַּׁבָּת שְׁתַּיִם שֶׁהֵן אַרְבַּע 'the carryings-out of the Sabbath are two which are four'),
   leprosy-shades. The carrying labor's derivation anchor is our
   verse: the herald's camp-wide stop order — let no man or woman
   bring any more from the tents — read as the carrying prohibition's

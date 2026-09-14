@@ -38,7 +38,7 @@
 - Sifra, Vayikra Dibbura DeChovah, Section 8 4 (Lev 5:1) — MATERIAL: the claim must be the CLAIMANT'S OWN: sent his son, servant, or messenger — the witnesses' silence carries no liability ('IF HE does not tell' — to the principal's own adjuration).
 - Sifra, Vayikra Dibbura DeChovah, Section 8 5 (Lev 5:1) — MATERIAL: WITNESS FITNESS gates the oath: hearsay witnesses, a kinsman, the unfit — their false denial-oath carries no offering (they could not have testified anyway).
 - Sifra, Vayikra Dibbura DeChovah, Section 8 6 (Lev 5:1) — MATERIAL: SPECIFICITY: the synagogue blanket-oath over a crowd containing the witnesses — no liability; the adjuration must single out its addressees.
-- Sifra, Vayikra Dibbura DeChovah, Section 8 7 (Lev 5:1) — MATERIAL: ORDER: the WITNESSING must precede the oath — 'and he WAS a witness' when the oath found him already knowing; oath-then-witnessing is outside the class.
+- Sifra, Vayikra Dibbura DeChovah, Section 8 7 (Lev 5:1) — MATERIAL: ORDER: the WITNESSING must precede the oath — 'and he WAS a witness' when the oath found him already knowing; oath-then-witnessing (the oath before the witnessing) is outside the class.
 - Sifra, Vayikra Dibbura DeChovah, Section 8 9 (Lev 5:1) — context: the or-tokens comparison legs (murderer's, sotah's)
 - Sifra, Vayikra Dibbura DeChovah, Section 8 10 (Lev 5:1) — context: the comparison resolved (oath-accompanied, no priest involved)
 - Sifra, Vayikra Dibbura DeChovah, Chapter 12 1 (Lev 5:5) — MATERIAL: R. Yossi Haglili: the class is testimony that can be SEEING WITHOUT KNOWING or KNOWING WITHOUT SEEING — which exists only in MONEY claims; the domain derived from the ink's own or-pair.

@@ -13,7 +13,7 @@
 
 - Mekhilta on Exod 22:1-2 (burglar, 6¶) — MATERIAL. The tunneler's
   doubt-license (doubt-came-to-steal-doubt-to-kill), and FROM HERE the
-  chain derives that saving life overrides — the pikuach-nefesh seed in
+  chain derives that saving life overrides — the pikuach-nefesh (the saving of life) seed in
   our own verse. R. Yishmael: "did the sun rise on him ALONE?" — the sun
   is a figure for PEACE-CLARITY (known to be at peace → killing him is
   liable); day/night explicitly NOT the divider, proven by the
@@ -38,7 +38,7 @@
   beast muad to break as it walks" — liability only once the damager
   LEFT the owner's domain; assessment from the BEST land (meitav):
   R. Yishmael (the victim's best) vs R. Akiva (assessment-in-best as
-  general rule, kal va-chomer to hekdesh); field vs vineyard each its
+  general rule, kal va-chomer (the a-fortiori argument) to hekdesh); field vs vineyard each its
   own liability; handing the flock to son/agent/slave exempts, to
   deaf-mute/deranged/minor is liable; R. Natan's
   stacker-without-permission case.
@@ -84,7 +84,7 @@
   ACCEPTS [the oath] and he shall not pay" — from here: ALL WHO SWEAR
   [by Torah law] SWEAR AND DO NOT PAY; the carcass belongs to its
   owner (baal ha-nevelah mitapel be-nivlato); torn-beast evidence:
-  bring witnesses / bring the carcass (ed ha-terefah, R. Yonatan/R.
+  bring witnesses / bring the carcass (ed ha-terefah, the torn carcass as witness, R. Yonatan/R.
   Yochanan b. Yoshiyah/R. Yoshiyah); WHICH KILLS PAY: preventable
   predators (cat, fox, marten) liable; overpowering ones (wolf, lion,
   bear, leopard, bardelas, snake) exempt — the possible/impossible
@@ -110,7 +110,7 @@
   fined (mikol makom); "fit to him as a wife" excludes the forbidden
   unions (widow to high priest, divorcee to common priest, mamzeret...).
 - Mekhilta on Exod 22:17 (sorceress, 1¶) — MATERIAL. Man and woman
-  alike; EXECUTION-MODE dispute: R. Yishmael sword (lo-tichyeh to
+  alike; EXECUTION-MODE dispute: R. Yishmael sword (lo-tichyeh 'you shall not let live' to
   lo-tichyeh), R. Akiva stoning (Sinai's beast-or-man), R. Yehudah b.
   Beteira stoning via ov/yidoni's exit-to-teach; azharah from Deut
   18's "there shall not be found."
@@ -121,9 +121,9 @@
   ARCHITECTURE: zevichah "was in the general rule and left to teach" —
   Temple-style services (slaughter and its kin) are liable for ANY
   idol whether or not that idol's cult; non-Temple-style only in its
-  own cult's manner. יחרם read as EXECUTION. Shituf (joining His name
+  own cult's manner. יחרם ('shall be devoted') read as EXECUTION. Shituf (joining His name
   with another) — R. Shimon b. Yochai: liable to destruction (Kings'
-  fearing-the-LORD-and-serving-their-gods); the mountains-verse
+  fearing the LORD and serving their gods); the mountains-verse
   against hidden-idolatry excuses.
 - Mekhilta on Exod 22:20 (the sojourner, 1¶ long) — MATERIAL. Dual
   verbs split: ona'ah = WORDS, lachatz = MONEY; "a blemish in you, do
@@ -220,7 +220,7 @@
   inside the received translation.
 - Onkelos Exod 22:1, 22:3-6, 22:9-18, 22:20-27, 22:29 — context (23
   verses, close renderings; the keeper passages tracked verbatim
-  with דיניא consistently for the court tokens).
+  with דיניא ('judges') consistently for the court tokens).
 
 **read: 125 of 125 declared — COMPLETE** (95 Mekhilta paragraphs + 30
 Onkelos verses; 3,341 enumerated rows outside declared scope).

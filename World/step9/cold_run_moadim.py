@@ -255,7 +255,7 @@ def shavuot_animals():
                             'the communal peace offering\'s slaughter place — north (Zevachim 5:5; the Num 10:10 pairing, '
                             'Zevachim 55a:3): CALLED cold_run_offerings [IMPORT, live call]', ['accepted']),
      'waving': cell('loaves_on_two_lambs', M,
-                    'והניף הכהן אתם על לחם הבכורים תנופה... על שני כבשים (the priest shall wave them on the bread of '
+                    'והניף הכהן אתם (the priest shall wave them) על לחם הבכורים תנופה (on the bread of the first fruits, a wave offering) … על שני כבשים (on the two lambs — the priest shall wave them on the bread of '
                     'the first fruits... on the two lambs) at 23:20 [INK] — the geometry: the bread ABOVE everywhere '
                     '(Sifra Emor Chapter 13 8; Mishnah Menachot 5:6: the loaves on the two lambs, both hands beneath)',
                     ['waved']),

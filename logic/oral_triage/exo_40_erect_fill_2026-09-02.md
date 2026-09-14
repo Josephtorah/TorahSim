@@ -56,7 +56,7 @@
   ("and the GLORY of the LORD FILLED the tabernacle" — the
   glory-word, Onkelos' reverence layer, where Hebrew has the bare
   Name); and Moses — the one man whose hands raised it — לָא
-  יָכִיל... לְמֵעַל ("COULD NOT ENTER"), for the cloud dwelt on it
+  יָכִיל ('was not able') … לְמֵעַל ("COULD NOT ENTER"), for the cloud dwelt on it
   and the glory filled it: EX25-01's "I will dwell among them"
   discharged at the last chapter, with the builder himself locked
   out by the very fullness he installed (the
@@ -137,12 +137,12 @@
   the fig — narrow below, wide above ("wider as it wound about
   higher and higher").
 - Midrash Tanchuma Buber, Pekudei 8:5 — enrichment. R. Levi's
-  sifting pun (the beautiful נוֹף that SIFTS the nations).
+  sifting pun (the beautiful נוֹף 'height' that SIFTS the nations).
 - Midrash Tanchuma Buber, Pekudei 8:6 — enrichment. The waving
   pun (the Levites waved, the sheaf waved).
 - Midrash Tanchuma Buber, Pekudei 8:7 — enrichment. The pepper
   merchant's joy-of-all-the-earth story; the darkened joy
-  (עָרְבָה read from the evening-word) and the return of gladness
+  (עָרְבָה 'darkened' read from the evening-word) and the return of gladness
   when Jerusalem is rebuilt.
 - Midrash Tanchuma Buber, Pekudei 8:8 — colophon: "The End of
   Parashah Pekudei." Not-bearing; recorded.

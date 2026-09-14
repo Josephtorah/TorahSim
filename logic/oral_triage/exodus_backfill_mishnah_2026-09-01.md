@@ -33,7 +33,7 @@
   dispute on the 12:19 leaven ban — the exact slot FRONTIER.md holds
   open at Exod 12:19.
 - Mishnah Beitzah 1:8 (⇐ Exod 3:5) — not-bearing here: festival
-  food-sorting law; the 3:5 anchor is link noise.
+  food-sorting (the sorting of food) law; the 3:5 anchor is link noise.
 - Mishnah Beitzah 2:7 (⇐ Exod 12:9) — MATERIAL. גדי מקלס ("the
   helmeted kid" — roasted whole, legs and innards above its head, the
   Passover-offering's form) on Passover nights OUTSIDE the Temple:
@@ -122,7 +122,7 @@
   כמותו, "a person's agent is as himself," Kiddushin 41b). The
   agency doctrine anchored at the Passover slaughter.
 - Mishnah Makkot 1:2 (⇐ Exod 20:13) — MATERIAL. Plotting witnesses
-  (עדים זוממין) who testified to a 200-zuz debt: lashed AND pay per R.
+  (עדים זוממין 'conspiring witnesses') who testified to a 200-zuz debt: lashed AND pay per R.
   Meir; the sages — כל המשלם אינו לוקה ("whoever pays is not lashed").
   The ninth utterance's implementing row.
 - Mishnah Makkot 1:3 (⇐ Exod 20:12-13) — MATERIAL, dispute at our ink.
@@ -165,7 +165,7 @@
   from virgin ground, שלא הונף עליהן ברזל ("that no iron was waved
   over them") — iron INVALIDATES by touch (a scratch invalidates that
   stone alone); and the tradition argues its own reason on our verse:
-  הברזל נברא לקצר... והמזבח נברא להאריך ("iron was created to shorten
+  הברזל נברא לקצר ('iron was created to shorten') … והמזבח נברא להאריך ("iron was created to shorten
   man's days, the altar to lengthen them — it is not fitting that the
   shortener be waved over the lengthener"). The 20:22 sword-clause the
   unit already holds as EX20-12.
@@ -183,7 +183,7 @@
   ("three things") has not discharged the duty — פסח ("the Passover
   offering": because He passed over, 12:27), מצה ("unleavened bread":
   because the dough had no time, 12:39), מרור ("the bitter herb":
-  because they EMBITTERED their lives — וימררו, our 1:14). Every
+  because they EMBITTERED their lives — וימררו ('and they embittered'), our 1:14). Every
   generation must see itself as having gone out — והגדת לבנך ("and you
   shall tell your son," 13:8). Four anchors, three duties, one telling.
 - Mishnah Pesachim 10:9 (⇐ Exod 12:8) — MATERIAL (moderate). הפסח אחר
@@ -231,7 +231,7 @@
 - Mishnah Pesachim 5:3 (⇐ Exod 12:4, 12:48, 12:6) — MATERIAL.
   Slaughtered for those who cannot eat it / the unregistered /
   uncircumcised / impure — invalid (the registration and eater scope
-  of 12:4); for eaters AND non-eaters — valid. שחטו קדם חצות פסול...
+  of 12:4); for eaters AND non-eaters — valid. שחטו קדם חצות פסול ('slaughtered before midday, invalid') …
   שנאמר בין הערבים ("before MIDDAY invalid, for it says 'between the
   evenings'" — 12:6): the slaughter window opens at noon's decline.
 - Mishnah Pesachim 5:5 (⇐ Exod 12:6) — MATERIAL, the flagship
@@ -269,7 +269,7 @@
   compared clause-by-clause against our chapter's bans.
 - Mishnah Pesachim 9:4 (⇐ Exod 9:10) — MATERIAL (light; anchor noise —
   the 9:10 boils link). A Passover that comes in impurity: the
-  flow-impure (זבין) still may not eat it; if they ate — exempt from
+  flow-impure (זבין 'those with a flow') still may not eat it; if they ate — exempt from
   karet; R. Eliezer exempts their Temple-entry too. Scope of the
   communal-impurity license.
 - Mishnah Pesachim 9:5 (⇐ Exod 13:3) — MATERIAL, the two-era table.
@@ -375,7 +375,7 @@
   Measure-for-measure in the GOOD direction, computed on our two
   verses (both narrative anchors already stand in the units).
 - Mishnah Sotah 5:4 (⇐ Exod 15:1) — MATERIAL, recorded dispute at the
-  ink. R. Akiva: אז ישיר... ויאמרו לאמר ("'then sang Moses and the
+  ink. R. Akiva: אז ישיר ('then sang') … ויאמרו לאמר ("'then sang Moses and the
   sons of Israel... and they SAID, SAYING'") — the doubled
   saying-token teaches they answered after Moses phrase by phrase,
   כקורין את ההלל ("as the Hallel is read" — refrain-response); R.
@@ -533,7 +533,7 @@ opened; no blind credits.
   the block.
 - Mishnah Bava Kamma 7:1 (⇐ 21:37) — MATERIAL, HELD by L37-01 EXACTLY:
   double payment broader than four/five (which runs only in ox and
-  sheep — the redundancy geometry of כי יגנב איש שור או שה); no
+  sheep — the redundancy geometry of כי יגנב איש שור או שה 'when a man steals an ox or a sheep'); no
   four/five after another thief.
 - Mishnah Bava Kamma 7:5 (⇐ 21:37) — MATERIAL, HELD by L37-02/03:
   partial sale (short one hundredth) or partnership — double but no
@@ -606,7 +606,7 @@ opened; no blind credits.
   once the accused was executed (שנאמר נפש תחת נפש — "'life in place
   of life,'" our 21:23); the sages — once the VERDICT stands (Deut
   19's as-he-plotted, "and his brother is still alive"), and the
-  nefesh-tachat-nefesh token teaches the verdict-not-testimony
+  nefesh-tachat-nefesh ('life for life') token teaches the verdict-not-testimony
   threshold. Our verse quoted by both sides of the timing dispute
   (L24-02's preposition system adjacent).
 - Mishnah Sanhedrin 11:1 (⇐ 21:16) — MATERIAL, HELD by L15-01, L16-01,

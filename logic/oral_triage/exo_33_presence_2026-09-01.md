@@ -32,7 +32,7 @@
   is at Moses' tent."
 - Onkelos Exod 33:9-11 — MATERIAL. SPEECH WITH SPEECH: face-to-face
   rendered מַמְלַל עִם מַמְלַל ("WORD WITH WORD, as a man speaks
-  with his friend") — the reflexive מִתְמַלֵּל guarding
+  with his friend") — the reflexive מִתְמַלֵּל ('was spoken with') guarding
   transcendence; Joshua the resident student who does not leave the
   tent. The spine's protocol law (Midrash Tanchuma, Ki Tisa 27):
   THE ANGER-PARTITION — "when I am angry you appease, when you are
@@ -49,7 +49,7 @@
   wonders); the nations-use-intermediaries argument ("what
   difference between us?" — the direct-access demand, Midrash
   Tanchuma, Ki Tisa 27's frame). TESTING-shelf pointer: Pirkei Avot
-  4:18 (this exam's docket) reads 33:14's פָּנַי יֵלֵכוּ as the
+  4:18 (this exam's docket) reads 33:14's פָּנַי יֵלֵכוּ ('My presence will go') as the
   appeasement-timing law — do not placate your fellow IN THE HOUR
   OF HIS ANGER: wait until the face of anger passes.
 - Onkelos Exod 33:18-23 — MATERIAL, the epistemology crown. The

@@ -2,7 +2,9 @@
 """world_journal.py — THE LOOP, step 1 THE SINK (owner-ruled PERMANENT 2026-09-09; the design: World/step9/THE_LOOP.md,
 "Step 1 THE SINK — the design"; the probes: journal_probes.py, written first and run to fail).
 
-The law engine's run log (World.log — seven classes: EVENT, WRITE, RETRO-WRITE, TIMER-SET, TIMER-FIRE, TIMER-CANCEL, MARKER)
+The law engine's run log (World.log — seven classes: EVENT, WRITE, RETRO-WRITE, TIMER-SET, TIMER-FIRE, TIMER-CANCEL, MARKER; the eighth
+SKIP since THE LOOP step 3; the ninth ROW — a population-table row — since THE NUMBERS WALK 8b, 2026-09-11; the tenth CLOSE — a ledger
+entry's close as its own line, the write line a SNAPSHOT at write time — since step 1's amendment THE CLOSE LINE, 2026-09-12)
 written as ONE journal segment per world per run in the August envelope {s, op, layer, kind, subj, data, prov, chain}
 (World/journal/worldledger.py — the envelope has one home; imported, never copied):
   s     the line's ordinal in the run            op    the clock day the line was logged at
@@ -15,18 +17,24 @@ No timestamps. The segment lives in World/journal/data/ (derived, gitignored) or
 The index (step 2, minimal): `--reindex` rebuilds World/journal/data/world.sqlite from EVERY segment on disk (L0, L1, L2, L3_*)
 by worldledger.index_sqlite — drop-and-rebuild, never written directly. The gate: `--gate` runs the sequence runner twice in
 two processes and demands byte-identical segments, verified chains, and an index whose counts equal the RUN tuple printed.
+SINCE STEP 7 (a) WRITE AS YOU GO (2026-09-14; THE_LOOP.md "Step 7 THE LOOP THAT WAITS — part (a)", decision D14 THE SEAL): a world with a
+live sink attached (attach) writes every line to the segment's body file and into the one database AT THE END OF ITS BLOCK — the engine's
+outermost call returning; the seal writes the header and runs THE AUDIT (the chain, the count, an independent conversion equal on every
+field but the bound's right edge, the rebuilt index equal to the live rows). The database is the state between blocks; --gate proves it.
 Run: python3 World/step9/world_journal.py --gate | --reindex | --verify <segment>
 """
-import os, re, sys, glob, json, sqlite3, subprocess, tempfile, collections
+import os, re, sys, glob, json, sqlite3, subprocess, tempfile, collections, hashlib
 HERE = os.path.dirname(os.path.abspath(__file__))
 JOURNAL = os.path.normpath(os.path.join(HERE, '..', 'journal'))
 sys.path.insert(0, JOURNAL)
-from worldledger import Segment, index_sqlite, canon          # the August envelope, the chain, the index
+from worldledger import Segment, index_sqlite, canon, row_of  # the August envelope, the chain, the index, the index's row
 
 KINDS = collections.OrderedDict([
     ('EVENT', 'run.event'), ('WRITE', 'run.write'), ('RETRO-WRITE', 'run.retro_write'), ('TIMER-SET', 'run.timer_set'),
     ('TIMER-FIRE', 'run.timer_fire'), ('TIMER-CANCEL', 'run.timer_cancel'), ('MARKER', 'run.marker'),
-    ('SKIP', 'run.skip')])       # THE LOOP step 3 (2026-09-09): the eighth class — a daemon not called, its law not in force (the from_event setting)
+    ('SKIP', 'run.skip'),        # THE LOOP step 3 (2026-09-09): the eighth class — a daemon not called, its law not in force (the from_event setting)
+    ('ROW', 'run.row'),          # THE NUMBERS WALK 8b (2026-09-11): the ninth class — a row of the POPULATION TABLE written by a daemon (World.row; population_schema.yaml)
+    ('CLOSE', 'run.close')])     # THE LOOP step 1's amendment THE CLOSE LINE (2026-09-12): the tenth class — a ledger entry's close as its own line (World.close); the write line a snapshot since
 LAYER = 'L3'
 
 
@@ -59,6 +67,12 @@ def _append_log(seg, world, log, coerced):
         kind = KINDS[cls]
         if cls == 'MARKER':
             subj, unit, ref = 'clock', 'marker', payload.get('verse')
+        elif cls == 'CLOSE':                           # THE CLOSE LINE (2026-09-12): the entity through the registry, the closing daemon (else the scene's own hand: tape), the closer's note as the ref (it opens with the closing verse)
+            s = payload.get('subject')
+            subj, unit, ref = (reg.get(s, s) if s is not None else 'world'), payload.get('closed_by_daemon') or 'tape', payload.get('note')
+        elif cls == 'ROW':                             # THE NUMBERS WALK 8b (2026-09-11): a table row — its subject through the registry (a named row's person, a counted row's tribe name), the writing daemon, the verse it was written from
+            s = payload.get('subject')
+            subj, unit, ref = (reg.get(s, s) if s is not None else 'world'), payload.get('written_by'), payload.get('source')
         else:
             s = payload.get('subject')
             subj = reg.get(s, s) if s is not None else 'world'
@@ -73,13 +87,199 @@ def _append_log(seg, world, log, coerced):
 
 
 def sink(world, source, out_dir=None):
-    """write World.log as one L3 segment; returns (path, lines, coerced)"""
-    seg = Segment(LAYER, source)
-    coerced = collections.Counter()
-    _append_log(seg, world, world.log, coerced)
-    path = os.path.join(data_dir(out_dir), segment_name(source))
-    seg.write(path)
-    return path, len(seg.events), sum(coerced.values())
+    """write World.log as one L3 segment; returns (path, lines, coerced). SINCE STEP 7 (a) WRITE AS YOU GO (2026-09-14): a world with a
+    live sink attached (attach) SEALS it — the lines were written at their blocks, the audit runs now; a world carrying the cursor's
+    in-memory sink writes its sealed lines to out_dir; a world that ran with NO sink attaches one now and seals the whole log at once —
+    THE LATE SEAL, the bounds as they stand at the seal (the probes' small worlds; said so in the audit)"""
+    j = getattr(world, 'journal', None)
+    if j is not None and j.memory_only and j.source == source:
+        path = os.path.join(data_dir(out_dir), segment_name(source))
+        j.seg.write(path)
+        return path, len(j.seg.events), sum(j.coerced.values())
+    if j is None or j.source != source:
+        j = LiveSink(world, source, out_dir=out_dir, late=True)
+    return j.seal(quiet=False)
+
+
+# ---- THE LOOP step 7 THE LOOP THAT WAITS, part (a) WRITE AS YOU GO (2026-09-14; the owner: "ok go 1"; THE_LOOP.md "Step 7 ... part (a)":
+# ---- the design, decision D14 THE SEAL; the probes live_probes.py written first, 0/7 on the unchanged engine) ----
+# A JOURNAL LINE IS SEALED AT THE END OF ITS BLOCK (the outermost engine call returning at depth 0 — world_engine._sealed calls flush) and
+# never changes after: written to the segment's BODY FILE (<segment>.live) and INSERTED into the one database's events table in the same
+# act, committed per block. Its bound is written as it stood at the seal ([the last marker, null] inside an open bound); the right edge is
+# the next forward marker line's day — a derived fact, never written back (as a ledger entry's close is its own line since THE CLOSE LINE).
+# The seal of the run writes the header and the same bytes as the segment file and removes the body; THE AUDIT then proves the live path:
+# the chain, the line count, an independent conversion equal on every field but the right edge (its count printed), the index rebuilt from
+# the sealed segment equal to the live rows. The database IS the state between blocks; the rebuild is the audit, not the source.
+def ensure_index(db_path, out_dir):
+    """the one database's events table and the five views — built from every segment on disk when the table is absent (a fresh checkout);
+    returns an open connection"""
+    c = sqlite3.connect(db_path)
+    has = c.execute("select 1 from sqlite_master where type = 'table' and name = 'events'").fetchone()
+    c.close()
+    if not has:
+        index_sqlite(db_path, segments(out_dir))
+    views(db_path)
+    return sqlite3.connect(db_path)
+
+
+def rows_of(db_path, source):
+    """the index's rows of one source in the run's order, every column — the live rows and the rebuilt rows compared on these"""
+    c = sqlite3.connect(db_path)
+    try:
+        return c.execute("select seq, op, layer, kind, subj, data, unit, ref, chain, source from events where source = ? order by seq", (source,)).fetchall()
+    finally:
+        c.close()
+
+
+def l3_sources(out_dir):
+    """the sources of the L3 segments on disk, read from their headers"""
+    out = []
+    for p in sorted(glob.glob(os.path.join(out_dir, 'L3_*.jsonl'))):
+        with open(p, encoding='utf-8') as f:
+            out.append(json.loads(f.readline()).get('source'))
+    return out
+
+
+def verify_body(path, start='genesis'):
+    """a headerless body file's chain recomputed from `start`: True iff no line was mutated in place (the crash-safe trace's check)"""
+    chain = start
+    with open(path, encoding='utf-8') as f:
+        for line in f:
+            if not line.strip():
+                continue
+            ev = json.loads(line)
+            claimed = ev.pop('chain')
+            chain = hashlib.sha256((chain + canon(ev)).encode('utf-8')).hexdigest()[:16]
+            if chain != claimed:
+                return False
+    return True
+
+
+class LiveSink:
+    """the live sink of one world: attach(world, source) opens the body file and the live index, and the engine's blocks call flush()"""
+
+    def __init__(self, world, source, out_dir=None, memory_only=False, late=False):
+        self.world, self.source, self.memory_only, self.late = world, source, memory_only, late
+        self.seg = Segment(LAYER, source)
+        self.coerced = collections.Counter()
+        self.n = 0                    # the log lines sealed so far
+        self.blocks = 0               # the flushes that sealed at least one line
+        self.audit = None
+        if memory_only:               # the cursor's replay (step 4 under the seal): the lines sealed at their blocks, kept in memory — no file, no row
+            self.dir = self.path = self.body = self.db = self.conn = self.f = None
+        else:
+            self.dir = data_dir(out_dir)
+            self.path = os.path.join(self.dir, segment_name(source))
+            self.body = self.path + '.live'
+            self.f = open(self.body, 'w', encoding='utf-8')
+            self.db = os.path.join(self.dir, 'world.sqlite')
+            self.conn = ensure_index(self.db, self.dir)
+            self.conn.execute("DELETE FROM events WHERE source = ?", (source,))     # this source's rows of an older run go; every other source stays
+            self.conn.commit()
+        world.journal = self
+
+    def flush(self):
+        """seal the log's new lines: converted (the one conversion), chained, appended to the body, inserted and committed"""
+        log = self.world.log
+        if self.n >= len(log):
+            return 0
+        start = len(self.seg.events)
+        _append_log(self.seg, self.world, log[self.n:], self.coerced)
+        new = self.seg.events[start:]
+        self.n = len(log)
+        self.blocks += 1
+        if not self.memory_only:
+            for ev in new:
+                self.f.write(canon(ev) + '\n')
+            self.f.flush()
+            self.conn.executemany("INSERT INTO events VALUES (?,?,?,?,?,?,?,?,?,?)", [row_of(ev, self.source) for ev in new])
+            self.conn.commit()
+        return len(new)
+
+    def seal(self, quiet=True):
+        """the run's seal: the header and the same bytes written as the segment, the body removed, the connection closed, THE AUDIT run;
+        the world detached (a later sink() attaches afresh). Returns (path, lines, coerced) — sink()'s own contract"""
+        if self.memory_only:
+            raise SystemExit('THE SEAL: an in-memory sink seals nothing — the cursor writes its appended segment through cursor_segment')
+        self.flush()
+        self.f.close()
+        self.seg.write(self.path)
+        os.remove(self.body)
+        self.conn.close()
+        self.world.journal = None
+        self.audit = audit(self)
+        if not quiet:
+            a = self.audit
+            print('  THE SEAL %s: %d lines sealed %s in %d blocks; chain %s; the fresh conversion %s on every field but the bound\'s right edge (closed after the seal: %d); the rebuilt index %s the live rows'
+                  % (os.path.basename(self.path), a['lines'], 'LATE (the bounds as they stand)' if self.late else 'LIVE', self.blocks,
+                     'VERIFIED' if a['chain'] else 'BROKEN', 'EQUAL' if a['fields_equal'] else 'UNEQUAL', a['right_edge_closed_after'],
+                     'EQUALS' if a['index_equal'] else 'DIFFERS FROM'))
+        if not self.audit['ok']:
+            raise SystemExit('THE SEAL: the audit FAILED on %s — %s' % (self.path, self.audit))
+        return self.path, len(self.seg.events), sum(self.coerced.values())
+
+
+def attach(world, source, out_dir=None, memory_only=False):
+    """attach a live sink to a world BEFORE its tape runs; the engine's blocks seal the lines from then on"""
+    return LiveSink(world, source, out_dir=out_dir, memory_only=memory_only)
+
+
+def _sans(ev):
+    d = dict(ev); d.pop('chain', None)
+    return d
+
+
+def audit(sink):
+    """THE AUDIT of a sealed segment (the design's (i)-(iv)): the chain; the line count against the log; an INDEPENDENT conversion of the
+    same log at the run's end equal on every field but the bound's right edge (the one named exception — its count returned); the index
+    rebuilt from the sealed file equal to the live rows, row for row, every column"""
+    w, path, source = sink.world, sink.path, sink.source
+    chain = Segment.verify(path)
+    fresh = Segment(LAYER, source)
+    _append_log(fresh, w, w.log, collections.Counter())
+    closed_after, bad = 0, 0
+    for a, b in zip(sink.seg.events, fresh.events):
+        a, b = _sans(a), _sans(b)
+        if a == b:
+            continue
+        da, db_ = dict(a['data']), dict(b['data'])
+        ba, bb = da.pop('bound', None), db_.pop('bound', None)
+        rest = da == db_ and {k: v for k, v in a.items() if k != 'data'} == {k: v for k, v in b.items() if k != 'data'}
+        if rest and isinstance(ba, list) and isinstance(bb, list) and len(ba) == 2 == len(bb) and ba[0] == bb[0] and ba[1] is None and bb[1] is not None:
+            closed_after += 1
+        else:
+            bad += 1
+    fields_equal = bad == 0 and len(sink.seg.events) == len(fresh.events)
+    with tempfile.TemporaryDirectory() as td:
+        tdb = os.path.join(td, 'audit.sqlite')
+        index_sqlite(tdb, [path])
+        rebuilt = rows_of(tdb, source)
+    live = rows_of(sink.db, source)
+    index_equal = rebuilt == live and len(live) == len(sink.seg.events)
+    lines = len(sink.seg.events)
+    ok = bool(chain) and lines == len(w.log) and fields_equal and index_equal
+    return {'ok': ok, 'lines': lines, 'log': len(w.log), 'chain': bool(chain), 'fields_equal': fields_equal, 'unequal': bad,
+            'right_edge_closed_after': closed_after, 'index_equal': index_equal, 'coerced': sum(sink.coerced.values()), 'late': sink.late}
+
+
+def live_report(out_dir=None):
+    """the one database as the run leaves it: every L3 segment on disk against its rows — the database IS the state"""
+    d = data_dir(out_dir)
+    db = os.path.join(d, 'world.sqlite')
+    parts, ok = [], True
+    c = sqlite3.connect(db)
+    try:
+        total = c.execute("select count(*) from events").fetchone()[0]
+        for p in sorted(glob.glob(os.path.join(d, 'L3_*.jsonl'))):
+            with open(p, encoding='utf-8') as f:
+                src = json.loads(f.readline()).get('source')
+                lines = sum(1 for l in f if l.strip())
+            rows = c.execute("select count(*) from events where source = ?", (src,)).fetchone()[0]
+            ok = ok and rows == lines
+            parts.append('%s %d rows = %d lines %s' % (src, rows, lines, 'MATCH' if rows == lines else 'DIVERGE'))
+    finally:
+        c.close()
+    return '%s — %d rows; %s [%s]' % (db, total, '; '.join(parts), 'every source current' if ok else 'A SOURCE DIVERGES — reindex and read')
 
 
 # ---- THE LOOP step 4 THE CURSOR and step 5 SCENARIOS (2026-09-09; THE_LOOP.md "Step 4 THE CURSOR — the design", "Step 5 SCENARIOS — the
@@ -94,17 +294,22 @@ def cursor_segment(world, fork, verse, out_dir=None, base=None):
     whose header names the base, the fork and the cursor verse. The base is never rewritten. Returns (path, appended lines)."""
     base = base or os.path.join(data_dir(out_dir), BASE_SEGMENT) if os.path.exists(os.path.join(data_dir(out_dir), BASE_SEGMENT)) else (base or os.path.join(data_dir(), BASE_SEGMENT))
     coerced = collections.Counter()
-    audit = Segment(LAYER, RUNNING_WORLD)
-    _append_log(audit, world, world.log[:fork], coerced)
+    j = getattr(world, 'journal', None)
+    if j is not None and j.memory_only:               # THE LOOP step 7 (a) (2026-09-14; D14 THE SEAL): the replay's lines were sealed at their blocks by the cursor's in-memory sink — the rule the base was written under
+        sealed = j.seg.events[:fork]
+    else:                                              # a world that replayed with no sink attached: the late conversion, the bounds as they stand
+        audit_seg = Segment(LAYER, RUNNING_WORLD)
+        _append_log(audit_seg, world, world.log[:fork], coerced)
+        sealed = audit_seg.events
     with open(base, encoding='utf-8') as f:
         base_lines = f.read().split('\n')
-    mine = [canon(ev) for ev in audit.events]
+    mine = [canon(ev) for ev in sealed]
     if mine != base_lines[1:fork + 1]:
         first = next((i for i, (a, b) in enumerate(zip(mine, base_lines[1:fork + 1])) if a != b), min(len(mine), len(base_lines) - 1))
         raise SystemExit('CURSOR REFUSED: the replayed prefix differs from the base segment %s at event %d of %d — the base or the engine has '
                          'moved; rerun the tape (cold_run_sequence.py), then resume' % (os.path.basename(base), first + 1, fork))
-    start = audit.events[-1]['chain'] if audit.events else None
-    seg = Segment(LAYER, 'cold_run_sequence/cursor@%s' % verse, start_chain=start,
+    start = sealed[-1]['chain'] if sealed else None
+    seg = Segment(LAYER, 'cold_run_sequence/cursor@%s' % verse, start_chain=start,           # the appended lines: converted at the write (late; part (b) makes the cursor's own lines live)
                   header={'base': os.path.basename(base), 'fork': fork, 'cursor': verse})
     _append_log(seg, world, world.log[fork:], coerced)
     path = os.path.join(data_dir(out_dir), 'L3_run_cursor_%s.jsonl' % re.sub(r'[^A-Za-z0-9_.-]+', '_', verse))
@@ -189,6 +394,16 @@ def view_counts(db_path):
             v['docket'] = c.execute("select count(*) from run_docket where source = ?", (src,)).fetchone()[0]
             v['docket_open'] = c.execute("select count(*) from run_docket where source = ? and open = 1", (src,)).fetchone()[0]
             v['docket_from_ledger'] = c.execute("select count(*) from run_ledger where source = ? and effect = 'declaration_owed'", (src,)).fetchone()[0]
+            v['rows'] = k.get('run.row', 0)             # THE NUMBERS WALK 8b (2026-09-11): the fifth view's count derived from the table's own run.row lines
+            v['population'] = c.execute("select count(*) from run_population where source = ?", (src,)).fetchone()[0]
+            # THE CLOSE LINE (2026-09-12): the ledger rows carrying a close = the run.close lines whose write lies in the same source; a close whose
+            # write lies in another source (a cursor segment paying a base entry) is FOREIGN — counted and printed, never a per-source failure
+            v['closes'] = k.get('run.close', 0)
+            v['closed'] = c.execute("select count(*) from run_ledger where source = ? and day_closed is not null", (src,)).fetchone()[0]
+            v['closes_local'] = c.execute("""select count(*) from events c where c.kind = 'run.close' and c.source = ? and exists (
+                select 1 from events w where w.source = c.source and w.subj = c.subj and w.kind in ('run.write', 'run.retro_write')
+                and json_extract(w.data, '$.seq') = json_extract(c.data, '$.entry_seq'))""", (src,)).fetchone()[0]
+            v['closes_foreign'] = v['closes'] - v['closes_local']
             out[src] = v
         return out
     finally:
@@ -200,12 +415,14 @@ def views_gate(db_path):
     ok, lines = True, []
     for src, v in view_counts(db_path).items():
         checks = [('ledger', v['ledger'], v['writes']), ('timers', v['timers'], v['sets']), ('fired', v['fired'], v['fires']),
-                  ('cancelled', v['cancelled'], v['cancels']), ('clock', v['clock'], v['markers']), ('docket', v['docket'], v['docket_from_ledger'])]
+                  ('cancelled', v['cancelled'], v['cancels']), ('clock', v['clock'], v['markers']), ('docket', v['docket'], v['docket_from_ledger']),
+                  ('population', v['population'], v['rows']),      # THE NUMBERS WALK 8b (2026-09-11): the fifth view's rows = the run.row lines
+                  ('closed', v['closed'], v['closes_local'])]       # THE CLOSE LINE (2026-09-12): the ledger's closed rows = the source's own run.close lines
         bad = [(n, got, want) for n, got, want in checks if got != want]
         ok = ok and not bad
-        lines.append('  %-44s ledger %5d = writes %5d | timers %4d = sets %4d (fired %d = fires %d, cancelled %d = cancels %d, pending %d) | clock %4d = markers %4d | docket %d (open %d) | skips %d  %s'
+        lines.append('  %-44s ledger %5d = writes %5d | timers %4d = sets %4d (fired %d = fires %d, cancelled %d = cancels %d, pending %d) | clock %4d = markers %4d | docket %d (open %d) | population %d = rows %d | closed %d = closes %d (foreign %d) | skips %d  %s'
                      % (src, v['ledger'], v['writes'], v['timers'], v['sets'], v['fired'], v['fires'], v['cancelled'], v['cancels'], v['pending'],
-                        v['clock'], v['markers'], v['docket'], v['docket_open'], v['skips'], 'MATCH' if not bad else 'DIVERGE %s' % bad))
+                        v['clock'], v['markers'], v['docket'], v['docket_open'], v['population'], v['rows'], v['closed'], v['closes_local'], v['closes_foreign'], v['skips'], 'MATCH' if not bad else 'DIVERGE %s' % bad))
     if not lines:
         ok, lines = False, ['  no L3 source in the index — ZERO-REPORT']
     return ok, lines
@@ -268,7 +485,10 @@ def ask(db_path, question, *args, source=None):
             return rows
         if question == 'custody':
             return _rows(c, "select * from run_docket where source = ? and open = 1 order by seq", (source,))
-        raise SystemExit('ASK: the questions are ledger <entity> [<day>], open <verse>, who <entity> <effect>, custody')
+        if question == 'population':                   # THE NUMBERS WALK 8b (2026-09-11): the fifth question — the population table's rows, all or one tribe's, in the run's order
+            tribe = args[0] if args else None
+            return _rows(c, "select * from run_population where source = ? and (? is null or tribe = ?) order by seq", (source, tribe, tribe))
+        raise SystemExit('ASK: the questions are ledger <entity> [<day>], open <verse>, who <entity> <effect>, custody, population [<tribe>]')
     finally:
         c.close()
 
@@ -294,11 +514,16 @@ def _tuple_of(stdout):
     """the RUN tuple as the runner prints it: events, markers; timers set, fired, cancelled; retro-writes; writes"""
     ev = re.search(r'THE TAPE: (\d+) events, (\d+) markers', stdout)
     tm = re.search(r'timers: set (\d+), fired (\d+), cancelled (\d+); retro-writes (\d+); writes (\d+); skipped (\d+)', stdout)
-    if not (ev and tm):
+    lc = re.search(r'log classes: (\{[^\n]*\})', stdout)              # THE NUMBERS WALK 8b (2026-09-11): the ninth class ROW read from the runner's own class census — the rows are no writes and enter no other count
+    if not (ev and tm and lc):
         raise SystemExit('THE GATE: the RUN tuple was not found in the runner\'s print')
+    import ast
+    classes = ast.literal_eval(lc.group(1))
     return {'run.event': int(ev.group(1)), 'run.marker': int(ev.group(2)), 'run.timer_set': int(tm.group(1)),
             'run.timer_fire': int(tm.group(2)), 'run.timer_cancel': int(tm.group(3)), 'run.retro_write': int(tm.group(4)),
-            'run.write': int(tm.group(5)), 'run.skip': int(tm.group(6))}      # step 3: the eighth class counted (0 under boot)
+            'run.write': int(tm.group(5)), 'run.skip': int(tm.group(6)),      # step 3: the eighth class counted (0 under boot)
+            'run.row': int(classes.get('ROW', 0)),                        # 8b: the ninth class — THE POPULATION TABLE's rows (0 on a world that writes none)
+            'run.close': int(classes.get('CLOSE', 0))}                    # THE CLOSE LINE (2026-09-12): the tenth class — the closes performed, read from the runner's own class census
 
 
 def gate():
@@ -323,7 +548,16 @@ def gate():
             lines = b1.count(b'\n') - 1
             print('  %-52s %6d lines  bytes %s  chain %s' % (os.path.basename(p1), lines, 'IDENTICAL' if same else 'DIFFER', 'VERIFIED' if chain else 'BROKEN'))
             ok = ok and same and chain
+        # THE LOOP step 7 (a) WRITE AS YOU GO (2026-09-14): the LIVE rows of every L3 source, read BEFORE the rebuild — the two processes'
+        # rows identical, and the rebuilt index equal to the live rows on every source (the audit, once more, from outside the run)
+        live1 = {s: rows_of(os.path.join(t1, 'world.sqlite'), s) for s in l3_sources(t1)}
+        live2 = {s: rows_of(os.path.join(t2, 'world.sqlite'), s) for s in l3_sources(t2)}
         db, n, k = reindex(t1)
+        rebuilt = {s: rows_of(db, s) for s in live1}
+        live_ok = bool(live1) and live1 == live2 and rebuilt == live1
+        print('  THE LIVE INDEX (step 7 a): %d sources, %d rows written line by line at their blocks; the two processes\' rows %s; the rebuilt index %s the live rows'
+              % (len(live1), sum(len(r) for r in live1.values()), 'IDENTICAL' if live1 == live2 else 'DIFFER', 'EQUALS' if rebuilt == live1 else 'DIFFERS FROM'))
+        ok = ok and live_ok
         got = {kind: c for kind, c in counts(db).items()}
         run_seg = os.path.basename(running.group(1))
         # the running world's own counts: index that segment alone
@@ -339,7 +573,7 @@ def gate():
         ok = ok and match
         # step 2's remainder (2026-09-09): the four views' counts derived from the events table's own, on every world
         vok, vlines = views_gate(db)
-        print('  THE FOUR RUN VIEWS (run_ledger, run_timers, run_clock, run_docket) — every count against the table\'s:')
+        print('  THE FIVE RUN VIEWS (run_ledger, run_timers, run_clock, run_docket, run_population) — every count against the table\'s:')
         print('\n'.join(vlines))
         ok = ok and vok
         print('GATE %s — %s' % ('GREEN' if ok else 'RED', 'the replay is the audit, the running world is the instrument' if ok else 'read the lines above'))

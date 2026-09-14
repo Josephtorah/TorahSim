@@ -54,8 +54,8 @@ vocabulary and dup-resolution discipline as in the gen_01 ledger.
 | 28 | Ein Yaakov (Glick Edition), Yoma 8:30 | chain_anthology | not-bearing | appeasement thrice; the printed citation mispoints Gen 50:17 to 1:17 — anchor artifact |
 | 29 | Ein Yaakov, Khullin 3:17 | chain_anthology | dup-of:Chullin 60b:2 | cross-reference stub in the anthology |
 | 30 | Jerusalem Talmud Berakhot 9:2:15 | chain_primary | context | New-Moon liturgy formulas |
-| 31 | Jerusalem Talmud Taanit 4:3:3 | chain_primary | **material** | the ma'amadot fasts: 'on the FOURTH day they fast for the children, that askara (diphtheria) not rise in their mouths — va-yomer Elohim yehi me'orot: ME'OROT IS WRITTEN' (defective — read me'erot, curses) — the CHAIN-PRIMARY owner of the three-orthographies flag; amendment: ORAL_meorot_defective observation -> verified at this location |
-| 32 | Midrash Aggadah, Exodus 38:21:2 | chain_compilation | dup-of:Midrash Tanchuma, Pekudei 2:3 | Mishkan equal to creation; be-hibar'am/be-Avraham |
+| 31 | Jerusalem Talmud Taanit 4:3:3 | chain_primary | **material** | the ma'amadot fasts: 'on the FOURTH day they fast for the children, that askara (diphtheria) not rise in their mouths — va-yomer Elohim yehi me'orot: ME'OROT IS WRITTEN' (defective — read me'erot, curses) — the CHAIN-PRIMARY owner of the three-orthographies (three spellings) flag; amendment: ORAL_meorot_defective observation -> verified at this location |
+| 32 | Midrash Aggadah (the collection), Exodus 38:21:2 | chain_compilation | dup-of:Midrash Tanchuma, Pekudei 2:3 | Mishkan equal to creation; be-hibar'am/be-Avraham |
 | 33 | Midrash Aggadah, Genesis 1:14:1 | chain_compilation | dup-of:Jerusalem Talmud Taanit 4:3:3 | me'erat defective + the Wednesday fast for the children |
 | 34 | Midrash Aggadah, Genesis 1:14:2 | chain_compilation | enrichment | otot read as ECLIPSE OMENS ('when sun and moon are stricken, their signs bode ill' — with Jer 10:2) — the signs job given predictive content |
 | 35 | Midrash Aggadah, Genesis 1:14:3 | chain_compilation | context | mo'adim = the festivals computed by sun and moon (Deut 16:1; Exod 23:15) |
@@ -113,7 +113,7 @@ vocabulary and dup-resolution discipline as in the gen_01 ledger.
 | 87 | Peninei Halakhah, Zemanim 1:1:2 | halakhic_application | context | modern codification: time is marked by the two luminaries; years solar, months lunar |
 | 88 | Pesikta DeRav Kahana 21:1 | chain_primary | enrichment | 'with what do they honor Him? with these lamps' — R. Abahu: the TWO me'orot, each blessed at its rising; 'I and you will go and light Zion' |
 | 89 | Pesikta DeRav Kahana 5:1 | chain_primary | **material** | R. Yochanan WITH THE KTIV ARGUMENT EXPLICIT: 'yehi me'orot — ME'OROT IS WRITTEN (defective): only the sun-orb was created to illuminate; why was the moon created? to sanctify New Moons and years'; R. Zeira adds the anti-deification foresight ('if two that contradict each other are deified — one alone, all the more so') — letter-level derivation joining the spelling flag to the number-mismatch flag; amendment candidate |
-| 90 | Pesikta Rabbati 15:1 | chain_compilation | dup-of:Pesikta DeRav Kahana 5:1 | the ha-chodesh piska, PR recension |
+| 90 | Pesikta Rabbati 15:1 | chain_compilation | dup-of:Pesikta DeRav Kahana 5:1 | the ha-chodesh ('this month') piska, PR recension |
 | 91 | Pesikta Rabbati 2:1 | chain_compilation | context | Chanukah lamp timing — the sunset boundary in practice |
 | 92 | Pesikta Rabbati 46:1 | chain_compilation | not-bearing | Rosh Hashanah tosefta; anchor artifact |
 | 93 | Pirkei DeRabbi Eliezer 51:6 | chain_compilation | dup-of:Bereshit Rabbah 6:3 | the New-Moon goat atonement for the diminution |
@@ -133,7 +133,7 @@ vocabulary and dup-resolution discipline as in the gen_01 ledger.
 | 107 | Tafsir Rasag, Genesis 1:17 | chain_geonic | context | straight rendering |
 | 108 | Tafsir Rasag, Genesis 1:18 | chain_geonic | enrichment | ve-limshol -> 'to shine'; va-yar -> 'Allah KNEW that this was good' — the de-anthropomorphized TEST, consistent with his 1:4 |
 | 109 | Tafsir Rasag, Genesis 1:19 | chain_geonic | context | 'and then it went from nighttime to daylight. Day four' — the composition paraphrase |
-| 110 | Tanna DeBei Eliyahu Zuta, Additions to Seder Eliyahu Zuta, Pirkei DeRabbi Eliezer 2 | chain_compilation | not-bearing | cup-of-consolation dialogue; anchor artifact |
+| 110 | Tanna DeBei Eliyahu Zuta (the collection), Additions to Seder Eliyahu Zuta, Pirkei DeRabbi Eliezer 2 | chain_compilation | not-bearing | cup-of-consolation dialogue; anchor artifact |
 | 111 | Targum Jerusalem, Genesis 1:14 | targum_composite_late | enrichment | 'for the SANCTIFYING by them of the beginnings of months and years' — kiddush ha-chodesh written into the translation of the jobs list |
 | 112 | Targum Jonathan on Genesis 1:14 | targum_composite_late | enrichment | the jobs list EXPANDED into a calendar curriculum: numbering of days, sanctifying of month- and year-beginnings, passings of months and years, solar revolutions, the BIRTH OF THE MOON (molad) — the counting job unpacked into its halakhic components |
 | 113 | Targum Jonathan on Genesis 1:15 | targum_composite_late | context | straight rendering |
