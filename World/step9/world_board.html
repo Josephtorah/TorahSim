@@ -2,7 +2,12 @@
 <!-- world_board.html — THE BOARD's page (THE LOOP item 10's build, 2026-09-14; D22-D26). Served by world_board.py at /; reads /api/status,
      /api/names and /api/rows once a second; no row is embedded here and nothing here writes. The picture is the mockup's sixth version
      (World/step9/forms_numbers_walk/loop_2026-09-14/board_mockup.py) with the rows fetched: FOLLOWING, every new block draws as it lands;
-     Next, Back, the left screen and Auto-play replay over what has arrived; Follow returns to the live end. -->
+     Next, Back, the left screen and Auto-play replay over what has arrived; when a replay reaches the end of what has arrived the board rides live again
+     (the Follow button removed 2026-09-15 on the owner's word — the return to LIVE is reaching the end).
+     THE BOARD DRIVES THE ENGINE (D31-D33, 2026-09-15; the owner: "the buttons should control the engine"): at the live end Next asks the engine
+     for ONE step through the server's one control route (POST api/control); Auto-play asks one per tick of the speed dial until Stop — one
+     button, two words; the engine (world_stepper.py --board) waits between asks and never runs on its own. The page writes that one signal
+     and never the database. -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   :root { --ground:#EEF0F3; --surface:#FFFFFF; --line:#D3D8DF; --ink:#1B1F26; --soft:#3E4753;
@@ -26,11 +31,10 @@
   .k { font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--soft); font-weight:600; display:block; }
   .v { font-size:15px; font-weight:500; }
   .v.clock { color:var(--clock); }
-  .v.live { color:var(--new); } .v.replay { color:var(--open); }
+  .v.live { color:var(--new); } .v.replay { color:var(--open); } .v.eng-on { color:var(--new); } .v.eng-off { color:var(--timer); }
   .ctl { margin-left:auto; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
   .btn { font:inherit; font-size:13px; padding:6px 13px; border:1px solid var(--line); background:var(--ground); color:var(--ink); border-radius:4px; cursor:pointer; }
   .btn.primary { background:var(--clock); border-color:var(--clock); color:#fff; font-weight:600; }
-  .btn.follow { border-color:var(--new); color:var(--new); font-weight:600; }
   .btn:focus-visible, .mini:focus-visible { outline:2px solid var(--timer); outline-offset:2px; }
   select { font:inherit; font-size:13px; padding:5px 8px; border:1px solid var(--line); border-radius:4px; background:var(--ground); color:var(--ink); }
   .act { width:100%; font-size:13px; color:var(--soft); }
@@ -83,6 +87,7 @@
   <div><span class="k">Things in the world</span><span class="v mono" id="count">0</span></div>
   <div><span class="k">Open entries</span><span class="v mono" id="open">0</span></div>
   <div><span class="k">Lines arrived</span><span class="v mono" id="arrived">0</span></div>
+  <div><span class="k">Engine</span><span class="v" id="engine">—</span></div>
   <div class="ctl">
     <label for="speed" class="k" style="display:inline">speed</label>
     <select id="speed"><option value="1200">slow</option><option value="600" selected>medium</option><option value="200">fast</option></select>
@@ -90,12 +95,11 @@
     <button class="btn" id="reset">Reset</button>
     <button class="btn" id="back">‹ Back</button>
     <button class="btn primary" id="next">Next ›</button>
-    <button class="btn follow" id="follow">Follow ›|</button>
   </div>
   <div class="act" id="act">Connecting to the board…</div>
 </div></div>
 <div class="wrap">
-  <p class="mock" id="about">The board over the one database. Every tile is a thing in the world: it appears at its first mention in the text or when a law first writes on it, lights when a law writes on it, carries a mark while it owes something and a countdown while a timer runs. The left screen keeps every tile in the order it appeared, newest at the bottom; click one to go back to that step. Following, the board draws each block as the stepper seals it. Nothing here is typed and nothing here writes.</p>
+  <p class="mock" id="about">The board over the one database. Every tile is a thing in the world: it appears at its first mention in the text or when a law first writes on it, lights when a law writes on it, carries a mark while it owes something and a countdown while a timer runs. The left screen keeps every tile in the order it appeared, newest at the bottom; click one to go back to that step. Following, the board draws each block as the stepper seals it. Nothing here is typed. The page writes one signal — a step for the engine, which waits between presses — and never the database.</p>
   <div class="main">
     <div class="left">
       <h2>Appeared, in order<span id="madecount">0</span></h2>
@@ -110,7 +114,7 @@
 </div>
 <script>
 let ROWS = [], KINDS = {}, ORDER = ['The frame', 'Places', 'Times', 'Plants', 'Creatures', 'Guards', 'People', 'Peoples and groups', 'Things', 'Institutions', 'Heaven', 'Others'];
-let SOURCE = null, LAST = 0, KNOWN = 0, FIRST = 0, following = true, poller = null;
+let SOURCE = null, LAST = 0, KNOWN = 0, FIRST = 0, following = true, poller = null, ENGINE = null;
 let i = 0, day = 0, pos = '—', tiles = {}, feed = [], timer = null, stepNo = 0, history = [], added = false, created = 0;
 const REDUCE = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $ = id => document.getElementById(id);
@@ -143,7 +147,8 @@ function apply(r) {
 function atEnd() { return i >= ROWS.length; }
 function step(drawIt = true) {
   if (atEnd()) {
-    $('act').textContent = following ? 'Waiting for the stepper — the text stands at ' + pos + '.' : 'The end of what has arrived (' + fmt(ROWS.length) + ' lines). Press Follow to watch the live end.';
+    following = true;   // the end of what has arrived is the live end: the board rides live again from here (no Follow button since 2026-09-15)
+    $('act').textContent = 'The end of what has arrived (' + fmt(ROWS.length) + ' lines) — ' + (ENGINE && ENGINE.listening ? 'the engine waits at ' + (ENGINE.next || pos) + '; press Next.' : 'no engine is listening.');
     stopAuto(); if (drawIt) draw(); return;
   }
   stepNo++;
@@ -156,6 +161,7 @@ function step(drawIt = true) {
       while (i < ROWS.length && ['write', 'retro_write', 'timer_set', 'close'].includes(ROWS[i].k)) { apply(ROWS[i]); i++; }
     }
   }
+  if (atEnd()) following = true;   // a step that lands on the newest block is at the live end — LIVE again
   if (drawIt) draw();
 }
 function clearState() { i = 0; day = 0; pos = '—'; tiles = {}; feed = []; stepNo = 0; created = 0; }
@@ -163,6 +169,7 @@ function rewind(n) {   // the click on the left screen, and Back: the rows repla
   stopAuto(); following = false;
   clearState();
   while (stepNo < n && i < ROWS.length) step(false);
+  if (atEnd()) following = true;   // a rewind to the newest step is the live end
   draw(); centerStrip();
 }
 function centerStrip() {   // the left screen scrolled so this step's tile sits mid-strip (the strip's own scroll, never the page's)
@@ -172,6 +179,7 @@ function centerStrip() {   // the left screen scrolled so this step's tile sits 
 function draw() {
   $('stepno').textContent = fmt(stepNo); $('day').textContent = fmt(day); $('pos').textContent = pos; $('arrived').textContent = fmt(ROWS.length);
   const m = $('mode'); m.textContent = following ? 'LIVE' : 'REPLAY'; m.className = 'v ' + (following ? 'live' : 'replay');
+  drawEngine();
   const all = Object.values(tiles);
   $('count').textContent = all.length;
   $('open').textContent = all.reduce((n, t) => n + t.marks.length, 0);
@@ -203,7 +211,7 @@ function draw() {
     el.innerHTML = '<span class="mn">' + esc(h.name) + '</span><span class="mv mono">' + esc(h.verse) + '</span>';
     el.addEventListener('click', () => {
       rewind(h.step);
-      $('act').innerHTML = '<b>Step ' + fmt(h.step) + '</b> — back to when ' + esc(h.name) + ' appeared, ' + esc(h.verse) + '. Next walks forward from here; Follow returns to the live end.';
+      $('act').innerHTML = '<b>Step ' + fmt(h.step) + '</b> — back to when ' + esc(h.name) + ' appeared, ' + esc(h.verse) + '. Next walks forward from here; at the end of what has arrived the board rides live again.';
     });
     made.appendChild(el);
   });
@@ -214,6 +222,29 @@ function draw() {
 }
 function fitStrip() { document.documentElement.style.setProperty('--strip-h', ($('strip').offsetHeight + 12) + 'px'); }
 function stopAuto() { if (timer) { clearInterval(timer); timer = null; $('auto').textContent = 'Auto-play'; } }
+// ── THE BOARD DRIVES THE ENGINE (D31-D33): one step asked at a time; the engine waits between asks ───────────────────────────────
+function drawEngine() {
+  const el = $('engine'); if (!ENGINE) { el.textContent = '—'; el.className = 'v'; return; }
+  if (ENGINE.end) { el.textContent = 'the end of the tape'; el.className = 'v'; }
+  else if (!ENGINE.listening) { el.textContent = 'none'; el.className = 'v eng-off'; }
+  else if (ENGINE.pending > 0 || !ENGINE.waiting) { el.textContent = 'stepping'; el.className = 'v eng-on'; }
+  else { el.textContent = 'waits at ' + (ENGINE.next || '—'); el.className = 'v eng-on'; }
+}
+async function postJSON(path, body) { const r = await fetch(path, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)}); if (!r.ok) throw new Error(path + ' ' + r.status); return r.json(); }
+const NO_ENGINE = 'No engine is listening — start it beside the board: python3 World/step9/world_stepper.py --board';
+async function askStep() {   // ONE step of the engine through the one control route; false when nothing can be asked
+  if (!ENGINE || !ENGINE.listening) { $('act').innerHTML = '<span class="err">' + NO_ENGINE + '</span>'; drawEngine(); return false; }
+  if (ENGINE.end) { $('act').textContent = 'The end of the tape — the engine has nothing left to run.'; return false; }
+  if (ENGINE.pending > 0) return true;   // one ask is outstanding — no second piles up behind it
+  try { const r = await postJSON('api/control', {cmd: 'step'}); ENGINE = r.engine; ENGINE.pending = Math.max(1, ENGINE.pending); drawEngine(); }
+  catch (e) { $('act').innerHTML = '<span class="err">The step signal failed: ' + esc(e.message) + '</span>'; return false; }
+  return true;
+}
+async function tick() {   // Auto-play's clock: the view forward while it is behind; at the live end one ask of the engine per tick, until Stop
+  if (!atEnd()) { step(); return; }
+  following = true;
+  if (!(await askStep())) stopAuto();
+}
 function catchUp() { while (!atEnd()) step(false); draw(); }
 // ── the routes: the page follows the database ─────────────────────────────────────────────────────────────────────────────
 async function getJSON(path) { const r = await fetch(path, {cache: 'no-store'}); if (!r.ok) throw new Error(path + ' ' + r.status); return r.json(); }
@@ -232,17 +263,20 @@ async function poll() {
   catch (e) { $('act').innerHTML = '<span class="err">The board lost its server: ' + esc(e.message) + '</span>'; return; }
   if (r.reset) { ROWS = []; history = []; clearState(); following = true; $('act').textContent = 'The session started over — the board starts over.'; }
   LAST = r.last; KNOWN = r.count; FIRST = r.first;
+  if (r.engine) { ENGINE = r.engine; drawEngine(); }
   if (r.rows.length) {
     ROWS = ROWS.concat(r.rows);
     if (following) catchUp(); else draw();
-  } else if (following && atEnd() && !ROWS.length) { $('act').textContent = 'Waiting for the stepper — no line of ' + SOURCE + ' yet.'; draw(); }
+  } else if (following && atEnd() && !ROWS.length) { $('act').textContent = (ENGINE && ENGINE.listening) ? 'The engine waits at ' + (ENGINE.next || 'the first verse') + ' — press Next.' : NO_ENGINE; draw(); }
 }
-$('next').addEventListener('click', () => { stopAuto(); following = false; step(); });
+$('next').addEventListener('click', () => { stopAuto(); if (atEnd()) { following = true; askStep(); } else { following = false; step(); } });   // D31: at the live end Next asks the engine
 $('back').addEventListener('click', () => { stopAuto(); if (stepNo === 0) return; rewind(stepNo - 1); $('act').innerHTML = '<b>Step ' + fmt(stepNo) + '</b> — one step back' + (stepNo ? ', the text at ' + esc(pos) : ', the world empty again') + '.'; });
-$('auto').addEventListener('click', () => { if (timer) { stopAuto(); return; } following = false; $('auto').textContent = 'Pause'; timer = setInterval(step, Number($('speed').value)); });
+$('auto').addEventListener('click', () => {   // D32 ONE BUTTON, TWO WORDS: Auto-play runs the clock (the view, then the engine one ask a tick); Stop stops it
+  if (timer) { stopAuto(); $('act').textContent = 'Stopped — the engine waits' + (pos !== '—' ? '; the text stands at ' + pos : '') + '.'; drawEngine(); return; }
+  $('auto').textContent = 'Stop'; timer = setInterval(tick, Number($('speed').value)); tick();
+});
 $('speed').addEventListener('change', () => { if (timer) { stopAuto(); $('auto').click(); } });
-$('reset').addEventListener('click', () => { stopAuto(); following = false; clearState(); history = []; $('act').textContent = 'Replay from the start: press Next. Follow returns to the live end.'; draw(); });
-$('follow').addEventListener('click', () => { stopAuto(); following = true; catchUp(); $('act').textContent = 'Following the live end — the text stands at ' + pos + '.'; });
+$('reset').addEventListener('click', () => { stopAuto(); following = false; clearState(); history = []; $('act').textContent = 'Replay from the start: press Next or Auto-play; at the end of what has arrived the board rides live again and Next steps the engine.'; draw(); });
 window.addEventListener('resize', fitStrip);
 draw(); boot();
 </script>

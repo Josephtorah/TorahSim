@@ -3285,11 +3285,17 @@ local server reads the one database and serves one page; the page
 follows a session as the stepper seals its blocks — every thing in the
 world a tile that appears at its first mention, lights when a law writes
 on it, owes and counts down; the left screen the order of appearance,
-clickable back to any step; every group a window three rows tall. The
-board never drives the engine and never writes a row; the stepper runs
-at a pace beside it. To watch: python3 World/step9/world_board.py in one
-window, python3 World/step9/world_stepper.py --by verse --pace 1 in
-another, then http://127.0.0.1:8765/. Every name on the board is
+clickable back to any step; every group a window three rows tall. Since
+2026-09-15 the board drives the engine (your word: the buttons should
+control it, not an autopilot behind the scenes): the engine waits; Next
+takes one step; Auto-play takes a step every tick of the speed dial
+until Stop, the same button with its other word; Back and the left
+screen replay what has happened, since an engine cannot run backward.
+The page writes one signal, a step, and never a row. To watch: python3
+World/step9/world_board.py in one window, python3 World/step9/
+world_stepper.py --board in another, then http://127.0.0.1:8765/ (the
+old hands-free form, --by verse --pace 1, still runs the engine on its
+own for a watch with no hands). Every name on the board is
 English (the registry's, then World/step9/board_names.yaml); a token
 without one is refused by the board's gate.
 

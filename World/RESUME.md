@@ -11,6 +11,9 @@
 # over the one database — step9/world_board.py (a read-only local server + step9/world_board.html)
 # follows a session as the stepper seals its blocks; the stepper's --pace runs it with no keyboard;
 # step9/board_names.yaml the display names; step9/board_probes.py 8/8; --gate green.
+# ⚠ 2026-09-15 THE BOARD DRIVES THE ENGINE (D31-D33, the owner: "the buttons should control the engine"): step9/world_stepper.py
+# --board waits for the page — Next one step, Auto-play a step a tick until Stop (one button, two words), the Follow button gone;
+# the step signal two files beside the database (board_asks.json the server's, board_engine.json the engine's); step9/drive_probes.py.
 
 # ⚠ MERGED 2026-09-14 (D7'S MERGE, the owner's "ok go the merge"; step9/THE_LOOP.md "D7'S MERGE —
 # ONE DATABASE" design + as-built): world.sqlite in this folder is DELETED. The one

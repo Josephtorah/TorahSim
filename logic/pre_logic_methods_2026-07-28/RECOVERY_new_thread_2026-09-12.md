@@ -681,7 +681,7 @@ the gate (D24); the page follows and the controls replay (D25); the stepper's --
 150 paced steps by verse to Genesis 12:20 (392 lines, 70 entities, 15 open, day 738,887, audited) watched forming in Chrome by the tools;
 the first live run's two flaws (reset by count blind to a session outrunning the old count; the mockup's leftover births on a sealed
 board) fixed and probed the same hour. HOW TO WATCH: `python3 World/step9/world_board.py` in one window, `python3 World/step9/
-world_stepper.py --by verse --pace 1` in another, http://127.0.0.1:8765/ in Chrome (`?source=` for another world). THE LIST: item 10
+world_stepper.py --by verse --pace 1` in another, http://127.0.0.1:8765/ in Chrome (`?source=` for another world) [SUPERSEDED 2026-09-15 — section 30: the engine runs `--board` and the page drives it]. THE LIST: item 10
 built; ten open (the owner's three; the second pass and the readback after Deuteronomy; the checkpoints; the cursor's lines and the other
 worlds when a sitting has room; the graded input; the design thread's window). THE ORDER NOW: the owner's notes on the real board as they
 come → the checkpoints in the tape ("Yes, after the board") → DEUTERONOMY. THE GATES AT THE CLOSE: step_probes 9/9, port_probes 9/9, the journal gate GREEN (hash 8b8fff1fa28953af), the board's gate GREEN, board_probes 8/8. Uncommitted since 376d304:
@@ -735,3 +735,27 @@ THE LAST ACT DONE (2026-09-15, the owner's "go", the two lines run by him): the 
 LAYER 2 DONE (2026-09-15): the whole history rewritten by git filter-repo --replace-text over the same sixteen forms — 261 commits in 31 s, no commit touching either login after (git log -S on both: 0); the remote re-added and main FORCE-PUSHED (4f077a0 became b159293); the release tag stores-2026-09-15 existed only on GitHub and still pointed at the old tip, so it was created locally at the rewritten commit and force-pushed (9e6c81a became 7c18242) — the release keeps its asset (153,755,648 bytes) and no old id is referenced on the remote; the bundle of the old history stays in the session's scratch folder as the backup. THE COMMIT MAP: reviews/COMMIT_MAP_2026-09-15.txt — every id before and after; the ids the records name are OLD ids and read through it: 08fa06e → 601b496, 376d304 → d1c7997, d398857 → cbd523a, 9e6c81a → 7c18242, 4f077a0 → b159293, a42f518 → 6fbc9cd, 0a98276 → 609c2ff, aff58ff → 7e45f6d. A CAVEAT NAMED: GitHub keeps unreachable objects for a time and serves a commit by its full id to anyone who has it — on a private repository a small matter; a support request purges them. The old project folders under the home's .claude (the earlier sessions' transcripts, the old memory) are outside the project and carry the login in their names by Claude Code's own rule — the owner's to delete.
 LAYER 3 DONE (2026-09-15, the owner's own hands): the repo moved to /Users/Shared/TorahSim — a path with no username — the symlink <world-link> remade to /Users/Shared/TorahSim/World, the old folder gone; this thread resumed there with the memory under the project name -Users-Shared-TorahSim (49 files) and the settings' four lines pointing at the shared folder; at the new path the home-path gate, the board's gate, the positions' gate, the builder's reconciliation and the stores' check GREEN, then the tape and the stepper run (their prints in the reply). THE USERNAME SCRUB IS COMPLETE IN ALL THREE LAYERS. Left to the owner: the two old project folders under the home's .claude (their names carry the login by Claude Code's rule) and the old TorahCode repository's note that points at the now-private TorahSim. NEXT on the owner's word: DEUTERONOMY, chapters 1 to 3, the reading.
 THE PUBLIC REPO (2026-09-15): Josephtorah/TorahSim is PUBLIC under CC0 1.0 (LICENSE; DATA_SOURCES.md the terms of what others wrote); the copyrighted book purged from the tree and the history by a second rewrite (the commit map three columns now); TorahCode's note retired; the release asset answers by its plain address. A CLONE ANYWHERE: SETUP.md. NEXT on the owner's word: DEUTERONOMY, chapters 1 to 3.
+
+## 29. ADDENDUM (2026-09-15, at the owner's compaction after THE PUBLIC REPO — the state doc's COMPACTION POINT #180; "we need to compact get ready")
+
+EVERYTHING COMMITTED at f320660 and pushed; the repository PUBLIC under CC0 (github.com/Josephtorah/TorahSim); the folder /Users/Shared/TorahSim;
+no username anywhere; a clone anywhere runs by SETUP.md. THE FIRST SITTING AFTER COMPACTION: #180's rereads, then DEUTERONOMY chapters 1 to 3 on
+the owner's word — the reading sitting (section 5's shape; the July drafts deu_01 through deu_03 the pre-cut blocks; the Sifrei on Deuteronomy
+beside Onkelos whole; the store's 959 verses against Onkelos' 956), then its compile. The forms of the last Numbers sittings (World/step9/
+forms_numbers_walk/, the ref_* set the newest) are the templates; a new form computes its root from its own file and writes to a scratch
+folder computed at run time — never a typed absolute path (the gate refuses one).
+
+## 30. ADDENDUM (2026-09-15, THE BOARD DRIVES THE ENGINE — the owner, watching the board live: "it seems to keep running no matter what button I push" → "the buttons should control the engine, it should not run on auto pilot behind the scenes. is there a reason it should?" → "put a stop button also. if I click autoplay it shoudl change to stop. one button two options. built it"; THE_LOOP.md "THE BOARD DRIVES THE ENGINE" design + as built, D31-D33)
+WHAT CHANGED: the engine (world_stepper.py --board) waits and takes exactly one step per ask from the page; Next at the live end asks one;
+Auto-play asks one per tick of the speed dial until Stop — one button, two words; the Follow button is gone (the return to LIVE is
+reaching the end of what has arrived); Back and the left screen replay. THE STEP SIGNAL: two files beside the database, one writer each
+way — board_asks.json (the server) and board_engine.json (the engine: heartbeat, next verse, done, sealed); POST /api/control
+{"cmd": "step"} the board's only write, never the database. HOW TO WATCH NOW: `python3 World/step9/world_board.py` in one window,
+`python3 World/step9/world_stepper.py --board` in another, http://127.0.0.1:8765/ (the hands-free form `--by verse --pace 1` still runs
+the engine on its own; the section-25 line above is superseded). THE ENGINE'S FIXED PRICE: about 90 s of import before its first step
+(python3 -u when its stdout is a file, else the log fills only at the end). drive_probes.py X1-X5 5/5 (each in its own journal folder,
+WORLD_JOURNAL_DIR, on its own port); the gate GREEN; board_probes 8/8 in its own folder. ⚠ LAWS LEARNED: NEVER RUN A PROBE OR A SECOND
+STEPPER UNDER THE LIVE SESSION'S SOURCE NAME (board_probes' B7 wiped the live session once — while an engine is live, run those probes
+with WORLD_JOURNAL_DIR set to a scratch folder); A BACKGROUND CHILD MAY INHERIT SIGINT IGNORED (the engine restores its handler).
+UNCOMMITTED at this writing (with #180, section 29 and #180's addenda): the three code files, drive_probes.py, the records named in the
+as-built — the owner's next "commit push" carries them.

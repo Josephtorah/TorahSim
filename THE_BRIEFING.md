@@ -14,7 +14,8 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   baked into an epub.
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
-## SCOREBOARD (as of 2026-09-14, latest)
+## SCOREBOARD (as of 2026-09-15, latest)
+- **THE BUTTONS DRIVE THE ENGINE — THE ENGINE WAITS; NEXT TAKES ONE STEP; AUTO-PLAY TAKES A STEP A TICK UNTIL STOP, ONE BUTTON WITH TWO WORDS; THE PAGE WRITES ONE SIGNAL AND NEVER THE DATABASE** (2026-09-15, on your "the buttons should control the engine, it should not run on auto pilot behind the scenes" and "put a stop button also… one button two options. built it"; the Follow button gone at your word the same hour; World/step9/drive_probes.py 5/5 in their own folder; the board's gate green; THE_LOOP.md D31-D33)
 - **THE REPOSITORY IS PUBLIC UNDER CC0 — github.com/Josephtorah/TorahSim, RENAMED, PORTABLE, FREE OF ANY MACHINE'S NAME IN ITS TREE AND ITS HISTORY, A COPYRIGHTED BOOK PURGED BEFORE THE FLIP, THE SOURCES OF EVERY BORROWED TEXT NAMED, A CLONE ANYWHERE RUNNING BY SETUP.md** (2026-09-15, on your "I also want to make torahsim public" and "assign the most free license agreement"; reviews/PORTABLE_repo_2026-09-15.md "THE PUBLIC REPO").
 - **THE REPO IS PORTABLE — RENAMED TORAHSIM, EVERY PATH COMPUTED FROM THE FILE'S OWN PLACE, A FRESH CLONE RUNS: THE SHELF AND THE STORES FETCHED BY ONE SCRIPT AGAINST THEIR MANIFESTS, THE ONE DATABASE BUILT FROM NOTHING, THE TAPE 10/10 AT ANOTHER PATH** (2026-09-15, on your "Let's compact then do this rename and relative path to make it work as a clone" and the three decisions — TorahSim; a fetch script; commit first; reviews/PORTABLE_repo_2026-09-15.md; 367 files rewritten by one pass; portable_probes.py 5/5; the sweep 57/57; the journal gate green). Nothing in the corpus, the hash, the units or the engine moved.
 - **THE CHECKPOINTS FALL WHERE THEY FALL: THE TAPE'S TESTS ARE ASKED AT THE VERSE WHERE EACH ONE SETTLES, THE VERSE MEASURED BY STEPPING THE BASE, AND A PAUSE OF THE STEPPER SHOWS THEM LIVE** (2026-09-14, on your "Ok do it"; World/step9/THE_LOOP.md "THE CHECKPOINTS AS THEY FALL — item 5's build"; D27-D30; 199 checkpoints, 48 true from the start, the refuge term settling at Numbers 21:4 where Eleazar is invested; checkpoint_probes.py 7/7; the tape and the journal unmoved). Nine items of THE LIST remain, three of them yours.
@@ -477,6 +478,18 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
 
 ## ENTRIES (newest first)
 
+### 2026-09-15 — THE BUTTONS DRIVE THE ENGINE
+
+You opened the loop prototype and watched the world form, then saw the line count climb no matter which button you pressed. The engine
+was running on its own behind the page, a verse a second, and the buttons only moved the window. You asked whether there was a reason
+for that. There was none but my design: the page had been built as a pure reader. So now the page drives the engine. The engine waits.
+Next takes one step. Auto-play takes a step every tick of the speed dial until you press Stop, the same button showing its other word.
+Back and the left screen replay what has already happened, since an engine cannot un-run a verse. The page writes one signal, a step,
+through one route, and never touches the database; the engine announces itself beside the database so the page can say whether one is
+listening. Five new probes, each in its own folder so they never touch a live session, went from fail to pass; the board's gate stays
+green. The hands-free form still exists for the gates that walk the whole tape with nobody watching. Earlier the same hour you had the
+Follow button removed: the way back to the live end is to reach it.
+
 ### 2026-09-15 — THE REPO IS PORTABLE
 
 You asked two questions: would a rename break the code, and what folder would someone else's clone use. Both answers were measured — the
@@ -506,8 +519,8 @@ You asked for it the day the loop was ruled: an interface that shows the current
 notes settled the picture — a board of tiles, one per thing in the world, grouped by kind; a left screen that keeps every thing in the
 order it appeared and clicks back to that step; every group a window three rows tall. Then "lets build it." The build is a reader: a small
 local server opens the one database read-only and serves one page; the page asks once a second for lines newer than the last it drew, and
-while it follows, every block the stepper seals is stepped and drawn as it lands. The controls replay what has arrived; Follow returns to
-the live end. Nothing on the page is typed and nothing on it writes — the stepper drives, at a pace, with no keyboard. Every name is
+while it follows, every block the stepper seals is stepped and drawn as it lands. The controls replay what has arrived; the way back to the
+live end is to reach it (a Follow button did that at first; you had it removed on 2026-09-15). Nothing on the page is typed and nothing on it writes — the stepper drives, at a pace, with no keyboard. Every name is
 English: the registry's for its entities, a table of display names for the units' own tokens, and a token without a name is refused by the
 board's gate. The first live run taught two flaws within the hour (a session starting over could outrun the old count between polls; a
 convenience copied from the mockup put unreached things on a sealed board) — both fixed and probed the same sitting. What is left on the

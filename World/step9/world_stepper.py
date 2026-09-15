@@ -22,12 +22,16 @@ timers; --show reads the rows FROM THE DATABASE through the five views under the
 --pause waits for Enter between steps: a CONTROL word, never a data event (the port of part (c) is the only door for inputs).
 
 Run: python3 World/step9/world_stepper.py [--from <verse>] [--to <verse>] [--by call|verse|chapter|marker|day] [--steps N]
-     [--show open|ledger <entity>|custody|timers|checkpoints] [--pause] [--pace S] [--quiet] [--queue World/journal/port/<queue>.yaml]
+     [--show open|ledger <entity>|custody|timers|checkpoints] [--pause] [--pace S] [--board] [--quiet] [--queue World/journal/port/<queue>.yaml]
+THE BOARD DRIVES THE ENGINE (2026-09-15; D31-D33): --board — the session waits for the board's step signal and takes exactly one step per
+ask; the page's Next and Auto-play write the signal through the server's one control route (board_asks.json beside the database), the
+session announces itself in board_engine.json (its heartbeat, the next verse, the steps done); asks already on file at open are not
+consumed; Ctrl-C seals. --board takes the keyboard's place (--pause) and the clock's (--pace); the engine never runs on its own under it.
 THE PORT (part c, 2026-09-14; world_port.py): --queue names a file of inputs read once at open; the items due at each pause enter in file
 order through World.submit before the text's line; the session is then its own world (cold_run_sequence/port@<queue>), audited against the
 base up to the first input and forked there.
 """
-import os, re, sys, time, sqlite3, collections
+import os, re, sys, time, json, sqlite3, collections
 HERE = os.path.dirname(os.path.abspath(__file__))
 JOURNAL = os.path.normpath(os.path.join(HERE, '..', 'journal'))
 sys.path.insert(0, HERE)
@@ -318,6 +322,40 @@ class Stepper:
         return self.sink.path, len(self.sink.seg.events), sum(self.sink.coerced.values())
 
 
+class BoardControl:
+    """THE STEP SIGNAL (D33, 2026-09-15): two small files beside the database, one writer each way — board_asks.json, written by the board's
+    server (a count of asks), and board_engine.json, written by this session (its heartbeat, the next verse, the steps done, sealed). The
+    engine consumes only asks made after it opened. The database is never the channel; the page never writes it."""
+    ASKS, ENGINE = 'board_asks.json', 'board_engine.json'
+
+    def __init__(self, folder, source):
+        self.asks_path, self.engine_path = os.path.join(folder, self.ASKS), os.path.join(folder, self.ENGINE)
+        self.source, self.done, self._beat = source, 0, 0.0
+        self.opened_at = self.asked()
+
+    def asked(self):
+        try:
+            with open(self.asks_path, encoding='utf-8') as f:
+                return int(json.load(f).get('asked', 0))
+        except (OSError, ValueError):
+            return 0
+
+    def pending(self):
+        return self.asked() - self.opened_at - self.done
+
+    def beat(self, st, waiting, sealed=False, force=False):
+        now = time.time()
+        if not force and now - self._beat < 1.0:
+            return
+        self._beat = now
+        body = {'pid': os.getpid(), 'source': self.source, 'done': self.done, 'opened_at': self.opened_at, 'waiting': bool(waiting), 'sealed': bool(sealed),
+                'next': st.next_verse, 'end': bool(st.done), 'beat': now}
+        tmp = self.engine_path + '.tmp'
+        with open(tmp, 'w', encoding='utf-8') as f:
+            json.dump(body, f)
+        os.replace(tmp, self.engine_path)
+
+
 def print_report(r, label='STEP'):
     ran = r['ran']
     where = ('%d line(s) at %s' % (len(ran), ran[0][0]) if ran and all(v == ran[0][0] for v, _ in ran) else
@@ -341,10 +379,15 @@ def main(argv):
         show = show[:1]
     if show and show[0] not in ('open', 'ledger', 'custody', 'timers', 'checkpoints'):
         raise SystemExit('THE STEPPER: --show takes open | ledger <entity> | custody | timers | checkpoints')
-    pause, quiet, pace = '--pause' in argv, '--quiet' in argv, opt('--pace')      # --pace S: a step every S seconds with no keyboard (D26 THE PACE, 2026-09-14) — the watch mode the board reads
+    pause, quiet, pace, board = '--pause' in argv, '--quiet' in argv, opt('--pace'), '--board' in argv      # --pace S: a step every S seconds with no keyboard (D26 THE PACE, 2026-09-14) — the watch mode the board reads
     st = Stepper(from_verse=frm, queue=queue)
     print('THE STEPPER (THE LOOP step 7 b): the tape one call at a time; the session journals as %s; --by %s%s%s' % (st.source, by, (' --from %s' % frm) if frm else '', (' --to %s' % to) if to else ''))
     print('the base: %s' % (os.path.basename(st.base) if st.base else 'none on disk — no audit'))
+    if board:
+        import signal
+        signal.signal(signal.SIGINT, signal.default_int_handler)   # Ctrl-C seals even when the session was started in the background (a shell without job control hands its children SIGINT ignored)
+        pause, pace = False, None
+        print('THE BOARD DRIVES (D31): the session waits for the board — Next and Auto-play on the page (python3 World/step9/world_board.py) step it; Ctrl-C seals')
     if pace is not None and not pause:
         print('THE PACE: a step every %s s, no keyboard — watch it on the board (python3 World/step9/world_board.py)' % pace)
     if st.port is not None:
@@ -353,36 +396,48 @@ def main(argv):
     if frm:
         print_report(st.report, 'REPLAY')
     n, limit = 0, int(steps) if steps else None
-    while not st.done and (limit is None or n < limit):
-        if to and st.next_verse and WE.verse_key(st.next_verse) is not None and WE.verse_key(st.next_verse) >= WE.verse_key(to):
-            print('the left edge of %s reached — the session stops there' % to)
-            break
-        r = st.step(by, until=to)
-        n += 1
-        print_report(r)
-        if show:
-            rows = st.show(*show)
-            if show[0] == 'checkpoints':
-                c = collections.Counter(r['verdict'] for r in rows)
-                print('        --show checkpoints: %d fallen by this pause (MATCH %d, DIVERGE %d, NOT YET %d), %d new since the last pause — asked live on this world'
-                      % (len(rows), c['MATCH'], c['DIVERGE'], c['NOT YET'], sum(1 for r in rows if r['new'])))
-                for row in [r for r in rows if r['new']][:40]:
-                    print('          NEW %-10s %-8s falls at %-14s %s' % (row['name'], row['verdict'], row['falls_at'], row['what']))
-            else:
-                print('        --show %s: %d row(s) from the database' % (' '.join(show), len(rows)))
-                for row in rows[:40]:
-                    print('          ' + ' | '.join('%s=%s' % (k, v) for k, v in row.items() if v is not None and k not in ('source', 'kind')))
-        if pause and not st.done:
-            try:
-                word = input('        [Enter] to step, q to quit: ').strip().lower()
-            except EOFError:                                  # no keyboard behind this run (a session's own runner): the pause cannot wait — say so and stop
-                print('\n        no keyboard behind this run — --pause needs a terminal window; the session stops here (run without --pause, or with --steps N, to watch)')
-                word = 'q'
-            if word == 'q':
+    ctl = BoardControl(WJ.data_dir(None), st.source) if board else None
+    if ctl is not None:
+        ctl.beat(st, waiting=True, force=True)
+    try:
+        while not st.done and (limit is None or n < limit):
+            if to and st.next_verse and WE.verse_key(st.next_verse) is not None and WE.verse_key(st.next_verse) >= WE.verse_key(to):
+                print('the left edge of %s reached — the session stops there' % to)
                 break
-        elif pace is not None and not st.done:
-            time.sleep(float(pace))
+            if ctl is not None and ctl.pending() <= 0:          # D31: no ask on file — the engine waits (a heartbeat a second, no step)
+                ctl.beat(st, waiting=True); time.sleep(0.05); continue
+            r = st.step(by, until=to)
+            n += 1
+            if ctl is not None:
+                ctl.done += 1; ctl.beat(st, waiting=not st.done, force=True)
+            print_report(r)
+            if show:
+                rows = st.show(*show)
+                if show[0] == 'checkpoints':
+                    c = collections.Counter(r['verdict'] for r in rows)
+                    print('        --show checkpoints: %d fallen by this pause (MATCH %d, DIVERGE %d, NOT YET %d), %d new since the last pause — asked live on this world'
+                          % (len(rows), c['MATCH'], c['DIVERGE'], c['NOT YET'], sum(1 for r in rows if r['new'])))
+                    for row in [r for r in rows if r['new']][:40]:
+                        print('          NEW %-10s %-8s falls at %-14s %s' % (row['name'], row['verdict'], row['falls_at'], row['what']))
+                else:
+                    print('        --show %s: %d row(s) from the database' % (' '.join(show), len(rows)))
+                    for row in rows[:40]:
+                        print('          ' + ' | '.join('%s=%s' % (k, v) for k, v in row.items() if v is not None and k not in ('source', 'kind')))
+            if pause and not st.done:
+                try:
+                    word = input('        [Enter] to step, q to quit: ').strip().lower()
+                except EOFError:                                  # no keyboard behind this run (a session's own runner): the pause cannot wait — say so and stop
+                    print('\n        no keyboard behind this run — --pause needs a terminal window; the session stops here (run without --pause, or with --steps N, to watch)')
+                    word = 'q'
+                if word == 'q':
+                    break
+            elif pace is not None and not st.done:
+                time.sleep(float(pace))
+    except KeyboardInterrupt:
+        print('\n        Ctrl-C — the session seals here')
     path, nl, coerced = st.close(quiet=quiet)
+    if ctl is not None:
+        ctl.beat(st, waiting=False, sealed=True, force=True)
     print('SESSION SEALED: %s (%d lines, coerced %d; %s); ask it: python3 World/step9/world_journal.py --ask ledger <entity> --world %s'
           % (path, nl, coerced, 'the whole tape' if st.done and st.next_verse is None and nl == len(st.base_lines or []) else 'a partial segment', st.source))
 

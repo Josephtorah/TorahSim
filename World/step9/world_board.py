@@ -19,7 +19,7 @@ decisions D22-D26). A reader over the one database: a small local server that se
 THE BOARD NEVER DRIVES THE ENGINE: the stepper runs beside it (python3 World/step9/world_stepper.py --by verse --pace 1); the database
 opened read-only (mode=ro); the page's controls replay what has arrived (D25).
 """
-import argparse, json, os, re, sqlite3, sys, urllib.parse
+import argparse, json, os, re, sqlite3, sys, threading, time, urllib.parse
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 import yaml
 
@@ -193,7 +193,51 @@ def rows_after(con, source, after=0, known=None, names=None, db_key=None, first=
 
 def status(con, db, default):
     srcs = [{'source': s, 'rows': n} for s, n in con.execute("SELECT source, count(*) FROM events WHERE layer='L3' GROUP BY source ORDER BY min(rowid)")]
-    return {'db': db, 'read_only': True, 'default_source': default, 'sources': srcs}
+    return {'db': db, 'read_only': True, 'writes': 'one signal — board_asks.json beside the database; never the database', 'default_source': default, 'sources': srcs,
+            'engine': engine_state(db)}
+
+
+# ── THE BOARD DRIVES THE ENGINE (D31-D33, 2026-09-15; the owner: "the buttons should control the engine, it should not run on auto pilot") ──
+# THE STEP SIGNAL: two files beside the database, one writer each way — board_asks.json (this server: a count of asks) and board_engine.json
+# (the stepper in --board mode: its heartbeat, the next verse, the steps done). The page's Next and Auto-play ask one step at a time through
+# the one control route; the engine takes exactly one step per ask and waits. The database stays read-only here.
+_ASK_LOCK = threading.Lock()
+
+
+def control_paths(db):
+    d = os.path.dirname(os.path.abspath(db))
+    return os.path.join(d, 'board_asks.json'), os.path.join(d, 'board_engine.json')
+
+
+def _read_json(path):
+    try:
+        with open(path, encoding='utf-8') as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return {}
+
+
+def engine_state(db):
+    """what the page shows as ENGINE: listening (a heartbeat within five seconds, not sealed), waiting, done, asked, pending, the next verse"""
+    asks_p, eng_p = control_paths(db)
+    a, e = _read_json(asks_p), _read_json(eng_p)
+    asked = int(a.get('asked', 0) or 0)
+    done, opened = int(e.get('done', 0) or 0), int(e.get('opened_at', 0) or 0)
+    listening = bool(e) and not e.get('sealed') and (time.time() - float(e.get('beat', 0) or 0)) < 5.0
+    return {'listening': listening, 'sealed': bool(e.get('sealed')), 'end': bool(e.get('end')), 'waiting': bool(e.get('waiting')),
+            'done': done, 'asked': asked, 'pending': max(0, asked - opened - done) if e else 0, 'next': e.get('next'), 'pid': e.get('pid'), 'source': e.get('source')}
+
+
+def ask_step(db):
+    """one more ask on file (read, add one, write whole, replace) — the only thing the board ever writes"""
+    asks_p, _ = control_paths(db)
+    with _ASK_LOCK:
+        n = int(_read_json(asks_p).get('asked', 0) or 0) + 1
+        tmp = asks_p + '.tmp'
+        with open(tmp, 'w', encoding='utf-8') as f:
+            json.dump({'asked': n, 't': time.time()}, f)
+        os.replace(tmp, asks_p)
+    return n
 
 
 def connect(db):
@@ -225,7 +269,10 @@ def make_handler(db, default):
                         self._send({'names': all_names(con, names), 'groups': GROUPS})
                     elif u.path == '/api/rows':
                         src = q.get('source', [default])[0]; after = int(q.get('after', ['0'])[0]); known = int(q.get('known', ['0'])[0]); first = int(q.get('first', ['0'])[0])
-                        self._send(rows_after(con, src, after, known, names, db_key=db, first=first))
+                        body = rows_after(con, src, after, known, names, db_key=db, first=first); body['engine'] = engine_state(db)
+                        self._send(body)
+                    elif u.path == '/api/engine':
+                        self._send({'engine': engine_state(db)})
                     else:
                         self._send({'error': 'no such route'}, code=404)
                 finally:
@@ -233,8 +280,23 @@ def make_handler(db, default):
             except Exception as e:
                 self._send({'error': '%s: %s' % (type(e).__name__, e)}, code=500)
 
+        def do_POST(self):                                   # D31: the one control route — a step asked; nothing else is written
+            u = urllib.parse.urlsplit(self.path)
+            try:
+                n = int(self.headers.get('Content-Length') or 0)
+                body = json.loads(self.rfile.read(n).decode('utf-8') or '{}') if n else {}
+                if u.path == '/api/control' and body.get('cmd') == 'step':
+                    asked = ask_step(db)
+                    self._send({'asked': asked, 'engine': engine_state(db)})
+                elif u.path == '/api/control':
+                    self._send({'error': 'the control route takes {"cmd": "step"} and nothing else'}, code=400)
+                else:
+                    self._send({'error': 'no such route'}, code=404)
+            except Exception as e:
+                self._send({'error': '%s: %s' % (type(e).__name__, e)}, code=500)
+
         def log_message(self, fmt, *args):
-            if '/api/rows' not in (args[0] if args else ''):
+            if '/api/rows' not in (args[0] if args else '') and '/api/control' not in (args[0] if args else ''):
                 sys.stderr.write('  %s\n' % (fmt % args))
     return Handler
 
@@ -242,7 +304,7 @@ def make_handler(db, default):
 def serve(host, port, db, source):
     srv = ThreadingHTTPServer((host, port), make_handler(db, source))
     print('THE BOARD (THE LOOP item 10): http://%s:%d/  — the database %s read-only; the source %s (the page follows it; ?source=<other> for another world)' % (host, port, db, source))
-    print('  run the stepper beside it: python3 World/step9/world_stepper.py --by verse --pace 1     (Ctrl-C stops the board)')
+    print('  run the engine beside it: python3 World/step9/world_stepper.py --board     (the page\'s Next and Auto-play step it; Ctrl-C stops the board)')
     try:
         srv.serve_forever()
     except KeyboardInterrupt:

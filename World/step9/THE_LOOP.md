@@ -1679,6 +1679,14 @@ THE DECISIONS:
       to the live end. The strip says which: LIVE with the source, or REPLAY at step n of N. A reset (D22's `reset`) empties the page.
   D26 THE PACE — the stepper's --pace S: a step every S seconds with no keyboard (S = 0 as fast as the engine goes), the watch mode the
       board needs; the pause's own report printed as before; one change in main(), none in the engine.
+  AMENDED 2026-09-15 (the owner, watching the board live — "what does the follow button do" → "remove the folow button"): the
+      Follow button REMOVED. The return to LIVE is the replay reaching the end of what has arrived — Next or Auto-play to the
+      newest block, or a click on the newest tile — and the board rides live again by itself (step() and rewind() set following
+      at the end; the message reads "riding live"). One page edit (world_board.html); the gate GREEN; board_probes 8/8. The
+      as-built below describes the page as first built, with Follow. A LESSON the same hour: board_probes' B7 runs its own
+      stepper session under the same source name and deletes the live session's rows (D22's reset) — NEVER run the board probes
+      or a second stepper while a live stepper runs. THE SAME DAY, AFTER THIS: THE BOARD DRIVES THE ENGINE (D31-D33; the design and
+      the as-built at the end of this file) — the engine waits and the page's Next and Auto-play/Stop step it.
 THE GATE — python3 World/step9/world_board.py --gate [--source S]: (a) every id the source or the births would show has an English name
   by D24's rule (the unnamed listed, the gate red); (b) the board's shaping of the base's first 300 lines equals the mockup's embedded rows
   field for field, and the forty things the mockup called births are placed at the same rows (the mockup is the agreed picture); (c) the
@@ -1936,3 +1944,45 @@ LESSONS: THE VIEW MAY NOT WEAR THE TABLE'S NAME (`events` is the journal's — t
 exception and the probe learned it); A PROBE'S EXPECTATION FROM A TOOL'S OWN DOCSTRING IS STILL A HAND-TYPED CLAIM (the who-span);
 THE REGISTRY'S ID IS NOT THE TOKEN (the_earth, not aretz); A DERIVED KEY IS THE BUILDER'S MAP, NEVER A SLICE (standing[:-1]);
 A COMMENT INSIDE A BRACKET SWALLOWS THE LINE (twice — write the comment after the closing bracket).
+
+
+## THE BOARD DRIVES THE ENGINE — the design (2026-09-15; the owner, watching the board live: "it seems to keep running no matter what button I push" → "the buttons should control the engine, it should not run on auto pilot behind the scenes. is there a reason it should?" → "put a stop button also. if I click autoplay it shoudl change to stop. one button two options. built it")
+THE QUESTION ANSWERED FIRST: no reason for the board — the autopilot (D26's --pace) was the reader's design, the page forbidden to write;
+the only use for an engine that runs unattended is the gates (the tape check, the positions' measurement), which stay a command-line
+mode with no page.
+  D31 THE BOARD DRIVES THE ENGINE — the engine in --board mode (world_stepper.py) takes exactly one step per ask and waits between asks;
+      it never runs on its own under the board. On the page, Next at the live end asks one step; Next behind the live end walks the view
+      forward as before; Back and the left screen replay what has happened (an engine cannot un-run a verse — to stand at an earlier
+      step for real is the cursor's job: the engine started over and walked there).
+  D32 ONE BUTTON, TWO WORDS — Auto-play runs the page's clock at the speed dial: while the view is behind the live end each tick steps
+      the view; at the live end each tick asks the engine for one step; the button reads Stop while the clock runs; Stop stops the clock
+      and the engine waits (nothing more is asked). No Follow button (removed the same day, before this: the return to LIVE is reaching
+      the end of what has arrived).
+  D33 THE STEP SIGNAL — two small files beside the database, one writer each way: board_asks.json (the server: a count of asks, written
+      whole and replaced) and board_engine.json (the engine: pid, source, done, opened_at, waiting, sealed, next, end, a heartbeat). The
+      server's one control route, POST /api/control {"cmd": "step"}, is the only thing the board writes — never the database, which
+      stays read-only. The engine consumes only asks made after it opened (opened_at); one ask outstanding at a time on the page (no
+      pile-up); the page's header shows ENGINE: "waits at <verse>" / "stepping" / "none" (no heartbeat within five seconds, or sealed) /
+      "the end of the tape"; with no engine, Next and Auto-play say so and stop. Ctrl-C seals the session.
+THE PROBES — World/step9/drive_probes.py X1-X5, written before the code and run to FAIL, each in ITS OWN journal folder (WORLD_JOURNAL_DIR)
+on its own port — never over the live session: X1 the engine announces itself and takes no step unasked in three seconds; X2 the control
+route counts an ask and the status reports the engine; X3 three asks are exactly three steps and the engine waits after them; X4 Ctrl-C
+seals and the board sees no engine; X5 the page carries Stop, the control route and --board, no Follow, and the gate is green.
+
+## THE BOARD DRIVES THE ENGINE — as built (2026-09-15, the same sitting)
+THE FAIL RUN: X1 FAIL (no --board: the engine ran the whole tape, 3,362 rows unasked); the probe itself crashed at X2 because the old server
+closes a POST without answering — its catch widened (an unexpected error is a FAIL, not a crash). THE CODE: world_stepper.py — BoardControl
+(the two files; asked(), pending(), beat() once a second or on a change), --board in main() (the loop waits 50 ms at a time while nothing
+is pending; KeyboardInterrupt seals; the SIGINT handler restored explicitly), the usage paragraph; world_board.py — control_paths,
+engine_state, ask_step (a lock; write whole, replace), the engine in /api/status and /api/rows, /api/engine, do_POST /api/control, the
+serve() line; world_board.html — the ENGINE word in the header, askStep/tick/postJSON/drawEngine, Next asks at the live end, Auto-play
+and Stop one button, the messages. THE SECOND RUN: 4/5 — X4 FAIL: the engine ignored Ctrl-C (started in the background from a shell
+without job control, SIGINT arrives ignored and the child inherits it) → the handler restored in --board mode → 5/5. THE LIVE CHECK in
+Chrome: the engine announced "waits at Gen 1:5"; Auto-play → the button read Stop and the engine took one ask a tick (done 7 in four
+seconds at medium, waiting between); Stop → the count held at 11 across two reads; Next → 12, the page at step 20, Genesis 2:21-22, the
+engine waiting at 2:23. The gate GREEN; board_probes.py 8/8 (run in its own journal folder — B7 runs a stepper of its own); the lints at
+baseline; the home-path gate GREEN. THE RECORDS: SETUP.md's section 4, World/README.md, World/RESUME.md, THE_STEPS.md's board paragraph,
+the recovery file's section 30, the state doc's #180 addendum 2, THE_BRIEFING's scoreboard and entry, memory. LESSONS: A PROBE RUNS
+NOTHING UNDER THE LIVE SESSION'S NAME (its own journal folder, its own port — board_probes' B7 wiped the live session once this day; run
+those probes with WORLD_JOURNAL_DIR set while an engine is live); A BACKGROUND CHILD MAY INHERIT SIGINT IGNORED (restore the handler where
+Ctrl-C must mean something); A CATCH THAT NAMES THE EXPECTED ERRORS LETS THE UNEXPECTED ONE CRASH THE PROBE.

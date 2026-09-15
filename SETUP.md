@@ -32,10 +32,13 @@ The Bible store the runners read (`Data/tanakh.sqlite`) is tracked and arrives w
 
 ## 4. Watch it
 
-    python3 World/step9/world_board.py                       # the board at http://127.0.0.1:8765/
-    python3 World/step9/world_stepper.py --by verse --pace 1   # in another window: the tape one verse a second
+    python3 World/step9/world_board.py                # the board at http://127.0.0.1:8765/
+    python3 World/step9/world_stepper.py --board      # in another window: the engine waits; Next and Auto-play on the page step it
 
-Or step by hand: `python3 World/step9/world_stepper.py --by chapter --pause --show checkpoints`.
+The engine takes one step per press of Next. Auto-play takes a step every tick of the speed dial until you press Stop (the same
+button). Back and the left screen replay what has happened; the engine cannot run backward. Hands-free instead: `python3
+World/step9/world_stepper.py --by verse --pace 1` runs the engine on its own, a verse a second, and the page follows.
+Or step by hand in a terminal: `python3 World/step9/world_stepper.py --by chapter --pause --show checkpoints`.
 
 ## 5. The gates
 
