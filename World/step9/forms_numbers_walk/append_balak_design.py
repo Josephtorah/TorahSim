@@ -1,7 +1,9 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 7b: append the design section to World/step9/NUMBERS_WALK.md after sitting 7's NEXT paragraph (the anchor asserted).
 import os
-ROOT = '<repo-old>'
+ROOT = _ROOT
 SCR = os.path.dirname(os.path.abspath(__file__))
 p = f'{ROOT}/World/step9/NUMBERS_WALK.md'
 text = open(p, encoding='utf-8').read()

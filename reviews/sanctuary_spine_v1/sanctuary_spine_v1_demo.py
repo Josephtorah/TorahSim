@@ -33,7 +33,7 @@ from enum import Enum
 from pathlib import Path
 from typing import Any, Optional
 
-ROOT = Path(__file__).resolve().parents[2]  # Torah_Grok/
+ROOT = Path(__file__).resolve().parents[2]  # the repo root (TorahSim)
 DEMO_DIR = Path(__file__).resolve().parent
 
 

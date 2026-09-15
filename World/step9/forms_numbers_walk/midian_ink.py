@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 11 — MIDIAN, Numbers 31:1-54 (2026-09-12; the owner: "ok go" after the recovery-file rereads, on the ruling READ
 # THEN COMPILE): THE INK of the chapter, computed from the Tanakh DB, the snapshot store and the shelf's own bytes — never typed. Sitting 10's
@@ -9,7 +11,7 @@
 # THE SPAN: ONE draft — num_31_midian 31:1-54 (the portion Matot's second chapter); the next draft (num_32_gad_reuben) opens at 32:1.
 import json, os, re, html, sqlite3, sys, io, contextlib, unicodedata
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-12'
 UID = 'num_31_midian'
 PISKAOT = [157, 158]
@@ -95,7 +97,7 @@ assert len(NAMING) == 8 and 'num_19_parah_2026-09-11.md' in NAMING and 'lev_11_c
 assert 'VESSELS-MAN-VESSELS FROM THE MIDIAN GARMENTS (31:24)' in LED['num_19_parah_2026-09-11.md'] and 'THE FOUR VESSELS OF THE MIDIAN SPOIL' in LED['num_19_parah_2026-09-11.md'] and 'goat-work clause (Num 31:20)' in LED['lev_11_carcass_swarm_close_2026-09-05.md']
 
 # ---- THE DRAFT'S SPAN, COMPUTED ----
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 VC = dict(db.execute("SELECT chapter, COUNT(*) FROM verses WHERE book='Num' GROUP BY chapter").fetchall())
 assert VC[30] == 17 and VC[31] == 54 and VC[32] == 42 and VC[33] == 56 and VC[34] == 29
 SILENT = (VC[31] - 24) + VC[32] + VC[33] + VC[34] + 8

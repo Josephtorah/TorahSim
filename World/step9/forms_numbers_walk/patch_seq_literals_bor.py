@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 14b (2026-09-13): the sequence file's literals and checkpoints for the borders — the import line (the live registration
 # edge), the DAEMON_ORDER entry, RUN (predicted in the design), PREVIOUS_RUN (13b's RUN exactly), NEWEST_RUNNER, PLACEMENT (predicted), the
@@ -7,7 +9,7 @@
 # second pass from the stitcher's print (seq_stitch_bor.out). Every replacement anchored on the exact prior text; the file is asserted to
 # compile after. patch_seq_literals_jou.py's form.
 import re
-P = '<repo-old>/World/step9/cold_run_sequence.py'
+P = (_ROOT + '/World/step9/cold_run_sequence.py')
 s = open(P, encoding='utf-8').read()
 def rep(old, new, n=1):
     global s

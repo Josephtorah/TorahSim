@@ -30,7 +30,7 @@ import yaml
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 sys.path.insert(0, HERE)
-DB = os.path.join(ROOT, 'elijah_docket', 'tanakh.sqlite')
+DB = os.path.join(ROOT, 'Data', 'tanakh.sqlite')
 YAML = os.path.join(HERE, 'register_dispositions.yaml')
 DISP = os.path.join(HERE, 'daemon_dispositions.yaml')
 INDEX = os.path.join(HERE, 'REGISTER_INDEX.md')

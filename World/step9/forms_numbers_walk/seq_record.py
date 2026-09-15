@@ -6,8 +6,10 @@ first cold_run_*.py frame on the stack — a leaf caller's import of another run
 Prints the census: per runner, submits by the registry's FORM (act / speech / statute / case) and by source class
 (a Torah verse of the three books first = HISTORY; a tractate/Sifra/Onkelos/Mishnah first = a CASE row), and
 writes the recording to seq_recording.json for the stitcher."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sys, os, io, glob, json, re, contextlib, importlib, collections, traceback
-HERE = '<repo-old>/World/step9'
+HERE = (_ROOT + '/World/step9')
 sys.path.insert(0, HERE)
 os.chdir(HERE)
 import yaml

@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 8b — THE COMPILE OF THE SECOND CENSUS (2026-09-11): THE EXAM DOCKET for Numbers 25:19-26:65, written from the scan's
 # dump (scratchpad/census2_docket_dump.txt: the LINK rows = every Babylonian Talmud / Mishnah / Tosefta segment on the local shelf citing a
@@ -7,7 +9,7 @@
 # A, B, C, D); the coverage is COMPUTED from the dump, never typed; the long ranges' sizes are read from the scan's own print. Append-only.
 import re, os, sys, importlib.util
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 SCR = os.path.dirname(os.path.abspath(__file__))
 OUT = f'{ROOT}/logic/oral_triage/num_26_second_census_exam_2026-09-11.md'
 assert not os.path.exists(OUT), OUT

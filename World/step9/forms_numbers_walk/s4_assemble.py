@@ -1,3 +1,4 @@
+# THE PORTABLE REPO (2026-09-15): this form never compiled (an unterminated string literal); its paths renamed by text, not by the pass
 #!/usr/bin/env python3
 # O8 S4 — assembles cold_run_joseph.py: the header, the probes, the helpers, the answer sheet and the shelf rows, the rosters, the cells (the hand's),
 # the daemon and the scene (from the generator, the hand-model's own table), the slots, the headline cells, the tests (the hand's),
@@ -39,7 +40,7 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 print('honest-pairing guard: %d tests checked, every expectation a literal' % GUARDED)
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = '<repo>/Data/tanakh.sqlite'
 con = sqlite3.connect('file:%s?mode=ro' % DB, uri=True)
 
 
@@ -91,17 +92,17 @@ def _seats(pred, ch_lo, ch_hi):
 def _load(path):
     d = json.load(open(path, encoding='utf-8')); return d['text'] if isinstance(d, dict) and 'text' in d else d
 def mishnah(tractate, ch, m, must):
-    txt = strip(re.sub(r'<[^>]+>', '', _load('<repo-old>/Data/mishnah_%s_he.json' % tractate)[ch - 1][m - 1]))
+    txt = strip(re.sub(r'<[^>]+>', '', _load('<repo>/Data/mishnah_%s_he.json' % tractate)[ch - 1][m - 1]))
     assert must in txt, 'answer-sheet check failed: %r not in Mishnah %s %d:%d' % (must, tractate, ch, m)
 _BAV = {}
 def _bavli(tr, daf, side, seg, must):
-    T = _BAV.setdefault(tr, _load('<repo-old>/Data/bavli_%s_he.json' % tr))
+    T = _BAV.setdefault(tr, _load('<repo>/Data/bavli_%s_he.json' % tr))
     txt = strip(re.sub(r'<[^>]+>', '', T[2 * daf - 2 + (1 if side == 'b' else 0)][seg - 1]))
     assert must in txt, 'shelf check failed: %r not in %s %d%s:%d' % (must, tr, daf, side, seg)
 _BR = None
 def _br(par, row, must):
     global _BR
-    if _BR is None: _BR = _load('<repo-old>/Data/bereshit_rabbah_he.json')
+    if _BR is None: _BR = _load('<repo>/Data/bereshit_rabbah_he.json')
     txt = strip(re.sub(r'<[^>]+>', '', _BR[par - 1][row - 1]))
     assert must in txt, 'Bereshit Rabbah check failed: %r not in %d:%d' % (must, par, row)
 SHEET = [
@@ -188,5 +189,5 @@ if __name__ == '__main__':
 '''
 src = (HEADER.replace('__PROBES__', repr([tuple(p) for p in G['PROBES']])).replace('__ROSTERS__', repr({k: [tuple(x) for x in v] for k, v in G['ROSTERS'].items()}))
        + '\n' + cells + '\n' + G['DAEMON'] + '\n' + SLOTS_CODE + '\n' + G['SCENE_CODE'] + '\n' + BUILD + '\n' + tests + '\n' + TAIL)
-open('<repo-old>/World/step9/cold_run_joseph.py', 'w', encoding='utf-8').write(src)
+open('<repo>/World/step9/cold_run_joseph.py', 'w', encoding='utf-8').write(src)
 print('cold_run_joseph.py assembled: %d lines' % src.count('\n'))

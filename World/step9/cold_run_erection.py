@@ -78,6 +78,8 @@ bread's arrangement, the western lamp, the raise-never-lower table); the Tzav en
 timer). Lev 8, Lev 9:17, Num 7:1, 7:89, 9:15-23, 10:11, Deut 7:1-5, 9:9-21, 10:1-5, 12:3, 1 Kgs 8:10-11, 12:28, 2 Kgs 23:6,
 2 Chr 5:13-14, 7:1-2, Ezek 18:4, 43:5, Neh 9:18, Zech 9:11 stay imports by name.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json, io, contextlib, collections, re
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -86,7 +88,7 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 assert GUARDED == 287, ("the guard counted %d expectations, the tripwire holds 287" % GUARDED)   # W6: +1 (the craftsmen and the donation scene); W7: +1 (the Sinai narrative's scene)
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):
@@ -1433,7 +1435,7 @@ def build(q):
 
 # ---- (2) the answer sheet — the Mishnah rows as TEST DATA (verified by their own tokens) ----
 def load(t):
-    d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
+    d = json.load(open((_ROOT + '/Data/mishnah_%s_he.json') % t))
     return d['text'] if isinstance(d, dict) and 'text' in d else d
 SHELF = {t: load(f) for t, f in (('Avodah Zarah', 'avodah_zarah'), ('Rosh Hashanah', 'rosh_hashanah'), ('Bekhorot', 'bekhorot'), ('Chagigah', 'chagigah'), ('Eduyot', 'eduyot'), ('Horayot', 'horayot'),
                                  ('Megillah', 'megillah'), ('Pesachim', 'pesachim'), ('Sanhedrin', 'sanhedrin'), ('Shabbat', 'shabbat'), ('Sheviit', 'sheviit'), ('Yoma', 'yoma'), ('Keritot', 'keritot'),

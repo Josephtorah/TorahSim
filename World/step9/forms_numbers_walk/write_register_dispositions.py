@@ -1,8 +1,10 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE REGISTER GATE sitting (2026-09-11): the dispositions written FROM THE READING of the second run's print (register_gate_run2.out) —
 # a why per non-green seat; the classes taken from the gate's own computation (never typed); verify() run before the write.
 import sys, io, contextlib, collections, yaml
-sys.path.insert(0, '<repo-old>/World/step9')
+sys.path.insert(0, (_ROOT + '/World/step9'))
 import register_census as RG
 with contextlib.redirect_stdout(io.StringIO()):
     ink = RG.read_ink(); w = RG.running_world()
@@ -101,6 +103,6 @@ if not missing and not v['fails'] and not v['debt']:
             '# from the reading of the print. The gate verifies the class (a lie fails), refuses a declaration on a seat the world has since paid\n'
             '# (stale), and fails an undeclared seat under --strict. GREEN needs no line: counts ROW / LEDGER / MEASURE-ONLY, receipts CLOSE, footers\n'
             '# DAEMONS, registers ROWS. When a runner pays a seat, DELETE its line here (the gate will say STALE until it is gone).\n')
-    with open('<repo-old>/World/step9/register_dispositions.yaml', 'w') as f:
+    with open((_ROOT + '/World/step9/register_dispositions.yaml'), 'w') as f:
         f.write(head + yaml.safe_dump(decl, allow_unicode=True, sort_keys=False, width=200))
     print('written')

@@ -96,6 +96,8 @@ fourteen); the guardians (the oath route). Gen 12:19, 17:5, 17:8, 25:8-10, 25:24
 25:29, 25:34-35, 25:46-47, Num 27:8-11, Deut 5:22, 21:15-17, 25:5-10, 33:12, 33:17, Josh 24:32, Judg 3:15, Ruth 1:15, 4:1-18,
 1 Chr 5:1-2, Isa 7:14, Zeph 3:9, Ps 44:7 stay imports by name.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json, io, contextlib, collections, re
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -104,7 +106,7 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 assert GUARDED == 228, ("the guard counted %d expectations, the tripwire holds 228" % GUARDED)
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):
@@ -1106,7 +1108,7 @@ def build(q):
 
 # ---- (2) the answer sheet — the Mishnah rows as TEST DATA (verified by their own tokens) ----
 def load(t):
-    d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
+    d = json.load(open((_ROOT + '/Data/mishnah_%s_he.json') % t))
     return d['text'] if isinstance(d, dict) and 'text' in d else d
 SHELF = {t: load(f) for t, f in (('Kiddushin', 'kiddushin'), ('Ketubot', 'ketubot'), ('Chullin', 'chullin'), ('Yevamot', 'yevamot'), ('Bava Batra', 'bava_batra'), ('Bekhorot', 'bekhorot'),
                                  ('Sanhedrin', 'sanhedrin'), ('Megillah', 'megillah'), ('Bava Metzia', 'bava_metzia'))}

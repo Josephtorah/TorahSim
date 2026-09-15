@@ -1,8 +1,10 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # Reproduces gloss_lint.py's three checks (the first occurrence of each Hebrew run / transliterated compound / jargon word, the
 # 90-character period-stopped window) and reports WHERE: file, line, column, the token, and the line with its successor.
 import re, sys, json
-sys.path.insert(0, '<repo-old>/logic/solo_tools'); import gloss_lint as G
+sys.path.insert(0, (_ROOT + '/logic/solo_tools')); import gloss_lint as G
 def places(path):
     text = open(path, encoding='utf-8').read(); out = []; seen = set()
     def ln(pos): return text.count('\n', 0, pos) + 1

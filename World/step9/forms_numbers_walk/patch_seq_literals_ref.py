@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 15b (2026-09-13): the sequence file's literals and checkpoints for the refuge cities — the import line (the live registration
 # edge), the DAEMON_ORDER entry, RUN (predicted in the design), PREVIOUS_RUN (14b's RUN exactly), NEWEST_RUNNER, PLACEMENT (predicted), CENSUS
@@ -6,7 +8,7 @@
 # No population row moves (148 UNMOVED — no register in the chapter); entities 318 and closes 121 unmoved by design. Every replacement anchored
 # on the exact prior text; the file is asserted to compile after. patch_seq_literals_bor.py's form.
 import re
-P = '<repo-old>/World/step9/cold_run_sequence.py'
+P = (_ROOT + '/World/step9/cold_run_sequence.py')
 s = open(P, encoding='utf-8').read()
 def rep(old, new, n=1):
     global s

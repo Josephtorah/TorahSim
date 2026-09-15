@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 9 — THE OFFERINGS CALENDAR, Numbers 28:1-29:39 (2026-09-11; the owner: "I agree continue" after the register
 # gate, on the ruling READ THEN COMPILE): THE FIRST MEASUREMENT PASS — the shelf's heads by position (the Sifrei's piskaot on 28-29), the
@@ -8,7 +10,7 @@
 # store's own glosses). Nothing typed.
 import json, os, re, html, sqlite3, sys, io, contextlib, unicodedata
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 SP = os.path.dirname(os.path.abspath(__file__))
 def clean(s): return re.sub(r'<[^>]+>', '', html.unescape(s))
 sif = json.load(open(f'{ROOT}/Data/sefaria_export/Sifrei_Bamidbar/en.json'))['text']
@@ -33,7 +35,7 @@ def unit_text(uid): return open(f'{ROOT}/logic/units/{uid}.yaml', encoding='utf-
 def steps(uid): return sorted({(int(a), int(b)) for a, b in re.findall(r'STEP_Nm_(\d+)_(\d+)', unit_text(uid))})
 for uid in ('num_27_zelophehad_joshua', 'num_28_daily_shabbat_rosh', 'num_28_pesach_shavuot', 'num_29_fall_festivals', 'num_30_vows'):
     st = steps(uid); print(uid, 'status draft' if 'status: draft' in unit_text(uid) else ('FROZEN' if 'status: frozen' in unit_text(uid) else 'NO STATUS'), st[0], st[-1], len(st), 'operators:' in unit_text(uid))
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 VC = dict(db.execute("SELECT chapter, COUNT(*) FROM verses WHERE book='Num' GROUP BY chapter").fetchall())
 print('VC 27-30:', {c: VC[c] for c in (27, 28, 29, 30)})
 # THE PRIOR READS

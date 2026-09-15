@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 4b — THE COMPILE OF SHELACH (2026-09-10): THE EXAM DOCKET for Numbers 13:1-15:31, written from the scan's dump
 # (scratchpad/shelach_docket_dump.txt: the LINK rows = every Babylonian Talmud / Mishnah / Tosefta segment on the local shelf citing a
@@ -6,7 +8,7 @@
 # long ranges' sizes are read from the scan's own print. Append-only once written.
 import re, os, sys, importlib.util
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 SCR = os.path.dirname(os.path.abspath(__file__))
 OUT = f'{ROOT}/logic/oral_triage/num_13_15_shelach_exam_2026-09-10.md'
 assert not os.path.exists(OUT), OUT

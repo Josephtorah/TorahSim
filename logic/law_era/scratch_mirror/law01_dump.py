@@ -11,6 +11,8 @@ He preferred (En only when He missing) to keep volume sane.
   law01_dump.py --status       # remaining counts per work, no dump
   law01_dump.py --tanakh       # dump the TANAKH-VERSE cross-refs
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import json
 import re
 import sqlite3
@@ -19,9 +21,9 @@ import time
 
 SCRATCH = "<scratch>"
 DB = SCRATCH + "/law01_texts.sqlite"  # indexed side DB (FTS5 workaround)
-TANAKH_DB = "<repo-old>/elijah_docket/tanakh.sqlite"
+TANAKH_DB = (_ROOT + "/Data/tanakh.sqlite")
 QUEUE = SCRATCH + "/law01_queue.json"
-LEDGER = "<repo-old>/logic/oral_audit/ledgers/Exod_21.jsonl"
+LEDGER = (_ROOT + "/logic/oral_audit/ledgers/Exod_21.jsonl")
 SEEN = SCRATCH + "/law01_seen_segs.txt"
 
 # reading order: verse-indexed chain digest first, then talmud/midrash,
@@ -90,7 +92,7 @@ def main():
 
     if "--tanakh" in args:
         tdb = sqlite3.connect(TANAKH_DB)
-        sys.path.insert(0, "<repo-old>/logic/solo_tools")
+        sys.path.insert(0, (_ROOT + "/logic/solo_tools"))
         from chain_scan import tanakh_ref
         n = 0
         for sr in sorted((s for s, e in q.items()

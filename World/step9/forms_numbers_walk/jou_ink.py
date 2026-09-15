@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 13 — THE JOURNEYS, Numbers 33:1-56 (2026-09-12; the owner: "Go" after the #151 rereads, on the ruling READ THEN
 # COMPILE): THE INK of the chapter, computed from the Tanakh DB, the snapshot store and the shelf's own bytes — never typed. Sitting 12's form
@@ -10,7 +12,7 @@
 # THE SPAN: ONE draft — num_33_journeys 33:1-56 (the portion Masei's first chapter); the next draft (num_34_borders) opens at 34:1.
 import json, os, re, html, sqlite3, sys, io, contextlib, unicodedata
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-12'
 UID = 'num_33_journeys'
 PISKAOT = []
@@ -75,7 +77,7 @@ assert NAMING == ['gen_28_egypt_descent_2026-08-25.md', 'num_01_tribe_counts_202
 assert re.search(r'^- Sifrei Bamidbar 133:3', LED['num_27_zelophehad_joshua_2026-09-09.md'], re.M) and re.search(r'^- Sifrei Bamidbar 82:1', LED['num_10_trumpets_depart_2026-09-10.md'], re.M)
 
 # ---- THE DRAFT'S SPAN, COMPUTED ----
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 VC = dict(db.execute("SELECT chapter, COUNT(*) FROM verses WHERE book='Num' GROUP BY chapter").fetchall())
 assert VC[32] == 42 and VC[33] == 56 and VC[34] == 29
 def unit_text(uid): return open(f'{ROOT}/logic/units/{uid}.yaml', encoding='utf-8').read()

@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # NUM 15:32-36 — THE WOOD-GATHERER (THE TENT sitting 3, 2026-09-09; World/step9/THE_TENT.md section 3).
 # The second Numbers span compiled, and the third CASE-BORN law: the run halts on the gatherer (15:34 "it had
@@ -25,7 +27,7 @@ import effects_layer as FX
 import world_engine as WE
 import cold_run_incense_shekel as IS            # THE EDGE (dependency_dispositions.yaml: mekoshesh -> incense_shekel CALL, reference, liability and mode)
 
-db = sqlite3.connect('<repo-old>/elijah_docket/tanakh.sqlite')
+db = sqlite3.connect((_ROOT + '/Data/tanakh.sqlite'))
 
 def strip(s):
     return ''.join(c for c in s if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))

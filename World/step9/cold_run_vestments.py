@@ -74,6 +74,8 @@ cold_run_ordinances.altar (the nakedness clause of 20:26 the breeches answer); c
 37:31, 1 Sam 14:41, Ezra 2:63 stay imports by name. The anointing oil, the incense, and the
 laver of the manifest (39:38-39) are E4's: OWED, on the gate's worklist.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json, io, contextlib, collections
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -82,7 +84,7 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 assert GUARDED == 196, ("the guard counted %d expectations, the tripwire holds 196" % GUARDED)
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):
@@ -860,7 +862,7 @@ def build(q):
 
 # ---- (2) the answer sheet — the Mishnah rows as TEST DATA (verified by their own tokens) ----
 def load(t):
-    d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
+    d = json.load(open((_ROOT + '/Data/mishnah_%s_he.json') % t))
     return d['text'] if isinstance(d, dict) and 'text' in d else d
 SHELF = {t: load(t.lower()) for t in ('Yoma', 'Zevachim', 'Horayot', 'Megillah', 'Sotah', 'Sanhedrin', 'Tamid', 'Shekalim', 'Middot', 'Kelim', 'Chagigah', 'Shabbat')}
 def mrow(book, ch, m, must):

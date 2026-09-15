@@ -1,17 +1,19 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE SECOND MEASUREMENT PASS (sitting 9 — THE OFFERINGS CALENDAR, Numbers 28:1-29:39): every candidate fact PRINTED before it is typed as an
 # assert in offerings_ink.py. The helpers as census_ink.py's (the Tanakh DB, the snapshot store, the parser).
 import json, os, re, html, sqlite3, sys, io, contextlib, unicodedata
 from collections import Counter
 from fractions import Fraction
-ROOT = '<repo-old>'
+ROOT = _ROOT
 def clean(s): return re.sub(r'<[^>]+>', '', html.unescape(s))
 onk_he = json.load(open(f'{ROOT}/Data/sefaria_export/Onkelos_Numbers/he.json'))['text']
 onk = json.load(open(f'{ROOT}/Data/sefaria_export/Onkelos_Numbers/en.json'))['text']
 def plain(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
 def pointed(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05AF))
 def accents(w): return [unicodedata.name(c).replace('HEBREW ACCENT ', '') for c in w if 0x0591 <= ord(c) <= 0x05AE]
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 rows = db.execute("SELECT v.book, v.chapter, v.verse, w.he, w.morph FROM words w JOIN verses v ON w.verse_id=v.id ORDER BY v.id, w.idx").fetchall()
 by, byp, byraw = {}, {}, {}
 for b, c, v, he, m in rows:

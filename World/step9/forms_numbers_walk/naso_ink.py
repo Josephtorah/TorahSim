@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 2 — NASO (2026-09-09; the owner: "Go"): THE INK OF Numbers 4:21-7:89, computed from the Tanakh DB,
 # the snapshot store and the shelf's own bytes — never typed. Shared by the three row/writer modules of write_naso_ledgers.py.
@@ -5,7 +7,7 @@
 # the engine's numeral parser MEASURED against the portion's numbers before the compile sitting is asked to teach it.
 import json, os, re, html, sqlite3, sys, io, contextlib, unicodedata
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-09'
 UNITS = [  # (uid, chapter, lo, hi, title, the Sifrei piskaot by position)
     ('num_04_gershon_merari', 4, 21, 49, 'Gershon and Merari counted; the four work-counts', []),
@@ -51,7 +53,7 @@ prior = [f for f in os.listdir(f'{ROOT}/logic/oral_triage') if f.endswith('.md')
 assert prior == [], prior
 
 # ---- THE DRAFTS' SPANS AND THE BOUNDARY, COMPUTED ----
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 VC = dict(db.execute("SELECT chapter, COUNT(*) FROM verses WHERE book='Num' GROUP BY chapter").fetchall())
 assert VC[4] == 49 and VC[5] == 31 and VC[6] == 27 and VC[7] == 89 and VC[8] == 26
 def steps(uid):

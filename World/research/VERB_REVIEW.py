@@ -12,9 +12,11 @@ can be argued with rather than trusted.
     HOLD  tenure of a place          possess, acquire, sell, buy
     -     not location-bearing
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, collections, pathlib
 
-DB = "<repo-old>/torah_grok.SNAPSHOT-main-51801ca.sqlite"
+DB = (_ROOT + "/torah_grok.SNAPSHOT-main-51801ca.sqlite")
 OUT = pathlib.Path(__file__).resolve().parent / "VERB_REVIEW.md"
 
 CLASS = {

@@ -87,6 +87,8 @@ appended section names every segment opened):
     two provenances show instead of one label covering both.
 The honest-pairing guard (compile_guards.py) runs first on this file.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effects_layer as FX
@@ -94,7 +96,7 @@ import io as _io, contextlib as _ctx
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):
@@ -438,7 +440,7 @@ def scene():
 SCENE, _W = scene()
 
 # ---- (2) TEST DATA — the Mishnah's own grid, read from the shelf ----
-mz = json.load(open('<repo-old>/Data/mishnah_zevachim_he.json'))
+mz = json.load(open((_ROOT + '/Data/mishnah_zevachim_he.json')))
 mzt = mz['text'] if isinstance(mz, dict) and 'text' in mz else mz
 ch5 = mzt[4]
 assert len(ch5) == 8, 'Zevachim ch.5 must hold eight rows'

@@ -1,9 +1,11 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE EFFECTS UPDATED WITH THE FOURTH BOOK (2026-09-13; the owner: "Update the effects"). Five stories spliced before
 # "## How to read the registry"; the head, the registry section and the closer brought current from the prints
 # (1,012 effects and the eight kinds' census by the registry's keys; 140 citing Numbers). Every replacement asserted
 # unique; refuses to run twice.
-P = '<repo-old>/ARCHITECTURE/THE_EFFECTS.md'
+P = (_ROOT + '/ARCHITECTURE/THE_EFFECTS.md')
 S = '<scratch>/effects_numbers_stories.md'
 t = open(P, encoding='utf-8').read()
 assert '## Story 9' not in t, 'already spliced'

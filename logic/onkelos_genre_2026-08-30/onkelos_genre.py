@@ -16,10 +16,12 @@ d, Hebrew sh -> Aramaic t) as a matter of course. That offset is constant
 across prose, so the baseline absorbs it; only deviation FROM the baseline is
 evidence.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import json, re, sqlite3, sys, unicodedata
 from statistics import mean
 
-REPO = "<repo-old>"
+REPO = _ROOT
 DB = f"{REPO}/torah_grok.SNAPSHOT-main-51801ca.sqlite"
 BOOKS = {
     "Gen": "Onkelos_Genesis",

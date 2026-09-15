@@ -1,10 +1,12 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 8b (2026-09-11): THE TAPE PROBE before the design — the running world built once; the ledgers of the persons the second
 # census names (Er, Onan, Dathan, Abiram, Korach, Nadab, Abihu, Caleb, Joshua, Jochebed, Miriam, the daughters, Zelophehad, the Levites) —
 # their effects with open flags and days; the decree's timer fire (carcasses_fall_in_the_wilderness) and its day against the census's
 # day (40, 6, 1); the Levites' inheritance_barred block; the open plague entries (Korach's debt); the entity ids that exist.
 import sys, io, contextlib
-sys.path.insert(0, '<repo-old>/World/step9')
+sys.path.insert(0, (_ROOT + '/World/step9'))
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS
     reg = CS.registry_map()

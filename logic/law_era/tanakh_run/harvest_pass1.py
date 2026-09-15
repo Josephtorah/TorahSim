@@ -16,17 +16,19 @@ mechanical channels. Idempotent; writes JSON next to itself.
 
 Experimental standing (like logic/gork/): not binding law, no gates.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import json
 import re
 import sqlite3
 import sys
 from collections import Counter
 
-HERE = "<repo-old>/logic/law_era/tanakh_run"
-TANAKH = "<repo-old>/elijah_docket/tanakh.sqlite"
+HERE = (_ROOT + "/logic/law_era/tanakh_run")
+TANAKH = (_ROOT + "/Data/tanakh.sqlite")
 CAP = 90          # lemma sweep threshold (whole-Tanakh occurrences)
 
-sys.path.insert(0, "<repo-old>/logic/solo_tools")
+sys.path.insert(0, (_ROOT + "/logic/solo_tools"))
 import chain_scan as cs  # noqa: E402  (links DB + tanakh_ref resolver)
 
 STRIP = re.compile(r"[֑-ׇ]")   # pointing/accents

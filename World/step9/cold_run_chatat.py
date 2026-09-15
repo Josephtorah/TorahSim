@@ -52,6 +52,8 @@ the Day atones); Lev 21:21-22 (the blemished priest eats); Lev 7:2, 7:33
 (the guilt offering's 'around'; 'he who offers the blood'); Exod 21:28
 (the stoned ox's flesh); Lev 27:11 (the bird has no redemption).
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json, io, contextlib
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -60,7 +62,7 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 assert GUARDED == 195, ('the guard counted %d expectations, the tripwire holds 195' % GUARDED)
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):
@@ -1118,7 +1120,7 @@ SCENE, _W = scene()
 
 # ---- (2) TEST DATA — the Mishnah rows, read whole from the shelf ------
 def load(t):
-    d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
+    d = json.load(open((_ROOT + '/Data/mishnah_%s_he.json') % t))
     return d['text'] if isinstance(d, dict) and 'text' in d else d
 HOR = load('horayot'); KER = load('keritot'); ZEV = load('zevachim')
 def mrow(book, ch, m, must):

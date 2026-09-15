@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # LEV 24:10-23 — THE FIRST CALL (2026-09-05, under the compiler law)
 # The compile dependency pulled ahead by Exodus 21's talion cell
@@ -26,7 +28,7 @@ print('guard: %d expectations checked, every one a literal from the answer sheet
 import sqlite3, sys, os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 
 
 # ---- THE EXPORT — the called function ------------------------------

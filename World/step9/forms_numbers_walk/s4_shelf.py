@@ -2,11 +2,13 @@
 """s4_shelf.py — O8 S4: the shelf census by script — every row of Bereshit Rabbah and of the local Babylonian tractates that
 quotes a verse of Genesis 33-37, 39-47, 50:15-26 (a run of four or more consecutive consonantal words of the verse found in
 the row), printed per verse with the row's address and its first 120 characters. Located, never recited."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import json, re, sqlite3, glob, os, collections
-R = '<repo-old>'; S = '<scratch>/'
+R = _ROOT; S = '<scratch>/'
 def bare(s): return re.sub(r'[֑-ׇ]', '', s or '')
 def clean(s): return re.sub(r'<[^>]+>', '', s)
-t = sqlite3.connect('file:%s/elijah_docket/tanakh.sqlite?mode=ro' % R, uri=True)
+t = sqlite3.connect('file:%s/Data/tanakh.sqlite?mode=ro' % R, uri=True)
 verses = []
 for ch in list(range(33, 38)) + list(range(39, 48)) + [50]:
     for vs, vid in t.execute("select verse, id from verses where book='Gen' and chapter=? order by verse", (ch,)):

@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 8b — THE COMPILE OF THE SECOND CENSUS (2026-09-11): THE EXAM DOCKET'S SCAN, sized by script before the docket is
 # written (balak_docket_scan.py's form). (1) THE LINK ROWS: every segment of the local shelf's Babylonian Talmud, Mishnah and Tosefta exports
@@ -9,7 +11,7 @@
 # verdicted in an earlier logic/oral_triage ledger (this sitting's own reading ledger excluded) is listed CREDITED with its ledger — speed
 # ruling (b), credit guard (1): a quick look, not a blind credit.
 import json, re, os, collections, glob
-R = '<repo-old>/Data/sefaria_export'
+R = (_ROOT + '/Data/sefaria_export')
 SCR = os.path.dirname(os.path.abspath(__file__))
 OUT = f'{SCR}/census2_docket_dump.txt'
 strip = lambda s: re.sub(r'<[^>]+>', '', s)
@@ -103,7 +105,7 @@ print('  ', collections.Counter(re.sub(r' \d+[ab]?:.*$', '', a) for a, _ in topi
 prior = {}
 own = {'num_26_second_census_2026-09-11.md'}
 alladdr = list(linked) + [a for a, _ in topic]
-for f in sorted(glob.glob('<repo-old>/logic/oral_triage/*.md')):
+for f in sorted(glob.glob((_ROOT + '/logic/oral_triage/*.md'))):
     if os.path.basename(f) in own: continue
     txt = open(f, encoding='utf-8').read()
     for a in alladdr:

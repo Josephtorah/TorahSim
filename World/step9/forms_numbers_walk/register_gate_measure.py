@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE REGISTER GATE sitting (2026-09-11; the owner: "Ok go") — THE MEASUREMENTS BEFORE THE DESIGN (1b's order): the running world built once;
 # (0) the shapes — a ledger entry's keys, the ops, the population rows' as_of values; (1) THE COUNT LINES of the ink — a numeral beside the
@@ -5,14 +7,14 @@
 # LORD commanded" (58) against the ledger's closes by verse; (3) THE FOOTERS' blocks against the daemons' given_at; (4) the register headers
 # (the 68) with the table's rows per chapter.
 import sqlite3, sys, io, contextlib, collections, re, yaml
-ROOT = '<repo-old>'
+ROOT = _ROOT
 sys.path.insert(0, f'{ROOT}/World/step9')
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS
     reg = CS.registry_map()
     w, M = CS.run_world(CS.PARAMS['sojourn_start']['value'], reg, 'probe')
 def N(b, c, v): return CS.ink_numbers(CS.verse_words(b, c, v))
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 def plain(x): return ''.join(ch for ch in x if ch != '/' and not (0x0591 <= ord(ch) <= 0x05C7))
 TORAH = ['Gen', 'Exod', 'Lev', 'Num', 'Deut']
 rows = db.execute("SELECT v.book, v.chapter, v.verse, w.idx, w.he, w.lemma, w.morph FROM words w JOIN verses v ON w.verse_id=v.id WHERE v.book IN ('Gen','Exod','Lev','Num','Deut') ORDER BY v.id, w.idx").fetchall()

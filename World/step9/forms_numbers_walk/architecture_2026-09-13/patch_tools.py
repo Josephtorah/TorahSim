@@ -1,10 +1,12 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE ARCHITECTURE TOOLS TAUGHT THE FOURTH BOOK (2026-09-13; the standing order of #165, sitting D). Every replacement asserted;
 # refuses to run twice. build_summary's BLOCKS gain ten Numbers rows (numbers_blocks.txt); build_program_outline's BOOK / COMPILED /
 # by_book / loops / anchors / dates; build_plain_outline's loops / anchors / dates; build_linked's BOOK_REPORTS / PARASHAH_GLOSS /
 # anchors / date; build_diagrams' typed layer numbers and a new 08_numbers_runners.svg; NARRATIVE.md's ten blocks appended.
 import re, json, os
-A = '<repo-old>/ARCHITECTURE/'
+A = (_ROOT + '/ARCHITECTURE/')
 SP = '<scratch>/'
 
 def load(p): return open(p, encoding='utf-8').read()

@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 8b — THE COMPILE OF THE SECOND CENSUS AND THE POPULATION TABLE (2026-09-11): THE RECORDS, written after the gates and the
 # sweep (their prints READ here, never typed): NUMBERS_WALK.md as-built; COMPILE_DEBT's sitting-8b box (the sitting-8 box paid, the seeding
@@ -6,7 +8,7 @@
 # text that must exist (an assert), every file linted after (the baselines: NUMBERS_WALK 0, COMPILE_DEBT 0, RESEARCH_LOG 52, THE_STEPS 1,
 # THE_BRIEFING 0, RESUME 0, the ledger 0, the memory files 7 / 5 / 0, the state doc 147).
 import re, os, sys, subprocess
-ROOT = '<repo-old>'; SP = os.path.dirname(os.path.abspath(__file__)); MEM = '<memory>'
+ROOT = _ROOT; SP = os.path.dirname(os.path.abspath(__file__)); MEM = '<memory>'
 DATE = '2026-09-11'
 def rd(p): return open(p, encoding='utf-8').read()
 def wr(p, s): open(p, 'w', encoding='utf-8').write(s)

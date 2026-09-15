@@ -47,6 +47,8 @@ bird sin offering at the BASE — below); Lev 20:18 (the menstruant's
 karet); Lev 1:15 (the wall); Num 19 and Lev 11 (the corpse and the
 carrion, carried).
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json, io, contextlib
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -55,7 +57,7 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 assert GUARDED == 162, ('the guard counted %d expectations, the tripwire holds 162' % GUARDED)   # W4: +1, the scene row
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):
@@ -1041,7 +1043,7 @@ SCENE, _W = scene()
 
 # ---- (2) TEST DATA — the Mishnah rows, read whole from the shelf ------
 def load(t):
-    d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
+    d = json.load(open((_ROOT + '/Data/mishnah_%s_he.json') % t))
     return d['text'] if isinstance(d, dict) and 'text' in d else d
 NID = load('niddah'); ZAV = load('zavim'); KIN = load('kinnim')
 def mrow(book, ch, m, must):

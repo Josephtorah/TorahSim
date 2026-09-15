@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """patch_live_sink.py — THE LOOP step 7 (a) WRITE AS YOU GO: the code, in three files, on the design of THE_LOOP.md (2026-09-14).
 Every replacement asserted unique; idempotent (a second run finds the new text and skips)."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sys
 
 def patch(path, pairs):
@@ -14,7 +16,7 @@ def patch(path, pairs):
     print('%s: %d replacement(s)' % (path, done))
 
 # ---- 1. worldledger.py: the index's row has one home ----
-patch('<repo-old>/World/journal/worldledger.py', [
+patch((_ROOT + '/World/journal/worldledger.py'), [
     ('''def index_sqlite(db_path, segment_paths):''',
      '''def row_of(ev, source):
     """the index's row for one envelope event — ONE home for the row's shape (THE LOOP step 7 (a) WRITE AS YOU GO, 2026-09-14:
@@ -33,7 +35,7 @@ def index_sqlite(db_path, segment_paths):'''),
 ])
 
 # ---- 2. world_engine.py: the hook — one attribute, one decorator, six decorations ----
-patch('<repo-old>/World/step9/world_engine.py', [
+patch((_ROOT + '/World/step9/world_engine.py'), [
     ('import collections\n', 'import collections\nimport functools\n'),
     ('''class World:
     def __init__(self, era, epoch=None, registry=None, installation=None):''',
@@ -297,7 +299,7 @@ OLD_SINK = '''def sink(world, source, out_dir=None):
     seg.write(path)
     return path, len(seg.events), sum(coerced.values())
 '''
-patch('<repo-old>/World/step9/world_journal.py', [
+patch((_ROOT + '/World/step9/world_journal.py'), [
     ('import os, re, sys, glob, json, sqlite3, subprocess, tempfile, collections\n',
      'import os, re, sys, glob, json, sqlite3, subprocess, tempfile, collections, hashlib\n'),
     ('from worldledger import Segment, index_sqlite, canon          # the August envelope, the chain, the index\n',
@@ -348,7 +350,7 @@ Run: python3 World/step9/world_journal.py --gate | --reindex | --verify <segment
 ])
 
 # ---- 4. cold_run_sequence.py: attach before the tape, three worlds; the closing rebuild replaced by the live report ----
-patch('<repo-old>/World/step9/cold_run_sequence.py', [
+patch((_ROOT + '/World/step9/cold_run_sequence.py'), [
     ('''    assert w.laws, 'ZERO-REPORT: empty law library'
     M = {}
     del _INK_CHECKS[:]                                   # the re-checks counted per world (the first O1 run read 207 = three worlds x 69)''',

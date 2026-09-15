@@ -37,11 +37,13 @@ Lev 11:42 probe targets the CURRENT evidence line (the truncated
 belly-word) — the toolchain finding stands on the record, the
 repair deferred to the owner.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json, io, contextlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effects_layer as FX
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):
@@ -147,7 +149,7 @@ def law_shemini(event, world):
     return []
 
 # ---- (2) the answer sheet ------------------------------------------
-mc = json.load(open('<repo-old>/Data/mishnah_chullin_he.json'))
+mc = json.load(open((_ROOT + '/Data/mishnah_chullin_he.json')))
 mct = mc['text'] if isinstance(mc, dict) and 'text' in mc else mc
 ch36, ch37 = strip(mct[2][5]), strip(mct[2][6])
 for tok in ('נאמרו מן התורה', 'לא נאמרו', 'הדורס', 'אצבע יתרה', 'וזפק'):

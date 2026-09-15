@@ -1,16 +1,18 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 4b — THE MEASUREMENTS, second pass (2026-09-10): the register by the wayyiqtol tag; the definite one's Torah
 # seats whole; the quarter's plene form the first pass's exclusion hid (רביעית inside רביעי); the ordinal reader on Sheshai; the
 # third-generation homograph (שלשים 'thirds' read as thirty); the marker verses that carry a definite one or a fraction (the stitcher's
 # rows that would move); the measure nouns after the fraction forms, censused.
 import sqlite3, sys, io, re, contextlib, collections
-ROOT = '<repo-old>'
+ROOT = _ROOT
 sys.path.insert(0, f'{ROOT}/World/step9')
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS
 def N(b, c, v): return CS.ink_numbers(CS.verse_words(b, c, v))
 def O(b, c, v): return CS.ink_ordinals(CS.verse_words(b, c, v))
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 def plain(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
 def pointed(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05AF))
 rows = db.execute("SELECT v.book, v.chapter, v.verse, w.he, w.morph FROM words w JOIN verses v ON w.verse_id=v.id ORDER BY v.id, w.idx").fetchall()

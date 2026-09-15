@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 14 — THE BORDERS (2026-09-12): the store's glosses at the chapter's seats read back into the display layer's override
 # file — BY REFERENCE for the chapter's own seats (31 rows) and BY GLOSS where the store's every token of the gloss is the one word (the census in
@@ -5,7 +7,7 @@
 # lot, the sea, the Jordan, the borders, barnea, and the broken "inherit--mode-of-descent)" family — 28 rows). Display only; the frozen unit
 # untouched. The rows are the same literals bor_ink.py asserts present. Run ONCE (the anchors assert the rows absent first).
 import re
-P = '<repo-old>/logic/glosses/word_gloss_overrides.yaml'
+P = (_ROOT + '/logic/glosses/word_gloss_overrides.yaml')
 t = open(P, encoding='utf-8').read()
 assert '"Num.34.' not in t and '"cord": "border"' not in t
 REF = [('Num.34.3:2', 'the-side-of', "pe'at — the tabernacle's side-word (Exod 27:9), not a mouth"), ('Num.34.3:7', 'alongside', "'on the hands of Edom' — Onkelos 'on the borders of'"), ('Num.34.3:13', 'from-the-end-of', ''), ('Num.34.3:14', 'the-sea-of', 'the Salt Sea'), ('Num.34.4:0', 'and-shall-turn', 'the border-turning verb (Joshua 15-19)'), ('Num.34.4:4', 'to-the-ascent-of', ''), ('Num.34.4:5', 'Akrabbim', 'the gloss had carried the whole compound'), ('Num.34.4:7', 'to-Zin', ''), ('Num.34.4:12', 'to-Kadesh-', ''), ('Num.34.4:14', 'and-shall-go-out', 'the border goes out, nothing is brought forth'), ('Num.34.4:15', 'Hazar-', ''), ('Num.34.4:16', 'addar', ''), ('Num.34.4:18', 'to-Azmon', ''), ('Num.34.5:0', 'and-shall-turn', ''), ('Num.34.5:3', 'the-brook-of', "nachlah — the brook with the directional ending, not 'stream-suffix'"), ('Num.34.5:7', 'to-the-sea', ''), ('Num.34.6:1', 'the-west', 'the sea as the direction'), ('Num.34.6:11', 'the-west', ''), ('Num.34.8:3', 'Lebo-', 'the name Lebo-hamath, not the verb come'), ('Num.34.8:6', 'the-goings-out-of', ''), ('Num.34.8:8', 'to-Zedad', ''), ('Num.34.9:0', 'and-shall-go-out', ''), ('Num.34.9:2', 'to-Ziphron', ''), ('Num.34.9:5', 'Hazar-', ''), ('Num.34.10:4', 'from-Hazar-', ''), ('Num.34.10:6', 'to-Shepham', ''), ('Num.34.11:8', 'and-shall-reach', "the blotting verb's consonants on the border — Onkelos 'and it shall reach'"), ('Num.34.11:11', 'the-sea-of', 'the sea of Chinnereth'), ('Num.34.12:5', 'the-sea-of', ''), ('Num.34.12:12', 'round-about', ''), ('Num.34.13:15', 'to-give', '')]

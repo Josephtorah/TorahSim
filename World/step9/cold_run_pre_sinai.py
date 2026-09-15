@@ -85,6 +85,8 @@ the Mishpatim engine (21:12's tokens). Gen 3:2-3, 5:1-2, 6:19-20, 8:22, 18:19, 2
 16:23-29, 18:13, Lev 7:38, 12:2-3, 19:23, 22:7, 24:15-17, Num 30:6-8, Deut 4:32, 5:27, Jer 3:1, 9:25, 33:25, Isa 54:9, Hos
 6:7, Ezek 1:28, Ps 33:6, 92:1, Job 38:15 stay imports by name.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json, io, contextlib, collections, re
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -93,7 +95,7 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 assert GUARDED == 212, ("the guard counted %d expectations, the tripwire holds 212" % GUARDED)
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):
@@ -1068,7 +1070,7 @@ def build(q):
 
 # ---- (2) the answer sheet — the Mishnah rows as TEST DATA (verified by their own tokens) ----
 def load(t):
-    d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
+    d = json.load(open((_ROOT + '/Data/mishnah_%s_he.json') % t))
     return d['text'] if isinstance(d, dict) and 'text' in d else d
 SHELF = {t: load(f) for t, f in (('Berakhot', 'berakhot'), ('Shabbat', 'shabbat'), ('Nedarim', 'nedarim'), ('Chullin', 'chullin'), ('Yevamot', 'yevamot'), ('Taanit', 'taanit'), ('Tamid', 'tamid'),
                                  ('Arakhin', 'arakhin'), ('Chagigah', 'chagigah'), ('Avot', 'pirkei_avot'), ('Mikvaot', 'mikvaot'), ('Parah', 'parah'), ('Keritot', 'keritot'), ('Pesachim', 'pesachim'),

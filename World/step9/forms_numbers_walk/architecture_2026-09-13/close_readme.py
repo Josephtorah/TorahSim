@@ -1,7 +1,9 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # README.md and DEPENDENCIES.md closed after sittings C-E (2026-09-13): the "two dates" paragraph, the program page's counts,
 # the "not here yet" bullets, the pictures' notes. Every replacement asserted; refuses twice.
-A = '<repo-old>/ARCHITECTURE/'
+A = (_ROOT + '/ARCHITECTURE/')
 def rep(t, old, new):
     n = t.count(old); assert n == 1, (n, old[:70]); return t.replace(old, new)
 P = A + 'README.md'; t = open(P, encoding='utf-8').read(); assert 'every file in this folder but CHRONICLE' not in t

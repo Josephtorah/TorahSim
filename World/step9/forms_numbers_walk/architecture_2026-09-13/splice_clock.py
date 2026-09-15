@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE CLOCK AND TIME UPDATED WITH THE FOURTH BOOK (2026-09-13; the owner: "Update clocks"). THE_CLOCK.md: the head and title,
 # Example 1's count, the four-gaps section retitled with each item's as-built line, the new section spliced before
@@ -5,8 +7,8 @@
 # "## What was built from this", an eighth item added there. Every replacement asserted unique; refuses to run twice.
 import re
 SP = '<scratch>/'
-C = '<repo-old>/ARCHITECTURE/THE_CLOCK.md'
-T = '<repo-old>/ARCHITECTURE/TIME.md'
+C = (_ROOT + '/ARCHITECTURE/THE_CLOCK.md')
+T = (_ROOT + '/ARCHITECTURE/TIME.md')
 
 def splice(path, edits, marker):
     t = open(path, encoding='utf-8').read()

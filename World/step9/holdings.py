@@ -15,13 +15,15 @@ everywhere the corpus actually writes.
 Terms are matched case-insensitively; ALL terms must appear. Each hit
 carries enough to open the source (unit, id/ref/seq, snippet).
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import glob
 import json
 import re
 import sqlite3
 from pathlib import Path
 
-REPO = Path("<repo-old>")
+REPO = Path(_ROOT)
 WORLD_DB = Path(__file__).resolve().parent.parent / "world.sqlite"
 
 _cache = {}

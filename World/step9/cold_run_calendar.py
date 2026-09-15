@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE FESTIVAL CALENDAR (Exod 23:10-19) — the second span compiled
 # under the effects law (2026-09-03, same order: "build the skeleton
@@ -35,7 +37,7 @@ print('routing receipts: cold_run_pesach CALLED — leaven_machine(window_bounds
       'cold_run_yovel CALLED — sabbatical()[torah_labors] -> %r [IMPORT, live calls]'
       % (MATZAH, PURGE, YOVEL_SAB['torah_labors']['v']))
 
-db = sqlite3.connect('<repo-old>/elijah_docket/tanakh.sqlite')
+db = sqlite3.connect((_ROOT + '/Data/tanakh.sqlite'))
 
 def strip(s):
     return ''.join(c for c in s if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))

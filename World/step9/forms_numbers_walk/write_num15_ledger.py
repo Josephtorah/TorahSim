@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE TENT sitting 3 (2026-09-09) — THE READING of Numbers 15:32-41 (num_15_wood_tzitzit): writes the append-only ledger
 # logic/oral_triage/num_15_wood_tzitzit_2026-09-09.md with its COVERAGE COMPUTED from the shelf files (Sifrei Bamidbar's own
@@ -5,7 +7,7 @@
 # — the counts are measured here, never typed; the prose rows are the reading. (Sitting 2's form, write_num09_ledger.py.)
 import json, os, re, html, sqlite3
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 OUT = f'{ROOT}/logic/oral_triage/num_15_wood_tzitzit_2026-09-09.md'
 assert not os.path.exists(OUT), 'ledger exists — append, never overwrite'
 
@@ -33,7 +35,7 @@ N = len(cite_index)
 assert N == sifrei_rows + onk_rows == 14, N
 
 # ---- THE INK, computed from the Tanakh DB (consonantal: '/' and the marks U+0591..U+05C7 stripped) ----
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 def plain(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
 def verse(book, ch, vs):
     return db.execute("SELECT w.idx, w.he, w.morph FROM words w JOIN verses v ON w.verse_id=v.id WHERE v.book=? AND v.chapter=? AND v.verse=? ORDER BY w.idx", (book, ch, vs)).fetchall()

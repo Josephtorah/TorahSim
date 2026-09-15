@@ -1,9 +1,11 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 8 — THE SECOND CENSUS'S READING (2026-09-11): THE RECORDS, written after the ritual and the fold (201 units,
 # standing 2075, hash 8b8fff1fa28953af unmoved — predicted and matched). Append-only where the file is a ledger; inserts at the named
 # anchors elsewhere; every anchor asserted unique before a byte is written.
 import os, re, subprocess
-ROOT = '<repo-old>'
+ROOT = _ROOT
 MEM = '<memory>'
 def rd(p): return open(p, encoding='utf-8').read()
 def wr(p, s): open(p, 'w', encoding='utf-8').write(s)

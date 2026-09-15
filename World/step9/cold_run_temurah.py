@@ -29,13 +29,15 @@ for the tithe's naming cells, cold_run_pesach.firstborn() for the
 firstling donkey the tradition reads beside 27:27, and the field's
 priest destination from cold_run_yovel's own probes.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effects_layer as FX
 from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):
@@ -433,7 +435,7 @@ SCENE, _W = scene()
 
 # ---- (2) TEST DATA — the Mishnah rows, read from the shelf ------------
 def load(t):
-    d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
+    d = json.load(open((_ROOT + '/Data/mishnah_%s_he.json') % t))
     return d['text'] if isinstance(d, dict) and 'text' in d else d
 BOOKS = {'Temurah': load('temurah'), 'Arakhin': load('arakhin'), 'Bekhorot': load('bekhorot'), 'Menachot': load('menachot')}
 SHEET = [

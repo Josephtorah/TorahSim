@@ -5,8 +5,10 @@ model consults the OP CLASS of every effect from the registry itself (S1's lesso
 (O7's): the reprieve of a hundred and twenty years is due beyond the bare scene's end (set, not written); the seven days'
 reprieve is due inside it (set, fired, written as a timer entry — not open). The scene's rows (subject -> the effects the
 daemon writes per the declaration 6d) and the slot order are fixed HERE; the runner types them."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import yaml
-FX = yaml.safe_load(open('<repo-old>/World/step9/effect_vocabulary.yaml', encoding='utf-8'))['effects']
+FX = yaml.safe_load(open((_ROOT + '/World/step9/effect_vocabulary.yaml'), encoding='utf-8'))['effects']
 OP = {k: v['ledger_op'] for k, v in FX.items()}
 # ---- the rows in the text's order: (subject, effect, count) — every write the daemon makes on the bare scene ----
 ROWS = [

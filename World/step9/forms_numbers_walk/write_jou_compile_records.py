@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 13b (2026-09-12): THE RECORDS at the compile's close — NUMBERS_WALK.md "Sitting 13b — AS BUILT" (from jou_asbuilt.md with the sweep's
 # line filled from the sweep's own print), COMPILE_DEBT.md's sitting-13b box (the sitting-13 box PAID + the new debts), MOVE_CATALOG.md M-30,
@@ -5,7 +7,7 @@
 # line, memory (three files), the state doc's #154, the recovery file's section 13. Every append anchored; every file linted after by the caller.
 # Idempotent on the markers. write_gad_compile_records.py's form.
 import re, os, sys
-ROOT = '<repo-old>'; SP = os.path.dirname(os.path.abspath(__file__)); MEM = '<memory>'
+ROOT = _ROOT; SP = os.path.dirname(os.path.abspath(__file__)); MEM = '<memory>'
 sweep = open(f'{SP}/sweep_jou.out', encoding='utf-8').read()
 m = re.search(r'(\d+)/(\d+) runners? green.*?([\d,]+) graded cells', sweep, re.S) or re.search(r'(\d+)/(\d+).*?([\d,]+) graded', sweep, re.S)
 assert m and m.group(1) == m.group(2), 'the sweep\'s print has no green line: read it'

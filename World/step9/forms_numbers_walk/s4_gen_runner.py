@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # O8 S4 — the generator of cold_run_joseph.py's MECHANICAL parts from the hand-model's own scene (o8_s4_scene.json) and the
 # registries: the probes (every kind's witnesses in the span, the rosters' names as the verses write them), the daemon's
@@ -5,7 +7,7 @@
 # model's order, the slots. The cells and the tests are the hand's (s4_cells_A/B.py, s4_tests.py); the assembler splices them in.
 import json, yaml, re, sqlite3
 S = '<scratch>/'
-D = '<repo-old>/World/step9/'
+D = (_ROOT + '/World/step9/')
 J = json.load(open(S + 'o8_s4_scene.json', encoding='utf-8'))
 EV = yaml.safe_load(open(D + 'event_vocabulary.yaml', encoding='utf-8'))['events']
 FX = yaml.safe_load(open(D + 'effect_vocabulary.yaml', encoding='utf-8'))['effects']
@@ -29,7 +31,7 @@ ROSTERS = {
     'twelve': [(35, 23, 'ראובן'), (35, 23, 'שמעון'), (35, 23, 'לוי'), (35, 23, 'יהודה'), (35, 23, 'יששכר'), (35, 23, 'זבלון|זבולן'), (35, 24, 'יוסף'), (35, 24, 'בנימן'), (35, 25, 'דן'), (35, 25, 'נפתלי'), (35, 26, 'גד'), (35, 26, 'אשר')],
     'kings': [(36, 32, 'בלע'), (36, 33, 'יובב'), (36, 34, 'חשם'), (36, 35, 'הדד'), (36, 36, 'שמלה'), (36, 37, 'שאול'), (36, 38, 'בעל חנן'), (36, 39, 'הדר')],
 }
-_db = sqlite3.connect('file:<repo-old>/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+_db = sqlite3.connect(('file:' + _ROOT + '/Data/tanakh.sqlite?mode=ro'), uri=True)
 def _toks(ch, vs):
     return [re.sub(r'[֑-ׇ/]', '', h) for (h,) in _db.execute("SELECT w.he FROM words w JOIN verses v ON w.verse_id=v.id WHERE v.book='Gen' AND v.chapter=? AND v.verse=? ORDER BY w.idx", (ch, vs))]
 RES = {}

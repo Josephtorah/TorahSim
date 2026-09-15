@@ -1,9 +1,11 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 9 — THE OFFERINGS CALENDAR (2026-09-11): the appends — the stamp rows, NUMBERS_WALK.md "Sitting 9", the state doc's
 # #138, World/RESUME.md. THE_STEPS, THE_BRIEFING and the memory files are edited by the Edit tool beside this script. The counts below are the
 # tools' own prints (the rituals' PASS lines, the bake's standing, the truth's units and hash), typed from them.
 import os
-ROOT = '<repo-old>'
+ROOT = _ROOT
 def append(path, text):
     assert os.path.exists(path), path
     with open(path, 'a') as f: f.write(text)

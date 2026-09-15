@@ -6,10 +6,12 @@ Decalogue above all). Pairing verse N to verse N there compares unrelated
 sentences and manufactures expansion. Any chapter whose verse counts disagree
 is excluded and named.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import json, re, sqlite3
 from statistics import mean
 
-REPO = "<repo-old>"
+REPO = _ROOT
 BOOKS = {"Gen": "Onkelos_Genesis", "Exod": "Onkelos_Exodus",
          "Lev": "Onkelos_Leviticus", "Num": "Onkelos_Numbers",
          "Deut": "Onkelos_Deuteronomy"}

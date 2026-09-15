@@ -1,10 +1,12 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 11 — MIDIAN (2026-09-12): the records — the stamp row, NUMBERS_WALK.md "Sitting 11", the state doc's #145, World/RESUME.md,
 # THE_STEPS' paragraph, THE_BRIEFING's bullet, COMPILE_DEBT's box, RESEARCH_LOG's entry, MIDDOT's case-law block, the gloss override rows, the three
 # memory files. The counts below are the tools' own prints (the ritual's PASS lines, the bake's hash, the truth's units), typed from them; the corpus
 # tripwire and the ritual's print are read back before a byte is written. Every insert lands on a unique anchor asserted present once.
 import os, re, yaml
-ROOT = '<repo-old>'
+ROOT = _ROOT
 SP = os.path.dirname(os.path.abspath(__file__))
 MEM = '<memory>'
 truth = open(f'{ROOT}/logic/corpus/CORPUS_TRUTH.py', encoding='utf-8').read()

@@ -5,12 +5,14 @@ span widened to 37 on 2026-08-12 for the block-3b tail clip), FTS5-safe.
 Same design as law02_census.py: single pass over export_texts, classify
 per chain_scope, second pass fills an indexed side DB.
 Scratchpad-only — no repo writes."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import json
 import sqlite3
 import sys
 from collections import Counter
 
-sys.path.insert(0, "<repo-old>/logic/solo_tools")
+sys.path.insert(0, (_ROOT + "/logic/solo_tools"))
 import chain_scan as cs
 
 SCRATCH = "<scratch>"

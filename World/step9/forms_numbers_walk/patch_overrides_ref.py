@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 15 — THE REFUGE CITIES (2026-09-13): the store's glosses at the chapter's seats read back into the display layer's
 # override file — BY REFERENCE for the chapter's own seats and BY GLOSS where the store's every token of the gloss is the one word (the census
@@ -14,7 +16,7 @@ LIT = {n.targets[0].id: ast.literal_eval(n.value) for n in tree.body if isinstan
 REF, GL = LIT['OVERRIDE_REF'], LIT['OVERRIDE_GLOSS']
 NOTE_REF = {'Num.35.4:9': "the cubit — the store glosses 'mother' (the homograph)", 'Num.35.5:15': 'the sea as the direction', 'Num.35.11:0': "the root 'happen' in the causative — the Sifrei: designation", 'Num.35.19:0': 'the avenger of blood — the redeem-root', 'Num.35.21:7': 'the smiter — the same consonants are the smitten woman at 25:14-18', 'Num.35.30:11': "the answer-verb as testify — the store glossed it 'eye'", 'Num.35.31:2': "the ransom — the store's 'cover' is the screen's word too", 'Num.35.33:15': 'the passive: the land shall not be atoned', 'Num.35.27:8': 'the avenger "murders" — the one root for four agents', 'Num.35.16:7': "the doubled infinitive 'die, he shall be put to death'"}
 NOTE_GL = {'the-dash-in-pieces': "Strong's rendering of the murder-root; fourteen tokens, every one 'the slayer'", 'concretely': "Strong's 'concretely, a witness' — the witness-noun at all seventeen", 'in-mother': "the cubit at all seventeen (Og's bed's 'by the cubit of a man' too)", 'the-stated-assemblage': 'the congregation at all sixty-five', 'and-cardinal-number': 'the number lost from the gloss — and-eight at all eight', 'mouth-in-a-figurative-sense': "the side-word at all ten (34:3's row by reference stands)", 'there-suffix': 'thither at all seventy-two', 'in-mistake': 'unwittingly at all ten', 'the-blood--of-man': 'the double hyphen family — the blood at all fifty-one', 'be-foul': 'defile at all sixty-four', 'spill-forth': 'shed at all fifteen'}
-P = '<repo-old>/logic/glosses/word_gloss_overrides.yaml'
+P = (_ROOT + '/logic/glosses/word_gloss_overrides.yaml')
 t = open(P, encoding='utf-8').read()
 assert '"Num.35.' not in t and '"the-dash-in-pieces": ' not in t and '"concretely": ' not in t
 A1 = '  "inherit--mode-of-descent)-you/your": "gives-you-to-inherit"\n'

@@ -119,7 +119,7 @@ import yaml
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-DB = os.path.join(ROOT, 'elijah_docket', 'tanakh.sqlite')
+DB = os.path.join(ROOT, 'Data', 'tanakh.sqlite')
 YAML = os.path.join(HERE, 'dependency_dispositions.yaml')
 DEBT = os.path.join(HERE, 'COMPILE_DEBT.md')
 

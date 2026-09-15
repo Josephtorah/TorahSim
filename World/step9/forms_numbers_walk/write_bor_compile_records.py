@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 14b (2026-09-13): THE RECORDS at the compile's close — NUMBERS_WALK.md "Sitting 14b — AS BUILT" (from bor_asbuilt.md with the sweep's,
 # the journal gate's and the cursor probes' lines filled from their own prints), COMPILE_DEBT.md's sitting-14b box (the sitting-14 box PAID + the new
@@ -5,7 +7,7 @@
 # the state doc's #157, the recovery file's section 15. Every append anchored; every file linted after by the caller. Idempotent on the markers.
 # write_jou_compile_records.py's form. MOVE_CATALOG untouched (no new move this sitting — the shelf's forms known; exemplars in MIDDOT's case law).
 import re, os, sys
-ROOT = '<repo-old>'; SP = os.path.dirname(os.path.abspath(__file__)); MEM = '<memory>'
+ROOT = _ROOT; SP = os.path.dirname(os.path.abspath(__file__)); MEM = '<memory>'
 sweep = open(f'{SP}/sweep_bor.out', encoding='utf-8').read()
 m = re.search(r'(\d+)/(\d+) runners? green.*?([\d,]+) graded cells', sweep, re.S) or re.search(r'(\d+)/(\d+).*?([\d,]+) graded', sweep, re.S)
 assert m and m.group(1) == m.group(2), 'the sweep\'s print has no green line: read it'

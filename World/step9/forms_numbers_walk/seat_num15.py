@@ -1,10 +1,12 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE TENT sitting 3 (2026-09-09) — SEAT the eight claims of num_15_wood_tzitzit_claims.json into the draft unit
 # logic/units/num_15_wood_tzitzit.yaml as WITNESS_READ operators (sitting 2's rhythm, seat_num09.py: one operator per claim
 # at its verse's step, the [claim ID] marker in the prose, the cites the ledger's own names), and append derivation_log step E.
 # Every cite is checked against the ledger's CITE INDEX before a byte is written; the yaml is re-loaded after.
 import json, re, yaml
-ROOT = '<repo-old>'
+ROOT = _ROOT
 UNIT = f'{ROOT}/logic/units/num_15_wood_tzitzit.yaml'
 LEDGER = f'{ROOT}/logic/oral_triage/num_15_wood_tzitzit_2026-09-09.md'
 MAN = f'{ROOT}/logic/oral_audit/manifests/num_15_wood_tzitzit_claims.json'

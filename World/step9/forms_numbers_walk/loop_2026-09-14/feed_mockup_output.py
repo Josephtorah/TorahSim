@@ -3,9 +3,11 @@
 from the journal's own rows: only what the laws did — a thing appearing (NEW), an entry opened (OPEN), a timer set or fired (TIMER), a debt
 paid (CLOSED); the text's acts folded into the cause at the right and shown on request; statuses that only restate the verse cut; the
 dates thin dividers. Three stretches: creation through Cain, the flood's reprieve, the giving at Sinai. Writes mockup_feed_output.html."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import json, html, os, re
 HERE = os.path.dirname(os.path.abspath(__file__))
-SEG = '<repo-old>/World/journal/data/L3_run_cold_run_sequence_seed_isaac.jsonl'
+SEG = (_ROOT + '/World/journal/data/L3_run_cold_run_sequence_seed_isaac.jsonl')
 OUT = os.path.join(HERE, 'mockup_feed_output.html')
 RANGES = [(1, 70, 'creation, Eden, Cain'), (170, 206, "the flood's reprieve"), (2319, 2420, 'the giving at Sinai')]
 

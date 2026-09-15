@@ -2,9 +2,11 @@
 """o11_print.py — print a label batch with the script's PROPOSAL and flags beside every row (the reader's aid).
 Usage: python3 o11_print.py <batch> <outfile>   batch in B1 B2 B3 B4 B5
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import glob, json, os, re, sys, collections
 
-MAN = '<repo-old>/logic/oral_audit/manifests'
+MAN = (_ROOT + '/logic/oral_audit/manifests')
 LAW_UNITS = re.compile(r'^(lev_|law0|exo_2[0-3]_|exo_2[5-9]_|exo_3[01]_|exo_3[5-9]_|exo_40_)')
 
 def fam(s):

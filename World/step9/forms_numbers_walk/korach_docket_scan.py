@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 5b — THE COMPILE OF KORACH (2026-09-10): THE EXAM DOCKET'S SCAN, sized by script before the docket is written.
 # (1) THE LINK ROWS: every segment of the local shelf's Babylonian Talmud, Mishnah and Tosefta exports whose English cites a verse of
@@ -9,7 +11,7 @@
 #     excluded) is listed as CREDITED with its ledger — speed ruling (b), credit guard (1): a quick look, not a blind credit. The dump is the
 #     docket script's input (write_korach_docket.py), as at Shelach.
 import json, re, os, collections, glob
-R = '<repo-old>/Data/sefaria_export'
+R = (_ROOT + '/Data/sefaria_export')
 SCR = os.path.dirname(os.path.abspath(__file__))
 OUT = f'{SCR}/korach_docket_dump.txt'
 strip = lambda s: re.sub(r'<[^>]+>', '', s)
@@ -75,7 +77,7 @@ print('  ', collections.Counter(a.rsplit(' ', 1)[0] for a, _ in topic))
 # ---- THE PRIOR READS: addresses already verdicted in an earlier ledger (this sitting's three reading ledgers excluded) ----
 prior = {}
 own = {'num_16_korach_2026-09-10.md', 'num_17_plague_staff_2026-09-10.md', 'num_18_priest_levite_dues_2026-09-10.md'}
-for f in sorted(glob.glob('<repo-old>/logic/oral_triage/*.md')):
+for f in sorted(glob.glob((_ROOT + '/logic/oral_triage/*.md'))):
     if os.path.basename(f) in own: continue
     txt = open(f, encoding='utf-8').read()
     for a in list(linked) + [a for a, _ in topic]:

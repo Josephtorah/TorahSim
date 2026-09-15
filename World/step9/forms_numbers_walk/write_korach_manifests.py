@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 5 — KORACH (2026-09-10): THE CLAIMS of Numbers 16:1-18:32, three manifests (one per draft unit), read off
 # the three ledgers of this sitting, every claim LABELED (World/step9/CLAIM_LABELS.md's vocabulary), a machine check where the ink
@@ -5,7 +7,7 @@
 # write_shelach_manifests.py). Claim IDs per unit: KR16A (the rebellion), KR17A (the plague and the staffs), KR18A (the dues). Written
 # once (the files must not exist). Every source cite is checked against its ledger's CITE INDEX before a byte is written.
 import json, os, re, sqlite3
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-10'
 UNITS = {'num_16_korach': 'KR16A', 'num_17_plague_staff': 'KR17A', 'num_18_priest_levite_dues': 'KR18A'}
 OUT = {u: f'{ROOT}/logic/oral_audit/manifests/{u}_claims.json' for u in UNITS}

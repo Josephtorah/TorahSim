@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # =============================================================================
 # SIMULATION SKETCH — what the Exodus 21 machine looks like as a WORLD,
@@ -35,7 +37,7 @@ def load(p, n):
     s = importlib.util.spec_from_file_location(n, p)
     m = importlib.util.module_from_spec(s); s.loader.exec_module(m); return m
 
-ROOT = "<repo-old>"
+ROOT = _ROOT
 M = load(os.path.join(ROOT, "logic/law_era/exo_21_v2_DRAFT.py"), "chapter")
 b2, b3 = M.b2, M.b3
 

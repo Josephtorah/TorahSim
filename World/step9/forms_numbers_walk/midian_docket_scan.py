@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 11b — THE COMPILE OF MIDIAN (2026-09-12): THE EXAM DOCKET'S SCAN, sized by script before the docket is
 # written (vows_docket_scan.py's form). (1) THE LINK ROWS: every segment of the local shelf's Babylonian Talmud, Mishnah and Tosefta
@@ -6,7 +8,7 @@
 # + the single mishnayot (Kelim 11:1, 15:1; Oholot 1:2-3; Terumot 4:3) + the Jerusalem Talmud Terumot 4:3 (the "one of fifty");
 # (3) THE PRIOR READS credited.
 import json, re, os, collections, glob
-R = '<repo-old>/Data/sefaria_export'
+R = (_ROOT + '/Data/sefaria_export')
 SCR = os.path.dirname(os.path.abspath(__file__))
 OUT = f'{SCR}/midian_docket_dump.txt'
 strip = lambda s: re.sub(r'<[^>]+>', '', s)
@@ -119,7 +121,7 @@ print('  ', collections.Counter(re.sub(r' \d+[ab]?:.*$', '', a) for a, _ in topi
 prior = {}
 own = {'num_31_midian_2026-09-12.md'}
 alladdr = list(linked) + [a for a, _ in topic]
-for f in sorted(glob.glob('<repo-old>/logic/oral_triage/*.md')):
+for f in sorted(glob.glob((_ROOT + '/logic/oral_triage/*.md'))):
     if os.path.basename(f) in own: continue
     txt = open(f, encoding='utf-8').read()
     for a in alladdr:

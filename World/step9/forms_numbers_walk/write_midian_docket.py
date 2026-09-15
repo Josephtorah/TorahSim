@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 11b — THE COMPILE OF MIDIAN (2026-09-12): THE EXAM DOCKET for Numbers 31:1-54, written from the scan's dump
 # (scratchpad/midian_docket_dump.txt: the LINK rows = every Babylonian Talmud / Mishnah / Tosefta segment on the local shelf citing a verse of the
@@ -8,7 +10,7 @@
 # (midian_docket_scan.out). Append-only. write_vows_docket.py's form.
 import re, os, sys, importlib.util
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 SCR = os.path.dirname(os.path.abspath(__file__))
 OUT = f'{ROOT}/logic/oral_triage/num_31_midian_exam_2026-09-12.md'
 assert not os.path.exists(OUT), OUT

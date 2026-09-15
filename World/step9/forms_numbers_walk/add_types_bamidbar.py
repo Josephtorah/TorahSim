@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 1b — THE COMPILE OF BAMIDBAR (2026-09-09; World/step9/NUMBERS_WALK.md "Sitting 1b"): THE TYPES FIRST —
 # thirteen kinds on the tape (eight SPEECH: the commands; five ACTS: the runs), three CASE kinds for the exam's scene, six effects,
@@ -5,8 +7,8 @@
 # The `he` built from the pointed DB text (cantillation stripped), the witnesses the plain consonantal runs the events lint
 # verifies; every index range FOUND by the consonantal word, never typed. Idempotent. (THE TENT sitting 4's form, add_types_tent4.py.)
 import re, sqlite3, yaml
-ROOT = "<repo-old>"
-db = sqlite3.connect(f"file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro", uri=True)
+ROOT = _ROOT
+db = sqlite3.connect(f"file:{ROOT}/Data/tanakh.sqlite?mode=ro", uri=True)
 def words(book, ch, vs):
     return [r[0] for r in db.execute("SELECT w.he FROM words w JOIN verses v ON w.verse_id=v.id WHERE v.book=? AND v.chapter=? AND v.verse=? ORDER BY w.idx", (book, ch, vs)).fetchall()]
 def pointed(book, ch, vs, lo, hi):

@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 15 — THE REFUGE CITIES, Numbers 35:1-34 (2026-09-13; the owner: "Go" after the #157 rereads, on the ruling READ
 # THEN COMPILE): THE INK of the chapter, computed from the Tanakh DB, the snapshot store and the shelf's own bytes — never typed. Sitting 14's
@@ -14,7 +16,7 @@
 # at THE TENT: this is the walk's LAST reading in Numbers.
 import json, os, re, html, sqlite3, sys, io, contextlib, unicodedata
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-13'
 UID = 'num_35_refuge_cities'
 PISKAOT = [159, 160, 161]
@@ -110,7 +112,7 @@ NAMING = sorted((f, sorted(set(re.findall(r'Num(?:bers)? 35:\d+(?:-\d+)?', t))))
 assert [f for f, _ in NAMING] == ['exodus_block_shabbat_2026-09-04.md', 'gen_65_first_descent_2026-08-28.md', 'incense_shekel_docket_2026-09-06.md', 'lev_24_lamp_bread_blasphemer_2026-09-05.md', 'num_01_04_bamidbar_exam_2026-09-09.md', 'num_04_07_naso_exam_2026-09-10.md', 'num_05_camp_pure_theft_2026-09-09.md', 'num_08_menorah_levites_2026-09-10.md', 'num_10_trumpets_depart_2026-09-10.md', 'num_11_complaint_quail_2026-09-10.md', 'num_13_15_shelach_exam_2026-09-10.md', 'num_27_zelophehad_joshua_2026-09-09.md', 'num_30_vows_exam_2026-09-12.md', 'num_31_midian_exam_2026-09-12.md', 'ordinances_topic_docket_2026-09-06.md'] and dict(NAMING)['exodus_block_shabbat_2026-09-04.md'] == ['Num 35:4', 'Num 35:5'], NAMING
 
 # ---- THE DRAFT'S SPAN, COMPUTED ----
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 VC = dict(db.execute("SELECT chapter, COUNT(*) FROM verses WHERE book='Num' GROUP BY chapter").fetchall())
 assert VC[34] == 29 and VC[35] == 34 and VC[36] == 13
 def unit_text(uid): return open(f'{ROOT}/logic/units/{uid}.yaml', encoding='utf-8').read()

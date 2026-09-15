@@ -1,8 +1,9 @@
+# THE PORTABLE REPO (2026-09-15): this form never compiled (an unterminated string literal); its paths renamed by text, not by the pass
 #!/usr/bin/env python3
 # THE NUMBERS WALK 5b — the sequence runner's LITERALS after the stitch: NEWEST_RUNNER, PREVIOUS_RUN (4b's RUN), RUN (PREDICTED before the run:
 # events +25, timers +2/+2, retro-writes unchanged, writes +37, daemons +1, entities +4, the four pairs unchanged, closes +3), CENSUS typed from
 # the stitcher's print, the CK1-CK9 checkpoints and their expected statuses.
-p = '<repo-old>/World/step9/cold_run_sequence.py'
+p = '<repo>/World/step9/cold_run_sequence.py'
 s = open(p, encoding='utf-8').read()
 def rep(a, b):
     global s
@@ -37,7 +38,7 @@ block = anchor + '''    # ---- THE NUMBERS WALK 5b (2026-09-10; NUMBERS_WALK.md 
     lv = w.entity('the-levites').ledger
     cp('CK7 "NO MORE WRATH" — 18:5\\'s clause = 1:53\\'s with the one token added (computed: %s — עוד, "more"); the 1:53 guard on the Levites\\' ledger and the 18:5 watch both standing' % KR.WRATH_ADDED, (['עוד'], True, 1), (KR.WRATH_ADDED, any(e['effect'] == 'commanded' and e.get('value') == 'the_guard' for e in lv), len([e for e in lv if e['effect'] == 'watch_owed'])))
     cp('CK8 THE ARITHMETIC — the tithe of the tithe = 1/100; 18:16 [5, 20] = 3:47\\'s by the shekel engine\\'s seat; the twenty-four gifts\\' two twelves', (Fraction(1, 100), [5, 20], True, 24), (KR.TITHE_OF_TITHE, N_('Num', 18, 16), 'Num 18:16' in KR.IS_SEATS, len(KR.DATA['the_twenty_four']['value']['sanctuary']) + len(KR.DATA['the_twenty_four']['value']['borders'])))
-    dep = open('<repo-old>/World/step9/dependency_dispositions.yaml', encoding='utf-8').read()
+    dep = open('<repo>/World/step9/dependency_dispositions.yaml', encoding='utf-8').read()
     cp('CK9 THE CLOSES and the pointer PAID — the censers\\' debit on Korach CLOSED by 16:18, the get-up on Israel by 16:27, the staffs\\' on Moses by 17:22; 15:20\\'s terumah pointer flipped OWED -> CALL (shelach -> korach)', ([False], [False], [False], True), (ob('korach', 'the_censers'), ob('israel_people', 'get_up_from_the_dwelling'), ob('moses', 'the_staffs'), 'from: shelach, to: korach, disposition: CALL' in dep))
 '''
 rep(anchor, block)

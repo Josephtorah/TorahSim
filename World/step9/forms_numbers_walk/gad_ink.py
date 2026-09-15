@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 12 — GAD AND REUBEN, Numbers 32:1-42 (2026-09-12; the owner: "Go" after the #148 rereads, on the ruling READ THEN
 # COMPILE): THE INK of the chapter, computed from the Tanakh DB, the snapshot store and the shelf's own bytes — never typed. Sitting 11's form
@@ -9,7 +11,7 @@
 # THE SPAN: ONE draft — num_32_gad_reuben 32:1-42 (the portion Matot's third and last chapter); the next draft (num_33_journeys) opens at 33:1.
 import json, os, re, html, sqlite3, sys, io, contextlib, unicodedata
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-12'
 UID = 'num_32_gad_reuben'
 PISKAOT = []
@@ -64,7 +66,7 @@ assert NAMING == ['incense_shekel_docket_2026-09-06.md', 'num_11_complaint_quail
 assert len(re.findall(r'Num 32:1\b', LED['num_11_complaint_quail_2026-09-10.md'])) == 2 and 'Num 32:37-38' in LED['num_12_miriam_2026-09-10.md'] and 'Num 32:29-30' in LED['num_30_vows_exam_2026-09-12.md'] and 'Num 32:22' in LED['incense_shekel_docket_2026-09-06.md'] and 'Num 32:22' in LED['sanctuary_build_docket_2026-09-06.md']
 
 # ---- THE DRAFT'S SPAN, COMPUTED ----
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 VC = dict(db.execute("SELECT chapter, COUNT(*) FROM verses WHERE book='Num' GROUP BY chapter").fetchall())
 assert VC[31] == 54 and VC[32] == 42 and VC[33] == 56
 def unit_text(uid): return open(f'{ROOT}/logic/units/{uid}.yaml', encoding='utf-8').read()

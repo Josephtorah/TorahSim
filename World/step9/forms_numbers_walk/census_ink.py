@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 8 — THE SECOND CENSUS, Numbers 26:1-65 (2026-09-11; the owner: "Go" after the #132 rereads, on the ruling
 # READ THEN COMPILE): THE INK of Numbers 26, computed from the Tanakh DB, the snapshot store and the shelf's own bytes — never typed.
@@ -10,7 +12,7 @@
 # the draft's-grain rule, and the next draft, num_27_zelophehad_joshua, is FROZEN at THE TENT — chapter 27 is skipped when reached).
 import json, os, re, html, sqlite3, sys, io, contextlib, unicodedata
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-11'
 UID = 'num_26_second_census'
 TITLE = 'the second census in the plains of Moab — Moses and Eleazar; the twelve tribes by their families and their counts, 601,730; Dathan, Abiram and Korach recalled, the sons of Korach who did not die; Zelophehad\'s daughters and Serah in the roster; the land by count and by lot; the Levites by their families, 23,000, Jochebed and Miriam, Nadab and Abihu; not a man of the first census left but Caleb and Joshua'
@@ -71,7 +73,7 @@ prior_onk = sorted(f for f, t in LED.items() if re.search(r'Onkelos Num 26:\d', 
 assert prior_onk == [], prior_onk
 
 # ---- THE DRAFT'S SPAN, COMPUTED ----
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 VC = dict(db.execute("SELECT chapter, COUNT(*) FROM verses WHERE book='Num' GROUP BY chapter").fetchall())
 assert VC[25] == 19 and VC[26] == 65 and VC[27] == 23
 def unit_text(uid): return open(f'{ROOT}/logic/units/{uid}.yaml', encoding='utf-8').read()

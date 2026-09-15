@@ -4202,6 +4202,8 @@ token in the gloss tables), counted here and left honestly open.
 - proven: recorded cases run green against the compiled machine
 
 ## Where to look
+- a fresh clone: SETUP.md at the root (since 2026-09-15 the repo runs from any folder — the shelf and the stores fetched by
+  Data/fetch_shelf.py, the one database built by World/build_world.py)
 - every verse: the chip (hover for the full sentence)
 - the whole map: ▦ coverage (torahsimulation.org/scroll/coverage/)
 - the logic + citations: click the unit chip → unit page

@@ -1,13 +1,15 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # DEPENDENCIES.md REWRITTEN FROM THE GATES' INDEXES (2026-09-13; the owner: "Update everything except Chronicles").
 # The prose below; the tables built by script from World/step9/DEPENDENCY_INDEX.md, DAEMON_INDEX.md and
 # dependency_dispositions.yaml (dep_runner_table.md, dep_daemon_table.md; the owed table rebuilt here with three columns).
 import yaml
 SP = '<scratch>/'
-OUT = '<repo-old>/ARCHITECTURE/DEPENDENCIES.md'
+OUT = (_ROOT + '/ARCHITECTURE/DEPENDENCIES.md')
 runners = open(SP + 'dep_runner_table.md', encoding='utf-8').read()
 daemons = open(SP + 'dep_daemon_table.md', encoding='utf-8').read()
-d = yaml.safe_load(open('<repo-old>/World/step9/dependency_dispositions.yaml'))
+d = yaml.safe_load(open((_ROOT + '/World/step9/dependency_dispositions.yaml')))
 owed = ['| From | To | Why the call waits (the record\'s own words, cut) |', '|---|---|---|']
 for e in d['edges']:
     if e.get('disposition') == 'OWED':

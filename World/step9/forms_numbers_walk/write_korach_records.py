@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 5b — the records (the as-built, the research log, the move catalog, the docket's correction, THE_STEPS, COMPILE_DEBT,
 # RESUME, THE_BRIEFING); the state doc and memory follow after the journal gate and the sweep. Every anchor asserted once; append-only files
@@ -13,7 +15,7 @@ def app(path, text, must_end=None):
     open(path, 'a', encoding='utf-8').write(text)
 
 # ---- 1. NUMBERS_WALK.md — the as-built ----
-app('<repo-old>/World/step9/NUMBERS_WALK.md', r'''
+app((_ROOT + '/World/step9/NUMBERS_WALK.md'), r'''
 ## Sitting 5b — AS BUILT (2026-09-10; the order above run end to end)
 
 THE DOCKET (logic/oral_triage/num_16_18_korach_exam_2026-09-10.md, 316 rows — 209 link rows in 36 works, 107 topic rows by address; LAW
@@ -115,7 +117,7 @@ NARRATIVE PREDICTION CAN MATCH FIRST RUN when the timer lesson is applied (write
 ''', must_end="THE_BRIEFING, RESUME, memory).\n")
 
 # ---- 2. RESEARCH_LOG.md ----
-app('<repo-old>/RESEARCH_LOG.md', r'''
+app((_ROOT + '/RESEARCH_LOG.md'), r'''
 ## 2026-09-10 — THE DEFINITE NUMERAL AT THE HEAD OF A COMPOUND TAUGHT, AND THE CLASS'S CENSUS SURFACING
 ## THREE FALSE READINGS (ONE OF THEM THE PREVIOUS SITTING'S OWN ACCEPTED DIFF)
 
@@ -170,7 +172,7 @@ confirmed).
 ''')
 
 # ---- 3. MOVE_CATALOG.md — M-26's exemplar ----
-rep('<repo-old>/logic/MOVE_CATALOG.md', "\n## M-27 — THE SPEAKER SPLIT",
+rep((_ROOT + '/logic/MOVE_CATALOG.md'), "\n## M-27 — THE SPEAKER SPLIT",
     r'''
 Exemplar (2), THE NUMBERS WALK 5b (2026-09-10 — the compile of Korach): THE
 DEFINITE ONE'S JOIN GATED BY THE ACCENT. 4b's rule (14) had joined הָאֶחָד ("the
@@ -187,11 +189,11 @@ pan, ten of gold".
 ## M-27 — THE SPEAKER SPLIT''')
 
 # ---- 4. the docket — the correction appended ----
-app('<repo-old>/logic/oral_triage/num_16_18_korach_exam_2026-09-10.md',
+app((_ROOT + '/logic/oral_triage/num_16_18_korach_exam_2026-09-10.md'),
     "\n## CORRECTION (appended 2026-09-10 at the runner's first import, append-only): the rows on Mishnah Terumot 4:3 and Num 18:12 say \"naso's row CALLED\" — the ROW terumah_measure (1/40, 1/50, 1/60) is cold_run_korach.py's OWN (Shelach's challah cell carried a placeholder copy marked OWED at 4b, paid by its live call into this runner); the naso engine's CELL restitution(terumah_measure) supplies the FLOOR (Mishnah Terumot 4:5: some must remain common) and is CALLED for that. The verdicts stand; the attribution corrected here.\n")
 
 # ---- 5. THE_STEPS.md — the 5b paragraph ----
-rep('<repo-old>/THE_STEPS.md', "Sifrei ranks. Next: Korach's compile (5b), then chapter 19.\n",
+rep((_ROOT + '/THE_STEPS.md'), "Sifrei ranks. Next: Korach's compile (5b), then chapter 19.\n",
     r'''Sifrei ranks. Next: Korach's compile (5b), then chapter 19.
 
 THE COMPILE OF KORACH (sitting 5b, 2026-09-10, on Brian's "Go" after
@@ -233,23 +235,23 @@ green. Next: chapter 19, the heifer's reading.
 ''')
 
 # ---- 6. COMPILE_DEBT.md — the sitting-5 line PAID + the STILL OWED line ----
-rep('<repo-old>/World/step9/COMPILE_DEBT.md',
+rep((_ROOT + '/World/step9/COMPILE_DEBT.md'),
     "## export's translator STOPS inside 121), 30 claims seated, three rituals → 193 units, standing 1989, hash unmoved. OWED TO THE COMPILE (5b): (a) THE",
     "## export's translator STOPS inside 121), 30 claims seated, three rituals → 193 units, standing 1989, hash unmoved. PAID AT 5b (2026-09-10; NUMBERS_WALK.md \"Sitting 5b\" design + as-built — every item below paid unless the STILL OWED line names it: the parser's rules (17), (17b), (17c), (18) with 130/130 probes and the corpus diff's seven verses read; cold_run_korach.py F1-F5, 155/155 first graded run, ten engines CALLED, the docket 316 rows; the tape's twenty-five lines, two morrow timers, law_korach the 52nd, the RUN tuple predicted and matched first run, THE REST exact, CK1-CK9 as designed; 15:20's pointer PAID by shelach -> korach CALL): (a) THE")
-rep('<repo-old>/World/step9/COMPILE_DEBT.md',
+rep((_ROOT + '/World/step9/COMPILE_DEBT.md'),
     "## chatat / terumah, zelophehad, sequence → korach; NO DATE IN THE INK (undated on the shelf — recorded).\n",
     "## chatat / terumah, zelophehad, sequence → korach; NO DATE IN THE INK (undated on the shelf — recorded).\n"
     "## STILL OWED (5b): Korach's death-mode row OPEN (CK4 — 16:32 against 26:10; the retelling at Pinchas's census, its compile); the Levites' tithe to the priests by Ezra's penalty (Yevamot 86b — the Writings' run); the twenty-four gifts' border items at their own seats (the first shearing and the shoulder-cheeks-maw at Deut 18; the field of holding Lev 27 by CALL); the exclusion table's 26:53-55 clauses at Pinchas; Shelach's placeholder DATA row terumah_measure (its home now cold_run_korach.py) retired at a registry pass; CF2's one day, CF6's ten and the forty-year timer's fire at Chukat's markers; the bare measure nouns named and left at 4b.\n")
 
 # ---- 7. World/RESUME.md ----
-app('<world-link>/RESUME.md' if False else '<repo-old>/World/RESUME.md',
+app('<world-link>/RESUME.md' if False else (_ROOT + '/World/RESUME.md'),
     "SITTING 5b DONE 2026-09-10 (THE COMPILE OF KORACH 16:1-18:32; NUMBERS_WALK.md \"Sitting 5b\" design + as-built): the docket 316 rows (94 credited); the parser taught the definite numeral at the head of a compound, the hundreds-word's article, the plural unit noun and the definite one's accent gate (seven probes to FAIL, 130/130; the corpus diff's seven verses read — three false readings surfaced, one of them 4b's own accepted diff); cold_run_korach.py 155/155 first graded run, ten engines CALLED, law_korach the 52nd daemon; the tape's twenty-five lines with two one-day timers on the undated stretch, RUN (1161, 51, 50, 0, 12, 1369, 23, 288, four pairs, 104) predicted and matched first run, THE REST exact, CK1-CK9 (CK4 Korach's death-mode OPEN); the two gates' first fails read (the branch form, the digit kind, six token edges, three pointers); 15:20's terumah pointer PAID. Numbers 1:1-18:32 read, frozen, compiled and on the tape. NEXT: chapter 19 (the heifer's reading).\n")
 
 # ---- 8. THE_BRIEFING.md — the scoreboard bullet + the entry ----
-rep('<repo-old>/THE_BRIEFING.md', "## SCOREBOARD (as of 2026-09-10, latest)\n\n",
+rep((_ROOT + '/THE_BRIEFING.md'), "## SCOREBOARD (as of 2026-09-10, latest)\n\n",
     "## SCOREBOARD (as of 2026-09-10, latest)\n\n"
     "- **KORACH COMPILED — SITTING 5b DONE: THE PARSER READS \"THE FIFTY AND TWO HUNDRED\", ITS CENSUS CATCHES THREE OLD MISREADINGS (ONE OF THEM YESTERDAY'S OWN), AND THE TAPE'S PREDICTION MATCHES IN EVERY SLOT FIRST RUN** (2026-09-10, on your \"Go\"; World/step9/NUMBERS_WALK.md \"Sitting 5b\"). The exam docket 316 rows (195 laws; 94 credited from earlier ledgers). The parser taught the definite numeral at the head of a compound with seven probes written to fail first; the class censused over the whole Bible found Exodus 38:28's 1,775 read as seven and seventy-five since the parser's first day, Numbers 31:54's captains read as 2,100, and the previous sitting's join of \"the one\" firing where the cantillation says stop — the whole-corpus diff moved exactly seven verses. cold_run_korach.py: five cells, 155 of 155 on the first graded run, ten engines called (the firstborn's redemption and the stranger's death-mode row are Bamidbar's own, read by call, never retyped). The tape took twenty-five lines and no marker — the stretch is undated in the ink and on the shelf — with two one-day timers (\"tomorrow\", \"on the morrow\") firing the day after the running clock; the run tuple predicted and matched first run, the tape without Korach reproducing the previous sitting exactly, and the narrative prediction matching in all forty-two slots without a retype. Korach's own death stays an OPEN row (the earth's verse does not name him; the census's retelling does; the Talmud argues both ways). The two gates' first fails read and paid: the daemon gate reads one branch form only; the dependency gate's token census named six more engines and three pointers. 15:20's terumah pointer paid by a live call from the Shelach runner. Numbers 1 through 18 is read, frozen, compiled and on the tape. Next: chapter 19.\n")
-rep('<repo-old>/THE_BRIEFING.md', "### 2026-09-10 — THE SHELF STOPS MID-ROW, AND THE INK RUNS ON CAIN'S VERSES",
+rep((_ROOT + '/THE_BRIEFING.md'), "### 2026-09-10 — THE SHELF STOPS MID-ROW, AND THE INK RUNS ON CAIN'S VERSES",
     r'''### 2026-09-10 — THE PARSER'S CENSUS CATCHES YESTERDAY'S OWN MISTAKE, AND A PREDICTION MATCHES WHOLE
 
 Sitting 5b compiled Numbers 16 to 18 on your "Go" (World/step9/NUMBERS_WALK.md

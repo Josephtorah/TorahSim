@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 3b — THE COMPILE OF BEHA'ALOTCHA (2026-09-10): THE EXAM DOCKET for Numbers 8:1-26 + 10:1-12:16, written from the scan's dump
 # (scratchpad/beha_docket_dump.txt: the LINK rows = every Babylonian Talmud / Mishnah / Tosefta segment on the local shelf citing a verse of
@@ -6,7 +8,7 @@
 # scan's own print. Append-only once written.
 import re, os, sys, importlib.util
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 SCR = os.path.dirname(os.path.abspath(__file__))
 OUT = f'{ROOT}/logic/oral_triage/num_08_12_beha_exam_2026-09-10.md'
 assert not os.path.exists(OUT), OUT

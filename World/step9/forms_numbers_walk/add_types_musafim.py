@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 9b — THE COMPILE OF THE OFFERINGS CALENDAR (2026-09-11; World/step9/NUMBERS_WALK.md "Sitting 9b"): THE TYPES FIRST —
 # ONE new kind on the tape (the whole calendar commanded in one speech, Num 28:1-29:39), seven CASE kinds for the exam's scene, ONE new effect
@@ -7,8 +9,8 @@
 # from the pointed DB text (cantillation stripped), the witnesses the plain consonantal verses — no anchor word typed. Idempotent
 # (add_types_census2.py's form).
 import re, sqlite3, yaml
-ROOT = "<repo-old>"
-db = sqlite3.connect(f"file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro", uri=True)
+ROOT = _ROOT
+db = sqlite3.connect(f"file:{ROOT}/Data/tanakh.sqlite?mode=ro", uri=True)
 def words(book, ch, vs):
     return [r[0] for r in db.execute("SELECT w.he FROM words w JOIN verses v ON w.verse_id=v.id WHERE v.book=? AND v.chapter=? AND v.verse=? ORDER BY w.idx", (book, ch, vs)).fetchall()]
 pv = lambda w: ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05AF))

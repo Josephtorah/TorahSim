@@ -1,13 +1,15 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 13 — THE JOURNEYS (2026-09-12): THE THIRD MEASUREMENT PASS — the prints the second pass lacked: Onkelos's renderings
 # on the PLAIN Aramaic (the second pass searched the pointed text and found nothing — the instrument, not the shelf), the remaining station names'
 # seats by their exact token forms, the morph numbers at 33:54 against 26:54, the cross-citing scan with "Ibid." and the gershayim form, the
 # ledgers that read Sifrei 133:3, the two lists' intersection (chapter 21's stations against 33's). Nothing asserted.
 import json, os, re, html, sqlite3, sys
-ROOT = '<repo-old>'
+ROOT = _ROOT
 def clean(s): return re.sub(r'<[^>]+>', '', html.unescape(s))
 def plain(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 rows = db.execute("SELECT v.book, v.chapter, v.verse, w.he, w.morph FROM words w JOIN verses v ON w.verse_id=v.id ORDER BY v.id, w.idx").fetchall()
 by = {}
 for b, c, v, he, m in rows: by.setdefault((b, c, v), []).append((plain(he), m))

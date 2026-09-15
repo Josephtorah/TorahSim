@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 6b — THE COMPILE OF CHUKAT (2026-09-11; the owner: "Go" after the #128 rereads): THE MEASUREMENTS, computed
 # BEFORE the design paragraph is typed (1b's order). (1) the parser's state at the portion's seats (19:1-21:35) after 5b's rules — every
@@ -10,7 +12,7 @@
 # sanctions' karet, the Lev 5 me'ilah, Shelach's turn-back / Hormah / due, Korach's staff); (5) the tape's subjects and the registry rows;
 # (6) the register verses of 19-21 against the planned lines; (7) the kinds and effects on file for the names the design will use.
 import sqlite3, sys, io, re, contextlib, collections, inspect, os
-ROOT = '<repo-old>'
+ROOT = _ROOT
 sys.path.insert(0, f'{ROOT}/World/step9')
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS
@@ -32,7 +34,7 @@ with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_zelophehad as ZL
 def N(b, c, v): return CS.ink_numbers(CS.verse_words(b, c, v))
 def O(b, c, v): return CS.ink_ordinals(CS.verse_words(b, c, v))
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 def plain(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
 def pointed(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05AF))
 rows = db.execute("SELECT v.book, v.chapter, v.verse, w.he, w.morph FROM words w JOIN verses v ON w.verse_id=v.id ORDER BY v.id, w.idx").fetchall()

@@ -1,10 +1,12 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE TENT sitting 3 (2026-09-09) — THE CLAIMS of Numbers 15:32-41 (num_15_wood_tzitzit): the manifest
 # logic/oral_audit/manifests/num_15_wood_tzitzit_claims.json, eight claims NM15-01..08 read off the ledger
 # logic/oral_triage/num_15_wood_tzitzit_2026-09-09.md, every one LABELED (World/step9/CLAIM_LABELS.md's vocabulary),
 # a machine check where the ink allows. Written once (the file must not exist); the byte-faithful dump form.
 import json, os, re
-ROOT = '<repo-old>'
+ROOT = _ROOT
 OUT = f'{ROOT}/logic/oral_audit/manifests/num_15_wood_tzitzit_claims.json'
 assert not os.path.exists(OUT), 'manifest exists'
 led = open(f'{ROOT}/logic/oral_triage/num_15_wood_tzitzit_2026-09-09.md', encoding='utf-8').read()

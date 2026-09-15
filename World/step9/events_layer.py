@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE EVENTS LAYER (2026-09-07, D9-i — THE DAEMON CAMPAIGN's seeding sitting;
 # the campaign owner-ruled 2026-09-06, "that works").
@@ -38,7 +40,7 @@ import yaml
 HERE = os.path.dirname(os.path.abspath(__file__))
 _REG_PATH = os.path.join(HERE, 'event_vocabulary.yaml')
 _FX_PATH = os.path.join(HERE, 'effect_vocabulary.yaml')
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 FORMS = ('act', 'speech', 'statute', 'case')
 FIELDS = ('en', 'he', 'form', 'witness', 'ink', 'corpus', 'tape', 'fields')
 HEB = re.compile(r'[֐-׿]')

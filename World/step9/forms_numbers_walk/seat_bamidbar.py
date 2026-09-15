@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 1 — BAMIDBAR (2026-09-09): SEAT the 31 claims of the nine manifests into their draft units as
 # WITNESS_READ operators (THE TENT sitting 4's rhythm, seat_num27_36.py: one operator per claim at its FIRST verse's step, the
@@ -6,7 +8,7 @@
 # ledger's CITE INDEX before a byte is written; each yaml is re-loaded after. The prose is the manifest's own claim_en, so the
 # operator and the claim cannot drift apart.
 import json, re, yaml
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-09'
 UNITS = [  # (uid, chapter, lo, hi, [(claim id, step verse, anchor, name)])
  ('num_01_census_command', 1, 1, 19, [('NM01A-01', 1, 'beechad_lachodesh_hasheni', 'the_date_stamp_and_the_retrograde'), ('NM01A-02', 2, 'seu_et_rosh', 'the_count_of_names_the_threshold'),

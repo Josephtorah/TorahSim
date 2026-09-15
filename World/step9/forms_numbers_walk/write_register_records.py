@@ -1,8 +1,10 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE REGISTER GATE sitting (2026-09-11): the appends — THE_LOOP.md's as-built, COMPILE_DEBT.md's box, RESEARCH_LOG.md's entry, the state doc's
 # #137, World/RESUME.md's line. THE_BRIEFING, THE_STEPS and the memory files are edited by the Edit tool beside this script.
 import os
-ROOT = '<repo-old>'
+ROOT = _ROOT
 def append(path, text):
     assert os.path.exists(path), path
     with open(path, 'a') as f: f.write(text)

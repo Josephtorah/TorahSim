@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 15 — THE REFUGE CITIES (2026-09-13): the records — the stamp row, NUMBERS_WALK.md "Sitting 15", the state doc's #158,
 # World/RESUME.md, THE_STEPS' paragraph, THE_BRIEFING's bullet, COMPILE_DEBT's box, RESEARCH_LOG's entry, MIDDOT's case-law entries (the Sifrei's rows
@@ -7,7 +9,7 @@
 # patch_overrides_ref.py at the ink step (asserted present by ref_ink.py) — verified here, not rewritten. MOVE_CATALOG.md and MISHNAH_TOPICS.md
 # UNCHANGED (the rows' moves are known forms — exemplars entered in MIDDOT's case law; no Mishnah opened at a reading sitting). Sitting 14's form.
 import os, re, yaml, shutil, glob
-ROOT = '<repo-old>'
+ROOT = _ROOT
 SP = os.path.dirname(os.path.abspath(__file__))
 MEM = '<memory>'
 truth = open(f'{ROOT}/logic/corpus/CORPUS_TRUTH.py', encoding='utf-8').read()

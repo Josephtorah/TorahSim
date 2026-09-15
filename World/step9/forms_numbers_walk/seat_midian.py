@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 11 — MIDIAN (2026-09-12): SEAT the claims of the manifest into the draft unit as WITNESS_READ operators (sitting 9's
 # rhythm, seat_offerings.py: one operator per claim at its FIRST verse's step, the [claim ID] marker in the prose, the cites the ledger's own
@@ -5,7 +7,7 @@
 # last) before the ritual. Every cite is checked against the ledger's CITE INDEX before a byte is written; the yaml is re-loaded after. The
 # prose is the manifest's own claim_en, so the operator and the claim cannot drift apart. Usage: seat_midian.py num_31_midian
 import json, re, sys, yaml
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-12'
 UID = sys.argv[1]
 SPEC = {

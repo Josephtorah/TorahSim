@@ -14,10 +14,12 @@ license travels with single-file copies. Nothing else is changed: the
 renderings are generated files ("do not edit — regenerate") and stay
 byte-faithful to home.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import json
 from pathlib import Path
 
-HOME = Path("<repo-old>/logic/py_units")
+HOME = Path((_ROOT + "/logic/py_units"))
 PUB = Path("<repo>/units")
 INDEX = Path("<repo>/data/units_index.json")
 

@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 2b — THE COMPILE OF NASO (2026-09-10): THE EXAM DOCKET'S SCAN, sized by script before the docket is written.
 # (1) THE LINK ROWS: every segment of the local shelf's Babylonian Talmud, Mishnah and Tosefta exports whose English cites a verse of
@@ -5,7 +7,7 @@
 #     answer sheet); the long Talmud ranges the ledgers name enter through (1) — their remainder is enumerated by count as OUTSIDE
 #     DECLARED SCOPE in the docket's header. The dump is the docket script's input (write_naso_docket.py), as at Bamidbar.
 import json, re, os, collections
-R = '<repo-old>/Data/sefaria_export'
+R = (_ROOT + '/Data/sefaria_export')
 OUT = '<scratch>/naso_docket_dump.txt'
 strip = lambda s: re.sub(r'<[^>]+>', '', s)
 SPAN = {(4, v) for v in range(21, 50)} | {(5, v) for v in range(1, 32)} | {(6, v) for v in range(1, 28)} | {(7, v) for v in range(1, 90)}

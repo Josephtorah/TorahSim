@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 14 — THE BORDERS (2026-09-12): THE THIRD MEASUREMENT PASS — the prints the second pass lacked: the Hebrew "(שם ל"ד)"
 # hits read to their books, the pointed forms of the chapter's consonantal homographs (Shepham / the lip; the brook / the inheritance; "mark out" /
@@ -6,11 +8,11 @@
 # roster's counts. Nothing asserted. Sitting 13's form (jou_measure2.py).
 import json, os, re, html, sqlite3, sys
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 def clean(s): return re.sub(r'<[^>]+>', '', html.unescape(s))
 def plain(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
 def pointed(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05AF))
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 rows = db.execute("SELECT v.book, v.chapter, v.verse, w.he, w.morph FROM words w JOIN verses v ON w.verse_id=v.id ORDER BY v.id, w.idx").fetchall()
 by = {}
 for b, c, v, he, m in rows: by.setdefault((b, c, v), []).append((plain(he), m, he))

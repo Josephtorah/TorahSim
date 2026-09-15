@@ -1,10 +1,12 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE LOOP step 3 (2026-09-09): the 43 daemon rows — given_at BY SCRIPT from dependency_dispositions.yaml's spans (the first verse
 # of the wrapped runner's first span; the library's five from the function each wraps), installed_by BY HAND from the design
 # section's table (THE_LOOP.md "Step 3 INSTALLATION — the design"). Inserts the two lines after each daemon's `wraps:` line,
 # preserving every comment; idempotent; verifies by yaml load and re-sums the count by value to 43 before writing.
 import re, sys, yaml
-ROOT = '<repo-old>/World/step9'
+ROOT = (_ROOT + '/World/step9')
 DEP = yaml.safe_load(open(ROOT + '/dependency_dispositions.yaml', encoding='utf-8'))['spans']
 DAE = ROOT + '/daemon_dispositions.yaml'
 text = open(DAE, encoding='utf-8').read()

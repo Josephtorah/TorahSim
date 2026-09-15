@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """tut_dump.py — dump verses for the Numbers tutorial: the pointed Hebrew from the store's own bytes, each word with its
 accent name (unicodedata) and the store's gloss (Torah verses from the snapshot store; other books from the Tanakh DB)."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, re, unicodedata
-SNAP = '<repo-old>/torah_grok.SNAPSHOT-main-51801ca.sqlite'
-TAN = '<repo-old>/elijah_docket/tanakh.sqlite'
+SNAP = (_ROOT + '/torah_grok.SNAPSHOT-main-51801ca.sqlite')
+TAN = (_ROOT + '/Data/tanakh.sqlite')
 snap = sqlite3.connect(SNAP); tan = sqlite3.connect(TAN)
 TORAH = {'Gen', 'Exod', 'Lev', 'Num', 'Deut'}
 

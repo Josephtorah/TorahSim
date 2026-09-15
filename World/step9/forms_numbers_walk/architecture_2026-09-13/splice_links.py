@@ -1,9 +1,11 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE LINKS UPDATED WITH THE FOURTH BOOK (2026-09-13; the owner: "Ok the links go"). Five examples spliced before
 # "## How the links are found"; the head and the rule section brought current from dependency_dispositions.yaml
 # and the gate's print (455 / 48 / 9 / 143 over 482 edges + 173 pointers; the fourth book's 178 edges 151 / 1 / 26,
 # 45 pointers; CALL 129 / VIA 15 / PARAMETER 3 / OWED 5 / FALSE 26). Every replacement asserted unique; refuses twice.
-P = '<repo-old>/ARCHITECTURE/THE_LINKS.md'
+P = (_ROOT + '/ARCHITECTURE/THE_LINKS.md')
 S = '<scratch>/links_numbers_examples.md'
 t = open(P, encoding='utf-8').read()
 assert '## Example 9' not in t, 'already spliced'

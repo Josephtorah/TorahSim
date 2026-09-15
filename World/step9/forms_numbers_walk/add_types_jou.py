@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 13b — THE COMPILE OF THE JOURNEYS (2026-09-12; World/step9/NUMBERS_WALK.md "Sitting 13b"): THE TYPES FIRST — THREE
 # tape kinds (the writing 33:1-2, the departure with the judgments on the gods 33:3-4, the command 33:50-56), TWO case-form kinds for the exam's
@@ -7,8 +9,8 @@
 # functions block, the dependency span and edges (the pointers after the gate's print), the installation probe's count. The `he` is cut from the
 # pointed DB text by FINDING the phrase's tokens (never a typed index); the witnesses the plain consonantal verses. Idempotent (add_types_gad.py's form).
 import re, sqlite3, yaml
-ROOT = "<repo-old>"
-db = sqlite3.connect(f"file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro", uri=True)
+ROOT = _ROOT
+db = sqlite3.connect(f"file:{ROOT}/Data/tanakh.sqlite?mode=ro", uri=True)
 def words(book, ch, vs):
     return [r[0] for r in db.execute("SELECT w.he FROM words w JOIN verses v ON w.verse_id=v.id WHERE v.book=? AND v.chapter=? AND v.verse=? ORDER BY w.idx", (book, ch, vs)).fetchall()]
 pv = lambda w: ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05AF))

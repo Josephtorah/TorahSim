@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # MISHPATIM RE-COMPILATION, PASS 2 (2026-09-02) — three more functions
 # before the listening epub, at the owner's word ("feel free to find a
@@ -16,7 +18,7 @@ assert GUARDED == 13, ("the guard counted %d expectations, the tripwire holds 13
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys
 
-db = sqlite3.connect('<repo-old>/elijah_docket/tanakh.sqlite')
+db = sqlite3.connect((_ROOT + '/Data/tanakh.sqlite'))
 def has(book, ch, vs, num):
     for (lem,) in db.execute("""SELECT COALESCE(w.lemma,'') FROM words w
         JOIN verses v ON w.verse_id=v.id

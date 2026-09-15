@@ -1,10 +1,12 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE TENT sitting 2 (2026-09-09) — SEAT the eleven claims of num_09_pesach_cloud_claims.json into the draft unit
 # logic/units/num_09_pesach_cloud.yaml as WITNESS_READ operators (the Emor rhythm: one operator per claim at its verse's
 # step, the [claim ID] marker in the prose, the cites the ledger's own names), and append derivation_log step E.
 # Every cite is checked against the ledger's CITE INDEX before a byte is written; the yaml is re-loaded after.
 import json, re, yaml, sys
-ROOT = '<repo-old>'
+ROOT = _ROOT
 UNIT = f'{ROOT}/logic/units/num_09_pesach_cloud.yaml'
 LEDGER = f'{ROOT}/logic/oral_triage/num_09_pesach_cloud_2026-09-09.md'
 MAN = f'{ROOT}/logic/oral_audit/manifests/num_09_pesach_cloud_claims.json'

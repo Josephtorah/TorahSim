@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """write_stepper_records.py — THE LOOP step 7 (b) THE STEPPER: the records at the close (2026-09-14). Every anchor asserted once; idempotent."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 
 def patch(path, pairs):
     t = open(path, encoding='utf-8').read(); done = 0
@@ -20,7 +22,7 @@ def append(path, text, marker):
     open(path, 'w', encoding='utf-8').write(t + text)
     print('%s: appended %d chars' % (path, len(text)))
 
-R = '<repo-old>'
+R = _ROOT
 M = '<memory>'
 
 ASBUILT = '''

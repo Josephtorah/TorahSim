@@ -35,6 +35,8 @@ test data (the honest-pairing guard first); (3) run; (4) misses per gap;
 (5) fractions and EFFECTS on every cell — eight registered from this
 chapter's own verbs at this sitting.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, io, contextlib
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -43,7 +45,7 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 assert GUARDED == 78, ('the guard counted %d expectations, the tripwire holds 78' % GUARDED)   # W4: +1, the scene row
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):

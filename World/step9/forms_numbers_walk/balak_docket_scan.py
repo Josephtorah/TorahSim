@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 7b — THE COMPILE OF BALAK (2026-09-11): THE EXAM DOCKET'S SCAN, sized by script before the docket is written.
 # (1) THE LINK ROWS: every segment of the local shelf's Babylonian Talmud, Mishnah and Tosefta exports whose English cites a verse of
@@ -11,7 +13,7 @@
 # (3) THE PRIOR READS: every address already verdicted in an earlier logic/oral_triage ledger (this sitting's own four reading ledgers
 #     excluded) is listed as CREDITED with its ledger — speed ruling (b), credit guard (1): a quick look, not a blind credit.
 import json, re, os, collections, glob
-R = '<repo-old>/Data/sefaria_export'
+R = (_ROOT + '/Data/sefaria_export')
 SCR = os.path.dirname(os.path.abspath(__file__))
 OUT = f'{SCR}/balak_docket_dump.txt'
 strip = lambda s: re.sub(r'<[^>]+>', '', s)
@@ -98,7 +100,7 @@ print('  ', collections.Counter(a.rsplit(' ', 1)[0] if ':' in a else a for a, _ 
 prior = {}
 own = {'num_22_balak_bilam_call_2026-09-11.md', 'num_23_oracles_1_2_2026-09-11.md', 'num_24_oracles_3_4_2026-09-11.md', 'num_25_peor_pinchas_2026-09-11.md'}
 alladdr = list(linked) + [a for a, _ in topic]
-for f in sorted(glob.glob('<repo-old>/logic/oral_triage/*.md')):
+for f in sorted(glob.glob((_ROOT + '/logic/oral_triage/*.md'))):
     if os.path.basename(f) in own: continue
     txt = open(f, encoding='utf-8').read()
     for a in alladdr:

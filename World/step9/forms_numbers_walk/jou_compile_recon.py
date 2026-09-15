@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 13b — THE COMPILE OF THE JOURNEYS, Numbers 33:1-56 (2026-09-12; the owner: "Go" after the #152 rereads): THE
 # RECONNAISSANCE before the measurement pass (gad_compile_recon.py's form) — the callee modules' defs, asks, DATA keys and uppercase tables
@@ -5,7 +7,7 @@
 # chapter's tokens; the tape's station lines (the exodus story's 'journeyed' lines with their 'to' fields, beha's, chukat's, balak's) and the
 # markers at the dated stations; the daemons' installed_by values (the reread item for the types step); the checkpoint prefixes in use.
 import sys, io, re, contextlib, inspect, collections, yaml
-ROOT = '<repo-old>'
+ROOT = _ROOT
 sys.path.insert(0, f'{ROOT}/World/step9')
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS

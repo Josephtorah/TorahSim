@@ -1,9 +1,11 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 6b — the sequence runner's LITERALS after the stitch: NEWEST_RUNNER, PREVIOUS_RUN (5b's RUN with ONE DECLARED DELTA: the
 # daughters' marker moved to (40, 6, 1) lets CF3's timer fire on THE REST — one fire, one write), RUN (PREDICTED before the run: events +37,
 # timers +1 set / +2 fired, retro-writes unchanged, writes +43, daemons +1, entities +7, the four pairs unchanged, closes +6), CENSUS and
 # PLACEMENT typed from the stitcher's print (scratchpad chukat_stitch1.txt), CF3 and CF8 retyped, the CM1-CM10 checkpoints after CK9.
-p = '<repo-old>/World/step9/cold_run_sequence.py'
+p = (_ROOT + '/World/step9/cold_run_sequence.py')
 s = open(p, encoding='utf-8').read()
 def rep(a, b):
     global s

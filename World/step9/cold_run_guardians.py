@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE FIRST COLD RUN — the four-guardians function (2026-09-02)
 # Owner's order: "I want to see how the code executes what the Mishnah
@@ -32,10 +34,9 @@ assert GUARDED == 12, ('the guard counted %d expectations, the tripwire holds 12
 print('guard: %d expectations checked, every one a literal from the answer sheet [honest-pairing guard satisfied]' % GUARDED)
 import sqlite3, sys, os
 
-DB = os.path.join(os.path.dirname(__file__), '..', '..', 'Torah_Grok',
-                  'elijah_docket', 'tanakh.sqlite')
+DB = os.path.join(os.path.dirname(__file__), '..', '..', 'Data', 'tanakh.sqlite')   # THE PORTABLE REPO (2026-09-15): two levels up is the repo root, whatever its name
 if not os.path.exists(DB):
-    DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+    DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):

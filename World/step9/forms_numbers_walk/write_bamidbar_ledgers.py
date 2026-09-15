@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 1 — BAMIDBAR (2026-09-09; the owner: "OK, let's go starting with numbers the first first first verse"):
 # THE READING of Numbers 1:1-4:20 at the parashah grain (THE_STEPS Step 2 speed ruling (a)), the ledgers PER BLOCK — nine
@@ -10,7 +12,7 @@
 # (THE TENT sitting 4's form, write_num27_36_ledgers.py.)
 import json, os, re, html, sqlite3
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-09'
 UNITS = [  # (uid, chapter, lo, hi, title)
     ('num_01_census_command', 1, 1, 19, 'the census command and the princes'),
@@ -50,7 +52,7 @@ outside = [d for d in shelf_numbers if d not in ('Sifrei_Bamidbar', 'Onkelos_Num
 assert len(outside) == 23, len(outside)
 
 # ---- THE INK, computed from the Tanakh DB ----
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 def plain(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
 def pointed(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05AF))   # the accents off, the points kept
 rows = db.execute("SELECT v.book, v.chapter, v.verse, w.he, w.morph FROM words w JOIN verses v ON w.verse_id=v.id ORDER BY v.id, w.idx").fetchall()

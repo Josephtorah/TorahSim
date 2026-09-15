@@ -1,3 +1,7 @@
+# ⚠ PORTABLE 2026-09-15 (reviews/PORTABLE_repo_2026-09-15.md): the repo renamed TorahSim; every path in the code
+# computed from the file's own place; a clone runs after `python3 Data/fetch_shelf.py` (the shelf, and --stores
+# for the snapshot) and `python3 World/build_world.py`; the runners' store is Data/tanakh.sqlite. SETUP.md at the root.
+
 # ⚠ THE CHECKPOINTS AS THEY FALL 2026-09-14 (step9/THE_LOOP.md item 5's build, D27-D30): the tape's
 # checkpoint block is cold_run_sequence.checkpoints (a function of the world; checkpoints_partial for a
 # partial world); the fall of every checkpoint measured by step9/checkpoint_positions.py into

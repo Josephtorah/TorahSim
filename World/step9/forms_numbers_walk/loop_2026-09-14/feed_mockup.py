@@ -3,9 +3,11 @@
 one line per event as it happens, the clock moving its own line, a stamp for the state, every line saying what changed; nothing typed.
 Reads the running world's base segment; renders creation week through Cain (lines 1-70) and, after a gap, the flood's reprieve (the
 first timer set and fired, lines 170-206). Writes mockup_feed_page.html beside this script."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import json, html, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
-SEG = '<repo-old>/World/journal/data/L3_run_cold_run_sequence_seed_isaac.jsonl'
+SEG = (_ROOT + '/World/journal/data/L3_run_cold_run_sequence_seed_isaac.jsonl')
 OUT = os.path.join(HERE, 'mockup_feed_page.html')
 RANGES = [(1, 70), (170, 206)]
 

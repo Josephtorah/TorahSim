@@ -18,7 +18,7 @@ append-only; the gate oral_coverage.py checks it for completeness).
 
 Classification (see chain_scope.yaml — NO scope change without owner
 ruling): READABLE (in export_texts -> must read), TANAKH-VERSE (Bible
-cross-ref -> resolved via elijah_docket/tanakh.sqlite), OUT (ruled out,
+cross-ref -> resolved via Data/tanakh.sqlite), OUT (ruled out,
 ruling named), UNRULED (surfaced, blocks the coverage gate).
 """
 import json
@@ -31,7 +31,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 DB = REPO / "torah_grok.sqlite"
-TANAKH_DB = REPO / "elijah_docket/tanakh.sqlite"
+TANAKH_DB = REPO / "Data/tanakh.sqlite"
 SCOPE = REPO / "logic/solo_tools/chain_scope.yaml"
 LEDGER_DIR = REPO / "logic/oral_audit/ledgers"
 

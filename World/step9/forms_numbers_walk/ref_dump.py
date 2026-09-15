@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 15 — THE REFUGE CITIES, Numbers 35:1-34 (2026-09-13; the owner: "Go" after the #157 rereads, on the ruling READ THEN
 # COMPILE): THE FIRST MEASUREMENT PASS — the shelf's heads by position (THE SIFREI RETURNS at 35:9: piskaot 159-161 expected between 158 (31:22)
@@ -12,7 +14,7 @@
 # own glosses). Nothing typed. Sitting 14's form (bor_dump.py) with sitting 10's Sifrei block (vows_dump.py).
 import json, os, re, html, sqlite3, sys, io, contextlib, unicodedata, glob
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 SP = os.path.dirname(os.path.abspath(__file__))
 C = 35
 def clean(s): return re.sub(r'<[^>]+>', '', html.unescape(s))
@@ -70,7 +72,7 @@ NEXT = sorted(os.path.basename(f)[:-5] for f in glob.glob(f'{ROOT}/logic/units/n
 print('num_34-36 units:', NEXT)
 for uid in NEXT:
     st = steps(uid); print(uid, 'status draft' if 'status: draft' in unit_text(uid) else ('FROZEN' if 'status: frozen' in unit_text(uid) else 'NO STATUS'), st[0], st[-1], len(st), 'operators:' in unit_text(uid), '| refs:', re.findall(r'refs: "([^"]+)"', unit_text(uid))[:1], '| depends_on:', re.findall(r'depends_on:\n((?:    - "[^"]+"\n)+)', unit_text(uid))[:1])
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 VC = dict(db.execute("SELECT chapter, COUNT(*) FROM verses WHERE book='Num' GROUP BY chapter").fetchall())
 print('VC 33-36:', {c: VC[c] for c in (33, 34, 35, 36)})
 # THE PRIOR READS

@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """shelf_seg.py — print whole segments from a Talmud work on the local shelf by STANDARD address (daf = index//2 + 1: the export's
 index 0 is folio 1a — measured 2026-09-09). Usage: python3 shelf_seg.py <Work_Dir> <daf><a|b>:<seg>[-<seg>] ..."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import json, re, sys
 work = sys.argv[1]
-d = json.load(open('<repo-old>/Data/sefaria_export/%s/en.json' % work, encoding='utf-8'))
+d = json.load(open((_ROOT + '/Data/sefaria_export/%s/en.json') % work, encoding='utf-8'))
 text = d['text']
 strip = lambda s: re.sub(r'<[^>]+>', '', s)
 for a in sys.argv[2:]:

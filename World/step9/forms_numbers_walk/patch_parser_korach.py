@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 5b — THE PARSER TAUGHT (2026-09-10; NUMBERS_WALK.md "Sitting 5b"): the rules into cold_run_sequence.py's INK block, each
 # anchored on the 4b text (every anchor asserted once). (17) THE DEFINITE NUMERAL AT THE HEAD OF A COMPOUND — an article-bearing numeral
@@ -6,7 +8,7 @@
 # (Num 31:54 "the captains of the thousands and of the hundreds"); (18) THE DEFINITE ONE joins a following "and N" only under a CONJUNCTIVE
 # accent (Exod 12:18's darga) — a disjunctive closes it (Exod 26:5, 36:12 a segolta; 25:32, 37:18 a zaqef). The probes (census_probes.py
 # G1-G7) were written to FAIL first.
-p = '<repo-old>/World/step9/cold_run_sequence.py'
+p = (_ROOT + '/World/step9/cold_run_sequence.py')
 s = open(p, encoding='utf-8').read()
 def rep(a, b):
     global s

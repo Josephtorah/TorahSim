@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE OFFERING-TORAH SPAN (Lev 6-8) — the fourth span compiled under
 # the effects law (2026-09-03), the Tzav round's Step-5 deliverable.
@@ -42,7 +44,7 @@ print('routing receipts: cold_run_offerings CALLED — asham row place=%r applic
       % (ASHAM_ROW['place']['v'], ASHAM_ROW['applications']['v'], ASHAM_ROW['eater']['v'], ASHAM_FAT['parts']['v'],
          ASHAM_FAT['tail']['v'], MIN_FIST['v'], MIN_REM['v'], MIN_REM_SINNER['v']))
 
-db = sqlite3.connect('<repo-old>/elijah_docket/tanakh.sqlite')
+db = sqlite3.connect((_ROOT + '/Data/tanakh.sqlite'))
 
 def strip(s):
     return ''.join(c for c in s if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))

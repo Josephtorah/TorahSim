@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 13b — THE COMPILE OF THE JOURNEYS, Numbers 33:1-56 (2026-09-12; the owner: "Go" after the #152 rereads):
 # THE MEASUREMENTS, computed BEFORE the design paragraph is typed (1b's order; gad_compile_measure.py's form; every call typed from
@@ -8,7 +10,7 @@
 # (6) THE REGISTER GATE on chapter 33; (7) the recorder and the stitcher; (8) THE STATIONS BY LEMMA on the DB — every proper name of
 # 33:5-49 with its lemma's seats in the whole Bible (the first telling computed, never typed).
 import sqlite3, sys, io, re, contextlib, collections, inspect, os, yaml
-ROOT = '<repo-old>'
+ROOT = _ROOT
 sys.path.insert(0, f'{ROOT}/World/step9')
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS
@@ -28,7 +30,7 @@ with contextlib.redirect_stdout(io.StringIO()):
     import register_census as RG
 def N(b, c, v): return CS.ink_numbers(CS.verse_words(b, c, v))
 def O(b, c, v): return CS.ink_ordinals(CS.verse_words(b, c, v))
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 def plain(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
 rows = db.execute("SELECT v.book, v.chapter, v.verse, w.he, w.morph, w.lemma FROM words w JOIN verses v ON w.verse_id=v.id ORDER BY v.id, w.idx").fetchall()
 by = collections.OrderedDict()

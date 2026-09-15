@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Build the block-1 inheritance narrative as an EPUB (for ElevenLabs listening).
 Prose is TTS-oriented: English narrative, transliterated key terms glossed inline."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import zipfile, html, time, os
 
-OUT = "<repo-old>/logic/law_era/exo_21_block1_inheritance_narrative.epub"
+OUT = (_ROOT + "/logic/law_era/exo_21_block1_inheritance_narrative.epub")
 TITLE = "The Ordinances Inherit — A Narrative of the Exodus 21 Experiment"
 
 CHAPTERS = []  # (id, title, [paragraphs])

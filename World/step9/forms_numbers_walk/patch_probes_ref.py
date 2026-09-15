@@ -1,9 +1,11 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 15b (2026-09-13): THE PROBES TO FAIL — rule (29) THE BARE DUAL THOUSAND's nine probes (D1-D9) and nine regressions (R62-R70)
 # inserted into World/step9/census_probes.py BEFORE the parser is taught; every expected number typed from ref_runner_measure.out (the
 # current reads printed beside the ink's own). Idempotent: refuses a second insertion.
 import re
-P = '<repo-old>/World/step9/census_probes.py'
+P = (_ROOT + '/World/step9/census_probes.py')
 src = open(P, encoding='utf-8').read()
 assert 'D1  Num 35:5' not in src, 'already inserted'
 BLOCK = '''

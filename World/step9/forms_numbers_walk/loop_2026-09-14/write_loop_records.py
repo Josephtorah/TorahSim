@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """write_loop_records.py — THE LOOP step 7 (a) WRITE AS YOU GO: the records at the close (2026-09-14). Every anchor asserted once;
 idempotent. The sweep's line is appended by patch_sweep_line.py when the sweep lands."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import os
 
 def patch(path, pairs):
@@ -22,7 +24,7 @@ def append(path, text, marker):
     open(path, 'w', encoding='utf-8').write(t + text)
     print('%s: appended %d chars' % (path, len(text)))
 
-R = '<repo-old>'
+R = _ROOT
 GATE = ("GREEN — four segments byte-identical across two processes, chains VERIFIED; THE LIVE INDEX line new: 4 sources, 13,444 rows written "
         "line by line at their blocks, the two processes' rows IDENTICAL, the rebuilt index EQUALS the live rows; the running world's counts MATCH "
         "the RUN tuple; the five views MATCH on every source (ledger 1,539 = writes; timers 66 = sets, fired 52, pending 14; clock 157; docket 4; "

@@ -24,6 +24,8 @@ two timers (the reprieve of a hundred and twenty years — retrograde-dated on t
 Eight engines CALLED where the ink names their institution. The dating lives on the sequential tape (convention 13).
 Zero-report law: every claimed ink token is probed before anything runs; the answer sheet is verified in its own ink.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json, re, io, contextlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effects_layer as FX
@@ -32,7 +34,7 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 print('honest-pairing guard: %d tests checked, every expectation a literal' % GUARDED)
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 con = sqlite3.connect('file:%s?mode=ro' % DB, uri=True)
 def strip(s): return re.sub(r'[֑-ׇ]', '', s)
 
@@ -118,17 +120,17 @@ c_ten_generations = (['adam', 'seth', 'enosh', 'kenan', 'mahalalel', 'jared', 'e
 def _load(path):
     d = json.load(open(path, encoding='utf-8')); return d['text'] if isinstance(d, dict) and 'text' in d else d
 def mishnah(tractate, ch, m, must):
-    txt = strip(re.sub(r'<[^>]+>', '', _load('<repo-old>/Data/mishnah_%s_he.json' % tractate)[ch - 1][m - 1]))
+    txt = strip(re.sub(r'<[^>]+>', '', _load((_ROOT + '/Data/mishnah_%s_he.json') % tractate)[ch - 1][m - 1]))
     assert must in txt, 'answer-sheet check failed: %r not in Mishnah %s %d:%d' % (must, tractate, ch, m)
 _BAV = {}
 def _bavli(tr, daf, side, seg, must):
-    T = _BAV.setdefault(tr, _load('<repo-old>/Data/bavli_%s_he.json' % tr))
+    T = _BAV.setdefault(tr, _load((_ROOT + '/Data/bavli_%s_he.json') % tr))
     txt = strip(re.sub(r'<[^>]+>', '', T[2 * daf - 2 + (1 if side == 'b' else 0)][seg - 1]))
     assert must in txt, 'shelf check failed: %r not in %s %d%s:%d' % (must, tr, daf, side, seg)
 _BR = None
 def _br(par, row, must):
     global _BR
-    if _BR is None: _BR = _load('<repo-old>/Data/bereshit_rabbah_he.json')
+    if _BR is None: _BR = _load((_ROOT + '/Data/bereshit_rabbah_he.json'))
     txt = strip(re.sub(r'<[^>]+>', '', _BR[par - 1][row - 1]))
     assert must in txt, 'Bereshit Rabbah check failed: %r not in %d:%d' % (must, par, row)
 SHEET = [

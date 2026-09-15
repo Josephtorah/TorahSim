@@ -24,7 +24,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[1]                     # .../Torah_Grok
+ROOT = HERE.parents[1]                     # the repo root (TorahSim)
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(HERE))
 

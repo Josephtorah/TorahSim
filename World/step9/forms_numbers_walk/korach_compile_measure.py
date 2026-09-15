@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 5b — THE COMPILE OF KORACH (2026-09-10; the owner: "Go" after the #125 rereads): THE MEASUREMENTS, computed
 # BEFORE the design paragraph is typed (1b's order). (1) the parser's state at the portion's seats (16:1-18:32) after 4b's rules — every
@@ -10,7 +12,7 @@
 # (5) the tape's subjects and the Num 16 line already on it; (6) the register verses of chapters 16-17 against the planned lines; (7) the
 # event kinds and effects on file for the names the design will use (a name reused is a miss).
 import sqlite3, sys, io, re, contextlib, collections, inspect
-ROOT = '<repo-old>'
+ROOT = _ROOT
 sys.path.insert(0, f'{ROOT}/World/step9')
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS
@@ -28,7 +30,7 @@ with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sanctions as SA
 def N(b, c, v): return CS.ink_numbers(CS.verse_words(b, c, v))
 def O(b, c, v): return CS.ink_ordinals(CS.verse_words(b, c, v))
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 def plain(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
 def pointed(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05AF))
 rows = db.execute("SELECT v.book, v.chapter, v.verse, w.he, w.morph FROM words w JOIN verses v ON w.verse_id=v.id ORDER BY v.id, w.idx").fetchall()

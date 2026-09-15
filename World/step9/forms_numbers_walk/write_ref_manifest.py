@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 15 — THE REFUGE CITIES (2026-09-13): THE CLAIMS of Numbers 35:1-34, one manifest for the one draft unit, read off
 # this sitting's ledger, every claim LABELED (World/step9/CLAIM_LABELS.md's vocabulary), a machine check where the ink allows — every
@@ -5,7 +7,7 @@
 # a prefix fragment; the floor four code points). Claim IDs MS35A- (Masei, chapter 35). Written once (the file must not exist; the ID prefix
 # checked absent from every existing manifest and unit). Every source cite is checked against the ledger's CITE INDEX before a byte is written.
 import json, os, re, sqlite3, glob
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-13'
 UID = 'num_35_refuge_cities'; PRE = 'MS35A'
 db = sqlite3.connect(f'file:{ROOT}/torah_grok.SNAPSHOT-main-51801ca.sqlite?mode=ro', uri=True)

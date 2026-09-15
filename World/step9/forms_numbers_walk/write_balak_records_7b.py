@@ -1,7 +1,9 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 7b — the closing records, every anchor asserted; the sweep's numbers READ from run_cold_all's own print (never typed).
 import re, os, subprocess
-ROOT = '<repo-old>'; SCR = os.path.dirname(os.path.abspath(__file__)); MEM = '<memory>'
+ROOT = _ROOT; SCR = os.path.dirname(os.path.abspath(__file__)); MEM = '<memory>'
 sweep = open(f'{SCR}/balak_sweep1.out', encoding='utf-8').read()
 m = re.search(r'run_cold_all: (\d+)/(\d+) runners green, (\d+) graded cells in all', sweep)
 assert m and 'sweep exit 0' in sweep, 'the sweep has not finished green'

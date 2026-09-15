@@ -1,17 +1,19 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 15b — THE CORPUS-WIDE DIFF: the parser 14b left (cold_run_sequence_OLD_before_rule29.py's INK block) against the parser after
 # rule (29) THE BARE DUAL THOUSAND, over EVERY verse of the whole Tanakh — numbers AND ordinals AND the marked tokens. Every moved verse printed with
 # both readings, to be read verse by verse. PREDICTED at the design: exactly NINE verses move (the eight bare dual seats and Psalm 8:8), none a marker;
 # the twenty-one compound dual seats gain the mark but keep their numbers (printed apart, not counted as moved numbers). midian_parser_diff.py's form.
 import re, sqlite3, sys, os
-sys.path.insert(0, '<repo-old>/World/step9')
+sys.path.insert(0, (_ROOT + '/World/step9'))
 import world_engine as WE
 def ink(path):
     src = open(path, encoding='utf-8').read().split('# ==== INK BEGIN')[1].split('# ==== INK END ====')[0].split('\n', 1)[1]
     G = {'re': re, 'sqlite3': sqlite3, 'os': os, 'WE': WE}; exec(src, G); return G
 OLD = ink('<scratch>/cold_run_sequence_OLD_before_rule29.py')
-NEW = ink('<repo-old>/World/step9/cold_run_sequence.py')
-db = sqlite3.connect('file:<repo-old>/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+NEW = ink((_ROOT + '/World/step9/cold_run_sequence.py'))
+db = sqlite3.connect(('file:' + _ROOT + '/Data/tanakh.sqlite?mode=ro'), uri=True)
 verses = db.execute("SELECT book, chapter, verse FROM verses ORDER BY id").fetchall()
 moved, marked_only = [], []
 for b, c, v in verses:

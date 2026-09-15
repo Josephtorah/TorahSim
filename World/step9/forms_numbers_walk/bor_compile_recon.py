@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 14b — THE COMPILE OF THE BORDERS, Numbers 34:1-29 (2026-09-13; the owner: "Go" after the #155 rereads): THE
 # RECONNAISSANCE before the measurement pass (jou_compile_recon.py's form) — the callee modules' defs, asks, DATA keys and uppercase tables
@@ -6,7 +8,7 @@
 # commission (32:28) and the markers; the daemons' installed_by values; the dependency forms (the VIA row whole); the checkpoint prefixes in use
 # (grepped BEFORE naming — 12b's lesson); the register gate's Num 34 seat.
 import sys, io, re, contextlib, inspect, collections, yaml, glob
-ROOT = '<repo-old>'
+ROOT = _ROOT
 sys.path.insert(0, f'{ROOT}/World/step9')
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS

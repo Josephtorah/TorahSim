@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 9b — THE COMPILE OF THE OFFERINGS CALENDAR (2026-09-11): THE EXAM DOCKET for Numbers 28:1-29:39, written from the scan's
 # dump (scratchpad/offerings_docket_dump.txt: the LINK rows = every Babylonian Talmud / Mishnah / Tosefta segment on the local shelf citing a
@@ -7,7 +9,7 @@
 # typed; the long ranges' sizes are read from the scan's own print (offerings_scan1.out). Append-only.
 import re, os, sys, importlib.util
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 SCR = os.path.dirname(os.path.abspath(__file__))
 OUT = f'{ROOT}/logic/oral_triage/num_28_29_musafim_exam_2026-09-11.md'
 assert not os.path.exists(OUT), OUT

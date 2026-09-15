@@ -57,6 +57,8 @@ shall not shave' — the razor's second constraint; compiled at L5), Exod
 21:7-11 (the Hebrew maidservant), Lev 25:14-17 (the wrong in trade) stay
 imports by name.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json, io, contextlib, collections
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -65,7 +67,7 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 assert GUARDED == 183, ('the guard counted %d expectations, the tripwire holds 183' % GUARDED)
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):
@@ -1010,7 +1012,7 @@ SCENE, _W = scene()
 
 # ---- (2) TEST DATA — the Mishnah rows, read whole from the shelf ------
 def load(t):
-    d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
+    d = json.load(open((_ROOT + '/Data/mishnah_%s_he.json') % t))
     return d['text'] if isinstance(d, dict) and 'text' in d else d
 SHELF = {'Kilayim': load('kilayim'), 'Orlah': load('orlah'), 'Bava Batra': load('bava_batra'), 'Bava Kamma': load('bava_kamma'),
          'Bikkurim': load('bikkurim'), 'Makkot': load('makkot'), 'Keritot': load('keritot'), 'Zevachim': load('zevachim'),

@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 """Full-Tanakh accent-tree sweep: run taamim_tree_parse.parse_verse on
 every verse of all 24 books (39 book files); count unique + leaf_complete."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sys, sqlite3, json, traceback
-sys.path.insert(0, "<repo-old>")
+sys.path.insert(0, _ROOT)
 import taamim_tree_parse as T
 
-db = sqlite3.connect("<repo-old>/elijah_docket/tanakh.sqlite")
+db = sqlite3.connect((_ROOT + "/Data/tanakh.sqlite"))
 verses = db.execute("SELECT book, chapter, verse FROM verses ORDER BY id").fetchall()
 version = T.load_active_version()
 total = ok = 0

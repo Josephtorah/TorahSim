@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """write_port_records.py — THE LOOP step 7 (c) THE PORT: the records at the close, and TO FINISH THE LOOP — THE LIST (2026-09-14).
 Every anchor asserted once; idempotent. {TAPE} is filled from the tape's print before the run."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sys
 
 def patch(path, pairs):
@@ -22,7 +24,7 @@ def append(path, text, marker):
     open(path, 'w', encoding='utf-8').write(t + text)
     print('%s: appended %d chars' % (path.split('/')[-1], len(text)))
 
-R = '<repo-old>'
+R = _ROOT
 M = '<memory>'
 TAPE = sys.argv[1] if len(sys.argv) > 1 else '{TAPE}'
 

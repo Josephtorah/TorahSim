@@ -1,9 +1,11 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE TENT sitting 4 (2026-09-09) — THE DOCKET of the compile: the testing shelf routed to Num 27:1-11 + 36:1-12 (the inheritance
 # order, the daughters' case), every row verdicted, the credits computed by grep over the PRIOR dockets (the sitting's own ledgers
 # and its stub excluded — sitting 3's lesson), the shelf's gaps recorded. Written once. (Sitting 3's form, write_num15_docket.py.)
 import os, re, glob
-ROOT = '<repo-old>'
+ROOT = _ROOT
 OUT = f'{ROOT}/logic/oral_triage/num_27_inheritance_exam_2026-09-09.md'
 assert not os.path.exists(OUT), OUT
 OWN = {'num_27_zelophehad_joshua_2026-09-09.md', 'num_36_heiresses_2026-09-09.md', 'num_27_inheritance_exam_2026-09-09.md'}

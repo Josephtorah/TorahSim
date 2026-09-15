@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # O8 S3 (2026-09-08; NARRATIVE_GAPS.md section 7c) — register FROM MAMRE TO THE HEAP's effects from the verses' own words: the `he`
 # built from the pointed DB text by the RUN's own index into the verse, QUOTED; every count claim in `ink` VERIFIED against the
@@ -5,9 +7,9 @@
 # verse's consonants, nothing written. Appends to World/step9/effect_vocabulary.yaml as TEXT under `effects:`; idempotent; the NEW list
 # is CHECKED AGAINST THE REGISTRY first (S2's lesson: a clashing name is skipped in silence).
 import sqlite3, yaml, re, sys
-ROOT = "<repo-old>"
+ROOT = _ROOT
 DRY = '--dry' in sys.argv
-db = sqlite3.connect('file:%s/elijah_docket/tanakh.sqlite?mode=ro' % ROOT, uri=True)
+db = sqlite3.connect('file:%s/Data/tanakh.sqlite?mode=ro' % ROOT, uri=True)
 BARE, POINT, TAN = {}, {}, {}
 for bk, ch, vs, he in db.execute("SELECT v.book, v.chapter, v.verse, w.he FROM words w JOIN verses v ON w.verse_id=v.id ORDER BY v.book, v.chapter, v.verse, w.idx"):
     TAN.setdefault((bk, ch, vs), []).append(re.sub(r'[֑-ׇ/]', '', he))

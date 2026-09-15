@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # NUM 1:1-4:20 — BAMIDBAR: THE CENSUS, THE CAMP, THE LEVITES, THE FIRSTBORN, THE KOHATHITES' BURDEN (THE NUMBERS WALK
 # sitting 1b, 2026-09-09; World/step9/NUMBERS_WALK.md "Sitting 1b"). The first Numbers portion compiled after its walk:
@@ -29,10 +31,11 @@ HERE = _os.path.dirname(_os.path.abspath(__file__))
 # ONE copy of the numeral parser: the sequence runner's INK block executed here (the stitcher's way — no import edge)
 _SRC = open(_os.path.join(HERE, 'cold_run_sequence.py'), encoding='utf-8').read()
 _INK = {'re': re, 'sqlite3': sqlite3, 'os': _os, 'WE': WE}
+_INK['_ROOT'] = _ROOT   # THE PORTABLE REPO (2026-09-15): the INK block reads the store through the root; the exec'd namespace must carry it
 exec(_SRC.split('# ==== INK BEGIN')[1].split('# ==== INK END ====')[0].split('\n', 1)[1], _INK)
 ink_numbers, verse_words = _INK['ink_numbers'], _INK['verse_words']
 
-db = sqlite3.connect('<repo-old>/elijah_docket/tanakh.sqlite')
+db = sqlite3.connect((_ROOT + '/Data/tanakh.sqlite'))
 
 def strip(s):
     return ''.join(c for c in s if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
@@ -105,7 +108,7 @@ CAMPS = {'judah': N('Num', 2, 9)[0], 'reuben': N('Num', 2, 16)[0], 'ephraim': N(
 HOUSES = {'gershon': N('Num', 3, 22)[0], 'kohath': N('Num', 3, 28)[0], 'merari': N('Num', 3, 34)[0]}
 LEV_WRITTEN = N('Num', 3, 39)[0]; FIRSTBORN = N('Num', 3, 43)[0]; EXCESS = N('Num', 3, 46)[0]; RATE = N('Num', 3, 47)[0]; GERAH = N('Num', 3, 47)[1]; MONEY = N('Num', 3, 50)[0]
 AGES = N('Num', 4, 3)
-_snap = sqlite3.connect('file:<repo-old>/torah_grok.SNAPSHOT-main-51801ca.sqlite?mode=ro', uri=True)
+_snap = sqlite3.connect(('file:' + _ROOT + '/torah_grok.SNAPSHOT-main-51801ca.sqlite?mode=ro'), uri=True)
 AARON_DOTTED = any('ׄ' in h for (h,) in _snap.execute("SELECT w.he FROM words w JOIN verses v ON w.verse_id=v.id WHERE v.book='Num' AND v.chapter=3 AND v.verse=39"))
 assert sum(TWELVE.values()) == TOTAL == TOTAL_2 == TOTAL_EXOD, (sum(TWELVE.values()), TOTAL, TOTAL_2, TOTAL_EXOD)
 assert sum(CAMPS.values()) == TOTAL and FIRSTBORN - LEV_WRITTEN == EXCESS and EXCESS * RATE == MONEY and AGES == [30, 50], (CAMPS, FIRSTBORN, LEV_WRITTEN, EXCESS, RATE, MONEY, AGES)

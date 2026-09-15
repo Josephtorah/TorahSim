@@ -16,6 +16,8 @@ predicted by script (scratchpad o7_predict.py) before this file was typed. The 2
 curser (cold_run_sanctions.py) — the same clause at two seats, a REFERENCE.
 Zero-report law: every claimed ink token is probed before anything runs; the answer sheet is verified in its own ink.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json, re, io, contextlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effects_layer as FX
@@ -24,8 +26,8 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 print('honest-pairing guard: %d tests checked, every expectation a literal' % GUARDED)
 
-ROOT = '<repo-old>'
-db = sqlite3.connect('file:' + ROOT + '/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+ROOT = _ROOT
+db = sqlite3.connect('file:' + ROOT + '/Data/tanakh.sqlite?mode=ro', uri=True)
 
 
 def strip(s):

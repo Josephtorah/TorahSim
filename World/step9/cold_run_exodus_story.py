@@ -22,6 +22,8 @@ engine's blessing, covenant and seventh day; the family engine's marriage formul
 the Passover engine's firstborn). The dating lives on the sequential tape (the stitcher's markers — convention 13).
 Zero-report law: every claimed ink token is probed before anything runs; the answer sheet is verified in its own ink.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json, re, io, contextlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effects_layer as FX
@@ -30,7 +32,7 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 print('honest-pairing guard: %d tests checked, every expectation a literal' % GUARDED)
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 con = sqlite3.connect('file:%s?mode=ro' % DB, uri=True)
 def strip(s): return re.sub(r'[֑-ׇ]', '', s)
 
@@ -99,17 +101,17 @@ c_denominations = [w for w in _T[(18, 21)] if w in ('אלפים', 'מאות', '�
 def _load(path):
     d = json.load(open(path, encoding='utf-8')); return d['text'] if isinstance(d, dict) and 'text' in d else d
 def mishnah(tractate, ch, m, must):
-    txt = strip(re.sub(r'<[^>]+>', '', _load('<repo-old>/Data/mishnah_%s_he.json' % tractate)[ch - 1][m - 1]))
+    txt = strip(re.sub(r'<[^>]+>', '', _load((_ROOT + '/Data/mishnah_%s_he.json') % tractate)[ch - 1][m - 1]))
     assert must in txt, 'answer-sheet check failed: %r not in Mishnah %s %d:%d' % (must, tractate, ch, m)
 _BAV = {}
 def _bavli(tr, daf, side, seg, must):
-    T = _BAV.setdefault(tr, _load('<repo-old>/Data/bavli_%s_he.json' % tr))
+    T = _BAV.setdefault(tr, _load((_ROOT + '/Data/bavli_%s_he.json') % tr))
     txt = strip(re.sub(r'<[^>]+>', '', T[2 * daf - 2 + (1 if side == 'b' else 0)][seg - 1]))
     assert must in txt, 'shelf check failed: %r not in %s %d%s:%d' % (must, tr, daf, side, seg)
 _MEK = None
 def _mekhilta(tr, ch, n, must):
     global _MEK
-    if _MEK is None: _MEK = _load('<repo-old>/Data/mekhilta_he.json')
+    if _MEK is None: _MEK = _load((_ROOT + '/Data/mekhilta_he.json'))
     txt = strip(re.sub(r'<[^>]+>', '', _MEK[tr][ch - 1][n - 1]))
     assert must in txt, 'Mekhilta check failed: %r not in tractate %d ch %d row %d' % (must, tr, ch, n)
 SHEET = [

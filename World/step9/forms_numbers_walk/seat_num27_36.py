@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE TENT sitting 4 (2026-09-09) — SEAT the claims of num_27_zelophehad_joshua_claims.json (NM27-01..11) and num_36_heiresses_claims.json
 # (NM36-01..04) into their draft units as WITNESS_READ operators (sitting 3's rhythm, seat_num15.py: one operator per claim at its
@@ -5,7 +7,7 @@
 # REWRITE THE TREE-DERIVED SCENARIOS TO THE FROZEN ANCHOR FORM before the ritual (sitting 2's lesson). Every cite is checked
 # against the ledger's CITE INDEX before a byte is written; each yaml is re-loaded after.
 import json, re, yaml
-ROOT = '<repo-old>'
+ROOT = _ROOT
 
 def cite_index(ledger, pat):
     led = open(ledger, encoding='utf-8').read().split('## CITE INDEX')[1]

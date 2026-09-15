@@ -14,7 +14,7 @@
 #       catalog's replay-state notes accumulate as the world's standing
 #       rules and open debts.
 #
-# Verse panel: Hebrew (elijah_docket/tanakh.sqlite) rendered INTERLINEAR —
+# Verse panel: Hebrew (Data/tanakh.sqlite) rendered INTERLINEAR —
 # every Hebrew word carries its English underneath (lemma-bridge lexicon
 # built from the Torah SNAPSHOT glosses + a hand supplement), per the
 # absolute glossing rule.

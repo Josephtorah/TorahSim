@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 7 — BALAK (2026-09-11): THE CLAIMS of Numbers 22:1-25:19, four manifests (one per draft unit), read off the
 # four ledgers of this sitting, every claim LABELED (World/step9/CLAIM_LABELS.md's vocabulary), a machine check where the ink allows —
@@ -6,7 +8,7 @@
 # must not exist; the ID prefixes checked absent from every existing manifest and unit). Every source cite is checked against its
 # ledger's CITE INDEX before a byte is written.
 import json, os, re, sqlite3, glob
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-11'
 UNITS = {'num_22_balak_bilam_call': 'BK22A', 'num_23_oracles_1_2': 'BK23A', 'num_24_oracles_3_4': 'BK24A', 'num_25_peor_pinchas': 'BK25A'}
 OUT = {u: f'{ROOT}/logic/oral_audit/manifests/{u}_claims.json' for u in UNITS}

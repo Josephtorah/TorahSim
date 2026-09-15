@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 9 — THE OFFERINGS CALENDAR, Numbers 28:1-29:39 (2026-09-11; the owner: "I agree continue" after the register
 # gate, on the ruling READ THEN COMPILE): THE INK of the two chapters, computed from the Tanakh DB, the snapshot store and the shelf's own
@@ -12,7 +14,7 @@
 import json, os, re, html, sqlite3, sys, io, contextlib, unicodedata
 from collections import Counter
 from fractions import Fraction
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-11'
 UNITS3 = [('num_28_daily_shabbat_rosh', 28, 1, 15, [142, 143, 144, 145]), ('num_28_pesach_shavuot', 28, 16, 31, [146, 147, 148, 149]), ('num_29_fall_festivals', 29, 1, 39, [150, 151, 152])]
 TITLES = {'num_28_daily_shabbat_rosh': 'the offerings calendar opens — My offering, My bread, in its appointed time; the daily lambs, one in the morning and the second at dusk, the tenth of the ephah and the quarter hin, the burnt offering made at Mount Sinai; the Sabbath\'s two lambs; the new moon\'s two bulls, a ram, seven lambs, the master table of tenths and hins, and the one goat "a sin offering to the LORD"',
@@ -85,7 +87,7 @@ NAMING = sorted(f for f, t in LED.items() if re.search(r'Num(?:bers)? 2[89]:\d+'
 assert len(NAMING) == 23 and 'lev_23_festivals_2026-09-05.md' in NAMING and 'num_15_offerings_laws_2026-09-10.md' in NAMING, (len(NAMING), NAMING[:5])
 
 # ---- THE DRAFTS' SPANS, COMPUTED ----
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 VC = dict(db.execute("SELECT chapter, COUNT(*) FROM verses WHERE book='Num' GROUP BY chapter").fetchall())
 assert VC[28] == 31 and VC[29] == 39 and VC[30] == 17
 def unit_text(uid): return open(f'{ROOT}/logic/units/{uid}.yaml', encoding='utf-8').read()

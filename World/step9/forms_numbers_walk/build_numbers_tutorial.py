@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # The tutorial WHAT NUMBERS DOES FOR THE SIMULATION (the owner, 2026-09-11: "take this last reply... make a tutorial... as big as it needs to
 # be... use full verses... a markdown and epub"). Every verse is pulled from the shelf by reference (Onkelos' English as the local export gives
@@ -8,9 +10,9 @@
 #   @@CK CODE,CODE            the tape run's CHECKPOINT lines, verbatim, in a code fence
 #   @@PROBE N1,G1             census_probes.py's rows, verbatim, in a code fence
 import json, re, subprocess, sys, os
-R = '<repo-old>/Data/sefaria_export'
-OUT_MD = '<repo-old>/What_Numbers_Does_For_The_Simulation.md'
-OUT_EPUB = '<repo-old>/What_Numbers_Does_For_The_Simulation.epub'
+R = (_ROOT + '/Data/sefaria_export')
+OUT_MD = (_ROOT + '/What_Numbers_Does_For_The_Simulation.md')
+OUT_EPUB = (_ROOT + '/What_Numbers_Does_For_The_Simulation.epub')
 S = '<scratch>'
 strip = lambda s: re.sub(r'<[^>]+>', '', s).replace(' ', ' ').strip()
 BOOKS = {'Gen': 'Onkelos_Genesis', 'Exod': 'Onkelos_Exodus', 'Lev': 'Onkelos_Leviticus', 'Num': 'Onkelos_Numbers', 'Deut': 'Onkelos_Deuteronomy'}
@@ -43,7 +45,7 @@ for ln in open(f'{S}/korach_seq2.txt', encoding='utf-8'):
     m = re.match(r'\s*CHECKPOINT (C[A-Z]?\d+[a-z]?(?:-[a-z0-9]+)?) (.*)$', ln)
     if m: CK[m.group(1)] = m.group(1) + ' ' + m.group(2).strip()
 PROBES = {}
-pr = subprocess.run([sys.executable, '<repo-old>/World/step9/census_probes.py'], capture_output=True, text=True).stdout
+pr = subprocess.run([sys.executable, (_ROOT + '/World/step9/census_probes.py')], capture_output=True, text=True).stdout
 for ln in pr.splitlines():
     m = re.match(r'\s*(PASS|FAIL)\s+(N\d+|R\d+|D\d+|E\d+|F\d+|G\d+|O\d+)\s', ln)
     if m: PROBES.setdefault(m.group(2), []).append(ln.strip())

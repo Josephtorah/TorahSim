@@ -1,10 +1,12 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # O8 S4 (2026-09-08; NARRATIVE_GAPS.md section 8e) — the one registry: the scene tokens joined to existing entities as members
 # scoped [step9-scenes]; the stretch's new entities appended as text at the file's tail. Idempotent. A JOIN target that does not
 # exist is reported (never silently created): the design names the existing ids. Convention 21: a scene's tokens are its own —
 # no generic noun another runner submits or writes on.
 import re, yaml, sys
-ROOT = '<repo-old>'
+ROOT = _ROOT
 path = ROOT + '/logic/corpus/entity_registry.yaml'
 txt = open(path, encoding='utf-8').read()
 d = yaml.safe_load(txt)

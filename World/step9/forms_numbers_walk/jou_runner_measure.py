@@ -1,13 +1,15 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 13b: THE MEASUREMENT PASS ON THE RUNNER'S PROBE TOKENS, PHRASE SEATS AND THE STATIONS before cold_run_journeys.py is typed
 # (7b's lesson: the hand's forms fall; type every token, every seat list and every slice from this print). Also the callees' values the runner asserts.
 import sys, io, contextlib, re, sqlite3, collections
-sys.path.insert(0, '<repo-old>/World/step9')
+sys.path.insert(0, (_ROOT + '/World/step9'))
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS
     import cold_run_exodus_story as ES, cold_run_pesach as PS, cold_run_beha as BH, cold_run_shelach as SL, cold_run_chukat as CK, cold_run_balak as BK
     import cold_run_second_census as C2, cold_run_gad_reuben as GR, cold_run_erection as ER, cold_run_holiness as HL, cold_run_zelophehad as ZL
-db = sqlite3.connect('<repo-old>/elijah_docket/tanakh.sqlite')
+db = sqlite3.connect((_ROOT + '/Data/tanakh.sqlite'))
 def strip(s): return ''.join(c for c in s if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
 _V = collections.OrderedDict(); _L = collections.OrderedDict(); _M = collections.OrderedDict()
 for b, c, v, he, lm, mo in db.execute("SELECT v.book, v.chapter, v.verse, w.he, w.lemma, w.morph FROM words w JOIN verses v ON w.verse_id=v.id ORDER BY v.id, w.idx"):

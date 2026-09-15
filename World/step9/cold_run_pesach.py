@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE PASSOVER ENGINE — the first span compiled AFTER the effects law
 # (2026-09-03, owner: "build the skeleton then compile the spans").
@@ -29,7 +31,7 @@ print('guard: %d expectations checked, every one a literal from the answer sheet
 import sqlite3, sys
 import effects_layer as FX
 
-db = sqlite3.connect('<repo-old>/elijah_docket/tanakh.sqlite')
+db = sqlite3.connect((_ROOT + '/Data/tanakh.sqlite'))
 
 def strip(s):
     return ''.join(c for c in s if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))

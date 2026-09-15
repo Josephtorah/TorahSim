@@ -15,6 +15,8 @@ disagreement is a finding. The journal gate (World/step9/world_journal.py --gate
 logic/corpus/CORPUS_TRUTH.py's pinned tripwires without refolding (D21 b).
 """
 from __future__ import annotations
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 
 import argparse
 import importlib.util
@@ -23,7 +25,7 @@ import sqlite3
 import sys
 from pathlib import Path
 
-REPO = Path("<repo-old>")
+REPO = Path(_ROOT)
 HERE = Path(__file__).resolve().parent
 JOURNAL = HERE / "journal"
 DB = JOURNAL / "data" / "world.sqlite"

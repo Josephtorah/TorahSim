@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 4 — SHELACH (2026-09-10; the owner: "Go" after the #122 rereads, on the ruling READ THEN COMPILE): THE INK
 # OF Numbers 13:1-15:31 (15:32-41 frozen at THE TENT sitting 3 and SKIPPED, as the ruling says), computed from the Tanakh DB, the
@@ -7,7 +9,7 @@
 # OWN (words.gloss), never typed. Shared by shelach_rows_onkelos.py, shelach_rows_sifrei.py and write_shelach_ledgers.py.
 import json, os, re, html, sqlite3, sys, io, contextlib, unicodedata
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-10'
 UNITS = [  # (uid, chapter, lo, hi, title, the Sifrei piskaot by position)
     ('num_13_spies_sent', 13, 1, 33, 'the twelve sent; the seven questions; forty days; the cluster; the report and the evil report', []),
@@ -65,7 +67,7 @@ prior_onk = sorted(f for f, t in LED.items() if re.search(r'Onkelos Num (13|14):
 assert prior_onk == [], prior_onk
 
 # ---- THE DRAFTS' SPANS AND THE BOUNDARIES, COMPUTED ----
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 VC = dict(db.execute("SELECT chapter, COUNT(*) FROM verses WHERE book='Num' GROUP BY chapter").fetchall())
 assert VC[13] == 33 and VC[14] == 45 and VC[15] == 41 and VC[16] == 35
 def unit_text(uid): return open(f'{ROOT}/logic/units/{uid}.yaml', encoding='utf-8').read()

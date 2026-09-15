@@ -12,10 +12,12 @@ Relations:
   at    rest / dwelling / staying (a POS verb + "in" + a place)
   from  departure                 ("from" + a place)
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import json, sqlite3, sys
 from collections import defaultdict
 
-REPO = "<repo-old>"
+REPO = _ROOT
 DB = f"{REPO}/torah_grok.SNAPSHOT-main-51801ca.sqlite"
 WORLD = "<world-link>/world.sqlite"
 GAZ = "<world-link>/placement/gazetteer.json"

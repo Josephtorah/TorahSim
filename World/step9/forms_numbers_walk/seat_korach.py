@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 5 — KORACH (2026-09-10): SEAT the 30 claims of the three manifests into their draft units as WITNESS_READ
 # operators (sitting 4's rhythm, seat_shelach.py: one operator per claim at its FIRST verse's step, the [claim ID] marker in the prose,
@@ -5,7 +7,7 @@
 # (the unit's first six verses + its last) before the ritual. Every cite is checked against the ledger's CITE INDEX before a byte is
 # written; each yaml is re-loaded after. The prose is the manifest's own claim_en, so the operator and the claim cannot drift apart.
 import json, re, yaml
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-10'
 UNITS = [  # (uid, chapter, lo, hi, [(claim id, step verse, anchor, name)])
  ('num_16_korach', 16, 1, 35, [('KR16A-01', 1, 'and_korach_took', 'no_object_izhar_is_fresh_oil_the_shelf_silent'), ('KR16A-02', 3, 'too_much_for_you', 'returned_the_shekhinah_moses_alone_the_holy_one'),

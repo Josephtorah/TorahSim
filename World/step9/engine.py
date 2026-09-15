@@ -14,6 +14,8 @@ Design decisions the exam forced (see REPORT.md):
 - a rule may carry MORE than the exam asked (the ten-years riders the
   machine held at Gen 16:3), and says so.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 
 
 def V(verdict, basis, authority=None, **prov):
@@ -395,7 +397,7 @@ SEED_PROV = dict(
                    "(gen_33_shaddai_covenant_flesh)",
 )
 
-_GEN_XML = _P("<repo-old>/Data/Gen.xml")
+_GEN_XML = _P((_ROOT + "/Data/Gen.xml"))
 
 
 def _covenant_count():

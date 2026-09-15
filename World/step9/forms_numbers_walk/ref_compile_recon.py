@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 15b — THE COMPILE OF THE REFUGE CITIES, Numbers 35:1-34 (2026-09-13; the owner: "Go" after the #158 rereads): THE
 # RECONNAISSANCE before the measurement pass (bor_compile_recon.py's form) — the callee modules' defs, asks, DATA keys and uppercase tables
@@ -7,7 +9,7 @@
 # place of refuge, the land and the markers; the daemons' installed_by values; the dependency forms; the checkpoint prefixes in use (grepped
 # BEFORE naming); the register gate's seats in 35; the parser's own comments naming the bare dual.
 import sys, io, re, contextlib, inspect, collections, yaml, glob
-ROOT = '<repo-old>'
+ROOT = _ROOT
 sys.path.insert(0, f'{ROOT}/World/step9')
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS

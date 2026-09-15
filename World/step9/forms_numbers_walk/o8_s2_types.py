@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # O8 S2 (2026-09-08; NARRATIVE_GAPS.md section 6b) — register FROM EDEN TO HAGAR's event types: every witness a CONSONANTAL RUN
 # found contiguous in its verse of the Tanakh DB (checked here, and again by events_layer.py's lint); the `he` the pointed
@@ -5,8 +7,8 @@
 # as TEXT under `events:`; the REUSED kinds (named, married, journeyed, lord_descended, died, believed, fled) get their
 # witness / ink / tape / link lines extended in place.
 import sqlite3, yaml, re, sys
-ROOT = "<repo-old>"
-db = sqlite3.connect('file:%s/elijah_docket/tanakh.sqlite?mode=ro' % ROOT, uri=True)
+ROOT = _ROOT
+db = sqlite3.connect('file:%s/Data/tanakh.sqlite?mode=ro' % ROOT, uri=True)
 def _rows(ch, vs):
     return db.execute("SELECT w.he FROM words w JOIN verses v ON w.verse_id=v.id WHERE v.book='Gen' AND v.chapter=? AND v.verse=? ORDER BY w.idx", (ch, vs)).fetchall()
 def bare(ch, vs): return [re.sub(r'[\u0591-\u05C7/]', '', r[0]) for r in _rows(ch, vs)]

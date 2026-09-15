@@ -1,10 +1,12 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE TOUR UPDATED WITH THE NUMBERS INSIGHTS (2026-09-13; the owner: "Update the tour document with the numbers insights").
 # Every replacement asserted unique; the new section spliced before the mini-lab; the two later sections renumbered; the counts
 # brought current from the prints (57 runners by ls; 62 daemons by DAEMON_INDEX.md; 1,012 effects by the registry's keys;
 # the link census 455 / 48 / 9 / 143 of 482 + 173 by ref_dep_gate3.out). Idempotent: refuses to run twice.
 import re, sys
-P = '<repo-old>/ARCHITECTURE/THE_TOUR.md'
+P = (_ROOT + '/ARCHITECTURE/THE_TOUR.md')
 S = '<scratch>/tour_section9.md'
 t = open(P, encoding='utf-8').read()
 assert '## 9. The fourth book' not in t, 'already spliced'

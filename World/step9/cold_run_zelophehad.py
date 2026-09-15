@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # NUM 27:1-11 + 36:1-12 — THE DAUGHTERS OF ZELOPHEHAD (THE TENT sitting 4, 2026-09-09; World/step9/THE_TENT.md section 4).
 # The third Numbers span compiled, and the FOURTH CASE-BORN LAW: the run halts on the daughters' plea — the halt's THIRD FORM
@@ -29,7 +31,7 @@ import world_engine as WE
 import cold_run_family as FAM            # THE EDGE (dependency_dispositions.yaml: zelophehad -> family CALL, reference — the no-son clause census, the firstborn's double and the held, the jubilee's non-return, name = inheritance)
 import cold_run_sanctions as SAN         # THE EDGE (zelophehad -> sanctions CALL, reference — the levirate bond's brother condition for the dilemma's second horn)
 
-db = sqlite3.connect('<repo-old>/elijah_docket/tanakh.sqlite')
+db = sqlite3.connect((_ROOT + '/Data/tanakh.sqlite'))
 
 def strip(s):
     return ''.join(c for c in s if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))

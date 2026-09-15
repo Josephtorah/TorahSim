@@ -15,6 +15,7 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
 ## SCOREBOARD (as of 2026-09-14, latest)
+- **THE REPO IS PORTABLE — RENAMED TORAHSIM, EVERY PATH COMPUTED FROM THE FILE'S OWN PLACE, A FRESH CLONE RUNS: THE SHELF AND THE STORES FETCHED BY ONE SCRIPT AGAINST THEIR MANIFESTS, THE ONE DATABASE BUILT FROM NOTHING, THE TAPE 10/10 AT ANOTHER PATH** (2026-09-15, on your "Let's compact then do this rename and relative path to make it work as a clone" and the three decisions — TorahSim; a fetch script; commit first; reviews/PORTABLE_repo_2026-09-15.md; 367 files rewritten by one pass; portable_probes.py 5/5; the sweep 57/57; the journal gate green). Nothing in the corpus, the hash, the units or the engine moved.
 - **THE CHECKPOINTS FALL WHERE THEY FALL: THE TAPE'S TESTS ARE ASKED AT THE VERSE WHERE EACH ONE SETTLES, THE VERSE MEASURED BY STEPPING THE BASE, AND A PAUSE OF THE STEPPER SHOWS THEM LIVE** (2026-09-14, on your "Ok do it"; World/step9/THE_LOOP.md "THE CHECKPOINTS AS THEY FALL — item 5's build"; D27-D30; 199 checkpoints, 48 true from the start, the refuge term settling at Numbers 21:4 where Eleazar is invested; checkpoint_probes.py 7/7; the tape and the journal unmoved). Nine items of THE LIST remain, three of them yours.
 - **THE BOARD IS REAL — THE WINDOW OVER THE LIVING DATABASE: A SMALL LOCAL SERVER READS THE ONE DATABASE AND THE PAGE FOLLOWS THE STEPPER AS IT SEALS EACH BLOCK; EVERY THING A TILE THAT APPEARS, LIGHTS, OWES AND COUNTS DOWN; EVERY NAME ENGLISH; NOTHING TYPED, NOTHING WRITTEN** (2026-09-14, on your "lets build it" after six versions of the mockup on your notes; World/step9/THE_LOOP.md "THE BOARD — item 10's build"; D22-D26; board_probes.py 8/8; the gate green; 150 paced steps to Genesis 12:20 watched forming in Chrome). Ten items of THE LIST remain, three of them yours.
 - **ONE DATABASE — THE MERGE DONE: THE READING'S WORLD IS A LAYER OF THE JOURNAL, THE OLD TABLES ARE VIEWS OVER IT, AND THE OLD FILE IS GONE** (2026-09-14, on your "ok go the merge"; World/step9/THE_LOOP.md "D7'S MERGE — ONE DATABASE"): the fold of the 210 frozen units written as the journal's L1 layer — 6,558 items, 3,015 verses of the spine, the counts and the hash in its header (D19); the World folder's sixteen tables now views over those rows with their old names (D20), so `World/ask.py at Gen.30.24` answers over the same file the runs write into; the reconciliation upstream twice (D21) — the entry against a fresh fold on nine counts and the hash, all green; the journal gate against the pinned truth; merge_probes.py 0/8 then 8/8; the August tree model retired; run_genesis.py retired. THE LIST: item 4 done, eleven remain.
@@ -474,6 +475,18 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   Next alongside it: Leviticus (new spine — Sifra).
 
 ## ENTRIES (newest first)
+
+### 2026-09-15 — THE REPO IS PORTABLE
+
+You asked two questions: would a rename break the code, and what folder would someone else's clone use. Both answers were measured — the
+full path was written into 352 files at 474 places, and a clone lacked the Bible store and the 2.3 GB shelf, so it could not run one
+sitting. You chose the name TorahSim, a fetch script for the shelf, and a commit first. One script rewrote every path into one computed
+from each file's own place, 367 files in one pass; the Bible store moved into the repo; the shelf got a manifest with every file's size
+and hash and a script that fetches it from Sefaria's public bucket — Sefaria had moved its texts out of git this month, which the first
+fetch found; a second store too large for git became a release asset the same script fetches. The proof is a probe that copies the
+tracked tree to another folder and runs it there: a runner, the database built from nothing, the tape to 10/10, two gates. Two rules the
+run taught: a source executed from a string needs the name a path now uses, and a path built from pieces hides from a substring rule.
+Every gate is green on the rewritten tree. SETUP.md at the root is a clone's first read.
 
 ### 2026-09-14 — THE CHECKPOINTS FALL WHERE THEY FALL
 

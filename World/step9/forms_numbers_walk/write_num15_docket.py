@@ -1,9 +1,11 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE TENT sitting 3 (2026-09-09) — THE EXAM'S DOCKET for Num 15:32-36 (cold_run_mekoshesh.py): the testing shelf routed BY
 # TOPIC (logic/MISHNAH_TOPICS.md: Courts — Sanhedrin; Sabbath — Shabbat; the Tosefta beside), the rows enumerated from the
 # shelf's own files, the credits found by grep over the prior dockets (the credit guards), the coverage COMPUTED. Append-only.
 import json, os, re, html, glob
-ROOT = '<repo-old>'
+ROOT = _ROOT
 OUT = f'{ROOT}/logic/oral_triage/num_15_mekoshesh_exam_2026-09-09.md'
 assert not os.path.exists(OUT), 'docket exists — append, never overwrite'
 def clean(s): return re.sub(r'<[^>]+>', '', html.unescape(s)).strip()

@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 15b — THE COMPILE OF THE REFUGE CITIES, Numbers 35:1-34 (2026-09-13; the owner: "Go" after the #158 rereads):
 # THE MEASUREMENTS, computed BEFORE the design paragraph is typed (1b's order; bor_compile_measure.py's form; every call typed from
@@ -8,7 +10,7 @@
 # global-count checkpoints; (6) THE REGISTER GATE on chapter 35; (7) the recorder and the stitcher; (8) the engine's timer interface (a due
 # keyed to an act, not a day — the term's form).
 import sqlite3, sys, io, re, contextlib, collections, inspect, os, yaml
-ROOT = '<repo-old>'
+ROOT = _ROOT
 sys.path.insert(0, f'{ROOT}/World/step9')
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS

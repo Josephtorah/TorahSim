@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 4b — THE COMPILE OF SHELACH (2026-09-10; the owner: "Go"): THE MEASUREMENTS, computed BEFORE the design
 # paragraph is typed (1b's order). (1) the parser's state at the portion's seats after 3b's rules; (2) THE FRACTION CLASS censused on the
@@ -5,7 +7,7 @@
 # parser's current reading there; (3) the calendar's arithmetic for the forty days and the thirty-eight years; (4) the callees on file;
 # (5) the tape's subjects; (6) the register verses of chapters 13-14 against the planned lines; (7) the trials on the tape.
 import sqlite3, sys, io, re, contextlib, collections, unicodedata
-ROOT = '<repo-old>'
+ROOT = _ROOT
 sys.path.insert(0, f'{ROOT}/World/step9')
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS
@@ -16,7 +18,7 @@ with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_offerings as OF
     import cold_run_moadim as MO
 def N(b, c, v): return CS.ink_numbers(CS.verse_words(b, c, v))
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 def plain(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
 def pointed(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05AF))
 rows = db.execute("SELECT v.book, v.chapter, v.verse, w.he, w.morph FROM words w JOIN verses v ON w.verse_id=v.id ORDER BY v.id, w.idx").fetchall()

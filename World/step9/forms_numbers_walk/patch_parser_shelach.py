@@ -1,9 +1,11 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 4b — THE PARSER TAUGHT (2026-09-10; NUMBERS_WALK.md "Sitting 4b"): the five rules into cold_run_sequence.py's INK block,
 # each anchored on the 3b text (every anchor asserted once). (12) THE FRACTION BEFORE A MEASURE NOUN; (13) THE UNIT NOUN AS ONE (the tenth,
 # the cubit by its points, the hin); (14) THE DEFINITE ONE; (15) THE THIRD-GENERATION HOMOGRAPH by the lamed's vowel and SHESHAI by the
 # tsere; (16) THE TITHE VERB by the patach. The probes (census_probes.py F1-F33, O4) were written to FAIL first.
-p = '<repo-old>/World/step9/cold_run_sequence.py'
+p = (_ROOT + '/World/step9/cold_run_sequence.py')
 s = open(p, encoding='utf-8').read()
 def rep(a, b):
     global s

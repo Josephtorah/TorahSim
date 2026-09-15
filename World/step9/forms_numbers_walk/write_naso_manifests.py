@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 2 — NASO (2026-09-09): THE CLAIMS of Numbers 4:21-7:89, seven manifests (one per draft unit), read off the
 # seven ledgers of this sitting, every claim LABELED (World/step9/CLAIM_LABELS.md's vocabulary), a machine check where the ink allows —
@@ -6,7 +8,7 @@
 # wife), NS06A (the Nazirite), NS06B (the blessing), NS07A (the wagons and the first six days), NS07B (the last six, the totals, the Voice).
 # Written once (the files must not exist). Every source cite is checked against its ledger's CITE INDEX before a byte is written.
 import json, os, re, sqlite3
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-09'
 UNITS = {'num_04_gershon_merari': 'NS04A', 'num_05_camp_pure_theft': 'NS05A', 'num_05_sotah': 'NS05B', 'num_06_nazir': 'NS06A',
          'num_06_priest_blessing': 'NS06B', 'num_07_carts_offerings_a': 'NS07A', 'num_07_offerings_b_total': 'NS07B'}

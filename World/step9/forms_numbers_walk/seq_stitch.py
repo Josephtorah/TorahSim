@@ -6,8 +6,10 @@ verified against the ink's parse here, and again at run time), and WRITE the tap
 World/step9/cold_run_sequence.py between its sentinels as LITERAL marker/submit/close lines. Then PREDICT: the
 markers' days on a bare world (the calendar arithmetic, before the runner runs), and print the census. Also appends
 the sequential tape to the registry's tape lines (event_vocabulary.yaml) for every history kind."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sys, os, io, re, json, collections, sqlite3, contextlib
-HERE = '<repo-old>/World/step9'
+HERE = (_ROOT + '/World/step9')
 SCR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import yaml
@@ -30,7 +32,7 @@ FORM = {k: v.get('form') for k, v in E.items()}
 BO = {'Gen': 1, 'Exod': 2, 'Lev': 3, 'Num': 4}   # THE TENT sitting 2 (2026-09-09): the fourth book
 VREF = re.compile(r'(Gen|Exod|Lev|Num|Deut|1 Sam|2 Sam|1 Kgs|2 Kgs|1 Chr|2 Chr|Neh)\s+(\d+):(\d+)')
 FIRST = re.compile(r'^(Gen|Exod|Lev|Num|Deut)\s+(\d+):(\d+)')
-con = sqlite3.connect('file:<repo-old>/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+con = sqlite3.connect(('file:' + _ROOT + '/Data/tanakh.sqlite?mode=ro'), uri=True)
 
 # the runners whose daemon reads the event's `day` as the CLOCK (measured by grep at the design: the idiom
 # `day = event.get('day', world.clock.day)` or `event['day'] + n`); a `day` on their history events is DROPPED

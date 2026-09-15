@@ -30,10 +30,12 @@ Compound names (Beth-el, Beer-sheba) are joined mechanically: the corpus marks
 the first half with a '+' on its Strong's number and gives both halves the same
 number. No hand list.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import json, sqlite3
 from collections import defaultdict
 
-REPO = "<repo-old>"
+REPO = _ROOT
 DB = f"{REPO}/torah_grok.SNAPSHOT-main-51801ca.sqlite"
 WORLD = "<world-link>/world.sqlite"
 OUT = "<world-link>/placement/gazetteer.json"

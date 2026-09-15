@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 10 — THE VOWS, Numbers 30:1-17 (2026-09-12; the owner: "Go" after the #141 rereads, on the ruling READ THEN
 # COMPILE): THE INK of the chapter, computed from the Tanakh DB, the snapshot store and the shelf's own bytes — never typed. Sitting 9's form
@@ -9,7 +11,7 @@
 # draft's-grain rule); 30:2-17 open the portion Matot; the next draft (num_31_midian) opens at 31:1.
 import json, os, re, html, sqlite3, sys, io, contextlib, unicodedata
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-12'
 UID = 'num_30_vows'
 PISKAOT = [153, 154, 155, 156]
@@ -85,7 +87,7 @@ assert len(NAMING) == 9 and 'num_04_07_naso_exam_2026-09-10.md' in NAMING and 'n
 assert 'and Moses said to the children of Israel' in LED['num_29_fall_festivals_2026-09-11.md'] and '- Sifrei Bamidbar 152:1 — MATERIAL' in LED['num_29_fall_festivals_2026-09-11.md']
 
 # ---- THE DRAFT'S SPAN, COMPUTED ----
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 VC = dict(db.execute("SELECT chapter, COUNT(*) FROM verses WHERE book='Num' GROUP BY chapter").fetchall())
 assert VC[30] == 17 and VC[31] == 54
 def unit_text(uid): return open(f'{ROOT}/logic/units/{uid}.yaml', encoding='utf-8').read()

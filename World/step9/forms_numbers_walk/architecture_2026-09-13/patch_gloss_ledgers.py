@@ -1,9 +1,11 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE PROJECT REVIEW, finding 13's ledger side (2026-09-14; the owner's ruling "ok first one go": a gloss is DISPLAY, not content —
 # an English gloss beside a Hebrew word changes no reading and no verdict, so the old ledgers are edited in place at the flagged
 # word). The lint's window is ninety characters, stops at a period, and checks the FIRST occurrence of each run / compound / term.
 # Every replacement asserted once; a pair already applied is skipped. Every gloss read at its verse or its row.
-R = '<repo-old>/'
+R = (_ROOT + '/')
 O = R + 'logic/oral_triage/'
 def patch(path, pairs):
     p = R + path if not path.startswith('/') else path

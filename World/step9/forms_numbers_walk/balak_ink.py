@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 7 — BALAK (2026-09-11; the owner: "Continue" after the #130 rereads, on the ruling READ THEN COMPILE): THE INK
 # OF Numbers 22:1-25:19, computed from the Tanakh DB, the snapshot store and the shelf's own bytes — never typed. Sitting 6's form
@@ -11,7 +13,7 @@
 # and is read with it. Four drafts, 115 verses (41 + 30 + 25 + 19), computed.
 import json, os, re, html, sqlite3, sys, io, contextlib, unicodedata
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-11'
 UNITS = [  # (uid, chapter, lo, hi, title, the Sifrei piskaot by position)
     ('num_22_balak_bilam_call', 22, 1, 41, 'the plains of Moab; Balak\'s fear and the elders of Midian; the messengers to Balaam and God\'s two night visits; the ass, the angel and the sword; Balak meets him at the Arnon; Bamoth-baal', []),
@@ -74,7 +76,7 @@ prior_onk = sorted(f for f, t in LED.items() if re.search(r'Onkelos Num (22|23|2
 assert prior_onk == [], prior_onk
 
 # ---- THE DRAFTS' SPANS AND THE BOUNDARIES, COMPUTED ----
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 VC = dict(db.execute("SELECT chapter, COUNT(*) FROM verses WHERE book='Num' GROUP BY chapter").fetchall())
 assert VC[22] == 41 and VC[23] == 30 and VC[24] == 25 and VC[25] == 19 and VC[26] == 65
 def unit_text(uid): return open(f'{ROOT}/logic/units/{uid}.yaml', encoding='utf-8').read()

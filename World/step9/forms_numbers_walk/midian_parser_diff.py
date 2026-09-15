@@ -1,16 +1,18 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 11b — THE CORPUS-WIDE DIFF: the parser 10b left (cold_run_sequence.pre_midian.py's INK block) against the parser after rule (28)
 # THE RATIO "one of the N", over EVERY verse of the whole Tanakh (the class's seats lie in Ecclesiastes, Ezekiel, Nehemiah and Job) — numbers AND
 # ordinals. Every moved verse printed with both readings, to be read verse by verse. PREDICTED at the design: exactly EIGHT verses move (the probes').
 import re, sqlite3, sys, os
-sys.path.insert(0, '<repo-old>/World/step9')
+sys.path.insert(0, (_ROOT + '/World/step9'))
 import world_engine as WE
 def ink(path):
     src = open(path, encoding='utf-8').read().split('# ==== INK BEGIN')[1].split('# ==== INK END ====')[0].split('\n', 1)[1]
     G = {'re': re, 'sqlite3': sqlite3, 'os': os, 'WE': WE}; exec(src, G); return G
 OLD = ink('<scratch>/cold_run_sequence.pre_midian.py')
-NEW = ink('<repo-old>/World/step9/cold_run_sequence.py')
-db = sqlite3.connect('file:<repo-old>/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+NEW = ink((_ROOT + '/World/step9/cold_run_sequence.py'))
+db = sqlite3.connect(('file:' + _ROOT + '/Data/tanakh.sqlite?mode=ro'), uri=True)
 verses = db.execute("SELECT book, chapter, verse FROM verses ORDER BY id").fetchall()
 moved = []
 for b, c, v in verses:

@@ -1,11 +1,13 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE TENT sitting 3 (2026-09-09; World/step9/THE_TENT.md section 3): THE TYPES FIRST — three event kinds (one act on the tape,
 # two case forms for the exam's scene), the SECOND SEATS of the tent's three kinds (placed_in_custody, sentence_declared,
 # stoned_as_commanded — link: reference, the shared lemmas), one effect, the entity, the fourth registry's note. The `he` built
 # from the pointed DB text (cantillation stripped), the witnesses the plain consonantal runs the events lint verifies. Idempotent.
 import re, sqlite3, yaml
-ROOT = "<repo-old>"
-db = sqlite3.connect(f"file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro", uri=True)
+ROOT = _ROOT
+db = sqlite3.connect(f"file:{ROOT}/Data/tanakh.sqlite?mode=ro", uri=True)
 def words(book, ch, vs):
     return [r[0] for r in db.execute("SELECT w.he FROM words w JOIN verses v ON w.verse_id=v.id WHERE v.book=? AND v.chapter=? AND v.verse=? ORDER BY w.idx", (book, ch, vs)).fetchall()]
 def pointed(book, ch, vs, lo, hi):

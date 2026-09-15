@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 1 — BAMIDBAR (2026-09-09): THE CLAIMS of Numbers 1:1-4:20, nine manifests (one per draft unit), read off
 # the nine ledgers of this sitting, every claim LABELED (World/step9/CLAIM_LABELS.md's vocabulary), a machine check where the ink
@@ -5,7 +7,7 @@
 # form, write_num27_36_manifests.py). Claim IDs per unit: NM01A (census command), NM01B (tribe counts), NM01C (Levites exempt),
 # NM02A/NM02B (the camp), NM03A/NM03B/NM03C (chapter 3), NM04A (Kohath). Written once (the files must not exist).
 import json, os, re, sqlite3
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-09'
 UNITS = {'num_01_census_command': 'NM01A', 'num_01_tribe_counts': 'NM01B', 'num_01_levites_exempt': 'NM01C', 'num_02_camp_east_south': 'NM02A',
          'num_02_camp_west_north': 'NM02B', 'num_03_aaron_levi_replace': 'NM03A', 'num_03_levite_clans_count': 'NM03B', 'num_03_firstborn_redeem': 'NM03C', 'num_04_kehat': 'NM04A'}

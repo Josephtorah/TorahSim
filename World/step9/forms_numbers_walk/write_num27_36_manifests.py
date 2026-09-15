@@ -1,10 +1,12 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE TENT sitting 4 (2026-09-09) — THE CLAIMS of Numbers 27:1-23 (num_27_zelophehad_joshua, NM27-01..11) and 36:1-13
 # (num_36_heiresses, NM36-01..04), read off the two ledgers of this sitting, every claim LABELED (World/step9/CLAIM_LABELS.md's
 # vocabulary), a machine check where the ink allows — every he_contains substring CUT FROM THE SNAPSHOT STORE'S OWN BYTES
 # (sitting 3's lesson: the hand-typed vowel order is not the store's). Written once (the files must not exist).
 import json, os, re, sqlite3
-ROOT = '<repo-old>'
+ROOT = _ROOT
 OUT27 = f'{ROOT}/logic/oral_audit/manifests/num_27_zelophehad_joshua_claims.json'
 OUT36 = f'{ROOT}/logic/oral_audit/manifests/num_36_heiresses_claims.json'
 for o in (OUT27, OUT36): assert not os.path.exists(o), o

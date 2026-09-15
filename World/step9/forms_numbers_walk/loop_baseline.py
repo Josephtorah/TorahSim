@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """loop_baseline.py — the BEFORE run of the sequence tape on the unchanged engine: the log's classes, the payload types (JSON-safe or not),
 the shared-object facts the sink must record, and the runtime. Read, never recited."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import os, sys, time, json, collections
-sys.path.insert(0, '<repo-old>/World/step9')
-os.chdir('<repo-old>/World/step9')
+sys.path.insert(0, (_ROOT + '/World/step9'))
+os.chdir((_ROOT + '/World/step9'))
 import cold_run_sequence as CS
 t0 = time.time()
 reg = CS.registry_map()

@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 14 — THE BORDERS (2026-09-12): the records — the stamp row, NUMBERS_WALK.md "Sitting 14", the state doc's #155,
 # World/RESUME.md, THE_STEPS' paragraph, THE_BRIEFING's bullet, COMPILE_DEBT's box, RESEARCH_LOG's entry, the three memory files, the recovery file's
@@ -7,7 +9,7 @@
 # bor_ink.py) — verified here, not rewritten. MIDDOT.md, MOVE_CATALOG.md and MISHNAH_TOPICS.md UNCHANGED (no Sifrei row on the chapter — no case law
 # read; no move; no Mishnah opened at a reading sitting). Sitting 13's form (write_jou_records.py).
 import os, re, yaml, shutil, glob
-ROOT = '<repo-old>'
+ROOT = _ROOT
 SP = os.path.dirname(os.path.abspath(__file__))
 MEM = '<memory>'
 truth = open(f'{ROOT}/logic/corpus/CORPUS_TRUTH.py', encoding='utf-8').read()

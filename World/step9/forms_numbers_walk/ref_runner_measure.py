@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 15b: THE MEASUREMENT PASS ON THE RUNNER'S PROBE TOKENS, PHRASE SEATS, THE CASE TOKENS AND THE DUAL'S SEATS before
 # cold_run_refuge.py is typed (7b's lesson: the hand's forms fall; type every token, every seat list and every slice from this print).
@@ -6,10 +8,10 @@
 # are typed from this print, the expected numbers the ink's own); the plural's seats counted; (C) the phrase seats; (D) the case tokens and the
 # verbs; (E) the kin verses.
 import sys, io, contextlib, re, sqlite3, collections, unicodedata
-sys.path.insert(0, '<repo-old>/World/step9')
+sys.path.insert(0, (_ROOT + '/World/step9'))
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS
-db = sqlite3.connect('<repo-old>/elijah_docket/tanakh.sqlite')
+db = sqlite3.connect((_ROOT + '/Data/tanakh.sqlite'))
 def strip(s): return ''.join(c for c in s if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
 NF = lambda s: unicodedata.normalize('NFC', s)
 _V = collections.OrderedDict(); _L = collections.OrderedDict(); _M = collections.OrderedDict(); _P = collections.OrderedDict()

@@ -48,6 +48,8 @@ Deut 24:19-21 (the forgotten sheaf, the olive, the vintage), Exod 23:11
 (the release to all), Exod 22:27 (the judge and prince), Lev 25:36
 (the vow-opening's fifth clause).
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json, io, contextlib
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -56,7 +58,7 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 assert GUARDED == 187, ('the guard counted %d expectations, the tripwire holds 187' % GUARDED)
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):
@@ -993,7 +995,7 @@ SCENE, _W = scene()
 
 # ---- (2) TEST DATA — the Mishnah rows, read whole from the shelf ------
 def load(t):
-    d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
+    d = json.load(open((_ROOT + '/Data/mishnah_%s_he.json') % t))
     return d['text'] if isinstance(d, dict) and 'text' in d else d
 SHELF = {'Peah': load('peah'), 'Bava Metzia': load('bava_metzia'), 'Bava Kamma': load('bava_kamma'), 'Shevuot': load('shevuot'),
          'Eduyot': load('eduyot'), 'Avodah Zarah': load('avodah_zarah'), 'Sanhedrin': load('sanhedrin'), 'Nedarim': load('nedarim'),

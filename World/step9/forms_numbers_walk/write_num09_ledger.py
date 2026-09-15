@@ -1,9 +1,11 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE TENT sitting 2 (2026-09-09) — THE READING of Numbers 9:1-23 (num_09_pesach_cloud): writes the append-only ledger
 # logic/oral_triage/num_09_pesach_cloud_2026-09-09.md with its COVERAGE COMPUTED from the shelf files (Sifrei Bamidbar's own
 # row counts per piska, Onkelos Numbers' verse count) — the counts are measured here, never typed; the prose rows are the reading.
 import json, os, re, html, sys
-ROOT = '<repo-old>'
+ROOT = _ROOT
 OUT = f'{ROOT}/logic/oral_triage/num_09_pesach_cloud_2026-09-09.md'
 assert not os.path.exists(OUT), 'ledger exists — append, never overwrite'
 

@@ -1,10 +1,12 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE LOOP step 3 INSTALLATION (2026-09-09; THE_LOOP.md "Step 3 INSTALLATION — the design"): register the three effects BEFORE any
 # daemon names them — in_force, in_custody, rule_installed — the `he` built from the pointed DB text (cantillation stripped), QUOTED,
 # in the E5 appender's form. Appends to World/step9/effect_vocabulary.yaml; idempotent.
 import sqlite3, yaml
-ROOT = "<repo-old>"
-db = sqlite3.connect(f"file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro", uri=True)
+ROOT = _ROOT
+db = sqlite3.connect(f"file:{ROOT}/Data/tanakh.sqlite?mode=ro", uri=True)
 def pointed(book, ch, vs, lo, hi):
     rows = db.execute("SELECT w.he FROM words w JOIN verses v ON w.verse_id=v.id WHERE v.book=? AND v.chapter=? AND v.verse=? ORDER BY w.idx", (book, ch, vs)).fetchall()
     ws = [''.join(c for c in r[0] if c != '/' and not (0x0591 <= ord(c) <= 0x05AF)) for r in rows]

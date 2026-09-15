@@ -1,10 +1,12 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 10 — THE VOWS (2026-09-12): the appends — the stamp row, NUMBERS_WALK.md "Sitting 10", the state doc's #142,
 # World/RESUME.md. THE_STEPS, THE_BRIEFING, COMPILE_DEBT, MIDDOT, RESEARCH_LOG and the memory files are edited by the Edit tool beside this
 # script. The counts below are the tools' own prints (the ritual's PASS lines, the bake's hash, the truth's units), typed from them; the
 # corpus tripwire is read back before a byte is appended.
 import os
-ROOT = '<repo-old>'
+ROOT = _ROOT
 truth = open(f'{ROOT}/logic/corpus/CORPUS_TRUTH.py', encoding='utf-8').read()
 assert 'assert len(W["units"]) == 205' in truth and 'assert len(W["standing"]) == 2103' in truth and "== '8b8fff1fa28953af'" in truth, 'the fold is not the predicted one'
 rit = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'vows_ritual_num_30_vows.out'), encoding='utf-8').read()

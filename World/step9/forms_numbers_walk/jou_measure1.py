@@ -1,13 +1,15 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 13 — THE JOURNEYS, Numbers 33:1-56 (2026-09-12): THE SECOND MEASUREMENT PASS — every candidate ink fact PRINTED
 # from the Tanakh DB, the snapshot store and the shelf's bytes, so that jou_ink.py's asserts are typed FROM THE PRINT (the standing lesson: the
 # measurement pass first, then the asserts). Nothing asserted here. Sitting 12's form (gad_measure1.py).
 import json, os, re, html, sqlite3, sys, io, contextlib, unicodedata
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 def clean(s): return re.sub(r'<[^>]+>', '', html.unescape(s))
 def plain(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 rows = db.execute("SELECT v.book, v.chapter, v.verse, w.he, w.morph FROM words w JOIN verses v ON w.verse_id=v.id ORDER BY v.id, w.idx").fetchall()
 by = {}
 for b, c, v, he, m in rows: by.setdefault((b, c, v), []).append((plain(he), m, he))

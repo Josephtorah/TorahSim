@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE TENT sitting 4 (2026-09-09) — THE READING of Numbers 27:1-23 (num_27_zelophehad_joshua) and 36:1-13 (num_36_heiresses):
 # writes the two append-only ledgers logic/oral_triage/num_27_zelophehad_joshua_2026-09-09.md and num_36_heiresses_2026-09-09.md
@@ -6,7 +8,7 @@
 # DB — counts measured here, never typed; the prose rows are the reading. (Sitting 3's form, write_num15_ledger.py.)
 import json, os, re, html, sqlite3
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 OUT27 = f'{ROOT}/logic/oral_triage/num_27_zelophehad_joshua_2026-09-09.md'
 OUT36 = f'{ROOT}/logic/oral_triage/num_36_heiresses_2026-09-09.md'
 for o in (OUT27, OUT36):
@@ -48,7 +50,7 @@ N36 = len(cite36); assert N36 == 13
 CREDITED36 = ['Sifrei Bamidbar 133:2', 'Sifrei Bamidbar 134:1', 'Sifrei Bamidbar 134:2']   # the Sifrei's rows on 36:5-11, read whole in the 27 ledger
 
 # ---- THE INK, computed from the Tanakh DB (consonantal: '/' and the marks U+0591..U+05C7 stripped) ----
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 def plain(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
 rows = db.execute("SELECT v.book, v.chapter, v.verse, w.he, w.morph FROM words w JOIN verses v ON w.verse_id=v.id ORDER BY v.id, w.idx").fetchall()
 by = {}

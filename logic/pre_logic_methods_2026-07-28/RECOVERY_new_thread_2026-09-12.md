@@ -66,7 +66,13 @@ Repo: <repo-old> (sole truth). The public mirror TorahSim is downstream, relay o
   Commit message via `git commit -F <scratchpad file>`; trailers `Co-Authored-By: Claude Fable 5.1
   <noreply@anthropic.com>` and `Claude-Session: <the session url>`. Push: `gh auth switch --user Josephtorah`,
   `git push origin main`, `gh auth switch --user PeerloopLLC`.
-- ABSOLUTE PATHS ALWAYS. Every git command begins `cd <repo-old> &&`. THE cd LESSON (eight instances):
+- SINCE THE PORTABLE REPO (2026-09-15, reviews/PORTABLE_repo_2026-09-15.md): THE FOLDER IS <repo>, the repository
+  https://github.com/Josephtorah/TorahSim.git, the symlink <world-link> -> <repo>/World; every path in the code is
+  computed from the file's own place (`_ROOT`), never typed absolute again — a new script computes its root the same way; the staging form
+  and the cd rule below read with the new folder name; the store is Data/tanakh.sqlite (tracked), the snapshot store
+  torah_grok.SNAPSHOT-main-51801ca.sqlite a release asset (`python3 Data/fetch_shelf.py --stores`), the shelf fetched from Sefaria's
+  bucket (`python3 Data/fetch_shelf.py`); SETUP.md at the root is a clone's first read. The old paths in old entries stand as history.
+- ABSOLUTE PATHS ALWAYS. Every git command begins `cd <repo-old> &&` (since 2026-09-15: <repo>). THE cd LESSON (eight instances):
   the cwd persists across Bash calls and a cd at the head of a compound command reaches its tail; run each repo-root
   tool in its own `(cd <repo-old> && python3 /abs/path ...)` subshell.
 - zsh treats `echo ====` as a glob (use `----`). macOS has no `timeout`. Any script importing cold_run_sequence takes
@@ -127,7 +133,8 @@ DEPENDENCY_INDEX.md, REGISTER_INDEX.md), World/journal/ (the sink; data/ gitigno
 own resume; append a SITTING line each sitting), forms_numbers_walk/ (the working scripts copied from the old
 scratchpad on 2026-09-12, the backup copies of records pruned: seq_record.py, seq_stitch.py, add_types_*.py, write_*_docket.py, *_dump.py, *_measure*.py,
 *_ink.py, *_rows_*.py, write_*_ledger.py, the docket parts; copy the latest to the new scratchpad and edit there).
-elijah_docket/tanakh.sqlite: the full-Tanakh lemma database (nested git, never commit from inside). The Talmud shelf is
+elijah_docket/tanakh.sqlite: the full-Tanakh lemma database (nested git, never commit from inside) — SINCE 2026-09-15 the code reads its
+copy Data/tanakh.sqlite, tracked in the repo; the nested folder keeps its own. The Talmud shelf is
 LOCAL (the export's segments "Tractate 12a:3"; Mishnah "Mishnah Nedarim 11:6"; the Sifrei on Numbers by piska and row;
 Onkelos by verse). The old scratchpad (may still exist on disk):
 <scratch>.
@@ -703,3 +710,19 @@ THE DECISIONS THE OWNER MAKES (ask ONE AT A TIME after compaction, before the de
 THE DESIGN'S SHAPE (to be written into its map — proposed home reviews/PORTABLE_repo_2026-09-15.md, the record; a root SETUP.md the deliverable for a clone): ONE ROOT — every file computes the repo root from its own location (the pattern already in the tools: HERE/ROOT from __file__), the 474 occurrences rewritten by ONE script in one pass (the forms excluded by rule, they are records); the runners' registry/store/dispositions paths through the root; THE PROBE THAT PROVES IT: `git clone` the repo into a temporary folder at ANOTHER path (with the store and the shelf provided as decision 2 says) and run there a runner, the tape's grade, the journal gate and the register gate — today it fails at the first absolute path, after the pass it is green; then every standing gate in place (the sweep 57/57, the tape 10/10, the journal gate, the daemon and dependency gates, the register gate, the probe files, the board's and the positions' gates); the symlink, the remote, the memory folder copied; the records (the recovery file's laws — the staging form and the paths in section 3 rewritten to the new name; THE_STEPS; THE_BRIEFING; README; memory's standing orders). NOT TOUCHED: the corpus, the hash, the units, the ledgers (append-only; old paths in old records stand).
 THE BOARD'S SERVER: left running on 127.0.0.1:8765 (a stray process; kill before the rename: `lsof -ti :8765 | xargs kill`).
 THE FIRST SITTING AFTER COMPACTION: #178's rereads, then decision (1) asked — the new name — then (2), then (3); the design written into its map before a line moves; the probe of the clone at another path written to FAIL first.
+
+## 28. ADDENDUM (2026-09-15, THE PORTABLE REPO — the owner's three decisions: the name TorahSim, a fetch script for the shelf, "commit push" first (d398857); the state doc's COMPACTION POINT #179)
+
+THE PASS DONE (reviews/PORTABLE_repo_2026-09-15.md design + AMENDED BY THE RUN + AS BUILT; decisions P1-P5): every path in the code
+computed from the file's own place (`_ROOT`, by logic/solo_tools/portable_pass.py — 367 files, 558 Python occurrences, 44 shell; two more rules
+the run taught: 27 exec sites given `_ROOT`, three path-from-pieces files); the Bible store Data/tanakh.sqlite tracked; the snapshot store
+torah_grok.SNAPSHOT-main-51801ca.sqlite (154 MB, over GitHub's file limit) a release asset named in Data/STORES_MANIFEST.txt; the shelf's
+manifest regenerated with sizes and hashes (6,363 files) and Data/fetch_shelf.py fetching it from Sefaria's bucket (the texts left the git
+repository in September 2026); SETUP.md at the root. portable_probes.py 0/5 → 5/5 (the clone at another path runs); the sweep 57/57 at
+6,378; the journal gate GREEN (hash 8b8fff1fa28953af); the register gate GREEN. THE LAST ACTS ON THE OWNER'S WORD: "commit push" → the
+GitHub rename (`gh repo rename TorahSim -R Josephtorah/Torah_Grok`; `git remote set-url origin https://github.com/Josephtorah/TorahSim.git`)
+→ the release stores-2026-09-15 with the snapshot asset → the memory folder copied to ~/.claude/projects/<project-folder>/memory (the
+old site session's 14 memory files archived beside it as memory_site_archive_2026-09-15) → .claude/settings.local.json's four path lines →
+`mv <repo-old> <repo>` and the symlink `<world-link> -> <repo>/World` → the owner restarts
+Claude Code in <repo>. THE NEW THREAD'S FIRST LINE: this file is at the same relative path in the renamed folder.
+THEN: DEUTERONOMY, chapters 1 to 3, the reading, on the owner's word.

@@ -6,13 +6,15 @@ case_source verses of every literal submit and the verse of every marker), (2) t
 (corpus_world.sqlite, read-only), (3) the entity registry's step9-scenes members. Prints, per unit: verses, tape
 events, tape markers, corpus events; then the UNCOVERED units (no tape event and no marker) grouped into contiguous
 stretches, by genre. Computed, never recited."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import re, os, sys, glob, sqlite3, collections
 import yaml
-ROOT = '<repo-old>'
+ROOT = _ROOT
 SEQ = os.path.join(ROOT, 'World/step9/cold_run_sequence.py')
 BOOK = {'Genesis': 'Gen', 'Exodus': 'Exod', 'Leviticus': 'Lev'}
 BO = {'Gen': 1, 'Exod': 2, 'Lev': 3}
-tdb = sqlite3.connect('file:%s/elijah_docket/tanakh.sqlite?mode=ro' % ROOT, uri=True)
+tdb = sqlite3.connect('file:%s/Data/tanakh.sqlite?mode=ro' % ROOT, uri=True)
 NV = {}   # (book, ch) -> verse count
 for b, c, n in tdb.execute("select book, chapter, count(*) from verses where book in ('Gen','Exod','Lev') group by book, chapter"):
     NV[(b, c)] = n

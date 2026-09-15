@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE MISHPATIM RE-COMPILATION PASS (2026-09-02, under the compiler law)
 # Owner's order: "Ok run it and report what you find."
@@ -27,7 +29,7 @@ import sqlite3, sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from cold_run_lev24 import talion as lev24_talion
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):

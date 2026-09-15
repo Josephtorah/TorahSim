@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # NUM 9:1-14 — THE SECOND PASSOVER (THE TENT sitting 2, 2026-09-09; World/step9/THE_TENT.md section 2).
 # The first Numbers span compiled, and the second CASE-BORN law: the run halts on the unclean men (9:8
@@ -25,7 +27,7 @@ import effects_layer as FX
 import world_engine as WE
 import cold_run_pesach as PS                     # THE EDGE (dependency_dispositions.yaml: pesach_sheni -> pesach CALL, reference, procedure)
 
-db = sqlite3.connect('<repo-old>/elijah_docket/tanakh.sqlite')
+db = sqlite3.connect((_ROOT + '/Data/tanakh.sqlite'))
 
 def strip(s):
     return ''.join(c for c in s if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))

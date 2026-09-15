@@ -1,12 +1,14 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 11b: THE MEASUREMENT PASS ON THE RUNNER'S PROBE TOKENS AND PHRASE SEATS before cold_run_midian.py is typed (7b's lesson:
 # the hand's forms fall; type every token and every seat list from this print). Also the callees' values the runner will assert.
 import sys, io, contextlib, re, sqlite3, collections
-sys.path.insert(0, '<repo-old>/World/step9')
+sys.path.insert(0, (_ROOT + '/World/step9'))
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS
     import cold_run_balak as BK, cold_run_beha as BH, cold_run_chukat as CK, cold_run_shemini as SH, cold_run_incense_shekel as IS, cold_run_bamidbar as BM
-db = sqlite3.connect('<repo-old>/elijah_docket/tanakh.sqlite')
+db = sqlite3.connect((_ROOT + '/Data/tanakh.sqlite'))
 def strip(s): return ''.join(c for c in s if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
 _V = collections.OrderedDict()
 for b, c, v, he in db.execute("SELECT v.book, v.chapter, v.verse, w.he FROM words w JOIN verses v ON w.verse_id=v.id ORDER BY v.id, w.idx"):

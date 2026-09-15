@@ -12,6 +12,8 @@ The five motions, in order:
  (5) the graded matrix printed with per-cell provenance and fractions.
 Zero-report law: every claimed ink token is probed before anything runs.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 # ---- THE HONEST-PAIRING GUARD (sitting C retrofit, 2026-09-05) ------------
 # Every expected value this runner grades against must be a LITERAL typed from
 # the answer sheet; the parser checks the source before anything runs, and the
@@ -26,7 +28,7 @@ print('guard: %d expectations checked, every one a literal from the answer sheet
 import sqlite3, sys, os
 import io as _io, contextlib as _ctx
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):

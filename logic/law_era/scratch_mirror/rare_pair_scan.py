@@ -14,16 +14,18 @@ Output: scratchpad files rare_pairs_3.txt / rare_pairs_4.txt, ranked by
 token rarity (rarest component words first).
 Usage: python3 logic/law_era/scratch_mirror/rare_pair_scan.py
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import re
 import sqlite3
 from collections import defaultdict
 
-ROOT = "<repo-old>"
+ROOT = _ROOT
 SCRATCH = ("<scratch-root>/"
            "4ca32657-770b-417a-8a21-73333c8d5f75/scratchpad")
 POINT = re.compile(u"[֑-ׇ]")
 
-db = sqlite3.connect(ROOT + "/elijah_docket/tanakh.sqlite")
+db = sqlite3.connect(ROOT + "/Data/tanakh.sqlite")
 verses = {}   # id -> (book, ref, [tokens])
 freq = defaultdict(int)
 for vid, book, ch, vs in db.execute(

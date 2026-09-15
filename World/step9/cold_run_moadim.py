@@ -33,6 +33,8 @@ The five motions, in order:
 Zero-report law: every claimed ink token is probed before anything
 runs; the answer sheet is verified in its own ink.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effects_layer as FX
@@ -61,8 +63,8 @@ print('routing receipts: cold_run_pesach CALLED — eating_time %r, window %r; c
       % (PS_EAT, PS_WIN, OLAH['disposition']['v'], CHATAT['place']['v'], CSA['place']['v'], CSA['eater']['v'],
          OMER_MIN['v'], FF, PIL))
 
-ROOT = '<repo-old>'
-db = sqlite3.connect(ROOT + '/elijah_docket/tanakh.sqlite')
+ROOT = _ROOT
+db = sqlite3.connect(ROOT + '/Data/tanakh.sqlite')
 
 
 def strip(s):

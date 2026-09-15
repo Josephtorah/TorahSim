@@ -1,10 +1,12 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 12b — THE COMPILE OF GAD AND REUBEN, Numbers 32:1-42 (2026-09-12; the owner: "Go"): THE RECONNAISSANCE
 # before the measurement pass — the callee modules' defs, their asks, their DATA keys and their uppercase tables (so the measure's calls
 # are typed from THIS print, never guessed); the kinds and effects on file whose names touch the chapter's matter; the registry map for
 # the chapter's tokens; the zelophehad runner's plea kinds (36:1-4's line is the tape's neighbour).
 import sys, io, re, contextlib, inspect, collections, yaml
-ROOT = '<repo-old>'
+ROOT = _ROOT
 sys.path.insert(0, f'{ROOT}/World/step9')
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS

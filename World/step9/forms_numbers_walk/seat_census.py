@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 8 — THE SECOND CENSUS (2026-09-11): SEAT the 12 claims of the manifest into the draft unit as WITNESS_READ
 # operators (sitting 7's rhythm, seat_balak.py: one operator per claim at its FIRST verse's step, the [claim ID] marker in the prose,
@@ -5,7 +7,7 @@
 # (the unit's first six verses + its last) before the ritual. Every cite is checked against the ledger's CITE INDEX before a byte is
 # written; the yaml is re-loaded after. The prose is the manifest's own claim_en, so the operator and the claim cannot drift apart.
 import json, re, yaml
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-11'
 UID, CH, LO, HI = 'num_26_second_census', 26, 1, 65
 SEATS = [('PN26A-01', 1, 'the_lord_said_to_moses_and_eleazar', 'the_command_shortened_the_verb_supplied_the_exodus_generation_named'),

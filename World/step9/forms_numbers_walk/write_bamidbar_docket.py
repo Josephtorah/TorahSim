@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK — the compile of Bamidbar (2026-09-09): THE EXAM DOCKET for Numbers 1:1-4:20, written from the dump the shelf
 # scan produced (scratchpad/bamidbar_docket_dump.txt: the LINK rows = every Babylonian Talmud / Mishnah / Tosefta segment on the
@@ -6,7 +8,7 @@
 # rows on another subject, read and set aside); the coverage is COMPUTED from the dump, never typed. Append-only once written.
 import re, os
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 OUT = f'{ROOT}/logic/oral_triage/num_01_04_bamidbar_exam_2026-09-09.md'
 assert not os.path.exists(OUT), OUT
 dump = open('<scratch>/bamidbar_docket_dump.txt', encoding='utf-8').read()

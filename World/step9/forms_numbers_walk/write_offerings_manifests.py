@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 9 — THE OFFERINGS CALENDAR (2026-09-11): THE CLAIMS of Numbers 28:1-29:39, three manifests for the three draft
 # units, read off this sitting's three ledgers, every claim LABELED (World/step9/CLAIM_LABELS.md's vocabulary), a machine check where the ink
@@ -5,7 +7,7 @@
 # PN28B-, PN29A- (Pinchas, chapters 28 and 29). Written once (the files must not exist; each ID prefix checked absent from every existing
 # manifest and unit). Every source cite is checked against its ledger's CITE INDEX before a byte is written.
 import json, os, re, sqlite3, glob
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-11'
 db = sqlite3.connect(f'file:{ROOT}/torah_grok.SNAPSHOT-main-51801ca.sqlite?mode=ro', uri=True)
 def cut(book, ch, v, word, n, nth=0):

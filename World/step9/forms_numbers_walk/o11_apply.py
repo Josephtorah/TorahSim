@@ -2,9 +2,11 @@
 """o11_apply.py — write the decided middah labels into the claims manifests (byte-faithful dump), print the census.
 Usage: python3 o11_apply.py <decisions.py>   (the decisions module defines BATCH, DEFAULT(uid, claim) -> label|None, EXCEPTIONS {id: label}, DEFER {ids})
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import glob, json, os, sys, importlib.util, collections, re
 
-MAN = '<repo-old>/logic/oral_audit/manifests'
+MAN = (_ROOT + '/logic/oral_audit/manifests')
 CODE = re.compile(r'^(ink|plain|H|I(?:[1-9]|1[0-3])|E(?:[1-9]|[12][0-9]|3[0-2])|M-\d{2})(?:\s*\(.*\))?\s*$', re.S)
 
 def load(path):

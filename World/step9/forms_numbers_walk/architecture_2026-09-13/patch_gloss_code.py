@@ -1,10 +1,12 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE PROJECT REVIEW, finding 13's code side (2026-09-13; the owner: "Yes don't skip"): the ninety-character window of the gloss lint
 # stops at a PERIOD (GLOSS_NEAR = ^[^.]{0,90}?(marker)), so a "..." inside a Hebrew quotation strands every word before it. Each long
 # quotation is cut into short glossed pieces with the ellipsis character; four English notes get their marker; the circumcision regex
 # is built from a list whose every form carries its gloss in a comment. Every replacement asserted once; the regex asserted equal.
 import re
-R = '<repo-old>/'
+R = (_ROOT + '/')
 def patch(path, pairs):
     t = open(R + path, encoding='utf-8').read()
     for old, new in pairs:

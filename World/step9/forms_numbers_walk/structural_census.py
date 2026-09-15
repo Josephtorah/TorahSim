@@ -1,14 +1,16 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE STRUCTURAL CENSUS — a MEASUREMENT for the open discussion (the state doc's #135), 2026-09-11. NO BUILD, NO RECORD: the print is the
 # deliverable. Every seat of the register's key words and every declared total with its parts, Genesis 1 -> Numbers 26 on the Tanakh DB
 # (lemma = Strong's number with prefix components), the numerals by the step-9 parser (cold_run_sequence.ink_numbers).
 import sqlite3, sys, io, re, contextlib, collections
-ROOT = '<repo-old>'
+ROOT = _ROOT
 sys.path.insert(0, f'{ROOT}/World/step9')
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS
 def N(b, c, v): return CS.ink_numbers(CS.verse_words(b, c, v))
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 def plain(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
 TORAH = ['Gen', 'Exod', 'Lev', 'Num', 'Deut']
 rows = db.execute("SELECT v.book, v.chapter, v.verse, w.idx, w.he, w.lemma, w.morph FROM words w JOIN verses v ON w.verse_id=v.id WHERE v.book IN ('Gen','Exod','Lev','Num','Deut') ORDER BY v.id, w.idx").fetchall()

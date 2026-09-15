@@ -25,6 +25,8 @@ runner runs and typed below as literals; the run-derived counts (timers, writes,
 writes) are typed from the first run and labeled so — evidence read before it is typed, reproduced by every run after.
 Score line: "n/n checkpoints"; exit 1 on a miss.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import os, sys, io, re, json, time, contextlib, collections, sqlite3
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -143,7 +145,7 @@ def daemons():
 
 def registry_map():
     """THE ONE WHO-IS-WHO: logic/corpus/entity_registry.yaml's members scoped to the step-9 scenes -> the entity id"""
-    d = yaml.safe_load(open('<repo-old>/logic/corpus/entity_registry.yaml', encoding='utf-8'))
+    d = yaml.safe_load(open((_ROOT + '/logic/corpus/entity_registry.yaml'), encoding='utf-8'))
     m = {}
     for ent in d['entities']:
         for mem in ent.get('members') or []:
@@ -154,7 +156,7 @@ def registry_map():
 
 # ==== INK BEGIN (the stitcher execs this block too — ONE copy of the parser) ====
 # ---- THE INK: the numeral parser over the Tanakh DB (every marker's number parsed, re-verified at run time) ----
-_DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+_DB = (_ROOT + '/Data/tanakh.sqlite')
 _con = sqlite3.connect('file:%s?mode=ro' % _DB, uri=True)
 UNITS = {'אחת': 1, 'אחד': 1, 'שתים': 2, 'שנים': 2, 'שנתים': 2, 'שלש': 3, 'שלשה': 3, 'ארבע': 4, 'ארבעה': 4, 'חמש': 5, 'חמשה': 5,
          'שש': 6, 'ששה': 6, 'שבע': 7, 'שבעה': 7, 'שמנה': 8, 'שמנת': 8, 'שמונים': 80, 'תשע': 9, 'תשעה': 9, 'עשר': 10, 'עשרה': 10,
@@ -2702,7 +2704,7 @@ def checkpoints(w, M, reg, quiet=False):
        (N_('Num', 15, 4), N_('Num', 15, 5), N_('Num', 15, 6), N_('Num', 15, 7), N_('Num', 15, 9), N_('Num', 15, 10), N_('Num', 15, 11), N_('Num', 28, 14), N_('Exod', 29, 40), N_('Num', 14, 18), ink_ordinals(verse_words('Num', 13, 22))))
     ob = lambda eid, val: [e.get('open') for e in w.entity(eid).ledger if e['effect'] == 'commanded' and e.get('value') == val]
     cp('CF8 the closes: the sending\'s debit on Moses CLOSED by 13:3, the questionnaire\'s on the twelve CLOSED by 13:27, the turn back\'s on Israel CLOSED by 21:4 since THE NUMBERS WALK 6b (2026-09-11 — its run: law_chukat\'s journeyed_by_the_red_sea_way closes law_shelach\'s entry; OPEN at 4b and 5b)', ([False], [False], [False]), (ob('moses', 'the_sending'), ob('the-twelve-spies', 'the_questionnaire'), ob('israel_people', 'the_turn_back')))
-    hormah = [e for e in yaml.safe_load(open('<repo-old>/logic/corpus/entity_registry.yaml', encoding='utf-8'))['entities'] if e['id'] == 'hormah']
+    hormah = [e for e in yaml.safe_load(open((_ROOT + '/logic/corpus/entity_registry.yaml'), encoding='utf-8'))['entities'] if e['id'] == 'hormah']
     cp('CF9 THE PROLEPTIC NAME: Hormah\'s registry row carries 14:45 (the use) and 21:3 (the naming) — the name six chapters before its naming (read off the registry\'s bytes)', (True, True), (bool(hormah) and '14:45' in hormah[0]['en'], bool(hormah) and '21:3' in hormah[0]['en']))
     # ---- THE NUMBERS WALK 5b (2026-09-10; NUMBERS_WALK.md "Sitting 5b"): KORACH'S CHECKPOINTS — the definite numeral, the two morrow timers on the undated stretch, the plague's count, the death-mode's OPEN row, the twelve staffs, the staff beside the jar, no more wrath, the arithmetic by CALL, the closes and the pointer paid ----
     import cold_run_korach as KR
@@ -2719,7 +2721,7 @@ def checkpoints(w, M, reg, quiet=False):
     lv = w.entity('the-levites').ledger
     cp('CK7 "NO MORE WRATH" — 18:5\'s clause = 1:53\'s with the one token added (computed: %s — עוד, "more"); the 1:53 guard on the Levites\' ledger and the 18:5 watch both standing' % KR.WRATH_ADDED, (['עוד'], True, 1), (KR.WRATH_ADDED, any(e['effect'] == 'commanded' and e.get('value') == 'the_guard' for e in lv), len([e for e in lv if e['effect'] == 'watch_owed'])))
     cp('CK8 THE ARITHMETIC — the tithe of the tithe = 1/100; 18:16 [5, 20] = 3:47\'s by the shekel engine\'s seat; the twenty-four gifts\' two twelves', (Fraction(1, 100), [5, 20], True, 24), (KR.TITHE_OF_TITHE, N_('Num', 18, 16), 'Num 18:16' in KR.IS_SEATS, len(KR.DATA['the_twenty_four']['value']['sanctuary']) + len(KR.DATA['the_twenty_four']['value']['borders'])))
-    dep = open('<repo-old>/World/step9/dependency_dispositions.yaml', encoding='utf-8').read()
+    dep = open((_ROOT + '/World/step9/dependency_dispositions.yaml'), encoding='utf-8').read()
     cp('CK9 THE CLOSES and the pointer PAID — the censers\' debit on Korach CLOSED by 16:18, the get-up on Israel by 16:27, the staffs\' on Moses by 17:22; 15:20\'s terumah pointer flipped OWED -> CALL (shelach -> korach)', ([False], [False], [False], True), (ob('korach', 'the_censers'), ob('israel_people', 'get_up_from_the_dwelling'), ob('moses', 'the_staffs'), 'from: shelach, to: korach, disposition: CALL' in dep))
     # ---- THE NUMBERS WALK 6b (2026-09-11; NUMBERS_WALK.md "Sitting 6b"): CHUKAT'S CHECKPOINTS — the taught parser, the four markers, the thirty-eight years' fire, the mourning's fire, Miriam's day, the spec/run delta at the rock, the succession by CALL, the closes, the proleptic name closed, the land east of the Jordan and Arad's order ----
     import cold_run_chukat as CK

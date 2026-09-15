@@ -1,9 +1,11 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 6 — CHUKAT (2026-09-11): THE RECORDS, written once, after the rituals and the corpus bake — gated on the
 # fold's PREDICTED numbers read back from CORPUS_TRUTH (units 196, standing 2023) and on the chain log's three RITUAL COMPLETE lines.
 # Every insertion checks its anchor and its absence first (append-only; never twice).
 import re, os, sys
-ROOT = '<repo-old>'
+ROOT = _ROOT
 SP = os.path.dirname(os.path.abspath(__file__))
 MEM = '<memory>'
 truth = open(f'{ROOT}/logic/corpus/CORPUS_TRUTH.py', encoding='utf-8').read()

@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """The block-1 CODE REPORT as an EPUB — developer voice, verse-by-verse,
 tree/morphology/oral-layer/inheritance per verse. TTS-oriented prose."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import zipfile, html, time, os
 
-OUT = "<repo-old>/logic/law_era/exo_21_block1_code_report.epub"
+OUT = (_ROOT + "/logic/law_era/exo_21_block1_code_report.epub")
 TITLE = "Code Review: Exodus 21, Block One — A Full-Stack Reading of the Slave Laws"
 
 CH = []

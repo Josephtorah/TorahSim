@@ -23,12 +23,14 @@ window. all titels should display 3 rows at all times" — every group's tile ar
 height; a long line inside a tile clipped to two lines, the whole in its tooltip); past three rows the window scrolls inside itself; at a
 step that creates tiles the window scrolls so the first new tile is its top row and the page scrolls the group's heading to the top of the
 screen. (This amends the agreed shape's "no panes scrolling inside" on the owner's word.)"""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import json, html, os, re, sqlite3
 import yaml
 HERE = os.path.dirname(os.path.abspath(__file__))
-SEG = '<repo-old>/World/journal/data/L3_run_cold_run_sequence_seed_isaac.jsonl'
-REG = '<repo-old>/logic/corpus/entity_registry.yaml'
-DB = '<repo-old>/World/journal/data/world.sqlite'
+SEG = (_ROOT + '/World/journal/data/L3_run_cold_run_sequence_seed_isaac.jsonl')
+REG = (_ROOT + '/logic/corpus/entity_registry.yaml')
+DB = (_ROOT + '/World/journal/data/world.sqlite')
 # THE READING ERA'S BIRTHS — the things the reading names as created (the ids are the registry's transliterations, glossed here in English as
 # the law requires) and the board's group for each. Their verses are read from the entities view of the one database (the first mention of
 # each id), not typed: the August tree's node.born rows are retired since D7's merge (2026-09-14). The dict's order breaks ties at one verse.

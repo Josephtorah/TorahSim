@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 9 — THE OFFERINGS CALENDAR (2026-09-11): SEAT the claims of one manifest into its draft unit as WITNESS_READ operators
 # (sitting 8's rhythm, seat_census.py: one operator per claim at its FIRST verse's step, the [claim ID] marker in the prose, the cites the
@@ -5,7 +7,7 @@
 # verses + its last) before the ritual. Every cite is checked against the ledger's CITE INDEX before a byte is written; the yaml is re-loaded
 # after. The prose is the manifest's own claim_en, so the operator and the claim cannot drift apart. Usage: seat_offerings.py <uid>
 import json, re, sys, yaml
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-11'
 UID = sys.argv[1]
 SPEC = {

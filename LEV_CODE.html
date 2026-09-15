@@ -29,7 +29,7 @@ Zero-report law: every claimed ink token is probed before anything runs.
 """
 import sqlite3, sys, os
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = '<repo>/Data/tanakh.sqlite'
 db = sqlite3.connect(DB)
 
 def strip(s):
@@ -528,7 +528,7 @@ print('effects: all %d cases carry a REGISTERED effect or an honest '
 import sqlite3, sys
 import effects_layer as FX
 
-db = sqlite3.connect('<repo-old>/elijah_docket/tanakh.sqlite')
+db = sqlite3.connect('<repo>/Data/tanakh.sqlite')
 
 def strip(s):
     return ''.join(c for c in s if c != '/' and not (0x0591 &lt;= ord(c) &lt;= 0x05C7))

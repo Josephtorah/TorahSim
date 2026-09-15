@@ -70,6 +70,8 @@ wronged by words; 'you were strangers'); cold_run_yovel.interest /
 (the son redeemed, the donkey, the Caesarean). Deut 22:1-4, 24:10-17, 19:16,
 16:19, 7:20-22, Lev 24:15-16, 25:36-37, 27:28-29, Num 18:16 stay imports by name.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json, io, contextlib, collections
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -78,7 +80,7 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 assert GUARDED == 128, ("the guard counted %d expectations, the tripwire holds 128" % GUARDED)
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):
@@ -707,7 +709,7 @@ def land(q):
 
 # ---- (2) the answer sheet — the Mishnah rows as TEST DATA (verified by their own tokens) ----
 def load(t):
-    d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
+    d = json.load(open((_ROOT + '/Data/mishnah_%s_he.json') % t))
     return d['text'] if isinstance(d, dict) and 'text' in d else d
 SHELF = {'Sanhedrin': load('sanhedrin'), 'Bava Metzia': load('bava_metzia'), 'Bekhorot': load('bekhorot'), 'Chullin': load('chullin'), 'Terumot': load('terumot'),
          'Middot': load('middot'), 'Shevuot': load('shevuot'), 'Avodah Zarah': load('avodah_zarah'), 'Peah': load('peah'), 'Kiddushin': load('kiddushin'),

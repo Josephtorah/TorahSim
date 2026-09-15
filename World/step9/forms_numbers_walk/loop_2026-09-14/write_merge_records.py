@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """write_merge_records.py — D7'S MERGE: the records at the close (2026-09-14). Every anchor asserted once; idempotent.
 argv[1] = the journal gate's line, argv[2] = the probes' line (both from prints)."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sys
 
 def patch(path, pairs):
@@ -29,7 +31,7 @@ def prepend(path, text, marker):
     open(path, 'w', encoding='utf-8').write(text + t)
     print('%s: prepended %d chars' % (path.split('/')[-1], len(text)))
 
-R = '<repo-old>'
+R = _ROOT
 M = '<memory>'
 GATE = sys.argv[1] if len(sys.argv) > 1 else '{GATE}'
 PROBES = sys.argv[2] if len(sys.argv) > 2 else '{PROBES}'

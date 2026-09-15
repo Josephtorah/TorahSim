@@ -5,11 +5,13 @@ Question: which journal payloads change AFTER the engine logs them? Three snapsh
   row / cancel_timers / advance returning at depth 0 — the atomic block), (c) at the run's end (what the sink writes today).
 Printed per class: lines differing (a) vs (c), (b) vs (c), and WHICH KEYS differ at (b) vs (c). The design rides on this print.
 Runs the running world only, journaling into a temp dir (the repo's data dir untouched)."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import os, sys, json, collections, tempfile, io, contextlib, time
 TD = tempfile.mkdtemp(prefix='loop_measure_')
 os.environ['WORLD_JOURNAL_DIR'] = TD
-sys.path.insert(0, '<repo-old>/World/step9')
-sys.path.insert(0, '<repo-old>/World/journal')
+sys.path.insert(0, (_ROOT + '/World/step9'))
+sys.path.insert(0, (_ROOT + '/World/journal'))
 import world_engine as WE
 import world_journal as WJ
 from worldledger import canon

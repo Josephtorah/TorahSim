@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Render law01_scan_notes.md -> a house-style HTML page for the dev server.
 Derived artifact only; canonical source stays the markdown notes."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import html, re, time
 
 SRC = "law01_scan_notes.md"
-OUT = "<repo-old>/logic/pre_logic_methods_2026-07-28/LAW01_ORAL_SCAN_exo_21_1-11.html"
+OUT = (_ROOT + "/logic/pre_logic_methods_2026-07-28/LAW01_ORAL_SCAN_exo_21_1-11.html")
 
 text = open(SRC, encoding="utf-8").read()
 

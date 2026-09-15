@@ -1,3 +1,7 @@
+> **PORTABLE 2026-09-15 (reviews/PORTABLE_repo_2026-09-15.md).** Every path in this folder's code is computed from the file's own place;
+> the repo runs from any folder and from a fresh clone (SETUP.md at the root: the shelf and the stores by `Data/fetch_shelf.py`, the one
+> database by `build_world.py`). The Bible store the runners read is `Data/tanakh.sqlite`. The folder is renamed TorahSim.
+>
 > **THE CHECKPOINTS AS THEY FALL 2026-09-14 (World/step9/THE_LOOP.md item 5's build).** The tape's checkpoints are a function of the
 > world (`cold_run_sequence.checkpoints`); where each one falls is measured by `python3 step9/checkpoint_positions.py` (the table
 > `step9/checkpoint_positions.yaml`; `--check`); `python3 step9/world_stepper.py --by chapter --show checkpoints` shows them at a pause.

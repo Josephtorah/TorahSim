@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 8b — THE COMPILE OF THE SECOND CENSUS (2026-09-11; the owner: "Ok go" on the one-sitting form with the population
 # table built first): THE MEASUREMENTS, computed BEFORE the design paragraph is typed (1b's order). (1) the parser at the chapter's seats after
@@ -8,7 +10,7 @@
 # planned lines; (6) the kinds and effects on file for the names the design will use; (7) the callees on file, live; (8) the engine's state for
 # the population table — World has no table, the journal's classes, the views, the probes' counts.
 import sqlite3, sys, io, re, contextlib, collections, inspect, os, unicodedata
-ROOT = '<repo-old>'
+ROOT = _ROOT
 sys.path.insert(0, f'{ROOT}/World/step9')
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS
@@ -25,7 +27,7 @@ with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_family as FM
 def N(b, c, v): return CS.ink_numbers(CS.verse_words(b, c, v))
 def O(b, c, v): return CS.ink_ordinals(CS.verse_words(b, c, v))
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 def plain(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
 rows = db.execute("SELECT v.book, v.chapter, v.verse, w.he, w.morph FROM words w JOIN verses v ON w.verse_id=v.id ORDER BY v.id, w.idx").fetchall()
 by = {}

@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK 5b — the two gates' first fails READ and paid: (1) the daemon gate parses literal `if k == '...'` branches only and a kind
 # name of letters and underscores — the `if k in (...)` branches split, the digit kind renamed (fire_consumed_the_250 -> fire_consumed_the_two_
@@ -7,7 +9,7 @@
 # the registration edge — the import and the DAEMON_ORDER row in cold_run_sequence.py.
 import re
 S = '<scratch>'
-R = '<repo-old>/World/step9'
+R = (_ROOT + '/World/step9')
 def rep(path, a, b, n=1):
     s = open(path, encoding='utf-8').read()
     assert s.count(a) == n, (path, a[:70], s.count(a))

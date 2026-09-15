@@ -1,8 +1,10 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 7 — BALAK (2026-09-11): THE RECORDS — every anchor read from its file and asserted before a byte is written;
 # every entry appended (the ledgers append-only; the maps' sections added at their tails; the index lines rebuilt whole).
 import re, os
-ROOT = '<repo-old>'
+ROOT = _ROOT
 MEM = '<memory>'
 def rd(p): return open(p, encoding='utf-8').read()
 def wr(p, t): open(p, 'w', encoding='utf-8').write(t)

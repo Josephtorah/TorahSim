@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 # THE NUMBERS WALK 4b — the records' final appends, run after the sweep prints (SWEEPLINE replaced by the sweep's own line).
 import re, sys, os
 SCR = os.path.dirname(os.path.abspath(__file__))
@@ -8,7 +10,7 @@ def app(p, t):
     s = open(p, encoding='utf-8').read()
     if not s.endswith('\n'): s += '\n'
     open(p, 'w', encoding='utf-8').write(s + t)
-R = '<repo-old>'
+R = _ROOT
 # ---- NUMBERS_WALK.md: the sweep paragraph at the as-built's end ----
 app(f'{R}/World/step9/NUMBERS_WALK.md', """
 THE JOURNAL GATE AND THE SWEEP (the last two gates of the order): world_journal.py --gate GREEN — the running world's ledger 1,344 =

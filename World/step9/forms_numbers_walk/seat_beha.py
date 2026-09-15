@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 3 — BEHA'ALOTCHA (2026-09-10): SEAT the 34 claims of the four manifests into their draft units as WITNESS_READ
 # operators (sitting 2's rhythm, seat_naso.py: one operator per claim at its FIRST verse's step, the [claim ID] marker in the prose, the
@@ -5,7 +7,7 @@
 # unit's first six verses + its last) before the ritual. Every cite is checked against the ledger's CITE INDEX before a byte is written;
 # each yaml is re-loaded after. The prose is the manifest's own claim_en, so the operator and the claim cannot drift apart.
 import json, re, yaml
-ROOT = '<repo-old>'
+ROOT = _ROOT
 DATE = '2026-09-10'
 UNITS = [  # (uid, chapter, lo, hi, [(claim id, step verse, anchor, name)])
  ('num_08_menorah_levites', 8, 1, 26, [('BH08A-01', 2, 'toward_the_face_of_the_lampstand', 'the_lamps_face_the_middle'), ('BH08A-02', 3, 'and_aaron_did_so', 'the_three_facet_paradigm_again'),

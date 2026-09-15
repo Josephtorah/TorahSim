@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # FUNCTION_CATALOG.md REBUILT (2026-09-13; the standing order of #165, sitting C; RERUN the same evening at THE PROJECT REVIEW, finding 18,
 # on the owner's "Yes": the fourteen hand-written cards of 2026-09-05 no longer kept — their Score lines had aged as later spans called
@@ -6,7 +8,7 @@
 # daemon's docstring, cut), DEPENDENCY_INDEX.md (the span, the live calls) and DAEMON_INDEX.md (the daemon's row). The cards are
 # ordered by the scroll and renumbered. Nothing typed by hand but the section prose.
 import json, re, os, glob
-ROOT = '<repo-old>'
+ROOT = _ROOT
 SP = '<scratch>/'
 facts = json.load(open(ROOT + '/ARCHITECTURE/catalog_facts.json', encoding='utf-8'))
 heads = json.load(open(SP + 'runner_heads.json', encoding='utf-8'))

@@ -9,8 +9,10 @@ event are fixed HERE; the runner types them after this print.
 
 The daemon's writes: for a kind whose declared watches all land on the event's subject, the default; otherwise the event names
 its writes as (entity, effect) pairs — the same table the runner's law_mamre branches implement."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import yaml
-D = '<repo-old>/World/step9'
+D = (_ROOT + '/World/step9')
 FX = yaml.safe_load(open(D + '/effect_vocabulary.yaml', encoding='utf-8'))['effects']
 OP = {k: v['ledger_op'] for k, v in FX.items()}
 WATCH = yaml.safe_load(open(D + '/daemon_dispositions.yaml', encoding='utf-8'))['daemons']['law_mamre']['watches']

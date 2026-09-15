@@ -80,6 +80,8 @@ engine (the townsmen's messengers' oath). Num 7:14, 17:5, 28:3-10, 2 Sam 24:15, 
 23:15, 2 Chr 24:6-9, 26:18, Neh 10:33, Ezra 3:5, Ezek 20:12, 45:12, Mal 1:11, Deut 33:9 stay imports
 by name.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json, io, contextlib, collections
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -88,7 +90,7 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 assert GUARDED == 301, ("the guard counted %d expectations, the tripwire holds 301" % GUARDED)   # W6: +1 (the law layer's scene)
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):
@@ -1409,7 +1411,7 @@ def build(q):
 
 # ---- (2) the answer sheet — the Mishnah rows as TEST DATA (verified by their own tokens) ----
 def load(t):
-    d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
+    d = json.load(open((_ROOT + '/Data/mishnah_%s_he.json') % t))
     return d['text'] if isinstance(d, dict) and 'text' in d else d
 SHELF = {t: load(t.lower()) for t in ('Shekalim', 'Keritot', 'Yoma', 'Zevachim', 'Shabbat', 'Tamid', 'Menachot', 'Makkot', 'Horayot', 'Pesachim', 'Megillah', 'Sanhedrin', 'Beitzah', 'Middot')}
 def mrow(book, ch, m, must):

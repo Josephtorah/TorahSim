@@ -1,11 +1,13 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # O8 S1 (2026-09-08; NARRATIVE_GAPS.md section 4c) — register THE EXODUS STORY's effects from the verses' own words: the `he`
 # built from the pointed DB text (cantillation stripped) by word index into the verse, QUOTED; every count claim in `ink`
 # VERIFIED against Exodus's consonants before the append. Appends to World/step9/effect_vocabulary.yaml as TEXT under
 # `effects:` (a MAPPING — the E5/G1/G2 appender's form); idempotent. The five REUSED effects get their `ink` line extended.
 import sqlite3, yaml, re, sys
-ROOT = "<repo-old>"
-db = sqlite3.connect('file:%s/elijah_docket/tanakh.sqlite?mode=ro' % ROOT, uri=True)
+ROOT = _ROOT
+db = sqlite3.connect('file:%s/Data/tanakh.sqlite?mode=ro' % ROOT, uri=True)
 def _rows(book, ch, vs):
     return db.execute("SELECT w.he FROM words w JOIN verses v ON w.verse_id=v.id WHERE v.book=? AND v.chapter=? AND v.verse=? ORDER BY w.idx", (book, ch, vs)).fetchall()
 def pointed(ch, vs, lo, hi):

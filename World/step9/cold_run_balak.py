@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # NUM 22:1-25:19 — BALAK: THE CALL, THE SHE-ASS AND THE ANGEL, THE THREE STANDS AND THE FOUR PARABLES, PEOR, PHINEHAS AND THE MIDIAN
 # COMMAND (THE NUMBERS WALK sitting 7b, 2026-09-11; World/step9/NUMBERS_WALK.md "Sitting 7b"). The seventh Numbers portion compiled after its
@@ -42,10 +44,11 @@ HERE = _os.path.dirname(_os.path.abspath(__file__))
 # ONE copy of the numeral parser: the sequence runner's INK block executed here (the stitcher's way — no import edge)
 _SRC = open(_os.path.join(HERE, 'cold_run_sequence.py'), encoding='utf-8').read()
 _INK = {'re': re, 'sqlite3': sqlite3, 'os': _os, 'WE': WE}
+_INK['_ROOT'] = _ROOT   # THE PORTABLE REPO (2026-09-15): the INK block reads the store through the root; the exec'd namespace must carry it
 exec(_SRC.split('# ==== INK BEGIN')[1].split('# ==== INK END ====')[0].split('\n', 1)[1], _INK)
 ink_numbers, verse_words, ink_ordinals = _INK['ink_numbers'], _INK['verse_words'], _INK['ink_ordinals']
 
-db = sqlite3.connect('<repo-old>/elijah_docket/tanakh.sqlite')
+db = sqlite3.connect((_ROOT + '/Data/tanakh.sqlite'))
 
 def strip(s):
     return ''.join(c for c in s if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))

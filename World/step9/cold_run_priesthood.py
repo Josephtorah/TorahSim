@@ -61,6 +61,8 @@ windows); cold_run_minchah.remainder / .presentation / .frankincense_quantity /
 day is fetched by live call from cold_run_ordinances.firstling (E1 closed L5's OWED); Deut 23:2, 23:19,
 25:5 and Num 18 stay imports by name.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json, io, contextlib, collections
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -69,7 +71,7 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 assert GUARDED == 252, ("the guard counted %d expectations, the tripwire holds 252" % GUARDED)
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):
@@ -1190,7 +1192,7 @@ SCENE, _W = scene()
 
 # ---- (2) the answer sheet — the Mishnah rows as TEST DATA (verified by their own tokens) ----
 def load(t):
-    d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
+    d = json.load(open((_ROOT + '/Data/mishnah_%s_he.json') % t))
     return d['text'] if isinstance(d, dict) and 'text' in d else d
 SHELF = {'Bekhorot': load('bekhorot'), 'Terumot': load('terumot'), 'Yevamot': load('yevamot'), 'Zevachim': load('zevachim'), 'Temurah': load('temurah'),
          'Menachot': load('menachot'), 'Tamid': load('tamid'), 'Chullin': load('chullin'), 'Sanhedrin': load('sanhedrin'), 'Makkot': load('makkot'),

@@ -1,6 +1,8 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 # THE TOUR (2026-09-13): print the refuge runner's scene log for one manslayer and the office-holder's death — the tour quotes the machine's own lines.
 import sys, contextlib, io
-sys.path.insert(0, '<repo-old>/World/step9')
+sys.path.insert(0, (_ROOT + '/World/step9'))
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_refuge as R
 w = R._W

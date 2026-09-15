@@ -42,6 +42,8 @@ The five motions, in order:
 Zero-report law: every claimed ink token is probed before anything
 runs; the answer sheet is verified in its own ink.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import effects_layer as FX
@@ -50,8 +52,8 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))   # REVIEW_BEHAR item 6 — retrofit 2026-09-05
 print('honest-pairing guard: %d tests checked, every expectation a literal' % GUARDED)
 
-ROOT = '<repo-old>'
-db = sqlite3.connect(ROOT + '/elijah_docket/tanakh.sqlite')
+ROOT = _ROOT
+db = sqlite3.connect(ROOT + '/Data/tanakh.sqlite')
 
 
 def strip(s):

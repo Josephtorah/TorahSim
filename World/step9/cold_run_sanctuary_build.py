@@ -68,6 +68,8 @@ compiled at E1). Num 8:4, Num 1:46, Num 4:26, Deut 4:16-18, Deut 10:1, 1 Kgs 6:2
 (37:25-28), the anointing oil and incense (37:29), the laver (38:8), and the half-shekel census
 (38:24-26) are E4's: OWED, on the gate's worklist.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3, sys, os, json, io, contextlib, collections, math
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -76,7 +78,7 @@ from compile_guards import check_honest_pairing
 GUARDED = check_honest_pairing(os.path.abspath(__file__))
 assert GUARDED == 258, ("the guard counted %d expectations, the tripwire holds 258" % GUARDED)   # W6: +1 (the altar's fire duty scene)
 
-DB = '<repo-old>/elijah_docket/tanakh.sqlite'
+DB = (_ROOT + '/Data/tanakh.sqlite')
 db = sqlite3.connect(DB)
 
 def strip(s):
@@ -951,7 +953,7 @@ def build(q):
 
 # ---- (2) the answer sheet — the Mishnah rows as TEST DATA (verified by their own tokens) ----
 def load(t):
-    d = json.load(open('<repo-old>/Data/mishnah_%s_he.json' % t))
+    d = json.load(open((_ROOT + '/Data/mishnah_%s_he.json') % t))
     return d['text'] if isinstance(d, dict) and 'text' in d else d
 SHELF = {t: load(t.lower()) for t in ('Middot', 'Shekalim', 'Yoma', 'Kelim', 'Menachot', 'Tamid', 'Eruvin', 'Makkot', 'Sanhedrin', 'Shevuot', 'Sukkah', 'Terumot', 'Zevachim')}
 def mrow(book, ch, m, must):

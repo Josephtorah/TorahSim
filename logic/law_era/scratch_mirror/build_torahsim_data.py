@@ -18,12 +18,14 @@ public artifacts:
 The 147 MB private snapshot never leaves home; this exports the ~1 MB the
 public app actually needs. Rerun after gloss-override changes to refresh.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import json
 import shutil
 import sqlite3
 from pathlib import Path
 
-HOME = Path("<repo-old>")
+HOME = Path(_ROOT)
 PUB = Path("<repo>")
 SNAPSHOT = HOME / "torah_grok.SNAPSHOT-main-51801ca.sqlite"
 MAIN_DB = HOME / "torah_grok.sqlite"

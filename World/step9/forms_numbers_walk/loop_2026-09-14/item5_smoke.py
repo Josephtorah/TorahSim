@@ -1,5 +1,7 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sys, io, time, contextlib, collections
-sys.path.insert(0, '<repo-old>/World/step9'); sys.path.insert(0, '<repo-old>/World/journal'); sys.path.insert(0, '<repo-old>')
+sys.path.insert(0, (_ROOT + '/World/step9')); sys.path.insert(0, (_ROOT + '/World/journal')); sys.path.insert(0, _ROOT)
 t0 = time.time()
 with contextlib.redirect_stdout(io.StringIO()):
     import cold_run_sequence as CS

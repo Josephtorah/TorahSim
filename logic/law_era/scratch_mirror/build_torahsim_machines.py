@@ -14,9 +14,11 @@ changes):
 
 Rerun after any machine change at home to refresh the public copies.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 from pathlib import Path
 
-HOME = Path("<repo-old>/logic/law_era")
+HOME = Path((_ROOT + "/logic/law_era"))
 PUB = Path("<repo>/machines/exo21")
 
 OLD_SPANS = '''def _frozen_spans():

@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 13 — THE JOURNEYS, Numbers 33:1-56 (2026-09-12; the owner: "Go" after the #151 rereads, on the ruling READ THEN
 # COMPILE): THE FIRST MEASUREMENT PASS — the shelf's heads by position (the Sifrei's piskaot on 33: NONE expected, the shelf silent from 31:25
@@ -8,7 +10,7 @@
 # runs on (Onkelos EN + HE per verse; the pointed Hebrew with the store's own glosses). Nothing typed. Sitting 12's form (gad_dump.py).
 import json, os, re, html, sqlite3, sys, io, contextlib, unicodedata, glob
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 SP = os.path.dirname(os.path.abspath(__file__))
 C = 33
 def clean(s): return re.sub(r'<[^>]+>', '', html.unescape(s))
@@ -43,7 +45,7 @@ NEXT = sorted(os.path.basename(f)[:-5] for f in glob.glob(f'{ROOT}/logic/units/n
 print('num_33-36 drafts:', NEXT)
 for uid in ['num_32_gad_reuben'] + NEXT:
     st = steps(uid); print(uid, 'status draft' if 'status: draft' in unit_text(uid) else ('FROZEN' if 'status: frozen' in unit_text(uid) else 'NO STATUS'), st[0], st[-1], len(st), 'operators:' in unit_text(uid))
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 VC = dict(db.execute("SELECT chapter, COUNT(*) FROM verses WHERE book='Num' GROUP BY chapter").fetchall())
 print('VC 32-35:', {c: VC[c] for c in (32, 33, 34, 35)})
 # THE PRIOR READS

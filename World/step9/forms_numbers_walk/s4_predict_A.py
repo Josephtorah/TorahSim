@@ -7,8 +7,10 @@ the registry and the WRITE TIME of every timer: the ten story timers and the thr
 subject, fields) and the daemon's writes per event are fixed HERE; the runner types them after this print.
 
 A scene field is never named `day` (the engine's own word — S3's lesson); the ordinals are `ordinal`."""
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import yaml
-D = '<repo-old>/World/step9'
+D = (_ROOT + '/World/step9')
 FX = yaml.safe_load(open(D + '/effect_vocabulary.yaml', encoding='utf-8'))['effects']
 EV = yaml.safe_load(open(D + '/event_vocabulary.yaml', encoding='utf-8'))['events']
 OP = {k: v['ledger_op'] for k, v in FX.items()}

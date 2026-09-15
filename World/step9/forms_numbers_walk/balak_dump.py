@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # THE NUMBERS WALK, sitting 7 — BALAK (2026-09-11; the owner: "Continue" after the #130 rereads, on the ruling READ THEN COMPILE): THE
 # FIRST MEASUREMENT PASS over Numbers 22:1-25:19 — the shelf's heads by position, the drafts' spans (the portion Balak = 22:2-25:9; 22:1
@@ -6,7 +8,7 @@
 # reading runs on (Onkelos EN + HE per verse; the Sifrei's rows on 25; the pointed Hebrew with the store's own glosses). Nothing typed.
 import json, os, re, html, sqlite3, sys, io, contextlib, unicodedata
 from collections import Counter
-ROOT = '<repo-old>'
+ROOT = _ROOT
 SP = os.path.dirname(os.path.abspath(__file__))
 def clean(s): return re.sub(r'<[^>]+>', '', html.unescape(s))
 sif = json.load(open(f'{ROOT}/Data/sefaria_export/Sifrei_Bamidbar/en.json'))['text']
@@ -38,7 +40,7 @@ for uid in ('num_21_snakes_conquest', 'num_22_balak_bilam_call', 'num_23_oracles
         st = steps(uid); print(uid, 'status draft' if 'status: draft' in unit_text(uid) else 'NOT DRAFT', st[0], st[-1], len(st), 'operators:' in unit_text(uid))
     except FileNotFoundError as e: print(uid, 'NO FILE')
 print('num_26 candidates:', sorted(f for f in os.listdir(f'{ROOT}/logic/units') if f.startswith('num_2')))
-db = sqlite3.connect(f'file:{ROOT}/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
 VC = dict(db.execute("SELECT chapter, COUNT(*) FROM verses WHERE book='Num' GROUP BY chapter").fetchall())
 print('VC 21-26:', {c: VC[c] for c in (21, 22, 23, 24, 25, 26)})
 TRI = f'{ROOT}/logic/oral_triage'

@@ -1,3 +1,5 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 #!/usr/bin/env python3
 # O8 S3 — the generator of cold_run_mamre.py's MECHANICAL parts from the hand-model's own scene (o8_s3_scene.json) and the
 # registries: the probes (every kind's witnesses in the span), the answer sheet and the shelf rows, the daemon's branches
@@ -5,7 +7,7 @@
 # order, the slots. The cells and the tests are the hand's (s3_cells_A/B.py, s3_tests.py); the generator splices them in.
 import json, yaml, re
 S = '<scratch>/'
-D = '<repo-old>/World/step9/'
+D = (_ROOT + '/World/step9/')
 J = json.load(open(S + 'o8_s3_scene.json', encoding='utf-8'))
 EV = yaml.safe_load(open(D + 'event_vocabulary.yaml', encoding='utf-8'))['events']
 FX = yaml.safe_load(open(D + 'effect_vocabulary.yaml', encoding='utf-8'))['effects']
@@ -22,7 +24,7 @@ ROSTERS = [(25, 13, 'נבית'), (25, 13, 'קדר'), (25, 13, 'אדבאל'), (25
            (22, 21, 'עוץ'), (22, 21, 'בוז'), (22, 21, 'קמואל'), (22, 22, 'כשד'), (22, 22, 'חזו'), (22, 22, 'פלדש'), (22, 22, 'ידלף'), (22, 22, 'בתואל'), (22, 24, 'טבח'), (22, 24, 'גחם'), (22, 24, 'תחש'), (22, 24, 'מעכה'),
            (25, 2, 'זמרן'), (25, 2, 'יקשן'), (25, 2, 'מדן'), (25, 2, 'מדין'), (25, 2, 'ישבק'), (25, 2, 'שוח')]
 import sqlite3
-_db = sqlite3.connect('file:<repo-old>/elijah_docket/tanakh.sqlite?mode=ro', uri=True)
+_db = sqlite3.connect(('file:' + _ROOT + '/Data/tanakh.sqlite?mode=ro'), uri=True)
 def _toks(ch, vs):
     return [re.sub(r'[\u0591-\u05C7/]', '', h) for (h,) in _db.execute("SELECT w.he FROM words w JOIN verses v ON w.verse_id=v.id WHERE v.book='Gen' AND v.chapter=? AND v.verse=? ORDER BY w.idx", (ch, vs))]
 _res = []

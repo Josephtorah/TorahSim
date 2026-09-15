@@ -24,6 +24,8 @@ row; the end state MUST reconcile with corpus_world.fold() on every count
 and the state hash — the slow teaching run provably builds the same world.
 """
 from __future__ import annotations
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 
 import argparse
 import re
@@ -32,7 +34,7 @@ import sys
 import unicodedata
 from pathlib import Path
 
-REPO = Path("<repo-old>")
+REPO = Path(_ROOT)
 HERE = Path(__file__).resolve().parent
 DB = HERE / "world.sqlite"
 SCHEMA = HERE / "schema.sql"
