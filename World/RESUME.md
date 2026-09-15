@@ -1,3 +1,13 @@
+# ⚠ THE CHECKPOINTS AS THEY FALL 2026-09-14 (step9/THE_LOOP.md item 5's build, D27-D30): the tape's
+# checkpoint block is cold_run_sequence.checkpoints (a function of the world; checkpoints_partial for a
+# partial world); the fall of every checkpoint measured by step9/checkpoint_positions.py into
+# checkpoint_positions.yaml (199 rows; --check the gate); the stepper's --show checkpoints asks them live.
+
+# ⚠ THE BOARD 2026-09-14 (step9/THE_LOOP.md "THE BOARD — item 10's build", D22-D26): the window
+# over the one database — step9/world_board.py (a read-only local server + step9/world_board.html)
+# follows a session as the stepper seals its blocks; the stepper's --pace runs it with no keyboard;
+# step9/board_names.yaml the display names; step9/board_probes.py 8/8; --gate green.
+
 # ⚠ MERGED 2026-09-14 (D7'S MERGE, the owner's "ok go the merge"; step9/THE_LOOP.md "D7'S MERGE —
 # ONE DATABASE" design + as-built): world.sqlite in this folder is DELETED. The one
 # database is journal/data/world.sqlite — the fold of the frozen units is its L1 layer

@@ -15,6 +15,8 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
 ## SCOREBOARD (as of 2026-09-14, latest)
+- **THE CHECKPOINTS FALL WHERE THEY FALL: THE TAPE'S TESTS ARE ASKED AT THE VERSE WHERE EACH ONE SETTLES, THE VERSE MEASURED BY STEPPING THE BASE, AND A PAUSE OF THE STEPPER SHOWS THEM LIVE** (2026-09-14, on your "Ok do it"; World/step9/THE_LOOP.md "THE CHECKPOINTS AS THEY FALL — item 5's build"; D27-D30; 199 checkpoints, 48 true from the start, the refuge term settling at Numbers 21:4 where Eleazar is invested; checkpoint_probes.py 7/7; the tape and the journal unmoved). Nine items of THE LIST remain, three of them yours.
+- **THE BOARD IS REAL — THE WINDOW OVER THE LIVING DATABASE: A SMALL LOCAL SERVER READS THE ONE DATABASE AND THE PAGE FOLLOWS THE STEPPER AS IT SEALS EACH BLOCK; EVERY THING A TILE THAT APPEARS, LIGHTS, OWES AND COUNTS DOWN; EVERY NAME ENGLISH; NOTHING TYPED, NOTHING WRITTEN** (2026-09-14, on your "lets build it" after six versions of the mockup on your notes; World/step9/THE_LOOP.md "THE BOARD — item 10's build"; D22-D26; board_probes.py 8/8; the gate green; 150 paced steps to Genesis 12:20 watched forming in Chrome). Ten items of THE LIST remain, three of them yours.
 - **ONE DATABASE — THE MERGE DONE: THE READING'S WORLD IS A LAYER OF THE JOURNAL, THE OLD TABLES ARE VIEWS OVER IT, AND THE OLD FILE IS GONE** (2026-09-14, on your "ok go the merge"; World/step9/THE_LOOP.md "D7'S MERGE — ONE DATABASE"): the fold of the 210 frozen units written as the journal's L1 layer — 6,558 items, 3,015 verses of the spine, the counts and the hash in its header (D19); the World folder's sixteen tables now views over those rows with their old names (D20), so `World/ask.py at Gen.30.24` answers over the same file the runs write into; the reconciliation upstream twice (D21) — the entry against a fresh fold on nine counts and the hash, all green; the journal gate against the pinned truth; merge_probes.py 0/8 then 8/8; the August tree model retired; run_genesis.py retired. THE LIST: item 4 done, eleven remain.
 - **THE LOOP THAT WAITS IS BUILT — STEP 7 (c) THE PORT: THE LOOP READS ITS NEXT INPUT FROM A QUEUE OUTSIDE THE CODE, EVERY INPUT THROUGH THE ONE DOOR, AND A WORLD WITH INPUTS IS ITS OWN WORLD** (2026-09-14, on your "ok go c. keep up with what we need to do to finish this. go"; World/step9/THE_LOOP.md "Step 7 ... part (c)" and "TO FINISH THE LOOP — THE LIST"): a queue file read once and validated at open (an unregistered kind or an unknown field refused), its items entering at their positions in file order before the text's line, journaled as port:<queue>; the session audited against the base to the first input and forked there, sealed whole under the queue's name with the fork in its header; the text the first producer (no queue = the base byte for byte); the first real queue the daughters' two horns at the left edge of 27:5, both answered by the daemon; port_probes.py 0/9 then 9/9; every probe file green; the tape after. The port decides nothing about what the inputs are. THE LIST of what finishes the loop is in the map, twelve items, kept current: three are yours (the inputs themselves, time without a marker, the position of an input), two wait for Deuteronomy (the second pass, the readback), two are sittings (the merge, the checkpoints as they fall), the rest small or later.
 - **THE STEP-THROUGH EXISTS — THE LOOP'S STEP 7 (b) THE STEPPER BUILT: THE TAPE RUNS ONE CALL AT A TIME, STOPS AT ANY VERSE'S LEFT EDGE, RESUMES, AND AT EVERY PAUSE THE STATE IS READ FROM THE DATABASE** (2026-09-14, on your "ok go b"; World/step9/THE_LOOP.md "Step 7 ... part (b)"; World/step9/world_stepper.py): measured first — the tape is 1,507 engine calls on 1,507 lines and the checkpoints are computed after the run, not on it — so the tape runs as a generator that yields the verse of each call before making it (decision D15; no thread, no engine change); step by call, verse, chapter, marker, day, or to a verse; the replay is the audit at every call; step_probes.py 0/8 then 9/9 (the ninth added after the first real session read a double-quoted source as no verse); the real sessions: chapter 27 stepped by verse from the left edge of 27:1, the whole tape by marker in 158 steps with its segment the base's body byte for byte; the tape 10/10 after, every probe file green. Next on your word: (c) the port — the queue the loop reads at the pause, the text its first producer.
@@ -472,6 +474,30 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   Next alongside it: Leviticus (new spine — Sifra).
 
 ## ENTRIES (newest first)
+
+### 2026-09-14 — THE CHECKPOINTS FALL WHERE THEY FALL
+
+You asked what a checkpoint is: a test the tape carries with it — the flood's hundred and fifty days, Noah's six hundred at the flood, a
+refuge debit still open — checked once, at the very end of the run, in a pile the step-through could never see. "Ok do it." The block of
+tests is now a function of any world of the tape, and a world stopped mid-way runs it one statement at a time and says NOT YET where the
+text has not arrived. Then the base was stepped marker by marker and the block asked at every pause, so the verse where each test settles
+was measured, not typed: 199 tests, 48 true before the first line (pure arithmetic on the ink, or an absence the tape never fills), the
+flood's test settling on the ark-rested line at Genesis 8:4 — and the refuge term's test settling at Numbers 21:4, where Eleazar is
+invested, thirteen chapters before the law that names it; the hand would have put it at 35. A pause of the stepper now shows the tests
+fallen by then, asked live on that world. The tape's lines did not move and its grade did not change.
+
+### 2026-09-14 — THE BOARD: THE WINDOW OVER THE LIVING DATABASE
+
+You asked for it the day the loop was ruled: an interface that shows the current state at all times. Six versions of a mockup on your
+notes settled the picture — a board of tiles, one per thing in the world, grouped by kind; a left screen that keeps every thing in the
+order it appeared and clicks back to that step; every group a window three rows tall. Then "lets build it." The build is a reader: a small
+local server opens the one database read-only and serves one page; the page asks once a second for lines newer than the last it drew, and
+while it follows, every block the stepper seals is stepped and drawn as it lands. The controls replay what has arrived; Follow returns to
+the live end. Nothing on the page is typed and nothing on it writes — the stepper drives, at a pace, with no keyboard. Every name is
+English: the registry's for its entities, a table of display names for the units' own tokens, and a token without a name is refused by the
+board's gate. The first live run taught two flaws within the hour (a session starting over could outrun the old count between polls; a
+convenience copied from the mockup put unreached things on a sealed board) — both fixed and probed the same sitting. What is left on the
+loop's list is ten items, three of them yours.
 
 ### 2026-09-14 — ONE DATABASE: THE READING'S WORLD AND THE RUN'S WORLD IN ONE FILE
 

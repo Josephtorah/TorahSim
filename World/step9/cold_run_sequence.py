@@ -2573,76 +2573,25 @@ def rest_world(reg):
     return w
 
 
-def run():
-    t0 = time.time()
-    print('THE SEQUENTIAL RUN — the three books on one world (2026-09-07; O1 the small fixes, the sojourn fork)')
-    reg = registry_map()
-    print('registry map (the one who-is-who, scoped to the scenes): %s' % reg)
-    w, M = run_world(PARAMS['sojourn_start']['value'], reg, 'the running setting')
-    print('daemons registered: %d — the tent daemon first (THE LOOP step 3), the library\'s five, then the runners\' in the canonical order of their spans' % len(w.laws))
+def checkpoints(w, M, reg, quiet=False):
+    """THE CHECKPOINTS AS THEY FALL (THE LOOP item 5, 2026-09-14; THE_LOOP.md "THE CHECKPOINTS AS THEY FALL — item 5's build": D27 THE CHECKPOINTS
+    ARE A FUNCTION OF THE WORLD) — the tape's checkpoint block, moved here VERBATIM from run() (its home since the sequential run began), as a
+    function of any world of the tape and its marker table: the run's derived names recomputed from the world's own log; every cp a row
+    (name, declared, computed, ok) in the block's order (c3's rows carry no declared/computed — they are the 430's, graded inside c3); the
+    engine's checkpoint prints and returns, writes no line. Returns (rows, exported) — exported the names run() reads after the block.
+    A PARTIAL world runs this same source one statement at a time through checkpoints_partial (D28)."""
     C = w.clock.calendar
     D = lambda d: (C.year(d),) + C.date(d)[1:]
     markers = [l for l in w.log if l[0] == 'MARKER']
     mF = sum(1 for l in markers if not l[2].get('retrograde') and not l[2].get('proleptic'))
-    mP = sum(1 for l in markers if l[2].get('proleptic')); mR = sum(1 for l in markers if l[2].get('retrograde'))
     events = [l for l in w.log if l[0] == 'EVENT']
     fires = [l for l in w.log if l[0] == 'TIMER-FIRE']; tset = [l for l in w.log if l[0] == 'TIMER-SET']
-    cancels = [l for l in w.log if l[0] == 'TIMER-CANCEL']; retro = [l for l in w.log if l[0] == 'RETRO-WRITE']; writes = [l for l in w.log if l[0] == 'WRITE']
-    print('\nTHE TAPE: %d events, %d markers (forward %d / proleptic %d / retrograde %d), %d ink re-checks; the clock ends at day %d = %r (creation year %d), the exodus era %r'
-          % (len(events), len(markers), mF, mP, mR, w.ink_checks, w.clock.day, D(w.clock.day), w.clock.year, w.clock.date_in('exodus')))
-    print('day 0 = %r (creation year 0, the stub month: the twenty-fifth of Elul — Vayikra Rabbah 29:1); Adam\'s day = day %d = %r; the first of Tishrei of year 1 = day %d'
-          % (D(0), M['born:the_human'], D(M['born:the_human']), C.first_year_start))
-    print('log classes: %s' % dict(collections.Counter(l[0] for l in w.log)))
-    skipped = [l for l in w.log if l[0] == 'SKIP']
-    print('timers: set %d, fired %d, cancelled %d; retro-writes %d; writes %d; skipped %d; entities on the ledger %d; pending timers %d' % (len(tset), len(fires), len(cancels), len(retro), len(writes), len(skipped), len(w.entities), len(w.timers)))
-    # THE LOOP step 3 INSTALLATION (2026-09-09): the instrument — the setting the world runs, the daemons by value, the pending named
-    # (counted as debt, D2), and under boot the count of calls the deferred from_event setting WOULD have skipped (measured, never a
-    # graded cell); the institutions' in_force entries as the tent daemon wrote them
-    IR = w.installation_report()
-    print('INSTALLATION (setting %s): %d daemons — boot %d, by an act %d, pending %d (%s); skipped %d; would be skipped under from_event: %d calls'
-          % (IR['setting'], IR['registered'], IR['boot'], IR['by_act'], len(IR['pending']), ', '.join(IR['pending']) or 'none', IR['skipped'], IR['would_skip']))
-    inf = [(ent.eid, e.get('value'), e['case_source'].split(' — ')[0]) for ent in w.entities.values() for e in ent.ledger if e['effect'] == 'in_force']
-    print('the institutions in force (the tent daemon\'s writes): %d — %s' % (len(inf), '; '.join('%s by %s at %s' % t for t in inf) or 'none'))
-    # THE TENT (World/step9/THE_TENT.md; sitting 1 the blasphemer, 2026-09-09): the docket, the case-born rules, and the parameter row
-    # case_output printed as a FORK — the running setting's writes beside what the other setting would have written
-    CO = WE.INSTALL_PARAMS['case_output']
-    docket = [(e.get('counterparty'), e.get('value'), e.get('covered_by'), 'closed by %s' % str(e.get('closed_by', '')).split(' — ')[0] if not e.get('open') else 'OPEN')
-              for ent in w.entities.values() for e in ent.ledger if e['effect'] == 'declaration_owed']
-    rules = [(ent.eid, e.get('value'), e['case_source'].split(' — ')[0]) for ent in w.entities.values() for e in ent.ledger if e['effect'] == 'rule_installed']
-    print('THE DOCKET (declarations owed): %d — %s' % (len(docket), '; '.join('%s (%s; covered_by %s; %s)' % t for t in docket) or 'none'))
-    print('case_output = %s (the running setting): rules installed %d — %s; THE FORK %s: %s' % (
-        CO['value'], len(rules), '; '.join('%s on %s at %s' % (v, eid, at) for eid, v, at in rules) or 'none',
-        [s for s in CO['settings'] if s != CO['value']][0], 'no rule_installed would be written — the instance\'s verdict alone' if CO['value'] == 'rule_for_the_generations' else 'rule_installed would be written'))
-    print('the eras set by markers: %d — %s' % (len(w.clock.eras), ', '.join(sorted(w.clock.eras))))
-    print('Isaac born %r (on Passover — the shelf\'s row); the eighth day %r; the exodus at day %d = %r; Sinai %r; the breaking %r; the morrow %r; the second ascent %r (Yom Kippur − 40; the tradition\'s first of Elul not on the local shelf); the second tablets %r; the erection %r; Lev 8:2 dated %r (the modeled intercalation puts a thirteenth month in creation-year %d)'
-          % (D(M['born:isaac']), D(M['eighth_day']), M['exodus'], D(M['exodus']), D(M['sinai']), D(M['breaking']), D(M['morrow']), D(M['second_ascent']), D(M['second_tablets']), D(M['erected']), D(M['lev8']), C.year(M['lev8'])))
-    print('the intercession\'s stretch by the machine: the morrow (32:30) to the second ascent = %d days — its forty is Deuteronomy\'s (9:18), owed to that book' % (M['second_ascent'] - M['morrow']))
-    print('TWO DATE COLUMNS (O9 T3): the LABEL (the count of year starts through the day) and the ELAPSED rendering (the label less one at the year grain) — the flood %d / %d, Abraham born %d / %d, the exodus %d / %d; the tradition\'s anno mundi is the elapsed column (Seder Olam\'s 1656 and 2448 are not on the local shelf — a remark; Avodah Zarah 9a:7-8\'s two thousand at Abraham\'s fifty-two and the 448 to the giving ARE: C12, C13)'
-          % (C.year(M['flood']), C.elapsed(M['flood']), C.year(M['born:abraham']), C.elapsed(M['born:abraham']), C.year(M['exodus']), C.elapsed(M['exodus'])))
-    print('\nWATCH COVERAGE (every daemon on one world — the zero-report instrument):')
-    w.print_coverage()
-    fired_daemons = [n for n, (s, f, k) in w.coverage().items() if f]
-    print('daemons that fired: %d of %d — %s' % (len(fired_daemons), len(w.laws), ', '.join(fired_daemons)))
-    dbl = collections.Counter()
-    for ent in w.entities.values():
-        for e in ent.ledger:
-            dbl[(ent.eid, e['effect'])] += 1
-    overlap = sorted((k, v) for k, v in dbl.items() if v > 1 and k[1] in OVERLAP_EFFECTS)
-    print('REPEATED WRITES on the overlap effects (since O2 the ink\'s own repeats only — the two mornings of Exod 36:3 under the donation\'s two law layers; one act, one writer per effect): %s' % overlap)
-    closes_done = sum(1 for ent in w.entities.values() for e in ent.ledger if str(e.get('closed_by', '')).startswith(('Gen ', 'Exod ', 'Lev ', 'Num ', 'Deut ')))   # THE TENT sitting 2 (2026-09-09): the second copy of the closes counter (the first at tuple_of) widened to the five books — the fourth book's closes were invisible to it   # O8 S1 (2026-09-08): the story's closes carry Exodus notes — the counter had read Genesis prefixes alone (written when every close was Genesis's)
-    open_entries = sum(len(ent.open_entries()) for ent in w.entities.values())
-    print('the tape\'s closes performed %d; open ledger entries at the end %d (Shelah\'s levirate_owed among them — the ink never closes it)' % (closes_done, open_entries))
-    gaps = []
-    for a, b in zip(events, events[1:]):
-        if b[1] - a[1] > 365 * 20:
-            gaps.append('%s -> %s: %d years' % (a[2].get('case_source', '')[:12], b[2].get('case_source', '')[:12], C.year(b[1]) - C.year(a[1])))
-    print('the tape\'s gaps longer than twenty years (no runner compiles narrative there): %s' % gaps)
-
-    # ---- THE CHECKPOINTS (declared by the text or the shelf; computed by the engine; a mismatch reported, never repaired) ----
-    print('\nTHE CHECKPOINTS')
-    R = []
+    closes_done = sum(1 for ent in w.entities.values() for e in ent.ledger if str(e.get('closed_by', '')).startswith(('Gen ', 'Exod ', 'Lev ', 'Num ', 'Deut ')))
+    R, rows = [], {}
     def cp(name, declared, computed, bound=None):
-        R.append((name, w.checkpoint(name, declared, computed, bound)))
+        ok = w.checkpoint(name, declared, computed, bound)
+        R.append((name, ok)); rows[name] = {"name": name, "declared": declared, "computed": computed, "ok": ok}
+    print('\nTHE CHECKPOINTS')
     n_ok = 0
     for b, a, t in (((5, 3), (5, 4), (5, 5)), ((5, 6), (5, 7), (5, 8)), ((5, 9), (5, 10), (5, 11)), ((5, 12), (5, 13), (5, 14)), ((5, 15), (5, 16), (5, 17)),
                     ((5, 18), (5, 19), (5, 20)), ((5, 21), (5, 22), (5, 23)), ((5, 25), (5, 26), (5, 27)), ((5, 28), (5, 30), (5, 31))):
@@ -3059,6 +3008,145 @@ def run():
     cp('C13 Avodah Zarah 9a:8 — from Abraham\'s fifty-two to the giving of the Torah four hundred and forty-eight years: the giving\'s elapsed year %d' % C.elapsed(M['giving']), 448, C.elapsed(M['giving']) - 2000)
     print('    the stretch\'s dates: the heap\'s morning %r, the Jabbok night %r, the sunrise %r, Sukkot %r, Shechem %r, Bethel again %r, the road %r, Hebron %r, Joseph seventeen %r, the prison dreams %r, the birthday %r, Pharaoh\'s dreams %r, the plenty\'s end %r, the famine\'s second %r, Beersheba %r, embalmed %r, the weeping\'s end %r, Atad %r / %r' % (
         D(M['heap_morning']), D(M['jabbok_night']), D(M['peniel_sunrise']), D(M['sukkot']), D(M['shechem']), D(M['bethel_again']), D(M['ephrath_road']), D(M['hebron']), D(M['age:joseph:17']), D(M['prison_dreams']), D(M['birthday']), D(M['pharaoh_dreams']), D(M['plenty_end']), D(M['famine_two']), D(M['beersheba_descent']), D(M['embalmed']), D(M['weeping_end']), D(M['atad']), D(M['atad_end'])))
+    out = [rows.get(n) or {'name': n, 'declared': None, 'computed': None, 'ok': ok} for n, ok in R]
+    return out, {'yE': yE}
+
+
+def checkpoint_names():
+    """the checkpoints the block names, in its order, read from this file's own source (D28): every cp(...) whose first argument is a
+    literal (or a literal formatted with %), its prefix the key; c3's literal names spliced where the block calls c3; a literal whose
+    prefix itself carries a % (the join's C3d rows, one per setting) is left to the run to name"""
+    import ast
+    tree = ast.parse(open(__file__, encoding='utf-8').read())
+    fns = {n.name: n for n in tree.body if isinstance(n, ast.FunctionDef)}
+
+    def literal(call):
+        a = call.args[0] if call.args else None
+        if isinstance(a, ast.Constant) and isinstance(a.value, str):
+            return a.value
+        if isinstance(a, ast.BinOp) and isinstance(a.left, ast.Constant) and isinstance(a.left.value, str):
+            return a.left.value
+        return None
+
+    def names_of(fn):
+        out = []
+        for st in fn.body:
+            for n in ast.walk(st):
+                if isinstance(n, ast.Call) and isinstance(n.func, ast.Name):
+                    if n.func.id == 'cp':
+                        lit = literal(n)
+                        if lit is not None and '%' not in lit.split(' ')[0]:
+                            out.append(lit)
+                    elif n.func.id == 'c3' and fn.name != 'c3':
+                        out.extend(names_of(fns['c3']))
+        return out
+    return names_of(fns['checkpoints'])
+
+
+def checkpoints_partial(w, M, reg):
+    """D28 A PARTIAL WORLD RUNS THE BLOCK ONE STATEMENT AT A TIME: checkpoints()'s own source, statement by statement, in a namespace of this
+    module with w, M, reg; a statement that raises is recorded and the run goes on, its names unbound; a checkpoint the world cannot
+    compute yet is a row with ok None (NOT YET), never a DIVERGE; nothing printed. Returns (rows in the block's order, the statements that
+    raised as (line, error))."""
+    import ast, io, contextlib
+    tree = ast.parse(open(__file__, encoding='utf-8').read())
+    fn = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == 'checkpoints')
+    ns = dict(globals()); ns.update(w=w, M=M, reg=reg)
+    failed = []
+    with contextlib.redirect_stdout(io.StringIO()):
+        for st in fn.body:
+            if isinstance(st, ast.Return):
+                break
+            try:
+                exec(compile(ast.Module(body=[st], type_ignores=[]), __file__, 'exec'), ns)
+            except BaseException as e:
+                failed.append((st.lineno, '%s: %s' % (type(e).__name__, str(e)[:80])))
+    R, rows = ns.get('R', []), ns.get('rows', {})
+    produced = [rows.get(n) or {'name': n, 'declared': None, 'computed': None, 'ok': ok} for n, ok in R]
+    # the block's order kept exactly: the produced rows in R's order, a NOT YET row put where an unproduced literal belongs
+    pos = {r['name'].split(' ')[0]: i for i, r in enumerate(produced)}
+    out, k = [], 0
+    for lit in checkpoint_names():
+        pre = lit.split(' ')[0]
+        if pre in pos:
+            while k <= pos[pre]:
+                out.append(produced[k]); k += 1
+        elif not any(r['name'].split(' ')[0] == pre for r in out):
+            out.append({'name': lit, 'declared': None, 'computed': None, 'ok': None})
+    out.extend(produced[k:])
+    return out, failed
+
+
+def run():
+    t0 = time.time()
+    print('THE SEQUENTIAL RUN — the three books on one world (2026-09-07; O1 the small fixes, the sojourn fork)')
+    reg = registry_map()
+    print('registry map (the one who-is-who, scoped to the scenes): %s' % reg)
+    w, M = run_world(PARAMS['sojourn_start']['value'], reg, 'the running setting')
+    print('daemons registered: %d — the tent daemon first (THE LOOP step 3), the library\'s five, then the runners\' in the canonical order of their spans' % len(w.laws))
+    C = w.clock.calendar
+    D = lambda d: (C.year(d),) + C.date(d)[1:]
+    markers = [l for l in w.log if l[0] == 'MARKER']
+    mF = sum(1 for l in markers if not l[2].get('retrograde') and not l[2].get('proleptic'))
+    mP = sum(1 for l in markers if l[2].get('proleptic')); mR = sum(1 for l in markers if l[2].get('retrograde'))
+    events = [l for l in w.log if l[0] == 'EVENT']
+    fires = [l for l in w.log if l[0] == 'TIMER-FIRE']; tset = [l for l in w.log if l[0] == 'TIMER-SET']
+    cancels = [l for l in w.log if l[0] == 'TIMER-CANCEL']; retro = [l for l in w.log if l[0] == 'RETRO-WRITE']; writes = [l for l in w.log if l[0] == 'WRITE']
+    print('\nTHE TAPE: %d events, %d markers (forward %d / proleptic %d / retrograde %d), %d ink re-checks; the clock ends at day %d = %r (creation year %d), the exodus era %r'
+          % (len(events), len(markers), mF, mP, mR, w.ink_checks, w.clock.day, D(w.clock.day), w.clock.year, w.clock.date_in('exodus')))
+    print('day 0 = %r (creation year 0, the stub month: the twenty-fifth of Elul — Vayikra Rabbah 29:1); Adam\'s day = day %d = %r; the first of Tishrei of year 1 = day %d'
+          % (D(0), M['born:the_human'], D(M['born:the_human']), C.first_year_start))
+    print('log classes: %s' % dict(collections.Counter(l[0] for l in w.log)))
+    skipped = [l for l in w.log if l[0] == 'SKIP']
+    print('timers: set %d, fired %d, cancelled %d; retro-writes %d; writes %d; skipped %d; entities on the ledger %d; pending timers %d' % (len(tset), len(fires), len(cancels), len(retro), len(writes), len(skipped), len(w.entities), len(w.timers)))
+    # THE LOOP step 3 INSTALLATION (2026-09-09): the instrument — the setting the world runs, the daemons by value, the pending named
+    # (counted as debt, D2), and under boot the count of calls the deferred from_event setting WOULD have skipped (measured, never a
+    # graded cell); the institutions' in_force entries as the tent daemon wrote them
+    IR = w.installation_report()
+    print('INSTALLATION (setting %s): %d daemons — boot %d, by an act %d, pending %d (%s); skipped %d; would be skipped under from_event: %d calls'
+          % (IR['setting'], IR['registered'], IR['boot'], IR['by_act'], len(IR['pending']), ', '.join(IR['pending']) or 'none', IR['skipped'], IR['would_skip']))
+    inf = [(ent.eid, e.get('value'), e['case_source'].split(' — ')[0]) for ent in w.entities.values() for e in ent.ledger if e['effect'] == 'in_force']
+    print('the institutions in force (the tent daemon\'s writes): %d — %s' % (len(inf), '; '.join('%s by %s at %s' % t for t in inf) or 'none'))
+    # THE TENT (World/step9/THE_TENT.md; sitting 1 the blasphemer, 2026-09-09): the docket, the case-born rules, and the parameter row
+    # case_output printed as a FORK — the running setting's writes beside what the other setting would have written
+    CO = WE.INSTALL_PARAMS['case_output']
+    docket = [(e.get('counterparty'), e.get('value'), e.get('covered_by'), 'closed by %s' % str(e.get('closed_by', '')).split(' — ')[0] if not e.get('open') else 'OPEN')
+              for ent in w.entities.values() for e in ent.ledger if e['effect'] == 'declaration_owed']
+    rules = [(ent.eid, e.get('value'), e['case_source'].split(' — ')[0]) for ent in w.entities.values() for e in ent.ledger if e['effect'] == 'rule_installed']
+    print('THE DOCKET (declarations owed): %d — %s' % (len(docket), '; '.join('%s (%s; covered_by %s; %s)' % t for t in docket) or 'none'))
+    print('case_output = %s (the running setting): rules installed %d — %s; THE FORK %s: %s' % (
+        CO['value'], len(rules), '; '.join('%s on %s at %s' % (v, eid, at) for eid, v, at in rules) or 'none',
+        [s for s in CO['settings'] if s != CO['value']][0], 'no rule_installed would be written — the instance\'s verdict alone' if CO['value'] == 'rule_for_the_generations' else 'rule_installed would be written'))
+    print('the eras set by markers: %d — %s' % (len(w.clock.eras), ', '.join(sorted(w.clock.eras))))
+    print('Isaac born %r (on Passover — the shelf\'s row); the eighth day %r; the exodus at day %d = %r; Sinai %r; the breaking %r; the morrow %r; the second ascent %r (Yom Kippur − 40; the tradition\'s first of Elul not on the local shelf); the second tablets %r; the erection %r; Lev 8:2 dated %r (the modeled intercalation puts a thirteenth month in creation-year %d)'
+          % (D(M['born:isaac']), D(M['eighth_day']), M['exodus'], D(M['exodus']), D(M['sinai']), D(M['breaking']), D(M['morrow']), D(M['second_ascent']), D(M['second_tablets']), D(M['erected']), D(M['lev8']), C.year(M['lev8'])))
+    print('the intercession\'s stretch by the machine: the morrow (32:30) to the second ascent = %d days — its forty is Deuteronomy\'s (9:18), owed to that book' % (M['second_ascent'] - M['morrow']))
+    print('TWO DATE COLUMNS (O9 T3): the LABEL (the count of year starts through the day) and the ELAPSED rendering (the label less one at the year grain) — the flood %d / %d, Abraham born %d / %d, the exodus %d / %d; the tradition\'s anno mundi is the elapsed column (Seder Olam\'s 1656 and 2448 are not on the local shelf — a remark; Avodah Zarah 9a:7-8\'s two thousand at Abraham\'s fifty-two and the 448 to the giving ARE: C12, C13)'
+          % (C.year(M['flood']), C.elapsed(M['flood']), C.year(M['born:abraham']), C.elapsed(M['born:abraham']), C.year(M['exodus']), C.elapsed(M['exodus'])))
+    print('\nWATCH COVERAGE (every daemon on one world — the zero-report instrument):')
+    w.print_coverage()
+    fired_daemons = [n for n, (s, f, k) in w.coverage().items() if f]
+    print('daemons that fired: %d of %d — %s' % (len(fired_daemons), len(w.laws), ', '.join(fired_daemons)))
+    dbl = collections.Counter()
+    for ent in w.entities.values():
+        for e in ent.ledger:
+            dbl[(ent.eid, e['effect'])] += 1
+    overlap = sorted((k, v) for k, v in dbl.items() if v > 1 and k[1] in OVERLAP_EFFECTS)
+    print('REPEATED WRITES on the overlap effects (since O2 the ink\'s own repeats only — the two mornings of Exod 36:3 under the donation\'s two law layers; one act, one writer per effect): %s' % overlap)
+    closes_done = sum(1 for ent in w.entities.values() for e in ent.ledger if str(e.get('closed_by', '')).startswith(('Gen ', 'Exod ', 'Lev ', 'Num ', 'Deut ')))   # THE TENT sitting 2 (2026-09-09): the second copy of the closes counter (the first at tuple_of) widened to the five books — the fourth book's closes were invisible to it   # O8 S1 (2026-09-08): the story's closes carry Exodus notes — the counter had read Genesis prefixes alone (written when every close was Genesis's)
+    open_entries = sum(len(ent.open_entries()) for ent in w.entities.values())
+    print('the tape\'s closes performed %d; open ledger entries at the end %d (Shelah\'s levirate_owed among them — the ink never closes it)' % (closes_done, open_entries))
+    gaps = []
+    for a, b in zip(events, events[1:]):
+        if b[1] - a[1] > 365 * 20:
+            gaps.append('%s -> %s: %d years' % (a[2].get('case_source', '')[:12], b[2].get('case_source', '')[:12], C.year(b[1]) - C.year(a[1])))
+    print('the tape\'s gaps longer than twenty years (no runner compiles narrative there): %s' % gaps)
+
+    # ---- THE CHECKPOINTS (declared by the text or the shelf; computed by the engine; a mismatch reported, never repaired) — the block is
+    # checkpoints() above since THE LOOP item 5 (2026-09-14, D27): the same statements, a function of the world; this call grades as before ----
+    _cprows, _cx = checkpoints(w, M, reg)
+    R = [(r['name'], r['ok']) for r in _cprows]
+    yE = _cx['yE']
     verdicts = ['%s %s' % (n.split(' ')[0], 'MATCH' if ok else 'DIVERGE') for n, ok in R]
 
     # ---- THE SOJOURN FORK (O1 f): the other two settings as their own worlds ----

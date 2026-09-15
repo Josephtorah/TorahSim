@@ -22,12 +22,12 @@ timers; --show reads the rows FROM THE DATABASE through the five views under the
 --pause waits for Enter between steps: a CONTROL word, never a data event (the port of part (c) is the only door for inputs).
 
 Run: python3 World/step9/world_stepper.py [--from <verse>] [--to <verse>] [--by call|verse|chapter|marker|day] [--steps N]
-     [--show open|ledger <entity>|custody|timers] [--pause] [--quiet] [--queue World/journal/port/<queue>.yaml]
+     [--show open|ledger <entity>|custody|timers|checkpoints] [--pause] [--pace S] [--quiet] [--queue World/journal/port/<queue>.yaml]
 THE PORT (part c, 2026-09-14; world_port.py): --queue names a file of inputs read once at open; the items due at each pause enter in file
 order through World.submit before the text's line; the session is then its own world (cold_run_sequence/port@<queue>), audited against the
 base up to the first input and forked there.
 """
-import os, re, sys, sqlite3, collections
+import os, re, sys, time, sqlite3, collections
 HERE = os.path.dirname(os.path.abspath(__file__))
 JOURNAL = os.path.normpath(os.path.join(HERE, '..', 'journal'))
 sys.path.insert(0, HERE)
@@ -91,11 +91,13 @@ class Stepper:
     def __init__(self, tape_source=None, world=None, out_dir=None, namespace=None, base=None, from_verse=None, source=SOURCE, queue=None):
         self.source = source
         self.P = {}
+        self.CS, self.reg, self._cp_shown = None, None, set()
         if tape_source is None:                        # THE REAL TAPE: the world built as run_to builds it (the import is the session's fixed price)
             import io, contextlib
             with contextlib.redirect_stdout(io.StringIO()):   # the runners announce their guards and probes at import — the session's screen is the state, not that
                 import cold_run_sequence as CS
             self.CS = CS
+            self.reg = CS.registry_map()      # THE CHECKPOINTS AS THEY FALL (item 5, D30): the block asked on the stepped world needs the registry map
             tape_source = tape_section(CS.__file__)
             namespace = dict(vars(CS))
             reg = CS.registry_map()
@@ -259,7 +261,11 @@ class Stepper:
                 'inputs': list(self._inputs_now), 'fork': self.fork, 'forked_by': self.forked_by}          # THE PORT (2026-09-14): the items that entered at this step; the fork once set
 
     def show(self, what, *args):
-        """rows FROM THE DATABASE under the session's source, through the five views: open | ledger <entity> | custody | timers"""
+        """rows FROM THE DATABASE under the session's source, through the five views: open | ledger <entity> | custody | timers;
+        and checkpoints — THE CHECKPOINTS AS THEY FALL (item 5, D30): the block asked LIVE on the stepped world, the rows the ones whose
+        measured fall (checkpoint_positions.yaml) is at or before this pause, each with its live verdict and NEW if it fell since the last pause"""
+        if what == 'checkpoints':
+            return self.checkpoints()
         db = self.sink.db
         if what == 'ledger':
             return WJ.ask(db, 'ledger', args[0], source=self.source)
@@ -273,10 +279,33 @@ class Stepper:
             elif what == 'timers':
                 sql, a = "select entity, effect, day_set, due, written_by, verse from run_timers where source = ? and outcome = 'pending' order by due, seq", (self.source,)
             else:
-                raise SystemExit('THE STEPPER: --show takes open | ledger <entity> | custody | timers')
+                raise SystemExit('THE STEPPER: --show takes open | ledger <entity> | custody | timers | checkpoints')
             return [dict(r) for r in c.execute(sql, a).fetchall()]
         finally:
             c.close()
+
+    def checkpoints(self):
+        """D30: the checkpoints fallen by this pause, asked live on this world (never recited from the table — the table gives the WHERE)"""
+        if self.CS is None:
+            raise SystemExit('THE STEPPER: --show checkpoints needs the real tape (a toy tape has no checkpoint block)')
+        import yaml
+        path = os.path.join(os.path.dirname(os.path.abspath(self.CS.__file__)), 'checkpoint_positions.yaml')
+        if not os.path.exists(path):
+            raise SystemExit('THE STEPPER: no checkpoint_positions.yaml — run python3 World/step9/checkpoint_positions.py first (the fall is measured, never typed)')
+        table = yaml.safe_load(open(path, encoding='utf-8'))['checkpoints']
+        n = len(self.sink.seg.events)
+        rows, failed = self.CS.checkpoints_partial(self.w, self.M, self.reg)
+        live = {r['name'].split(' ')[0]: r for r in rows}
+        out = []
+        for pre, t in table.items():
+            if t['ordinal'] <= n:
+                r = live.get(pre)
+                verdict = 'NOT YET' if r is None or r['ok'] is None else ('MATCH' if r['ok'] else 'DIVERGE')
+                out.append({'name': pre, 'verdict': verdict, 'new': pre not in self._cp_shown, 'falls_at': t['verse'], 'ordinal': t['ordinal'], 'final_on_the_base': t['final'],
+                            'declared': None if r is None else r['declared'], 'computed': None if r is None else r['computed'], 'what': t['name'][:110]})
+        self._cp_shown = {r['name'] for r in out}
+        out.sort(key=lambda r: (r['ordinal'], r['name']))
+        return out
 
     def close(self, quiet=True):
         """the session's seal: the partial or whole segment written, part (a)'s audit run"""
@@ -310,10 +339,14 @@ def main(argv):
     show = argv[argv.index('--show') + 1:argv.index('--show') + 3] if '--show' in argv else None
     if show and show[0] != 'ledger':
         show = show[:1]
-    pause, quiet = '--pause' in argv, '--quiet' in argv
+    if show and show[0] not in ('open', 'ledger', 'custody', 'timers', 'checkpoints'):
+        raise SystemExit('THE STEPPER: --show takes open | ledger <entity> | custody | timers | checkpoints')
+    pause, quiet, pace = '--pause' in argv, '--quiet' in argv, opt('--pace')      # --pace S: a step every S seconds with no keyboard (D26 THE PACE, 2026-09-14) — the watch mode the board reads
     st = Stepper(from_verse=frm, queue=queue)
     print('THE STEPPER (THE LOOP step 7 b): the tape one call at a time; the session journals as %s; --by %s%s%s' % (st.source, by, (' --from %s' % frm) if frm else '', (' --to %s' % to) if to else ''))
     print('the base: %s' % (os.path.basename(st.base) if st.base else 'none on disk — no audit'))
+    if pace is not None and not pause:
+        print('THE PACE: a step every %s s, no keyboard — watch it on the board (python3 World/step9/world_board.py)' % pace)
     if st.port is not None:
         print('THE PORT: the queue %s — %d item(s): %s; the session journals as %s%s' % (queue, len(st.port.items), ', '.join('%s@%s' % (it['id'], it['at'] or 'the first pause') for it in st.port.items), st.source,
               ('; WARNINGS: ' + '; '.join('%s (%s) lacks %s' % w for w in st.port.warnings)) if st.port.warnings else ''))
@@ -329,9 +362,16 @@ def main(argv):
         print_report(r)
         if show:
             rows = st.show(*show)
-            print('        --show %s: %d row(s) from the database' % (' '.join(show), len(rows)))
-            for row in rows[:40]:
-                print('          ' + ' | '.join('%s=%s' % (k, v) for k, v in row.items() if v is not None and k not in ('source', 'kind')))
+            if show[0] == 'checkpoints':
+                c = collections.Counter(r['verdict'] for r in rows)
+                print('        --show checkpoints: %d fallen by this pause (MATCH %d, DIVERGE %d, NOT YET %d), %d new since the last pause — asked live on this world'
+                      % (len(rows), c['MATCH'], c['DIVERGE'], c['NOT YET'], sum(1 for r in rows if r['new'])))
+                for row in [r for r in rows if r['new']][:40]:
+                    print('          NEW %-10s %-8s falls at %-14s %s' % (row['name'], row['verdict'], row['falls_at'], row['what']))
+            else:
+                print('        --show %s: %d row(s) from the database' % (' '.join(show), len(rows)))
+                for row in rows[:40]:
+                    print('          ' + ' | '.join('%s=%s' % (k, v) for k, v in row.items() if v is not None and k not in ('source', 'kind')))
         if pause and not st.done:
             try:
                 word = input('        [Enter] to step, q to quit: ').strip().lower()
@@ -340,6 +380,8 @@ def main(argv):
                 word = 'q'
             if word == 'q':
                 break
+        elif pace is not None and not st.done:
+            time.sleep(float(pace))
     path, nl, coerced = st.close(quiet=quiet)
     print('SESSION SEALED: %s (%d lines, coerced %d; %s); ask it: python3 World/step9/world_journal.py --ask ledger <entity> --world %s'
           % (path, nl, coerced, 'the whole tape' if st.done and st.next_verse is None and nl == len(st.base_lines or []) else 'a partial segment', st.source))

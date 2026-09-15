@@ -51,7 +51,9 @@ Repo: <repo-old> (sole truth). The public mirror TorahSim is downstream, relay o
 - COVERAGE IS COMPUTED, NEVER RECITED. Every "measured" claim goes through a script. A gate's FAIL is READ. A miss is
   evidence: read it, then retype from the print. THE MEASUREMENT PRINT HAS THE INDEX (type every index and slice
   width from the print). A STACK IS SUMMED FROM THE PAGE, never from memory.
-- NEVER Write a new record to a path without `ls` first.
+- NEVER Write a new record to a path without `ls` first. AN APPEND BUILDS THE WHOLE TEXT BEFORE IT OPENS THE FILE FOR WRITING
+  (2026-09-15: `open(p, 'w').write(read(p) + text)` truncates p before read runs — the state doc and this file were emptied to their
+  newest section and rebuilt from the commit plus a replay of the session's own scripts; read into a variable, then open to write).
 - Keep ALL records current UNPROMPTED: the state doc checkpoint at EVERY milestone; THE_STEPS.md and THE_BRIEFING.md
   (root) current; World/RESUME.md; memory (numbers-in-order-ruling.md, MEMORY.md under 17,000 bytes,
   step9-exam-era.md's STANDING LESSONS head). Announce clean compaction points.
@@ -161,7 +163,9 @@ stitcher (seq_stitch.py: SPAN_ORDER, writes the tape section, prints the CENSUS 
 literals and the checkpoints typed into cold_run_sequence.py (every line of a multi-line literal; NEWEST_RUNNER;
 PREVIOUS_RUN = the last sitting's RUN) → the tape run (`python3 World/step9/cold_run_sequence.py`, THE GRADE 10 TESTS
 incl. THE REST) → the probe gates → the daemon and dependency gates GREEN → the journal gate → THE REGISTER GATE
---strict (the span's seats declared from the print) → the sweep in the background → the records (NUMBERS_WALK "AS
+--strict (the span's seats declared from the print) → the sweep in the background → SINCE ITEM 5 (2026-09-14): a sitting whose
+checkpoint block gained a checkpoint reruns `python3 World/step9/checkpoint_positions.py` in the background (the fall of every checkpoint
+measured, the table rewritten; `--check` the cheap gate) → the records (NUMBERS_WALK "AS
 BUILT", COMPILE_DEBT's box PAID + new debts, MOVE_CATALOG, MIDDOT, MISHNAH_TOPICS, RESEARCH_LOG, THE_STEPS,
 THE_BRIEFING, RESUME, memory, the state doc's checkpoint at the close).
 
@@ -633,3 +637,69 @@ an input), after Deuteronomy (2 the second pass; 3 the readback), a sitting (5 t
 drawn: the panel, the feed, the output-only feed, THE BOARD; 11 a graded input). NEXT on the owner's word: an item of the list (his three
 decisions first; the board as a real page over the one database is item 10's build), THE NEXT BOOK (Deuteronomy, as #160), or the py_units
 gloss sitting. UNCOMMITTED since 08fa06e: step 7 (c), the merge, the mockups' forms and the post-commit notes; commit only on "commit push".
+
+COMMITTED 376d304 (2026-09-14, the owner: "commit push"; 33 files, everything since 08fa06e — step 7 (c) the port, the interface's shape and four mockups, D7's merge, the freeze-time rebuild in the steps; pushed to Josephtorah/Torah_Grok main as a42f518 → 08fa06e → 376d304).
+
+## 24. ADDENDUM (2026-09-14, at the owner's compaction after D7's merge — the state doc's COMPACTION POINT #175; "Make sure you save all of these decisions so we can continue")
+
+THE DECISIONS SAVED: the board — "lets refine the mockup first. I like it we are close" (THE BOARD mockup refined on the owner's notes, then the
+page over the one database); the checkpoints in the tape — "Yes, after the board"; the cursor's lines live and the other worlds stepped —
+"Both, when a sitting has room". THE ORDER: the mockup refined on his notes → the board page → the checkpoints → DEUTERONOMY. D2's label
+corrected on his "note it" (the boot setting the engine's baseline without a teacher; from_event the tradition's own rule; the decision
+stands). COMMITTED 376d304 and pushed. THE FORMS of the board: World/step9/forms_numbers_walk/loop_2026-09-14/board_mockup.py (the generator —
+refine it, never the HTML; it reads the journal's rows and the reading's births from the one database) → mockup_board.html; the artifact
+"The Board of Things" (republish to the same URL from the same file path). THE FIRST SITTING AFTER COMPACTION: #175's rereads, then the
+owner's notes on the board.
+HIS FIRST NOTE (2026-09-14, after the compaction): "put a small screen to the left, in it place the box that was created in the right as a stepper. the heavens box, then the earth box below it, then light below. The left box will scroll from bottom up as more boxes are added. When I click on any box it will bring me back to that step in the process." — VERSION 3 DRAWN on "yes do it": the left screen (a strip of every tile in
+creation order, newest at the bottom, auto-scrolled; a click replays the rows to that step; the tiles ahead dimmed, the click walks both ways);
+the births from the entities view (the retired rows gone). HIS SECOND NOTE: "on the top right wher you have next, put a back button there. also when a new box is created make the browser display the first created box in the middle of the broswer screen" — VERSION 4: Back beside Next; the first tile created
+in a step scrolled to mid-screen. HIS THIRD NOTE (the river out of Eden hidden above the fold at step 18, eight births at once): VERSION 5 — the
+topmost new tile on the board at the top of the screen under the header, the rest below; verified in Chrome by the browser tools. The generator's
+docstring carries the notes verbatim. HIS FOURTH NOTE: VERSION 6 — every group a window exactly three rows tall, scrolling inside itself past
+three rows (amends 'no panes scrolling inside' on his word); verified in Chrome. NEXT: his next note, or his word for the page.
+
+## 25. ADDENDUM (2026-09-14, THE BOARD BUILT — the owner: "lets build it" after six versions of the mockup on his notes; the state doc's COMPACTION POINT #176)
+
+THE BOARD IS REAL (World/step9/THE_LOOP.md "THE BOARD — item 10's build: the design" + "as built"; decisions D22-D26): World/step9/
+world_board.py — a small local server over the one database, READ-ONLY, three routes and the page (D22); the births = the entities view's
+first mention per entity in the text's own order, placed before the first marker or event row at or after their verse and only when the
+text reaches them (D23); every name English — the registry's `en` (a dash-note trimmed), then World/step9/board_names.yaml (162 display
+names for the units' tokens; the_earth beside the heavens), then a runner's own dashed id; an underscored token without a name REFUSED by
+the gate (D24); the page follows and the controls replay (D25); the stepper's --pace S runs with no keyboard (D26). board_probes.py 0/8 →
+8/8 (B2 corrected twice on the data's order: God first at 1:1, light eighth after the four of 1:2); world_board.py --gate GREEN. THE RUN:
+150 paced steps by verse to Genesis 12:20 (392 lines, 70 entities, 15 open, day 738,887, audited) watched forming in Chrome by the tools;
+the first live run's two flaws (reset by count blind to a session outrunning the old count; the mockup's leftover births on a sealed
+board) fixed and probed the same hour. HOW TO WATCH: `python3 World/step9/world_board.py` in one window, `python3 World/step9/
+world_stepper.py --by verse --pace 1` in another, http://127.0.0.1:8765/ in Chrome (`?source=` for another world). THE LIST: item 10
+built; ten open (the owner's three; the second pass and the readback after Deuteronomy; the checkpoints; the cursor's lines and the other
+worlds when a sitting has room; the graded input; the design thread's window). THE ORDER NOW: the owner's notes on the real board as they
+come → the checkpoints in the tape ("Yes, after the board") → DEUTERONOMY. THE GATES AT THE CLOSE: step_probes 9/9, port_probes 9/9, the journal gate GREEN (hash 8b8fff1fa28953af), the board's gate GREEN, board_probes 8/8. Uncommitted since 376d304:
+everything of this sitting and the six mockup versions; commit only on "commit push".
+
+## 26. ADDENDUM (2026-09-14, THE CHECKPOINTS AS THEY FALL — the owner: "Ok do it" after "What is checkpoints"; item 5 of THE LIST; the state doc's COMPACTION POINT #177)
+
+ITEM 5 BUILT (World/step9/THE_LOOP.md "THE CHECKPOINTS AS THEY FALL — item 5's build: the design" + "as built"; decisions D27-D30): the
+tape's checkpoint block (416 statements, 193 cp calls + c3's six) moved VERBATIM out of run() into cold_run_sequence.checkpoints(w, M, reg)
+— a function of any world of the tape, returning (rows, {yE}); run() calls it and grades as before (D27); checkpoints_partial(w, M, reg)
+runs the same source one statement at a time and answers NOT YET where the text has not arrived (D28); checkpoint_positions.py steps the
+base by MARKER under its own session name and measures the FALL of every checkpoint — the first pause from which its verdict and value
+are final — into checkpoint_positions.yaml (199 rows; 944 s; `--check` the cheap gate) (D29); the stepper's `--show checkpoints` asks the
+block live at a pause and prints the fallen with NEW since the last pause (D30). MEASURED: 48 hold from before the first line; C1 the flood
+falls at Genesis 8:4 (ordinal 221); CR5 the refuge term at Numbers 21:4 where Eleazar is invested. checkpoint_probes.py 0/7 → 7/7 (K3's
+partial world moved from 8:5 to 7:11 — past the ark-rested marker C1 is computed; three probes read the function's pair as the rows);
+the tape 10/10; the journal gate GREEN (hash 8b8fff1fa28953af); the positions gate GREEN. THE COMPILE SHAPE (section 5) gained the step:
+a sitting whose block gains a checkpoint reruns checkpoint_positions.py in the background. THE LIST: items 4, 5 and 10 done; NINE open
+(the owner's three — 1, 6, 7; after Deuteronomy — 2, 3; small/later — 8, 9, 11, 12). NEXT on the owner's word: DEUTERONOMY, chapters 1
+to 3 first, the reading sitting (section 5's shape; the 41 July drafts deu_*.yaml the pre-cut blocks as Numbers' 47 were; the spine the
+Sifrei on Deuteronomy — 357 sections, 2,357 rows, eight times Numbers' — beside Onkelos whole; the store's 959 verses against Onkelos'
+956, three joins to read; the owed seats in chapters 4, 12, 17, 19, 21, 25). Uncommitted since 376d304: the board, the mockups, item 5,
+every record; commit only on "commit push".
+
+## 27. ADDENDUM (2026-09-15, at the owner's compaction before THE PORTABLE REPO sitting — the state doc's COMPACTION POINT #178; "Let's compact then do this rename and relative path to make it work as a clone. Get ready")
+
+THE PORTABLE REPO — THE NEXT SITTING (the owner, 2026-09-15: "Let's compact then do this rename and relative path to make it work as a clone. Get ready"), on the loop's own order: MEASURE → THE DESIGN in a map BEFORE any code → PROBES TO FAIL → the pass → every gate → the records.
+THE MEASUREMENTS TAKEN (2026-09-15, by grep and git, before compaction): the absolute path <repo-old> is written into 352 Python files at 474 places — all 57 sweep runners (World/step9/cold_run_*.py), the tape (cold_run_sequence.py: the registry at 146 and 2705, the store _DB at 157, dependency_dispositions at 2722), World/build_world.py (REPO at 26), 3 other World/step9 tools, 18 tools under logic/, 285 forms (copies of past sittings — records, may stay as written), 22 non-Python files (sh/yaml/json/md/html); the engine, the journal, the stepper, the board, ask.py, corpus_world.py and CORPUS_TRUTH.py carry NO absolute path. The symlink <world-link> -> <repo-old>/World. The remote https://github.com/Josephtorah/Torah_Grok.git. The memory folder ~/.claude/projects/<project-folder-old> is NAMED AFTER THE CWD PATH (a renamed folder opens an EMPTY memory — the files must be copied to the new folder's name). THE DATA WALLS a clone hits: the Bible store elijah_docket/tanakh.sqlite (26 MB) lives in the nested elijah_docket git (a gitlink, never staged; *.sqlite gitignored) — every runner reads verses from it; the shelf Data/sefaria_export (6,364 files) is gitignored but for MIRROR_MANIFEST.txt; World/journal/data is derived (the tape run + build_world rebuild it, once the store and the shelf exist). A fresh clone: 3,552 tracked files, the code, the 210 frozen units, every ledger and record — and it cannot run one sitting.
+THE DECISIONS THE OWNER MAKES (ask ONE AT A TIME after compaction, before the design): (1) THE NEW NAME (the folder, the GitHub repo — he renames it on GitHub, the remote is then re-pointed; the symlink remade); (2) THE STORE AND THE SHELF for a clone — tracked in the repo (the 26 MB store; the exports), or a fetch script that rebuilds them from their sources with the manifest as the check (the store's own git has no remote printed — its origin to be found); (3) COMMIT FIRST — recommended: "commit push" before the pass so the rename's diff is one clean commit (uncommitted since 376d304: the six mockup versions, the board, item 5, every record).
+THE DESIGN'S SHAPE (to be written into its map — proposed home reviews/PORTABLE_repo_2026-09-15.md, the record; a root SETUP.md the deliverable for a clone): ONE ROOT — every file computes the repo root from its own location (the pattern already in the tools: HERE/ROOT from __file__), the 474 occurrences rewritten by ONE script in one pass (the forms excluded by rule, they are records); the runners' registry/store/dispositions paths through the root; THE PROBE THAT PROVES IT: `git clone` the repo into a temporary folder at ANOTHER path (with the store and the shelf provided as decision 2 says) and run there a runner, the tape's grade, the journal gate and the register gate — today it fails at the first absolute path, after the pass it is green; then every standing gate in place (the sweep 57/57, the tape 10/10, the journal gate, the daemon and dependency gates, the register gate, the probe files, the board's and the positions' gates); the symlink, the remote, the memory folder copied; the records (the recovery file's laws — the staging form and the paths in section 3 rewritten to the new name; THE_STEPS; THE_BRIEFING; README; memory's standing orders). NOT TOUCHED: the corpus, the hash, the units, the ledgers (append-only; old paths in old records stand).
+THE BOARD'S SERVER: left running on 127.0.0.1:8765 (a stray process; kill before the rename: `lsof -ti :8765 | xargs kill`).
+THE FIRST SITTING AFTER COMPACTION: #178's rereads, then decision (1) asked — the new name — then (2), then (3); the design written into its map before a line moves; the probe of the clone at another path written to FAIL first.

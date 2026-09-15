@@ -319,6 +319,16 @@ INSTALLATION (step 3):
   book not yet compiled — M-24's second writing); pending behaves as boot and is COUNTED as debt; the main run stays
   everything-from-boot until the five books are compiled; the installed run is the second pass after Deuteronomy, and the
   from-boot / from-its-event fork is decided then, on the whole program.
+  ⚠ A NOTE ON D2'S LABEL (2026-09-14, the owner's question "why do you think the saying 'Abraham kept the whole Torah' means every law runs
+  from the start"; his word: "note it"): IT DOES NOT. Yoma 28b (Rav on Genesis 26:5) says one man KEPT the whole Torah before it was given —
+  the laws' content existed and he observed it; it says nothing of the world being BOUND. Being bound begins with the giving: Chagigah
+  6b:2 (the daily offering did not run before its details were given), Sanhedrin 59a:11-12 (a law stated to the sons of Noah and
+  repeated at Sinai binds all; stated at Sinai alone binds Israel from Sinai) — that is the from_event setting, and it is the one with
+  a teacher behind it. The boot setting is THE ENGINE'S BASELINE — no gating, every watcher on, the state before installation existed —
+  and the saying was reached for as the nearest thing on the shelf that made laws exist before Sinai; existing and binding are two
+  claims and the label conflated them. THE DECISION STANDS as ruled (the mechanism built, the setting deferred to the second pass after
+  Deuteronomy, the would-be skips counted); THE LABEL IS CORRECTED: boot = the baseline without a teacher, from_event = the tradition's
+  own rule. The second pass compares the baseline to the tradition's rule, not two readings of the tradition.
 - D3 What counts as an installing event: the command verse (the spec), the act (the erection, the investiture), or a case's
   output from the tent (the four uncovered cases). DECIDED (the owner, 2026-09-09): TWO FIELDS on every daemon — given_at (the
   verse where the law is spoken, always in the ink) and installed_by (the ACT that switches it on: a registered act kind such
@@ -1551,6 +1561,8 @@ with inputs its own world in the one database. What the inputs are is not decide
 
 BUILT: steps 1-5 (the sink; the index with the five views and the ask tool; installation; the cursor; scenarios), step 1's amendment (the
 close line), step 7 (a) write as you go, (b) the stepper, (c) the port — 2026-09-14.
+THE BOARD (item 10, the interface) — 2026-09-14 on "lets build it"; THE CHECKPOINTS AS THEY FALL (item 5) — 2026-09-14 on "Ok do it";
+nine items remain open, three of them the owner's.
 
 OPEN, each with its home and its size (the owner's items marked; nothing moves before his word):
   1. THE INPUTS THEMSELVES — the owner's decision ("we will decide what those are later"): what a second or third pass produces, in what
@@ -1564,12 +1576,19 @@ OPEN, each with its home and its size (the owner's items marked; nothing moves b
      and the as-built below (D19-D21): the fold is the L1 layer, the old tables are views over the one database, the gate moved twice.
   5. THE CHECKPOINTS AS THEY FALL — the checkpoints are computed after the run from the marker table (part (b)'s measurement 2); the stitcher
      places each at its verse in the tape so a pause shows them. A SITTING (the stitcher's rewrite; the base's bytes unchanged).
+     THE OWNER'S WORD (2026-09-14): "Yes, after the board" — the board's page first, then this.
+     BUILT 2026-09-14 on "Ok do it" (after "What is checkpoints" was answered) — the design and the as-built sections after this list:
+     D27-D30; the block a function of the world (cold_run_sequence.checkpoints), the partial executor, the fall of every checkpoint
+     measured by stepping the base (checkpoint_positions.py → checkpoint_positions.yaml, 199 rows), the stepper's --show checkpoints;
+     checkpoint_probes.py 0/7 → 7/7; the tape 10/10 and the journal gate GREEN unmoved. Not by the stitcher's rewrite as first named:
+     the tape's lines never moved — only the block's home did, and the fall was measured.
   6. TIME WITHOUT A MARKER — may the loop advance a day with no verse? Fourteen timers wait past the tape's end (Midian's third and seventh
      days, the altar's daily offering). OWNER's decision; the mechanism half a sitting if yes (the stepper never moves the clock today).
   7. THE POSITION OF AN INPUT — part (c)'s finding: an input's citation moves the engine's verse reached (the installation gate's position);
      whether the engine follows the port's position or the input's citation. OWNER's, inside item 1; the code one line either way.
   8. THE CURSOR'S OWN LINES LIVE — the cursor's appended segment is converted late (part (a)'s (5)); the stepper with a queue does the
      same job live, so the cursor may retire into the stepper (--from with a queue). SMALL; the owner's call whether the cursor stays.
+     THE OWNER'S WORD (2026-09-14): "Both, when a sitting has room" — this and item 12 folded into a later loop sitting, no sitting of their own.
   9. THE WINDOW — CHRONICLE (ARCHITECTURE/CHRONICLE.md, the design thread's, design only): the observation deck over the live database now
      that it is live. THE DESIGN THREAD'S; the main thread reads it.
  10. THE INTERFACE — "later we will create an interface to the database that will show the current states at all times": over the five
@@ -1585,10 +1604,223 @@ OPEN, each with its home and its size (the owner's items marked; nothing moves b
      from the world. A strip above: the day, the position in the text, how many things exist. A 'next' control beside any auto-play; the
      page scrolls as a page, no panes scrolling inside. NOT SHOWN: daemon names, ledger ops, ordinals, statuses that only restate.
      Creation week reads as seven dated lines and the human appearing on the sixth. On the owner's word; its own sitting, display only.
+     THE OWNER'S WORD (2026-09-14, asked item by item): "lets refine the mockup first. I like it we are close" — THE BOARD mockup
+     (the forms folder's board_mockup.py; the artifact "The Board of Things") is refined on his notes before the page is built; the page
+     then reads the one database while the stepper runs (a small local server; the page polls for lines newer than the last drawn).
+     THE OWNER'S FIRST NOTE (2026-09-14, the sitting after compaction #175): "put a small screen to the left, in it place the box that was created in the right as a stepper. the heavens box, then the earth box below it, then light below. The left box will scroll from bottom up as more boxes are added. When I click on any box it will bring me back to that step in the process." — repeated back, then "yes do it":
+     VERSION 3 DRAWN — THE LEFT SCREEN: every tile, the moment it is created on the board, copied small into a strip on the left, oldest
+     at the top, newest at the bottom, the strip scrolled to the bottom as it grows (the heavens, the earth, light the first three);
+     a click on any small tile replays the rows from the start to the step that created it — the board, the clock, the feed and the step
+     count as they stood then; the tiles ahead of that step stay in the strip dimmed so the click walks forward again (my reading of
+     'bring me back', named in the reply); the births now read from the entities view of the one database (the retired rows gone, 0
+     left) — 40 births, 340 rows, Genesis 1 to 11:2 unchanged; the artifact republished at the same link as version 3.
+     HIS SECOND NOTE (the same sitting): "on the top right wher you have next, put a back button there. also when a new box is created make the browser display the first created box in the middle of the broswer screen" — VERSION 4 DRAWN: a Back button beside Next (one step back, the same replay);
+     when a step creates tiles the page scrolls so the first of them sits mid-screen (the strip's own scroll centers the step's small
+     tile, never moving the page).
+     HIS THIRD NOTE (the same sitting, seen in Chrome): "open in chrome. when I click next and get the river out of eden it doesn't show it, it scrolls below to what came after. i want it to show the first boxes created then I will navagate down to see the rest" — the cause read off the rows: at Genesis 2:20's step (step 18)
+     eight things are born at once across three groups, and the first by creation order (the tree of life, Plants) sits below the rivers
+     (Places) on the board, so centering it pushed the rivers above the fold. VERSION 5 DRAWN: the page scrolls to the topmost new tile on
+     the board and puts it at the top of the screen under the header, its group's heading with it; the rest below. Stepped to 18 in
+     Chrome by the tools: the river out of Eden first under the header, the trees and the beasts below, the strip's eight lit at the
+     bottom.
+     HIS FOURTH NOTE: "once a title (places, times, plants, etc) fills up three rows, make the full 3 rows turn into a scrollable window. all titels should display 3 rows at all times" — VERSION 6 DRAWN: every group's tile area a window exactly three rows tall (one fixed row height;
+     a long line in a tile clipped to two lines, the whole in its tooltip), scrolling inside itself past three rows; at a birth the
+     window scrolls so the first new tile is its top row and the page scrolls the group's heading under the header. THIS AMENDS THE
+     AGREED SHAPE above ("no panes scrolling inside") on the owner's word. Seen in Chrome: Places' seven tiles in a three-row box at
+     step 18; People's fifteen in a three-row box with its own scrollbar at step 60. The generator's lint 3 → 6, all CSS words
+     (three more style-sheet property names beside the three it had). The next note on the owner's word.
+     BUILT 2026-09-14 on "lets build it" — THE BOARD (the design and the as-built sections after this list: decisions D22-D26; World/step9/
+     world_board.py + world_board.html + board_names.yaml, the stepper's --pace; board_probes.py 0/8 → 8/8; the gate GREEN; run beside
+     the paced stepper and seen forming in Chrome). Remaining under this item: the owner's notes on the real page as they come.
  11. A GRADED INPUT — an input's answer against an oracle through the port (scenarios grade against Mishnah rows at a cursor; the port only
      opens the door). WITH ITEM 1.
  12. THE OTHER WORLDS STEPPED — the stepper runs the running setting only; the sojourn forks and THE REST run whole in the tape. SMALL, if
-     ever wanted.
+     ever wanted. THE OWNER'S WORD (2026-09-14): "Both, when a sitting has room" — with item 8.
+
+## THE BOARD — item 10's build: the design (2026-09-14; the owner: "lets build it", after six versions of the mockup on his notes)
+
+THE OWNER'S WORDS THAT RULE IT: "a stationary display… one window within the browser… I want to see what is being created"; "a living
+database showing the current state at all times"; "no hand inputs"; the six notes on the mockup (item 10). THE MOCKUP IS THE PICTURE; this
+sitting builds the picture over the one database, display only — the board never drives the engine and never writes a row.
+
+THE MEASUREMENTS (read off the database and the code before a line was written):
+  - the one database holds every session's lines as rows of `events` with a rowid, `source` the session's name (cold_run_sequence/stepper
+    the stepper's; port@<queue> a world with inputs; seed_isaac the base): 3,362 L3 rows for the base; the live sink INSERTs and commits
+    at every seal, so a reader sees a session grow block by block (rowid the order; `DELETE FROM events WHERE source = ?` at attach —
+    a new session under the same name starts at zero, a reader sees the count fall);
+  - the stepper pauses on a keyboard (--pause) or runs N steps (--steps); there is no way to run at a pace without a keyboard;
+  - the registry carries an English name (`en`) for all 338 of its entities; the entities view holds 273 things with a first mention, of
+    which 149 are the units' own tokens (transliterations, not in the registry: shamayim the heavens, choshekh darkness …) with no
+    English anywhere in the data; of the base tape's 360 subjects, 280 are registry ids and 80 the runners' own English ids (the-world,
+    bezalel, nemuel-son-of-eliab), nine of them carrying "ben" (son of).
+
+THE DECISIONS:
+  D22 THE BOARD IS A READER — one Python file World/step9/world_board.py: a small local server (the standard library's http.server) over the
+      one database opened READ-ONLY, three routes and the page; no route writes; the port stays the one door (D16). Runs beside the stepper:
+        python3 World/step9/world_board.py [--source cold_run_sequence/stepper] [--port 8765] [--db path]
+        GET /                          the page (World/step9/world_board.html, beside the script)
+        GET /api/status                the sources in the database with their row counts, the default source
+        GET /api/rows?source=S&after=R&known=N   the source's rows after rowid R, shaped as the mockup shapes them, with the births
+                                       due before each row merged in; `last` the newest rowid; `count` the source's rows;
+                                       `reset` true when count < N (the session started over — the page starts over)
+        GET /api/names                 every id's English name and group (the registry's `en` first, then the board's own names table)
+  D23 A THING APPEARS AT ITS FIRST MENTION — the births are the entities view's first mention per entity (the fold's rows; the August
+      node.born rows are retired), every one, placed before the first marker or event row at or after its verse — the mockup's own rule,
+      computed on the server so a row's births ride with it; the tile's word is "appears" (the mockup said "created" of its forty; the
+      view says mentioned, not made — darkness and the deep appear at Genesis 1:2 without being created).
+  D24 NAMES ARE DISPLAY, AND EVERY ONE IS ENGLISH — the registry's `en` names its entities; the units' tokens are named in
+      World/step9/board_names.yaml (display only, edited in place as the gloss law allows; each with its group on the board); a runner's
+      own dashed id reads as English by the id itself (the-world → the world); an underscored token with no name is REFUSED by the gate
+      (a token is a transliteration — the law: never without its English). The tape's groups by the registry's kind (person People;
+      people/collective/compound Peoples and groups; place Places; object Things; creature Creatures; institution Institutions; divine Heaven).
+  D25 THE PAGE FOLLOWS, THE CONTROLS REPLAY — the page polls /api/rows once a second and appends what arrives to its own tape; FOLLOWING,
+      it steps through every new block as it lands (the world forming at the stepper's pace); Next, Back, the left screen's click and
+      Auto-play replay over what has arrived (the page's own tape, never the engine — the mockup's replay unchanged); "Follow" jumps back
+      to the live end. The strip says which: LIVE with the source, or REPLAY at step n of N. A reset (D22's `reset`) empties the page.
+  D26 THE PACE — the stepper's --pace S: a step every S seconds with no keyboard (S = 0 as fast as the engine goes), the watch mode the
+      board needs; the pause's own report printed as before; one change in main(), none in the engine.
+THE GATE — python3 World/step9/world_board.py --gate [--source S]: (a) every id the source or the births would show has an English name
+  by D24's rule (the unnamed listed, the gate red); (b) the board's shaping of the base's first 300 lines equals the mockup's embedded rows
+  field for field, and the forty things the mockup called births are placed at the same rows (the mockup is the agreed picture); (c) the
+  births' first three at Genesis 1:1: God, the heavens, the earth; light the eighth, at 1:3, after darkness, the waters, the spirit and
+  the deep at 1:2 (AS TYPED IN THIS DESIGN: the heavens, the earth, light — the mockup's forty; B2's first run found God first,
+  mentioned at 1:1 as the agent, and its second found darkness before light; the data's order stands and the gate demands it);
+  (d) the page carries no embedded rows (it reads the routes).
+THE PROBES — World/step9/board_probes.py B1-B8, written before the code and run to FAIL: B1 the shaping equal to the mockup's; B2 every
+  entity of the view a birth at its first mention, placed by the rule; B3 every id named (the table complete for the base and the view);
+  B4 the server answers the three routes over the real database read-only; B5 rows after a rowid are only the newer ones, with the births
+  due before them; B6 a session starting over is reported as a reset; B7 the stepper runs three steps at --pace 0 with no keyboard; B8 the
+  gate green and the page without embedded rows.
+THE RUN: the stepper at a pace beside the server, the board opened in Chrome by the tools, the world forming from Genesis 1:5 on.
+NOT IN THIS SITTING: the feed page and the panel page as real pages (the board is the one the owner chose); a page that drives the
+  stepper (the owner: no hand inputs; display only); the design thread's window (item 9).
+
+## THE BOARD — as built (2026-09-14; the owner: "lets build it")
+
+THE CODE: World/step9/world_board.py — the server (`serve`: the standard library's threading HTTP server on 127.0.0.1:8765, the database
+  opened read-only by URI with a busy timeout, one connection per request; the routes /, /api/status, /api/names, /api/rows); `shape` the
+  one home for a row's shape (the mockup generator's functions moved in — head, own, short, words); `load_names`, `name_of`, `unnamed`,
+  `all_names` (D24: the registry's `en` with its kind's group, a parenthesized dash-note trimmed for display; then board_names.yaml; then a
+  runner's own dashed id read as English; an underscored token without a name raises Unnamed); `births` (D23: every entity of the entities
+  view at its first mention, ordered by the fold's own mention rows — the text's order inside a verse; cached per database); `rows_after`
+  (the API's answer: the source's light rows read whole for the anchors, the heavy rows only after R; a birth rides before the first marker
+  or event row at or after its verse and only when the text reaches it; `reset` when the source's first rowid changed or its count fell);
+  `status`; `gate`. World/step9/world_board.html — the mockup's sixth version with the rows fetched: FOLLOWING, every block that lands is
+  stepped and drawn; Next, Back, the left screen and Auto-play replay over the page's own tape; Follow returns to the live end; the strip
+  says LIVE or REPLAY and how many lines have arrived; a reset empties the page; no row embedded, nothing typed, nothing written.
+  World/step9/board_names.yaml — 162 display names: the 149 tokens of the view, the nine runner ids with "ben", the three the mockup named
+  by hand, and the_earth filed beside the heavens (the registry's kind puts it under Places). World/step9/world_stepper.py — `--pace S`
+  (D26): one line in main's loop (`time.sleep`), the pace announced; the engine untouched.
+THE PROBES: World/step9/board_probes.py 0/8 → 8/8. Corrected on the data's own order twice before they passed — B2 as typed wanted the
+  mockup's forty (the heavens, the earth, light); the data's first three are God, the heavens, the earth at 1:1 (God the agent of 1:1),
+  and light is the eighth, after darkness, the deep, the waters and the spirit at 1:2; the design and the gate carry the correction. Two
+  hand-typed checks fixed: a born row carries no rowid (it rides with its anchor); my pace line's own words "no keyboard" tripped the check
+  meant for the EOF message.
+THE RUN: the server on 8765; python3 World/step9/world_stepper.py --by verse --pace 1 --steps 150 — 150 steps to the left edge of Genesis
+  12:20 in 392 lines, 70 entities, 15 open entries, no pending timer, day 738,887, audited against the base (yes); the board opened in
+  Chrome by the tools and seen following: step 18 at Genesis 2:20 with 43 things, ten seconds later step 29 at 3:17-19 with 48; a click on
+  darkness in the left screen → REPLAY at step 1 with 8 things, the strip's 89 kept and the future dimmed; Follow → LIVE at step 140,
+  Genesis 9:7, day 605,269, 90 things, 342 lines arrived; the paced session sealed while the board watched.
+THE FINDING OF THE FIRST LIVE RUN: 274 things at step 7 of Genesis 1. Two flaws of mine — a new session under the same name deleted the
+  old rows and outran their count between two polls, so `reset` by count alone was blind and the page kept the old lines; and my leftover
+  rule appended every unreached birth after a sealed session's last row (the mockup's convenience, wrong on a live source). Fixed the same
+  hour: `reset` by the source's first rowid (B6 extended to a session written anew with more rows), and no tail — a thing appears only when
+  the text reaches it. The lesson under the standing ones: a rule copied from a mockup is a rule to re-derive on the live source.
+THE GATE: python3 World/step9/world_board.py --gate — GREEN: every id named for the base and the stepper's source; the base's first 300
+  lines EQUAL the mockup's rows field for field; the mockup's 40 births placed before the same rows; 273 things appear over the base, the
+  first three God, the heavens, the earth at Genesis 1:1; the page reads the routes with no embedded rows.
+THE STANDING GATES AT THE CLOSE (after the paced session and the probes wrote their sessions): step_probes.py 9/9; port_probes.py 9/9;
+  world_journal.py --gate GREEN — the fold layer 12 kinds, 9,574 rows matching the header, the hash 8b8fff1fa28953af pinned and matched
+  (the replay is the audit); the board's own gate GREEN; board_probes.py 8/8. The sweep not rerun: no runner and no engine line changed.
+DISPLAY CHOICES (mine, display only, named here): the registry's `en` shown before its dash-note; the earth beside the heavens; the tile's
+  word "appears"; a group's window three rows tall as the owner's fourth note ruled.
+HOW TO WATCH: in one window `python3 World/step9/world_board.py` (the address printed); in another `python3 World/step9/world_stepper.py
+  --by verse --pace 1` (or by chapter, marker, day; `--from <verse>`; `--queue <name>` for a world with inputs — the board follows
+  `?source=cold_run_sequence/port@<name>`); open http://127.0.0.1:8765/ — the world forms; any other world in the database by `?source=`.
+NOT IN THIS SITTING, NAMED: the feed and the panel as real pages (the owner chose the board); a page that drives the stepper (ruled out:
+  no hand inputs, display only); a token of a future unit without a name — the gate names it, the table takes it; the server is one local
+  process on 127.0.0.1 with no access control (a workshop tool, not the site).
+
+## THE CHECKPOINTS AS THEY FALL — item 5's build: the design (2026-09-14; the owner: "Ok do it", after "What is checkpoints" was answered:
+## a checkpoint is a test the tape carries with it, checked today only at the very end; item 5 asks each check at the verse where it belongs)
+
+THE MEASUREMENTS (read off the code before a line was written):
+  - THE BLOCK: cold_run_sequence.py's run() carries the checkpoints as one straight-line block, 416 statements (lines 2642-3062 today), 197
+    `cp(...)` calls plus c3()'s (the 430's, already a function of the world); every cp is `w.checkpoint(name, declared, computed, bound)`;
+    the engine's checkpoint PRINTS and RETURNS ok — it writes no log line and no journal line, so the base's bytes cannot move by asking;
+  - the block reads eleven names of the run — w, M (the marker table), reg, C, D, markers, mF, events, fires, tset, closes_done — every one
+    derivable from the world and its marker table; and it imports ten runner modules, the register gate and two stdlib names inside itself;
+  - c3() is the precedent: the 430's checkpoints as a function of (w, M, R), already run on the fork's other worlds;
+  - the stepper holds the world, the marker table and the tape's generator (self.w, self.M, self.gen); a pause has everything the block needs;
+  - a checkpoint on a PARTIAL world can raise (M['ark_rested'] before the flood; w.clock.eras['exodus'] before the exodus; rel[0] on an
+    empty list) — one raise in a preparatory line would abort every checkpoint after it.
+
+THE DECISIONS:
+  D27 THE CHECKPOINTS ARE A FUNCTION OF THE WORLD — the block moves VERBATIM into a module-level `checkpoints(w, M, reg)` that recomputes
+      the run's derived names from the world's own log and returns rows (name, declared, computed, ok); run() calls it and grades exactly
+      as before (the verdict list, THE GRADE's 10 tests, the RUN tuple, the base's bytes — unchanged; proven by the tape's own grade and the
+      journal gate's two processes).
+  D28 A PARTIAL WORLD RUNS THE BLOCK ONE STATEMENT AT A TIME — `checkpoints_partial(w, M, reg)` executes the SAME function's source
+      statement by statement (its AST read from the module; no second copy of the block exists); a statement that raises is recorded and
+      the run continues, its names unbound; a checkpoint that cannot be computed yet is NOT YET, never a DIVERGE; the prints silenced.
+  D29 THE FALL IS MEASURED, NEVER TYPED — World/step9/checkpoint_positions.py steps the base by MARKER (the marker table's own grain) with
+      the stepper's generator and evaluates the partial block at every pause; a checkpoint FALLS at the first pause from which its verdict
+      and its computed value equal their final ones and stay so to the end; the script writes World/step9/checkpoint_positions.yaml
+      (name → the pause's verse, the ordinal, the day, the pause index, the final verdict) — a record written by script, regenerated at
+      every compile sitting whose block gains a checkpoint (a step of the compile shape, in the background like the sweep). The gate
+      (`--check`) is cheap: every checkpoint of the block has a row and no row is stale; the positions themselves are re-measured when
+      the block changes.
+  D30 A PAUSE SHOWS THE CHECKPOINTS THAT FELL — the stepper's `--show checkpoints`: at each pause the partial block runs on the STEPPED
+      world (live, never recited); printed: every checkpoint whose measured position is at or before the pause's ordinal, with its live
+      verdict (MATCH / DIVERGE / NOT YET) and NEW on the ones that fell since the previous pause; the report line carries the counts.
+      Opt-in — the block costs seconds — so a paced run for the board stays fast.
+THE PROBES — World/step9/checkpoint_probes.py K1-K7, written before the code and run to FAIL: K1 the function exists and on the base world
+  its verdict list equals VERDICTS (the tape's pinned expectation); K2 the partial executor on the whole base world gives the same verdicts;
+  K3 on a partial world (run_to a verse) the executor never raises and reports NOT YET for what the tape has not reached; K4 the table has
+  one row per checkpoint of the block and no other; K5 the positions read off the base segment — the flood's C1 falls no earlier than the
+  ark-rested marker's line, the refuge cities' CR1 no earlier than the chapter's first event line; K6 the stepper stepped to a verse shows
+  exactly the table's checkpoints at or before that ordinal with live verdicts; K7 asking the checkpoints writes nothing — the world's log
+  and the sink's lines unchanged by a call.
+THE ORDER: the probes to fail → D27 the extraction (the tape's grade unchanged) → D28 the executor → D29 the measurement in the background
+  and the table → D30 the stepper's show → the probes green → the tape 10/10 → the journal gate → the records.
+NOT IN THIS SITTING, NAMED: a checkpoint on the board (item 10's remainder — a tile that lights green as the world passes it); a checkpoint
+  line in the journal (the ten classes stay; the base's bytes are this design's promise); the compile sittings' own checkpoint blocks
+  rewritten into any other form (they stay as written; only their home moves).
+
+## THE CHECKPOINTS AS THEY FALL — as built (2026-09-14; the owner: "Ok do it")
+
+THE CODE: World/step9/cold_run_sequence.py — `checkpoints(w, M, reg)`: the block moved VERBATIM out of run() by a script that located it
+  by its AST (the statement printing THE CHECKPOINTS through the `verdicts` assignment: 416 statements, 193 cp calls plus c3's six) and
+  put it before run() with the run's derived names recomputed from the world (C, D, markers, mF, events, fires, tset, closes_done);
+  every cp a row (name, declared, computed, ok) beside the tuple c3 appends; returns (rows, {yE}) — the one name run() reads after the
+  block rides back with the rows; run() calls it and grades exactly as before. `checkpoint_names()`: the block's literal names read from
+  the file's own source (197 — c3's join rows, C3d-70 and C3d-85, are named by the run). `checkpoints_partial(w, M, reg)` (D28): the
+  same function's source one statement at a time in a namespace of the module, a raise recorded and the run continued, a checkpoint not
+  produced a NOT YET row at its place in the block's order (the executor keeps R's order exactly, so on a whole world it equals the
+  function's list — K2), nothing printed. World/step9/checkpoint_positions.py (D29): the base stepped by MARKER under its own session
+  name (cold_run_sequence/positions), the partial block asked before the first line and at every pause, the fall computed, the table
+  written by script; `--check` the cheap gate. World/step9/checkpoint_positions.yaml: 199 rows. World/step9/world_stepper.py (D30):
+  `--show checkpoints` — the block asked LIVE on the stepped world at each pause; the rows those whose measured fall is at or before the
+  pause's ordinal, each with its live verdict and NEW since the last pause; the summary line with the counts; `self.reg` kept at open.
+THE MEASUREMENT (checkpoint_positions.py, 944 s): 199 checkpoints over 159 pauses on 3,362 lines; 48 hold from before the first line
+  (pure ink — C0's Genesis 5 arithmetic, the parser's readings, the letters — or an absence the tape never fills: CR7's has_blood NONE);
+  the last fall at pause 158, Numbers 36:11, the tape's last line (CR1's clause "before the tribes' plea" holds only there); the finals
+  MATCH 181, DIVERGE 18 — the eighteen the design expects (VERDICTS). Read off the table: C1 the flood's 150 days falls at Genesis 8:4,
+  ordinal 221, the ark-rested marker's own line; C2 Noah's 600 and C10 Methuselah's seven days at 6:3; CR5 the refuge cities' term at
+  Numbers 21:4 — the pause after Eleazar's investiture (20:28), where its state settles, thirteen chapters before its own chapter.
+THE PROBES: checkpoint_probes.py 0/7 → 4/7 → 7/7. Two hand-typed expectations corrected: K3's partial world was typed at Genesis 8:5,
+  past the ark-rested marker (there C1 is computed, a DIVERGE as the tape's own gap says) — moved to the flood marker's left edge, 7:11;
+  and three probes read the function's (rows, exported) pair as the rows — the as-built's honest form, the probes adapted.
+THE RUN: `python3 World/step9/world_stepper.py --by chapter --steps 8 --show checkpoints --quiet` — at the first pause the 48 that hold
+  from the start; Genesis 5: CG9 Adam's 930; Genesis 6: C2 MATCH and C10 DIVERGE at 6:3; Genesis 7: CG2 the reprieve's timer and CG3 the
+  seven days' timer at 7:11; Genesis 8: C1 DIVERGE at 8:4, CG4 the dove at 8:13, CG1 Eduyot's twelve months at 8:14 — every one asked live.
+THE GATES: the tape 10/10 (the verdict list, THE REST, the RUN tuple unmoved; 13.0 s); the journal gate GREEN (the fold layer 12 kinds,
+  9,574 rows; the hash 8b8fff1fa28953af); the positions gate GREEN (197 literal names, 199 rows, missing none, stale none); K7 the base's
+  bytes: a call of the block leaves the log and the sink at 3,362 lines. The lint: the sequence file at its baseline 7; the rest 0.
+NOT DONE, NAMED: a floor on the 48 that hold from the start (a display choice — the block's own verse — not taken: the measurement says
+  what is true); a checkpoint on the board (item 10's remainder); the stepper's report line counts the checkpoints only under --show.
+THE LESSON: a checkpoint falls where its STATE settles, not where its chapter is — CR5 at Numbers 21:4 — and the measurement, not the
+  hand, is what could say so.
 
 ## D7'S MERGE — ONE DATABASE: the design (2026-09-14; the owner: "ok go the merge" — item 4 of TO FINISH THE LOOP; decided in principle 2026-09-09
 ## as D7 with D10; written AFTER the measurements and BEFORE the probes, the probes before the code — the loop's own order)
@@ -1645,7 +1877,8 @@ THE DESIGN — the code, no engine, runner or unit change:
   (4) World/ask.py: the path; World/run_genesis.py: the retirement guard; the register: fold.* kinds added before first use, the August
       kinds marked retired; World/journal/data: L1_structure.jsonl and world_tree.json removed; World/world.sqlite removed.
   (5) world_journal.py --gate: the fold layer's header against CORPUS_TRUTH's literals and the index's counts (D21 b).
-  (6) The board's births come from the entities view (a note in the mockup's generator; the mockup itself stands as drawn).
+  (6) The board's births come from the entities view (a note in the mockup's generator; PAID the same day at the mockup's version 3 —
+      the generator reads the view; item 10 of the list).
 
 THE PROBES (World/step9/merge_probes.py; written BEFORE the code and run to FAIL — every one a FAIL first; one build into a temporary folder
 shared by the probes, the fold's 29 s paid once):

@@ -2187,3 +2187,30 @@ Gen.30.24: 216 entities, 736 facts, 507 events, 153 demands, two outstanding." T
 proves the views against a fresh fold on nine counts and the hash; the journal gate proves the fold layer's header against the pinned truth
 without refolding. World/world.sqlite is deleted; run_genesis.py is retired — the stepper is the player. merge_probes.py 0/8 → 8/8. The
 board's births now come from the entities view. THE LIST: item 4 done; eleven remain, three of them yours.
+
+### 2026-09-14 — THE BOARD BUILT: THE WINDOW OVER THE LIVING DATABASE (the owner: "lets build it" after six versions of the mockup on his notes; the map: World/step9/THE_LOOP.md "THE BOARD — item 10's build" design + as-built)
+
+The interface the owner asked for on the day the loop was ruled — "an interface to the database that will show the current states at all
+times" — exists: a small local server over the one database, read-only (D22), and a page that follows a session as the stepper seals its
+blocks. Every thing in the world is a tile that appears at its first mention in the text (D23 — the entities view, in the text's own order
+within a verse; God first at Genesis 1:1, then the heavens and the earth; darkness, the deep, the waters, the spirit at 1:2; light eighth),
+lights when a law writes on it, carries a mark while it owes and a countdown while a timer runs; the left screen keeps every tile in the
+order it appeared and clicks back to that step; every group a window three rows tall. Every name is English (D24 — the registry's `en`,
+then the board's own table of 162 display names for the units' tokens; an unnamed token refused by the gate). The page follows and the
+controls replay (D25); the stepper runs at a pace with no keyboard (D26). The first live run taught two flaws in an hour — a session
+starting over outran the old count between polls, and a mockup's convenience (leftover births at the end) was wrong on a live source — both
+fixed and probed. board_probes.py 0/8 → 8/8; the gate green; 150 paced steps to Genesis 12:20 watched forming in Chrome. THE LIST: item 10
+built; ten remain, three of them yours. NEXT on the owner's word: his notes on the real board; then the checkpoints in the tape; then
+Deuteronomy.
+
+### 2026-09-14 — THE CHECKPOINTS FALL WHERE THEY FALL (the owner: "Ok do it" — item 5 of the list; the map: World/step9/THE_LOOP.md "THE CHECKPOINTS AS THEY FALL — item 5's build" design + as-built)
+
+A checkpoint is a test the tape carries with it — the flood's hundred and fifty days, Noah's six hundred, the refuge debit open — and
+until today every one was asked once, in a pile at the end of the run. Now the block is a function of any world of the tape (D27), a
+partial world runs it one statement at a time and says NOT YET where the text has not arrived (D28), and the verse where each checkpoint
+FALLS — the first pause from which its verdict and value are final — is measured by stepping the base by marker, never typed (D29): 199
+checkpoints over 159 pauses; 48 hold from before the first line (pure ink, or an absence the tape never fills); the flood's C1 falls at
+Genesis 8:4 on the ark-rested marker's own line; the refuge term's CR5 falls at Numbers 21:4, where Eleazar is invested, thirteen chapters
+before its own chapter — the measurement said so, the hand could not have. A pause of the stepper now shows the checkpoints fallen by
+then, asked live on the stepped world (D30). The tape's own grade and the journal's bytes did not move; checkpoint_probes.py 0/7 → 7/7.
+THE LIST: item 5 done; nine remain, three of them yours. NEXT on the owner's word: Deuteronomy.

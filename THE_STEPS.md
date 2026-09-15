@@ -475,6 +475,12 @@ after any freeze, `python3 World/build_world.py` rebuilds the fold layer
 of the one database and reconciles it against the fresh fold. A freeze
 moves the corpus's hash; the journal gate then refuses the layer as
 stale until it is rebuilt. This is a gate step, not an option.
+SINCE THE LOOP'S ITEM 5 (2026-09-14, THE_LOOP.md "THE CHECKPOINTS AS
+THEY FALL"): a compile sitting that adds a checkpoint to the tape's
+block reruns `python3 World/step9/checkpoint_positions.py` in the
+background — the verse where every checkpoint falls is measured by
+stepping the base, never typed — and `--check` is the cheap gate that
+every checkpoint has its row.
 
 ### The stamp (delegated 2026-09-01; owner word before that)
 When a span's declared reading is COMPLETE and its logic was rebuilt
@@ -3271,6 +3277,34 @@ views against a fresh fold on nine counts and the state hash; the
 journal gate proves the layer's header against the pinned truth. The
 August tree model and the old world.sqlite are retired; the stepper is
 the player.
+
+THE BOARD — THE WINDOW OVER THE LIVING DATABASE (2026-09-14, the
+owner's "lets build it" after six versions of the mockup on his notes;
+THE_LOOP.md "THE BOARD — item 10's build" design + as-built): a small
+local server reads the one database and serves one page; the page
+follows a session as the stepper seals its blocks — every thing in the
+world a tile that appears at its first mention, lights when a law writes
+on it, owes and counts down; the left screen the order of appearance,
+clickable back to any step; every group a window three rows tall. The
+board never drives the engine and never writes a row; the stepper runs
+at a pace beside it. To watch: python3 World/step9/world_board.py in one
+window, python3 World/step9/world_stepper.py --by verse --pace 1 in
+another, then http://127.0.0.1:8765/. Every name on the board is
+English (the registry's, then World/step9/board_names.yaml); a token
+without one is refused by the board's gate.
+
+THE CHECKPOINTS AS THEY FALL (2026-09-14, the owner's "Ok do it" —
+item 5 of the loop's list; THE_LOOP.md "THE CHECKPOINTS AS THEY FALL —
+item 5's build" design + as-built): the tape's checkpoints — the tests
+the text declares, asked until now in one pile at the run's end — are
+a function of any world of the tape; a partial world runs the block
+one statement at a time and answers NOT YET where the text has not
+arrived; the verse where each one falls is MEASURED by stepping the
+base by marker (World/step9/checkpoint_positions.py, its table
+checkpoint_positions.yaml — 199 rows), never typed; and a pause of the
+stepper shows the ones fallen by then, asked live:
+python3 World/step9/world_stepper.py --by chapter --show checkpoints.
+The tape's lines never moved and its grade did not change.
 
 ## THE NUMBERS WALK (owner-ruled 2026-09-09 at THE TENT's close; the map World/step9/NUMBERS_WALK.md)
 

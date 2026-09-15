@@ -1,3 +1,11 @@
+> **THE CHECKPOINTS AS THEY FALL 2026-09-14 (World/step9/THE_LOOP.md item 5's build).** The tape's checkpoints are a function of the
+> world (`cold_run_sequence.checkpoints`); where each one falls is measured by `python3 step9/checkpoint_positions.py` (the table
+> `step9/checkpoint_positions.yaml`; `--check`); `python3 step9/world_stepper.py --by chapter --show checkpoints` shows them at a pause.
+>
+> **THE BOARD 2026-09-14 (World/step9/THE_LOOP.md "THE BOARD — item 10's build").** The window over the one database: `python3
+> step9/world_board.py` serves http://127.0.0.1:8765/ read-only; `python3 step9/world_stepper.py --by verse --pace 1` beside it and the
+> world forms on the page. Names: the registry's `en`, then `step9/board_names.yaml`; `step9/world_board.py --gate`.
+>
 > **MERGED 2026-09-14 (D7'S MERGE; World/step9/THE_LOOP.md "D7'S MERGE — ONE DATABASE").** `world.sqlite` in this folder is gone. THE ONE
 > DATABASE is `World/journal/data/world.sqlite` — the journal's index: L0 the operators, L1 THE FOLD (this folder's world, one row per item),
 > L2 the cases, L3 the runs — and the tables below are VIEWS over it with their old names (`World/journal/fold_views.sql`; the fold's
