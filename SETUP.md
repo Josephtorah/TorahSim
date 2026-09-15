@@ -9,6 +9,8 @@ from each file's own place, so the clone runs from any folder. Three things are 
     git clone https://github.com/Josephtorah/TorahSim.git
     cd TorahSim
 
+The repository is public under CC0 1.0 (LICENSE); what others wrote is listed with its terms in DATA_SOURCES.md.
+
 Python 3.12 or newer, with `pyyaml` (`python3 -m pip install --user pyyaml`; on a Homebrew Python add `--break-system-packages`).
 
 ## 2. The shelf (2.3 GB, not tracked)
@@ -19,7 +21,9 @@ source in Sefaria's public export, its size and its hash. Fetch them once:
     python3 Data/fetch_shelf.py            # fetches every file the manifest names, then checks each one
     python3 Data/fetch_shelf.py --check    # any time: every file against the manifest, no network
 
-The Bible store the runners read (`Data/tanakh.sqlite`) is tracked and arrives with the clone.
+The Bible store the runners read (`Data/tanakh.sqlite`) is tracked and arrives with the clone. One more store is too large for git:
+
+    python3 Data/fetch_shelf.py --stores   # the 154 MB snapshot store, from the repository's release, hashed
 
 ## 3. The one database (derived, not tracked)
 
