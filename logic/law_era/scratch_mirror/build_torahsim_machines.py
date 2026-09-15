@@ -19,7 +19,7 @@ _ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file
 from pathlib import Path
 
 HOME = Path((_ROOT + "/logic/law_era"))
-PUB = Path("<repo>/machines/exo21")
+PUB = Path((_ROOT + "/machines/exo21"))
 
 OLD_SPANS = '''def _frozen_spans():
     import sqlite3, re, os

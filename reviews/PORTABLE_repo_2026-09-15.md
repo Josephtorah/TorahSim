@@ -109,3 +109,25 @@ WHAT REMAINS, IN ORDER, ON THE OWNER'S WORD: "commit push" → `gh repo rename T
 ## NOT IN THIS SITTING, NAMED
 The never-commit set stays where it is; the old-era tools (build_db.py, fetch_oral_texts.py, the SNAPSHOT readers) keep their databases as
 they are (untracked, unread by any gate); the nested elijah_docket is not merged into the repo; the public site is not rebuilt.
+
+## THE LAST ACTS (2026-09-15)
+THE LAST ACTS DONE 2026-09-15 (the owner: "commit push"): (1) COMMITTED 9e6c81a (400 files; pushed); (2) the repository RENAMED on GitHub — https://github.com/Josephtorah/TorahSim (private; the old address redirects), the remote re-pointed, `git ls-remote` answering 9e6c81a; (3) the release stores-2026-09-15 created with torah_grok.SNAPSHOT-main-51801ca.sqlite (153,755,648 bytes) as its asset — a plain download is refused while the repository is private, so fetch_shelf.py now falls back to `gh release download` under the reader's login (a change AFTER the commit, uncommitted), and an empty temporary clone fetched the store through the script in 4 s, GREEN; (4) the memory folder: the old site session's 14 files archived as ~/.claude/projects/<project-folder>/memory_site_archive_2026-09-15, our 49 copied to ~/.claude/projects/<project-folder>/memory; (5) .claude/settings.local.json's four path lines renamed. PENDING, THE LAST ACT ON THE OWNER'S WORD: `mv <repo-old> <repo> && ln -sfn <repo>/World <world-link>` — then the owner restarts Claude Code in <repo>; the first commit there carries fetch_shelf.py's change and these notes.
+THE THIRD SCAN (the owner: "does <user> show up anuywhere in the new links"): the username stood in code in three more forms, all rewritten — the symlink path <world-link> in the placement tools and the record-writing forms (30 code strings, now `_ROOT + '/World'`), the memory folder's path in the record-writing forms (14, now `_MEMORY`, computed from the root the way Claude Code names its project folder), and the new absolute name my own pass had written into comments, docstrings and a code listing (now a neutral `<repo>`); 22 files by the tokenizer, three never-tokenizing forms by text; the shell forms' symlink path to "$ROOT"/World. LEFT, NAMED: 62 scratchpad paths in the sitting forms (<scratch-root>/<session>/scratchpad — the session's own temporary folder, dead by nature, machine-local, no clone follows them; a future form writes to a folder computed at run time), the two portability tools' own constants (they name the old and new names by design), and the records (the state doc, the recovery file's laws for this Mac, RESEARCH_LOG, the ledgers — history, append-only). Every tracked script compiles; T1 and T2 green; staged.
+## THE USERNAME SCRUB (2026-09-15; the owner: "I don't want <user> in any of this project. How do we do that" → the three layers named → "lets do all of these")
+
+THE RULE: no machine username and no home path anywhere in the project — the Mac's login, the older Mac's login, the home folders, Claude
+Code's project and scratch folders. A username is a machine artifact, not content; on the owner's word the ledgers' append-only law steps
+aside for this one pass over the records, and the pass is recorded here.
+LAYER 1, THE TREE: logic/solo_tools/scrub_home_paths.py (its table of sixteen forms, the two names composed at run time so the file carries
+  neither) — the dry run over every tracked text file and the memory folder, then applied: 121 tracked files (67 scratch folders, 47 of
+  the older Mac's home, 46 of the old repo path, 28 of the World link, 28 of the repo path, 12 project-folder names, 5 old project-folder
+  names, 4 scratch roots, 4 home folders, 3 of the older Mac's project folder, 3 bare names, 1 memory folder) and 9 memory files; the
+  binaries (30 epubs, the two stores) checked clean by grep; every script compiles; the lints at their baselines (the state doc 146, one
+  flagged line fewer). THE GATE: `python3 logic/solo_tools/scrub_home_paths.py --check` — GREEN — installed as this clone's pre-commit hook,
+  and a standing law in the recovery file's section 3.
+LAYER 2, THE HISTORY: 44 of 260 commits carried a username in their files (no commit message did); git filter-repo installed
+  (~/Library/Python/3.14/bin), the same table written as its replace-text expressions, the whole repository bundled first
+  (108 MB, in the session's scratch); the rewrite, its commit map (old id → new id) kept beside this map, the remote re-added and the
+  branch and tags force-pushed; the release checked after.
+LAYER 3, THE FOLDER: the repo moves to /Users/Shared/TorahSim — a path with no username — so Claude Code's project folder and scratch
+  folder carry none either; the same four lines as the rename, the memory and this thread's transcript copied under the new project name.

@@ -3,6 +3,7 @@
 argv[1] = the journal gate's line, argv[2] = the probes' line (both from prints)."""
 import os as _os
 _ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
+_MEMORY = _os.path.expanduser('~/.claude/projects/' + _os.path.abspath(_ROOT).replace('/', '-') + '/memory')   # THE PORTABLE REPO (2026-09-15): the memory folder as Claude Code names it, from the root
 import sys
 
 def patch(path, pairs):
@@ -32,7 +33,7 @@ def prepend(path, text, marker):
     print('%s: prepended %d chars' % (path.split('/')[-1], len(text)))
 
 R = _ROOT
-M = '<memory>'
+M = _MEMORY
 GATE = sys.argv[1] if len(sys.argv) > 1 else '{GATE}'
 PROBES = sys.argv[2] if len(sys.argv) > 2 else '{PROBES}'
 
@@ -190,8 +191,8 @@ second pass; the readback), a sitting (the checkpoints as they fall), small (the
 patch(M + '/MEMORY.md', [
     ('THE LOOP THAT WAITS IS BUILT. ⚠ STANDING DUTY: THE_LOOP.md "TO FINISH THE LOOP — THE LIST" (12 items:',
      'THE LOOP THAT WAITS IS BUILT. D7\'S MERGE DONE 2026-09-14 on "ok go the merge" — ONE DATABASE World/journal/data/world.sqlite (D19 the fold the L1 layer; D20 the old tables views with their old names, fold_events the exception; D21 the gate upstream twice; World/world.sqlite deleted; run_genesis.py retired; merge_probes.py 0/8 → 8/8; the reconciliation ALL GREEN). ⚠ STANDING DUTY: THE_LOOP.md "TO FINISH THE LOOP — THE LIST" (11 items open:'),
-    ('- [The World folder](the-world-folder.md) — <world-link>: standalone queryable world; read its RESUME.md first',
-     '- [The World folder](the-world-folder.md) — <world-link> (a symlink to the repo\'s World/): read its RESUME.md head first — MERGED 2026-09-14: world.sqlite deleted, the one database is World/journal/data/world.sqlite (ask.py over it), run_genesis.py retired'),
+    (('- [The World folder](the-world-folder.md) — ' + (_ROOT + '/World') + ': standalone queryable world; read its RESUME.md first'),
+     ('- [The World folder](the-world-folder.md) — ' + (_ROOT + '/World') + ' (a symlink to the repo\'s World/): read its RESUME.md head first — MERGED 2026-09-14: world.sqlite deleted, the one database is World/journal/data/world.sqlite (ask.py over it), run_genesis.py retired')),
 ])
 append(M + '/the-world-folder.md', '''
 **2026-09-14 — MERGED (D7's merge; THE_LOOP.md "D7'S MERGE — ONE DATABASE").** World/world.sqlite is DELETED. The one database is

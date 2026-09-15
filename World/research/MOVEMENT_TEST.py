@@ -13,10 +13,12 @@ auditable and the positive (if it is one) is counted.
 PROBE: the classifier must fire on labels known to be present. If the probe
 does not fire, the run refuses to report.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import sqlite3
 from collections import Counter
 
-WORLD = "<world-link>/world.sqlite"
+WORLD = ((_ROOT + '/World') + "/world.sqlite")
 
 # Classified by hand from the FULL enumeration below — the enumeration is
 # measured, the classification is a judgement, same contract as VERB_REVIEW.md.

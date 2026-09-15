@@ -129,4 +129,4 @@ RESUME = '''SITTING 10 DONE 2026-09-12 (THE VOWS 30:1-17 READ AND FROZEN; NUMBER
 append(f'{ROOT}/logic/findings/STAMP_LEDGER.md', STAMP)
 append(f'{ROOT}/World/step9/NUMBERS_WALK.md', WALK)
 append(f'{ROOT}/logic/pre_logic_methods_2026-07-28/PROMPT_continue_solo_era_2026-08-06.md', STATE)
-append('<world-link>/RESUME.md', RESUME)
+append(((_ROOT + '/World') + '/RESUME.md'), RESUME)

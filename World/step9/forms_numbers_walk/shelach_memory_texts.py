@@ -1,5 +1,6 @@
 import os as _os
 _ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
+_MEMORY = _os.path.expanduser('~/.claude/projects/' + _os.path.abspath(_ROOT).replace('/', '-') + '/memory')   # THE PORTABLE REPO (2026-09-15): the memory folder as Claude Code names it, from the root
 # THE NUMBERS WALK 4b — the records' final appends, run after the sweep prints (SWEEPLINE replaced by the sweep's own line).
 import re, sys, os
 SCR = os.path.dirname(os.path.abspath(__file__))
@@ -35,7 +36,7 @@ app(f'{R}/World/RESUME.md', "SITTING 4b DONE 2026-09-10 (THE COMPILE OF SHELACH 
 state = open(f'{SCR}/shelach_state_entry.txt', encoding='utf-8').read().replace('SWEEPLINE', SWEEP)
 app(f'{R}/logic/pre_logic_methods_2026-07-28/PROMPT_continue_solo_era_2026-08-06.md', state)
 # ---- memory: the ruling file, the lessons head, the index line ----
-MEM = '<memory>'
+MEM = _MEMORY
 rep(f'{MEM}/numbers-in-order-ruling.md', "THEN chapter 16 (Korach's reading) — never the next\nreading first.\nRelated:",
     "THEN chapter 16 (Korach's reading) — never the next\nreading first.\nSITTING 4b DONE 2026-09-10 — THE COMPILE OF SHELACH (NUMBERS_WALK.md \"Sitting 4b\" design + as-built; COMPILE_DEBT's sitting-4 line PAID): the docket\n313 rows (141 LAW); the parser taught THE FRACTION before a measure noun, THE UNIT NOUN AS ONE (the tenth, the cubit by its points, the hin) and\nTHE DEFINITE ONE (34 probes to FAIL, 110/110; the diff 110 verses read — three more homographs: the third generation as thirty, Sheshai as the\nsixth, the tithe verb as ten); cold_run_shelach.py 172/172 first graded run, law_shelach the 51st, the libation table COMPUTED from 15:4-10 and\nasserted at Exod 29:40 / Num 28, bamidbar / chatat / offerings / minchah CALLED; the tape's seventeen lines + the 13:25 marker (2, 5, 9); the forty\ndays FIRED at (2, 5, 10) — CF2 DIVERGE (the inclusive count; tammuz_length's Abaye arm), the thirty-eight years PENDING (40, 5, 9) — CF3; RUN\n(1136, 49, 48, 0, 12, 1332, 22, 284, four pairs, 101) matched on the second run (the first caught the REUSED KIND report_given and CS7's\nunscoped count); THE REST exact; 10/10; the journal gate GREEN; %s. NUMBERS 1:1-15:31 READ, FROZEN, COMPILED AND ON THE TAPE.\nNEXT: CHAPTER 16 — Korach's reading (16:1-18:32; the Sifrei silent on 16-17, piska 116 at 18:1; chapter 18 pays the challah's terumah pointer), then\nits compile (5b) — never the next reading first.\nRelated:" % SWEEP)
 rep(f'{MEM}/numbers-in-order-ruling.md', "SITTING 4 SHELACH 13:1-15:31 READ AND FROZEN 2026-09-10 (190 units; the Sifrei silent on 13-14; the fraction class); NEXT the compile of Shelach (4b), then chapter 16\"",

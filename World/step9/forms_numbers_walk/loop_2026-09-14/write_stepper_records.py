@@ -2,6 +2,7 @@
 """write_stepper_records.py — THE LOOP step 7 (b) THE STEPPER: the records at the close (2026-09-14). Every anchor asserted once; idempotent."""
 import os as _os
 _ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
+_MEMORY = _os.path.expanduser('~/.claude/projects/' + _os.path.abspath(_ROOT).replace('/', '-') + '/memory')   # THE PORTABLE REPO (2026-09-15): the memory folder as Claude Code names it, from the root
 
 def patch(path, pairs):
     t = open(path, encoding='utf-8').read(); done = 0
@@ -23,7 +24,7 @@ def append(path, text, marker):
     print('%s: appended %d chars' % (path, len(text)))
 
 R = _ROOT
-M = '<memory>'
+M = _MEMORY
 
 ASBUILT = '''
 ## As built — step 7 (b) THE STEPPER (2026-09-14, the same sitting; the owner: "ok go b"; the design above first, the probes to FAIL 0/8,

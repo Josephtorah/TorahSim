@@ -1,5 +1,6 @@
 import os as _os
 _ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
+_MEMORY = _os.path.expanduser('~/.claude/projects/' + _os.path.abspath(_ROOT).replace('/', '-') + '/memory')   # THE PORTABLE REPO (2026-09-15): the memory folder as Claude Code names it, from the root
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 11 — MIDIAN (2026-09-12): the records — the stamp row, NUMBERS_WALK.md "Sitting 11", the state doc's #145, World/RESUME.md,
 # THE_STEPS' paragraph, THE_BRIEFING's bullet, COMPILE_DEBT's box, RESEARCH_LOG's entry, MIDDOT's case-law block, the gloss override rows, the three
@@ -8,7 +9,7 @@ _ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file
 import os, re, yaml
 ROOT = _ROOT
 SP = os.path.dirname(os.path.abspath(__file__))
-MEM = '<memory>'
+MEM = _MEMORY
 truth = open(f'{ROOT}/logic/corpus/CORPUS_TRUTH.py', encoding='utf-8').read()
 assert 'assert len(W["units"]) == 206' in truth and 'assert len(W["standing"]) == 2114' in truth and "== '8b8fff1fa28953af'" in truth, 'the fold is not the predicted one'
 rit = open(f'{SP}/midian_ritual_num_31_midian.out', encoding='utf-8').read()
@@ -393,7 +394,7 @@ print('overrides: by_gloss %d, by_ref %d, parsed' % (len(d['by_gloss']), len(d['
 append(f'{ROOT}/logic/findings/STAMP_LEDGER.md', STAMP)
 append(f'{ROOT}/World/step9/NUMBERS_WALK.md', WALK)
 append(f'{ROOT}/logic/pre_logic_methods_2026-07-28/PROMPT_continue_solo_era_2026-08-06.md', STATE)
-append('<world-link>/RESUME.md', RESUME)
+append(((_ROOT + '/World') + '/RESUME.md'), RESUME)
 insert_before(f'{ROOT}/THE_STEPS.md', '## THE FINDINGS LOOP + THE STAMP LAW (owner-approved 2026-08-31)', STEPS)
 insert_after(f'{ROOT}/THE_BRIEFING.md', '## SCOREBOARD (as of 2026-09-12, latest)\n', BRIEF)
 append(f'{ROOT}/World/step9/COMPILE_DEBT.md', DEBT)

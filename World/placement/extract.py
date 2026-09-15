@@ -19,15 +19,15 @@ from collections import defaultdict
 
 REPO = _ROOT
 DB = f"{REPO}/torah_grok.SNAPSHOT-main-51801ca.sqlite"
-WORLD = "<world-link>/world.sqlite"
-GAZ = "<world-link>/placement/gazetteer.json"
+WORLD = ((_ROOT + '/World') + "/world.sqlite")
+GAZ = ((_ROOT + '/World') + "/placement/gazetteer.json")
 
 PARASHOT = {
     "vayetze": ("Gen", (28, 10), (32, 3)),
 }
 
 VERB_CAT = {}
-for line in open("<world-link>/research/VERB_REVIEW.md"):
+for line in open(((_ROOT + '/World') + "/research/VERB_REVIEW.md")):
     p = [x.strip() for x in line.split("|")]
     if len(p) > 5 and p[1].isdigit() and p[4] in ("LOC", "CAUS", "POS", "HOLD"):
         VERB_CAT[p[1]] = (p[4], p[2])
@@ -205,7 +205,7 @@ def main(name="vayetze"):
         print(f"  {ref:<12} {', '.join(v[:20] for v in vbs[:4])}")
 
     json.dump(proposals, open(
-        f"<world-link>/placement/proposals_{name}.json", "w"),
+        f"{_ROOT}/World/placement/proposals_{name}.json", "w"),
         ensure_ascii=False, indent=1)
     print(f"\nwrote placement/proposals_{name}.json")
 

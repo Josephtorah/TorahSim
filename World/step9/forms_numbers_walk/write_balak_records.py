@@ -1,11 +1,12 @@
 import os as _os
 _ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
+_MEMORY = _os.path.expanduser('~/.claude/projects/' + _os.path.abspath(_ROOT).replace('/', '-') + '/memory')   # THE PORTABLE REPO (2026-09-15): the memory folder as Claude Code names it, from the root
 #!/usr/bin/env python3
 # THE NUMBERS WALK sitting 7 — BALAK (2026-09-11): THE RECORDS — every anchor read from its file and asserted before a byte is written;
 # every entry appended (the ledgers append-only; the maps' sections added at their tails; the index lines rebuilt whole).
 import re, os
 ROOT = _ROOT
-MEM = '<memory>'
+MEM = _MEMORY
 def rd(p): return open(p, encoding='utf-8').read()
 def wr(p, t): open(p, 'w', encoding='utf-8').write(t)
 def insert_before(p, anchor, block):
@@ -319,7 +320,7 @@ insert_after(f'{ROOT}/THE_BRIEFING.md', '## SCOREBOARD (as of 2026-09-11, latest
 replace_once(f'{ROOT}/THE_BRIEFING.md', '196 units, standing 2023, hash unmoved; 53 daemons; the sweep 48/48 runners green at 5,613 cells; Numbers 1:1-21:35', '200 units, standing 2063, hash unmoved; 53 daemons; the sweep 48/48 runners green at 5,613 cells; Numbers 1:1-25:19 read and frozen, 1:1-21:35')
 
 # 9. World/RESUME.md
-append('<world-link>/RESUME.md', "SITTING 7 DONE 2026-09-11 (BALAK 22:1-25:19 READ AND FROZEN; NUMBERS_WALK.md \"Sitting 7\"; the draft's grain at both ends — 22:1 and 25:10-19 read with their drafts): the Sifrei's one piska 131 on 25:1-13 (five rows; none on 22-24, computed; two citations inside row 2 mistyped; the export joining 25:19 into its 26:1 — a fourth defect class) + Onkelos whole (115) = 120 sources in four ledgers (seven modules; 102 asserts, thirty failures on the first typed pass — twelve the marks' order, met by NFC on both sides; five cut misses the shelf's spellings, none on the second run); 40 claims verified and labeled, 40 operators seated, four rituals → 200 units, standing 2063, hash unmoved, the fold matching its prediction; the parser right at ten, ONE GAP the plene \"three\" (22:32), and the calf's \"about three thousand\" found read 3 by the cross-check; the crowns in the file (the Akedah's morning, the satan-word's two seats, the three gentiles' night visits, Pharaoh's verbs, the word-formula's six, the feet and the times, the three stands on the stations, the parable-tellers' word paid, Samuel over Agag, the serpent and the omen, Judah's blessing but two words, Jeremiah's fusion, the translation's king and Messiah, Daniel's Kittim, Shittim's timber, Exodus 34's run with the feminine \"their gods\", the curse-word's alcove, Aaron's clause at Phinehas's, the sotah's zeal-word, Zur of the five kings, Haman's title). NEXT: THE COMPILE OF BALAK (7b), then chapter 26 — never the next reading first.\n")
+append(((_ROOT + '/World') + '/RESUME.md'), "SITTING 7 DONE 2026-09-11 (BALAK 22:1-25:19 READ AND FROZEN; NUMBERS_WALK.md \"Sitting 7\"; the draft's grain at both ends — 22:1 and 25:10-19 read with their drafts): the Sifrei's one piska 131 on 25:1-13 (five rows; none on 22-24, computed; two citations inside row 2 mistyped; the export joining 25:19 into its 26:1 — a fourth defect class) + Onkelos whole (115) = 120 sources in four ledgers (seven modules; 102 asserts, thirty failures on the first typed pass — twelve the marks' order, met by NFC on both sides; five cut misses the shelf's spellings, none on the second run); 40 claims verified and labeled, 40 operators seated, four rituals → 200 units, standing 2063, hash unmoved, the fold matching its prediction; the parser right at ten, ONE GAP the plene \"three\" (22:32), and the calf's \"about three thousand\" found read 3 by the cross-check; the crowns in the file (the Akedah's morning, the satan-word's two seats, the three gentiles' night visits, Pharaoh's verbs, the word-formula's six, the feet and the times, the three stands on the stations, the parable-tellers' word paid, Samuel over Agag, the serpent and the omen, Judah's blessing but two words, Jeremiah's fusion, the translation's king and Messiah, Daniel's Kittim, Shittim's timber, Exodus 34's run with the feminine \"their gods\", the curse-word's alcove, Aaron's clause at Phinehas's, the sotah's zeal-word, Zur of the five kings, Haman's title). NEXT: THE COMPILE OF BALAK (7b), then chapter 26 — never the next reading first.\n")
 
 # 10. Memory files
 p = f'{MEM}/numbers-in-order-ruling.md'

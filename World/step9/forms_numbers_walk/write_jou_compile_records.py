@@ -1,5 +1,6 @@
 import os as _os
 _ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
+_MEMORY = _os.path.expanduser('~/.claude/projects/' + _os.path.abspath(_ROOT).replace('/', '-') + '/memory')   # THE PORTABLE REPO (2026-09-15): the memory folder as Claude Code names it, from the root
 #!/usr/bin/env python3
 # THE NUMBERS WALK 13b (2026-09-12): THE RECORDS at the compile's close — NUMBERS_WALK.md "Sitting 13b — AS BUILT" (from jou_asbuilt.md with the sweep's
 # line filled from the sweep's own print), COMPILE_DEBT.md's sitting-13b box (the sitting-13 box PAID + the new debts), MOVE_CATALOG.md M-30,
@@ -7,7 +8,7 @@ _ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file
 # line, memory (three files), the state doc's #154, the recovery file's section 13. Every append anchored; every file linted after by the caller.
 # Idempotent on the markers. write_gad_compile_records.py's form.
 import re, os, sys
-ROOT = _ROOT; SP = os.path.dirname(os.path.abspath(__file__)); MEM = '<memory>'
+ROOT = _ROOT; SP = os.path.dirname(os.path.abspath(__file__)); MEM = _MEMORY
 sweep = open(f'{SP}/sweep_jou.out', encoding='utf-8').read()
 m = re.search(r'(\d+)/(\d+) runners? green.*?([\d,]+) graded cells', sweep, re.S) or re.search(r'(\d+)/(\d+).*?([\d,]+) graded', sweep, re.S)
 assert m and m.group(1) == m.group(2), 'the sweep\'s print has no green line: read it'
@@ -207,7 +208,7 @@ insert_after_line(f'{ROOT}/THE_BRIEFING.md', '## SCOREBOARD (as of 2026-09-12, l
 # 9. World/RESUME.md
 RES = '''SITTING 13b DONE 2026-09-12 (THE COMPILE OF THE JOURNEYS 33:1-56; NUMBERS_WALK.md "Sitting 13b" design + as-built; the owner: "Go" after the #152 rereads): the docket 196 rows (Zevachim's gemara sized and cut; the retreat of seven stations — M-30; the era's New Year from the chapter's date; the morrow at both ends; the figured stone's ban uncompiled and filed); the types (three tape kinds, two exam kinds, two effects, no registry row; law_journeys the 60th daemon, installed by boot with the class named); cold_run_journeys.py 53/53 on the third run; THE FORTY-TWO A DATA ROW built from the DB (eighteen only here; Moseroth seven before Mount Hor); the tape's three lines — the writing, the judgments on the gods (Exodus 12:12's run told here alone), the command's two debits OPEN BY DESIGN; RUN (1274, 66, 52, 0, 12, 1522, 31, 318, four pairs, 121) predicted and matched first tape run, 10/10 on the second; every gate green; the sweep %s/%s at %s. NUMBERS 1:1-33:56 READ, FROZEN, COMPILED AND ON THE TAPE. NEXT: chapter 34 — the borders' reading, then its compile.
 ''' % (NR, NR, CELLS)
-append('<world-link>/RESUME.md', RES, 'SITTING 13b DONE 2026-09-12')
+append(((_ROOT + '/World') + '/RESUME.md'), RES, 'SITTING 13b DONE 2026-09-12')
 
 # 10. memory — numbers-in-order-ruling.md (a line + the description), MEMORY.md (the numbers line), step9-exam-era.md (the lessons head)
 p = f'{MEM}/numbers-in-order-ruling.md'; s = rd(p)

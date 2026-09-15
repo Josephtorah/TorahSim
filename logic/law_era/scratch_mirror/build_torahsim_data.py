@@ -26,7 +26,7 @@ import sqlite3
 from pathlib import Path
 
 HOME = Path(_ROOT)
-PUB = Path("<repo>")
+PUB = Path(_ROOT)
 SNAPSHOT = HOME / "torah_grok.SNAPSHOT-main-51801ca.sqlite"
 MAIN_DB = HOME / "torah_grok.sqlite"
 TANAKH = HOME / "elijah_docket" / "tanakh.sqlite"

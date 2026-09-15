@@ -20,8 +20,8 @@ import json
 from pathlib import Path
 
 HOME = Path((_ROOT + "/logic/py_units"))
-PUB = Path("<repo>/units")
-INDEX = Path("<repo>/data/units_index.json")
+PUB = Path((_ROOT + "/units"))
+INDEX = Path((_ROOT + "/data/units_index.json"))
 
 NOTICE = ("# TorahSim — (c) 2026 Brian LeBlanc · MIT license "
           "(see LICENSE at repo root)\n")

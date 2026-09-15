@@ -1,9 +1,10 @@
 import os as _os
 _ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
+_MEMORY = _os.path.expanduser('~/.claude/projects/' + _os.path.abspath(_ROOT).replace('/', '-') + '/memory')   # THE PORTABLE REPO (2026-09-15): the memory folder as Claude Code names it, from the root
 #!/usr/bin/env python3
 # THE NUMBERS WALK 7b — the closing records, every anchor asserted; the sweep's numbers READ from run_cold_all's own print (never typed).
 import re, os, subprocess
-ROOT = _ROOT; SCR = os.path.dirname(os.path.abspath(__file__)); MEM = '<memory>'
+ROOT = _ROOT; SCR = os.path.dirname(os.path.abspath(__file__)); MEM = _MEMORY
 sweep = open(f'{SCR}/balak_sweep1.out', encoding='utf-8').read()
 m = re.search(r'run_cold_all: (\d+)/(\d+) runners green, (\d+) graded cells in all', sweep)
 assert m and 'sweep exit 0' in sweep, 'the sweep has not finished green'
@@ -62,7 +63,7 @@ rw(f'{ROOT}/THE_BRIEFING.md', f_brief)
 def f_resume(t):
     assert 'SITTING 7b DONE' not in t
     return t.rstrip('\n') + '\nSITTING 7b DONE 2026-09-11 (THE COMPILE OF BALAK; NUMBERS_WALK.md "Sitting 7b" design + as-built): the docket 199 rows (67 LAW); the parser taught the plene "three" and the construct "thousands of" (159/159; the diff moved the four probed verses alone); cold_run_balak.py 105/105 first graded run, twelve engines CALLED; law_balak the 54th daemon, the zealots\' rule installed by the deed (rule_installed on the tent at 25:10-13); the forty-one lines on the tape with no marker, RUN (1239, 52, 52, 0, 12, 1465, 25, 302, four pairs, 113) matched on the second tape run (the first-open close took Korach\'s open plague — filed; a status cannot close — the act retyped BODY); THE REST 6b\'s exactly; CL1-CL9 MATCH; the gates green; the sweep %d/%d at %s cells. NUMBERS 1:1-25:19 READ, FROZEN, COMPILED AND ON THE TAPE. NEXT: chapter 26 (the second census) — the reading, then its compile.\n' % (NR, ND, f'{CELLS:,}')
-rw('<world-link>/RESUME.md', f_resume)
+rw(((_ROOT + '/World') + '/RESUME.md'), f_resume)
 # ---- memory: numbers-in-order-ruling.md ----
 def f_rule(t):
     a = '; NEXT the compile of Balak (7b), then chapter 26"'

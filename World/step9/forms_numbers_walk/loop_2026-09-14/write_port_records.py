@@ -3,6 +3,7 @@
 Every anchor asserted once; idempotent. {TAPE} is filled from the tape's print before the run."""
 import os as _os
 _ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
+_MEMORY = _os.path.expanduser('~/.claude/projects/' + _os.path.abspath(_ROOT).replace('/', '-') + '/memory')   # THE PORTABLE REPO (2026-09-15): the memory folder as Claude Code names it, from the root
 import sys
 
 def patch(path, pairs):
@@ -25,7 +26,7 @@ def append(path, text, marker):
     print('%s: appended %d chars' % (path.split('/')[-1], len(text)))
 
 R = _ROOT
-M = '<memory>'
+M = _MEMORY
 TAPE = sys.argv[1] if len(sys.argv) > 1 else '{TAPE}'
 
 ASBUILT = '''

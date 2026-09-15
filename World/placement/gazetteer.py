@@ -37,8 +37,8 @@ from collections import defaultdict
 
 REPO = _ROOT
 DB = f"{REPO}/torah_grok.SNAPSHOT-main-51801ca.sqlite"
-WORLD = "<world-link>/world.sqlite"
-OUT = "<world-link>/placement/gazetteer.json"
+WORLD = ((_ROOT + '/World') + "/world.sqlite")
+OUT = ((_ROOT + '/World') + "/placement/gazetteer.json")
 
 LOC_PREP = {"b", "9003", "m", "4480", "413", "5921", "5704"}
 # Only heads whose complement is ALWAYS a toponym. Deliberately EXCLUDED:

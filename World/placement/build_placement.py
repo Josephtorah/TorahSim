@@ -17,10 +17,12 @@ Rows come from two sources and each row says which:
   reading  — a placement a human read out of the verse, cited to that verse
 Nothing is invented: every row cites the verse that licenses it.
 """
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
 import json, sqlite3, sys
 
-WORLD = "<world-link>/world.sqlite"
-REVIEW = "<world-link>/placement/reviewed_vayetze.json"
+WORLD = ((_ROOT + '/World') + "/world.sqlite")
+REVIEW = ((_ROOT + '/World') + "/placement/reviewed_vayetze.json")
 
 SCHEMA = """
 drop table if exists placement;

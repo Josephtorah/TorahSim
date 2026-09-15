@@ -3,6 +3,7 @@
 idempotent. The sweep's line is appended by patch_sweep_line.py when the sweep lands."""
 import os as _os
 _ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
+_MEMORY = _os.path.expanduser('~/.claude/projects/' + _os.path.abspath(_ROOT).replace('/', '-') + '/memory')   # THE PORTABLE REPO (2026-09-15): the memory folder as Claude Code names it, from the root
 import os
 
 def patch(path, pairs):
@@ -162,7 +163,7 @@ append(R + '/World/RESUME.md',
        'SITTING THE LOOP STEP 7 (a) DONE 2026-09-14')
 
 # ---- G. memory ----
-M = '<memory>'
+M = _MEMORY
 append(M + '/the-loop-ruling.md', '''
 **2026-09-14 — STEP 7 (a) WRITE AS YOU GO BUILT (the owner: "ok go 1"; THE_LOOP.md "Step 7 THE LOOP THAT WAITS — part (a)" design +
 as-built; the state doc's #171).** D14 THE SEAL: a journal line is sealed at the end of its BLOCK (the engine's outermost call returning at

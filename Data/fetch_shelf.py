@@ -7,7 +7,8 @@ from Sefaria's public export, and the manifest is the check.
     python3 Data/fetch_shelf.py --check      # no network: every file's bytes and sha256 against the manifest; GREEN or RED
     python3 Data/fetch_shelf.py --sample N   # fetch N rows into a temporary folder and compare their hashes (the network proven on a sample)
     python3 Data/fetch_shelf.py --regen      # rebuild the manifest from the files on disk (the source paths from the current manifest)
-    python3 Data/fetch_shelf.py --stores     # the stores too large for git (Data/STORES_MANIFEST.txt): fetched from the TorahSim release, hashed
+    python3 Data/fetch_shelf.py --stores     # the stores too large for git (Data/STORES_MANIFEST.txt): from the TorahSim release, hashed —
+                                             # by the plain address, or through `gh release download` while the repository is private
 
 THE MANIFEST Data/sefaria_export/MIRROR_MANIFEST.txt: one row per file — `source path in Sefaria-Export | destination | bytes | sha256`;
 a row `source | destination | skip` names a file deliberately not mirrored. THE SOURCE: Sefaria's public export bucket — in September 2026
@@ -172,7 +173,7 @@ def stores(check_only=False):
         if check_only:
             bad.append((r['dest'], 'missing' if not os.path.exists(p) else 'differs')); continue
         try:
-            n, h = _fetch_url(RELEASES + release + '/' + r['name'], p)
+            n, h = _fetch_asset(release, r['name'], p)
             fetched += 1
             if n != r['bytes'] or h != r['sha256']:
                 bad.append((r['dest'], 'fetched but differs'))
@@ -180,6 +181,24 @@ def stores(check_only=False):
             bad.append((r['dest'], '%s: %s' % (type(e).__name__, str(e)[:80])))
     print('THE STORES: %s — %d in the manifest (release %s); fetched %d; %s' % ('GREEN' if not bad else 'RED', len(rows), release, fetched, ('problems %s' % bad) if bad else 'every one present and matching'))
     return not bad
+
+
+def _fetch_asset(release, name, dest_path):
+    """a release asset: the plain address first (a public repository); if that is refused, the GitHub CLI's own download under the
+    reader's login (the repository is private today — a clone by an authorized reader has `gh` signed in; `gh auth switch --user <login>`)"""
+    try:
+        return _fetch_url(RELEASES + release + '/' + name, dest_path)
+    except Exception as e:
+        first = '%s: %s' % (type(e).__name__, str(e)[:60])
+    import shutil, subprocess, tempfile
+    gh = shutil.which('gh') or '/opt/homebrew/bin/gh'
+    with tempfile.TemporaryDirectory() as d:
+        r = subprocess.run([gh, 'release', 'download', release, '-R', 'Josephtorah/TorahSim', '-p', name, '-D', d], capture_output=True, text=True)
+        if r.returncode != 0:
+            raise RuntimeError('the plain address refused (%s) and `gh release download` failed: %s' % (first, (r.stderr or r.stdout).strip()[:160]))
+        os.makedirs(os.path.dirname(dest_path) or '.', exist_ok=True)
+        os.replace(os.path.join(d, name), dest_path)
+    return os.path.getsize(dest_path), sha256(dest_path)
 
 
 def _fetch_url(url, dest_path):

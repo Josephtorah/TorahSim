@@ -1,5 +1,6 @@
 import os as _os
 _ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
+_MEMORY = _os.path.expanduser('~/.claude/projects/' + _os.path.abspath(_ROOT).replace('/', '-') + '/memory')   # THE PORTABLE REPO (2026-09-15): the memory folder as Claude Code names it, from the root
 #!/usr/bin/env python3
 # THE NUMBERS WALK 8b — THE COMPILE OF THE SECOND CENSUS AND THE POPULATION TABLE (2026-09-11): THE RECORDS, written after the gates and the
 # sweep (their prints READ here, never typed): NUMBERS_WALK.md as-built; COMPILE_DEBT's sitting-8b box (the sitting-8 box paid, the seeding
@@ -8,7 +9,7 @@ _ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file
 # text that must exist (an assert), every file linted after (the baselines: NUMBERS_WALK 0, COMPILE_DEBT 0, RESEARCH_LOG 52, THE_STEPS 1,
 # THE_BRIEFING 0, RESUME 0, the ledger 0, the memory files 7 / 5 / 0, the state doc 147).
 import re, os, sys, subprocess
-ROOT = _ROOT; SP = os.path.dirname(os.path.abspath(__file__)); MEM = '<memory>'
+ROOT = _ROOT; SP = os.path.dirname(os.path.abspath(__file__)); MEM = _MEMORY
 DATE = '2026-09-11'
 def rd(p): return open(p, encoding='utf-8').read()
 def wr(p, s): open(p, 'w', encoding='utf-8').write(s)
@@ -269,7 +270,7 @@ insert_after(f'{ROOT}/THE_BRIEFING.md', '## ENTRIES (newest first)\n\n', ENTRY)
 # ---- F. World/RESUME.md ----
 RES = f'''SITTING 8b DONE {DATE} (THE COMPILE OF THE SECOND CENSUS AND THE POPULATION TABLE; NUMBERS_WALK.md "Sitting 8b" design + as-built; the owner: "Ok go" on the one-sitting form): THE POPULATION TABLE as engine state (World.tables; population_schema.yaml the FIFTH registry; World.row never by hand; the NINTH log class ROW -> run.row; the fifth view run_population; the fifth question `population`; population_probes 0/9 -> 9/9); cold_run_second_census.py the 50th runner 70/70 (second run — Ard bare), law_second_census the 55th daemon writing 136 rows (counted 94, delta 13, named 29) — the deltas DECLARED, Simeon's 13,100 labeled; the docket 264 rows (52 LAW); eight engines CALLED; the 25:19 marker reading-placed; RUN (1244, 52, 52, 0, 12, 1469, 26, 302, four pairs, 114) matched on the second tape run (the literals' third lines), THE REST 7b's exactly, CP1-CP9; the sweep {SW_OK}/{SW_N} at {SW_CELLS:,}; the seeding backward FILED. NEXT: chapter 28's reading (27 frozen at THE TENT, skipped), then its compile.
 '''
-insert_after(f'<world-link>/RESUME.md', rd('<world-link>/RESUME.md').split('\n')[[i for i, l in enumerate(rd('<world-link>/RESUME.md').split('\n')) if l.startswith('SITTING 8 DONE 2026-09-11')][0]] + '\n', RES)
+insert_after(f'{_ROOT}/World/RESUME.md', rd(((_ROOT + '/World') + '/RESUME.md')).split('\n')[[i for i, l in enumerate(rd(((_ROOT + '/World') + '/RESUME.md')).split('\n')) if l.startswith('SITTING 8 DONE 2026-09-11')][0]] + '\n', RES)
 
 # ---- G. the reading ledger's correction row (append-only) ----
 CORR = f'''
@@ -320,7 +321,7 @@ append(f'{ROOT}/logic/pre_logic_methods_2026-07-28/PROMPT_continue_solo_era_2026
 
 # ---- the lints ----
 for path, base in ((f'{ROOT}/World/step9/NUMBERS_WALK.md', 0), (f'{ROOT}/World/step9/COMPILE_DEBT.md', 0), (f'{ROOT}/RESEARCH_LOG.md', 52), (f'{ROOT}/THE_STEPS.md', 1), (f'{ROOT}/THE_BRIEFING.md', 0),
-                   ('<world-link>/RESUME.md', 0), (f'{ROOT}/logic/oral_triage/num_26_second_census_{DATE}.md', 0), (f'{MEM}/numbers-in-order-ruling.md', 0), (f'{MEM}/step9-exam-era.md', 7), (f'{MEM}/MEMORY.md', 5),
+                   (((_ROOT + '/World') + '/RESUME.md'), 0), (f'{ROOT}/logic/oral_triage/num_26_second_census_{DATE}.md', 0), (f'{MEM}/numbers-in-order-ruling.md', 0), (f'{MEM}/step9-exam-era.md', 7), (f'{MEM}/MEMORY.md', 5),
                    (f'{ROOT}/logic/pre_logic_methods_2026-07-28/PROMPT_continue_solo_era_2026-08-06.md', 147), (f'{ROOT}/World/step9/THE_LOOP.md', 0), (f'{ROOT}/ARCHITECTURE/DATABASE_SPECULATION.md', 0)):
     n = lint(path)
     print('%-95s lint %3d (baseline %d) %s' % (os.path.basename(path), n, base, 'OK' if n == base else 'MOVED'))

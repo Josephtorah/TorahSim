@@ -1,8 +1,11 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
+_MEMORY = _os.path.expanduser('~/.claude/projects/' + _os.path.abspath(_ROOT).replace('/', '-') + '/memory')   # THE PORTABLE REPO (2026-09-15): the memory folder as Claude Code names it, from the root
 #!/usr/bin/env python3
 # THE PROJECT REVIEW, finding 13's memory side (2026-09-13; the owner: "Yes"): every flagged term in the memory folder given its
 # English marker in place (a gloss in parentheses, a quoted gloss, or ", the …"); link lists get a gloss per link because the lint's
 # window runs ninety characters and stops at a period. Every replacement asserted once; a pair already applied is skipped.
-M = '<memory>/'
+M = (_MEMORY + '/')
 def patch(name, pairs):
     p = M + name; t = open(p, encoding='utf-8').read(); done = 0
     for old, new in pairs:

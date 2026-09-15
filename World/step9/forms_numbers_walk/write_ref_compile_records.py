@@ -1,5 +1,6 @@
 import os as _os
 _ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
+_MEMORY = _os.path.expanduser('~/.claude/projects/' + _os.path.abspath(_ROOT).replace('/', '-') + '/memory')   # THE PORTABLE REPO (2026-09-15): the memory folder as Claude Code names it, from the root
 #!/usr/bin/env python3
 # THE NUMBERS WALK 15b (2026-09-13): THE RECORDS at the compile's close — NUMBERS_WALK.md "Sitting 15b — AS BUILT" (from ref_asbuilt.md with the sweep's,
 # the journal gate's and the cursor probes' lines filled from their own prints), the reading ledger's CORRECTIONS block, COMPILE_DEBT.md's sitting-15b box
@@ -8,7 +9,7 @@ _ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file
 # by the caller. Idempotent on the markers. write_bor_compile_records.py's form. MOVE_CATALOG untouched (no new move this sitting — the shelf's forms known;
 # exemplars in MIDDOT's case law).
 import os, re
-ROOT = _ROOT; SP = os.path.dirname(os.path.abspath(__file__)); MEM = '<memory>'
+ROOT = _ROOT; SP = os.path.dirname(os.path.abspath(__file__)); MEM = _MEMORY
 sweep = open(f'{SP}/ref_sweep.out', encoding='utf-8').read()
 m = re.search(r'(\d+)/(\d+) runners? green.*?([\d,]+) graded cells', sweep, re.S) or re.search(r'(\d+)/(\d+).*?([\d,]+) graded', sweep, re.S)
 assert m and m.group(1) == m.group(2), 'the sweep\'s print has no green line: read it'
@@ -242,7 +243,7 @@ insert_after_line(f'{ROOT}/THE_BRIEFING.md', '## SCOREBOARD (as of 2026-09-12, l
 # 7. World/RESUME.md
 RES = '''SITTING 15b DONE 2026-09-13 (THE COMPILE OF THE REFUGE CITIES 35:1-34 — AND WITH IT NUMBERS CLOSES; NUMBERS_WALK.md "Sitting 15b" design + as-built; the owner: "Go" after the #158 rereads): RULE 29 THE BARE DUAL THOUSAND taught (the sheva under the lamed; probes 9/9 to FAIL then 208/208; the corpus diff twelve moved — two pausal duals found, the thousand thousands filed); the docket 666 rows (the Sabbath limit this chapter's measure; the twenty-three from the tokens; the iron needs no measure; the three high priests; no ransom and why the ox has one); cold_run_refuge.py 51/51 the 57th runner, law_refuge the 62nd daemon; TWO debits on the people OPEN by design to Joshua 20 and 21, THE TERM an event-keyed entry closed by the death act (three terms set and closed in the scene), the land polluted a status on the land, the inclusio read back to 5:3; RUN (1279, 66, 52, 0, 12, 1527, 33, 318, four pairs, 121) predicted and matched first tape run; every gate green; the sweep %s/%s at %s. NUMBERS 1:1-36:13 READ, FROZEN, COMPILED AND ON THE TAPE. NEXT on the owner's word: the next book.
 ''' % (NR, NR, CELLS)
-append('<world-link>/RESUME.md', RES, 'SITTING 15b DONE 2026-09-13')
+append(((_ROOT + '/World') + '/RESUME.md'), RES, 'SITTING 15b DONE 2026-09-13')
 
 # 8. memory — numbers-in-order-ruling.md (a line + the description), MEMORY.md (the numbers line), step9-exam-era.md (the lessons head)
 p = f'{MEM}/numbers-in-order-ruling.md'; s = rd(p)

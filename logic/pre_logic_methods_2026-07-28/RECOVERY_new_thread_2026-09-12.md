@@ -51,6 +51,10 @@ Repo: <repo-old> (sole truth). The public mirror TorahSim is downstream, relay o
 - COVERAGE IS COMPUTED, NEVER RECITED. Every "measured" claim goes through a script. A gate's FAIL is READ. A miss is
   evidence: read it, then retype from the print. THE MEASUREMENT PRINT HAS THE INDEX (type every index and slice
   width from the print). A STACK IS SUMMED FROM THE PAGE, never from memory.
+- NO MACHINE USERNAME, NO HOME PATH, ANYWHERE IN THE PROJECT (the owner, 2026-09-15; reviews/PORTABLE_repo_2026-09-15.md "THE USERNAME
+  SCRUB"): a path in a record is written with the markers <repo>, <world-link>, <scratch>, <memory>, <home>; the gate
+  `python3 logic/solo_tools/scrub_home_paths.py --check` runs as the pre-commit hook and refuses a commit that carries one; the one pass
+  over the records that installed this rule was the append-only law's single exception, on the owner's word.
 - NEVER Write a new record to a path without `ls` first. AN APPEND BUILDS THE WHOLE TEXT BEFORE IT OPENS THE FILE FOR WRITING
   (2026-09-15: `open(p, 'w').write(read(p) + text)` truncates p before read runs — the state doc and this file were emptied to their
   newest section and rebuilt from the commit plus a replay of the session's own scripts; read into a variable, then open to write).
@@ -726,3 +730,5 @@ old site session's 14 memory files archived beside it as memory_site_archive_202
 `mv <repo-old> <repo>` and the symlink `<world-link> -> <repo>/World` → the owner restarts
 Claude Code in <repo>. THE NEW THREAD'S FIRST LINE: this file is at the same relative path in the renamed folder.
 THEN: DEUTERONOMY, chapters 1 to 3, the reading, on the owner's word.
+THE LAST ACTS DONE 2026-09-15 (the owner: "commit push"): (1) COMMITTED 9e6c81a (400 files; pushed); (2) the repository RENAMED on GitHub — https://github.com/Josephtorah/TorahSim (private; the old address redirects), the remote re-pointed, `git ls-remote` answering 9e6c81a; (3) the release stores-2026-09-15 created with torah_grok.SNAPSHOT-main-51801ca.sqlite (153,755,648 bytes) as its asset — a plain download is refused while the repository is private, so fetch_shelf.py now falls back to `gh release download` under the reader's login (a change AFTER the commit, uncommitted), and an empty temporary clone fetched the store through the script in 4 s, GREEN; (4) the memory folder: the old site session's 14 files archived as ~/.claude/projects/<project-folder>/memory_site_archive_2026-09-15, our 49 copied to ~/.claude/projects/<project-folder>/memory; (5) .claude/settings.local.json's four path lines renamed. PENDING, THE LAST ACT ON THE OWNER'S WORD: `mv <repo-old> <repo> && ln -sfn <repo>/World <world-link>` — then the owner restarts Claude Code in <repo>; the first commit there carries fetch_shelf.py's change and these notes.
+THE LAST ACT DONE (2026-09-15, the owner's "go", the two lines run by him): the folder is <repo>, the symlink <world-link> -> <repo>/World, the old folder gone; THIS THREAD RESUMED IN THE NEW FOLDER (its transcript copied under the new project name; the memory there, 49 files); at the new path the board's gate, the positions' gate, the builder's reconciliation and the stores' check GREEN first try. Uncommitted here: 40 files — the third scan's rewrites, fetch_shelf.py's gh fallback, these notes; the next "commit push" carries them.
