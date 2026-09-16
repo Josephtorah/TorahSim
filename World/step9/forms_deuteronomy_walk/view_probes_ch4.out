@@ -1,0 +1,21 @@
+  THE SEAL L3_run_view_probes_probe.jsonl: 37 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  THE SEAL L3_run_view_probes_probe.jsonl: 37 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  THE SEAL L3_run_view_probes_probe.jsonl: 37 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  THE SEAL L3_run_view_probes_probe.jsonl: 37 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  THE SEAL L3_run_view_probes_probe.jsonl: 27 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  THE SEAL L3_run_view_probes_probe.jsonl: 37 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  THE SEAL L3_run_view_probes_probe.jsonl: 37 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  THE SEAL L3_run_view_probes_probe.jsonl: 27 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  PASS  V1 the index carries each row's source; the write row carries NO closer (a snapshot at write), the close row carries the day and the closer, and the ledger view joins them
+        sources [('view_probes/probe',)]; rows with the source 37 of 37 log lines; the ledger entry closed_day 33 open False; the write row keys ['amount', 'bound', 'case_source', 'counterparty', 'day', 'due', 'effect', 'op', 'open', 'seq', 'source_law', 'subject', 'written_by', 'year']; the close rows [(33, 'the_court', 'Lev 24:13 — probe: the output', 5, 'law_probe')]; the view [(0, 33, 'Lev 24:13 — probe: the output')]
+  PASS  V2 run_ledger's rows equal the write rows; the closed entry shows its day and its closer
+        ledger rows 9 = write lines 9; the docket row [('the_court', 'declaration_owed', 'debit', 30, 0, 33, 'Lev 24:13 — probe: the output', 'law_probe', 'the-blasphemer')]; retro-write rows 1
+  PASS  V3 run_timers joins every fire and every cancel to exactly one set, and shows the pending one
+        timer rows 3 (sets 3): [(10, 17, 'fired', 17, None, None), (20, 27, 'cancelled', None, 20, 'Exod 32:1'), (33, 40, 'pending', None, None, None)]; fires 1, cancels 1
+  PASS  V4 run_clock lists the markers in seq order with all three classes
+        clock rows 7 (markers 7): [(1, 10, 'Exod 19:1', 'forward', None), (5, 12, 'Exod 19:16', 'forward', None), (11, 20, 'Exod 24:1', 'forward', None), (19, 20, 'Exod 12:2', 'retrograde', 5), (23, 30, 'Exod 40:17', 'forward', None), (28, 33, 'Lev 24:13', 'forward', None), (37, 33, 'Gen 5:5', 'proleptic', 40)]
+  PASS  V5 run_docket: the declaration owed OPEN before the output, CLOSED at the output
+        before the output [('the_court', 'the-blasphemer', 30, 1, None)]; at the end [('the_court', 'the-blasphemer', 30, 0, 33, 'Lev 24:13 — probe: the output')]
+  PASS  V6 the four questions: the ledger at a day, what stands open at a verse, who wrote this, what waits in custody
+        ledger at 31 [('declaration_owed', 'open')], at 33 [('declaration_owed', 'closed')]; open at Lev 24:12 4 rows (the docket among them: True), at Lev 24:14 the docket closed; who [('law_probe', 30)]; custody before 1, after 0
+VIEW PROBES: 6/6

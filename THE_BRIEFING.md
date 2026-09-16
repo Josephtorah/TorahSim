@@ -14,7 +14,9 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   baked into an epub.
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
-## SCOREBOARD (as of 2026-09-15, latest)
+## SCOREBOARD (as of 2026-09-16, latest)
+- **CHAPTER 4 COMPILED — THE TAPE HAD A HOLE AND THE RETELLING FILLED IT: THE TEN WORDS SPOKEN AND THE TABLETS GIVEN, TOLD ONLY IN MOSES' RETELLING, WRITTEN ONCE AT THEIR OWN DAYS; THE ONE LAW A BLOCK WITH THE SHELF'S TWO ARMS; MOSES' THREE CITIES A STATUS, THE REFUGE DEBT OPEN UNTIL JOSHUA; THE IMAGE LAW FOUND UNCOMPILED AND NAMED AS DEBT** (2026-09-16, on your "then we finish 4"; World/step9/DEUTERONOMY_WALK.md "Sitting 2b" + AS BUILT): cold_run_obey_horeb.py the 59th runner (52/52), law_obey_horeb the 64th daemon; the readback's eleven rows; the tape 10/10 with RUN (1300, 96, 88, 0, 12, 1588, 35, 319, pairs, 126) as predicted, markers 165; every gate GREEN, the sweep 59/59. NEXT: chapter 5's reading.
+- **CHAPTER 4 READ AND FROZEN — THE SHELF IS SILENT ON THE WHOLE CHAPTER, ONE LAW AND ONE CASE, LEARN AND TEACH ARE ONE WORD, AND MOSES SETS APART THE THREE CITIES THE REFUGE LAW LEFT OPEN** (2026-09-16, on your "Go" after the rereads; World/step9/DEUTERONOMY_WALK.md "Sitting 2"). Two units on the chapter, 55 sources in one ledger, seven claims seated, the 217th and 218th frozen units (standing 2191, hash unmoved). The Sifrei on Deuteronomy has no piska on 4:1-49; its eight rows citing the chapter were found by scanning the whole export, and one of them is a third citation form. The finds: the chapter's one law (add nothing, take nothing away) and one case (when you beget sons); "they shall learn" and "they shall teach" the same letters; the tablets spelled full; the bar on Moses told a third time with an oath; the receipt in Moses' own voice; the translation's fear, Word and Shekhinah; the creed twice; "then Moses set apart" — the refuge runner's open debt, closed at the compile. Every gate green.
 - **THE OPENING SPEECH COMPILED — THE READBACK'S FIRST FORM BUILT: A RETELLING IS A REFERENCE ROW GRADED AGAINST THE TAPE'S OWN LINE, AN ACT TOLD ONLY IN THE RETELLING IS WRITTEN ONCE AT ITS OWN TIME AND CLOSED BY THE RUN THE TAPE ALREADY HOLDS, THE JUDGES' CHARGE IS THE SPAN'S ONE LAW, AND JOSHUA'S COMMISSION FILLS THE HOLE NUMBERS LEFT** (2026-09-15/16, on your "Go 1b right" and "Yes 1. Go"; World/step9/DEUTERONOMY_WALK.md "Sitting 1b — AS BUILT"): cold_run_opening_speech.py the 58th runner (97/97; sixteen tape lines; forty-two readback rows, two of them open disagreements; the exam's thirty-three persons); law_opening_speech the 63rd daemon; the docket 864 rows (Sanhedrin's court chapter whole); rule 30 the half taught (fifteen Torah tokens moved, none wrongly); the tape 10/10 with RUN (1295, 96, 88, 0, 12, 1583, 34, 319, the four pairs, 126) as predicted and THE REST reproducing 15b; the speech's clock walked five months (thirty-six fires) and found a parser mark stamping a night and a timers join doubling on one day — both fixed, both recorded; every probe suite and gate GREEN; the register gate's six seats paid. NEXT: chapter 4's reading.
 - **DEUTERONOMY OPENS — THE FIRST THREE CHAPTERS READ AND FROZEN: THE SHELF IS TWO ISLANDS, THE TRANSLATION WRITES THE SIFREI INTO THE FIRST VERSE, THE PARSER READS EVERY NUMBER, AND THE SPEECH RETELLS THE TAPE IN ITS OWN WORDS** (2026-09-15, on your "start with deuteronomy"; World/step9/DEUTERONOMY_WALK.md "Sitting 1"). Six units on the first portion's three chapters, 259 sources in one ledger, 21 claims, six rituals, 216 units, the hash unmoved; the Sifrei silent from the oath to Og; the readback's first specimens measured (the retellings diffed against Numbers); the compile next on your word.
 - **THE BUTTONS DRIVE THE ENGINE — THE ENGINE WAITS; NEXT TAKES ONE STEP; AUTO-PLAY TAKES A STEP A TICK UNTIL STOP, ONE BUTTON WITH TWO WORDS; THE PAGE WRITES ONE SIGNAL AND NEVER THE DATABASE** (2026-09-15, on your "the buttons should control the engine, it should not run on auto pilot behind the scenes" and "put a stop button also… one button two options. built it"; the Follow button gone at your word the same hour; World/step9/drive_probes.py 5/5 in their own folder; the board's gate green; THE_LOOP.md D31-D33)
@@ -479,6 +481,35 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   Next alongside it: Leviticus (new spine — Sifra).
 
 ## ENTRIES (newest first)
+
+### 2026-09-16 — CHAPTER 4 COMPILED: THE TAPE HAD A HOLE, AND THE RETELLING FILLED IT AT ITS OWN TIME
+
+Before any code was written, the tape was measured against the chapter, and the measurement found something the first three chapters had not shown:
+two acts that the tape never wrote. Exodus 19-24 is on the tape, but the moment the ten words are spoken and the moment the tablets are handed over
+are not lines there — the earlier compiles took the ten as law and folded the tablets into Moses' ascent. Chapter 4 tells both plainly. So the rule
+built at the first three chapters did its work here in the strongest case: a retelling that is the FIRST telling is still written once, at its own
+day, by a marker that reaches back — the ten words on the seventh of Sivan the shelf gives, the tablets on the seventeenth of Tammuz, the same day the
+tape already breaks them. The chapter's one law (add nothing, take nothing away) became a block with the two arms the Talmud argues — an addition in
+the mitzvah's own time, an addition beside it; its one case (when you grow old and corrupt) became a kind with the exile and the return as its arms
+and no timer, because "the end of days" is a prophecy, not a due date. Moses' three cities, which the reading expected to close the refuge law's
+debt, do not: the Mishnah says the three east of the Jordan sheltered no one until Joshua's three, so the act is a status and the debt stays open
+until a book we have not walked. And one debt was found by looking: the second of the ten words, the image law, has no cell in any runner; the
+chapter's list of forbidden forms is its parameter table, kept as data, and the debt is named at the edge that calls the Decalogue. The stitcher
+corrected the design three times from its own census — a stretch of supplied time runs until a marker ends it, a chapter that opens after such a
+stretch opens with one, a law sentence with no narrative verb is a statute line — and the tape took six runs to reach ten of ten, each miss a lesson
+now written down. Every gate is green and the sweep is whole. Next: chapter 5, where the ten words are restated and the laws' readback opens.
+
+### 2026-09-16 — CHAPTER 4 READ: THE SHELF IS SILENT, THE CHAPTER HAS ONE LAW, AND MOSES' THREE CITIES WAIT FOR THE COMPILE
+
+Chapter 4 was read the way the first three were — Onkelos whole, the Sifrei by its position — and the Sifrei turned out to have no position here at
+all: nothing between its row on 3:29 and its row on 6:4. So the shelf's reading of this chapter is whatever the shelf says about it elsewhere: eight
+rows in other piskaot cite chapter 4, and those were read (six fresh, two already read). The parser read every number. The chapter itself has one law
+(you shall not add to the word, nor take from it) and one case (when you beget sons and grow old in the land) — everything else is the rebuke retold:
+Horeb, the calf's lesson without the calf, the bar on Moses now with an oath, the exile and the return, the creed. Two things were measured that
+matter to the machine: the same letters mean "they shall learn" and "they shall teach" in one verse, told apart by vowels alone; and the export's
+chapter 5 has thirty verses where the database has thirty-three — the Decalogue's division — so the next reading measures that first. And the
+chapter's one act — Moses setting apart three cities of refuge beyond the Jordan — is the very act the refuge law's runner left open since Numbers
+35; the compile closes it. Seven claims, two rituals, the corpus at its predicted count, every gate green. Next: the compile, on your word.
 
 ### 2026-09-15/16 — THE OPENING SPEECH COMPILED: THE TAPE IS READ BACK, AND WHAT THE READING ADDS IS WRITTEN AT ITS OWN TIME
 

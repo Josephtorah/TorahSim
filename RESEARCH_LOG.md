@@ -3015,3 +3015,106 @@ The record: World/step9/DEUTERONOMY_WALK.md "Sitting 1b" (the design) and "Sitti
    staff, the commission); "as sheep without a shepherd" is Micaiah's phrase too (1 Kings 22:17); "before Eleazar the priest" bare at 27:19, 27:22 and
    Joshua 17:4 — the daughters paid before the same priest; "the LORD SPOKE to me" (2:17) is the Bible's one seat; "at that time" ten seats in the
    span, the retelling's dating word with no number.
+
+
+## 2026-09-16 — DEUTERONOMY 4 READ (THE DEUTERONOMY WALK sitting 2 — CHAPTER 4): THE SHELF'S SILENCE OVER A WHOLE CHAPTER; THE EXPORT'S THIRD
+## CITATION FORM; THE EXPORT'S CHAPTER 5 AT THIRTY VERSES; LEARN AND TEACH ONE WORD; THE TABLETS PLENE; THE NAME FOR "GOD" IN THE TRANSLATION;
+## THE THIRD TELLING OF THE BAR; THE STORE'S ODD GLOSSES ON THE CHAPTER
+
+THE SIFREI ON DEUTERONOMY HAS NO PISKA ON CHAPTER 4. Its thirtieth piska heads on 3:29 (two rows) and its thirty-first on 6:4 (ten rows); no head
+of the 357 falls in the chapter (the heads by chapter computed: chapter 1's twenty-four, chapter 3's four, chapter 4's none). Sitting 1 found the
+shelf two islands (1:1-1:28 and 3:23-3:29); the silence of 1:29-3:22 continues through 4:49 and ends at the Shema. The reading of the spine on such
+a chapter is the scan of the whole export for rows that CITE the chapter: eight do (seven in the Hebrew file, eight in the English), and those
+rows — on 3:29, 11:10, 11:22 (two), 17:2, 26:5, 32:1, 32:29 — were read in both files, six fresh, two credited from sitting 1.
+
+THE EXPORT'S THIRD CITATION FORM. Row 301:21 (on 26:8) is cited in the scan by its English alone: its Hebrew is UNPOINTED, abbreviated ("as it is
+written" in two letters) and cites nothing in parentheses, while its English cites "(Devarim 4:34)" WITH a space. The rows of piskaot 1-30 cite
+"(דברים א א)" ("Deuteronomy 1:1" in Hebrew letters) and "(Dt.1:1)" without a space (sitting 1 measured 3,292 "Dt." parens and one "Deut."); the
+late piskaot of the export are another stratum, with another translation. A scan of this export must carry all three forms; a Hebrew-only scan
+misses the row.
+
+THE EXPORT'S CHAPTER 5 HAS THIRTY VERSES. Onkelos Deuteronomy's export gives 956 verses to the DB's 959, and the whole difference is chapter 5 —
+thirty verses in the export against thirty-three in the DB (the Decalogue's division): the one chapter of the book where the export and the DB
+disagree (every other chapter's count equal, computed). The recorder and the stitcher address verses by the DB; the next reading measures the
+mapping first.
+
+LEARN AND TEACH ARE ONE WORD. 4:10 writes ילמדון ("they shall learn / they shall teach") twice: "that they may LEARN to fear me" (the qal, the
+morphology HVqi3mp) and "and their sons they shall TEACH" (the piel, HVpi3mp) — one spelling, two stems, the pointing alone dividing them; the store
+glosses both "goad-suffix", and Onkelos writes one Aramaic verb twice (the Aramaic cannot show the stem either). The display layer names each by
+reference ("they-may-learn", "they-shall-teach"); the parser's morphology carries what the consonants do not.
+
+THE TABLETS PLENE. 4:13's "two tablets of stone" spells "tablets" with the vav — three seats in the Bible (4:13, 9:11, 1 Kings 8:9) — where 5:22, the
+same chapter's own retelling, and every Exodus seat write it defective (twelve seats). The diff of 4:13 against 5:22 keeps "and wrote them on two"
+and changes the spelling.
+
+THE NAME FOR "GOD" IN THE TRANSLATION. 4:32 "since the day God created man on the earth" — Onkelos writes the Tetragrammaton's two letters where the
+verse writes Elohim: Genesis 1:1's verb given Genesis 2:4's Name. The chapter's other moves of the translation: "the fear of the LORD" supplied at
+4:4, 20, 29, 30; the Memra at 4:24 ("the LORD your God — his Memra is a consuming fire", the form's two seats 4:24 and 20:1), 4:33, 4:36, 4:37 (for
+"with his presence"); 4:39's "God whose Shekhinah is in the heavens above and who rules on the earth beneath" (3:24's confession again); 4:19
+"prepared" for "apportioned"; 4:28 "the peoples who serve idols" for "gods of wood and stone" (4:28, 28:36, 28:64); 4:34 "the miracles which the
+LORD did to reveal himself" for "has a god tried"; 4:5 "see" made plural.
+
+THE THIRD TELLING OF THE BAR. 1:37 "the LORD was angry with me FOR YOUR SAKES", 3:26 "the LORD was WROTH with me for your sakes", 4:21 "the LORD was
+ANGRY with me ON YOUR ACCOUNT and SWORE that I should not cross" — three grounds, one oath: 4:21 takes 1:37's verb (the hitpael of anger; the four
+Torah seats 1:37, 4:21, 9:8, 9:20) and its own phrase ("on your account" one seat, against "for your sakes" at 1:37 and Micah 3:12). The disagreement
+row 1b left open (1:37 against Numbers 20:12's "because you did not believe") widens by a telling.
+
+THE STORE'S ODD GLOSSES ON THE CHAPTER (the display layer, read back by ch4_patch_overrides.py — eighty-one by reference, sixty-three by gloss; the
+families censused over the whole store first): "goad" for TEACH (the whole family the teach-root), "the-enactment" for THE STATUTES, "mislay" for
+FORGET, "living-being-you/your" for YOUR SOUL, "meaning-to-glisten" for TABLETS, "to-failure-of" for SO AS NOT, "associate-him/its" for HIS
+NEIGHBOR, "the-Emorite" for THE AMORITE, "in-region-across" for BEYOND, "at-that-time" for THEN, "from-nearest-part" for FROM THE MIDST OF, "kindle"
+for BURN, "and-gloom" for AND THICK DARKNESS, "convoke" for ASSEMBLE, "decay-suffix" for YOU ACT CORRUPTLY, "the-heavens-suffix" for HEAVENWARD,
+"from-pot" for FROM THE FURNACE OF, "wander-away-suffix" for YOU SHALL PERISH, "trebly" for THE DAY BEFORE, "the-test" for HAS TRIED, "in-testing" for
+BY TRIALS; and by reference the mixed families — "the-see" for THAT SAW (4:3) against "see" for WERE SHOWN (4:35), "structure" for THE LIKENESS OF,
+"idol" for A GRAVEN IMAGE, "be-smooth" for APPORTIONED, "duplicate" for I CALL TO WITNESS, "and-dash-in-pieces" for AND WILL SCATTER, "dash-in-pieces"
+for A MANSLAYER and SLAYS, "the-testimony" for THE TESTIMONIES, "?" for I (six seats), Baal, Beth. Sixteen families the chapter shares with sitting 1
+were already rewritten and stand.
+
+
+## 2026-09-16 — DEUTERONOMY 4 COMPILED (THE DEUTERONOMY WALK sitting 2b — CHAPTER 4): THE TAPE'S HOLE — TWO ACTS THE TAPE NEVER WROTE; A RETROGRADE
+## STRETCH RUNS TO THE NEXT MARKER; A LAW SENTENCE WITH NO NARRATIVE VERB; A KIND SHARED ACROSS BOOKS; THE SECOND WORD UNCOMPILED; THE REFUGE DEBIT
+## LEFT OPEN ON THE MISHNAH'S WORD
+
+THE TAPE'S HOLE. The measurement before the design read the tape from Exodus 19:20 to 24:1 and found NO LINE for the ten words spoken (Exodus 20:1)
+nor for the first tablets given (31:18): the decalogue runner compiled the law layer only, and the erection runner folded the tablets into the ascent
+line. Deuteronomy 4:10-13 tells both — "he declared to you his covenant … the ten words; and he wrote them on two tablets of stone" — so THE RETELLING
+IS THEIR FIRST TELLING ON THE TAPE. The readback's first form (1b) already had the case: an act told only in the retelling is written ONCE at its own
+time by a retrograde marker. Here two: ten_words_declared at (1, 3, 7) — the sinai_days row's giving, Rabbi Yose's seventh, the day of the Exodus
+19:16 marker — and tablets_given at (1, 4, 17), the fortieth day (Taanit 28b), the same day as the tape's tablets_broken line at Exodus 32:19: given
+and broken on one day, the checkpoint CC5 reads both dates off the ledger. The two rows graded SUPPLIED; the other nine SHORTENED 3, EXPANDED 5,
+DISAGREES 1 (the bar's third telling, 4:21-22, with an oath and a new ground — a second open row beside 1:37's).
+
+A RETROGRADE STRETCH RUNS TO THE NEXT MARKER. The stitcher's first census placed the chapter's last two lines (the witnesses, the cities) INSIDE the
+stretch the 4:13 marker opened, dated to the seventeenth of Tammuz of the first year — and the chapter's first line inside 1b's Deuteronomy 2:2 stretch,
+still open on the tape after the previous sitting. The engine's rule, read off the census: a retrograde marker's stretch runs to the NEXT marker, so an
+own-day line after a supplied line needs a FORWARD marker back to the counter's day (Leviticus 9:1's form), and a chapter that opens after a stretch
+opens with one. Four markers, not the design's two: forward at 4:1, retrograde at 4:10 and 4:13, forward at 4:25. Markers 165.
+
+A LAW SENTENCE WITH NO NARRATIVE VERB. The stitcher dropped the exhortation's line as 'register': its test wants a wayyiqtol ("and he did", the
+narrative verb form) within a window of the cited verses, and 4:1-8 has none — the chapter's first is at 4:11. The line is the narrator's own law
+sentence (4:2, add nothing, diminish nothing); its form is STATUTE, the form of sinew_barred and statute_set, which the test passes by form. The
+kind's form was retyped in the registry with the reason beside it.
+
+A KIND SHARED ACROSS BOOKS. The checkpoint CC5 dated "the" lord_descended line and crashed the run: the kind has TWO lines on the tape — Babel's
+descent at Genesis 11:5 (the primeval runner) and Horeb's at Exodus 19:18 — and the first falls before the exodus era's epoch. A checkpoint that dates a
+kind's line names the VERSE. The same lesson twice more in the next run: plague_struck on the people three times (Numbers 11, 17, 25); Numbers
+33:50-56's command two debits. The other crashes of the six tape runs were the sitting's own: the missing retypes, a registry read by a module name that
+does not exist (the effects registry is its YAML), the eras read off the world instead of the clock, and a write script that gated its writes on an
+unverified assertion and wrote nothing — a rule written down: compute, print, read, then write.
+
+THE SECOND WORD UNCOMPILED. The no-image list of 4:16-19 (figure, male, female, beast, bird, creeping thing, fish, sun, moon, stars, the host) is the
+parameter table of Exodus 20:3-6, and the measurement found that NO RUNNER HAS A CELL for the image law: the decalogue runner's cells are the altar
+rules and the ten as a list. The list is DATA here; the edge obey_horeb → decalogue is a live CALL whose why names the debt; the docket's Rosh Hashanah
+24a-24b (Rabban Gamliel's forms of the moon) and Avodah Zarah 3:1-3 are its test rows, filed. Owed to chapter 5's sitting, where the ten are restated —
+and where the schema question on the table (the ten as headers over the laws) has its seat.
+
+THE REFUGE DEBIT LEFT OPEN. The reading said Moses' three cities (4:41-43) CLOSE the refuge runner's debit open since Numbers 35:14. The docket said
+otherwise: Mishnah Makkot 2:4 and Makkot 9b-10a — the three east of the Jordan admitted no one until Joshua's three were set apart, "six cities shall
+they be" (Numbers 35:13). The act writes a STATUS (cities_set_apart on Israel valued the three, by CALL to the refuge runner's row) and the debit stays
+OPEN; the close is Joshua 20:7-8, outside the Torah, THE READBACK's when the Prophets are walked. Closes 126 unmoved.
+
+THE DISPOSITIONS BY THE POINTS. Four token-demanded edges FALSE, each told by the vowels or the lemma: "my crossing" (4:21, the qamats under the ayin,
+lemma 5674) is not "a Hebrew" (the chirik, 5680); "king" (4:46-47, the segols) is not "Molech" (the cholam with the dagesh); "under" (4:11, 4:19, 4:49)
+is the preposition, not the talion's "in place of"; "inheritance" (4:20, 4:21, 4:38) the land as a gift named whole, no estate divided. Two pointers
+RUN_CITATION: 4:5's receipt of the teaching's command (Exodus 24:12, by the erection runner's ascent cell) and 4:33's "as you have heard" (the voice at
+Horeb on the tape).

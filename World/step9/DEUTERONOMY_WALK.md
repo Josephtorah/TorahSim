@@ -682,4 +682,510 @@ THE LAST TWO GATES (2026-09-16, after the addendum): the sweep run_cold_all.py �
 cold_run_opening_speech.py 97/97 in 91 s; the daemon gate and the dependency gate satisfied inside it — 435 compiled functions WRAPPED, 0 OWED,
 0 NONE; 63 daemons watching 1,113 kinds; 505 edge dispositions on file); then the journal gate alone, after the sweep's process had ended — GATE
 GREEN (the fold layer's twelve kinds, 9,628 rows matching the header; the state hash pinned). The prints: the scratchpad's sweep_deu.out and
-journal_gate_deu3.out (copied into forms_deuteronomy_walk/). SITTING 1b CLOSED — nothing committed; 69 paths await the owner's "commit push".
+journal_gate_deu3.out (copied into forms_deuteronomy_walk/). SITTING 1b CLOSED. COMMITTED b8b721d (2026-09-16, on the owner's "Commit" — 139 files, sittings 1 and 1b; NOT PUSHED, the push waits on his word).
+
+
+## Sitting 2 — CHAPTER 4, Deuteronomy 4:1-49 (2026-09-16; the owner: "Go" after the rereads, on the rulings READ THEN COMPILE PER PORTION and CHAPTER NUMBERS): the reading and the units
+
+THE DRAFTS: two cover the chapter exactly — computed from the Tanakh DB's verse table: 49 of 49 verses, missing 0 — deu_04_obey_horeb 4:1-40,
+deu_04_refuge_east 4:41-49 (the next draft, deu_05_decalogue, opens at 5:1; the step ids STEP_Dt_4_<v>; the scenarios in the tree form before the
+seat; each step block carries two "comment" lines — the step's and its map's — 84 and 22, counted from the print). The portion's grain crosses at
+3:23 (the second portion runs 3:23-7:11); the chapter is the sitting's unit, per the ruling. Read in ONE pass, one ledger. The forms: sitting 1's
+scripts folded and edited (ch4_dump0.py — the three first-pass scripts in one; ch4_measure1.py, ch4_measure2.py; ch4_ink.py with assert_driver.py
+and deu_legs.py; ch4_rows_onkelos_a/b.py; ch4_rows_sifrei.py; write_ch4_ledger.py; ch4_patch_overrides.py; write_ch4_manifest.py; seat_ch4.py;
+ch4_chain.sh; copy_ch4_forms.py; write_ch4_records.py), copied at the close into World/step9/forms_deuteronomy_walk/ with their prints.
+
+THE SHELF, BY POSITION (ch4_ink.py's asserts): THE SIFREI ON DEUTERONOMY HAS NO PISKA ON THE CHAPTER — piska 30 heads on 3:29 (two rows), piska
+31 on 6:4 (ten rows); the heads by chapter: chapter 1's twenty-four, chapter 3's four (26, 28, 29, 30), chapter 4's none (computed on all 357 heads).
+THE "FOUND BY POSITION" CLAUSE is therefore the whole of the spine here: the whole export scanned in both files — SEVEN Hebrew rows cite chapter 4
+("(דברים ד n)" — "Deuteronomy 4:n" in Hebrew letters), EIGHT English ("(Dt.4:n)"): 30:2 (on 3:29; 4:1), 37:9 (on 11:10; 4:48), 48:2 (on 11:22;
+4:9), 49:2 (on 11:22; 4:24), 148:8 (on 17:2; 4:19), 306:1 (on 32:1; 4:26), 323:1 (on 32:29; 4:44), and the English's alone 301:21 (on 26:5;
+4:34) — THE EXPORT'S THIRD CITATION FORM: that row's Hebrew is UNPOINTED and abbreviated, cites nothing in parentheses, and its English cites
+"(Devarim 4:34)" with a space (sitting 1 measured "Dt." 3,292 times and "Deut." once); the late piskaot are another stratum of the export. No
+"ibid" candidate. THE PRIOR READS (the strict row form over every ledger, 205 prior rows): 30:2 read FRESH at sitting 1 (its last words the pointer
+to 4:1 — "you are new, the past is forgiven") and 37:9 credited there — CREDITED here with a quick look; the six others FRESH in both files; no
+ledger had read an Onkelos row of chapter 4; twenty ledgers NAME a verse of it (the refuge runner's two and the opening speech's docket among them).
+Onkelos Deuteronomy's export: 956 verses against the DB's 959 — CHAPTER 5 IS THE ONE CHAPTER WHERE THEY DISAGREE (thirty verses in the export,
+thirty-three in the DB: the Decalogue's division), measured here for the next sitting; chapter 4 at 49 in both.
+
+THE READING (the modules): ch4_dump0.py the first pass — the shelf's heads around the chapter, the scan of both files for the chapter's citations
+(the rows dumped whole), the Onkelos dump per verse (the Hebrew, the morphology, the lemmas, the store's glosses, the English, the Aramaic), the
+parser on every verse, the case tokens, the frames, the narrative verbs, the imperatives, the names, the second-person number per verse, the register
+gate's lines, the prior reads, the drafts, the store's token counts and glosses; ch4_measure1.py the second — fifty-four retellings DIFFED token by
+token against their first tellings (Baal-peor / Numbers 25; Horeb / Exodus 19-20, 24, 31, 34 and 5:4-26; the bar / 1:37, 3:26, Numbers 20:12; the
+exodus formulas / 26:8, 7:19; the cities / Numbers 35, 19:4, Joshua 20:8, 21:36; the frame / 1:1, 1:4, 6:20; the borders / 2:36, 3:8, 3:17, Joshua
+12:3), a hundred and ninety phrase censuses over the whole DB, the Onkelos renderings' seats over the whole book, the English's bracketed
+supplements, a hundred and thirteen store gloss families; ch4_measure2.py the third — the leftover seats, the pointed forms the rows quote, the
+Aramaic forms with their prefixes, the override file's existing values; ch4_ink.py the ink with every fact an assert (assert_driver.py: SIX fell
+on the first typed pass — the export's chapter 5 at thirty verses not thirty-three; the step blocks' two "comment" lines; "and lest" (4:9, 4:19)
+outside the case-token list; the DB's alphabetical book order (Deuteronomy before Exodus) in a list typed canonically; a substring census reading
+"and rules" inside another word at 32:14 (onk_tok, not onk_seats, for a token); a family already rewritten at sitting 1 ("and-you-came-near");
+each retyped from the leg print (deu_legs.py), none on the second pass); the piece-wise cutters HP / AP / SP_ (no cut miss on any rows file's
+load — the Sifrei cuts fell SEVENTEEN times at once for being typed POINTED: the cutter takes consonants, the row prints the shelf's pointed bytes);
+ch4_rows_onkelos_a.py (4:1-24) and _b.py (4:25-49) the 49 rows; ch4_rows_sifrei.py the six fresh rows and the two credits; write_ch4_ledger.py →
+ONE ledger logic/oral_triage/deu_04_vaetchanan_2026-09-16.md (55 sources: Onkelos MATERIAL 40 / CONTEXT 9; the Sifrei MATERIAL 6; two rows
+credited; coverage computed, missing 0, extra 0; 103,547 bytes; gloss_lint 0 on the first write); ch4_patch_overrides.py the display layer's rows
+(EIGHTY-ONE by reference with the token named beside each — the indices computed from the store's own rows, never typed — and SIXTY-THREE by
+gloss; the families censused first; the rows read from the ink module's own lists; by_ref 414, by_gloss 298 after).
+
+THE INK, COMPUTED (the measurement passes FIRST, the asserts typed from the print):
+- THE PARSER MEASURED FIRST: FOUR number verses in 49 read, NO GAP — 4:13 "the ten words … two tablets" [10, 2] (the construct "two" marked ^),
+  4:41 "three cities" [3], 4:42 "one of these cities" [1], 4:47 "the two kings" [2]; no ordinals ("the former days" the adjective, "swore" not
+  "seven"); the same phrases read the same at their other seats (10:4 [10]; Exodus 34:28 [40, 40, 10]; 19:7, 19:9 [3]; 19:5, 19:11 [1]). The
+  tokens 813; the store's tokens the DB's at every verse (no written-and-read pair).
+- THE FRAMES AND THE REGISTER: ONE divine frame — "and the LORD spoke to you" at 4:12 (the Bible's one seat of the form); NO "saying"; the chapter
+  in the SECOND PERSON, SWITCHING NUMBER BY VERSE — singular only at 10, 19, 24, 30-33, 35-40; plural only at 2, 4, 6, 8, 11-16, 20, 22, 26-28;
+  both at 1, 3, 5, 9, 21, 23, 25, 29, 34; the third person at 7, 17, 18 and the frame 41-49; "the LORD your God" eleven singular, three plural;
+  the Name twenty-nine tokens; the imperatives hear (4:1), see (4:5), take heed (4:9; plural 4:23), God's assemble (4:10), ask (4:32); the
+  prohibitions add / diminish (4:2), lest you forget (4:9, 23), lest you corrupt (4:16), lest you lift your eyes (4:19), not prolong (4:26). THE
+  CASE TOKENS: "for" fifteen (reasons), "lest" three and "and lest" two, "or" three, NO "if" — ONE LAW (4:2, without a case token) and ONE CASE
+  (4:25's "when you beget sons"). Moses named at 41, 44, 45, 46 only. THE REGISTER GATE: Deut 4:5 NONE declared ("the book not read" — the receipt
+  "as the LORD my God commanded me", paid at the compile), Deut 4:45 DAEMONS green (the block (Deut 1:1, Deut 4:45] since 1b).
+- THE CROWNS (seventeen, the ledger's finds): THE SHELF'S SILENCE OVER THE WHOLE CHAPTER and the export's third citation form; ONE LAW, ONE CASE;
+  LEARN AND TEACH ARE ONE WORD (4:10's two ילמדון "they shall learn / teach" — qal and piel, the pointing alone dividing them; the store one gloss;
+  Onkelos one verb twice); THE TABLETS PLENE (4:13 — three seats in the Bible; 5:22 and every Exodus seat defective); THE THIRD TELLING OF THE BAR
+  (1:37 "for your sakes", 3:26 "was wroth for your sakes", 4:21 "on your account" and an OATH — 1b's open row widened by a telling); THE RECEIPT IN
+  MOSES' OWN VOICE (4:5 and 10:5 — the register's seat meets its verse); THE FEAR, THE MEMRA, THE SHEKHINAH (Onkelos supplies the fear of the LORD at
+  4:4, 20, 29, 30; the Memra at 4:24 — "the LORD your God, HIS MEMRA is a consuming fire" — 4:33, 4:36, 4:37 for "with his presence"; 4:39 repeats
+  3:24's confession; 4:19 "prepared" for "apportioned"; 4:28 "the peoples who serve idols"; 4:34 "the miracles the LORD did to reveal himself" for
+  "has a god tried"; 4:32 the Name for "God"; 4:5 "see" made plural); THE NUMBER SWITCHES BY VERSE; THE DECALOGUE'S IMAGE RECAST ("a graven image,
+  the form of any figure" — three seats, all this chapter's; the likeness-word five in 4:16-18); YOU WERE SHOWN, THAT SAW (4:35 the hophal, 4:3 the
+  participle — one spelling); THE CREED TWICE (4:35, 4:39 — Elijah's and Solomon's outside; Rahab's and Solomon's "in heaven above and on the earth
+  beneath"); THE ONE CREATE (4:32 — the book's one seat of Genesis 1:1's verb); THEN MOSES SET APART (4:41 in the Song's form; the refuge runner's
+  debit open to this verse; 4:42 in 19:4's words with "slays" for "smites"; Joshua 20:8's Gaulon); THE TWO FRAMES (1:1 and 4:45 "which Moses spoke";
+  4:44 the Sifrei 323:1's lexicon; 4:46-49 the speech's own borders in its own clauses — 1:4, 2:36, 3:8, 3:17 verbatim; Mount Sion the fourth name);
+  THE WITNESSES' CHAIN (the Sifrei 306:1: 4:26 the third of eleven; 30:19's first seven words identical); THE HAGGADAH'S ROW (4:34's seven
+  instruments; the Sifrei 301:21 on 26:8; the arm plene / defective); THE EXPORT'S CHAPTER 5 (thirty against thirty-three).
+
+THE SIFREI'S OWN CASE LAW (the block in MIDDOT.md, six rows): the king's bird — the soul at stake (48:2 on 4:9, E26); the consuming fire against
+the cleaving, resolved by the sages (49:2 on 4:24 and 4:4, I13); "apportioned" at its two seats — not for worship (148:8 on 4:19 with 29:25,
+I2); "great terror" fixed from "great terrors" — the revelation of the Shekhinah (301:21 on 26:8 from 4:34, E7); the chain of witnesses (306:1 on
+32:1 — 4:26 the heavens, the third of eleven); "this" is nothing but Torah (323:1 on 32:29 from 4:44, E7). MOVE_CATALOG unchanged; MISHNAH_TOPICS
+unchanged (no Mishnah opened at a reading sitting — the tractates routed to the docket).
+
+THE CLAIMS (write_ch4_manifest.py → two manifests, 7 claims — DV04A-01..05 (4:1-8, 9-14, 15-24, 25-31, 32-40), DV04B-01..02 (4:41-43, 44-49) —
+every check the word's LONGEST STORE-PIECE WHOLE (4:2 "add", 4:10 "assemble", 4:19 "apportioned", 4:26 "I call to witness", 4:35 "you were shown",
+4:41 "set apart", 4:45 "the testimonies"); the ID prefixes asserted absent; every cite checked against the ledger's CITE INDEX and EVERY name of
+the index used by a claim, asserted): verify_claims 5 + 2 VERIFIED / 0 FAILED; claim_labels_census --strict GREEN after TWO labels fell — "label
+outside the vocabulary": the gate's regex takes the whole label as ONE code with a parenthetical, so a tail clause after the last parenthesis is
+outside it (both re-closed with a parenthesis before the seat). THE SEATS (seat_ch4.py): 7 WITNESS_READ operators at the claims' first verses (5 on
+4:1, 9, 15, 25, 32; 2 on 4:41, 44), step E in each, the scenarios in the anchor form; verify_text GREEN twice (40 and 9 steps; 7 scenarios each).
+THE RITUALS (ch4_chain.sh): every gate PASS (13 PASS each) — RITUAL COMPLETE for the 217th and 218th frozen units; the declared-reading gate on the
+coverage tool's path (the ledger not named by the unit id — the gate's fallback reads the unit's own refs); the Python rendering layer written and
+self-proved twice. THE CORPUS REBAKED (predicted before the fold: units 218, standing 2184 + 7 = 2191, hash unmoved — the tripwire's literals set to
+the prediction before the bake): CORPUS TRUTH GREEN — 218 units, 1809 facts, 341 demands (191 open), hash 8b8fff1fa28953af — the prediction
+matched; build_world ALL GREEN (the fold layer of the one database); the journal gate GREEN (12 kinds, 9,646 rows — 9,628 + 18); the register gate
+--strict GREEN (DECLARED 100, DEBT 0, FAILS 0 — the chapter's seats standing as filed until the compile). THE STAMP: one delegated FULL RULE row
+naming the two units (logic/findings/STAMP_LEDGER.md). No engine file changed at this sitting — the sweep as at 1b's close.
+
+OWED TO THE COMPILE (sitting 2b; the box in COMPILE_DEBT.md, items (a)-(l)): THE ONE LAW (4:2's "you shall not add … nor diminish" — the cell
+without a case token; 13:1 its second seat FORWARD; the docket Rosh Hashanah 28b, Eruvin 96a, Sanhedrin 88b-89a; the Sifrei 82:5 on 1:11 the
+shelf's exhibit); THE ONE CASE (4:25-31's "when you beget sons … and grow old … and corrupt" — the exile and the return as the case's arms; the
+witnesses; the seeking "with all your heart" the Shema's words — DATA rows, no clock item: "in the end of days" a prophecy, not a timer); THE
+RECEIPT'S SEAT (Deut 4:5 NONE → its class declared from the tape — the first-person receipt "as the LORD my God commanded me", 10:5 the pair);
+THE THREE CITIES (4:41-43 — Moses' ACT in the third person: the refuge runner's debit appoint_six_cities_of_refuge, OPEN BY DESIGN since Numbers
+35:14, CLOSED here by Moses' three — Bezer, Ramoth, Golan — with Joshua's three FORWARD (Joshua 20:7; the six as one at Makkot 2:4's "not until all
+six"); the docket's OUTSIDE rows Makkot 9b:18, 10a:9-16 credited from the refuge exam; the tape line's day the frame's question); THE READBACK
+ROWS of chapter 4 on the first form (Baal-peor 4:3 → SHORTENED against Numbers 25; Horeb 4:10-13 → EXPANDED against Exodus 19-20 with the tablets'
+spelling; the bar 4:21-22 → the THIRD telling, the disagreement row of 1:37 widened; the exodus formulas 4:20, 34, 37 → the exodus's acts by
+reference; the two kings and the borders 4:46-49 → SHORTENED against the speech's own lines 1:4, 2:36, 3:8, 3:17; the created man 4:32 → Genesis
+1 by reference; the creed 4:35, 39; 4:26 → 30:19 forward); THE TWO FRAMES' DAY (4:44-49 the book's second frame — "when they came out of Egypt"
+twice: whether the frame is the speech's own day (40, 11, 1) or a stamp without a day — R6's question at its second seat; Deut 4:45 the block's
+footer, the chapter's daemon inside (Deut 1:1, Deut 4:45] or the next block); THE NO-IMAGE LIST as DATA (4:16-19's forms — figure, male, female,
+beast, bird, creeping thing, fish, sun, moon, stars, the host: the second word's parameter table; the dependency on the Decalogue's runner or a
+pointer to Exodus 20:4 dispositioned); THE HOST "APPORTIONED" (4:19 with 29:25 — the Sifrei 148:8's pair; Onkelos "prepared": a DATA note, no
+link of our own); THE CHAPTER-5 DIVISION (the export's thirty verses against the DB's thirty-three — the recorder and the stitcher address verses by
+the DB; the next reading's first measurement); THE STORE'S GLOSS FAMILIES (a display sitting's: the mixed families named by reference here); THE
+DOCKET by the union rule (the TESTING paragraph's tractates: bal tosif, Kiddushin 30a, Avodah Zarah 3:1-3 with Rosh Hashanah 24a-b, Avodah Zarah
+55a, Ketubot 111b, Makkot 2:4-8, Pesachim 10:4 and the Haggadah, Berakhot 32b; 4:26's and 4:30's open topics); THE MEKHILTA'S QUESTION on Exodus
+20:22 (4:36's heaven and earth — the reading shelf's, credited by name only).
+
+⚠ LESSONS (9): THE CUTTER TAKES CONSONANTS — seventeen Sifrei cuts fell at once for being typed pointed; type the consonants, let the cutter
+print the shelf's pointed bytes. A LABEL ENDS WITH ITS PARENTHESIS — the labels gate reads the whole label as one code with one parenthetical;
+a clause after the last ")" is "outside the vocabulary". THE SCRATCH SCRIPTS RUN FROM THE REPO ROOT — git rev-parse fails inside the scratchpad
+(PYTHONPATH the scratchpad, cwd the repo). THE DB'S VERSE ORDER IS ALPHABETICAL BY BOOK — Deuteronomy before Exodus: a list typed in canonical
+order fell; sort, or type from the print. THE EXPORT'S CHAPTER DIVISION IS NOT THE DB'S — assert the export's lengths per chapter (chapter 5:
+thirty against thirty-three). A SUBSTRING CENSUS IS NOT A TOKEN CENSUS — "and rules" found inside another word at 32:14; onk_tok for a token,
+onk_seats for a phrase. A FAMILY ALREADY REWRITTEN — "and-you-came-near" from sitting 1: the ink's absence-assert caught it; keep the assert.
+A STEP BLOCK CARRIES TWO "comment" LINES — count from the print, not from the step count. THE READING SITTING'S SHAPE HELD ON A CHAPTER WITH NO
+PISKA: the found-by-citation scan IS the spine's reading — dump → measure (three passes) → asserts (6 → 0) → rows (49 + 6) → writer (0 misses;
+lint 0) → patch → manifests (7/7; the labels re-closed) → seat → two rituals (13 PASS each) → the fold predicted and matched.
+
+NEXT on the ruling: THE COMPILE OF CHAPTER 4 (sitting 2b) on the Numbers walk's order — the measurements (the tape's state at Deut 3:29; the
+callees live: the refuge runner's debit, the opening speech's daemon, the exodus and Sinai runners; the register gate's seats 4:5 and 4:45), THE
+DESIGN in this file before any code (the one law's cell; the one case's arms; the three cities' act closing the refuge debit; the readback rows
+of the chapter on the first form; the two frames' day; the no-image list as DATA), the probes to FAIL, the runner, the tape, every gate with THE
+REGISTER GATE --strict at the gates step, the sweep — then chapter 5 (the Decalogue's reading, the export's division measured first; the laws'
+readback opens with it), and on in order.
+
+ON THE TABLE — NOT A RULING (2026-09-16, relayed by the peer thread "Claude old" as the owner's word there: "Let's talk to Claude new about this. He needs to rerun it in that thread"; the owner's word in THIS thread awaited before anything is built): THE DECALOGUE AS A SCHEMA OVER THE LAW — the peer measured on the shelf that the tradition files every law under one of the ten (Rashi on Exodus 24:12 with Rabbenu Saadia; the Mekhilta's tablets chapter — five and five, paired across; Makkot 23b:18-24a:3 — R. Simlai's 613 = 365 + 248, Rav Hamnuna's 611 + 2, then David's eleven, Isaiah's six, Micah's three, Isaiah's two, Habakkuk's one: five outlines over one list), that the two copies run 620 letters / 172 words (Exodus 20:2-17) against 708 / 189 (5:6-21), that the header-to-row key is TOPICAL not lexical (every header-to-row tie a TRANSFER with a teacher, never a reference the dependency census could demand), and HOW IT WAS MISSED (the Decalogue read exam-first on 2026-09-04; the Mekhilta's tablets chapter never opened; Makkot 24a:1 and Horayot 8a:21 standing as CREDITS — a passage about the LIST ITSELF is none of the docket's classes for any cell). WHAT IT ASKS, in the walk's form (design first, probes to fail, the gates): (1) Exodus 20 read spine-by-position on the Mekhilta with Rashi 24:12 by the pointer; (2) Makkot 23b:18-24a:3+ read as STRUCTURE — a new docket class for a passage about the list itself, never a credit; (3) a registry row per commandment (the ten as headers naming the law spans and cells under each, taught_by Saadia / the Mekhilta / Makkot — a taught partition, never inferred; 613 = 365 + 248 and the five outlines as a DATA row; a `header:` field on every daemon and a gate refusing a compiled law with no header; the tablets' pairing as the join). THE SEAT IN THE WALK, if ruled: chapter 5 is the Decalogue's second copy (the laws' readback opens there) — the natural sitting; the owner decides whether it runs before or after chapter 4's compile (2b).
+
+## Sitting 2b — THE COMPILE OF CHAPTER 4, Deuteronomy 4:1-49 (the design, 2026-09-16; the owner: "ok get ready to compact. then we finish 4" — the
+## word for the compile given before the compaction; written after the rereads and the measurements — ch4_compile_recon.py, ch4_docket_scan.py in the
+## scratchpad, the 1b forms reread — and BEFORE any code; the compile shape of the recovery file's section 5 with "Sitting 1b" as the form on this book)
+
+THE MEASUREMENTS (what the tape and the callees say before a line is typed): THE COUNTER stands at (40, 11, 1), the speech's day — chapter 4 continues
+the first speech and carries no date; NO CLOCK COST this sitting (no forward marker; the retrograde markers below are dated points, the counter unmoved).
+EVERY ACT THE CHAPTER RETELLS IS ON THE TAPE BUT ONE PAIR: Baal-peor (Num 25:3 israel_yoked_to_baal_peor, 25:5 judges_commanded_to_slay, 25:9 the dead
+counted; plague_struck CLOSED at 25:8 by the spear with 25:9's count in the close), the bar (Num 20:12 sentence_at_meribah — barred_from_the_land on Moses
+OPEN; 1:37 and 3:26 the retellings on the tape since 1b), the exodus (Exod 12:29 the plague, 12:51 brought_out, 13:21 pillar_set, 14:21-31 the sea),
+the creation (Gen 1:31's marker "the sixth day — Adam created (1:27)", the era life:the_human; Gen 2:7 formed_from_dust), Horeb's assembly (Exod 19:16
+thunder_and_horn at the giving's marker (1, 3, 7) by Rabbi Yose, 19:18-20 lord_descended, 19:20 moses_went_up; 24:18 moses_ascended "forty days —
+the tablets at 31:18"; 32:19 tablets_broken at (1, 4, 17)), the two kings (Num 21:24-25 sihon_smitten_land_possessed, 21:35 og_smitten; the speech's own
+lines 1:4, 2:36, 3:8, 3:17 since 1b), the refuge law (Num 35:9-34 refuge_law_given — the debit appoint_six_cities_of_refuge on Israel OPEN BY DESIGN),
+the dispossession (Num 33:50-56 dispossession_commanded — the debit OPEN). THE ONE PAIR MISSING: THE TAPE HAS NO LINE FOR THE SPEAKING OF THE TEN WORDS
+(Exodus 20:1 — "and God spoke all these words") NOR FOR THE GIVING OF THE FIRST TABLETS (31:18 — "and He gave to Moses, when He finished speaking with
+him, two tablets of the testimony"): the tape runs from Exod 19:20 (moses_went_up, the third ascent) to Exod 24:1 (elders_ascended); the decalogue runner
+(span Exod 20:1-17; law_decalogue given_at 20:1, installed_by covenant_blood_thrown) compiled the Decalogue's LAW LAYER (vain_name, sabbath_clauses,
+theft_commandment; altar_rules) and wrote no narrative line; the erection runner (span including 31:18; its tablets cell with the effect
+tablets_delivered in the registry) folded the tablets into the ascent's line at W7 ("the tablets at 31:18" inside moses_ascended's source) and wrote no
+line at 31:18 — THE READBACK'S FIRST FINDING ON THIS CHAPTER: a first telling on the ink with no line on the tape. THE DECALOGUE'S SECOND WORD (Exodus
+20:3-6 — no other gods, no graven image, no bowing) HAS NO CELL in any runner: the image law 4:16-19 restates is UNCOMPILED — an OWED edge, a
+COMPILE_DEBT line (its natural seat chapter 5's sitting, where the Decalogue is restated). THE REGISTER GATE on chapter 4: Deut 4:5 NONE ("the book not
+read"; the receipt "as the LORD my God commanded me") and Deut 4:45 the FOOTER, DAEMONS 1 (law_opening_speech@Deut 1:16 inside (Deut 1:1, Deut 4:45]);
+THE GATE'S CLASS PREDICTED FROM ITS CODE (lesson viii): a receipt is ACT when a ledger write's source CONTAINS its verse — the exhortation's line
+(4:1-8) contains 4:5 → ACT, declared with the compile's why; 4:45's block gains this sitting's daemon → DAEMONS 2. THE GLOBAL COUNTS grepped before the
+tape run: CP6 (markers 161, F 126 — MOVES: 161 → 163, R 20 → 22), CA1 (the Deuteronomy markers' list — its retrograde list gains two entries: RETYPED as
+of this sitting), CV2 / CX2 / CW3 / CR3 (commanded on Israel — UNMOVED: no debit this sitting), CT2 / CT4 / CT6 (the pending timers — UNMOVED: no clock
+walk), CT9 / CV9 / CX9 / CY9 / CZ9 / CW9 / CR9 / CA9 (entities 319, closes 126 — UNMOVED); I5 63 → 64; the register probes' tallies (receipts 69 with
+CLOSE 16; footers EMPTY 3) UNMOVED (4:5 NONE → ACT inside the same 69). THE CHECKPOINT PREFIX CC measured FREE (CC, CI, CO, CQ, CU free in the sequence
+file and in every probe file). THE DOCKET SIZED — 68 link rows in 26 works (Avodah Zarah 9, Sanhedrin 8, Berakhot 5, Makkot 5, Gittin 4; the verses
+cited most 4:9 nine, 4:7 six, 4:32 six, 4:44 five, 4:5 five, 4:16 five, 4:24 five) + 259 topic rows (Mishnah Avodah Zarah 3:1-3, Makkot 2:4-8, Pesachim
+10:4, Rosh Hashanah 2:8-9; Rosh Hashanah 28b whole 25, Eruvin 95b-96a 36, Sanhedrin 88b-89a 42, Kiddushin 30a 15, Rosh Hashanah 24a-24b 34, Avodah
+Zarah 55a 12, Ketubot 111b 23, Makkot 9b-10a 43, Berakhot 32b 31) = 327 rows, 98 credited (the opening speech's docket 50, the refuge docket 48, the
+Decalogue's block 18): FOUR verdict parts on disk. THE CHAPTER'S OWN INK (the reading's asserts, reused): four number verses (4:13 [10, 2], 4:41 [3],
+4:42 [1], 4:47 [2]), no ordinal; ONE divine frame (4:12); ONE LAW (4:2, no case token) and ONE CASE (4:25 "when you beget sons"); the second person
+switching number by verse; the imperatives hear (4:1), see (4:5), take heed (4:9, 4:23), assemble (4:10), ask (4:32); the prohibitions add / diminish
+(4:2), lest you forget (4:9, 4:23), lest you corrupt (4:16), lest you lift your eyes (4:19); Moses named at 41, 44, 45, 46 only; the retellings diffed
+token by token at the reading (ch4_measure1_b.out section A) — the deltas this compile RECOMPUTES.
+
+THE NAME: cold_run_obey_horeb.py — the 59th runner; law_obey_horeb the 64th daemon (given_at Deut 4:2, installed_by BOOT with the class NAMED — a law in
+Moses' voice with no divine frame: "the word which I command you", the vows' class); the span [[Deut, 4, 1, 49]]; the checkpoints CC1-CC9; the units
+deu_04_obey_horeb and deu_04_refuge_east the frozen reading.
+
+THE READBACK ON CHAPTER 4 (the first form's (R1)-(R6) applied a second time; the laws' half still owed to chapter 5):
+(R1) THE ROWS — the DATA table the_readback, one row per retold act, the tape's kind and first verse, the ledger entry presupposed, THE GRADE, the delta
+RECOMPUTED from the DB: 4:3-4 Baal-peor SHORTENED (twenty tokens for 25:3-9's telling; "the LORD destroyed from your midst every man who followed" =
+25:5's slaying and 25:9's twenty-four thousand; "you who cleave are alive" the plague's close read; israel_yoked_to_baal_peor Num 25:3); 4:10-11 the day
+at Horeb EXPANDED (lord_descended Exod 19:18; "under the mountain" 19:17's phrase; the mountain burning to the heart of heaven, darkness, cloud, thick
+darkness — 19:18's smoke told larger); 4:12 the voice and no form SUPPLIED (Exod 20:1 the first telling — THE TAPE'S HOLE: (R3) below); 4:13 the ten
+words and the tablets SUPPLIED (Exod 20:1-17 and 31:18 — the hole's second line); 4:20 the iron furnace EXPANDED (brought_out Exod 12:51; the furnace
+1 Kings 8:51 and Jeremiah 11:4 outside the Torah); 4:21-22 the bar DISAGREES (sentence_at_meribah Num 20:12 — THE THIRD TELLING: "the LORD was angry
+with me on your account and SWORE that I should not cross the Jordan" — the oath supplied, the ground "on your account" against 20:12's "because you did
+not believe": the 1b row 1:37 WIDENED by a telling, OPEN — (R4)); 4:32 the creation SHORTENED (the sixth day's marker at Gen 1:31, "Adam created (1:27)";
+formed_from_dust Gen 2:7 — a time-reference clause for the creation's telling); 4:34 the instruments EXPANDED (brought_out Exod 12:51 — the seven: trials,
+signs, wonders, war, a mighty hand, an outstretched arm, great terrors; 26:8's four and 7:19's five FORWARD); 4:37-38 the choice and the outbringing
+EXPANDED (brought_out; "because he loved your fathers" — Genesis 15:18's land by REFERENCE; "to dispossess nations greater than you" — the dispossess
+debit of Num 33:50-56 OPEN, READ); 4:44-45 the second frame EXPANDED (speech_opened Deut 1:1 — "the testimonies, the statutes and the judgments" for
+"the words"; "when they came out of Egypt" the era's stamp, no day: (R6)); 4:46-49 the two kings and the borders SHORTENED (sihon_smitten_land_possessed
+Num 21:24, og_smitten 21:35 — and the speech's own lines 1:4, 2:36, 3:8, 3:17 quoted in their own clauses: the retelling of a retelling; Mount Sion the
+fourth name for Hermon). ELEVEN rows: SHORTENED 3, EXPANDED 5, SUPPLIED 2, DISAGREES 1 — the census typed from the runner's print.
+(R2) EVERY ROW'S ENTRY FOUND on the running world by kind and first verse (CC4: rows n = found n); the state the chapter asserts read off the ledger:
+yoked_to_baal_peor ONE, the plague CLOSED with the count, Moses barred OPEN, brought_out ONE, the human's marker, the dispossess debit OPEN.
+(R3) THE TWO SUPPLIED LINES — THE TAPE'S HOLE WRITTEN ONCE, AT ITS OWN TIME, BY THIS RUNNER (the form of 1:6's departure from Horeb): ten_words_declared
+(speech, Deut 4:10-13; Exodus 20:1-17 the first telling) at the RETROGRADE marker Deut 4:10 dated M['giving'] = (1, 3, 7) — "the day you stood before
+the LORD your God at Horeb" (4:10) the ink's own dating word, the day the tape already gives the assembly (Exod 19:16's marker, the seventh of Sivan by
+Rabbi Yose — Shabbat 86b:5, the calendar row sinai_days) — writing covenant_declared on Israel (a STATUS, the value the ten words on two tablets: 4:13
+"he declared to you his covenant which he commanded you to do, the ten words"); tablets_given (act, Deut 4:13; Exodus 31:18 the first telling) at the
+RETROGRADE marker Deut 4:13 dated M['breaking'] = (1, 4, 17) — the fortieth day of 24:18's forty (the erection's own cell: Taanit 28b:9-10, the seventh
+of Sivan plus forty = the seventeenth of Tammuz, "he came down and broke the tablets" — the tablets GIVEN and BROKEN on one day, 32:15 "Moses turned and
+went down with the two tablets"), writing tablets_delivered on Moses (the erection's registered effect at its FIRST tape seat — the transfer 31:18's own
+words describe). WHY THIS RUNNER AND NOT THE DECALOGUE'S OR THE ERECTION'S: the two first tellings sit in compiled spans whose runners chose no line
+(the Decalogue treated as the law's giving, the tablets folded into the ascent at W7) — the readback found the silence; R3's form writes the act once at
+its own time from the retelling's seat, as 1:6-8 wrote the departure from Horeb; the debit form is absent here (no command to close). FILED to the second
+pass (D2): whether law_decalogue's installed_by should turn from covenant_blood_thrown (24:8) to ten_words_declared (20:1) — the installing act now on
+the tape. FILED as the readback's finding: THE DECALOGUE'S SECOND WORD IS UNCOMPILED (no cell) — chapter 5's sitting.
+(R4) THE DISAGREEMENT WIDENED: 4:21-22 the bar's third telling — the ground "on your account" (1:37's "for your sakes", 3:26's "was wroth for your sakes")
+against Numbers 20:12's "because you did not believe in Me", and an OATH the tape never wrote ("and swore that I should not cross the Jordan"): graded
+DISAGREES, an OPEN row beside 1:37's; the tape's one entry stands, no oath written (an oath told only in the retelling of a sentence the tape carries is
+the sentence read back, not a second act — the reading's crown; Psalm 106:32 outside the Torah, read, not run).
+(R5) THE RECEIPT IN MOSES' OWN VOICE (4:5 "as the LORD my God commanded me") IS THE TEACHING'S RUN — the command Exodus 24:12's "the torah and the
+commandment which I have written TO TEACH THEM" (the erection's tablets cell, torah_mitzvah, by CALL) and 4:14's own "the LORD commanded me at that time
+to teach you statutes and judgments"; the exhortation's line (4:1-8) is the write whose source holds 4:5 → the register class ACT, declared with this why
+(Bekhorot 29a:7-8 — "as I taught you for free, so you teach for free": the exam's row); 10:5 the pair FORWARD.
+(R6) THE FRAME IS THE BOOK'S ONE ACT OF ITS OWN DAY — AT ITS SECOND SEAT TOO: 4:44-49 ("this is the Torah which Moses set before the children of Israel;
+these are the testimonies, statutes and judgments which Moses spoke … when they came out of Egypt") is the SECOND SPEECH'S HEAD (5:1 "and Moses called
+all Israel" follows), a stamp of place and era without a day: NO WRITE, a reference row EXPANDED against speech_opened (Deut 1:1-5); torah_expounded's
+status stands; the footer 4:45 closes the block (Deut 1:1, Deut 4:45] — DAEMONS 2 (law_opening_speech@Deut 1:16, law_obey_horeb@Deut 4:2).
+
+THE DESIGN'S DECISIONS (the box's (a)-(l) settled on the measurements):
+(a) THE ONE LAW — 4:2 "you shall not add to the word which I command you, nor diminish from it": THE TAPE LINE add_nothing_commanded (speech, Deut
+4:1-8 — the exhortation whole, the law inside it) page_order at the counter's day (40, 11, 1) → adding_barred on Israel (a NEW BLOCK effect: "you shall
+not add … nor diminish" — 4:2 the plural's one seat; 13:1 the singular's, FORWARD; Exodus 5:8's bricks, Numbers 27:4 and 36:3-4's daughters the
+diminish-root's kin, computed at the reading); THE CELL'S ASKS the exam's rows — the priest who adds a blessing (Rosh Hashanah 28b:10 — R. Shemen bar
+Abba's objection: "you shall not add" on the fourth blessing), the one who sleeps in the sukkah on the eighth day (28b:8-9 — bal tosif needs its time:
+"not in its time" needs intent, Rava; Rabbah), R. Akiva's tefillin at night and on the Sabbath (Eruvin 95b-96a — "from days to days" the time of
+tefillin; the sleeper), the rebellious elder ruling a fifth compartment (Sanhedrin 88b-89a — Mishnah Sanhedrin 11:2-3: "the tefillin four compartments —
+five" the elder's transgression by the scribes' word), a fifth species and a fifth fringe (the Sifrei 82:5 on 13:1 — the shelf's exhibit, credited by
+name), THE VERDICTS accepted (the rule holds against him) / exempt (outside the rule — not in its time; for study); the daemon law_obey_horeb given_at
+4:2; the second seat 13:1 the chapter-13 sitting's (the same block, the same effect read).
+(b) THE ONE CASE — 4:25-31 "when you beget sons and sons' sons and grow old in the land and corrupt yourselves … I call heaven and earth to witness
+against you this day": THE TAPE LINE witnesses_called (speech, Deut 4:25-31) page_order at (40, 11, 1) → heaven_and_earth_witness on Israel (a NEW STATUS
+effect: 4:26 "I call heaven and earth to witness against you this day" — the Sifrei 306:1's chain: the third of eleven; 30:19 and 31:28 FORWARD, 30:19's
+first seven words identical); THE ARMS AS DATA the_exile_case, no clock item — corrupt → "you shall surely perish quickly … not prolong days … the LORD
+will scatter you among the peoples … few in number … serve gods the work of men's hands, wood and stone" (the tochacha's effects scattered_among_nations
+and covenant_remembered by CALL — Leviticus 26:33, 26:42 the first tellings; 28:36, 28:64 FORWARD; no exile on the tape, no entry written); seek →
+"you will seek the LORD from there and find him, if you seek with all your heart and all your soul" (the Shema's words, 6:5 FORWARD; 30:10's kin);
+return → "in your distress, when all these things find you in the end of days, you will return to the LORD and hearken … for the LORD your God is a
+merciful God; he will not fail you nor destroy you nor forget the covenant of your fathers which he swore" (30:2's kin; Exodus 34:6's attribute; the
+fathers' oath Genesis 22:16, 26:3 by REFERENCE); "in the end of days" A PROPHECY, NO TIMER; THE EXAM'S ROWS Gittin 88a:15-17 (Rav Huna: "and grow old"
+by its letters eight hundred and fifty-two, the exile hastened by two years; R. Ammi: the seven dynasties — DATA), Sanhedrin 38a:6 (Ulla: the
+righteousness of hastening), Megillah 31b:2 (4:25-40 the Ninth of Av's reading), Berakhot 32b:30 (4:9, 4:15 — the pious man praying on the road: "only
+take heed to yourself, and keep your soul" the officer's verse; the exam's row on the guarding clause).
+(c) THE RECEIPT'S SEAT PAID — Deut 4:5 NONE → ACT, declared from the tape with (R5)'s why (the exhortation's write contains the verse; the teaching's
+run of Exodus 24:12's command; Bekhorot 29a:7-8; Nedarim 37a:2, 38a:5 — the Torah taught for free from this verse and 4:14); Deut 4:45 DAEMONS (no
+declaration, the class GREEN) with daemons 2.
+(d) THE THREE CITIES — 4:41-43 "then Moses set apart three cities beyond the Jordan toward the sunrise": THE TAPE LINE three_cities_set_apart (act,
+Deut 4:41-43 — Moses' own act in the third person, "then" plus the imperfect: the Song's form, the six Torah seats computed at the reading) page_order at
+(40, 11, 1) → cities_set_apart on Israel (a NEW STATUS effect valued the three — Bezer in the wilderness in the plain for the Reubenite, Ramoth in Gilead
+for the Gadite, Golan in Bashan for the Manassite; the names the refuge runner's DATA row the_six_cities by CALL, computed by seat; Joshua 20:8's
+"Gaulon" the reading's crown). THE REFUGE DEBIT STAYS OPEN — THE DEPARTURE FROM THE OWED LIST'S "CLOSED HERE", DECIDED ON THE ANSWER SHEET'S OWN ROW:
+Mishnah Makkot 2:4 (with Makkot 9b:14) — "until the three in the land of Canaan were selected, the three beyond the Jordan did not admit", "six cities of
+refuge SHALL THEY BE" (Numbers 35:13): the command is ONE appointment of six, Moses' three its first half — a mitzva that came his way (R. Simlai,
+Makkot 10a:15-16), no manslayer admitted; the debit appoint_six_cities_of_refuge on Israel READ OPEN (CC8), its close Joshua 20:7-8's, OUTSIDE THE
+TORAH, THE READBACK'S when the Prophets are walked; 4:42's manslayer "who slays his neighbor unawares and hated him not in time past" = 19:4's words with
+"slays" for "smites" (computed; Numbers 35:11's "unwittingly"; the refuge runner's the_manslayer cells not_his_enemy and without_seeing by CALL; the
+murder-verb PLENE at 4:42 — the refuge runner's own assert); the docket's OUTSIDE rows of 1b (Makkot 9b:18, 10a:9-16) and the refuge docket's rows on
+the chapter CREDITED; Makkot 10a:14 (Reuben first — R. Tanchum bar Chanilai: he saved Joseph), 10a:9 ("and live" — the teacher exiled, his school with
+him; 10a:11 the juxtaposition "this is the Torah" after the cities), Gittin 12a:11 (the slave exiled), Sotah 49a:4 the exam's rows.
+(e) THE READBACK ROWS — (R1) above: eleven rows, the two supplied lines, the one disagreement widened.
+(f) THE TWO FRAMES' DAY — (R6) above: NO WRITE at 4:44-49; the footer's block DAEMONS 2; the chapter's daemon inside (Deut 1:1, Deut 4:45].
+(g) THE NO-IMAGE LIST AS DATA the_no_image_list — 4:16-19's forms: a graven image, the form of any figure, the likeness of male or female, of any beast on
+the earth, of any winged bird that flies in the heavens, of anything that creeps on the ground, of any fish in the waters under the earth; the sun, the
+moon, the stars, all the host of heaven — THE SECOND WORD'S PARAMETER TABLE (Exodus 20:4's "any likeness of what is in the heavens above or on the earth
+beneath or in the waters under the earth" restated in seven kinds; the likeness-word five times in 16-18, computed at the reading); THE POINTER TO
+EXODUS 20:4 DISPOSITIONED: the edge obey_horeb → decalogue OWED — the Decalogue's second word has no cell (cold_run_decalogue.py wraps vain_name,
+sabbath_clauses, theft_commandment; altar_rules by the ordinances): a COMPILE_DEBT line for chapter 5's sitting (the Decalogue restated; the laws'
+readback opens); the shelf's rows read as DATA — Mishnah Avodah Zarah 3:1-3 (the statues; a hand or a foot; a sun, a moon or a dragon on vessels — cast
+into the Dead Sea) with Rosh Hashanah 24a-24b (Rabban Gamliel's moon forms on the tablet — "you shall not make with Me" Exodus 20:20; the forms of the
+servants, the forms of the lights; for study, permitted), Chullin 23a:3 / Avodah Zarah 23b:9 / Bekhorot 57a:12 / Temurah 28b:17 / Sanhedrin 57a:1
+("corruption" = idolatry from 4:16, licentiousness from the flood's generation), Chullin 139b:17 (the birds of 4:17).
+(h) THE HOST "APPORTIONED" — 4:19 "which the LORD your God apportioned to all the peoples under the whole heaven" with 29:25 "which he had not
+apportioned to them" (the Sifrei 148:8's pair on 17:3; Avodah Zarah 55a:9 — Rav Yehuda to Rava bar Rav Yitzchak: the host allotted them for their
+delusion; Megillah 9b:1 — the Septuagint's "to give light" added for Ptolemy); Onkelos "prepared": A DATA NOTE the_host_apportioned, no link of our own
+(no teacher joins 4:19's allotment to 29:25's withholding but the Sifrei's own pair — recorded as its row, a REFERENCE the Sifrei names).
+(i) THE CHAPTER-5 DIVISION — the export's thirty verses against the DB's thirty-three: the recorder and the stitcher address by the DB; the next reading's
+FIRST measurement (a DATA note the_export_chapter_5, nothing built).
+(j) THE STORE'S GLOSS FAMILIES — the mixed families a display sitting's, filed unchanged.
+(k) THE DOCKET by the union rule — 327 rows in FOUR parts A-D on disk (the 68 link rows; the topic rows: bal tosif's three ranges, Kiddushin 30a, the
+images' Mishnah with Rosh Hashanah 24a-24b, Avodah Zarah 55a, Ketubot 111b, Makkot 2:4-8 with 9b-10a, Pesachim 10:4, Berakhot 32b), LAW / DERIVATION /
+DISPUTE / CONTEXT / OUTSIDE, the crowns expected — bal tosif's time (Rosh Hashanah 28b; Eruvin 96a); the elder's fifth compartment (Sanhedrin 88b);
+the grandfather's duty and "as if from Sinai" (Kiddushin 30a); the seminal-emission decree from 4:9-10's juxtaposition (Berakhot 21b-22a); the
+forgetter's prohibition (Menachot 99b:3; Avot 3:8); the free teaching (Bekhorot 29a; Nedarim 37a); the images for study (Rosh Hashanah 24a-b); the host
+allotted (Avodah Zarah 55a); "corruption" (Chullin 23a); the cleaving to scholars (Ketubot 111b); the limits of inquiry and Adam's height (Chagigah 11b-12a;
+Sanhedrin 38b); "none else — even sorcery" (Chullin 7b; Sanhedrin 67b); the kingship verses (Rosh Hashanah 32b); the exile hastened (Gittin 88a;
+Sanhedrin 38a); the Ninth of Av's reading (Megillah 31b); the community never sealed (Rosh Hashanah 18a; Yevamot 105a); the teacher exiled with his
+school (Makkot 10a); Reuben first (Makkot 10a:14); "this is the Torah — a drug of life" (Yoma 72b); the nations' plea (Avodah Zarah 2b); the tefillin's
+compartments (Berakhot 6a); the Haggadah's exposition (Pesachim 10:4); the gates of prayer (Berakhot 32b).
+(l) THE MEKHILTA'S QUESTION on Exodus 20:22 (4:36 "from heaven he made you hear his voice … and on earth he showed you his great fire") — the reading
+shelf's, credited by name only; the decalogue runner's altar_rules cell (20:22-26, wrapped by the ordinances) by CALL for the seat.
+
+THE CELLS (six, each returning out(verdict, effects); the INK block exec'd from the sequence file; the token probes zero-report; every seat list and slice
+typed from the reading's print and the recon): F1 the_exhortation (4:1-8 — asks: hear_and_do (4:1 the imperative "hear"; "that you may live and go in and
+possess"), add_nothing (4:2 — THE LAW; the exam's rows (a)), diminish_nothing (4:2 — the root's seats), baal_peor_seen (4:3 — SHORTENED; BK.peor by CALL:
+plague_count, peor_service, judges_count), the_cleaving (4:4 — Onkelos "the fear of" supplied; Ketubot 111b:6; Sanhedrin 64a:11 the cord and the dates;
+Sanhedrin 90b:13; the Sifrei 49:2), taught_as_commanded (4:5 — THE RECEIPT, (R5); ER.tablets by CALL: torah_mitzvah), wisdom_before_the_peoples (4:6 —
+Shabbat 75a:4 the seasons' reckoning; Avodah Zarah 4b:16), god_so_near (4:7 — Berakhot 6a:24 the compartments; Megillah 11a:9; Rosh Hashanah 18a:10 and
+Yevamot 105a:17 the community's sentence; Sanhedrin 38b:15 the heretics' verse), righteous_statutes (4:8), the_write (adding_barred)); F2 horeb_retold
+(4:9-14 — asks: take_heed_lest_you_forget (4:9 — Menachot 99b:3 and Avot 3:8 the forgetter's prohibition; Shevuot 36a:20 the self-curse's warning;
+Berakhot 21b:8-22a:4 and Moed Katan 15a:18 the juxtaposition; Kiddushin 30a:5-7 the grandfather), the_day_at_horeb (4:10 — the assembly's day (1, 3, 7)
+by the sinai_days row, Rabbi Yose; ES.sinai by CALL), learn_and_teach (4:10's two "they shall learn / teach" — one consonantal word, qal and piel by the
+pointing alone — the reading's crown; the store's one gloss), the_mountain_burning (4:11 — EXPANDED against Exod 19:17-18, the diff recomputed),
+the_voice_and_no_form (4:12, 4:15 — SUPPLIED: ten_words_declared dated (1, 3, 7); the tape's hole), the_ten_words_and_the_tablets (4:13 — "the ten
+words" three seats, ER.tablets('ten_words') by CALL; the tablets PLENE at 4:13 — the erection's c_tablets_forms by CALL, the reading's crown; SUPPLIED:
+tablets_given dated (1, 4, 17) — ER.ascent('seventeenth_tammuz') by CALL), commanded_to_teach (4:14 — Sanhedrin 21b:25; Nedarim 37a:2; Tosefta
+Sanhedrin 4:5; Exodus 24:12's "to teach them")); F3 no_image (4:15-24 — asks: no_form_seen (4:15), the_image_list (4:16-18 — DATA (g); the OWED edge),
+the_host_apportioned (4:19 — DATA (h)), the_iron_furnace (4:20 — brought_out READ BACK; PR.pieces('furnace') by CALL — Genesis 15:17's smoking furnace
+the word's first seat; 1 Kings 8:51 and Jeremiah 11:4 outside), the_bar_third_telling (4:21-22 — DISAGREES (R4); OS.the_plea('the_refusal') and
+OS.the_spies_read_back('the_bars_ground') by CALL), the_covenant_not_forgotten (4:23), consuming_fire_jealous_god (4:24 — the Sifrei 49:2; Avodah Zarah
+54b:18 and 55a:2 the philosopher's and Agrippas's questions to Rabban Gamliel; Ketubot 111b:6; Nedarim 62b:3; Sotah 14a:3 walking after the attributes;
+Exodus 20:5's "jealous God" by REFERENCE — the second word again)); F4 the_exile_case (4:25-31 — asks: the_case_head (4:25 — the case token; Gittin
+88a:15-17; Sanhedrin 38a:6), the_witnesses (4:26 — the write heaven_and_earth_witness; the Sifrei 306:1's eleven), perish_and_scatter (4:26-27 — TC by
+CALL: scattered_among_nations; Megillah 31b:2), serve_wood_and_stone (4:28 — 28:36, 28:64 FORWARD; Psalm 115:5 the kin), seek_and_find (4:29 — the
+Shema's words), in_your_distress_return (4:30 — "the end of days" a prophecy; TC.recovery by CALL: covenant_remembered), the_merciful_god (4:31 —
+Exodus 34:6 by REFERENCE; the fathers' oath)); F5 the_one_god (4:32-40 — asks: the_former_days (4:32 — Chagigah 11b:21-24 and Tosefta Chagigah 2:3 the
+limits of inquiry; Chagigah 12a:2 and Sanhedrin 38b:7 Adam's height; PS.creation by CALL — Genesis 1:27's "created", the book's one seat), the_voice_and_lived
+(4:33 — 5:26's kin; lord_descended by reference), the_nation_from_a_nation (4:34 — the seven instruments DATA; Berakhot 6a:24; Megillah 11a:9; the
+Sifrei 301:21; Mishnah Pesachim 10:4; ES.plagues('ten') and ES.sea('ten_at_sea') by CALL — the instruments' first tellings), you_were_shown (4:35 —
+Sanhedrin 67b:7 and Chullin 7b:14 "none else — even sorcery"; Rosh Hashanah 32b:17), from_heaven_the_voice (4:36 — Exodus 20:22 by CALL to DC.altar_rules'
+seat; the Mekhilta credited by name), because_he_loved_your_fathers (4:37 — 10:15's kin; PR.call('land_seats') by CALL; Onkelos "with his Memra"),
+to_dispossess_nations (4:38 — the dispossess debit OPEN read, JO by CALL; 9:1's kin), know_this_day (4:39 — the creed's second seat; Gittin 57b:17 the
+seventh son; Rosh Hashanah 32b:17; Rahab's and Solomon's outside), keep_the_statutes (4:40 — the reward clause; 5:16's kin)); F6 the_cities_and_the_frame
+(4:41-49 — asks: then_moses_set_apart (4:41 — the ACT; Makkot 10a:15-16 R. Simlai; the "then" form's seats), not_until_all_six (Mishnah Makkot 2:4; 9b:14 —
+RF.the_refuge_law('six_cities') by CALL; the debit READ OPEN), the_manslayer_defined (4:42 — 19:4's words; Numbers 35:11; RF.the_manslayer by CALL;
+Makkot 10a:9, 10a:11; Gittin 12a:11; Sotah 49a:4), the_three_names (4:43 — RF.DATA['the_six_cities'] by CALL; Makkot 10a:14; Joshua 20:8's Gaulon),
+the_second_frame (4:44-45 — (R6); Yoma 72b:14; Menachot 53b:4; Avodah Zarah 2b:6, 2b:9; Makkot 10a:11; the Sifrei 323:1), the_borders_verbatim (4:46-49
+— SHORTENED; the four diffs recomputed; OS.sihon_and_og('hermon') and OS.the_frame('after_sihon') by CALL; BK.the_call('last_camp') for the valley
+opposite Beth-peor; Mount Sion the fourth name), the_readback_table (the eleven rows graded)).
+
+THE DATA ROWS (nineteen): the_readback (the eleven rows of (R1)), the_law_bal_tosif (the exam's arms of (a)), the_teach_your_sons (Kiddushin 30a; Berakhot
+21b-22a; Menachot 99b), the_horeb_hole (the tape's silence at Exodus 20:1 and 31:18 — W7's choice, the readback's finding, the two supplied lines, the D2
+candidate filed), the_ten_words_seats (Exodus 34:28, Deuteronomy 4:13, 10:4), the_tablets_plene (the spelling census by CALL), the_no_image_list (g),
+the_host_apportioned (h), the_bars_third_telling (1:37, 3:26, 4:21 against Numbers 20:12 — the OPEN row widened), the_exile_case (b), the_witnesses_chain
+(the Sifrei 306:1's eleven), the_creed (4:35, 4:39; the kingship verses), the_inquiry_limits (Chagigah 11b-12a), the_instruments (4:34's seven against 26:8
+and 7:19), the_three_cities (d), the_manslayer_definition (4:42, 19:4, Numbers 35:11, Joshua 20:3), the_second_frame (f), the_number_switching (the second
+person's number by verse — the reading's lists), the_export_chapter_5 (i).
+
+THE DAEMON law_obey_horeb (given_at Deut 4:2; installed_by BOOT with the class NAMED — a law in Moses' voice with no divine frame, the vows' class):
+watches add_nothing_commanded → [adding_barred]; ten_words_declared → [covenant_declared]; tablets_given → [tablets_delivered]; witnesses_called →
+[heaven_and_earth_witness]; three_cities_set_apart → [cities_set_apart]; horeb_case → [accepted, exempt]. No close, no timer, literal W dicts per kind;
+the case kind dispatching to the cells by name in EXPLICIT branches.
+
+THE TYPES (add_types_ch4.py): FIVE tape kinds — add_nothing_commanded (speech, 4:1-8), ten_words_declared (speech, 4:10-13; the first telling Exodus 20:1
+named in the row), tablets_given (act, 4:13; the first telling Exodus 31:18 named), witnesses_called (speech, 4:25-31), three_cities_set_apart (act,
+4:41-43) — with their witnesses in their verses; ONE case kind (horeb_case); FOUR new effects — adding_barred (block on Israel; 4:2), covenant_declared
+(status on Israel; 4:13 "he declared to you his covenant"), heaven_and_earth_witness (status on Israel; 4:26), cities_set_apart (status on Israel; 4:41
+"then Moses set apart"); the effects reused — tablets_delivered (the erection's), accepted, exempt; NO registry row (Israel and Moses the written-on
+parties, both standing — a counterparty is no entity); the daemon block; the functions block obey_horeb (the_exhortation … the_cities_and_the_frame
+WRAPPED); the span [[Deut, 4, 1, 49]]; the CALL edges by the ink — balak (Peor), refuge (the cities, the manslayer), opening_speech (the bar, the frame,
+the borders), erection (the tablets, the ten words, the ascent's forty, Horeb plene), exodus_story (Sinai's days, the plagues, the sea), tochacha (the
+exile's arms), pre_sinai (the creation), primeval (the furnace, the land), journeys (the dispossession), decalogue (the second word — OWED; altar_rules
+CALL for 20:22), and every demand the census makes past the imports read on the DB and declared (CALL / VIA / FALSE / PARAMETER / INTERNAL /
+RUN_CITATION), never a blanket row; the pointers after the gate's print (4:5's receipt RUN_CITATION with (R5)'s why); I5 63 → 64.
+
+THE TAPE (five lines, two markers): under "# ---- Deut 4 ----" after the tape's last Deuteronomy 3 line (moses_besought): add_nothing_commanded (4:1-8,
+page_order at (40, 11, 1)); the RETROGRADE marker at Deut 4:10 (M['giving'], (1, 3, 7)) then ten_words_declared (4:10-13, dated); the RETROGRADE marker at
+Deut 4:13 (M['breaking'], (1, 4, 17)) then tablets_given (4:13, dated); witnesses_called (4:25-31, page_order); three_cities_set_apart (4:41-43,
+page_order). The markers 161 → 163 (forward 126 unmoved, retrograde 20 → 22, proleptic unmoved); the tape's closes 126 UNMOVED; the counter ends at
+(40, 11, 1) UNMOVED.
+
+THE CHECKPOINTS CC1-CC9 (the prefix measured free):
+CC1 THE LINES — five events of the sitting's kinds on the tape in the ink's order, all AFTER the tape's last Deuteronomy 3 line; the three own-day lines
+page_order at (40, 11, 1); the two supplied lines reading_placed, dated by the RETROGRADE markers at Deut 4:10 and 4:13 with their stated days (1, 3, 7)
+and (1, 4, 17); the counter ends at (40, 11, 1).
+CC2 THE HOREB DAYS — M['giving'] = day_in(1, 3, 7) (the sinai_days row's giving, Rabbi Yose's seventh); M['breaking'] − M['ascent'] = 40 (the seventh of
+Sivan plus the forty days = the seventeenth of Tammuz, Taanit 28b); the ten words' line dated M['giving'], the tablets' line dated M['breaking']; the
+tablets_broken line at Exod 32:19 carries the same day as tablets_given (given and broken on one day).
+CC3 THE LAW — adding_barred on israel_people ONE (a block) with its source beginning "Deut 4:1"; law_obey_horeb registered, given_at Deut 4:2,
+installed_by boot; the register seats by CALL — Deut 4:5 ACT (the write's source contains the verse), Deut 4:45 DAEMONS with daemons 2.
+CC4 THE READBACK — the_readback's rows 11, every row's tape entry FOUND on the running world by kind and first verse (rows n = found n); the grades'
+census typed from the runner's print (SHORTENED 3, EXPANDED 5, SUPPLIED 2, DISAGREES 1); the DISAGREES row 4:21-22 OPEN — no ledger entry cites Deut
+4:21; the two SUPPLIED rows' lines dated.
+CC5 HOREB READ BACK — lord_descended ONE (Exod 19:18) at (1, 3, 7); covenant_declared on israel_people ONE dated (1, 3, 7), source beginning "Deut 4:10";
+tablets_delivered on moses ONE dated (1, 4, 17), source beginning "Deut 4:13"; tablets_broken's line ONE at Exod 32:19 the same day; moses_ascended TWO
+(the first and the second forty days).
+CC6 PEOR, THE BAR, THE EXODUS, THE CREATION READ BACK — yoked_to_baal_peor on israel_people ONE (25:3); plague_struck on israel_people CLOSED with the
+closer's note beginning "Num 25:8"; barred_from_the_land on moses ONE OPEN unmoved (the third telling writes nothing, no oath written); brought_out on
+israel_people ONE (Exod 12:51); the marker at Gen 1:31 present with the era life:the_human; the dispossess debit on israel_people ONE OPEN (Num 33:50-56).
+CC7 THE WITNESSES AND THE CASE — heaven_and_earth_witness on israel_people ONE dated (40, 11, 1), source beginning "Deut 4:25"; no timer set by the
+sitting's lines (the end of days a prophecy); the tochacha's scattered_among_nations registered and NOT written on the tape (no exile).
+CC8 THE THREE CITIES — cities_set_apart on israel_people ONE valued the three (Bezer, Ramoth, Golan — the refuge row's names by CALL), source beginning
+"Deut 4:41"; the refuge debit appoint_six_cities_of_refuge on israel_people ONE OPEN unmoved (Makkot 2:4 — not until all six); closes 126 unmoved.
+CC9 THE REST — entities 319 UNMOVED (Israel and Moses the written-on parties, both standing), closes 126 UNMOVED, the population table 148 UNMOVED, the
+five kinds present; markers 161 → 163; the other counts 1b's exactly with the five lines and two markers dropped (THE REST test).
+CP6 RETYPED (markers 161 → 163, F 126 unmoved) and CA1 RETYPED (the Deuteronomy retrograde markers' list gains ((1, 3, 7), 'Deut 4:10') and ((1, 4, 17),
+'Deut 4:13')) AS OF this sitting; readback_probes Q4 NARROWED to the opening speech's stretch (Deuteronomy 1-3's lines and markers — the probe tests 1b's
+form, not the tape's length); checkpoint_probes' "beyond the tape" verse COMPUTED from the tape (the first verse of the chapter after the tape's last
+line — lesson xiii's second half; 'Deut 4:1' would be a position on the tape again).
+
+THE PREDICTION'S ARITHMETIC: RUN = (1300, 96, 88, 0, 12, 1588, 35, 319, the four pairs, 126) — events +5 (the five lines), timers set +0, fired +0 (no
+clock walk; the retrograde markers are dated points), cancels 0, retro-writes 12 UNMOVED, writes +5 (the daemon's watches summed: one effect per line —
+adding_barred, covenant_declared, tablets_delivered, heaven_and_earth_witness, cities_set_apart), daemons fired +1 (law_obey_horeb), entities +0 (Israel
+and Moses standing), closes +0; PREVIOUS_RUN = 1b's RUN exactly — THE REST drops the five lines by the runner's tag and the two markers by the span and
+reproduces (1295, 96, 88, 0, 12, 1583, 34, 319, the four pairs, 126); NEWEST_RUNNER 'obey_horeb'; PLACEMENT markers text_constrained 103 UNMOVED,
+reading_placed 43 → 45; events text_constrained 107 UNMOVED, page_order 1137 → 1140 (the three own-day lines), reading_placed 51 → 53 (the two supplied
+lines) — read at the stitcher's print; CENSUS typed from the stitcher's print (on tape 1295 → 1300, history +5, kinds 840 → 846 — the five tape kinds and
+the case kind, subjects 272 UNMOVED (israel, moses standing), markers 161 → 163 (R 20 → 22), closes 71 unmoved; the case rows the exam's persons, read
+from the print); the population table 148 UNMOVED; the scene's tuple PREDICTED BY SCRIPT at the runner step (the exam's persons through horeb_case — each
+written once; no timer; the persons the entities; no close); the narrative's (5 events, 5 writes, 0 closes, the entities israel and moses = 2, the
+counter's day (11, 1), 2 dated lines, no row).
+
+THE PROBES: readback_probes.py Q7-Q9 written to FAIL before the runner exists (Q7 the runner and its the_readback table with the eleven rows and the
+grades' census, the two SUPPLIED rows naming their first tellings Exod 20:1 and 31:18; Q8 the two supplied lines dated by the retrograde markers at Deut
+4:10 and 4:13 with the stated days (1, 3, 7) and (1, 4, 17), the tablets' day = the breaking marker's day; Q9 the register seats on the new tape — Deut
+4:5 ACT, Deut 4:45 DAEMONS with daemons 2 — and the refuge debit OPEN after the three cities' line) and Q4 narrowed to chapters 1-3; NO parser rule this
+sitting (the four number verses read right at the reading — census_probes unmoved at 224); the register gate unchanged; checkpoint_probes' verse computed.
+
+THE ORDER: the design (this section) → the probes to FAIL (readback Q7-Q9 0/3; Q4 narrowed still 1/1; checkpoint_probes' verse computed, 7/7 unmoved)
+→ the state doc's checkpoint (the docket may cross a compaction) → THE DOCKET by the union rule (four parts A-D, the reading instrument ch4_docket_rows.py,
+the writer write_ch4_docket.py with the coverage computed and the cite index) → the types by script (add_types_ch4.py) → the recorder and the stitcher
+(the scratch copies: SPAN_ORDER + 'obey_horeb'; the two retrograde marker rows at Deut 4:10 and 4:13) → the gates to FAIL (daemon, dependency) → the
+runner (ch4_part1-4.py assembled by cat; the fast checker ch4_fastcheck.py over parts 1 and 2 before the first run; the honest-pairing guard; zero-report
+probes; the scene and the narrative predicted by script; CASES generated from the cells' asks) → the recorder → the stitcher → the literals, CC1-CC9 and the
+retypes (patch_seq_literals_ch4.py) → the tape run (10/10 with THE REST) → the probe gates (census 224, installation I5 64, readback 9/9, register 7/7,
+clock, sequence, view, population, journal, cursor after the base regenerates, checkpoint 7/7) → the daemon and dependency gates GREEN → build_world →
+the journal gate → THE REGISTER GATE --strict (Deut 4:5 declared ACT; 4:45 green with daemons 2) → checkpoint_positions.py in the background (the block
+gained CC1-CC9) → the sweep in the background → the journal gate alone after the sweep → the records (this file's AS BUILT, COMPILE_DEBT's sitting-2 box
+PAID + the 2b box (the second word OWED; the D2 candidate; the refuge debit's close outside the Torah), MOVE_CATALOG (checked), MIDDOT's docket entries,
+MISHNAH_TOPICS (Avodah Zarah 3; Makkot 2; Pesachim 10; Rosh Hashanah 2-3; Eruvin 10; Sanhedrin 11; Kiddushin 1; Ketubot 13; Berakhot 5 marked),
+RESEARCH_LOG, THE_STEPS, THE_BRIEFING, THE_LOOP.md's step 6 row (the second chapter on the first form; the tape's hole), RESUME, memory, the state doc's
+checkpoint at the close, the recovery file's section 34).
+
+
+## Sitting 2b — THE COMPILE OF CHAPTER 4 — AS BUILT (2026-09-16; the design above stands as written; every departure from it named here)
+
+THE RESULT. Deuteronomy 4:1-49 is COMPILED AND ON THE TAPE: World/step9/cold_run_obey_horeb.py the 59th runner (MATRIX 52/52 on its first graded run —
+the fractions ink 8 / moves 37 / data 7; six cells F1 the_exhortation … F6 the_cities_and_the_frame with 52 asks; nineteen DATA rows; the readback's
+eleven rows; 96 token probes fired; the guard 52 by the generated CASES; the scene and the narrative tuples matched as predicted), law_obey_horeb the
+64th daemon (given_at Deut 4:2, installed_by boot with the vows' class named — a law in Moses' voice; six functions WRAPPED; WATCH seen 19 fired 19),
+six kinds and four effects in the registries (1119 kinds, 1019 effects), five lines and four markers on the tape. THE TAPE 10/10 WITH THE REST:
+RUN (1300, 96, 88, 0, 12, 1588, 35, 319, the four pairs, 126) exactly as THE PREDICTION'S ARITHMETIC wrote it; PREVIOUS_RUN 1b's reproduced by the
+tape minus this runner's lines; NEWEST_RUNNER obey_horeb; markers 161 → 165 (forward 126 → 128, retrograde 20 → 22, proleptic 15); entities 319
+UNMOVED (Israel and Moses the written-on parties), closes 126 UNMOVED (no close — the refuge debit stays OPEN by design), the population table 148
+UNMOVED; PLACEMENT markers {'text_constrained': 105, 'reading_placed': 45}, events {'text_constrained': 109, 'page_order': 1138, 'reading_placed': 53}; CENSUS (2458, 1309, 1300, 1133, 6, 10, 9, 0, 71, 165, 128, 15, 22, 845, 272); CC1-CC9 all MATCH; the run
+15.7s. THE DOCKET logic/oral_triage/deu_04_vaetchanan_exam_2026-09-16.md by the union rule: 327 rows (link 68 / topic 259; CONTEXT 169, DERIVATION 70,
+DISPUTE 12, LAW 76; credited 98), the nine Talmud ranges read whole (Rosh Hashanah 28b; Eruvin 95b-96a; Sanhedrin 88b-89a; Kiddushin 30a; Rosh
+Hashanah 24a-24b; Avodah Zarah 55a; Ketubot 111b; Makkot 9b-10a; Berakhot 32b), ten Mishnah rows, sixteen crowns.
+
+THE READBACK ON CHAPTER 4 (the first form's (R1)-(R6) applied): eleven reference rows — SHORTENED 3, EXPANDED 5, SUPPLIED 2, DISAGREES 1; every row's
+tape entry FOUND on the running world by kind and first verse (CC4). THE TAPE'S HOLE, found by the measurement and filled here: the tape held no line for
+Exodus 20:1 (the ten words spoken) nor for 31:18 (the first tablets given) — the decalogue runner compiled the law layer and the erection runner folded
+the tablets into the ascent line — so both are told for the first time IN THE RETELLING and were written ONCE at their own days by RETROGRADE markers:
+ten_words_declared at Deut 4:10-13 dated (1, 3, 7) (the sinai_days row's giving, Rabbi Yose's seventh — the Exodus 19:16 marker's day; CC2, CC5) and
+tablets_given at Deut 4:13 dated (1, 4, 17) (the fortieth day — Taanit 28b; given and broken on one day: the same day as the tablets_broken line at
+Exodus 32:19; CC5). The bar's THIRD telling (4:21-22, with an oath and a new ground) a second DISAGREES row beside 1b's 1:37 row, OPEN — no ledger
+entry cites Deut 4:21 (CC4, CC6). The second frame (4:44-49) NO WRITE (R6). The receipt in Moses' own voice (4:5) a RUN CITATION with the register
+class ACT — the exhortation's one write's source 4:1-8 contains the verse (CC3; the seat declared this sitting, the gate green).
+
+THE LAW AND THE CASE. The one law (4:2, add nothing / diminish nothing) the cell F1 with the arms the docket taught (an addition IN ITS TIME and an
+addition BESIDE the mitzvah — Rosh Hashanah 28b, Eruvin 95b-96a, Sanhedrin 88b-89a; 13:1 its second seat forward): its write adding_barred, a BLOCK on
+Israel with its source beginning "Deut 4:1" (CC3). The one case (4:25-31) the kind horeb_case with its arms the exile and the return (accepted / exempt)
+— "in the end of days" a prophecy, no timer set by the sitting's lines (CC7). Moses' three cities (4:41-43): the act three_cities_set_apart writes
+cities_set_apart, a STATUS on Israel valued the three by CALL to the refuge runner's row, and THE REFUGE DEBIT appoint_six_cities_of_refuge STAYS OPEN —
+the design's departure from the reading's "closed here", decided on Mishnah Makkot 2:4 and Makkot 9b-10a (the three east admitted no one until Joshua's
+three; "six cities shall they be", Numbers 35:13): the close is outside the Torah at Joshua 20:7-8 (CC8). The witnesses (4:26) a status
+heaven_and_earth_witness on Israel dated (40, 11, 1) (CC7). THE SECOND WORD (Exodus 20:3-6, the image law) has NO CELL in any runner: the no-image list
+of 4:16-19 is DATA (its parameter table), the edge obey_horeb → decalogue a live CALL whose why names the debt — OWED to chapter 5's sitting.
+
+THE DEPARTURES FROM THE DESIGN, each found by an instrument and each a lesson below: (1) add_nothing_commanded's form is STATUTE, not speech — the
+stitcher's register test dropped the line (no wayyiqtol, "and he did", in 4:1-8; the chapter's first narrative verb is at 4:11), and a law sentence in
+the narrator's own mouth is the statute form (sinew_barred's); (2) FOUR markers, not two — the retrograde stretch after 4:13 ran to the next marker and
+dated the witnesses' and the cities' own-day lines, so a FORWARD marker at Deut 4:25 (speech_resumed = the speech's day) closes it; and the
+exhortation's line fell INSIDE 1b's Deut 2:2 stretch, still open on the tape, so a FORWARD marker at Deut 4:1 (chapter_4 = the speech's day) opens the
+chapter — markers 165 (the design's arithmetic said 163); CA1's forward-marker list is now three (40, 11, 1) entries; (3) the census's kinds column is
+845, not 846 — the case kind is no tape kind; (4) CC5 and CC6 select their lines BY VERSE OR VALUE: lord_descended has two lines on the tape (Babel at
+Genesis 11:5 and Horeb at Exodus 19:18), plague_struck on the people three, and Numbers 33:50-56 wrote TWO debits; (5) the marker row for Deut 4:13
+declares the verse's numbers [10, 2]; (6) the tape took SIX runs to 10/10 — the missing retypes (run 1), Babel's line dated before the exodus era's
+epoch (2), an undefined registry name (3), a write script that aborted on its own assertion and wrote nothing (4), the eras read off the world instead
+of the clock (5), 10/10 (6).
+
+THE GATES, COMPUTED FROM THEIR PRINTS: the probe suites census 224/224, installation 6/6 (I5 64), readback 9/9, register 7/7, clock 22/22, sequence 4/4, view 6/6, population 9/9, journal 7/7, cursor 6/6, checkpoint 7/7; the daemon gate GREEN (64 daemons, 441 functions); the dependency gate GREEN (521 edges and 192 pointers on file — the link census reference 498 / transfer 48 / hypothesis 9 / none 158; required 261 edges and 193 pointers, live import edges 369); build_world ALL GREEN (standing 2191, hash 8b8fff1fa28953af unmoved); the journal gate GREEN twice — before and after the sweep (12 kinds, 9646 rows in the index); THE REGISTER GATE --strict GREEN (DECLARED 100, DEBT 0, FAILS 0 — Deut 4:5 ACT declared, its write adding_barred on Israel; Deut 4:45 DAEMONS green with daemons 2: law_opening_speech@Deut 1:16 and law_obey_horeb@Deut 4:2); the positions table 217 checkpoints over 167 pauses (CC1-CC9 in it; checkpoint_probes 7/7 after the rebuild); the sweep 59/59 at 6,527 graded cells; the home-path gate GREEN.
+
+⚠ THE LESSONS OF 2b (eleven): (1) A RETROGRADE STRETCH RUNS TO THE NEXT MARKER — every own-day line after a supplied line needs a FORWARD marker back
+to the counter's day (Leviticus 9:1's form); (2) A NEW CHAPTER AFTER A STRETCH OPENS WITH A FORWARD MARKER — the previous sitting's stretch is still
+open on the tape; check the tape's last marker before designing the chapter's first line; (3) A LAW CLAUSE IN A SPEECH WITH NO NARRATIVE VERB IS A
+STATUTE-FORM LINE — the stitcher's register test reads the form; (4) THE MARKER ROW DECLARES THE VERSE'S NUMBERS — the stitcher's ink check reads them;
+(5) A HEREDOC-WRITTEN MARKER ROW NEEDS THE APOSTROPHE DOUBLY ESCAPED (the file must hold two backslashes); (6) A CALLEE'S ASK IS TYPED FROM THE RECON'S
+PRINT, never from memory (the tablets' torah_mitzvah is the ascent cell's); (7) THE CENSUS COUNTS TAPE KINDS ONLY; (8) A KIND SHARED ACROSS BOOKS IS
+SELECTED BY VERSE — a checkpoint that dates "the" line of a kind must name the verse (Babel's descent shares lord_descended with Horeb's); an effect
+written thrice on one party is selected by verse or value; (9) THE ERAS LIVE ON THE CLOCK (w.clock.eras), not on the marker's log line; the effects
+registry is read from its YAML, not from a module name; (10) A WRITE SCRIPT NEVER GATES ITS WRITES ON AN UNVERIFIED ASSERTION — compute, print, read,
+then write in a second script (the aborted script cost a tape run); the DB stores a word's morphemes split by a slash (עָבְרִ/י, "my crossing"); (11)
+THE FAST CHECKER'S TAGS ARE TYPED FROM THE PRINT (a morph tag; `A and B or C` binds as `(A and B) or C`).
+
+THE DISPOSITIONS ADDED: sixteen edges (eleven CALL — balak, refuge, opening_speech, erection, exodus_story, tochacha, pre_sinai, primeval, decalogue
+with the second word's debt in its why, chukat, borders; the registration edge sequence → obey_horeb; four FALSE by the sense or the points —
+family [inheritance] at 4:20, 4:21, 4:38 (the land a gift named whole, no estate divided), lev24 [talion_formula] at 4:11, 4:19, 4:49 (the preposition
+"under"), mishpatim [hebrew_slave] at 4:21 ("my crossing", not "a Hebrew" — the qamats against the chirik, lemma 5674 against 5680), sanctions
+[molech_ov] at 4:46-47 (the kings, not Molech)) and two pointers (RUN_CITATION — Deut 4:5 the receipt of the teaching's command, Exodus 24:12 by the
+erection runner's ascent cell; Deut 4:33 "as you have heard", the voice at Horeb on the tape).
+
+THE FORMS: the sitting's scripts and prints copied into World/step9/forms_deuteronomy_walk/ by copy_ch4b_forms.py (the recon, the docket's scan and
+parts, the types, the probes' patch, the runner's four parts with the generator, the assembler and the fast checker, the recorder and the stitcher
+under their sitting's names, the literals' patcher, the seat's declaration, the design's and the records' writers, the chains, the gates' prints —
+no scratch path and no home path in any copied form). MOVE_CATALOG CHECKED, unmoved: the runner's 37 move cells are CALLS into the callees and the
+shelf's own readings (Ketubot 111b:6-8 and Sotah 14a:3 with the Sifrei 49:2 — cleaving to the LORD as cleaving to His ways); no new move.
+
+NEXT on the ruling: SITTING 3 — chapter 5's reading (the export's thirty-verse chapter 5 measured against the DB's thirty-three FIRST); the
+Decalogue-schema sitting (on the table) after 2b on the owner's word — its natural seat chapter 5, where the code is restated and the laws' readback
+opens. Nothing committed: the tree uncommitted since b8b721d, on the owner's word only.

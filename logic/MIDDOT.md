@@ -1440,6 +1440,59 @@ narrative strength. By cluster:
   · THE ROUNDING RULE AS INTEGER DIVISION (the Sifrei 15:4; Sanhedrin 18a:3; the Jerusalem Talmud Sanhedrin 10:2): a thousand less one yields one
     captain of a thousand — 78,600 on the round count, 79,064 on the exact: the arithmetic's own form named at the compile.
 
+- **THE SIFREI ON DEUTERONOMY'S OWN CASE LAW ON CHAPTER 4 (Deuteronomy 4:1-49; THE DEUTERONOMY WALK sitting 2, 2026-09-16;
+  logic/oral_triage/deu_04_vaetchanan_2026-09-16.md — no piska on the chapter; the six rows citing it, read whole in both files; E-codes by the row's conclusion):
+  · THE KING'S BIRD — THE SOUL AT STAKE (Sifrei Devarim 48:2 on 4:9, in the row on 11:22): "only take heed to yourself and keep your soul diligently" —
+    R. Ishmael's king who trapped a bird and gave it to his servant for his son: lose it and you have lost not a penny's bird but your life; "it is no
+    empty word for you — it is your life" (32:47) joined by its own word. The parable of the king (E26) on a verse whose "soul" is read whole; the
+    second verse a REFERENCE the Sifrei itself makes (LR1).
+  · THE CONSUMING FIRE AGAINST THE CLEAVING (49:2 on 11:22 with 4:24 and 4:4): "and to cleave to him" — how can a man go up on high and cleave to
+    fire, when "the LORD your God is a consuming fire" (4:24) and "his throne was flames of fire" (Daniel 7:9)? Cleave to the sages and their
+    disciples, and it is counted as if you went up and took it — by war. Two verses that contradict until a third reading decides (I13); Onkelos at
+    4:4 decides by translation ("cleave to the FEAR of the LORD") and at 4:24 moves the fire to the Memra.
+  · "APPORTIONED" AT ITS TWO SEATS — NOT FOR WORSHIP (148:8 on 17:2-3 with 4:19 and 29:25): R. Yose the Galilean — from "which the LORD your God
+    apportioned to all the peoples" (4:19), might it be for worship? "gods which they knew not and which he had NOT apportioned to them" (29:25).
+    The doubt raised and closed by the second seat of the one verb (the qal perfect's two Torah seats exactly these — computed; I2's form on a shared
+    verb, a REFERENCE the Sifrei draws, LR1); Onkelos answers the same doubt at 4:19 with "prepared".
+  · "GREAT TERROR" FIXED FROM "GREAT TERRORS" — THE REVELATION OF THE SHEKHINAH (301:21 on 26:8 from 4:34): the first-fruits' "and with great terror"
+    glossed by 4:34's seven instruments; the term fixed from its fuller seat (E7). The export's unpointed stratum; the Haggadah's row (Mishnah
+    Pesachim 10:4 — the testing shelf).
+  · THE CHAIN OF WITNESSES (306:1 on 32:1 with 4:26): R. Meir — Israel testified against themselves (Joshua 24:22); corrupted, Judah and Benjamin
+    testified; then the prophets; then THE HEAVENS — "I call heaven and earth to witness against you this day" (4:26); then the earth, the roads,
+    the nations, the mountains, the beasts, the birds, the fish, the ant. Eleven summonses in the Hebrew row, ten in the English (computed); the
+    verses ordered as a history, each rung a citation (E32's kin — the sequence read as a ladder).
+  · "THIS" IS NOTHING BUT TORAH (323:1 on 32:29 from 4:44): "if they were wise they would understand THIS" — had Israel looked into the Torah no
+    nation would have ruled them; "this" defined from "and this is the Torah which Moses set before the children of Israel" (4:44) — the word fixed
+    from its defining seat (E7), in the row's own formula "nothing but" (the exclusive gloss).
+  THE TWO CREDITED ROWS (30:2 — "and now, Israel, hear" the forgiveness after the rebuke, read at sitting 1; 37:9 — Hermon's four names with 4:48's
+  Sion, an a-fortiori on the Land, I1) stand in sitting 1's block.
+
+- THE CHAPTER-4 DOCKET (THE DEUTERONOMY WALK sitting 2b, 2026-09-16; logic/oral_triage/deu_04_vaetchanan_exam_2026-09-16.md — 327 rows; the rules
+  about rules the docket carries, each at its row):
+  · "YOU SHALL NOT ADD" READ AS A COUNT IN ITS TIME (Rosh Hashanah 28b; Eruvin 95b-96a; Sanhedrin 88b-89a on Deuteronomy 4:2 and 13:1): the priest who
+    adds a blessing, the sleeper who adds a blast, tefillin at night or a second pair, the rebellious elder's fifth compartment — an addition counts
+    when the mitzvah's TIME holds and the thing is added BESIDE it: the cell's two arms (add_out_of_its_time / add_beside), a parameter of time on a
+    prohibition without a case token.
+  · THE IMAGES OF THE MOON (Rosh Hashanah 24a-24b on Rabban Gamliel's forms, Mishnah 2:8; Avodah Zarah 3:1-3 credited): a court's teaching
+    instruments against "the likeness of any figure" (4:16-19) — the arms image_for_study / image_of_the_host of the second word's parameter table,
+    the engine itself OWED (no cell compiles Exodus 20:3-6).
+  · TEACH YOUR SONS' SONS (Kiddushin 30a on 4:9-10): "make them known to your sons and your sons' sons" — the grandfather's duty read off the doubled
+    noun; "the day you stood before the LORD at Horeb" the next verse — teaching a grandson is standing at Horeb: a DATA row (the_teach_your_sons),
+    the learn/teach one word (4:10's two pointings) beside it.
+  · THE HOST "ALLOTTED" READ "LET SLIP" (Avodah Zarah 55a:9 on 4:19; Onkelos "prepared"): the same letters, a second sense kept alive by Rav Yehuda's
+    explanation — a DATA note at the row the_host_apportioned, no link of our own (the reading's (h)).
+  · CLEAVING TO THE LORD (Ketubot 111b:6-8; Sotah 14a:3; the Sifrei 49:2 on 4:4 and 11:22): "is He not a consuming fire?" — the impossible literal
+    replaced by cleaving to His ways and to scholars: a substitution reading, the runner's move cell.
+  · "NOT UNTIL ALL SIX" (Mishnah Makkot 2:4; Makkot 9b-10a on 4:41-43 with Numbers 35:13): Moses' three admitted no one until Joshua's three — the
+    act a STATUS (cities_set_apart), the debit OPEN, the close outside the Torah: the design's departure from the reading's "closed here", decided on
+    the Mishnah's word.
+  · THE FORMER DAYS AS A BOUND (Chagigah 11b:21; Tosefta Chagigah 2:3; Mishnah Chagigah 2:1 on 4:32): "from the day God created man" — one may ask,
+    two may not; the bound of inquiry a DATA row (the_former_days), no rule.
+  · THE JUDGE'S WAGES (Bekhorot 29a:7 on 4:5; Mishnah Bekhorot 4:6): "as the LORD my God commanded me" — as I taught for free, so you: the receipt
+    verse read as a rule about teaching; a row at F1 taught_as_commanded, no cell.
+  · MOSES' PLEA AND THE BAR (Berakhot 32b on 3:23-26 and 4:21): "the LORD was angry with me on your account" — the bar's third ground; the DISAGREES
+    row widened beside 1:37's, OPEN, no write.
+
 ## Exodus block campaign — owner's word "Do 3")
 
 The campaign's exam rounds banked RULES-ABOUT-RULES on the corpus's

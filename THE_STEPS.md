@@ -4238,6 +4238,38 @@ the court among them. Every gate green: the tape 10/10 with the run's tuple as p
 daemon, dependency, journal and register gates, the fold. What the compile leaves is the laws' readback from chapter 5 on, and the three cities of
 chapter 4 — the next reading.
 
+DEUTERONOMY — SITTING 2 — CHAPTER 4, Deuteronomy 4:1-49 (2026-09-16, on Brian's "Go" after the rereads; World/step9/DEUTERONOMY_WALK.md "Sitting 2").
+The chapter read as two units the way the book was opened: Onkelos whole and the Sifrei on Deuteronomy by its position in the export — and the shelf
+has nothing on this chapter at all: its thirtieth piska ends at 3:29 and its thirty-first opens at 6:4. So the reading of the spine here is the scan
+of the whole export for any row that cites chapter 4 — eight rows do, six of them fresh, and one of the eight is another stratum of the export
+altogether, an unpointed Hebrew with abbreviations and an English that cites "Devarim 4:34" with a space, the third citation form the book has shown.
+The parser measured first: four number verses, every one read. The finds: the chapter has one law — add nothing, take nothing away — and one case,
+"when you beget sons and grow old"; "they shall learn" and "they shall teach" in the Horeb verse are the same letters, told apart by the vowels alone;
+the two tablets of stone are spelled full here where the same chapter's own retelling in chapter 5 and every Exodus seat spell them short; the bar on
+Moses is told a third time, now with an oath and a new ground; the receipt "as the LORD commanded" is given by Moses for his own teaching; the
+translation writes "the fear of the LORD" where the verse says the LORD, the Word where the verse says fire or presence, and turns "has a god tried"
+into "the miracles the LORD did"; the chapter speaks to Israel in the singular and the plural by turns, verse by verse; "you were shown" and "your
+eyes that saw" are one spelling; "the LORD is God" is said twice, in Elijah's and Solomon's words; the one "created" of the book is here; then Moses
+sets apart three cities in the Song's grammar — the refuge law's open debt since Numbers 35, to be closed at the compile; and the chapter's last
+verses frame the laws with the speech's own border clauses word for word. Six typed facts fell on the first pass and none on the second; seventeen
+Sifrei cuts fell at once for being typed with their vowels. Seven claims verified and seated, two rituals complete, the corpus rebaked to the predicted
+count with the hash unmoved, the world's fold layer, the journal gate and the register gate green. Next: the compile (2b), on your word.
+
+DEUTERONOMY — SITTING 2b — CHAPTER 4 COMPILED (2026-09-16, on Brian's "ok get ready to compact. then we finish 4" — the word given before the
+compaction; World/step9/DEUTERONOMY_WALK.md "Sitting 2b" and "Sitting 2b — AS BUILT"). The compile ran in the walk's order — the measurements, the
+design in the map before any code, the probes written to fail, the docket by the union rule, the types, the gates to fail, the runner, the recorder
+and the stitcher, the literals, the tape, the gates, the records. The measurement found a hole in the tape: no line for the ten words spoken at Horeb
+and none for the first tablets given — the earlier runners compiled the law and folded the tablets into the ascent. Chapter 4 tells both, so the
+retelling is their first telling, and they were written once at their own days by the readback's retrograde markers — the giving on Rabbi Yose's
+seventh of Sivan, the tablets on the seventeenth of Tammuz, the same day the tape breaks them. The stitcher then taught the engine's own rule back to
+the design: a retrograde stretch runs to the next marker, so a forward marker closes it and another opens the chapter, four markers where the design
+drew two. The chapter's one law compiled as a block with the shelf's two arms (an addition in its time, an addition beside), its one case as a kind
+with the exile and the return as arms, Moses' three cities as a status — and the refuge law's debt stays open on the Mishnah's word, not until all six,
+its close in Joshua. The second word of the ten — the image law — turned out to have no cell anywhere; its list of forms is data here and the debt is
+named at the edge. The runner reproduced the answer sheet on its first graded run; the tape reached ten of ten on its sixth, each miss read from the
+print and each a lesson written down; every probe suite and every gate green, the sweep whole. Next: chapter 5's reading, measuring the export's
+thirty verses against the database's thirty-three first; the schema question waits on your word.
+
 ## Step 6 — Publish
 Export, parity check against the public repo, deploy. Owner's word.
 

@@ -1,0 +1,22 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
+#!/usr/bin/env python3
+# THE DEUTERONOMY WALK sitting 2b (2026-09-16): COMPACTION POINT #186 appended to the state doc BEFORE the docket (the docket may cross a
+# compaction) — the whole text built first, the file opened once; the lint asserted at the baseline (146).
+import subprocess, os
+ROOT = _ROOT
+P = f'{ROOT}/logic/pre_logic_methods_2026-07-28/PROMPT_continue_solo_era_2026-08-06.md'
+old = open(P, encoding='utf-8').read()
+assert 'COMPACTION POINT #186' not in old
+T = '''
+
+═══ COMPACTION POINT #186 (2026-09-16 — written MID-SITTING at THE DEUTERONOMY WALK sitting 2b — THE COMPILE OF CHAPTER 4; the design in the map and the probes to FAIL done, THE DOCKET NEXT; the last commit b8b721d, not pushed) ═══
+THE OWNER'S WORD: "ok get ready to compact. then we finish 4" (before #185's compaction) — after the compaction, "reread" (the mandatory rereads done: the recovery file's sections 1-5 and 31-33, DEUTERONOMY_WALK.md whole, #185 with both addenda, the four memory files, THE_STEPS' compiler block, Step 2 and Step 5, THE_LOOP's step 6 row); the compile of chapter 4 opened on the standing word.
+DONE SO FAR THIS SITTING: THE MEASUREMENTS (ch4_compile_recon.py, ch4_docket_scan.py in the scratchpad; the 1b forms reread) — THE TAPE'S HOLE FOUND: no line for the speaking of the ten words (Exodus 20:1) nor the giving of the first tablets (31:18) — the tape runs from Exod 19:20 to 24:1; the Decalogue's SECOND WORD (the image law) has no cell in any runner; the register gate's class for Deut 4:5 predicted ACT from the gate's code; the docket sized 327 rows (68 link + 259 topic, 98 credited); the prefix CC free; no clock cost. THE DESIGN written into DEUTERONOMY_WALK.md "Sitting 2b" (the readback's (R1)-(R6) on chapter 4 — eleven rows, the two SUPPLIED Horeb lines written once at their own time by RETROGRADE markers at Deut 4:10 (the giving, (1, 3, 7)) and 4:13 (the tablets, (1, 4, 17)), the bar's DISAGREES row widened; the decisions (a)-(l) — THE ONE LAW 4:2 a BLOCK adding_barred on Israel with the exam's rows on bal tosif; THE ONE CASE 4:25-31 the witnesses' status and the arms as DATA; THE RECEIPT 4:5 ACT; THE THREE CITIES a STATUS cities_set_apart with THE REFUGE DEBIT LEFT OPEN on Mishnah Makkot 2:4's own row (the departure from the owed list's "closed here", decided on the answer sheet); the second frame NO WRITE (R6); the no-image list DATA with the edge to the decalogue OWED; the cells F1-F6, nineteen DATA rows, the daemon law_obey_horeb (given_at Deut 4:2, boot), five tape kinds + one case kind, four new effects, CC1-CC9, RUN = (1300, 96, 88, 0, 12, 1588, 35, 319, four pairs, 126) predicted, THE ORDER). THE PROBES TO FAIL: readback_probes.py Q7-Q9 written (0/3 — 6/9 with Q1-Q6 standing; Q4 narrowed to chapters 1-3); checkpoint_probes.py's "beyond the tape" verse COMPUTED from the tape (beyond_the_tape() → 'Deut 4:1' now, 'Deut 5:1' after the compile; 7/7 unmoved).
+NEXT IN THE ORDER: THE DOCKET (four parts A-D on disk; part A written — 82 rows; the writer write_ch4_docket.py with the coverage computed) → the types (add_types_ch4.py) → the recorder and the stitcher → the gates to FAIL → the runner cold_run_obey_horeb.py (ch4_part1-4.py; the fast checker) → the recorder → the stitcher → the literals and CC1-CC9 (patch_seq_literals_ch4.py) → the tape 10/10 → the probe gates → the daemon and dependency gates → build_world → the journal gate → THE REGISTER GATE --strict (Deut 4:5 ACT declared) → checkpoint_positions and the sweep in the background → the journal gate alone → the records.
+IF THIS COMPACTS MID-DOCKET: reread DEUTERONOMY_WALK.md "Sitting 2b" (the design) and this entry; the scratchpad holds the scan's dump (ch4_docket_dump.txt), the reading instrument (ch4_docket_rows.py), part A (ch4_docket_A.py) and the recon prints; the probes already patched in the tree (readback_probes.py, checkpoint_probes.py); nothing else in the tree changed by this sitting yet (the map's section is the design). UNCOMMITTED: everything since b8b721d.
+'''
+new = old.rstrip('\n') + T
+tmp = P + '.tmp'; open(tmp, 'w', encoding='utf-8').write(new); os.replace(tmp, P)
+r = subprocess.run(['python3', f'{ROOT}/logic/solo_tools/gloss_lint.py', P], capture_output=True, text=True)
+print(r.stdout.strip()[-80:]); print('state doc', os.path.getsize(P))

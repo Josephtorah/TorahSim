@@ -45,10 +45,28 @@ with contextlib.redirect_stdout(io.StringIO()):
 _W = {}
 
 
+def beyond_the_tape():
+    """THE DEUTERONOMY WALK 2b (2026-09-16): the first verse of the chapter AFTER the tape's last line, read from the sequence file's own tape section
+    and checked against the Tanakh DB (a verse beyond the tape runs the whole tape); at a book's last chapter the next book's 1:1 in the tape's order;
+    past the fifth book the last verse itself (then run_to needs a whole-tape form — filed)."""
+    import re as _re, sqlite3 as _sq
+    src = open(os.path.join(HERE, 'cold_run_sequence.py'), encoding='utf-8').read()
+    tape = src[src.find('# ==== TAPE BEGIN'):src.find('# ==== TAPE END ====')]
+    refs = _re.findall(r"'case_source': '(Gen|Exod|Lev|Num|Deut) (\d+):(\d+)", tape)
+    order = ['Gen', 'Exod', 'Lev', 'Num', 'Deut']
+    last = max(refs, key=lambda r: (order.index(r[0]), int(r[1]), int(r[2])))
+    db = _sq.connect('file:' + os.path.join(ROOT, 'Data', 'tanakh.sqlite') + '?mode=ro', uri=True)
+    def exists(b, c, v): return bool(db.execute('SELECT 1 FROM verses WHERE book=? AND chapter=? AND verse=?', (b, c, v)).fetchone())
+    b, c = last[0], int(last[1])
+    if exists(b, c + 1, 1): return '%s %d:1' % (b, c + 1)
+    if order.index(b) + 1 < len(order): return '%s 1:1' % order[order.index(b) + 1]
+    return '%s %s:%s' % last
+
+
 def whole():
     if 'w' not in _W:
         with contextlib.redirect_stdout(io.StringIO()):
-            w, M, n = CS.run_to('Deut 4:1')                 # beyond the tape's last line: the whole tape, in memory — THE DEUTERONOMY WALK 1b (2026-09-16): the tape ends at Deut 3:23-26 now, so 'Deut 1:1' became a position ON the tape (the speech's marker) and the 'whole' world stopped at its left edge (KeyError on the speech's marker keys, 3/7); the verse moved past the tape's last line — a probe's 'beyond the tape' verse moves when the tape grows
+            w, M, n = CS.run_to(beyond_the_tape())          # THE DEUTERONOMY WALK 2b (2026-09-16): the verse COMPUTED from the tape — the first verse of the chapter after the tape's last line (lesson xiii's second half; 'Deut 4:1' became a position on the tape when chapter 4 joined it); beyond the tape's last line: the whole tape, in memory — THE DEUTERONOMY WALK 1b (2026-09-16): the tape ends at Deut 3:23-26 now, so 'Deut 1:1' became a position ON the tape (the speech's marker) and the 'whole' world stopped at its left edge (KeyError on the speech's marker keys, 3/7); the verse moved past the tape's last line — a probe's 'beyond the tape' verse moves when the tape grows
         _W['w'], _W['M'] = w, M
     return _W['w'], _W['M']
 

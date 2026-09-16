@@ -1561,3 +1561,45 @@ follows the last check mark.
 ## 22:4, 23:3, 14:14; JUDGES 11:17; 1 KINGS 22:17; 2 CHRONICLES 19:11 — the runs and kin OUTSIDE the Torah, THE READBACK's when the Prophets are walked;
 ## (xi) THE TEN NAMES OF PRAYER (the Sifrei 26:7) — the effects registry's candidates, filed at the row the_plea, no effect written; (xii) THE STORE'S MIXED
 ## GLOSS FAMILIES (the reading's (j)) a display sitting's, unmoved. NOTHING IN CHAPTERS 1-3 IS OWED TO A LATER SITTING OF ITS OWN: the span is compiled.
+
+## DEUTERONOMY SITTING 2 — CHAPTER 4'S READING (2026-09-16; DEUTERONOMY_WALK.md "Sitting 2"; logic/oral_triage/deu_04_vaetchanan_2026-09-16.md; the two
+## units deu_04_obey_horeb, deu_04_refuge_east FROZEN) — PAID AT 2b (the 2b box below, item by item) — AS WRITTEN AT THE READING, OWED TO THE COMPILE (sitting 2b), each item named at its verse: (a) THE ONE LAW — 4:2's "you
+## shall not add … nor diminish" (the cell without a case token; 13:1 its second seat FORWARD; the docket Rosh Hashanah 28b, Eruvin 96a, Sanhedrin
+## 88b-89a; the Sifrei 82:5 on 1:11 the exhibit); (b) THE ONE CASE — 4:25-31's "when you beget sons … grow old … corrupt" (the exile and the return as
+## the case's arms; DATA rows — "in the end of days" a prophecy, no timer); (c) THE RECEIPT'S SEAT — Deut 4:5 NONE ("the book not read") declared from
+## the tape: the first-person receipt "as the LORD my God commanded me" (10:5 the pair); (d) THE THREE CITIES — 4:41-43 Moses' ACT in the third
+## person: the refuge runner's debit appoint_six_cities_of_refuge OPEN BY DESIGN since Numbers 35:14, CLOSED by Moses' three (Bezer, Ramoth, Golan),
+## Joshua's three FORWARD (Joshua 20:7; Makkot 2:4 "not until all six"); the docket's OUTSIDE rows Makkot 9b:18, 10a:9-16 credited from the refuge
+## exam docket; (e) THE READBACK ROWS of chapter 4 on the first form (4:3 SHORTENED / Numbers 25; 4:10-13 EXPANDED / Exodus 19-20, the tablets' spelling;
+## 4:21-22 the THIRD telling — the 1:37 disagreement row widened; 4:20, 34, 37 the exodus's acts by reference; 4:46-49 SHORTENED / the speech's own 1:4,
+## 2:36, 3:8, 3:17; 4:32 Genesis 1 by reference; 4:35, 39 the creed; 4:26 → 30:19 forward); (f) THE TWO FRAMES' DAY — 4:44-49 the book's second frame,
+## "when they came out of Egypt" twice: the frame's day (40, 11, 1) or a stamp without a day (R6's question at its second seat); Deut 4:45 the block's
+## footer — the chapter's daemon inside (Deut 1:1, Deut 4:45] or the next block; (g) THE NO-IMAGE LIST as DATA — 4:16-19's forms (figure, male, female,
+## beast, bird, creeping thing, fish, sun, moon, stars, the host): the second word's parameter table, the pointer to Exodus 20:4 dispositioned; (h) THE
+## HOST "APPORTIONED" — 4:19 with 29:25 (the Sifrei 148:8's pair), Onkelos "prepared": a DATA note, no link of our own; (i) THE CHAPTER-5 DIVISION —
+## the export's thirty verses against the DB's thirty-three: the recorder and the stitcher address by the DB; the next reading's first measurement;
+## (j) THE STORE'S GLOSS FAMILIES — the mixed families named by reference (a display sitting's); (k) THE DOCKET by the union rule — bal tosif,
+## Kiddushin 30a, Avodah Zarah 3:1-3 with Rosh Hashanah 24a-b, Avodah Zarah 55a, Ketubot 111b, Makkot 2:4-8, Pesachim 10:4 and the Haggadah, Berakhot
+## 32b; 4:26's "not prolong days" and 4:30's "in your distress … return" open topics; (l) THE MEKHILTA'S QUESTION on Exodus 20:22 (4:36 — the reading
+## shelf's, credited by name only). THE 1b BOX'S ITEM (ii) — 4:41-43 — is this sitting's (d).
+
+## DEUTERONOMY SITTING 2b — THE COMPILE OF CHAPTER 4 (2026-09-16; DEUTERONOMY_WALK.md "Sitting 2b" design + AS BUILT; logic/oral_triage/deu_04_vaetchanan_exam_2026-09-16.md
+## 327 rows; cold_run_obey_horeb.py 52/52; law_obey_horeb the 64th daemon; the tape 10/10 with RUN (1300, 96, 88, 0, 12, 1588, 35, 319, pairs, 126)). THE SITTING-2
+## BOX (a)-(l) PAID — (a) the one law the cell F1 (adding_barred a BLOCK on Israel, its arms in-its-time / beside from Rosh Hashanah 28b, Eruvin 95b-96a, Sanhedrin
+## 88b-89a; 13:1 forward); (b) the one case the kind horeb_case with the arms the exile and the return (no timer — a prophecy); (c) the receipt's seat Deut 4:5 declared
+## ACT (the write's source contains the verse; the register gate green) — the class predicted from the gate's code, (R5); (d) the three cities the act
+## three_cities_set_apart writing cities_set_apart, a STATUS valued the three by CALL — THE REFUGE DEBIT LEFT OPEN (Mishnah Makkot 2:4 / 9b-10a: not until all six;
+## the close Joshua 20:7-8, outside the Torah); (e) the readback's eleven rows (SHORTENED 3, EXPANDED 5, SUPPLIED 2, DISAGREES 1), THE TAPE'S HOLE filled — the ten
+## words spoken and the tablets given, written once at (1, 3, 7) and (1, 4, 17) by retrograde markers; the bar's third telling a second open DISAGREES row; (f) the
+## two frames' day — the second frame NO WRITE (R6), 4:45 the footer of the block (Deut 1:1, Deut 4:45] with daemons 2 (green); (g) the no-image list DATA — the
+## second word's parameter table, the pointer to Exodus 20:4 in the CALL edge's why; (h) the host "apportioned" a DATA note (Avodah Zarah 55a:9 "let slip" — no link
+## of our own); (i) the chapter-5 division — the recorder and the stitcher address by the DB; the next reading's first measurement STANDS OWED; (j) the gloss families
+## a display sitting's, unmoved; (k) the docket by the union rule (the nine ranges whole; ten Mishnah rows; sixteen crowns); (l) the Mekhilta's question credited by
+## name (the reading shelf's). OWED FROM 2b: (i) THE SECOND WORD — Exodus 20:3-6 (the image law) has NO CELL in any runner; the edge obey_horeb → decalogue
+## (DC.altar_rules('steps')) names the debt in its why; 4:16-19's list its parameter table; OWED to chapter 5's sitting (the Decalogue's second copy) — the schema
+## sitting on the table its natural home; (ii) THE REFUGE DEBIT — appoint_six_cities_of_refuge OPEN on Israel since Numbers 35:14, unmoved by Moses' three (a status,
+## not a close); the close at Joshua 20:7-8, THE READBACK's when the Prophets are walked; (iii) THE D2 CANDIDATE — law_decalogue's installed_by: the tape now
+## carries ten_words_declared at its own day (1, 3, 7); whether the giving's line installs the decalogue daemon (D2 — installation by an act) is a loop sitting's
+## decision, the row unmoved (boot); (iv) THE BAR'S THIRD TELLING — the DISAGREES rows 1:37 and 4:21-22 OPEN, no write; (v) 4:26's "not prolong days" and 4:30's
+## "in your distress … return" open topics (the tochacha's scattered_among_nations registered, never written — no exile on the tape); (vi) THE CHAPTER-5 DIVISION —
+## the export's thirty verses against the DB's thirty-three, measured FIRST at chapter 5's reading. NOTHING ELSE IN CHAPTER 4 IS OWED TO A LATER SITTING OF ITS OWN.

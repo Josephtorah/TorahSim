@@ -7,6 +7,11 @@
   Q4 the supplied lines are DATED by a retrograde stretch — the event carries `dated`, its day the marker's stated day, not the counter's
   Q5 the two DISAGREES rows are OPEN — no ledger entry written for either (2:29's Edom, 1:37's ground of the bar)
   Q6 the register gate's seats on the new tape — Deut 1:3 ACT, 1:19 CHAPTER, 1:41 CHAPTER (the gate's class for a receipt whose chapter holds a closed entry — read at the first run; the design said NONE), Deut 4:45 DAEMONS, Num 27:22 CLOSE
+  THE DEUTERONOMY WALK 2b (2026-09-16; DEUTERONOMY_WALK.md "Sitting 2b" THE PROBES) — written to FAIL before cold_run_obey_horeb.py exists:
+  Q7 the runner and its the_readback table: eleven rows (SHORTENED 3, EXPANDED 5, SUPPLIED 2, DISAGREES 1), the two SUPPLIED rows naming their first tellings Exod 20:1 and 31:18 (THE TAPE'S HOLE)
+  Q8 the two supplied Horeb lines DATED by the retrograde markers at Deut 4:10 and 4:13 — (1, 3, 7) the giving, (1, 4, 17) the tablets; the tablets' day = the breaking marker's (Exod 32:19)
+  Q9 the register seats after chapter 4 — Deut 4:5 ACT, Deut 4:45 DAEMONS with daemons 2; the refuge debit appoint_six_cities_of_refuge OPEN after the three cities' line (Makkot 2:4); cities_set_apart on Israel ONE
+  (Q4 NARROWED at 2b to chapters 1-3's lines and markers — the probe tests 1b's form, not the tape's length)
 Run: python3 World/step9/readback_probes.py   (the running world replays the tape: ~3 minutes)
 """
 import os, sys, io, re, contextlib, collections
@@ -58,9 +63,9 @@ def q3():
         order.append(opener in pos and closer in pos and pos[closer] < pos[opener])
     return ok and all(order) and len(order) == 4, 'supplied debits %d, closed %d, closer earlier on the tape %s' % (len(sup), sum(1 for e in sup if not e.get('open')), order)
 def q4():
-    lines = [e for e in EV if str(e[2].get('case_source', '')).startswith('Deut ')]
+    lines = [e for e in EV if re.match(r'Deut [123]:', str(e[2].get('case_source', '')))]   # THE DEUTERONOMY WALK 2b (2026-09-16): chapters 1-3 only (the probe tests 1b's form)
     dated = [e for e in lines if e[2].get('dated') is not None]
-    mk = [l for l in W.log if l[0] == 'MARKER' and str(l[2].get('verse', '')).startswith('Deut ') and l[2].get('retrograde')]
+    mk = [l for l in W.log if l[0] == 'MARKER' and re.match(r'Deut [123]:', str(l[2].get('verse', ''))) and l[2].get('retrograde')]
     stated = {l[2]['stated'] for l in mk}
     return len(lines) == 12 and len(dated) == 11 and len(mk) == 3 and all(e[2]['dated'] in stated for e in dated), 'Deuteronomy lines %d, dated %d, retrograde markers %d, stated days %s' % (len(lines), len(dated), len(mk), sorted(ex.date(d) for d in stated))
 def q5():
@@ -76,8 +81,32 @@ def q6():
     want = {'Deut 1:3': 'ACT', 'Deut 1:19': 'CHAPTER', 'Deut 1:41': 'CHAPTER', 'Num 27:22': 'CLOSE', 'Deut 4:45': 'DAEMONS'}   # 1:19 and 1:41 CHAPTER, not NONE — the gate's own class for a receipt whose chapter holds a closed entry (the Horeb debit at 1:6-8, closed by the prior run): read at the first tape run (2026-09-15), the design's NONE retyped; the receipts run citations still (R5)
     return got == want, 'got %s' % got
 
+def q7():
+    import cold_run_obey_horeb as OH
+    rows = OH.DATA['the_readback']['value']
+    gs = collections.Counter(r['grade'] for r in rows)
+    sup = [r for r in rows if r['grade'] == 'SUPPLIED']
+    named = sum(1 for r in sup if 'Exod 20:1' in str(r.get('entry', '')) + str(r.get('why', ''))) + sum(1 for r in sup if 'Exod 31:18' in str(r.get('entry', '')) + str(r.get('why', '')))
+    return len(rows) == 11 and gs == collections.Counter({'EXPANDED': 5, 'SHORTENED': 3, 'SUPPLIED': 2, 'DISAGREES': 1}) and named == 2, 'rows %d, grades %s, the first tellings named %d' % (len(rows), dict(gs), named)
+def q8():
+    tw = [e for e in EV if e[2]['kind'] == 'ten_words_declared']; tb = [e for e in EV if e[2]['kind'] == 'tablets_given']
+    mk = {str(l[2].get('verse', '')): l for l in W.log if l[0] == 'MARKER'}
+    d_tw = ex.date(tw[0][2]['dated']) if tw and tw[0][2].get('dated') is not None else None
+    d_tb = ex.date(tb[0][2]['dated']) if tb and tb[0][2].get('dated') is not None else None
+    same = bool(tb) and 'Exod 32:19' in mk and tb[0][2].get('dated') == mk['Exod 32:19'][1]
+    ok = len(tw) == 1 and len(tb) == 1 and d_tw == (1, 3, 7) and d_tb == (1, 4, 17) and 'Deut 4:10' in mk and 'Deut 4:13' in mk and mk['Deut 4:10'][2].get('retrograde') and mk['Deut 4:13'][2].get('retrograde') and same
+    return ok, 'ten_words_declared %d dated %s; tablets_given %d dated %s; the markers at Deut 4:10 / 4:13 %s / %s; the tablets\' day = the breaking\'s %s' % (len(tw), d_tw, len(tb), d_tb, 'Deut 4:10' in mk, 'Deut 4:13' in mk, same)
+def q9():
+    with contextlib.redirect_stdout(io.StringIO()):
+        ink = RG.read_ink(); cr = RG.class_receipts(ink, W); cf = RG.class_footers(ink)
+    isr = W.entities.get('israel_people')
+    deb = [e for e in isr.ledger if e['effect'] == 'commanded' and e.get('value') == 'appoint_six_cities_of_refuge'] if isr else []
+    csa = [e for e in isr.ledger if e['effect'] == 'cities_set_apart'] if isr else []
+    got = (cr.get('Deut 4:5', {}).get('class'), cf.get('Deut 4:45', {}).get('class'), cf.get('Deut 4:45', {}).get('daemons'), len(deb), bool(deb) and deb[0].get('open'), len(csa))
+    return got == ('ACT', 'DAEMONS', 2, 1, True, 1), 'got (4:5 class, 4:45 class, 4:45 daemons, the refuge debit, open, cities_set_apart) = %s' % (got,)
+
 print('READBACK PROBES (THE LOOP step 6, the first form)')
-for n, f in (('Q1 the table', q1), ('Q2 found', q2), ('Q3 the close by a prior run', q3), ('Q4 the retrograde dating', q4), ('Q5 the open disagreements', q5), ('Q6 the register seats', q6)):
+for n, f in (('Q1 the table', q1), ('Q2 found', q2), ('Q3 the close by a prior run', q3), ('Q4 the retrograde dating', q4), ('Q5 the open disagreements', q5), ('Q6 the register seats', q6), ('Q7 chapter 4\'s table', q7), ('Q8 the Horeb lines dated', q8), ('Q9 the seats and the debit after chapter 4', q9)):
     probe(n, f)
 n_ok = sum(1 for _, ok in R if ok)
 print('readback_probes: %d/%d' % (n_ok, len(R)))
