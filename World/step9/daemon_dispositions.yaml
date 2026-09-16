@@ -382,6 +382,30 @@ daemons:
       killer_case: [accepted, commanded, exempt, put_to_death, flees_to_refuge, dwells_in_refuge, has_blood, returns_to_his_possession]   # (the branch's W read by the gate — commanded F2's debit row, returns_to_his_possession F4's return row; retyped from the gate's print 2026-09-13) the exam's rows on the murderer (the sword by CALL) and the manslayer (the flight, the term OPEN, the border's no-blood, the neither row 'unresolved')
       refuge_statute_case: [accepted, put_to_death, flees_to_refuge, land_polluted_by_blood]   # (flees_to_refuge F5's no-ransom-for-the-fugitive row; no exempt row in F5 — retyped from the gate's print 2026-09-13) the exam's rows on the statute — the twenty-three, the witnesses, the ransom refused (the death stands), the land polluted, the Presence read
       high_priest_died: [returns_to_his_possession]                               # the office-holder's death — every open dwells_in_refuge CLOSED BY VALUE (the daemon's own close) and the return written; on the tape outside the Torah
+  law_opening_speech:
+    file: cold_run_opening_speech.py
+    wraps: opening_speech
+    given_at: Deut 1:16
+    installed_by: boot   # THE DEUTERONOMY WALK 1b (2026-09-15): A LAW IN MOSES' VOICE WITH NO DIVINE FRAME — 'and I charged your judges at that time' (1:16): the vows' class (Numbers 30:2 — Moses to the heads of the tribes), the second pass's D2 question (whether Moses' relay is itself an installing ACT); no installing act, no tent — the walk's standing setting; the class named here so the second pass finds it. THE READBACK'S FIRST FORM (THE_LOOP.md step 6, the owner's 'Yes 1. Go'): the eleven acts told only in the retelling are written ONCE at their own time by retrograde markers, four of them CLOSED at once by a prior run inside the daemon's branch; the retold acts are reference rows (DATA the_readback), never second acts
+    watches:
+      moses_told_to_ascend_abarim: [commanded]                                  # Num 27:12-14: ONE debit on Moses — see_the_land_from_abarim, OPEN by design (Deuteronomy 34:1-4 this book's end)
+      a_shepherd_asked: [plea_made]                                             # Num 27:15-17: the plea the value
+      joshua_commission_commanded: [commanded]                                  # Num 27:18-21: ONE debit on Moses — commission_joshua_before_eleazar
+      joshua_commissioned: [invested_office]                                    # Num 27:22-23: on Joshua; the commission debit CLOSED by its run (the daemon's own close, closed_by Num 27:22-23) — the register seat Num 27:22 CLOSE
+      speech_opened: [torah_expounded]                                          # Deut 1:1-5: the frame — a STATUS on Israel dated (40, 11, 1), the book's one act of its own day
+      horeb_departure_commanded: [commanded]                                    # Deut 1:6-8: ONE debit on Israel dated (2, 2, 20), CLOSED at once by the prior run Num 12:16 (THE CLOSE BY A PRIOR RUN)
+      judges_charged: [judges_charged]                                          # Deut 1:16-18: THE LAW — a STATUS on the court, the six clauses, dated (1, 2, 16)
+      turn_northward_commanded: [commanded, contending_barred, land_granted]    # Deut 2:2-7: ONE debit on Israel CLOSED by the prior run Num 21:10-13; the bar and the grant (Mount Seir) on Edom
+      moab_spared_commanded: [contending_barred, land_granted]                  # Deut 2:9: the bar and the grant (Ar) on the Moabites
+      zered_crossing_commanded: [commanded]                                     # Deut 2:13: ONE debit on Israel CLOSED by the prior run Num 21:12
+      ammon_spared_commanded: [contending_barred, land_granted]                 # Deut 2:17-19: the bar and the grant on the sons of Ammon (the one new party)
+      sihon_war_commanded: [commanded]                                          # Deut 2:24-25, 2:31: ONE debit on Israel CLOSED by the prior run Num 21:24-25
+      sihons_cities_devoted: [destroyed]                                        # Deut 2:34-35: the ban on Sihon's cities — on the Amorite (told only here)
+      ogs_cities_devoted: [destroyed]                                           # Deut 3:6-7: the ban on Og's sixty — on the Amorite (told only here)
+      joshua_encouraged: [fear_not_promised]                                    # Deut 3:21-22: HEAVEN's promise on Joshua (Numbers 21:34's effect at its second party)
+      moses_besought: [plea_made]                                               # Deut 3:23-26: the plea and its refusal the value; the barred entry OPEN, read
+      judges_case: [accepted, exempt, judgment_perverted]                       # the exam's rows on the judges' charge — the clauses, the courts' sizes, the disqualified, the examination, the verdict; the perverting judge the holiness engine's five effects by CALL
+      speech_case: [accepted, exempt]                                           # the exam's rows on the frame, the date, the spies read back, the bypass, Sihon and Og, the east, the plea, the commission
   law_census:
     file: cold_run_bamidbar.py
     wraps: bamidbar
@@ -1921,6 +1945,15 @@ functions:
     the_murderer: {status: WRAPPED, by: law_refuge}
     the_manslayer: {status: WRAPPED, by: law_refuge}
     the_statute: {status: WRAPPED, by: law_refuge}
+  opening_speech:   # THE DEUTERONOMY WALK 1b (2026-09-15)
+    the_commission: {status: WRAPPED, by: law_opening_speech}
+    the_frame: {status: WRAPPED, by: law_opening_speech}
+    the_officers_and_the_judges: {status: WRAPPED, by: law_opening_speech}
+    the_spies_read_back: {status: WRAPPED, by: law_opening_speech}
+    the_bypass: {status: WRAPPED, by: law_opening_speech}
+    sihon_and_og: {status: WRAPPED, by: law_opening_speech}
+    the_east_and_the_charges: {status: WRAPPED, by: law_opening_speech}
+    the_plea: {status: WRAPPED, by: law_opening_speech}
   pre_sinai:
     creation: {status: WRAPPED, by: law_pre_sinai}
     day_boundary: {status: WRAPPED, by: law_pre_sinai}

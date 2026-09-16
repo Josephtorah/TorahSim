@@ -43,6 +43,7 @@ _INK = {'re': re, 'sqlite3': sqlite3, 'os': _os, 'WE': WE}
 _INK['_ROOT'] = _ROOT   # THE PORTABLE REPO (2026-09-15): the INK block reads the store through the root; the exec'd namespace must carry it
 exec(_SRC.split('# ==== INK BEGIN')[1].split('# ==== INK END ====')[0].split('\n', 1)[1], _INK)
 ink_numbers, ink_ordinals, verse_words = _INK['ink_numbers'], _INK['ink_ordinals'], _INK['verse_words']
+from fractions import Fraction   # THE DEUTERONOMY WALK 1b (2026-09-15): the half read by rule (30) is a Fraction in the tripwire
 
 db = sqlite3.connect((_ROOT + '/Data/tanakh.sqlite'))
 
@@ -208,7 +209,7 @@ ORDINALS = {v: ink_ordinals(verse_words('Num', 34, v)) for _, v in SPAN}
 STARRED = [(v, t) for _, v in SPAN for t in verse_words('Num', 34, v) if t.endswith('*')]
 CARET = [(v, t) for _, v in SPAN for t in verse_words('Num', 34, v) if t.endswith('^')]
 INTS = {v: n for v, n in NUMBERS.items() if n}; ORDS = {v: o for v, o in ORDINALS.items() if o}
-assert INTS == {13: [9], 15: [2], 18: [1, 1]} and ORDS == {} and STARRED == [] and CARET == [(15, 'שני^')], (INTS, ORDS, STARRED, CARET)   # THREE number verses in twenty-nine — every one read; the construct "two of" by its points; THE DISTRIBUTIVE DOUBLING as two ones; no rule owed
+assert INTS == {13: [9, Fraction(1, 2)], 14: [Fraction(1, 2)], 15: [2, Fraction(1, 2)], 18: [1, 1]} and ORDS == {} and STARRED == [] and CARET == [(15, 'שני^')], (INTS, ORDS, STARRED, CARET)   # THE DEUTERONOMY WALK 1b (2026-09-15): rule (30) THE HALF OF A NAMED WHOLE reads the half tribe at 34:13, 34:14, 34:15 — nine and a half, two and a half; before it THREE number verses in twenty-nine — every one read; the construct "two of" by its points; THE DISTRIBUTIVE DOUBLING as two ones; no rule owed
 NINE, TWO, ONE_ONE = INTS[13][0], INTS[15][0], INTS[18]
 assert ink_numbers(verse_words('Num', 35, 1)) == [] and ink_ordinals(verse_words('Num', 35, 1)) == [], 'the next chapter opens without a number'
 FRAME_VERBS = [(v, words(34, v)[0], words(34, v)[1]) for _, v in SPAN if words(34, v)[0] in ('וידבר', 'ויאמר', 'ויאמרו', 'ויענו', 'ויצו')]
@@ -330,7 +331,7 @@ assert words(34, 17)[4:8] == ['ינחלו', 'לכם', 'את', 'הארץ'] and wo
 DOUBLING = words(34, 18)[:5]; ONE_PRINCE_PAIR = seats('נשיא אחד נשיא אחד'); ONE_MAN_PAIR = seats('איש אחד איש אחד')
 assert DOUBLING == ['ונשיא', 'אחד', 'נשיא', 'אחד', 'ממטה'] and ONE_PRINCE_PAIR == ['Josh 22:14'] and ONE_MAN_PAIR == ['Josh 3:12', 'Josh 4:2', 'Josh 4:4', 'Num 13:2'], (DOUBLING, ONE_PRINCE_PAIR, ONE_MAN_PAIR)   # THE DISTRIBUTIVE DOUBLING — the spies, Joshua's stones and embassy
 KIN = {k: ink_numbers(verse_words(*k)) for k in (('Num', 13, 2), ('Num', 7, 11), ('Num', 17, 21), ('Josh', 3, 12), ('Josh', 4, 2), ('Josh', 4, 4), ('Josh', 22, 14), ('Josh', 14, 2), ('Josh', 13, 7), ('Josh', 14, 3), ('Josh', 14, 4), ('Ezek', 47, 13), ('1Kgs', 8, 65))}
-assert KIN == {('Num', 13, 2): [1, 1], ('Num', 7, 11): [1, 1], ('Num', 17, 21): [1, 1, 12], ('Josh', 3, 12): [12, 1, 1], ('Josh', 4, 2): [12, 1, 1], ('Josh', 4, 4): [2, 1, 1], ('Josh', 22, 14): [10, 1, 1], ('Josh', 14, 2): [9], ('Josh', 13, 7): [9], ('Josh', 14, 3): [2], ('Josh', 14, 4): [2], ('Ezek', 47, 13): [12], ('1Kgs', 8, 65): [7, 7, 14]}, KIN   # the parser at the kin — the doubling read [1, 1] everywhere; the nine and the two at Joshua's runs
+assert KIN == {('Num', 13, 2): [1, 1], ('Num', 7, 11): [1, 1], ('Num', 17, 21): [1, 1, 12], ('Josh', 3, 12): [12, 1, 1], ('Josh', 4, 2): [12, 1, 1], ('Josh', 4, 4): [2, 1, 1], ('Josh', 22, 14): [10, 1, 1], ('Josh', 14, 2): [9, Fraction(1, 2)], ('Josh', 13, 7): [9, Fraction(1, 2)], ('Josh', 14, 3): [2, Fraction(1, 2)], ('Josh', 14, 4): [2], ('Ezek', 47, 13): [12], ('1Kgs', 8, 65): [7, 7, 14]}, KIN   # the parser at the kin — the doubling read [1, 1] everywhere; the nine and the two at Joshua's runs
 # ---- F5's facts: the roster ----
 CALEB_FIVE = seats('למטה יהודה כלב בן יפנה'); CALEB_JEPH = seats('כלב בן יפנה'); PRINCE_NUM = seats('נשיא', ('Num',)); PRINCE_34 = [s for s in PRINCE_NUM if s.startswith('Num 34:')]
 assert CALEB_FIVE == ['Num 13:6', 'Num 34:19'] and words(13, 6) == words(34, 19)[3:8] == ['למטה', 'יהודה', 'כלב', 'בן', 'יפנה'], (CALEB_FIVE, words(13, 6), words(34, 19))   # CALEB'S FIVE WORDS — the spy's line at the dividers'

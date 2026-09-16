@@ -2902,3 +2902,116 @@ write, no entity); the scene met it at a case.
 priest" contains the bare phrase — a prefix phrase's census includes every longer phrase it opens. Four seats.
 10. DEUTERONOMY NEVER SAYS "REFUGE". The refuge-word (מִקְלָט, lemma 4733) has twenty Bible verses; the Torah's eleven are all in this chapter; Deuteronomy
 4:41-43 and 19:1-13 name the cities and the flight without the word. Joshua 20-21 and Chronicles 6 carry it. Filed for that book's compile.
+
+## 2026-09-15 — DEUTERONOMY 1-3 READ (THE DEUTERONOMY WALK sitting 1 — THE OPENING SPEECH): THE ENGLISH APPARATUS IN THE ROWS; TWO ENGLISH ROWS THE HEBREW
+## LACKS; A MIS-CITED VERSE; THE IBID THAT RESOLVES TO SONG OF SONGS; THE WRITTEN AND THE READ AT 2:33; THE RETELLINGS DISAGREE ON EDOM; ONKELOS WRITES THE
+## SIFREI INTO 1:1; THE STORE'S ODD GLOSSES ON THE THREE CHAPTERS
+
+THE EXPORT'S ENGLISH ROWS CARRY THE TRANSLATOR'S APPARATUS. The Sifrei on Deuteronomy's English file (Data/sefaria_export/Sifrei_Devarim/en.json)
+glues its page references ("Pisqa' 11H:23-27; JN1:15-23.") and its footnote numerals to the words of the row ("Select108Heb: havu ..."): piska 1's
+twenty rows carry 38 digit-before-capital markers. A defect class for every reading of this export — read past, count the markers, never a row.
+The Hebrew file carries none. The two files' ROW GRAINS ARE EQUAL everywhere (357 piskaot, 2,357 rows each; no mismatch) — the Numbers export's
+duplicated block has no twin here.
+
+TWO ENGLISH ROWS CITE 1:4 WHERE THE HEBREW DOES NOT, AND ONE MIS-CITES. The four-form scan for rows outside piskaot 1-30 citing chapters 1-3 found
+SEVEN Hebrew rows (37:9, 37:11, 52:1, 54:2, 82:5, 199:5, 314:2) and NINE English: 36:10 and 37:2 cite "(Dt.1:4)" where the Hebrew rows carry Song of
+Songs 6:4 and Numbers 13:22 alone (the translator's added references), and 199:5's English cites "(Dt.2:25)" for the Hebrew's "(דברים ב כו)"
+("Deuteronomy 2:26") — the quoted words are 2:26's "I sent messengers". The English "(Dt.n:m)" form has NO SPACE (3,292 such parens over the
+export; one "Deut."): a regex with a space finds nothing.
+
+THE IBID THAT IS NOT DEUTERONOMY'S. The measurement pass's ibid scan keyed "(שם ב ב)" ("ibid. 2:2") at 355:27 to the last Deuteronomy citation and
+reported one ibid row on Deuteronomy 2:2. The ink walked the row's parens in order: "(שה״ש ב ג)" ("Song of Songs 2:3") precedes it — the ibid is
+Song 2:2. The English row cites Deuteronomy 33:26 and Exodus 15:11 and nothing in chapters 1-3. Filed as the scan's false class: an ibid resolves
+to the nearest book NAMED, not the nearest book SOUGHT.
+
+THE WRITTEN AND THE READ AT 2:33. The snapshot store carries TWELVE tokens for Deuteronomy 2:33 where the Tanakh DB carries ELEVEN: the store keeps
+both the written בנו ("his son") and the read בניו ("his sons"); the DB keeps the written form unpointed. The span's one such pair (measured over
+all 112 verses). Onkelos reads the plural. Numbers 21:35's Og has "and his sons" written.
+
+THE RETELLINGS DISAGREE ON EDOM. Deuteronomy 2:29 has Moses tell Sihon "as the sons of Esau who dwell in Seir and the Moabites who dwell in Ar did
+for me" — the passage and the selling of food and water; Numbers 20:18-21 has Edom refuse ("you shall not pass"; "and Edom refused to let Israel
+pass"); Judges 11:17 has Edom and Moab BOTH refuse. The Sifrei has no piska on 2:29 (its silence runs 1:29-3:22); the outside rows do not touch it.
+Filed for the compile as an OPEN question with no teacher — a hypothesis row under the link review law, never a link of our own.
+
+ONKELOS WRITES THE SIFREI INTO 1:1. The translation renders the six place-names of 1:1 as six sins in thirty-three tokens for the Hebrew's
+twenty-two ("he rebuked them for that they sinned in the wilderness, and for that they provoked in the plain opposite the Sea of Reeds; in Paran
+where they scorned the manna, and at Hazeroth where they provoked over the meat, and for that they made the calf of gold") — the Sifrei 1:9-17's
+readings, on a question the Sifrei holds open at 1:18 (R. Judah's ten trials against R. Yose ben Dormaskit's plain places named for events); the
+book's one seat of "rebuked". The Numbers walk met no such paraphrase in Onkelos Numbers. Filed as the translation's first written reading in the
+book: the compile decides which reading the code carries (the place-names as data, the sins as the Sifrei's rows).
+
+THE STORE'S ODD GLOSSES ON THE THREE CHAPTERS (the display layer, patch_overrides_deu.py — 149 by reference, 126 by gloss; the families censused over
+the whole store first): "pasture" for the WILDERNESS (the-pasture 16, in-pasture 60, the-pasture-suffix 7 — every token the wilderness, by gloss);
+"leanness" for ONLY (39, by gloss); "abrupt" for OPPOSITE (15); "Red-Sea" for SUPH THE PLACE (1:1's one token); "safe" for PEACE (12); "hating-you"
+for YOUR ENEMIES (14); "something-bought" for CATTLE (17); "the-precept" for THE TORAH (27); "hind-part" for AFTER (96); "in-time" for AT THE TIME
+(20); "to-set" for TO GIVE (37); "from-with" for FROM (61); "meaning-accession" for ALSO (12); "heed" for BECAUSE (5); "to-meander--about" for TO
+SEARCH OUT (8); the direction suffixes ("hidden-suffix" NORTHWARD, "and-south-suffix" SOUTHWARD, "the-mountain-suffix" TO THE MOUNTAIN); the names
+("the-Emims", "Rapha'", "the-Chorite", "Caphtorite", "Anakite", "Tsidonian", "Jehoshua"); the hapax forms ("and-be-naught" YOU DEEMED IT EASY,
+"be--lofty" TOO HIGH, "and-cross-over" WAS WROTH, "the-bee", "treading", "ravine" THE SLOPES, "couch" BEDSTEAD, "building" CITY, "yield" UNDERTOOK);
+and the mixed families by reference — "set" for GIVE at all twenty-six seats of the span, "stream" for THE BROOK and the river, "in-region-across"
+for BEYOND, "bore" for BEGIN beside PROFANE, "grate" for CONTEND beside the grating, "cramp" for HARASS, "turn-aside-from-the-road" for BE AFRAID
+beside SOJOURN, "and-pry-into" for SEARCH OUT beside DIG, "and-be--bitter" for REBEL beside MARAH, "and-seethe" for ACT PRESUMPTUOUSLY beside Jacob's
+pottage, "plait" for RECKONED beside Heshbon, "to-face" for FORMERLY, "lip" for THE EDGE, "rope" for THE REGION, "mother" for CUBITS, "strength" for
+GOD, "?" for KADESH / BETH / HAVVOTH / EZION, "and-eye" for AND YOU ANSWERED, "feed-on" for FIGHT, "seas-suffix" for WESTWARD. Ten families were
+already rewritten by earlier sittings (and-crack-off, from-pasture, sunrise-suffix, the-powder, and-cord, cord, in-cord, the inherit-her form,
+in-hate, Non). The mixed families' other seats a display sitting's.
+
+THE SHELF'S SILENCE, MEASURED: no piska on 1:29-3:22 — the oath (1:34-40), the defeat (1:41-46), the bypass (2:1-25), Sihon (2:26-37), Og and the
+east (3:1-22) read on Onkelos alone (the Sifrei's own case law on the judges and the plea the block's whole yield). Filed with the Numbers walk's
+finding that Deuteronomy never says "refuge": the book's shelf is thin where the tape is thick.
+
+## 2026-09-15 — EZEKIEL SCANNED BEFORE ITS WALK (a discussion on the principles LAW IS CODE and NARRATIVE IS DATA): TWO BOOKS IN ONE, A DAY
+## FOR A YEAR AT TWO SEATS, THE GATES STORED BY REFERENCE, A FUNCTION CALLED OVER THREE GENERATIONS, AND THE RIVER READ FROM THE BANK
+
+The full note: logic/oral_triage/ezek_prelude_2026-09-15.md (the scans reproducible at its end). The findings, each measured on Data/tanakh.sqlite:
+1. Chapters 1-39 are a run and 40-48 a spec: "son of man" 94, "thus says the Lord GOD" 122, "you shall know that I am the LORD" 58 (the
+   prophets' receipt formula), fourteen date stamps; the spec carries 343 number words against 120 in the other thirty-nine chapters.
+2. "A day for a year" as one four-word phrase stands at exactly two seats in the Bible, Numbers 14:34 and Ezekiel 4:6: the Torah compresses
+   forty days into years, Ezekiel decompresses 390 and 40 days into years, in the same words.
+3. The gates of chapter 40 are stored once and referenced six times ("according to these measures", 40:24-35; "the first gate", 40:21); the
+   visions after chapter 1 are pointers ("like the vision which I saw", 8:4, 10:22, 11:24, 43:3); chapter 10 recalls chapter 1 with 21 of its
+   33 rare words; "wheel within the wheel" at exactly 1:16 and 10:10.
+4. Chapter 18 is a function called over three generations (the conditions of 18:5-9 reused by the son and the grandson) with a base case, and
+   called again at 3:17-21 and in chapter 33; chapter 20 runs one cycle three times over the nation and ends with a filter (20:37-38).
+5. The spec re-instantiates records inside the Torah with new constants, not the Torah whole: 40-43 share 40 of 136 rare words with the
+   tabernacle spec and 42 appear nowhere in the Torah; 45:9-12 declares its constants (the ephah, the bath, the shekel of twenty gerahs, the
+   maneh) before the schedule; 40:5 defines its unit; 46:17 calls Leviticus 25's "year of liberty" by name.
+6. The ledger in the ink: 24:2 orders a marker written ("write the name of the day"); 33:21 closes it; 29:18-20 reassigns an unpaid debt
+   (Tyre's wages to Nebuchadnezzar's army, paid in Egypt). The tent form at three seats: 14:1-8, 18:2, 44:1-3.
+7. The river of 47:1-12, four measured thousands with one rising depth until "waters to swim in", then "he brought me back to the bank":
+   the owner's reading, the data leaving the code until the reader cannot wade it and the seeing done from the bank; the shelf read the
+   depths as a scale of crossing before us (Yoma 77b:12-15: ankles yes, swimming no, a small boat no, a great ship no; Sanhedrin 100a:6).
+
+## 2026-09-15/16 — THE OPENING SPEECH COMPILED (THE DEUTERONOMY WALK 1b): THE READBACK'S FIRST FORM — A RETELLING IS A REFERENCE ROW, AN ACT TOLD ONLY
+## IN THE RETELLING IS WRITTEN ONCE AT ITS OWN TIME AND CLOSED BY THE RUN THE TAPE ALREADY HOLDS, AND THE JUDGES' CHARGE IS THE SPAN'S ONE LAW
+
+The record: World/step9/DEUTERONOMY_WALK.md "Sitting 1b" (the design) and "Sitting 1b — AS BUILT"; the runner World/step9/cold_run_opening_speech.py
+(97/97); the docket logic/oral_triage/deu_01_03_devarim_exam_2026-09-15.md (864 rows). The findings, each on the tape or the DB:
+1. Deuteronomy 1-3 writes SIXTEEN lines and reads back FORTY-TWO: the frame (1:1-5) the book's one act of its own day; eleven acts told only in the
+   retelling (the departure from Horeb, the judges' charge, the turn northward, the three bars and grants, the Zered, the war on Sihon, the two bans,
+   Joshua's promise, the plea) written once at the time each happened by three RETROGRADE markers ((2, 2, 20), the court's founding day read off the
+   ledger, (40, 6, 1)); four of them debits CLOSED AT ONCE by a prior run — the tape's earlier line the closer (Num 12:16; 21:10-13 twice; 21:24-25):
+   the ledger's own record that a command came to the reader after its execution. The other thirty-one retellings reference rows graded VERBATIM (1),
+   TURNED (10), SHORTENED (6), EXPANDED (12), DISAGREES (2) — the deltas recomputed from the tokens (1:39's shared prefix five; 2:27 nine for
+   seventeen; 3:1-3 fifty-seven for fifty-five with five pronoun shifts). No second act anywhere.
+2. The bare date "in the fortieth year, in the eleventh month, on the first" (1:3) is read by the NUMBER reader [40, 11, 1] where Aaron's death
+   (Numbers 33:38) is read by the ORDINAL reader [40, 5] — one clock, two readers; the era is the exodus's by a TRANSFER TAUGHT (Rosh Hashanah 2b:11, the
+   verbal analogy "the fortieth year" / "the fortieth year"). The marker's walk from (40, 6, 1) to (40, 11, 1) — 177 days — fired thirty-six timers and
+   re-armed thirty: the first stretch of the tape where two period timers of one effect fell on one day (the month's musaf with Rosh Hashanah's, and
+   with the Sabbath's), which broke a join in the journal's timers view keyed on the day alone — fixed on the value.
+3. The judges' charge (1:16-17) is a status on the court whose value is six clauses, each ONE seat in the Bible; the shelf reads them clause by
+   clause (Sanhedrin 7b:14-8a:6). It is a law in Moses' voice with no divine frame (the vows' class) — installed at boot with the class named, the
+   second pass's question. The officers' table has two settings: 78,600 on the round six hundred thousand and 79,064 on the exact 603,550 by
+   integer division at every grain (the Sifrei 15:4's rounding rule is integer division's own form).
+4. The retellings DISAGREE twice and no teacher inside the Torah joins the arms: 2:29's "as the sons of Esau did for me" against Numbers 20:18-21's
+   double refusal (Judges 11:17 outside); 1:37's "for your sakes" against 20:12's "because you did not believe" (Psalm 106:32 outside). Both OPEN rows.
+5. The register gate's word for a receipt inside a retelling is CHAPTER when the chapter holds a closed entry — "as the LORD commanded us" (1:19)
+   and the people's own "according to all that the LORD commanded us" (1:41) are run citations; nothing pays them; the gate's class is its own.
+6. Rule (30) THE HALF OF A NAMED WHOLE: the half-word in its bare and prefixed forms reads 1/2 wherever it neither continues a numeral nor precedes a
+   measure noun — fifteen Torah tokens in fourteen verses moved (Exodus 12:29's "half of the night" the tape's own marker row among them), sixty-nine
+   outside; the homograph "my arrows" (Deuteronomy 32:23, 32:42) told by the hataf-patach under the het. A parser mark is not a word: the day-slot
+   stamp had to strip the marks (the plague line was stamped 'night' once).
+7. On the shelf: "and Moses did as the LORD commanded him" stands at exactly three seats — Leviticus 8:4, Numbers 17:26, 27:22 (the milluim, the
+   staff, the commission); "as sheep without a shepherd" is Micaiah's phrase too (1 Kings 22:17); "before Eleazar the priest" bare at 27:19, 27:22 and
+   Joshua 17:4 — the daughters paid before the same priest; "the LORD SPOKE to me" (2:17) is the Bible's one seat; "at that time" ten seats in the
+   span, the retelling's dating word with no number.

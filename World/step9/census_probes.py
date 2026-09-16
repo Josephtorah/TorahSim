@@ -129,13 +129,13 @@ CASES = [
     ('F32 Deut 14:22 = []  ("you shall surely TITHE" — was [10])', ('Deut', 14, 22), []),
     ('F33 Deut 26:12 = []  ("when you have finished TITHING all the tithe... in the third year, the year of the tithe" — was [10])', ('Deut', 26, 12), []),
     ('F34 Exod 12:18 = [14, 21]  ("on the fourteenth day... until the ONE AND TWENTIETH day" — the definite one before a conjoined numeral JOINS it: the diff read [14, 1, 20] on the first rule)', ('Exod', 12, 18), [14, 21]),
-    ('R11 Exod 12:29 = []  ("at HALF of the night" — the half before a non-measure stays a word: THE EXODUS MARKER\'S VERSE, UNMOVED)', ('Exod', 12, 29), []),
+    ('R11 Exod 12:29 = [1/2]  ("at HALF of the night" — RETYPED at THE DEUTERONOMY WALK 1b, 2026-09-15: rule (30) THE HALF OF A NAMED WHOLE reads the half before any noun; at 4b it stayed a word (was []) — the exodus marker\'s row and the tape\'s assert_ink retyped with it)', ('Exod', 12, 29), [Fraction(1, 2)]),
     ('R12 Num 23:10 = []  ("the fourth part of Israel" — a holam, no measure after it: UNMOVED)', ('Num', 23, 10), []),
     ('R13 Num 31:8 = [5]  ("Evi and Rekem and Zur and Hur and REBA, the five kings" — the name, not the quarter: UNMOVED)', ('Num', 31, 8), [5]),
     ('R14 Exod 21:32 = [30]  ("a MAIDSERVANT... thirty shekels" — the qamats, not the cubit: UNMOVED)', ('Exod', 21, 32), [30]),
     ('R15 Gen 21:10 = []  ("cast out this MAIDSERVANT" — UNMOVED)', ('Gen', 21, 10), []),
     ('R16 Deut 21:13 = []  ("her father and HER MOTHER" — the mappiq: UNMOVED)', ('Deut', 21, 13), []),
-    ('R17 Num 32:33 = []  ("and to HALF the tribe of Manasseh" — no measure noun: UNMOVED)', ('Num', 32, 33), []),
+    ('R17 Num 32:33 = [1/2]  ("and to HALF the tribe of Manasseh" — RETYPED at THE DEUTERONOMY WALK 1b, 2026-09-15: rule (30) reads the half tribe; at 4b no measure noun meant no number (was []) — D12\'s twin)', ('Num', 32, 33), [Fraction(1, 2)]),
     ('R18 Lev 19:24 = []  ("in the FOURTH year" — the ordinal stays an ordinal: UNMOVED)', ('Lev', 19, 24), []),
     ('R19 Num 35:4 = [1000]  ("a thousand cubits round about" — the cubit after its numeral does not add: UNMOVED)', ('Num', 35, 4), [1000]),
     ('R20 Exod 12:3 = [10]  ("on the TENTH of this month" — the date noun: UNMOVED)', ('Exod', 12, 3), [10]),
@@ -292,6 +292,32 @@ CASES += [
     ('R71 1Chr 5:21 = [50000, 250000, 2000, 100000]  ("donkeys two thousand" — the pausal dual, a qamats under the pe; found by the diff, right by the lamed\'s sheva)', ('1Chr', 5, 21), [50000, 250000, 2000, 100000]),
     ('R72 Neh 7:71 = [2, 2000, 67]  ("silver minas two thousand" — the pausal dual under the etnachta; found by the diff)', ('Neh', 7, 71), [2, 2000, 67]),
     ('R73 1Chr 21:5 = [1000, 100000, 470000]  (THE THOUSAND THOUSANDS — "a thousand thousands and a hundred thousand" = 1,100,000; false before (103,000) and false after: the tripwire, the class FILED)', ('1Chr', 21, 5), [1000, 100000, 470000]),
+]
+
+# ---- THE DEUTERONOMY WALK 1b (2026-09-15; DEUTERONOMY_WALK.md "Sitting 1b" (e)): (30) THE HALF OF A NAMED WHOLE — the half-word in its bare and
+#      prefixed forms (חצי 'half', וחצי 'and half', לחצי 'to half', ולחצי, בחצי, מחצי, ומחצי, כחצי, כבחצי, החצי 'the half', והחצי) and the half-part in
+#      its unsuffixed forms (מחצית 'the half-part', ממחצית, וממחצית) read Fraction(1, 2) with the fraction mark when the token neither continues a
+#      numeral or a unit noun (rule 7's 'and a half' stands) nor precedes a measure noun (the hin's and the shekel's fraction stands); the SUFFIXED
+#      forms ('its half', 'our half', 'their half') stay silent — a part named, not a number counted. 139 tokens in 114 verses measured on the whole
+#      Bible; the Torah's moving seats predicted FOURTEEN in thirteen verses. Written to FAIL on the parser 15b left (nine FAIL measured:
+#      deu_runner_measure.out); the regressions unmoved before and after ----
+CASES += [
+    ('D10 Deut 3:12 = [1/2]  ("and HALF the hill country of Gilead" — the half before a named whole; was [])', ('Deut', 3, 12), [Fraction(1, 2)]),
+    ('D11 Deut 3:13 = [1/2]  ("to the HALF tribe of Manasseh" — the prefixed half before the tribe; was [])', ('Deut', 3, 13), [Fraction(1, 2)]),
+    ('D12 Num 32:33 = [1/2]  ("and to the half tribe of Manasseh son of Joseph" — the grant\'s seat; was [])', ('Num', 32, 33), [Fraction(1, 2)]),
+    ('D13 Num 34:13 = [9, 1/2]  ("to the nine tribes and the half tribe" — nine and a half; was [9])', ('Num', 34, 13), [9, Fraction(1, 2)]),
+    ('D14 Num 34:14 = [1/2]  ("and the half tribe of Manasseh have taken their inheritance" — the other tribe-noun; was [])', ('Num', 34, 14), [Fraction(1, 2)]),
+    ('D15 Num 34:15 = [2, 1/2]  ("the two tribes and the half tribe" — two and a half; was [2])', ('Num', 34, 15), [2, Fraction(1, 2)]),
+    ('D16 Deut 29:7 = [1/2]  ("to the Reubenite and to the Gadite and to the half tribe of the Manassite" — the retelling\'s own seat; was [])', ('Deut', 29, 7), [Fraction(1, 2)]),
+    ('D17 Josh 13:7 = [9, 1/2]  ("to the nine tribes and the half tribe of Manasseh" — the run outside the Torah; was [9])', ('Josh', 13, 7), [9, Fraction(1, 2)]),
+    ('D18 1Chr 5:18 = [1/2, 44760]  ("and the half tribe of Manasseh … forty-four thousand seven hundred and sixty" — the half then the count; was [44760])', ('1Chr', 5, 18), [Fraction(1, 2), 44760]),
+    ('R74 Exod 25:10 = [2.5, 1.5, 1.5]  ("two cubits and a half … a cubit and a half" — rule 7\'s continuation: UNMOVED)', ('Exod', 25, 10), [2.5, 1.5, 1.5]),
+    ('R75 Exod 30:13 = [1/2, 20, 1/2]  ("half of the shekel … half of the shekel" — the fraction before the measure noun: UNMOVED)', ('Exod', 30, 13), [Fraction(1, 2), 20, Fraction(1, 2)]),
+    ('R76 Num 15:9 = [3, 1/2]  ("three tenths … half of the hin" — UNMOVED)', ('Num', 15, 9), [3, Fraction(1, 2)]),
+    ('R77 Num 28:14 = [1/2, 1/3, 1/4]  ("half of the hin … a third … a quarter" — UNMOVED)', ('Num', 28, 14), [Fraction(1, 2), Fraction(1, 3), Fraction(1, 4)]),
+    ('R78 Exod 26:16 = [10, 1.5, 1]  ("ten cubits … a cubit and a half of the cubit … the ONE board" — the unit noun as one continued by the half: UNMOVED)', ('Exod', 26, 16), [10, 1.5, 1]),
+    ('R79 Lev 6:13 = [1/10]  ("a tenth of the ephah … its half in the morning and its half in the evening" — THE SUFFIXED HALVES silent: UNMOVED)', ('Lev', 6, 13), [Fraction(1, 10)]),
+    ('R80 Num 31:47 = [1/50]  ("from the half-part of the children of Israel … one held out of the fifty" — the ratio stands; the half-part here inside the ratio\'s phrase read as the ratio alone: UNMOVED)', ('Num', 31, 47), [Fraction(1, 50)]),
 ]
 
 if __name__ == '__main__':

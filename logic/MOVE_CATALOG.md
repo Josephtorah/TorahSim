@@ -449,6 +449,18 @@ second (ben Chakinai's "and in YOU" the first), logged here with the
 difference named: not a re-pointing of held consonants but a re-cutting
 of the word's boundary, the mem read twice.
 
+ELEVENTH EXEMPLAR (2026-09-15, THE DEUTERONOMY WALK sitting 1b —
+cold_run_opening_speech.py, the Sifrei on Deuteronomy 13:6 at 1:13's
+"and I will SET THEM as your heads" (וַאֲשִׂמֵם, "and I will set them"):
+read not "I will set them" but "their GUILT" (אַשְׁמָם, "their guilt") —
+the consonants held, the vowels re-pointed, and the second reading is
+the law of the appointer: the judges' guilt hangs on the heads of those
+who appointed them (the Sifrei 17:1's addressee). Compiled as the ask
+the_al_tikrei of the cell the_officers_and_the_judges, a DATA arm of the
+row the_judges_charge; the classic form of this move ("read not X but
+Y") named by the reading's own find. The catalog's rule at exemplar 8
+does not fire: a re-pointing of held consonants, the first kind.
+
 ## M-17 — THE TENSION RESOLUTION (two tokens in one clause pull opposite ways; the law is the geometry satisfying both)
 Registered 2026-09-04 (the Lev 1-8 offering-engine consolidation,
 cold_run_offerings.py). Exemplar: Lev 1:5 writes both וזרקו ("and

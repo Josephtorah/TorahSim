@@ -1501,3 +1501,63 @@ follows the last check mark.
 ## of the mark); A COUNTERPARTY IS NO ENTITY (the shedder who is only a counterparty gets no ledger and no entity — count the written-on parties);
 ## THE VAV-FORM (the bare consonants עד are "until" at every chapter seat; "and a witness" wears the vav — a homograph claim is typed from the DB's
 ## tokens, never from the reading's eye).
+
+## DEUTERONOMY SITTING 1 — THE OPENING SPEECH'S READING (2026-09-15; DEUTERONOMY_WALK.md "Sitting 1"; logic/oral_triage/deu_01_03_devarim_2026-09-15.md; the six
+## units deu_01_frame_officers, deu_01_spies_refuse, deu_02_bypass_nations, deu_02_sihon, deu_03_og_gilead, deu_03_moses_barred FROZEN) — PAID AT 1b
+## (2026-09-15/16: every item (a)-(l) run as designed, the as-built in DEUTERONOMY_WALK.md "Sitting 1b — AS BUILT"; the forward items — 4:41-43's three
+## cities, 20:16-17's ban law, 34:1-4's ascent, the laws' readback from chapter 5 — carried into the 1b box below) — THE BOX AS WRITTEN AT THE READING, OWED TO THE
+## COMPILE (1b, on the Numbers walk's order with the register gate at the gates step): (a) THE READBACK'S DESIGN on the owner's word (THE_LOOP.md's STEP 6) —
+## the speech as the tape read back: 1:19-46 against the tape's Numbers 13-14 acts (the spies sent, the rejection, the oath, Hormah), 2:1-3:22 against
+## Numbers 20-21 and 32 (Edom, the Zered, Sihon, Og, the east's grants), the diffs measured at the reading (1:39 VERBATIM; 3:1-3 "they" → "we"; 2:27 nine
+## tokens for seventeen; 2:32 eight for twenty; 3:14 twenty-three for eleven) the readback's first specimens — each a REFERENCE to the compiled act, never a
+## second act; (b) THE REGISTER GATE'S FOUR SEATS PAID — 1:1 the EMPTY footer (the block from Numbers 36:13), 1:3 the receipt of the rules (the Sifrei 2:8's
+## reading as the seat's disposition), 1:19 and 1:41 the receipt forms ("as the LORD commanded us"; "all that the LORD our God commanded us"); (c) THE
+## OFFICERS' TABLE — 1:15's four grains (thousands, hundreds, fifties, tens) with the Sifrei 15:4's ROUNDING RULE (integer division at every grain) and 14:1's
+## "eighty thousand less a few" (78,600 by the count: 600 + 6,000 + 12,000 + 60,000) as DATA against the census's 603,550 (the exam's setting); the seven
+## qualities as a checklist (Jethro's four, 1:13's three, 1:15's two); the officers the Levites with the strap (2 Chronicles 19:11 — outside the Torah, DATA);
+## Exodus 18's appointment by CALL (the yitro runner's cell); (d) THE JUDGES' CHARGE as the law's spec — hear between your brothers, judge righteously, no
+## faces, small and great alike, no fear, the judgment is God's, the hard matter up — with Avot 1:1 and Sanhedrin 4:1 as the exam's rows (the Sifrei's own
+## citations); the compromise dispute (Sifrei 17:4) as TWO verdict tables; R. Ishmael's two rulings on the gentile litigant (16:4) as a dispute row; the
+## judge liable in his person (9:2, Proverbs 22:23) an effect; the appointer of judges (17:1) the prohibition's addressee; "a man" excludes the minor
+## (16:6 — orphans not judged); (e) THE FRACTION CLASS taught to the parser — 3:12's "half the hill country", 3:13's "the half-tribe" (probes to FAIL; the
+## Numbers half-tribe seats — 32:33's — measured before; the corpus diff read); (f) THE ONE CLOCK — 1:3's date [40, 11, 1] joined to Numbers 33:38's [40, 5]
+## on the tape's clock (Aaron's death the fifth month, the speech the eleventh — six months; the Sifrei 2:3's thirty-three days to the Jordan; Deuteronomy
+## 1:3 the tape's first act in the book); (g) THE RETELLINGS' DISAGREEMENT AT 2:29 — Edom and Moab "did for me" against Numbers 20:18-21's refusal and Judges
+## 11:17's double refusal: NO teacher on the seat (no piska on 2:29) — a HYPOTHESIS row under the link review law, an OPEN question, no link of our own;
+## (h) THE EAST'S GRANTS by REFERENCE to gad_reuben's cells (3:12-17: Aroer and half Gilead to Reuben and Gad, the rest and Bashan to half Manasseh; Jair's
+## villages, Machir's Gilead; the borders — the Arnon's middle, the Jabbok, Chinnereth to the Salt Sea under Pisgah); the half-tribe with the article
+## (3:13 the Torah's one seat) as the gentilic's form; (i) THE ARMED PASSAGE by REFERENCE to Numbers 32's condition (3:18-20 — the plural "armed" at 3:18
+## and 32:30, 32; "until the LORD gives rest to your brothers" quoted whole at Joshua 1:15 — the run outside the Torah, THE READBACK's; Joshua 22:4 the
+## release); (j) JOSHUA'S CHARGE (3:21-22, 3:28 — Numbers 27:19-23's commissioning by REFERENCE; "he shall cause them to inherit" the effect; Joshua 1:6 and
+## Ai's thirty-six (the Sifrei 29:9) the run — outside the Torah); Joshua spelled plene at 3:21 (a spelling row, no verdict); (k) THE PLEA (3:23-29) — the
+## ten names of prayer (Sifrei 26:7) as the effects registry's candidates (World/step9/effect_vocabulary.yaml — a prayer effect writing the LEDGER);
+## "the LORD was wroth ... would not hear" a refusal effect; "enough for you" the singular's one seat; the directions of prayer (29:5) as DATA (Berakhot
+## 4:5-6); the four directions' three orders (3:27, Genesis 13:14, 28:14) a DATA row; the fifty-cubit Jordan (29:6) the shelf's measure, flagged; "opposite
+## Beth-peor" by REFERENCE to peor_pinchas's place; (l) THE DOCKET by the union rule — Mishnah Sanhedrin 1:1-6 and 4:1 with Sanhedrin 2a-b, 32a-b; Sanhedrin
+## 3:1-8 with 23a-31b (6b-7a the compromise); Sanhedrin 1:6 with 16b-17a; Avot 1:1; Sheviit 9:2 (the three lands, Sifrei 6:1); Rosh Hashanah 1:1 with 2b-3a
+## (the fortieth year's months); Sotah 7:5 and 34a-35a (the spies' report); Berakhot 4:5-6 with 30a; Makkot 2:4-8 and 9b-10a (the eastern cities of refuge
+## whose land 3:12-17 gives — chapter 4's 41-43 forward); Kelim 17:9-10 and Eruvin 4:8 (the cubit of a man against a king's); Sanhedrin 90b-91a (the giants'
+## measure); the link rows for 1:3, 1:15, 1:16-17, 1:39, 2:29, 2:33, 3:11, 3:20, 3:27-28; THE DISPLAY LAYER done at the reading (275 rows); the store's mixed
+## families ("set" for GIVE at every seat by reference; "stream", "bore", "grate", "cramp", "plait", "to-face", "and-eye", "feed-on") a display sitting's;
+## THE AL TIKREI (Sifrei 13:6 — "read not thus but thus": the consonants revocalized) for MOVE_CATALOG; THE CHECKPOINT PREFIX grepped before naming.
+
+## DEUTERONOMY SITTING 1b — THE OPENING SPEECH'S COMPILE (2026-09-15/16; DEUTERONOMY_WALK.md "Sitting 1b" the design and "Sitting 1b — AS BUILT";
+## cold_run_opening_speech.py the 58th runner, law_opening_speech the 63rd daemon; the exam docket logic/oral_triage/deu_01_03_devarim_exam_2026-09-15.md,
+## 864 rows) — THE DEBTS THE COMPILE LEAVES, each named at its row: (i) THE LAWS' READBACK — the readback's SECOND half (THE_LOOP.md step 6): the laws of
+## chapters 5-26 re-read against the ledger the run left (the first form built here grades the NARRATIVE retellings — forty-two reference rows; the
+## laws' rows are that sitting's, opened when chapter 5 opens); (ii) DEUTERONOMY 4:41-43 — Moses' three cities of refuge: the refuge runner's debit
+## appoint_six_cities_of_refuge OPEN by design, its close inside the Torah CHAPTER 4's (the docket's OUTSIDE rows Makkot 9b:18, 10a:14-16 the shelf on it —
+## "a mitzva that came my way"); (iii) DEUTERONOMY 34:1-4 — the ascent's run: see_the_land_from_abarim on Moses OPEN to the book's end (Numbers 27:12's
+## debit; 3:27's Pisgah READ BACK); (iv) DEUTERONOMY 20:16-17 — the cherem law: the two bans (2:34-35, 3:6-7 — destroyed on the Amorite, told only in the
+## retelling) are ACTS; the law FORWARD at its chapter; (v) DEUTERONOMY 16:18-20 — the officers' second seat ("judges and officers in all your gates for your
+## tribes"; "justice, justice" — the compromise's one-for-judgment-one-for-compromise, Sanhedrin 32b:4-6) and 19:15 (the two witnesses — the prototype at
+## Sanhedrin 30a:27), 24:16 (the kin's disqualification, Sanhedrin 27b:14) — the charge's clauses re-seated at their own chapters; (vi) THE TWO OPEN
+## DISAGREEMENTS — 2:29 (Edom's passage: the chukat runner's DISPUTE row edom_passage holds both arms; no teacher inside the Torah; Judges 11:17 outside) and
+## 1:37 (the bar's ground: "for your sakes" against 20:12's "did not believe"; Psalm 106:32 outside) — OPEN rows, no link of our own; a teacher found later
+## seats them; (vii) D2'S QUESTION widened — a law in Moses' voice with no divine frame (30:2's, 34:13's relay, 1:16's charge): whether the relay is itself an
+## installing ACT on an institution entity — the second pass after Deuteronomy; (viii) THE ENGINE'S TWO FIXES filed as lessons, no debt: slot_of strips
+## the parser's marks; run_timers keyed on the value — both green at every gate; (ix) THE RUN CITATIONS' CLASS — the register gate's CHAPTER for a receipt
+## whose chapter holds a closed entry (1:19, 1:41): a class to predict from the gate's code at every compile (the design said NONE); (x) JOSHUA 1:6, 1:15,
+## 22:4, 23:3, 14:14; JUDGES 11:17; 1 KINGS 22:17; 2 CHRONICLES 19:11 — the runs and kin OUTSIDE the Torah, THE READBACK's when the Prophets are walked;
+## (xi) THE TEN NAMES OF PRAYER (the Sifrei 26:7) — the effects registry's candidates, filed at the row the_plea, no effect written; (xii) THE STORE'S MIXED
+## GLOSS FAMILIES (the reading's (j)) a display sitting's, unmoved. NOTHING IN CHAPTERS 1-3 IS OWED TO A LATER SITTING OF ITS OWN: the span is compiled.

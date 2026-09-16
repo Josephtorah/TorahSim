@@ -79,9 +79,15 @@ FROM events s
 LEFT JOIN events f ON f.kind = 'run.timer_fire' AND f.source = s.source AND f.subj = s.subj
                    AND json_extract(f.data, '$.effect') = json_extract(s.data, '$.effect')
                    AND f.op = json_extract(s.data, '$.due')
+                   AND json_extract(f.data, '$.value') IS json_extract(s.data, '$.value')
+                   -- THE DEUTERONOMY WALK 1b (2026-09-15): the fire joined on the timer's VALUE too (null-safe) — two period timers of one effect on one
+                   -- subject fall on one day (the month's musaf and Rosh Hashanah's at (40, 7, 1); the month's and the Sabbath's at (40, 11, 1), the
+                   -- speech's marker day) and the join by day alone paired each set row with both fires: timers 100 for sets 96 at the first journal gate
+                   -- after the walk; the value (the timer's key list) tells them apart
 LEFT JOIN events c ON c.kind = 'run.timer_cancel' AND c.source = s.source AND c.subj = s.subj
                    AND json_extract(c.data, '$.effect') = json_extract(s.data, '$.effect')
                    AND json_extract(c.data, '$.due') = json_extract(s.data, '$.due')
+                   AND json_extract(c.data, '$.value') IS json_extract(s.data, '$.value')
 WHERE s.kind = 'run.timer_set';
 
 -- THE CLOCK: the markers in the run's order with their class — forward (the counter walks), retrograde (the text's date earlier

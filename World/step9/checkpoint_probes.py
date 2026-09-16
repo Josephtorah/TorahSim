@@ -48,7 +48,7 @@ _W = {}
 def whole():
     if 'w' not in _W:
         with contextlib.redirect_stdout(io.StringIO()):
-            w, M, n = CS.run_to('Deut 1:1')                 # beyond the tape's last line: the whole tape, in memory
+            w, M, n = CS.run_to('Deut 4:1')                 # beyond the tape's last line: the whole tape, in memory — THE DEUTERONOMY WALK 1b (2026-09-16): the tape ends at Deut 3:23-26 now, so 'Deut 1:1' became a position ON the tape (the speech's marker) and the 'whole' world stopped at its left edge (KeyError on the speech's marker keys, 3/7); the verse moved past the tape's last line — a probe's 'beyond the tape' verse moves when the tape grows
         _W['w'], _W['M'] = w, M
     return _W['w'], _W['M']
 

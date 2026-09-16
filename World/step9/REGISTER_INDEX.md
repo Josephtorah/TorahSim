@@ -1,8 +1,8 @@
 # REGISTER_INDEX.md — written by register_census.py each run (documentation, never runtime)
 
-THE REGISTER GATE — the ink's own formulas against the world (population table rows 148; ledger entries 1539)
-COVERAGE: counts 110 {'MEASURE-ONLY': 44, 'NONE': 16, 'ELSEWHERE': 14, 'ROW': 29, 'LEDGER': 7}; receipts 69 {'CHAPTER': 7, 'NONE': 21, 'ACT': 21, 'EVENT': 5, 'CLOSE': 15}; footers 9 {'DAEMONS': 5, 'EMPTY': 4}; registers 18 {'NONE': 14, 'ROWS': 4}
-DECLARED 102; DEBT 0; FAILS 0
+THE REGISTER GATE — the ink's own formulas against the world (population table rows 148; ledger entries 1595)
+COVERAGE: counts 110 {'MEASURE-ONLY': 44, 'NONE': 16, 'ELSEWHERE': 14, 'ROW': 29, 'LEDGER': 7}; receipts 69 {'CHAPTER': 8, 'NONE': 18, 'ACT': 22, 'EVENT': 5, 'CLOSE': 16}; footers 9 {'DAEMONS': 6, 'EMPTY': 3}; registers 18 {'NONE': 14, 'ROWS': 4}
+DECLARED 100; DEBT 0; FAILS 0
 -- A. THE COUNT LINES (110)
    Gen 11:10   MEASURE-ONLY  green    footer: these are the generations of [100, 2] | measures [100, 2]
    Gen 37:2    MEASURE-ONLY  green    footer: these are the generations of [17] | measures [17]
@@ -167,16 +167,16 @@ DECLARED 102; DEBT 0; FAILS 0
    Num 20:27   CLOSE         green     | [('moses', 'commanded')]
    Num 26:4    CHAPTER       declared  | [('israel_people', 'commanded')] | why: the receipt inside the command's own line (the roll's head — the first roll's generation named); the
    Num 27:11   CLOSE         green     | [('the_court', 'declaration_owed')]
-   Num 27:22   CHAPTER       declared  | [('the_court', 'declaration_owed')] | why: Joshua's appointment (27:15-23) is NOT COMPILED — the 8b debt line; the chapter's close is the daugh
+   Num 27:22   CLOSE         green     | [('moses', 'commanded')]
    Num 30:1    NONE          declared  | [] | why: THE NUMBERS WALK 10b (2026-09-12; the receipt finder's SECOND FORM, 'according to ALL that the LORD 
    Num 31:7    CLOSE         green     | [('israel_people', 'commanded'), ('moses', 'commanded')]
    Num 31:31   CLOSE         green     | [('moses', 'commanded')]
    Num 31:41   CLOSE         green     | [('moses', 'commanded')]
    Num 31:47   CLOSE         green     | [('moses', 'commanded')]
    Num 36:10   NONE          declared  | [] | why: "as the LORD commanded Moses, so did the daughters" — the receipt the verse BEFORE the act: the Zelo
-   Deut 1:3    NONE          declared  | [] | why: THE NUMBERS WALK 10b (2026-09-12; the receipt finder's SECOND FORM, 'according to ALL that the LORD 
-   Deut 1:19   NONE          declared  | [] | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
-   Deut 1:41   NONE          declared  | [] | why: THE NUMBERS WALK 10b (2026-09-12; the receipt finder's SECOND FORM, 'according to ALL that the LORD 
+   Deut 1:3    ACT           declared  | [('israel_people', 'torah_expounded', 'status')] | why: THE DEUTERONOMY WALK 1b (2026-09-15) | "and it came to pass in the fortieth year ... that Moses spok
+   Deut 1:19   CHAPTER       declared  | [('israel_people', 'commanded')] | why: THE DEUTERONOMY WALK 1b (2026-09-15) | "we journeyed from Horeb ... AS THE LORD OUR GOD COMMANDED US
+   Deut 1:41   CHAPTER       declared  | [('israel_people', 'commanded')] | why: THE DEUTERONOMY WALK 1b (2026-09-15) | "we have sinned against the LORD; we will go up and fight, ac
    Deut 4:5    NONE          declared  | [] | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
    Deut 5:12   NONE          declared  | [] | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
    Deut 5:16   NONE          declared  | [] | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
@@ -190,8 +190,8 @@ DECLARED 102; DEBT 0; FAILS 0
    Lev 27:34   DAEMONS       green    FOOTER commandments stamp sinai block (Lev 26:46, Lev 27:34] daemons 1 {'called_from_the_tent': 1} | law_temurah@Lev 27:9
    Num 30:17   DAEMONS       green    FOOTER statutes stamp none block (Lev 27:34, Num 30:17] daemons 13 {'boot': 9, 'statute_declared': 2, 'sentence_declared': 1, 'called_from_the_tent': 1} | law_census@Num 1:1 law_naso@Num 4:21 law_beha@Num 8:1 law_pesach_sheni@Num 9:1 law_shelach@Num 13:1 law_mekosh
    Num 36:13   DAEMONS       green    FOOTER commandments stamp moab block (Num 30:17, Num 36:13] daemons 5 {'boot': 5} | law_midian@Num 31:21 law_gad_reuben@Num 32:20 law_journeys@Num 33:50 law_borders@Num 34:1 law_refuge@Num 35:1
-   Deut 1:1    EMPTY         declared FOOTER words stamp jordan block (Num 36:13, Deut 1:1] daemons 0 {} |  | why: the block (Num 36:13, Deut 1:1] holds no law; Deuteronomy is not on the tape (the book not read) — t
-   Deut 4:45   EMPTY         declared FOOTER testimonies stamp none block (Deut 1:1, Deut 4:45] daemons 0 {} |  | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
+   Deut 1:1    EMPTY         declared FOOTER words stamp jordan block (Num 36:13, Deut 1:1] daemons 0 {} |  | why: THE DEUTERONOMY WALK 1b (2026-09-15) | the block (Num 36:13, Deut 1:1] holds no law — by the ink (th
+   Deut 4:45   DAEMONS       green    FOOTER testimonies stamp none block (Deut 1:1, Deut 4:45] daemons 1 {'boot': 1} | law_opening_speech@Deut 1:16
    Deut 12:1   EMPTY         declared HEADER statutes stamp none block (Deut 12:1, Deut 28:69] daemons 0 {} |  | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
    Deut 28:69  EMPTY         declared FOOTER words stamp moab block (Deut 12:1, Deut 28:69] daemons 0 {} |  | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
 -- D. THE REGISTERS (18)

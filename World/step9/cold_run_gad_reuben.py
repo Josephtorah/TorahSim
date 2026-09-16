@@ -40,6 +40,7 @@ _INK = {'re': re, 'sqlite3': sqlite3, 'os': _os, 'WE': WE}
 _INK['_ROOT'] = _ROOT   # THE PORTABLE REPO (2026-09-15): the INK block reads the store through the root; the exec'd namespace must carry it
 exec(_SRC.split('# ==== INK BEGIN')[1].split('# ==== INK END ====')[0].split('\n', 1)[1], _INK)
 ink_numbers, ink_ordinals, verse_words = _INK['ink_numbers'], _INK['ink_ordinals'], _INK['verse_words']
+from fractions import Fraction   # THE DEUTERONOMY WALK 1b (2026-09-15): the half read by rule (30) is a Fraction in the tripwire
 
 db = sqlite3.connect((_ROOT + '/Data/tanakh.sqlite'))
 
@@ -202,8 +203,8 @@ ORDINALS = {v: ink_ordinals(verse_words('Num', 32, v)) for _, v in SPAN}
 STARRED = [(v, t) for _, v in SPAN for t in verse_words('Num', 32, v) if t.endswith('*')]
 MARKED = [(v, t) for _, v in SPAN for t in verse_words('Num', 32, v) if '%' in t]
 INTS = {v: n for v, n in NUMBERS.items() if n}
-assert INTS == {11: [20], 13: [40]}, INTS                                                                                # TWO numbers in forty-two verses — no gap, no rule owed
-assert not any(o for o in ORDINALS.values()) and STARRED == [] and MARKED == [], (ORDINALS, STARRED, MARKED)
+assert INTS == {11: [20], 13: [40], 33: [Fraction(1, 2)]}, INTS                                                          # TWO numbers in forty-two verses — no gap, no rule owed; 33: [1/2] since THE DEUTERONOMY WALK 1b (2026-09-15) — rule (30) THE HALF OF A NAMED WHOLE reads "the half tribe of Manasseh" (32:33)
+assert not any(o for o in ORDINALS.values()) and STARRED == [] and MARKED == [(33, 'ולחצי%')], (ORDINALS, STARRED, MARKED)   # the half's mark at 32:33 since THE DEUTERONOMY WALK 1b (2026-09-15)
 TWENTY, FORTY = INTS[11][0], INTS[13][0]
 assert ink_numbers(verse_words('Num', 33, 1)) == [], 'the next chapter opens without a number'
 FIRST = {v: words(32, v)[0] for _, v in SPAN}
@@ -300,7 +301,7 @@ assert DAUGHTERS_NUM == ['Num 21:25', 'Num 21:32', 'Num 32:42'] and NOBAH == ['N
 assert 'Num 32:41' in WENT_AND_TOOK and 'Num 32:42' in WENT_AND_TOOK and 'ויגבהה' in words(32, 35) and 'ויגבהה' in words(8, 11, 'Judg') and 'לנבח' in words(8, 11, 'Judg'), (WENT_AND_TOOK, words(8, 11, 'Judg'))
 # the retellings' numbers by the same parser (typed from the print)
 RETOLD = {k: ink_numbers(verse_words(*k)) for k in (('Josh', 4, 13), ('1Chr', 5, 18), ('1Chr', 2, 21), ('1Chr', 2, 22), ('1Chr', 2, 23), ('1Kgs', 4, 13), ('Josh', 13, 30), ('Deut', 3, 4), ('Judg', 10, 4), ('Deut', 2, 14), ('Num', 14, 29), ('Num', 26, 7), ('Num', 26, 18), ('Num', 26, 34), ('Josh', 7, 5))}
-assert RETOLD == {('Josh', 4, 13): [40000], ('1Chr', 5, 18): [44760], ('1Chr', 2, 21): [60], ('1Chr', 2, 22): [23], ('1Chr', 2, 23): [60], ('1Kgs', 4, 13): [60], ('Josh', 13, 30): [60], ('Deut', 3, 4): [60], ('Judg', 10, 4): [30, 30, 30], ('Deut', 2, 14): [38], ('Num', 14, 29): [20], ('Num', 26, 7): [43730], ('Num', 26, 18): [40500], ('Num', 26, 34): [52700], ('Josh', 7, 5): [36]}, RETOLD
+assert RETOLD == {('Josh', 4, 13): [40000], ('1Chr', 5, 18): [Fraction(1, 2), 44760], ('1Chr', 2, 21): [60], ('1Chr', 2, 22): [23], ('1Chr', 2, 23): [60], ('1Kgs', 4, 13): [60], ('Josh', 13, 30): [60], ('Deut', 3, 4): [60], ('Judg', 10, 4): [30, 30, 30], ('Deut', 2, 14): [38], ('Num', 14, 29): [20], ('Num', 26, 7): [43730], ('Num', 26, 18): [40500], ('Num', 26, 34): [52700], ('Josh', 7, 5): [36]}, RETOLD
 FORTY_THOUSAND, CHRONICLES_COUNT, THIRTY_EIGHT, THIRTY_SIX = RETOLD[('Josh', 4, 13)][0], RETOLD[('1Chr', 5, 18)][0], RETOLD[('Deut', 2, 14)][0], RETOLD[('Josh', 7, 5)][0]
 
 # ---- THE CALLEES (live import edges; the design's cells by name) ----

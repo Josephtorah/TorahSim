@@ -112,6 +112,12 @@ Repo: <repo-old> (sole truth). The public mirror TorahSim is downstream, relay o
 - POST-COMPACTION RULE: the FIRST sitting after any compaction (or a new thread) rereads THE_STEPS Step 2 + Step 5 +
   the compiler block, memory's STANDING LESSONS head (step9-exam-era.md from line 959), NUMBERS_WALK.md's last two
   sections, and the state doc's last checkpoint BEFORE deriving.
+- LAW IS CODE, NARRATIVE IS DATA (the owner, 2026-09-15, verbatim in the design thread, on the record on his "Yes" there; relayed to the
+  main thread the same day): "Law is code. Let's keep that in mind." / "law is code and narrative is data, variables, and whatever else it
+  does." A legal passage in ANY book (the prophets' rules included) is a procedure to compile, never a description to summarize; a later
+  book's rule is a spec with its own constants, run and diverge-checked against the Torah's; narrative is the tape's event stream — its
+  numbers the variables, its dates the markers, its acts the calls and the installing switches, its receipts the closes; the tent the one
+  reverse flow. The full text in THE_STEPS.md's compiler-law block and THE_WORLD.md's idea log.
 
 ## 4. THE FILE MAP
 
@@ -759,3 +765,60 @@ STEPPER UNDER THE LIVE SESSION'S SOURCE NAME (board_probes' B7 wiped the live se
 with WORLD_JOURNAL_DIR set to a scratch folder); A BACKGROUND CHILD MAY INHERIT SIGINT IGNORED (the engine restores its handler).
 UNCOMMITTED at this writing (with #180, section 29 and #180's addenda): the three code files, drive_probes.py, the records named in the
 as-built — the owner's next "commit push" carries them.
+
+## 31. ADDENDUM (2026-09-15, THE DEUTERONOMY WALK sitting 1 — THE OPENING SPEECH, Deuteronomy 1:1-3:29 READ AND FROZEN; the owner: "lets plan for deut next. where do we start" → "commit push" (29d477a) → "I don't need to compact. read what you need to get ready" → "start with deuteronomy"; the state doc's COMPACTION POINT #182)
+
+THE BOOK OPENED. The map is World/step9/DEUTERONOMY_WALK.md (NEW — the head carries the walk's form and the shelf measured; "Sitting 1" the
+reading's record and the owed list (a)-(l)). The rulings are the Numbers walk's (section 13-14 above; the memory numbers-in-order-ruling.md):
+READ THEN COMPILE PER PORTION, CHAPTER NUMBERS, the parashah grain, the spine Onkelos + the Sifrei on Deuteronomy BY POSITION. The forms are the
+Numbers walk's sitting-15 forms edited (World/step9/forms_deuteronomy_walk/ — deu_dump0 / parser0 / measure0-2, deu_ink with the driver and the
+legs, the rows files, write_deu_ledger, patch_overrides_deu, write_deu_manifest, seat_deu (STEP_Dt_ ids), deu_chain.sh, copy_deu_forms,
+write_deu_records). THE STATE: 216 frozen units (210 + 6), standing 2184 (2163 + 21), hash 8b8fff1fa28953af UNMOVED; CORPUS TRUTH, build_world,
+the journal gate, the register gate GREEN; no engine file changed; the ledger logic/oral_triage/deu_01_03_devarim_2026-09-15.md (259 sources);
+the six manifests (21 claims DV01A..DV03B); the display layer +275 rows. THE READING'S SHAPE HELD on the new book (the section-5 shape): dump →
+parser → measure (three passes) → asserts (8, 22, 11, 12 fell on the typed passes → 0) → rows (112 + 147) → the writer (0 misses; the lint 1 → 0)
+→ the patch → the manifests (21/21, the strict census GREEN) → the seat → six rituals (13 PASS each) → the fold predicted and matched. THE
+SHELF: the Sifrei on Deuteronomy's 357 piskaot / 2,357 rows in BOTH files, equal grains; piskaot 1-25 on 1:1-1:28 and 26-30 on 3:23-3:29, NO piska
+on 1:29-3:22; the English rows carry the translator's apparatus and the "(Dt.1:1)" form with no space; seven outside Hebrew rows (nine English:
+36:10 and 37:2 added on 1:4, 199:5 mis-cited) credited; the one "ibid" resolving to Song of Songs (the measurement's hit corrected); six rows read
+before by topic in Genesis ledgers (1:13, 6:1, 8:1, 11:1, 25:4, 27:3) named. THE FINDS (the ledger's twenty crowns; the map's THE INK): the two
+islands; Onkelos writing the Sifrei into 1:1; the receipt of the rules (1:3); one clock, two readers; the officers' arithmetic; the judges' charge as
+Avot 1:1 and Sanhedrin 4:1; the hard matter THE TENT's; the spies' words retold; the spy-verb against the tour-verb; "enough" plural and singular;
+the retellings' disagreement on Edom (2:29 — the compile's open question, a hypothesis row); 2:33's written and read; Numbers 21:33-35 turned; Og's
+bed; Joshua plene once; the plea's names; Lebanon the Temple at 3:25; the four directions in three orders; the run against the spec at Ai; the
+valley Peor's. THE LESSONS (nine, the map's ⚠ list): the ibid to the nearest book named; the English apparatus; the prior-read census's strict
+row form; a count from a looser regex is a different number; the lemma's letter; MIDDOT's own label codes (E4 → E7); a written-once guard fires on
+the rerun — scope it to the first pass and swap a rewritten ledger in whole by a temp path; grep the override file's keys before a by-gloss list;
+the shape held. NEXT on the ruling: SITTING 1b — THE COMPILE OF DEUTERONOMY 1-3 (the owed list (a)-(l) in DEUTERONOMY_WALK.md; THE READBACK's design
+on the owner's word FIRST — the speech as the tape read back, the diffs against Numbers 13-14, 20-21, 32 its specimens; the register gate's four
+seats paid; the officers' table; the judges' spec; the fraction's probes; the one clock; the retellings by reference; the docket by the union rule)
+— the design in the map before any code; then chapter 4's reading. UNCOMMITTED at this writing: everything of this sitting (the state doc's #182
+names every path) and #180's addenda 3-4 and #181 — the owner's next "commit push" carries them.
+
+## 32. ADDENDUM (2026-09-16, THE DEUTERONOMY WALK sitting 1b — THE OPENING SPEECH COMPILED, Deuteronomy 1:1-3:29 with Numbers 27:12-23 as its callee; the owner: "Go 1b right" → "Yes 1. Go" (THE READBACK'S FIRST FORM, option 1); the state doc's COMPACTION POINTS #183 (mid-sitting) and #184 (the close))
+
+THE SITTING RAN IN THE COMPILE SHAPE (section 5) WITH ONE STEP ADDED — THE READBACK: World/step9/DEUTERONOMY_WALK.md "Sitting 1b" (the design:
+(R1)-(R6), the decisions (a)-(l), the cells, the twenty-four DATA rows, the daemon, the types, the tape, CA1-CA9, the prediction's arithmetic, the
+probes, THE ORDER) and "Sitting 1b — AS BUILT" (the departures, the misses, the lessons). THE STATE: cold_run_opening_speech.py the 58th runner
+(97/97; sixteen tape lines; forty-two readback rows; the exam's thirty-three persons); law_opening_speech the 63rd daemon (given_at Deut 1:16,
+installed_by boot with the class named); the tape 10/10 — RUN (1295, 96, 88, 0, 12, 1583, 34, 319, the four pairs, 126), PREVIOUS_RUN 15b's,
+THE REST reproducing it; entities 319 (the sons of Ammon), closes 126 (five inside the daemon, none a tape line), markers 161 (Deut 1:1 forward at
+(40, 11, 1); 1:6, 1:9, 2:2 retrograde), the population 148 unmoved; the hash 8b8fff1fa28953af unmoved (no unit changed); every probe suite and gate
+GREEN (the journal gate after the timers view's fix; the register gate --strict with DECLARED 100, DEBT 0 — Num 27:22 CLOSE and Deut 4:45 DAEMONS
+green, Deut 1:3 ACT, 1:19 and 1:41 CHAPTER declared, 1:1 EMPTY refreshed); the docket logic/oral_triage/deu_01_03_devarim_exam_2026-09-15.md (864
+rows — LAW 83 / DERIVATION 93 / DISPUTE 29 / CONTEXT 631 / OUTSIDE 28; credited 250; Sanhedrin 23a-31b whole). THE ENGINE CHANGED TWICE, both fixes
+found by the speech's clock walk and recorded: cold_run_sequence.slot_of strips the parser's marks before the slot match (rule 30's fraction mark had
+stamped Exodus 12:29's plague line 'night'); World/journal/run_views.sql's run_timers joins the fire on the timer's value too (two period timers of one
+effect on one day doubled the join). RULE (30) THE HALF OF A NAMED WHOLE taught (fifteen Torah tokens in fourteen verses moved; "my arrows" excluded
+by the hataf-patach); the seven runners retyped from the sweep's print; census_probes 224/224. THE READBACK'S FIRST FORM: a retelling a REFERENCE
+ROW (never a second act), graded and found on the running world (CA4, Q2); an act told only in the retelling written ONCE at its own time by a
+retrograde marker; the four supplied debits CLOSED AT ONCE BY A PRIOR RUN inside the daemon (the engine writes a daemon's effects after it returns —
+the daemon writes the one-block debit itself); the two disagreements OPEN (2:29 Edom, 1:37 the bar's ground); the receipts run citations (the gate's
+CHAPTER); the frame the book's one act of its own day. THE LAWS' HALF OWED (THE_LOOP.md step 6's row and list item 3). THE LESSONS: twelve on the map
+(the fast checker; the CASES generated; literal submits; the daemon's write order; sum the watches; the clock walk moves the timer checkpoints; a
+mark is not a word; the CHAPTER class; the value-keyed join; ROOT by git and _ROOT in the INK namespace; a probe's verse a tape position; fires by
+day number). THE FORMS: World/step9/forms_deuteronomy_walk/ (72 files — the reading's 27, the compile's 45 scripts and prints). THE RECORDS current: the map, COMPILE_DEBT (the sitting-1 box PAID; the 1b
+box), MOVE_CATALOG (M-16's eleventh exemplar), MIDDOT, MISHNAH_TOPICS (nine rows), RESEARCH_LOG, THE_STEPS, THE_BRIEFING, THE_LOOP, THE_WORLD, RESUME,
+the memory, the state doc's #184. NEXT on the ruling: chapter 4's reading, then its compile; the laws' readback at chapter 5. UNCOMMITTED at this
+writing: sitting 1's forty paths and every path of this sitting — the owner's next "commit push" carries them (the last commit 29d477a). AT THE VERY CLOSE: the positions table 208 rows; checkpoint_probes 7/7 after its beyond-the-tape verse moved
+(the thirteenth lesson); the tape 10/10 on the final bytes; the sweep 58/58 at 6,475 graded cells (cold_run_opening_speech.py 97/97), then the journal gate ALONE after the sweep's process ended — GREEN (the state doc's #184 addendum 2). SITTING 1b CLOSED.

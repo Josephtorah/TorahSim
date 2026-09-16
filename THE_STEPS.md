@@ -99,6 +99,31 @@ tracks NARRATIVE facts, so law-layer witness seats leave it
 unmoved — the permanence lives in the frozen YAMLs, manifests, and
 ledgers.
 
+⚠ LAW IS CODE, NARRATIVE IS DATA (the owner, 2026-09-15, stated in
+the design thread during an Ezekiel scan and put on the record on
+his "Yes" there; relayed to this file by that thread the same day).
+His words, verbatim: (1) "Law is code. Let's keep that in mind."
+(2) "law is code and narrative is data, variables, and whatever
+else it does." The reading agreed beside them: a legal passage in
+ANY book is a procedure to compile, never a description to
+summarize — the prophets' rules included (Ezekiel 18 and 33 a
+decision procedure with its base case; 46:1-12 the calendar-keyed
+gate and the routing rule; 45-46 a schedule; 40-42 construction by
+reference; 48 a partition; 20's closing filter under the rod), and
+a later book's rule is a spec with its own constants to be run and
+diverge-checked against the Torah's, as the tradition did for
+Ezekiel (Shabbat 13b; Menachot 45a, "Elijah will interpret").
+Narrative is the tape's event stream (data): its numbers the
+variables the code reads, its date stamps the clock's markers, its
+acts the calls that fire the code and the switches that install it
+(the erection, the investiture, entering the land), its receipt
+formulas the closes; the one reverse flow is the tent, where a case
+with no law produces a rule in its own name. Measured that day: "a
+day for a year" at exactly Numbers 14:34 and Ezekiel 4:6; Ezekiel's
+visions stored as pointers to chapter 1; six "according to these
+measures" gates; chapter 18's predicate reused over three
+generations.
+
 ## Step 1 — The front end: what the machine reads  ✅ prepared, whole Bible
 (Merges old Steps 1-2 under the 2026-09-03 measurements.)
 
@@ -4174,6 +4199,44 @@ approved), the changelog records the stamp predates the new rev, and the
 unit joins logic/findings/REAFFIRM_QUEUE.md until the owner's next batch
 word ("recent changes good"). Never delete a stamp; never let it claim
 code the owner hasn't seen.
+
+DEUTERONOMY — SITTING 1 — THE OPENING SPEECH, Deuteronomy 1:1-3:29 (2026-09-15, on Brian's "start with deuteronomy" after the rereads; World/step9/DEUTERONOMY_WALK.md
+"Sitting 1"). The book opened the way Numbers was walked: the three chapters of the first portion read as six units named by their chapters, on Onkelos
+whole and the Sifrei on Deuteronomy found by its position in the export — and the shelf turned out to be two islands: twenty-five piskaot on the
+first twenty-eight verses (the rebuke's places, the officers, the spies sent) and five on the last seven (the plea), with nothing at all on the
+oath, the defeat at Hormah, the years of going round, Sihon and Og. Every row read in both files; the two files agree row for row here, unlike
+Numbers' shelf, but the English carries its translator's page notes glued to the words, and it cites two rows the Hebrew does not and mis-cites a
+third. The parser measured first: eleven number verses, every one read — the date of the speech read by the number reader where Aaron's death in
+Numbers 33 was read by the ordinal reader, one year in two forms six months apart; the only thing unread is a fraction, "half" Gilead and the
+"half-tribe", a class named for the compile. The finds: the translation writes the Sifrei's reading of the six place-names as six sins straight into
+the first verse; the receipt "according to all the LORD commanded him" — the two-seat clause with the tabernacle's — is read by the Sifrei as the
+receipt of the hermeneutic rules themselves; the officers' verse carries its vavs where Exodus 18 does not, and the Sifrei gives the compile its
+arithmetic (round down at every grain; eighty thousand judges less a few); the judges' charge is the Mishnah's own first saying and its ten
+distinctions; the "hard matter" is Zelophehad's daughters, the tent's case; the spies' story is retold in the spies' own words — Joshua and Caleb's
+"good is the land", Numbers 14:31 verbatim, and Eden's "good and evil" on the children; "enough for you" is Korah's cry three times over and once,
+singular, on Moses; the retellings disagree on Edom, and the shelf is silent there — an open question for the compile; a word is written "his
+son" and read "his sons"; Og's bed is measured by the cubit of a man and Onkelos makes it a king's; Joshua's name is spelled full once in the Torah;
+Lebanon becomes the Temple in the translation at the plea and not before; the four directions Moses is told to look come in an order Abraham's and
+Jacob's do not share; and the Sifrei reads Joshua's charge as the rule he broke at Ai. Fifty-three typed facts fell across the passes and none on
+the last. Twenty-one claims verified and seated, six rituals complete, the corpus rebaked to the predicted count with the hash unmoved, the world's
+fold layer and the journal gate green. Next: the compile (1b) — and with it the readback's first design, on your word.
+
+DEUTERONOMY — SITTING 1b — THE OPENING SPEECH COMPILED (2026-09-15/16, on Brian's "Go 1b right" and "Yes 1. Go" — the readback's first form, option 1;
+World/step9/DEUTERONOMY_WALK.md "Sitting 1b" and "Sitting 1b — AS BUILT"). The compile ran in the Numbers walk's order and added a step of its own: the
+readback. A retelling is a reference row, never a second act — forty-two rows graded word for word, turned, shortened, expanded, supplied, or
+disagreeing, each pointing at the tape's own line and found there; an act the first telling never recorded (the departure from Horeb, the judges'
+charge, the turn northward, the bars on Edom, Moab and Ammon, the Zered, the war on Sihon, the two bans, Joshua's promise, the plea) is written once,
+at the day the tape gives the thing it belongs beside, by a marker that dates backward; and where the tape already holds the run, the debit is opened
+and closed in one block with the earlier line as the closer — the engine writes a daemon's effects after the daemon returns, so the daemon writes that
+one itself. The judges' charge is the span's one law: six clauses, each a single seat in the whole Bible, a status on the court dated at the court's
+founding day read off the ledger. Joshua's commission (Numbers 27:12-23, the hole the Numbers walk left) was compiled as the callee: the ascent a debit
+on Moses open to the book's last chapter, the commission's debit closed by its run. The speech's own date walked the clock five months and fired
+thirty-six timers — and the walk found two things no earlier sitting could: a parser mark stamped a plague line 'night' (the mark stripped before any
+word match), and two period timers of one effect on one day doubled a join in the journal's timers view (keyed on the value now). The half-word
+taught to the parser as rule 30 moved fifteen tokens in the Torah and none it should not have. The docket read 864 rows — Sanhedrin's whole chapter of
+the court among them. Every gate green: the tape 10/10 with the run's tuple as predicted, the recorder, the stitcher, the eleven probe suites, the
+daemon, dependency, journal and register gates, the fold. What the compile leaves is the laws' readback from chapter 5 on, and the three cities of
+chapter 4 — the next reading.
 
 ## Step 6 — Publish
 Export, parity check against the public repo, deploy. Owner's word.

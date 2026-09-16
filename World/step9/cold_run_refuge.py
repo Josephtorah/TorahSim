@@ -52,6 +52,7 @@ _INK = {'re': re, 'sqlite3': sqlite3, 'os': _os, 'WE': WE}
 _INK['_ROOT'] = _ROOT   # THE PORTABLE REPO (2026-09-15): the INK block reads the store through the root; the exec'd namespace must carry it
 exec(_SRC.split('# ==== INK BEGIN')[1].split('# ==== INK END ====')[0].split('\n', 1)[1], _INK)
 ink_numbers, ink_ordinals, verse_words = _INK['ink_numbers'], _INK['ink_ordinals'], _INK['verse_words']
+from fractions import Fraction   # THE DEUTERONOMY WALK 1b (2026-09-15): the half read by rule (30) is a Fraction in the tripwire
 
 db = sqlite3.connect((_ROOT + '/Data/tanakh.sqlite'))
 
@@ -228,7 +229,7 @@ assert SIX_REFUGE == ['Num 35:13'] and THE_SIX_REFUGE == ['Num 35:6'] and CITIES
 REFUGE_B = lemma_seats('4733'); REFUGE_T = lemma_seats('4733', TORAH)
 assert len(REFUGE_B) == 20 and REFUGE_T == ['Num 35:6', 'Num 35:11', 'Num 35:12', 'Num 35:13', 'Num 35:14', 'Num 35:15', 'Num 35:25', 'Num 35:26', 'Num 35:27', 'Num 35:28', 'Num 35:32'] and not any(s.startswith('Deut') for s in REFUGE_B), (len(REFUGE_B), REFUGE_T)   # the refuge-word: twenty Bible verses, the Torah's eleven all here — DEUTERONOMY NEVER SAYS IT
 JOSH21_LOTS = [ink_numbers(verse_words('Josh', 21, v)) for v in (4, 5, 6, 7)]; JOSH21_TALLY = ink_numbers(verse_words('Josh', 21, 41))
-assert JOSH21_LOTS == [[13], [10], [13], [12]] and sum(n[0] for n in JOSH21_LOTS) == 48 == JOSH21_TALLY[0], (JOSH21_LOTS, JOSH21_TALLY)     # THE RUN OUTSIDE THE TORAH: Joshua 21's four lots sum to the forty-eight, the tally reads it
+assert JOSH21_LOTS == [[13], [Fraction(1, 2), 10], [Fraction(1, 2), 13], [12]] and sum(n[-1] for n in JOSH21_LOTS) == 48 == JOSH21_TALLY[0], (JOSH21_LOTS, JOSH21_TALLY)     # THE RUN OUTSIDE THE TORAH: Joshua 21's four lots sum to the forty-eight, the tally reads it; the halves at 21:5-6 ('from the half tribe of Manasseh') read since THE DEUTERONOMY WALK 1b (2026-09-15) — rule (30), the count the last number of each
 MORE = seats('מאת הרב תרבו'); LESS = seats('ומאת המעט תמעיטו'); EACH = seats('כפי נחלתו'); LESS_SG = seats('תמעיט')
 assert MORE == ['Num 35:8'] and LESS == ['Num 35:8'] and EACH == ['Num 35:8'] and LESS_SG == ['Lev 25:16', 'Num 26:54', 'Num 33:54'], (MORE, LESS, EACH, LESS_SG)   # the proportional rule: 26:54's two verbs, the plural "you shall take less" here alone
 BEASTS = tok('חיתם')

@@ -1303,6 +1303,143 @@ narrative strength. By cluster:
     never ("dedicated of men shall not be redeemed", Leviticus 27:29). Two seats reconciled by the agent of the death, not by the deed.
   · THE HEIFER YIELDS TO THE FOUND KILLER (Mishnah Sotah 9:7; Sotah 47b:2; Ketubot 37b:6): the heifer broken and then the murderer found — he is executed:
     "except by the blood of him who shed it" (35:33); a procedure completed does not spend the atonement the verse assigns to the shedder's blood.
+- **THE SIFREI ON DEUTERONOMY'S OWN CASE LAW ON THE OPENING SPEECH (Deuteronomy 1:1-3:29; THE DEUTERONOMY WALK sitting 1, 2026-09-15;
+  logic/oral_triage/deu_01_03_devarim_2026-09-15.md — piskaot 1-30 read whole in both files; the aggadic rows, E-codes by the claim's conclusion):
+  · THE GENRE FROM THE REDUNDANCY (Sifrei Devarim 1:1-5 on 1:1): "these are the words Moses spoke" — did he prophesy only these? he wrote the whole
+    Torah (31:9); so "these" are WORDS OF REBUKE ("Jeshurun grew fat and kicked", 32:15) — proved again on Amos, Jeremiah, David and Solomon, each
+    book's "words" a rebuke: the particular against the whole resolved as a genre (I5), and the translation writes the genre into the verse (Onkelos
+    1:1 "he rebuked them").
+  · THE PLACES READ AS CHARGES, AND THE DISPUTE HELD OPEN (Sifrei 1:9-18 on 1:1): "beyond the Jordan" — for Shittim; "in the wilderness" — the manna;
+    "in the Arabah" — Peor; "opposite Suph" — the sea; "between Paran and Tophel" — "words of folly against the manna" (the name read by its sound);
+    "Hazeroth" — Miriam (an a-fortiori from the righteous to the rest, 1:14-16); "Di-zahab" — the gold of the calf (the tabernacle's gold to atone).
+    Then R. Judah's TEN TRIALS ("two at the sea, two at the waters, two at the manna, two at the quail, the calf, the spies") and R. Yose ben
+    Dormaskit's refusal — "Judah, why do you twist the Scriptures? we have gone over all the places and they are places, named for events" (the
+    wells of Genesis 26 the proof) — the aggadic name-reading STATED AND DENIED in one piska, the dispute carried to Zechariah 9:1 and Genesis 41:43:
+    a move with its own dissent on the shelf.
+  · THE RECEIPT THAT RECEIVES THE RULES (Sifrei 2:8 on 1:3): "Moses spoke according to ALL that the LORD commanded him" — whence the light and the
+    weighty, the equal decrees, the generals and the particulars, the bodies and the details? from "ALL": the hermeneutic rules themselves (I1, I2,
+    I4 named by the row) received inside the receipt form — the register gate's seat at 1:3 meeting its reading.
+  · THE CALENDAR FROM A DATE (Sifrei 2:3 on 1:3): "in the fortieth year, in the eleventh month" teaches that the year has twelve months — Esther's
+    twelfth month, Solomon's twelve officers and the one "in the land" (the intercalated month), Moses' "today my days are full" and Joshua 4:19's
+    tenth of the first month — thirty-three days counted back: a number in a date read as a rule of the calendar.
+  · THE REBUKE NEAR DEATH AND ITS FOUR REASONS (Sifrei 2:4-7 on 1:3): "in the fortieth year" — he rebuked them only near death, as Jacob ("Reuben, my
+    firstborn" — why not before: lest you cleave to Esau), Joshua, Samuel, David; FOUR reasons — not to rebuke twice, not to shame before a witness,
+    no grudge, to part in peace ("rebuke brings peace": Abraham and Abimelech, Isaac and the Philistines) — the timing of an act derived from its
+    date (I12's kin), the reasons a list.
+  · KING AND PROVINCE (Sifrei 3:3-4 on 1:4): had Sihon not been hard but dwelt in Heshbon he was hard, for the province was hard; had the province
+    not been hard but Sihon in it, it was hard, for the king was hard; how much more both — the a-fortiori (I1) on two joined difficulties, repeated
+    for Og and Ashtaroth.
+  · A VERB'S SENSE FIXED FROM ITS SEATS, DISPUTED (Sifrei 4:1 on 1:5; 27:1 on 3:24): "Moses undertook (הואיל) to explain" — R. Judah: a BEGINNING
+    (Judges 19:6, 1 Chronicles 17:27); the sages: an OATH (Exodus 2:21 "Moses swore to dwell with the man", 1 Samuel 14:24) — E7 both ways; the
+    translation takes R. Judah's ("Moses began"), the plea's row (27:1) takes the sages' ("you released my vow to Jethro").
+  · THE HOMONYM READ (Sifrei 5:2-4 on 1:6-7): "enough (רב, 'much') for you at this mountain" — it was MUCH reward (the tabernacle, the table, the
+    lampstand), MUCH benefit (the Torah, the seventy elders, the captains of 1:15), then HARM — idleness ("turn and journey"): one word read three
+    ways, the last as the command's reason.
+  · LEBANON FROM ITS SEATS (Sifrei 6:2-3 on 1:7; 28:3 on 3:25): "and Lebanon" — a KING (Ezekiel 17:3, 2 Kings 14:9) and THE TEMPLE (Jeremiah 22:6,
+    Isaiah 10:34), named Lebanon because it whitens sins (Isaiah 1:18) — E7 on the word and the name read by its sound; ONKELOS WRITES THE TEMPLE at
+    3:25 ("the house of the sanctuary", three seats in the book) and keeps Lebanon at 1:7.
+  · THE JUDGE LIABLE IN HIS PERSON (Sifrei 9:2 on 1:9): "I cannot bear you alone" — not incapacity: a king of flesh and blood judges to death and it is
+    nothing to him, takes two selas for one; "I, if I wrongly charge money, am claimed in my SOUL" (Proverbs 22:22-23 "he will despoil of soul those
+    who despoil them") — the judge's error a debt on his life, the verse's ground.
+  · THE COUNT AND THE ROUNDING (Sifrei 14:1 and 15:4 on 1:14-15): the judges "eighty thousand less a few" (the captains of thousands 600, of hundreds
+    6,000, of fifties 12,000, of tens 60,000 — 78,600); "captains of thousands" — if there were 1,999 only one captain of a thousand is taken, 199
+    one of a hundred, 99 one of fifty, 19 one of ten — INTEGER DIVISION at four grains stated as a rule: the compile's table for the officers, the
+    remainder unled.
+  · THE TWO MONEY-CHANGERS (Sifrei 13:3 on 1:13): "wise" against "understanding" — the wise like a rich money-changer (when no coins are brought
+    he brings out his own and examines), the understanding like a poor one (when none are brought he sits and wonders): two competences
+    distinguished by a parable (E26), the judges' second and third qualities.
+  · READ NOT THUS BUT THUS — THE AL TIKREI (Sifrei 13:6 on 1:13): "and I will set them as your heads" (וַאֲשִׂימֵם) — read "THEIR GUILT on your heads"
+    (וַאֲשָׁמָם): Israel's guilt hangs on the heads of their judges (Ezekiel 33:7-9's watchman) — the consonants revocalized to another word, an
+    aggadic move on the pointing (filed for MOVE_CATALOG at the compile; the store's "and-put/set-them" the plain reading).
+  · THE MISHNAH CITED BY THE SIFREI (Sifrei 16:1 on 1:16; 18:1 on 1:18): "hear between your brothers" — "be deliberate in judgment", AVOT 1:1's first
+    saying with its two companions (raise many disciples, make a fence); "all the things you shall do" — the TEN DISTINCTIONS between money cases and
+    capital cases (Sanhedrin 4:1): the testing shelf named as the verse's reading — the bridge stated from the reading side.
+  · THE GENTILE LITIGANT, TWO RULINGS (Sifrei 16:4 on 1:16): R. Ishmael — by Israel's law or the nations', acquit the Israelite ("what do I care?
+    'hear between your BROTHERS'"); Rabban Shimon ben Gamliel — no need: by the law they came under. A dispute on the addressee of "your brothers",
+    flagged for the compile as two verdict tables.
+  · THE HOLDER HOLDS (Sifrei 16:5 on 1:16): "judge righteously" — the righteous claimant claims and brings proofs: this one wrapped in his cloak, that
+    one says "it is mine"; plowing with his cow, holding his field, sitting in his house — possession against the claim, the burden on the claimant.
+  · "A MAN" EXCLUDES THE MINOR; "HIS BROTHER" INCLUDES EVERY PAIR (Sifrei 16:6-7 on 1:16): orphans are not judged; man and woman, nation and family,
+    family and family — "in every case": I2's exclusion and inclusion on the same verse.
+  · THE APPOINTER OF JUDGES (Sifrei 17:1 on 1:17): "you shall not recognize faces in judgment" — said to the one who SEATS judges: handsome, strong,
+    my kinsman, he lent me money, he knows languages — he acquits the guilty from ignorance, and it is counted as favoring faces: the prohibition
+    moved from the bench to the appointment.
+  · SILENCE BEFORE HEARING, AND THE COMPROMISE DISPUTE (Sifrei 17:4 on 1:17): before you hear the two you may be silent, once heard you may not
+    (Proverbs 17:14); if you cannot decide, you may be silent — "truth and the judgment of peace" (Zechariah 8:16) is compromise; Rabban Shimon ben
+    Gamliel: raising the small and lowering the great is compromise; the sages: whoever compromises SINS (Psalm 10:3 "he who blesses a compromiser
+    spurns the LORD") — the timing of the judge's silence as a rule, and the standing dispute on arbitration (Sanhedrin 6b the bridge).
+  · THE HARD MATTER IS THE TENT'S (Sifrei 17:7 on 1:17): "the matter too hard for you" — the Holy One to Moses: you judge a hard case? I will bring one
+    your disciple's disciple can hear and you cannot — THE DAUGHTERS OF ZELOPHEHAD ("Moses brought their case before the LORD", Numbers 27:5); so
+    Samuel the seer (1 Samuel 9:19, 16:7): the link from 1:17 to Numbers 27 a REFERENCE the Sifrei itself teaches (LR1) — THE TENT's fourth sitting
+    named from Deuteronomy.
+  · THE SAME VERB AT TWO SEATS READ BY THEIR DIFFERENCE (Sifrei 20:1 on 1:22): "you came near to me, ALL OF YOU" — a mob (the young shoving the
+    elders), against 5:20's "all the heads of your tribes and your elders came near to me" — the young honoring the elders: E7's narrative twin
+    turned to contrast.
+  · NAMED FOR ITS END (Sifrei 22:2 on 1:24): "the valley of Eshcol" before the cluster was cut (Numbers 13:23), "the mountain of God, Horeb" (Exodus
+    3:1) before the giving — a place named in the text for what happens there later: the rule for the anachronism of names (E32's kin — the text's
+    order is not the events'), the compile's naming rule.
+  · WHO SAID "GOOD IS THE LAND" (Sifrei 23:3 on 1:25): "they brought us word and said: good is the land" — did they speak its good? they spoke its
+    evil; who spoke its good? Joshua and Caleb — and even so "you would not go up" (1:26): the retelling's "they" narrowed to the two by the earlier
+    seat's own words (Numbers 14:7 — the ink: "good is the land" two seats, theirs and this), the attribution a reading of the seats.
+  · THE HYPERBOLE RULE (Sifrei 25:4 on 1:28; Rabban Shimon ben Gamliel): "cities great and fortified TO HEAVEN" — the Scriptures speak in
+    exaggeration ("you cross the Jordan today", 9:1); but "as the stars of heaven", "as the dust of the earth" to Abraham are NOT exaggeration — a
+    rule about which numbers the text means: the compile's docket on 9:1's "today" and the count-phrases.
+  · THE TEN NAMES OF PRAYER (Sifrei 26:7 on 3:23): "and I besought" — prayer is called cry, shout, groan (Exodus 2:23-24), distress and calling (2
+    Samuel 22:7), song and entreaty (Jeremiah 7:16), falling (9:25), prayer (9:26), entreating (Genesis 25:21), standing (Psalm 106:30), seeking
+    (Exodus 32:11), supplication (3:23) — a census of a vocabulary from the seats (the English counts thirteen), the effects registry's candidates.
+  · THE SUPERFLUOUS "SAYING" (Sifrei 26:9 on 3:23): "at that time, saying" — the word not needed: "tell me whether you will do it for me or not" —
+    at Exodus 17:4, 6:12, Numbers 12:13, 27:15-16 and here, five seats where "saying" after a prayer asks for an answer: I5 on the register's word.
+  · THE TWO NAMES (Sifrei 26:10 on 3:24): "O LORD" — wherever "the LORD", the measure of mercy (Exodus 34:6); wherever "God", the measure of
+    judgment (Exodus 22:8, 27 — the judges) — a rule for the Names stated at the plea's seat (the Torah's four "O LORD God": Abraham's two, Moses'
+    two), THE EFFECTS LAW's register for the divine actor.
+  · THE BINYAN AV NAMED ON ONE WORD (Sifrei 27:4 on 3:24): "your greatness" — "this is a prototype (בנין אב, 'building a father') for every 'your
+    greatness' in the Torah" — the middah named by the row itself on a word (I3); the ink: 3:24 the Torah's one seat, Joshua 3:7 the Bible's other — the
+    prototype of itself.
+  · "ENOUGH" THREE WAYS (Sifrei 29:2-4 on 3:26): "the LORD said to me: enough for you (רב לך)" — go to your MASTER (רב) to release your vow; you are an
+    EXAMPLE to the judges (if Moses was shown no favor for "hear now, rebels", how much more the perverters of judgment; if Moses told "no more" did not
+    cease to ask, how much more the rest — Hezekiah's sword on the neck); MUCH (רב) is kept for you in the world to come; "so-and-so has crossed the
+    line" — the word read by its sound, by its sense and by its sound again, with two a-fortioris inside (I1).
+  · THE DIRECTIONS OF PRAYER (Sifrei 29:5 on 3:26-27): "speak no more ... go up to the top of Pisgah" — R. Eliezer ben Jacob: one prayer is better than a
+    hundred good deeds (for all his deeds Moses was never told "go up"; for the prayer he was); hence those outside the Land face the Land, in the Land
+    face Jerusalem, in Jerusalem the Temple, in the Temple the Holy of Holies (Solomon's prayer, 1 Kings 8:48, 2 Chronicles 6) — north faces south, east
+    faces west: all Israel toward one place. The verse's four directions (the ink: west, north, south, east — an order Genesis 13:14 and 28:14 do not
+    share) become a compass of prayer: a rule of conduct from an aggadic seat (Berakhot 4:5-6 the bridge).
+  · THE SHELF'S OWN MEASURE (Sifrei 29:6 on 3:27): "and see with your eyes" — the son kept from the bedroom; Moses: I am kept from the Land only the
+    width of this Jordan, "a rope of FIFTY CUBITS" — a number the text does not carry: the compile takes it as the shelf's measure, not the ink's.
+  · IF HE CROSSES THEY CROSS, IF HE GIVES THEY INHERIT — AI (Sifrei 29:8-9 on 3:28): "for he shall cross before this people" — if Joshua crosses before
+    them they cross, if not, not; "he shall cause them to inherit" — if he gives, they inherit; so at Ai thirty-six fell and the LORD said "did I not say
+    to Moses your master: ... you SENT them and did not go after them" (Joshua 7:5-10) — the run's failure traced to the spec's condition by the
+    Sifrei itself: THE RUN AGAINST THE SPEC, taught (LR1), the readback's first teacher.
+
+- THE OPENING SPEECH'S DOCKET (THE DEUTERONOMY WALK sitting 1b, 2026-09-15; logic/oral_triage/deu_01_03_devarim_exam_2026-09-15.md — 864 rows; the rules
+  about rules the docket carries, each at its row):
+  · THE CHARGE READ CLAUSE BY CLAUSE (Sanhedrin 7b:14-8a:6): "and I charged your judges" — each clause of Deuteronomy 1:16-17 a rule of its own on
+    the shelf (hear not one litigant without the other; the peruta as the hundred maneh; "afraid" a term for gathering in; "the judgment is God's"
+    — pierce the mountain): SIX clauses, each ONE seat in the Bible (computed), six DATA arms of one status — a verse read as a list.
+  · THE GATE'S OWN GRAMMAR (Sanhedrin 29a:11; Mishnah Sanhedrin 3:4-5; 27b:14 on Deuteronomy 24:16): "not his enemy nor seeking his harm" (Numbers 35:23)
+    split between the witness and the JUDGE; "the fathers shall not be put to death FOR the children" read BY the children's testimony — the kin off the
+    bench: E7's twin at two seats, the manslayer's verse the court's law.
+  · ONE CLOCK, TWO READERS, ONE ANALOGY (Rosh Hashanah 2b:11 — Rav Pappa): "the fortieth year" / "the fortieth year" — Deuteronomy 1:3's bare date
+    counted from the exodus by the verbal analogy with Numbers 33:38's "of the going out": a TRANSFER TAUGHT, the marker's era; and the chain's
+    order (2b:13, 3a:12: "after he had smitten Sihon" — Aaron's death before the speech) — the tape's days in the shelf's order.
+  · THE LIE WITH A GRAIN OF TRUTH (Sotah 35a:2) and "STRONGER THAN HIM" (35a:7): the spies' report parsed on the shelf — the retelling KEEPS the grain
+    ("good is the land", 1:25) and the plain sense ("greater and taller than we", 1:28): the readback's grades SHORTENED and TURNED are the shelf's
+    own readings, filed as reference rows.
+  · THE BARS' DIFFERENCE BY THE DAUGHTERS' SPEECH (Horayot 10b:19-11a:1; Nazir 23b:11-12; Bava Kamma 38a:16-38b:6): "do not harass Moab NOR CONTEND IN
+    BATTLE" against "do not harass them nor contend" (Ammon) — battle forbidden, harassing not, against not even harassed: the reward of the elder
+    daughter's euphemism against the younger's, a PARAMETER of the block's reach read off two verses' difference; Moses' own a fortiori from Midian
+    the reason the bar was needed.
+  · THE SUN FOR MOSES BY TWO ANALOGIES AND THE VERSE ITSELF (Avodah Zarah 25a:7-9; Taanit 20a:6-8): "I will begin" / "I will begin" (Joshua 3:7),
+    "put" / "put" (Joshua 10:12), and R. Yochanan from 2:25's own words — three derivations of one fact, the verse itself the third: a run outside
+    the Torah, DATA at the row.
+  · WHOEVER ADDS SUBTRACTS (Sanhedrin 29a:34-36): Eve's "nor touch it"; "two cubits and a half" without its alef a hundred cubits; "eleven curtains"
+    without its ayin twelve — the parser's own numerals read as LETTERS on the shelf: the numeral parser's rules 7 and 29 have Talmud seats.
+  · THE OFFICERS' SECOND SEAT (Sanhedrin 16b:9-10): "judges and officers in all your gates for your tribes" (Deuteronomy 16:18) — judges for Israel,
+    for every tribe, for every city: the officers' table of 1:15 read at its other verse, and "with you — like you" (17a:3) the burden-word of 1:9-12
+    and Numbers 11:17 joined.
+  · THE ROUNDING RULE AS INTEGER DIVISION (the Sifrei 15:4; Sanhedrin 18a:3; the Jerusalem Talmud Sanhedrin 10:2): a thousand less one yields one
+    captain of a thousand — 78,600 on the round count, 79,064 on the exact: the arithmetic's own form named at the compile.
+
 ## Exodus block campaign — owner's word "Do 3")
 
 The campaign's exam rounds banked RULES-ABOUT-RULES on the corpus's
