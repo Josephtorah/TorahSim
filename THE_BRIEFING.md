@@ -15,6 +15,8 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
 ## SCOREBOARD (as of 2026-09-16, latest)
+- **CHAPTER 5 COMPILED — THE CODE SAID AGAIN AND GRADED AGAINST THE CODE: SIXTEEN ROWS OF THE TEN WORDS, EACH NAMING THE CELL THAT COMPILES IT; TWO WORDS HAD NO CELL ANYWHERE — THE SECOND AND THE TENTH — COMPILED HERE AND WRITTEN AT THE DAY THEY WERE FIRST SPOKEN; A SECOND HOLE IN THE TAPE, THE REQUEST FOR A MEDIATOR, FILLED; THE RECEIPT READ TWO WAYS** (2026-09-16, on your "go"; World/step9/DEUTERONOMY_WALK.md "Sitting 3b" + AS BUILT): cold_run_covenant_at_horeb.py the 60th runner (49/49), law_covenant_at_horeb the 65th daemon; the readback's twenty-one rows; the tape 10/10 with RUN (1302, 96, 88, 0, 12, 1593, 36, 319, pairs, 127) as predicted, markers 167; every gate GREEN, the sweep 60/60. NEXT: the commit on your word; chapter 6's reading, or the schema sitting first.
+- **CHAPTER 5 READ AND FROZEN — THE TEN WORDS SAID AGAIN: FIVE VERSES MATCH EXACTLY, THE SABBATH'S REASON CHANGES WHOLE, AND TWICE THE LAW CITES ITS OWN GIVING** (2026-09-16, on your "go" after the rereads; World/step9/DEUTERONOMY_WALK.md "Sitting 3"): the translation's thirty verses mapped to the Bible's thirty-three by an instrument before a row was written (the four short words one line there); Onkelos on all 33 verses, the Sifrei's five rows from elsewhere; the two copies diffed word for word — 172 words against 189; "keep" for "remember" (the Sifrei: one utterance), the exodus for the creation, the receipt "as the LORD your God commanded you" inside two commandments, the vain witness for the false, the wife first, "his" written and "my" read; one unit frozen (the 219th), 6 claims verified, the ritual 13 PASS, the world's standing facts 2197 (+6 as predicted), hash unmoved, every gate green. NEXT: the compile of chapter 5 (the laws read back as code against code), or the schema sitting first, on your word.
 - **CHAPTER 4 COMPILED — THE TAPE HAD A HOLE AND THE RETELLING FILLED IT: THE TEN WORDS SPOKEN AND THE TABLETS GIVEN, TOLD ONLY IN MOSES' RETELLING, WRITTEN ONCE AT THEIR OWN DAYS; THE ONE LAW A BLOCK WITH THE SHELF'S TWO ARMS; MOSES' THREE CITIES A STATUS, THE REFUGE DEBT OPEN UNTIL JOSHUA; THE IMAGE LAW FOUND UNCOMPILED AND NAMED AS DEBT** (2026-09-16, on your "then we finish 4"; World/step9/DEUTERONOMY_WALK.md "Sitting 2b" + AS BUILT): cold_run_obey_horeb.py the 59th runner (52/52), law_obey_horeb the 64th daemon; the readback's eleven rows; the tape 10/10 with RUN (1300, 96, 88, 0, 12, 1588, 35, 319, pairs, 126) as predicted, markers 165; every gate GREEN, the sweep 59/59. NEXT: chapter 5's reading.
 - **CHAPTER 4 READ AND FROZEN — THE SHELF IS SILENT ON THE WHOLE CHAPTER, ONE LAW AND ONE CASE, LEARN AND TEACH ARE ONE WORD, AND MOSES SETS APART THE THREE CITIES THE REFUGE LAW LEFT OPEN** (2026-09-16, on your "Go" after the rereads; World/step9/DEUTERONOMY_WALK.md "Sitting 2"). Two units on the chapter, 55 sources in one ledger, seven claims seated, the 217th and 218th frozen units (standing 2191, hash unmoved). The Sifrei on Deuteronomy has no piska on 4:1-49; its eight rows citing the chapter were found by scanning the whole export, and one of them is a third citation form. The finds: the chapter's one law (add nothing, take nothing away) and one case (when you beget sons); "they shall learn" and "they shall teach" the same letters; the tablets spelled full; the bar on Moses told a third time with an oath; the receipt in Moses' own voice; the translation's fear, Word and Shekhinah; the creed twice; "then Moses set apart" — the refuge runner's open debt, closed at the compile. Every gate green.
 - **THE OPENING SPEECH COMPILED — THE READBACK'S FIRST FORM BUILT: A RETELLING IS A REFERENCE ROW GRADED AGAINST THE TAPE'S OWN LINE, AN ACT TOLD ONLY IN THE RETELLING IS WRITTEN ONCE AT ITS OWN TIME AND CLOSED BY THE RUN THE TAPE ALREADY HOLDS, THE JUDGES' CHARGE IS THE SPAN'S ONE LAW, AND JOSHUA'S COMMISSION FILLS THE HOLE NUMBERS LEFT** (2026-09-15/16, on your "Go 1b right" and "Yes 1. Go"; World/step9/DEUTERONOMY_WALK.md "Sitting 1b — AS BUILT"): cold_run_opening_speech.py the 58th runner (97/97; sixteen tape lines; forty-two readback rows, two of them open disagreements; the exam's thirty-three persons); law_opening_speech the 63rd daemon; the docket 864 rows (Sanhedrin's court chapter whole); rule 30 the half taught (fifteen Torah tokens moved, none wrongly); the tape 10/10 with RUN (1295, 96, 88, 0, 12, 1583, 34, 319, the four pairs, 126) as predicted and THE REST reproducing 15b; the speech's clock walked five months (thirty-six fires) and found a parser mark stamping a night and a timers join doubling on one day — both fixed, both recorded; every probe suite and gate GREEN; the register gate's six seats paid. NEXT: chapter 4's reading.
@@ -481,6 +483,39 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   Next alongside it: Leviticus (new spine — Sifra).
 
 ## ENTRIES (newest first)
+
+### 2026-09-16 — CHAPTER 5 COMPILED: THE CODE GRADED AGAINST THE CODE, AND TWO WORDS FOUND UNCOMPILED
+
+The readback built at the first three chapters graded Moses' retelling of what happened against the tape of what happened. Chapter 5 is different:
+Moses says the ten words again, so what gets graded is the code against the code. Before any design, every one of the ten was traced to the place in
+the machine that compiles it — and two had no such place anywhere. The second word (no other gods, no image, no bowing) and the tenth (you shall not
+covet) had been read and discussed for weeks but never turned into a cell. Both were compiled in this sitting from the two copies of the ink, with
+the Talmud's answer sheets for each — who is stoned for idolatry and who merely transgresses; whether coveting is coveting when the taker pays — and,
+by the rule the walk built for acts, their entries were written on the ledger at the day the words were first spoken at Horeb, not at the day Moses
+repeated them. The sixteen verses of the code were graded one by one: five identical, five a letter or a conjunction apart, three grown by a clause,
+three with a ground or a word replaced — and the tradition, it turned out, reads those very differences as teachings (the ox and the ass teach "every
+animal"; "that it may go well with you" was left out of the first tablets because they were going to be broken). The measurement found a second hole
+in the tape too: the people's plea at Horeb for Moses to stand between them and the voice had never been written, and God's answer to it — "they
+have done well … return to your tents … you stand here with me" — is told nowhere but here. Both were written once at the giving's day; the charge
+to teach was closed by the book's own opening, which is its fulfilment. The little receipt inside two of the words, "as the LORD your God commanded
+you", was read both ways the tradition reads it — the giving, and the earlier statutes at Marah. One thing the shelf did that we had not seen: its
+citations of this chapter follow two different verse numberings, so every row of the docket was pinned by the words it quotes, not by the number it
+cites. The runner matched its answer sheet on the first run; the tape reached ten of ten on the third — eight old counts that a single new close had
+moved, then a closer written as a range of verses that quietly re-filed an older receipt, both read off the print and corrected. Every gate is green in one chain. Next, on your word: the commit, then chapter 6 — or the schema question first.
+
+### 2026-09-16 — CHAPTER 5 READ: THE TEN WORDS SAID AGAIN, AND THE DIFFERENCES ARE THE FINDS
+
+Moses repeats the ten commandments, and for the first time the machine has both copies side by side, word for word. Before that could happen a
+small problem had to be measured rather than guessed: the translation we read (Onkelos) divides this chapter into thirty verses and our Bible text
+into thirty-three. An instrument lined them up by counting words and negations and found where the fold is — the translation keeps "you shall not
+murder, commit adultery, steal, bear false witness" on one line where our text gives each its own verse. Everything else in the sitting went through
+that map. The comparison itself: five verses are identical; the rest differ in small, deliberate ways. The sabbath commandment says "keep" instead
+of "remember" (and the Sifrei says both were spoken in one breath), and its reason changes entirely — in Exodus the sabbath remembers creation, here
+it remembers the slavery in Egypt. Twice the second copy says "as the LORD your God commanded you" inside a commandment: a law pointing back at its
+own earlier giving. That matters for the machine, because our register of who-speaks-when had been waiting since Numbers to classify exactly those
+two verses. One word is written "his" and read "my" — the only such pair in the chapter. The chapter is frozen as one unit, the world's count of
+standing facts rose by six as predicted, and every gate is green. What comes next is the interesting part: at chapter 4 we graded a story against
+the tape; at chapter 5 the readback grades code against code — the second copy of each commandment against the compiled cells of the first.
 
 ### 2026-09-16 — CHAPTER 4 COMPILED: THE TAPE HAD A HOLE, AND THE RETELLING FILLED IT AT ITS OWN TIME
 

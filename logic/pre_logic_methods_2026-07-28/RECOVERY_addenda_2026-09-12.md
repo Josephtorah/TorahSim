@@ -908,3 +908,51 @@ RECORD FORMS SHEET — World/step9/RECORD_FORMS.md (every record's path, mode, a
 then write; the form write_ch4b_records.py). THE SITTING SHAPE OF SECTION 5 AMENDED BY THESE: "the tape run 10/10" is preceded by the fast check;
 "the probe gates … the sweep … the journal gate alone" is one chain call; "the records" is one writer call from the sheet. Memory:
 cost-rules-no-polling.md.
+
+## 36. ADDENDUM (2026-09-16, THE DEUTERONOMY WALK sitting 3 — CHAPTER 5, Deuteronomy 5:1-33 READ AND FROZEN; the owner: "reread", "go"; the state doc's #187 addendum 1)
+THE STATE: chapter 5 read and frozen as one unit (deu_05_decalogue, the 219th); the corpus 219 units, standing 2197 (2191 + 6 as predicted), hash
+8b8fff1fa28953af unmoved; the tape UNMOVED (no engine file changed — RUN (1300, 96, 88, 0, 12, 1588, 35, 319, the four pairs, 126), markers 165);
+the journal gate GREEN (12 kinds, 9660 rows); the register gate --strict GREEN (DECLARED 100, DEBT 0, FAILS 0); uncommitted since 834602b.
+WHAT THE SITTING FOUND: the two divisions mapped by alignment (the export's 17 = the DB's 17-20); the second copy of the ten words diffed verse by
+verse — five verbatim, one letter at 5:8, the ketiv at 5:10, KEEP for REMEMBER at 5:12 with the receipt "as the LORD your God commanded you" (5:12,
+5:16 — the register gate's seats), the two beasts and the servants' rest at 5:14, the ground changed whole at 5:15, "and" on the four short words,
+the vain witness for the false, the wife first and a second verb at 5:21; the Sifrei 233:1's "remember and keep in one utterance" (the Mekhilta
+named, the first copy's spine unopened by any ledger); face to face the Bible's one seat, Onkelos "speech with speech"; the ten words in the
+singular; the third generation starred by the parser; "added no more" read "did not cease"; the mob and the elders (1:22, 5:23); "hear and do"
+against "do and hear"; Moses standing (357:40).
+THE FILES CHANGED: logic/oral_triage/deu_05_vaetchanan_2026-09-16.md (new); logic/units/deu_05_decalogue.yaml (draft → frozen, six operators, step E,
+the scenarios in the anchor form) and logic/py_units/deu_05_decalogue.py; logic/oral_audit/manifests/deu_05_decalogue_claims.json (new);
+logic/glosses/word_gloss_overrides.yaml (+58 by reference, +54 by gloss); logic/corpus/CORPUS_TRUTH.py (219, 2197); the records (the map,
+COMPILE_DEBT, MIDDOT, RESEARCH_LOG, THE_STEPS, THE_BRIEFING, RESUME, the state doc, the recovery page, this file, STAMP_LEDGER, the memory);
+World/step9/forms_deuteronomy_walk/ (the sitting's scripts and prints).
+NEXT ON THE RULING: the compile of chapter 5 (3b) — or the Decalogue-schema sitting first — on the owner's word.
+
+## 37. ADDENDUM (2026-09-16, THE DEUTERONOMY WALK sitting 3b — THE COMPILE OF CHAPTER 5, Deuteronomy 5:1-33 COMPILED AND ON THE TAPE; the owner: "go"; the state doc's #188 addendum 2)
+
+THE SITTING RAN IN THE COMPILE SHAPE (section 5; "Sitting 2b" the form): World/step9/DEUTERONOMY_WALK.md "Sitting 3b" (the design, written before any
+code) and "Sitting 3b — AS BUILT" (the departures and the lessons). THE STATE: cold_run_covenant_at_horeb.py the 60th runner (49/49 — seven cells,
+twenty DATA rows, the readback's twenty-one rows), law_covenant_at_horeb the 65th daemon (given_at Exod 20:3, installed_by covenant_blood_thrown; 65
+daemons, 448 functions), event_vocabulary +3 (1122), effect_vocabulary +4 (1023), dependency_dispositions +12 edges +3 pointers (533 edges, 195 pointers on
+file), register_dispositions Deut 5:12 / 5:16 / 5:32 CHAPTER; THE TAPE 10/10 WITH THE REST — RUN (1302, 96, 88, 0, 12, 1593, 36, 319, the four pairs,
+127) as predicted, PREVIOUS_RUN 2b's with ONE DECLARED DELTA (the daemon's two blocks on THE REST), NEWEST_RUNNER covenant_at_horeb, markers 167 (F 129 /
+P 15 / R 23), entities 319, closes 127, the population table 148, CI1-CI9 MATCH; the docket logic/oral_triage/deu_05_vaetchanan_exam_2026-09-16.md (275
+rows — link 43 / topic 232; LAW 77; credited 94; the ten ranges whole). THE GATES: the probe suites census 224/224, installation 6/6 (I5 65), readback 12/12, register 7/7, clock 22/22, sequence 4/4, view 6/6, population 9/9, journal 7/7, cursor 6/6, checkpoint 7/7; the daemon gate GREEN (65 daemons, 448 functions); the dependency gate GREEN (533 edges and 195 pointers on file — the link census reference 512 / transfer 48 / hypothesis 9 / none 159; required 263 edges and 196 pointers, live import edges 381); build_world ALL GREEN (standing 2197, hash 8b8fff1fa28953af unmoved — no freeze this sitting); the journal gate GREEN twice — before and after the sweep (12 kinds, 9660 rows in the index); THE REGISTER GATE --strict GREEN (DECLARED 100, DEBT 0, FAILS 0 — Deut 5:12, 5:16, 5:32 CHAPTER declared, the receipts inside the code run citations of the giving; Deut 4:45 DAEMONS green with daemons 2); the positions table 226 checkpoints over 168 pauses (CI1-CI9 in it; checkpoint_probes 7/7 after the rebuild); the sweep 60/60 at 6,576 graded cells; the home-path gate GREEN.
+
+WHAT THE SITTING FOUND (RESEARCH_LOG 2026-09-16, the compile entry): THE LAWS' READBACK — sixteen rows on the code, each naming its cell, VARIANT the
+grade the code's copy adds; THE CODE'S HOLE — the second and the tenth words had NO CELL in any runner: compiled here from both copies, their blocks
+written at the giving's line (1, 3, 7), THE REST's one declared delta; THE TAPE'S SECOND HOLE — Exodus 20:18-21 (the request for a mediator) has no line:
+the request and the answer (told only here) written once at (1, 3, 7) by the retrograde marker at Deut 5:23, the forward marker at 5:32; THE CHARGE TO
+TEACH a debit on Moses closed by the prior run (the frame's line 1:1-5 the closer); THE RECEIPT'S TWO REFERENTS (the giving; Marah — Sanhedrin 56b) at
+the seats and the pointers; THE SHELF'S TWO NUMBERINGS — the quoted words fix the verse; A CLOSE MOVES EVERY OLD COUNT — eight REST literals retyped.
+THE NINE LESSONS in the map's AS BUILT.
+
+THE FILES CHANGED BY 3b: World/step9/cold_run_covenant_at_horeb.py (new), cold_run_sequence.py (the tape section, the literals, CI1-CI9, the retypes
+CP6 / CA1 / CA9 / CC8 / CC9 and the eight closes literals), event_vocabulary.yaml, effect_vocabulary.yaml, daemon_dispositions.yaml,
+dependency_dispositions.yaml (the span, twelve edges, three pointers; the 2b OWED why amended PAID), register_dispositions.yaml, readback_probes.py
+(Q10-Q12), installation_probes.py (I5 65), checkpoint_positions.yaml (rebuilt), the docket (new), the forms folder (copy_ch5b_forms.py), the records
+(the map, COMPILE_DEBT, MIDDOT, MISHNAH_TOPICS, RESEARCH_LOG, THE_STEPS, THE_BRIEFING, THE_LOOP, RESUME, the recovery page, this file, the state doc,
+memory). NOT COMMITTED — the tree uncommitted since 834602b; commit on the owner's word only.
+
+NEXT ON THE RULING: the commit on the owner's word; then CHAPTER 6's READING (6:1-25 — the Shema, the words on the heart, the reading shape on sitting 3's
+forms). ON THE TABLE, NOT A RULING: the Decalogue-schema sitting (the ten as headers over the laws; its seat chapter 5 — the exhibits the Sifrei 233:1,
+remember-and-keep in one utterance, the ten as one reading) — on the owner's word.

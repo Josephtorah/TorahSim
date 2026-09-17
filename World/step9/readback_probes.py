@@ -12,6 +12,10 @@
   Q8 the two supplied Horeb lines DATED by the retrograde markers at Deut 4:10 and 4:13 — (1, 3, 7) the giving, (1, 4, 17) the tablets; the tablets' day = the breaking marker's (Exod 32:19)
   Q9 the register seats after chapter 4 — Deut 4:5 ACT, Deut 4:45 DAEMONS with daemons 2; the refuge debit appoint_six_cities_of_refuge OPEN after the three cities' line (Makkot 2:4); cities_set_apart on Israel ONE
   (Q4 NARROWED at 2b to chapters 1-3's lines and markers — the probe tests 1b's form, not the tape's length)
+  THE DEUTERONOMY WALK 3b (2026-09-16; DEUTERONOMY_WALK.md "Sitting 3b" THE PROBES) — written to FAIL before cold_run_covenant_at_horeb.py exists:
+  Q10 the runner and its the_readback table: twenty-one rows — sixteen LAW rows (one per verse of the second copy, 5:6-21) each naming its cell or NO CELL (5:6 alone), five narrative rows; the grades VERBATIM 5 / VARIANT 5 / EXPANDED 5 / TURNED 4 / SUPPLIED 2 (VARIANT the laws' readback's own grade); no row OPEN
+  Q11 the two SUPPLIED lines (the request, the answer) DATED (1, 3, 7) by the retrograde marker at Deut 5:23; the request naming its first telling Exodus 20:18-19 (THE TAPE'S SECOND HOLE); the charge's debit on Moses CLOSED BY THE PRIOR RUN — the closer's line earlier on the tape (Q3's form)
+  Q12 the register seats after chapter 5 — Deut 5:12, 5:16, 5:32 CHAPTER (the receipts inside the code, run citations of the giving), 4:45 DAEMONS with daemons 2; THE CODE'S HOLE FILLED — other_gods_barred and coveting_barred on Israel ONE each, dated (1, 3, 7), written at the giving's line (source Deut 4:10)
 Run: python3 World/step9/readback_probes.py   (the running world replays the tape: ~3 minutes)
 """
 import os, sys, io, re, contextlib, collections
@@ -104,9 +108,38 @@ def q9():
     csa = [e for e in isr.ledger if e['effect'] == 'cities_set_apart'] if isr else []
     got = (cr.get('Deut 4:5', {}).get('class'), cf.get('Deut 4:45', {}).get('class'), cf.get('Deut 4:45', {}).get('daemons'), len(deb), bool(deb) and deb[0].get('open'), len(csa))
     return got == ('ACT', 'DAEMONS', 2, 1, True, 1), 'got (4:5 class, 4:45 class, 4:45 daemons, the refuge debit, open, cities_set_apart) = %s' % (got,)
+# ---- THE DEUTERONOMY WALK 3b (2026-09-16): the laws' readback on chapter 5 — written to FAIL before the runner exists ----
+def q10():
+    import cold_run_covenant_at_horeb as CH
+    rows = CH.DATA['the_readback']['value']
+    gs = collections.Counter(r['grade'] for r in rows)
+    law = [r for r in rows if r.get('law')]
+    nocell = [r['verses'] for r in law if r.get('cell') == 'NO CELL']
+    named = sum(1 for r in law if r.get('cell') and r['cell'] != 'NO CELL')
+    ok = len(rows) == 21 and len(law) == 16 and named == 15 and nocell == ['Deut 5:6'] and gs == collections.Counter({'VERBATIM': 5, 'VARIANT': 5, 'EXPANDED': 5, 'TURNED': 4, 'SUPPLIED': 2}) and not any(r['open'] for r in rows)
+    return ok, 'rows %d (law %d, cells named %d, no cell %s), grades %s' % (len(rows), len(law), named, nocell, dict(gs))
+def q11():
+    mr = [e for e in EV if e[2]['kind'] == 'mediator_requested']; sh = [e for e in EV if e[2]['kind'] == 'stand_here_commanded']
+    mk = {str(l[2].get('verse', '')): l for l in W.log if l[0] == 'MARKER'}
+    d1 = ex.date(mr[0][2]['dated']) if mr and mr[0][2].get('dated') is not None else None
+    d2 = ex.date(sh[0][2]['dated']) if sh and sh[0][2].get('dated') is not None else None
+    first = 'Exod 20:18-19' in str(mr[0][2].get('first_telling', '')) if mr else False
+    mo = W.entities.get('moses'); deb = [e for e in mo.ledger if e['effect'] == 'commanded' and e.get('value') == 'teach_the_commandment'] if mo else []
+    ev_i = [(i, l[2]) for i, l in enumerate(W.log) if l[0] == 'EVENT']
+    def at_verse(k): return min([i for i, e in ev_i if RG.contains(e.get('case_source'), k)], default=10 ** 9)   # the line whose source CONTAINS the verse (the frame's 1:1-5 holds the closer's 1:5); first_verse returns a (book, chapter, verse) tuple
+    closer_earlier = bool(deb) and not deb[0].get('open') and at_verse(WE.first_verse(deb[0].get('closed_by'))) < at_verse(('Deut', 5, 28))
+    ok = len(mr) == 1 and len(sh) == 1 and d1 == (1, 3, 7) and d2 == (1, 3, 7) and 'Deut 5:23' in mk and bool(mk['Deut 5:23'][2].get('retrograde')) and first and len(deb) == 1 and closer_earlier
+    return ok, "mediator_requested %d dated %s (the first telling named %s); stand_here_commanded %d dated %s; the marker at Deut 5:23 %s; the charge's debit %d, closed by the prior run %s" % (len(mr), d1, first, len(sh), d2, 'Deut 5:23' in mk, len(deb), closer_earlier)
+def q12():
+    with contextlib.redirect_stdout(io.StringIO()):
+        ink = RG.read_ink(); cr = RG.class_receipts(ink, W); cf = RG.class_footers(ink)
+    isr = W.entities.get('israel_people')
+    og = [e for e in isr.ledger if e['effect'] == 'other_gods_barred'] if isr else []; cv = [e for e in isr.ledger if e['effect'] == 'coveting_barred'] if isr else []
+    got = (cr.get('Deut 5:12', {}).get('class'), cr.get('Deut 5:16', {}).get('class'), cr.get('Deut 5:32', {}).get('class'), cf.get('Deut 4:45', {}).get('daemons'), len(og), len(cv), ex.date(og[0]['dated']) if og and og[0].get('dated') is not None else None, str(og[0].get('case_source', ''))[:9] if og else None)
+    return got == ('CHAPTER', 'CHAPTER', 'CHAPTER', 2, 1, 1, (1, 3, 7), 'Deut 4:10'), "got (5:12, 5:16, 5:32 classes, 4:45 daemons, other_gods_barred, coveting_barred, the blocks' day, source) = %s" % (got,)
 
 print('READBACK PROBES (THE LOOP step 6, the first form)')
-for n, f in (('Q1 the table', q1), ('Q2 found', q2), ('Q3 the close by a prior run', q3), ('Q4 the retrograde dating', q4), ('Q5 the open disagreements', q5), ('Q6 the register seats', q6), ('Q7 chapter 4\'s table', q7), ('Q8 the Horeb lines dated', q8), ('Q9 the seats and the debit after chapter 4', q9)):
+for n, f in (('Q1 the table', q1), ('Q2 found', q2), ('Q3 the close by a prior run', q3), ('Q4 the retrograde dating', q4), ('Q5 the open disagreements', q5), ('Q6 the register seats', q6), ('Q7 chapter 4\'s table', q7), ('Q8 the Horeb lines dated', q8), ('Q9 the seats and the debit after chapter 4', q9), ("Q10 chapter 5's table — the laws' readback", q10), ('Q11 the request and the answer dated; the charge closed by the prior run', q11), ('Q12 the seats after chapter 5; the code\'s hole filled', q12)):
     probe(n, f)
 n_ok = sum(1 for _, ok in R if ok)
 print('readback_probes: %d/%d' % (n_ok, len(R)))

@@ -3118,3 +3118,100 @@ lemma 5674) is not "a Hebrew" (the chirik, 5680); "king" (4:46-47, the segols) i
 is the preposition, not the talion's "in place of"; "inheritance" (4:20, 4:21, 4:38) the land as a gift named whole, no estate divided. Two pointers
 RUN_CITATION: 4:5's receipt of the teaching's command (Exodus 24:12, by the erection runner's ascent cell) and 4:33's "as you have heard" (the voice at
 Horeb on the tape).
+
+## 2026-09-16 — DEUTERONOMY 5 READ (THE DEUTERONOMY WALK sitting 3 — CHAPTER 5): THE TWO DIVISIONS MAPPED BY ALIGNMENT; THE SECOND COPY OF THE TEN WORDS DIFFED
+## VERSE BY VERSE — FIVE VERBATIM, THE GROUND OF THE SABBATH CHANGED WHOLE, THE RECEIPT INSIDE THE CODE; KEEP AND REMEMBER IN ONE UTTERANCE (THE SIFREI 233:1);
+## THE WRITTEN AND THE READ AT 5:10; FACE TO FACE THE BIBLE'S ONE SEAT; THE THIRD GENERATION STARRED; THE FIRST COPY NEVER READ ON ITS SPINE
+
+THE TWO DIVISIONS MAPPED BY ALIGNMENT. Onkelos Deuteronomy's export gives chapter 5 thirty verses; the DB (the Open Scriptures text) thirty-three.
+A monotone alignment over token counts and negation counts (the cost 27) found the fold with no table typed: the export's 17 holds the DB's 17-20
+(twelve tokens, four negations — the four short words one row), then the offset of three to the chapter's end. Every citation of the shelf on the
+chapter is read through the map (the Sifrei's "5:19" is the DB's 5:22; its "5:28" the DB's 5:31), the Onkelos rows by the DB's verse; the ink module
+recomputes and asserts the map. The recorder and the stitcher address the DB.
+
+THE SECOND COPY DIFFED. Deuteronomy 5:6-21 against Exodus 20:2-17, token by token in the DB's division: 5:6, 7, 11, 13, 17 VERBATIM; one letter at
+5:8 ("any form" for "and any form"); 5:9 "fathers" plene, "and upon the third"; 5:10 "his commandments" written for "my"; 5:12 KEEP for REMEMBER and
+"as the LORD your God commanded you" added; 5:14 "and your servant", "your ox and your ass and all your cattle", "that your servant and maidservant
+may rest like you" (26 words for 18); 5:15 the whole ground — the slave in Egypt and the exodus for the six days of creation, the diff keeping "for",
+"the LORD", "therefore", "the sabbath day"; 5:16 the receipt and "and that it may go well with you"; 5:18-20 "and not"; 5:20 a VAIN witness for a
+FALSE; 5:21 the wife first, "desire" a second root, "his field". The counts 172 tokens / 620 letters against 189 / 708 (the peer thread's figures of
+2026-09-16 confirmed on the DB). The compile grades the copy as CODE AGAINST CODE — a reference row per word against the decalogue runner's cells.
+
+THE RECEIPT INSIDE THE CODE. "As the LORD your God commanded you" at 5:12 and 5:16 — a law citing its own prior giving, absent from the first copy
+(20:17 the third seat); the register gate's seats Deut 5:12, 5:16 (and 5:32's plural) filed NONE at Numbers meet their verses — RUN_CITATIONs of
+Exodus 20:8 and 20:12 on the tape, paid at the compile.
+
+KEEP AND REMEMBER IN ONE UTTERANCE. The Sifrei 233:1 (on the mingled stuff and the fringes) names the diff's first word: 5:12's "keep" and Exodus
+20:8's "remember" were said as one — both infinitive absolutes on the morphology; the export's footnote sends to the Mekhilta, Bahodesh 7 — the first
+copy's spine, which no ledger has opened (the Decalogue was read exam-first on 2026-09-04). The tradition filing one commandment's two seats under
+one header: an exhibit for the schema question on the table.
+
+THE WRITTEN AND THE READ AT 5:10. The DB's one token "his commandments" carries the flag x-ketiv (one of 1,268 in the Bible); the store holds the read
+"my commandments" as a seventh token; Exodus 20:6 writes "my"; Onkelos reads "my". The chapter's one written-and-read pair — a DATA note for the compile.
+
+FACE TO FACE, ONE SEAT. 5:4's "face IN face" is the Bible's one seat of the form (the five "face TO face" elsewhere — Jacob's, Moses' at the tent,
+34:10, Gideon's, Ezekiel's); Onkelos "speech with speech", and at 5:5 "between the Memra of the LORD and you" — the mediator's verse resolving the
+two by the Word. The ten words in the singular (the morphology: singular only 6-21), the frame plural before and after.
+
+THE THIRD GENERATION STARRED. 5:9's "third" the parser marks by the missing holam — not thirty; the pointed form the same at all five seats (Joseph's
+great-grandsons first); "to thousands" a bare noun; three number verses read (5:13 [6], 5:14 [7], 5:22 [2]), no gap.
+
+ADDED NO MORE, DID NOT CEASE. 5:22's "and he added no more" (four seats — Judah, the angel, Samuel) read by Onkelos as "and did not cease"; the
+tablets defective here, plene at 4:13; the two lines 5:22 retells (the ten words spoken, the tablets given) are on the tape since 2b's retrograde
+markers. "You came near to me" 1:22 and 5:23 alone (the Sifrei 20:1: the mob and the elders); "the LORD heard the voice of your words" 1:34 and 5:28
+alone; "we will hear and do" against Exodus 24:7's "do and hear"; "stand here with me" 5:31 (the Sifrei 357:40: Moses standing, Balaam fallen).
+
+THE STORE'S GLOSSES READ BACK (the display layer): 58 rows by reference and 54 by gloss — "the-intermission" THE SABBATH, "to-evil" IN VAIN,
+"depress" BOW DOWN, "delight-in" COVET, "eye" for TESTIFY at 5:20 (by reference — the eye itself elsewhere), "be-heavy" for HONOR, "cut" for MADE a
+covenant, "descendant-of-the-third-degr" THE THIRD GENERATION, "associate-you/your" YOUR NEIGHBOR, "along-with-me/my" WITH ME, "hinder" OTHER left
+as rewritten at sitting 1; by_ref 472, by_gloss 352 after.
+
+
+## 2026-09-16 — DEUTERONOMY 5 COMPILED (THE DEUTERONOMY WALK sitting 3b — CHAPTER 5): THE LAWS' READBACK — CODE AGAINST CODE; THE CODE'S HOLE — TWO
+## WORDS NO RUNNER COMPILED; THE TAPE'S SECOND HOLE — THE REQUEST FOR A MEDIATOR; THE RECEIPT'S TWO REFERENTS; THE SHELF'S TWO NUMBERINGS; A CLOSE
+## MOVES EVERY OLD COUNT
+
+THE LAWS' READBACK. The readback's first form (1b, 2b) graded Moses' retelling of ACTS against the tape. Chapter 5 retells the CODE — the ten words
+said again — so the form was applied to law: one reference row per verse of the second copy (5:6-21), each graded against the runner's cell that
+compiles the word and NAMING that cell. The grades: VERBATIM five (5:6, 7, 11, 13, 17), VARIANT five (a letter or a conjunction moved, the sense
+unchanged — 5:8, 9, 10, 18, 19; the grade the code's copy adds), EXPANDED three (5:12 keep for remember with the receipt; 5:14 the beasts and the
+servants' rest; 5:16 the receipt and "that it may go well"), TURNED three (5:15 the exodus for the creation; 5:20 vain for false; 5:21 the wife first
+and desire for covet). The tradition itself reads the expansions as teachings: the ox and the ass inside "all cattle" teach every animal wherever the
+pair is written (Bava Kamma 54b:13); "good" is absent from the first tablets because they were to be broken (Bava Kamma 55a); keep and remember were
+one utterance (Shevuot 20b, Rosh Hashanah 27a). The deltas recomputed from the DB: 172 tokens / 620 letters against 189 / 708.
+
+THE CODE'S HOLE. Locating each word's cell first — a regex over every runner's ink references, per def — found that the SECOND word (no other gods,
+no image, no bowing, the jealous God) and the TENTH (covet, desire) had NO CELL in any runner: the first word none by nature (a declaration), the fifth
+and the ninth compiled at their kin's seats only (Leviticus 19:3; Exodus 23:1), six at the Decalogue's or the ordinances'. The retelling's seat
+compiled both from both copies' ink with their answer sheets — Mishnah Sanhedrin 7:6 with Sanhedrin 60b (the idolater stoned for worship in its way
+and for the Temple's four rites even not in its way; the bower by the juxtaposition of 17:3 to 17:5; the hugger a prohibition without death) and Bava
+Metzia 5b (coveting even with payment) — and wrote their BLOCKS on Israel AT THE CODE'S OWN LINE: the daemon watches 2b's supplied ten_words_declared,
+dated (1, 3, 7), and writes other_gods_barred and coveting_barred there, never at the retelling's. The readback's R3 on law. THE REST test carried it
+as a declared delta (6b's form): the tape minus this runner's lines still has the daemon firing on the giving's line.
+
+THE TAPE'S SECOND HOLE. The same measurement found no line on the tape for Exodus 20:18-21 — the people's request for a mediator: 20:18 sits in NO
+runner's span (the decalogue's ends at 20:17, the ordinances' begins at 20:19) and 20:19-26 are law cells. Chapter 5 tells the request (5:23-27) and
+an answer told nowhere else (5:28-31 — "they have done well … return to your tents … stand here with me"; 18:16-17 cites it forward). Both written
+once at their own day by one retrograde marker at 5:23 dated (1, 3, 7), a forward marker at 5:32 ending the stretch (2b's lesson 1). The answer writes
+two: THE CHARGE TO TEACH a debit on Moses closed at once by the prior run — the book's own opening (1:1-5) is its run, so the closer is the frame's
+line, earlier on the tape (the opening speech's form) — and "return to your tents" a status on Israel, the separation of Exodus 19:15 released by an
+explicit word (Beitzah 5a-b: a matter forbidden by a count needs a count to permit). The request writes torah_through_moses: Makkot 24a:1 — the first
+two words from the Almighty's mouth, the rest through Moses. Closes 126 → 127. The closer's text taught one more rule: written first as the frame's
+range "Deut 1:1-5", it reclassed the older receipt at 1:3 as CLOSE — the register gate reads a closer by containment — so a closer names one verse.
+
+THE RECEIPT'S TWO REFERENTS. "As the LORD your God commanded you" inside the fourth and fifth words (5:12, 5:16) and closing the chapter (5:32) is a
+law citing its prior giving — the ink's referent the ten words' line on the tape. The docket added the teacher's: Rav Yehuda reads the receipt as
+MARAH (Sanhedrin 56b:16; Shabbat 87b:1 — the Sabbath and honoring parents among Exodus 15:25's statutes). The register seats declared CHAPTER as the
+gate's code predicted (no write's source holds the verses — the second copy is no line; the chapter holds the closed charge), and the three pointers
+name both referents.
+
+THE SHELF'S TWO NUMBERINGS. The scan of the shelf's English for "Deuteronomy 5:n" found the citations follow TWO divisions — the export's thirty
+verses (17 = the four short words) and one a verse lower around them: Sanhedrin 17a:12 cites 5:19 and Sotah 10b:12 cites 5:18 for the same "did not
+cease" (the DB's 22); Avodah Zarah 5a:8 cites 5:26 for "with their children forever" (the DB's 29) and Beitzah 5a:7 cites 5:26 for "return to your
+tents" (the DB's 30). The rule: the row's quoted words fix the DB verse; every docket verdict names the verse by the quote.
+
+A CLOSE MOVES EVERY OLD COUNT. The first tape run reached 9/10 — the RUN tuple and THE REST both as predicted — with one miss: eight older REST
+checkpoints (CT9, CV2, CV9, CX9, CY9, CZ9, CW9, CR9) hold the tape's closes as a literal 126, retyped to that at 1b and unmoved since; the design had
+named only the newest three. Retyped to 127 as of this sitting; 10/10 on the second run. Beside it the fast checkpoint check refused before the tape
+ran — the journal's base had moved at the giving's ordinal, where the new daemon now writes — so a daemon that writes on an older line means the tape
+runs first and the fast check follows.

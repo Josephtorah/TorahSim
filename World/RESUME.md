@@ -1,3 +1,18 @@
+# ⚠ THE DEUTERONOMY WALK sitting 3b (2026-09-16; step9/DEUTERONOMY_WALK.md "Sitting 3b" + "Sitting 3b — AS BUILT"): CHAPTER 5 COMPILED —
+# step9/cold_run_covenant_at_horeb.py the 60th runner (49/49; seven cells; the readback's twenty-one rows — sixteen on the code, code against code),
+# law_covenant_at_horeb the 65th daemon (given_at Exod 20:3); THE CODE'S HOLE filled: the second and the tenth words had no cell anywhere — compiled
+# here, their blocks written at the giving's line (1, 3, 7); THE TAPE'S SECOND HOLE filled: the request for a mediator (Exodus 20:18-21) and the
+# answer told only here, written once at (1, 3, 7) by a retrograde marker at 5:23, the charge to teach closed by the prior run; the receipts 5:12,
+# 5:16, 5:32 CHAPTER (the giving and Marah); the tape 10/10 with RUN (1302, 96, 88, 0, 12, 1593, 36, 319, pairs, 127) as predicted, markers 167,
+# closes 127; every probe suite and gate GREEN, the sweep 60/60.
+# NEXT on the ruling: the commit on the owner's word; chapter 6's reading (6:1-25) — or the schema sitting first, on his word.
+# ⚠ THE DEUTERONOMY WALK sitting 3 (2026-09-16; step9/DEUTERONOMY_WALK.md "Sitting 3"): CHAPTER 5 READ AND FROZEN as one unit (the 219th —
+# deu_05_decalogue 5:1-33): THE TWO DIVISIONS mapped by alignment (the export's 17 = the DB's 17-20, then the offset three); Onkelos on all 33
+# verses through the map, the Sifrei's five rows by citation (no piska on the chapter); the two copies of the ten words DIFFED verse by verse (five
+# verbatim; keep for remember; the exodus for the creation at 5:15; the receipts inside the words at 5:12, 5:16 — the register gate's seats; the
+# ketiv at 5:10; the vain witness; the wife first); the ritual 13 PASS, CORPUS TRUTH GREEN (219 units, standing 2197 = 2191 + 6, hash
+# unmoved), build_world, the journal gate (12 kinds, 9660 rows), the register gate --strict (DECLARED 100, DEBT 0, FAILS 0) GREEN.
+# NEXT on the ruling: the compile of chapter 5 (3b — the laws' readback, code against code) or the schema sitting first, on the owner's word.
 # ⚠ THE DEUTERONOMY WALK sitting 2b (2026-09-16; step9/DEUTERONOMY_WALK.md "Sitting 2b" + "Sitting 2b — AS BUILT"): CHAPTER 4 COMPILED —
 # step9/cold_run_obey_horeb.py the 59th runner (52/52; six cells; the readback's eleven rows), law_obey_horeb the 64th daemon (given_at Deut 4:2);
 # THE TAPE'S HOLE filled: the ten words spoken and the tablets given, told only in the retelling, written once at (1, 3, 7) and (1, 4, 17) by

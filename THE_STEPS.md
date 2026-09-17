@@ -4269,6 +4269,42 @@ its close in Joshua. The second word of the ten — the image law — turned out
 named at the edge. The runner reproduced the answer sheet on its first graded run; the tape reached ten of ten on its sixth, each miss read from the
 print and each a lesson written down; every probe suite and every gate green, the sweep whole. Next: chapter 5's reading, measuring the export's
 thirty verses against the database's thirty-three first; the schema question waits on your word.
+DEUTERONOMY — SITTING 3 — CHAPTER 5, Deuteronomy 5:1-33 (2026-09-16, on Brian's "go" after the rereads; World/step9/DEUTERONOMY_WALK.md "Sitting 3").
+The chapter where Moses says the ten words again. Before a row was written we measured the one thing the last sitting flagged: the translation's
+copy of the chapter has thirty verses and our Bible has thirty-three. A small instrument lined the two up by counting words and "not"s, and found
+the fold without anyone typing a table — the translation keeps the four short words (murder, adultery, theft, false witness) on one line. From
+there every address in the sitting went through that map. Then the reading: Onkelos on every verse, the Sifrei's five rows that speak to the
+chapter from elsewhere (it has no section of its own on chapters 4 or 5), and the two copies of the ten words laid side by side word for word.
+Five verses match exactly. The differences are the finds: "keep" for "remember" on the sabbath, and the Sifrei says the two were spoken as one;
+the sabbath's reason changes whole — creation there, the slave in Egypt here; the second copy twice says "as the LORD your God commanded you"
+inside a commandment — a law citing its own earlier giving, which our register had been waiting to see; the false witness becomes a vain
+witness; the wife is named before the house; one word is written "his" and read "my". The chapter is frozen as one unit, the 219th, every gate
+green, the world's count of standing facts up by six as predicted and its hash unmoved. Next: the compile of chapter 5 — the laws read back as
+code against code — or the ten-commandments schema first, on your word.
+
+
+DEUTERONOMY — SITTING 3b — CHAPTER 5 COMPILED (2026-09-16, on Brian's "go"; World/step9/DEUTERONOMY_WALK.md "Sitting 3b" and "Sitting 3b — AS
+BUILT"). This was the readback's other half, the one the loop's sixth step had owed since Numbers: not a retold act graded against the tape, but the
+code itself said again — the ten words in Moses' mouth graded against the code as it was compiled. Before the design, every word was traced to the
+cell that compiles it, and two had none anywhere: the second word (no other gods, no image, no bowing) and the tenth (covet). Both were compiled here
+from both copies of the ink with the Talmud's own answer sheets, and their blocks were written on the ledger at the day the words were first spoken,
+not at the day they were repeated — the rule the earlier sittings built for acts now holding for law. Sixteen rows on the code, graded exactly (five
+the same letter for letter; five a letter or a conjunction apart; three grown by a clause; three with a ground or a term replaced), and the tradition
+turned out to read the very differences as teachings. The measurement also found a second hole in the tape: the people's request for a mediator at
+Horeb had never been written, and the answer to it is told only here — both written once at the giving's day, the charge to teach closed by the
+book's own opening. The receipt "as the LORD your God commanded you", written inside two of the words, was read two ways — the ink's (the giving) and
+the teacher's (Marah) — and the register seats now say so. The shelf's citations of this chapter turned out to follow two numberings, so every docket
+row was pinned by its quoted words. The runner reproduced the answer sheet on its first run; the tape reached ten of ten on its third, the misses
+being eight old counts of closes that one new close moved, and a closer written as a range that swept an older receipt into its close; every probe
+suite and every gate green in one chain, the sweep whole. Next: the commit on
+your word; then chapter 6's reading — or the schema sitting first, on your word.
+
+THE FOUR-RUN RULE (2026-09-16, on Brian's "Yes write it", after chapter 5's compile ran as one sitting of six hundred thousand tokens). A sitting is
+no longer one run. It is four, with a clean stopping point after each: first the rereads, the measurements and the design; second the docket;
+third the runner and the tape to ten of ten; fourth the gates and the records. Each run stays near a fifth of a context, and the state doc's
+checkpoint at each edge names the next run's first step, so the reread after a compaction is the same three files. Two economies inside a run:
+the docket's rows are read at a short cut, and a prior sitting's script is derived by substitution and read only where it differs. The reason is
+his: a million tokens in one run is not to be trusted, and the instruments that caught this sitting's misses are no excuse for a long context.
 
 ## Step 6 — Publish
 Export, parity check against the public repo, deploy. Owner's word.

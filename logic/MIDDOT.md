@@ -1492,6 +1492,50 @@ narrative strength. By cluster:
     verse read as a rule about teaching; a row at F1 taught_as_commanded, no cell.
   · MOSES' PLEA AND THE BAR (Berakhot 32b on 3:23-26 and 4:21): "the LORD was angry with me on your account" — the bar's third ground; the DISAGREES
     row widened beside 1:37's, OPEN, no write.
+- **THE SIFREI ON DEUTERONOMY'S OWN CASE LAW ON CHAPTER 5 (Deuteronomy 5:1-33; THE DEUTERONOMY WALK sitting 3, 2026-09-16;
+  the ledger logic/oral_triage/deu_05_vaetchanan_2026-09-16.md — NO PISKA on the chapter, its five fresh rows found by citation in
+  the whole export, each read in both files):**
+  · THE STUDY BEFORE THE DEED (41:1 on 11:13 from 5:1 "and you shall learn them and keep to do them"): the doubt whether the
+    duty to study waits on the duty to do, closed by 11:13's "hearken" — I2's form, a REFERENCE the Sifrei draws by the verb.
+  · THE DEED HANGS ON THE STUDY (41:4 on 11:13 from 5:1): the order of two verbs in one verse read as a dependency, Hosea 4:1's
+    three absences (truth, kindness, KNOWLEDGE) the weight of the punishment — E12's kin (the sequence of the ink as its logic);
+    the row's Hebrew cites nothing of Deuteronomy, the English "(Dt.5:1)" — found by the English file alone.
+  · REMEMBER AND KEEP IN ONE UTTERANCE (233:1 on 22:11-12 with 5:12 and Exodus 20:8): the two copies' first divergent word declared
+    one saying, beside the mingled stuff and the fringes — I13's kin (the contradiction resolved by one voice, not a third verse);
+    the Mekhilta, Bahodesh 7, named by the export's footnote — the first copy's spine, unopened by any ledger.
+  · "WORDS" ARE WORDS OF TORAH (306:16 on 32:2 from 5:22 "these words the LORD spoke"): the ten words the lexicon entry for the
+    word — E7 (the term fixed from its defining seat, the Sifrei's "nothing but"); the row cites the export's 5:19 = the DB's 5:22.
+  · MOSES PROPHESIED STANDING (357:40 on 34:10 from 5:31 "stand here with me"): Moses against Balaam seat by seat (who spoke, when,
+    in what posture) — E28's kin, with E26's parable of the king's cook; the row cites the export's 5:28 = the DB's 5:31.
+
+- THE CHAPTER-5 DOCKET (THE DEUTERONOMY WALK sitting 3b, 2026-09-16; logic/oral_triage/deu_05_vaetchanan_exam_2026-09-16.md — 275 rows; the rules
+  about rules the docket carries, each at its row):
+  · ONE UTTERANCE SAYS TWO WORDS (Shevuot 20b:9; Rosh Hashanah 27a:2, 27a:6; Berakhot 20b:10 on Deuteronomy 5:12 and Exodus 20:8): "remember" and
+    "keep" spoken at once — what the mouth cannot say nor the ear hear; the vain and the false oath "one" by the same rule; whoever is in "keep" is in
+    "remember" (women's kiddush) — the diff's first word read as a rule about the giving: the DATA row keep_and_remember; the readback row 5:12.
+  · THE EXPANSION READ AS A TEACHING (Bava Kamma 54b:13 on 5:14; Bava Kamma 55a:1 on 5:16): the second copy's "your ox and your ass" inside "all your
+    cattle" teaches every animal wherever the pair is written; "that it may go well with you" absent from the first tablets because they were to be
+    broken — the readback's EXPANDED rows carry the tradition's own reading of the expansion.
+  · THE RECEIPT READ AS MARAH (Sanhedrin 56b:16; Shabbat 87b:1 on 5:12, 5:16): "as the LORD your God commanded you" = at Marah (Exodus 15:25) — a
+    receipt's referent taught earlier than its plain one; the pointers name both.
+  · A MATTER LEARNED FROM ITS CONTEXT (Sanhedrin 86a:16-17 on 5:19 / Exodus 20:15 and Leviticus 19:11): "you shall not steal" among capital words
+    speaks of persons; among property words of property — the decalogue runner's own move at its Talmud seat, the readback row 5:19.
+  · THE TEMPLE'S RITES EMPTIED TO THE NAME (Sanhedrin 60b:8-15 on Exodus 22:19; 60b:11 on Deuteronomy 17:3-5): slaughter, incense, libation — the
+    Temple's services — capital for an idol even not in its way; bowing by the juxtaposition of "bowed" to "stone them"; the hugger and the kisser a
+    prohibition without death: the second word's cell F2, the DATA row the_second_word.
+  · COVETING EVEN WITH PAYMENT (Bava Metzia 5b:19-20 on 5:21 / Exodus 20:17): taking by force or deceit violates the tenth word though the taker pays;
+    the people read it as without payment, so the payer's oath stands — the tenth word's cell F5, the exam's person the coveter who pays.
+  · THE FIRST TWO WORDS FROM THE ALMIGHTY'S MOUTH (Makkot 24a:1 on 5:6-7 and 5:27): 611 through Moses and two direct — the request for a mediator
+    read as the code's own division: the status torah_through_moses, the DATA row the_mediator.
+  · "WE WILL DO" BEFORE "WE WILL HEAR" (Shabbat 88a:5-9 on 5:27 against Exodus 24:7): the order a crown, the mountain a tub over them — the TURNED row.
+  · A COUNT NEEDS A COUNT TO PERMIT (Beitzah 5a:7-5b:3; Sanhedrin 59b:4 on 5:30): "return to your tents" said though the three days had passed —
+    the status returned_to_tents, the separation of Exodus 19:15 released by a word.
+  · THE HONOR AND THE FEAR DEFINED (Kiddushin 30b:16-31b:14 on 5:16 with Leviticus 19:3): the six services and the three abstentions; the three
+    equations; the father first in "honor", the mother first in "fear" — the fifth word compiled at its kin's seat by CALL.
+  · THE SECOND COPY A THIRD SAYING (Sotah 37b:3 on the ten words; Tosefta Sotah 8:11): R. Akiva — generals and details at Sinai, at the Tent, at Moab;
+    R. Yishmael — the generals at Sinai only: the readback's own status on the shelf, a DATA setting.
+  · THE TEN AS ONE READING, ABOLISHED (Berakhot 12a:4-8; Kiddushin 31a:6-7): read daily in the Temple, sought outside and abolished for the heretics'
+    grievance; the nations conceded the first words when the fifth was said — the schema question's exhibits, no rule.
 
 ## Exodus block campaign — owner's word "Do 3")
 

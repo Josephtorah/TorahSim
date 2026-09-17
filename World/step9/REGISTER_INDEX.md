@@ -1,7 +1,7 @@
 # REGISTER_INDEX.md — written by register_census.py each run (documentation, never runtime)
 
-THE REGISTER GATE — the ink's own formulas against the world (population table rows 148; ledger entries 1600)
-COVERAGE: counts 110 {'MEASURE-ONLY': 44, 'NONE': 16, 'ELSEWHERE': 14, 'ROW': 29, 'LEDGER': 7}; receipts 69 {'CHAPTER': 8, 'NONE': 17, 'ACT': 23, 'EVENT': 5, 'CLOSE': 16}; footers 9 {'DAEMONS': 6, 'EMPTY': 3}; registers 18 {'NONE': 14, 'ROWS': 4}
+THE REGISTER GATE — the ink's own formulas against the world (population table rows 148; ledger entries 1605)
+COVERAGE: counts 110 {'MEASURE-ONLY': 44, 'NONE': 16, 'ELSEWHERE': 14, 'ROW': 29, 'LEDGER': 7}; receipts 69 {'CHAPTER': 11, 'NONE': 14, 'ACT': 23, 'EVENT': 5, 'CLOSE': 16}; footers 9 {'DAEMONS': 6, 'EMPTY': 3}; registers 18 {'NONE': 14, 'ROWS': 4}
 DECLARED 100; DEBT 0; FAILS 0
 -- A. THE COUNT LINES (110)
    Gen 11:10   MEASURE-ONLY  green    footer: these are the generations of [100, 2] | measures [100, 2]
@@ -175,12 +175,12 @@ DECLARED 100; DEBT 0; FAILS 0
    Num 31:47   CLOSE         green     | [('moses', 'commanded')]
    Num 36:10   NONE          declared  | [] | why: "as the LORD commanded Moses, so did the daughters" — the receipt the verse BEFORE the act: the Zelo
    Deut 1:3    ACT           declared  | [('israel_people', 'torah_expounded', 'status')] | why: THE DEUTERONOMY WALK 1b (2026-09-15) | "and it came to pass in the fortieth year ... that Moses spok
-   Deut 1:19   CHAPTER       declared  | [('israel_people', 'commanded')] | why: THE DEUTERONOMY WALK 1b (2026-09-15) | "we journeyed from Horeb ... AS THE LORD OUR GOD COMMANDED US
-   Deut 1:41   CHAPTER       declared  | [('israel_people', 'commanded')] | why: THE DEUTERONOMY WALK 1b (2026-09-15) | "we have sinned against the LORD; we will go up and fight, ac
+   Deut 1:19   CHAPTER       declared  | [('israel_people', 'commanded'), ('moses', 'commanded')] | why: THE DEUTERONOMY WALK 1b (2026-09-15) | "we journeyed from Horeb ... AS THE LORD OUR GOD COMMANDED US
+   Deut 1:41   CHAPTER       declared  | [('israel_people', 'commanded'), ('moses', 'commanded')] | why: THE DEUTERONOMY WALK 1b (2026-09-15) | "we have sinned against the LORD; we will go up and fight, ac
    Deut 4:5    ACT           declared  | [('israel_people', 'adding_barred', 'block')] | why: THE DEUTERONOMY WALK 2b (2026-09-16) | "behold, I have taught you statutes and judgments AS THE LORD
-   Deut 5:12   NONE          declared  | [] | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
-   Deut 5:16   NONE          declared  | [] | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
-   Deut 5:32   NONE          declared  | [] | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
+   Deut 5:12   CHAPTER       declared  | [('moses', 'commanded')] | why: THE DEUTERONOMY WALK 3b (2026-09-16) | "KEEP the sabbath day to sanctify it, AS THE LORD YOUR GOD CO
+   Deut 5:16   CHAPTER       declared  | [('moses', 'commanded')] | why: THE DEUTERONOMY WALK 3b (2026-09-16) | "honor your father and your mother, AS THE LORD YOUR GOD COMM
+   Deut 5:32   CHAPTER       declared  | [('moses', 'commanded')] | why: THE DEUTERONOMY WALK 3b (2026-09-16) | "you shall observe to do AS THE LORD YOUR GOD COMMANDED YOU; 
    Deut 10:5   NONE          declared  | [] | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
    Deut 20:17  NONE          declared  | [] | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
    Deut 34:9   NONE          declared  | [] | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile

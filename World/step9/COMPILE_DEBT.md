@@ -1595,7 +1595,7 @@ follows the last check mark.
 ## second word's parameter table, the pointer to Exodus 20:4 in the CALL edge's why; (h) the host "apportioned" a DATA note (Avodah Zarah 55a:9 "let slip" — no link
 ## of our own); (i) the chapter-5 division — the recorder and the stitcher address by the DB; the next reading's first measurement STANDS OWED; (j) the gloss families
 ## a display sitting's, unmoved; (k) the docket by the union rule (the nine ranges whole; ten Mishnah rows; sixteen crowns); (l) the Mekhilta's question credited by
-## name (the reading shelf's). OWED FROM 2b: (i) THE SECOND WORD — Exodus 20:3-6 (the image law) has NO CELL in any runner; the edge obey_horeb → decalogue
+## name (the reading shelf's). OWED FROM 2b: (i) THE SECOND WORD — PAID AT 3b (cold_run_covenant_at_horeb.py F2 the_second_word, 2026-09-16; the block other_gods_barred at the giving's line) — AS WRITTEN AT 2b: Exodus 20:3-6 (the image law) has NO CELL in any runner; the edge obey_horeb → decalogue
 ## (DC.altar_rules('steps')) names the debt in its why; 4:16-19's list its parameter table; OWED to chapter 5's sitting (the Decalogue's second copy) — the schema
 ## sitting on the table its natural home; (ii) THE REFUGE DEBIT — appoint_six_cities_of_refuge OPEN on Israel since Numbers 35:14, unmoved by Moses' three (a status,
 ## not a close); the close at Joshua 20:7-8, THE READBACK's when the Prophets are walked; (iii) THE D2 CANDIDATE — law_decalogue's installed_by: the tape now
@@ -1603,3 +1603,40 @@ follows the last check mark.
 ## decision, the row unmoved (boot); (iv) THE BAR'S THIRD TELLING — the DISAGREES rows 1:37 and 4:21-22 OPEN, no write; (v) 4:26's "not prolong days" and 4:30's
 ## "in your distress … return" open topics (the tochacha's scattered_among_nations registered, never written — no exile on the tape); (vi) THE CHAPTER-5 DIVISION —
 ## the export's thirty verses against the DB's thirty-three, measured FIRST at chapter 5's reading. NOTHING ELSE IN CHAPTER 4 IS OWED TO A LATER SITTING OF ITS OWN.
+
+## DEUTERONOMY SITTING 3 — CHAPTER 5, Deuteronomy 5:1-33 READ AND FROZEN (2026-09-16; DEUTERONOMY_WALK.md "Sitting 3"; the ledger deu_05_vaetchanan_2026-09-16.md,
+## 38 sources; one unit deu_05_decalogue FROZEN, the 219th) — PAID AT 3b (the 3b box below, item by item) — AS WRITTEN AT THE READING, OWED TO THE COMPILE (sitting 3b): (a) THE LAWS' READBACK — the second copy 5:6-21 a
+## REFERENCE ROW per word graded against the decalogue runner's cells, code against code (VERBATIM 5:6, 7, 11, 13, 17; EXPANDED 5:12, 14, 16; the
+## ground TURNED at 5:15; the wife first at 5:21); (b) THE SECOND WORD — Exodus 20:3-6 with no cell in any runner (the 2b box's debt; 5:7-10 its
+## second copy, 4:16-19 its table); (c) THE RECEIPTS' SEATS — Deut 5:12, 5:16 NONE ("as the LORD your God commanded you" INSIDE the ten words: a law
+## citing its prior giving — RUN_CITATION of Exodus 20:8, 20:12) and 5:32 the plural; (d) THE KETIV AT 5:10 — "his" written, "my" read: a DATA note,
+## no line; (e) THE SABBATH'S TWO GROUNDS — the creation (Exodus 20:11) and the exodus (5:15) in the fourth word's parameter table; (f) THE VAIN
+## WITNESS — 5:20 against 20:16's false witness, the ninth word's parameter (Onkelos levels it); (g) THE VOICE AND THE TABLETS — 5:22's two lines
+## already on the tape by 2b's retrograde markers (1, 3, 7) and (1, 4, 17): FOUND, no write; "added no more" a DATA note ("did not cease"); (h) THE
+## REQUEST AND THE ANSWER — 5:23-31 reference rows against Exodus 19-20, 24 and 1:22, 1:34; "hear and do" against "do and hear" (Exodus 24:7) a
+## REFERENCE; "they have done well" cited forward at 18:17; (i) THE BLOCK'S EDGE — 5:31 the charge that opens Moses' teaching at 6:1; whether chapter
+## 5 installs any daemon (the reading found no law of its own outside the copy); the block (Deut 4:45, Deut 5:33]; (j) THE DOCKET by the union rule —
+## the Decalogue exam's rows on the first copy (2026-09-04), Shevuot 3:8-9, Shabbat 88a, Sanhedrin 17a, Makkot 24a, Berakhot 12a, Kiddushin 30b-31b,
+## Sanhedrin 86a, Bava Metzia 5b, Yoma 4b, Sotah 37b; 5:3's "not with our fathers" and 5:29's "who would give" open topics; (k) THE SCHEMA SITTING ON
+## THE TABLE — its seat this chapter; the Sifrei 233:1 (remember and keep in one utterance) the tradition's own filing of two seats under one header,
+## the exhibit for the first decision (REFERENCE or cited TRANSFER). NOTHING ELSE IN CHAPTER 5 IS OWED TO A LATER SITTING OF ITS OWN.
+
+## DEUTERONOMY SITTING 3b — THE COMPILE OF CHAPTER 5 (2026-09-16; DEUTERONOMY_WALK.md "Sitting 3b" design + AS BUILT; logic/oral_triage/deu_05_vaetchanan_exam_2026-09-16.md
+## 275 rows; cold_run_covenant_at_horeb.py 49/49; law_covenant_at_horeb the 65th daemon; the tape 10/10 with RUN (1302, 96, 88, 0, 12, 1593, 36, 319, pairs, 127)). THE SITTING-3
+## BOX (a)-(k) PAID — (a) THE LAWS' READBACK built: sixteen rows on the code (one per verse of 5:6-21) graded VERBATIM 5 / VARIANT 5 / EXPANDED 3 / TURNED 3, each naming
+## the cell that compiles the word or NO CELL (5:6 alone), five narrative rows; (b) THE SECOND WORD compiled — F2 the_second_word from both copies (Mishnah Sanhedrin 7:6;
+## Sanhedrin 60b), its block other_gods_barred on Israel written at the giving's line (1, 3, 7); AND THE TENTH WORD, found without a cell by the same measurement — F5
+## the_tenth_word (Bava Metzia 5b), coveting_barred at the giving's line; (c) THE RECEIPTS' SEATS Deut 5:12, 5:16, 5:32 declared CHAPTER (the gate's code: no write holds
+## the verses, the chapter holds the closed charge), the pointers RUN_CITATION naming the giving and the teacher's Marah (Sanhedrin 56b); (d) the ketiv a DATA note; (e) the
+## sabbath's two grounds a DATA row (the creation by the pre-Sinai runner's call); (f) the vain witness a DATA row (ordinances.courts by call; 19:16-21 forward); (g) the
+## voice and the tablets FOUND, no second write; (h) the request and the answer TWO SUPPLIED lines dated (1, 3, 7) by the retrograde marker at 5:23 — THE TAPE'S SECOND
+## HOLE (Exodus 20:18-21) filled; "hear and do" TURNED against 24:7; "they have done well" a DATA note (18:17 forward); (i) the block's edge — chapter 5 installs ONE
+## daemon (the second and tenth words'; given_at Exodus 20:3, outside 4:45's block), no footer, the charge no write; (j) the docket by the union rule — 275 rows, the
+## second word's answer sheet added; (k) the schema sitting stays ON THE TABLE. OWED FROM 3b: (i) THE IDOLATER'S PROCEDURE — Deuteronomy 17:2-7 (the stoning by the
+## juxtaposition, Sanhedrin 60b:11) compiles at chapter 17's sitting; the second word's cell cites it by reference; (ii) THE CONSPIRING WITNESSES — 19:16-21 the ninth
+## word's own procedure, chapter 19's sitting; (iii) THE PROPHET'S PROMISE — 18:15-19 cites 5:28's "they have done well" forward, chapter 18's; (iv) THE D2 CANDIDATE —
+## law_decalogue's and law_covenant_at_horeb's installed_by (covenant_blood_thrown) may turn to ten_words_declared, a loop sitting's decision; (v) THE VISITING CLAUSE —
+## the third and fourth generation's arms (Berakhot 7a; Makkot 24a:30 revoked by Ezekiel) recorded as DATA, no cell of its own; (vi) THE SEPARATION'S RELEASE — the
+## tape's people_sanctified timer stands as fired; returned_to_tents a status beside it, no close (the timer's entry is not a debit); (vii) the Mekhilta on Exodus 20
+## (Bahodesh 7-8 — one utterance, covet and desire) named, unopened — the first copy's spine, a reading sitting's if the schema sitting opens. NOTHING ELSE IN
+## CHAPTER 5 IS OWED TO A LATER SITTING OF ITS OWN.
