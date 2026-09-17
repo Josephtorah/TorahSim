@@ -4305,6 +4305,21 @@ third the runner and the tape to ten of ten; fourth the gates and the records. E
 checkpoint at each edge names the next run's first step, so the reread after a compaction is the same three files. Two economies inside a run:
 the docket's rows are read at a short cut, and a prior sitting's script is derived by substitution and read only where it differs. The reason is
 his: a million tokens in one run is not to be trusted, and the instruments that caught this sitting's misses are no excuse for a long context.
+DEUTERONOMY — SITTING 4 — CHAPTER 6, Deuteronomy 6:1-25 (2026-09-17, on Brian's "ok lets start the next chapter", then "go", "Continue" and "Go" for the
+runs — the first sitting under the four-run rule; World/step9/DEUTERONOMY_WALK.md "Sitting 4" and "Sitting 4 — AS BUILT").
+The chapter of the Shema. For the first time in this book the Sifrei's own sections land on the chapter: six of them, one for each verse from
+"Hear, O Israel" to "write them on the doorposts", and nothing on the verses before or after. The sitting ran as four runs with a stopping point
+after each — the measurements and the design; the rows and the ledger; the seat, the freeze and the fold; the records — and the reread after the
+one compaction was three files. What the reading found: the Sifrei puts the creed's first saying in Jacob's sons' mouths at his deathbed, answering
+their father's doubt; "the LORD is one" stands only here and once in Zechariah; the word "might" has one seat in the whole Bible, and the shelf
+reads it three ways — money, measure, thanks — while Onkelos writes "property"; the Shema's text and the tefillin's text are two sets that share
+two members, with the ten commandments in neither; one row of the shelf's English file turned out to be a different row than its Hebrew, so a
+credit from a Genesis sitting stood on the wrong text and the Hebrew was read fresh; and the shelf counts the tefillin's four compartments from a
+spelling our Bible text does not have — that goes to the compile as an open row, recorded and not resolved. Our machine's own store drops the two
+large letters of "Hear" and "one" — a marker layer we named a hypothesis and parked. The chapter is frozen as one unit, the 220th, the world's
+standing facts up by six as predicted, its hash unmoved, every gate green. Next: the compile of chapter 6 in four runs — the creed's duties as
+code, the son's answer graded against the tape as a story told to a son — or the ten-commandments schema first, on your word.
+
 
 ## Step 6 — Publish
 Export, parity check against the public repo, deploy. Owner's word.

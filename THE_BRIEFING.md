@@ -14,7 +14,8 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   baked into an epub.
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
-## SCOREBOARD (as of 2026-09-16, latest)
+## SCOREBOARD (as of 2026-09-17, latest)
+- **CHAPTER 6 READ AND FROZEN — THE SHEMA: THE SIFREI'S SIX SECTIONS LAND ON SIX VERSES, THE CREED'S FIRST SAYING IS JACOB'S SONS' ANSWER, AND THE SHELF COUNTS A SPELLING OUR TEXT DOES NOT HAVE** (2026-09-17, on your "ok lets start the next chapter" and the runs' "go", "Continue", "Go" — the first sitting in four runs; World/step9/DEUTERONOMY_WALK.md "Sitting 4"): Onkelos on all 25 verses, the Sifrei's 67 rows on 6:4-9 and eight rows from elsewhere — 97 sources, coverage computed; "the LORD is one" two seats in the Bible; "might" one seat, read as money, measure, thanks; the Shema's text and the tefillin's two sets with the ten commandments in neither; one row where the shelf's two files diverge; the tefillin's four compartments counted from a spelling of 11:18 our text writes differently — an open row for the compile; the store's dropped large letters a parked hypothesis; one unit frozen (the 220th), 6 claims verified, the ritual 13 PASS, standing facts 2203 (+6 as predicted), hash unmoved, every gate green. NEXT: the commit on your word; then the compile of chapter 6 in four runs, or the schema sitting first.
 - **CHAPTER 5 COMPILED — THE CODE SAID AGAIN AND GRADED AGAINST THE CODE: SIXTEEN ROWS OF THE TEN WORDS, EACH NAMING THE CELL THAT COMPILES IT; TWO WORDS HAD NO CELL ANYWHERE — THE SECOND AND THE TENTH — COMPILED HERE AND WRITTEN AT THE DAY THEY WERE FIRST SPOKEN; A SECOND HOLE IN THE TAPE, THE REQUEST FOR A MEDIATOR, FILLED; THE RECEIPT READ TWO WAYS** (2026-09-16, on your "go"; World/step9/DEUTERONOMY_WALK.md "Sitting 3b" + AS BUILT): cold_run_covenant_at_horeb.py the 60th runner (49/49), law_covenant_at_horeb the 65th daemon; the readback's twenty-one rows; the tape 10/10 with RUN (1302, 96, 88, 0, 12, 1593, 36, 319, pairs, 127) as predicted, markers 167; every gate GREEN, the sweep 60/60. NEXT: the commit on your word; chapter 6's reading, or the schema sitting first.
 - **CHAPTER 5 READ AND FROZEN — THE TEN WORDS SAID AGAIN: FIVE VERSES MATCH EXACTLY, THE SABBATH'S REASON CHANGES WHOLE, AND TWICE THE LAW CITES ITS OWN GIVING** (2026-09-16, on your "go" after the rereads; World/step9/DEUTERONOMY_WALK.md "Sitting 3"): the translation's thirty verses mapped to the Bible's thirty-three by an instrument before a row was written (the four short words one line there); Onkelos on all 33 verses, the Sifrei's five rows from elsewhere; the two copies diffed word for word — 172 words against 189; "keep" for "remember" (the Sifrei: one utterance), the exodus for the creation, the receipt "as the LORD your God commanded you" inside two commandments, the vain witness for the false, the wife first, "his" written and "my" read; one unit frozen (the 219th), 6 claims verified, the ritual 13 PASS, the world's standing facts 2197 (+6 as predicted), hash unmoved, every gate green. NEXT: the compile of chapter 5 (the laws read back as code against code), or the schema sitting first, on your word.
 - **CHAPTER 4 COMPILED — THE TAPE HAD A HOLE AND THE RETELLING FILLED IT: THE TEN WORDS SPOKEN AND THE TABLETS GIVEN, TOLD ONLY IN MOSES' RETELLING, WRITTEN ONCE AT THEIR OWN DAYS; THE ONE LAW A BLOCK WITH THE SHELF'S TWO ARMS; MOSES' THREE CITIES A STATUS, THE REFUGE DEBT OPEN UNTIL JOSHUA; THE IMAGE LAW FOUND UNCOMPILED AND NAMED AS DEBT** (2026-09-16, on your "then we finish 4"; World/step9/DEUTERONOMY_WALK.md "Sitting 2b" + AS BUILT): cold_run_obey_horeb.py the 59th runner (52/52), law_obey_horeb the 64th daemon; the readback's eleven rows; the tape 10/10 with RUN (1300, 96, 88, 0, 12, 1588, 35, 319, pairs, 126) as predicted, markers 165; every gate GREEN, the sweep 59/59. NEXT: chapter 5's reading.
@@ -483,6 +484,22 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   Next alongside it: Leviticus (new spine — Sifra).
 
 ## ENTRIES (newest first)
+
+### 2026-09-17 — CHAPTER 6 READ: THE SHEMA, AND THE FIRST SITTING IN FOUR RUNS
+
+The chapter that holds "Hear, O Israel". Two things are new here. The first is the way the sitting ran: four runs with a clean stopping point after
+each, as you ruled after chapter 5's compile ran too long in one piece — the measurements and the design, then the rows and the ledger, then the
+seat and the freeze and the fold, then the records. You compacted once; the reread after it was three files; the later runs went on your "Continue"
+and "Go". The second is the shelf itself: for the first time in Deuteronomy the Sifrei's own sections fall on the chapter, six of them on six verses,
+from "Hear" to "write them on the doorposts", and nothing else. What they say is worth having in the machine. The creed's first saying is put in
+Jacob's sons' mouths at his deathbed, answering his fear that one of them had strayed — "Hear, O Israel" is the father's name. "The LORD is one"
+occurs only here and once in Zechariah, and the Sifrei quotes that one other place. The word "might" in "with all your might" has a single seat in
+the whole Bible, and the tradition reads it three ways: money, measure, thanks. The text of the Shema and the text inside the tefillin are two
+lists that overlap by two passages, with the ten commandments deliberately in neither. Two cautions came with the finds. One row of the shelf's
+English file is not the same row as its Hebrew — a Genesis sitting had credited it on the English side, so the Hebrew was read fresh, and the rule
+is now written: a credit belongs to the file that was read. And the shelf counts the tefillin's four compartments from the spellings of "frontlets"
+in three verses, which needs one of them spelled short where our Bible text spells it long. That is not ours to settle; it is recorded as an open
+row for the compile. The chapter is frozen as one unit, the 220th, every gate green.
 
 ### 2026-09-16 — CHAPTER 5 COMPILED: THE CODE GRADED AGAINST THE CODE, AND TWO WORDS FOUND UNCOMPILED
 

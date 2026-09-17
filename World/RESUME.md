@@ -1,3 +1,10 @@
+# ⚠ THE DEUTERONOMY WALK sitting 4 (2026-09-17; step9/DEUTERONOMY_WALK.md "Sitting 4" + "Sitting 4 — AS BUILT"): CHAPTER 6 READ AND FROZEN as one
+# unit (the 220th — deu_06_shema 6:1-25), THE FIRST SITTING IN FOUR RUNS (a clean point after each): the Sifrei's piskaot 31-36 ON 6:4-9 (67 rows,
+# both files) + eight rows from elsewhere + Onkelos whole — 97 sources, coverage computed; the creed's first utterance at Jacob's deathbed (31:6);
+# "the LORD is one" two seats; the two sets recited and bound; THE TWO FILES DIVERGE at 36:10; the four compartments counted from a spelling the ink
+# does not have (11:18 plene) — the compile's open row; the large letters a PARKED hypothesis (large_letter_probes 6/6); the ritual 13 PASS,
+# CORPUS TRUTH GREEN (220 units, standing 2203 = 2197 + 6, hash unmoved), build_world, the journal gate (12 kinds, 9674 rows), the register
+# gate --strict (DECLARED 100, DEBT 0, FAILS 0) GREEN. NEXT on the ruling: the commit; then 4b — the compile of chapter 6 in four runs.
 # ⚠ THE DEUTERONOMY WALK sitting 3b (2026-09-16; step9/DEUTERONOMY_WALK.md "Sitting 3b" + "Sitting 3b — AS BUILT"): CHAPTER 5 COMPILED —
 # step9/cold_run_covenant_at_horeb.py the 60th runner (49/49; seven cells; the readback's twenty-one rows — sixteen on the code, code against code),
 # law_covenant_at_horeb the 65th daemon (given_at Exod 20:3); THE CODE'S HOLE filled: the second and the tenth words had no cell anywhere — compiled

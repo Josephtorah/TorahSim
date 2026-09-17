@@ -956,3 +956,22 @@ memory). NOT COMMITTED — the tree uncommitted since 834602b; commit on the own
 NEXT ON THE RULING: the commit on the owner's word; then CHAPTER 6's READING (6:1-25 — the Shema, the words on the heart, the reading shape on sitting 3's
 forms). ON THE TABLE, NOT A RULING: the Decalogue-schema sitting (the ten as headers over the laws; its seat chapter 5 — the exhibits the Sifrei 233:1,
 remember-and-keep in one utterance, the ten as one reading) — on the owner's word.
+
+## 38. ADDENDUM (2026-09-17, THE DEUTERONOMY WALK sitting 4 — CHAPTER 6, Deuteronomy 6:1-25 READ AND FROZEN in four runs; the owner: "ok lets start the next chapter", "go", "Continue", "Go"; the state doc's #190 and its addenda 1-3)
+THE STATE: chapter 6 read and frozen as one unit (deu_06_shema, the 220th); the corpus 220 units, standing 2203 (2197 + 6 as predicted), hash
+8b8fff1fa28953af unmoved; the tape UNMOVED since 3b (RUN (1302, 96, 88, 0, 12, 1593, 36, 319, the four pairs, 127), markers 167, closes 127); the
+journal gate GREEN (12 kinds, 9674 rows); the register gate --strict GREEN (DECLARED 100, DEBT 0, FAILS 0); uncommitted since 7c8554e.
+WHAT THE SITTING FOUND: the Sifrei's piskaot 31-36 on 6:4-9, one per verse of the Shema (the first heads on the chapter since piska 30 on 3:29); the
+creed's first utterance Jacob's sons' answer at his deathbed (31:6); "the LORD is one" at 6:4 and Zechariah 14:9 alone (the parser [1] / [1, 1]); the
+store drops 6:4's two large letters (a HYPOTHESIS on the owner's word, PARKED); "might" the Bible's one seat, read as money, measure, thanks (Onkelos
+"your property"); the two sets recited and bound with the ten words in neither; THE EXPORT'S TWO FILES DIVERGE at 36:10 (the Hebrew's parable, the
+English's own 37:2 repeated — a credit is a credit on the file read); THE SHELF'S COUNT FROM THE SPELLINGS needs 11:18 "frontlets" defective where the
+ink is plene (the compile's open row); the verbal analogy with two candidates (36:2); extension after extension on the one-letter pair 6:9 / 11:20;
+the spoil permitted by 6:11 (201:3); the son's question verbatim with Exodus 13:14 and the answer in the first person plural; the receipt without the
+Name at 6:25. THE FOUR-RUN RULE'S FIRST SITTING: the runs' edges held; the reread after the one compaction three files.
+THE FILES CHANGED: logic/oral_triage/deu_06_vaetchanan_2026-09-17.md (new); logic/units/deu_06_shema.yaml (draft → frozen, six operators, step E, the
+scenarios in the anchor form) and logic/py_units/deu_06_shema.py; logic/oral_audit/manifests/deu_06_shema_claims.json (new);
+logic/glosses/word_gloss_overrides.yaml (+24 by reference, +33 by gloss); logic/corpus/CORPUS_TRUTH.py (220, 2203); World/step9/large_letter_probes.py
+(new) and gates_chain.sh; the records (the map, COMPILE_DEBT, MIDDOT, RESEARCH_LOG (three entries of this date), THE_STEPS, THE_BRIEFING, RESUME, the
+state doc, the recovery page, this file, STAMP_LEDGER, the memory); World/step9/forms_deuteronomy_walk/ (the sitting's scripts and prints).
+NEXT ON THE RULING: the commit; then the compile of chapter 6 (4b) in four runs — or the Decalogue-schema sitting first — on the owner's word.

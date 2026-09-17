@@ -1640,3 +1640,22 @@ follows the last check mark.
 ## tape's people_sanctified timer stands as fired; returned_to_tents a status beside it, no close (the timer's entry is not a debit); (vii) the Mekhilta on Exodus 20
 ## (Bahodesh 7-8 — one utterance, covet and desire) named, unopened — the first copy's spine, a reading sitting's if the schema sitting opens. NOTHING ELSE IN
 ## CHAPTER 5 IS OWED TO A LATER SITTING OF ITS OWN.
+
+## DEUTERONOMY SITTING 4 — CHAPTER 6, Deuteronomy 6:1-25 READ AND FROZEN (2026-09-17; DEUTERONOMY_WALK.md "Sitting 4" and "Sitting 4 — AS BUILT"; the ledger
+## deu_06_vaetchanan_2026-09-17.md, 97 sources; one unit deu_06_shema FROZEN, the 220th) — OWED TO THE COMPILE (sitting 4b): (a) THE SHEMA'S FOUR DUTIES AS
+## LAW CELLS (6:6-9) — the words on the heart and THE RECITATION (its times, postures, audibility, places: Mishnah Berakhot 1:1-3:5, 9:5; Berakhot 2a-16a;
+## the Sifrei 31:7, 34:8-10, 258:1), the teaching (34:1-4; Kiddushin 30a-b), THE TEFILLIN (the four passages 34:2-3, 35:1-2; the compartments 35:3-4; the
+## arm, the side, the order, the head 35:5-12; Menachot 34b-37b) WITH THE SPELLINGS' OPEN ROW — the shelf's count of four needs 11:18 "frontlets" defective,
+## the ink plene (RESEARCH_LOG 2026-09-17; the number a PARAMETER taught by the shelf, its derivation a recorded argument on another witness), THE MEZUZAH (36:1-8;
+## Menachot 31b-34a; Shabbat 103b; Yoma 11a; Maaser Sheni 3:8); (b) FEAR, SERVE, SWEAR (6:13 = 10:20) — the oath by the Name (Shevuot; Temurah 4a); (c) NO
+## OTHER GODS (6:14) — a CALL into 3b's second-word cell (cold_run_covenant_at_horeb); (d) THE TEST (6:16) — the run citation of Exodus 17 (Massah) the
+## readback's form; (e) THE RIGHT AND THE GOOD (6:18) — Bava Metzia 108a's abutter, a rule beyond the letter seated in the ink; (f) THE SON'S ANSWER AS THE
+## READBACK'S THIRD FORM (6:20-25) — a retelling told to a son in the first person plural, graded against the tape's exodus lines (Exodus 7-14); the four
+## sons (Mishnah Pesachim 10:4; Pesachim 116a-b); (g) 6:1'S EDGE — the charge's teaching opens: a REFERENCE to the debit closed at 3b (Deut 1:5's close of
+## the charge to teach); (h) 6:10-11'S LIST — a DATA row (the cities, houses, cisterns, vineyards; Joshua 24:13 and Nehemiah 9:25 the retellings; the Sifrei
+## 38:10's merit, 201:3's spoil permitted — the war chapter's CALL into 6:11 when chapter 20 compiles); (i) "SWORE TO YOUR FATHERS" three times (6:10, 18, 23)
+## — the oath's tape entries (Genesis 22:16, 26:3, 50:24; Exodus 13:5, 33:1) as run citations; (j) THE RECEIPT WITHOUT THE NAME (6:25 "as He commanded us",
+## with Ezra 4:3) — the register gate's finder taught the form, or the seat declared by hand; (k) THE LARGE LETTERS — the PARKED hypothesis: no work unless
+## the owner's word (the DB and the store rebuilt with the segment type; the 6:4 edge `link: hypothesis`); (l) THE DOCKET by the union rule (the TESTING
+## paragraph's tractates above; Sanhedrin 4b and 74a; Sotah 7:1; the Mekhilta Pisha 17 named by the Sifrei 35:4-12's notes — the first copy's spine on
+## the tefillin, unopened by any ledger). NOTHING ELSE IN CHAPTER 6 IS OWED TO A LATER SITTING OF ITS OWN.

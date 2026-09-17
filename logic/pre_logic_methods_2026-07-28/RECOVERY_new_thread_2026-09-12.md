@@ -13,15 +13,15 @@ tape of events in verse order; every verse adds a line or installs a law (a daem
 EVERYTHING ELSE IN A COMPUTER PROGRAM (his frame, 2026-09-16). The repo <repo> = /Users/Shared/TorahSim, public under CC0 at
 github.com/Josephtorah/TorahSim.
 
-## 2. WHERE IT STANDS (2026-09-16, after sitting 3b — chapter 5's compile; the state doc #188 addendum 2)
-- NUMBERS CLOSED. DEUTERONOMY 1:1-5:33 READ, FROZEN, COMPILED AND ON THE TAPE (sittings 1-3b).
-- 219 frozen units, standing 2197, hash 8b8fff1fa28953af. 60 runners, 65 daemons, 448 functions; registries 1122 kinds / 1023 effects.
-- THE TAPE at RUN (1302, 96, 88, 0, 12, 1593, 36, 319, the four pairs, 127), markers 167, closes 127, the counter (40, 11, 1); the sweep 60/60;
-  every gate GREEN; the register gate DECLARED 100 / DEBT 0 (5:12, 5:16, 5:32 CHAPTER).
-- THE LAWS' READBACK BUILT (THE_LOOP step 6's other half): the ten words graded code against code; the second and the tenth words compiled at 3b.
-- LAST COMMIT 834602b (NOT pushed). Uncommitted: sittings 3 and 3b; the schema tutorial, its epub and the builder (ARCHITECTURE/).
-- ON THE TABLE, NOT A RULING: the Decalogue as a SCHEMA (seat chapter 5; the exhibits the Sifrei 233:1, one utterance, the ten as one reading).
-- NEXT ON HIS WORD: the commit; then CHAPTER 6's reading (6:1-25, the Shema) — or the schema sitting first.
+## 2. WHERE IT STANDS (2026-09-17, after sitting 4 — chapter 6's reading in four runs; the state doc #190 addendum 3)
+- NUMBERS CLOSED. DEUTERONOMY 1:1-5:33 READ, FROZEN, COMPILED AND ON THE TAPE (sittings 1-3b); 6:1-25 READ AND FROZEN (sitting 4).
+- 220 frozen units, standing 2203, hash 8b8fff1fa28953af. 60 runners, 65 daemons, 448 functions; registries 1122 kinds / 1023 effects.
+- THE TAPE unmoved since 3b (markers 167, closes 127, the counter (40, 11, 1)); the sweep 60/60; every gate GREEN; the register gate
+  DECLARED 100 / DEBT 0 (no seat in chapter 6).
+- CHAPTER 6'S FINDS: the Sifrei's piskaot 31-36 ON 6:4-9; the export's two files DIVERGE at 36:10; the shelf's four compartments need 11:18
+  "frontlets" defective where the ink is plene (the compile's open row); the large letters a PARKED hypothesis.
+- LAST COMMIT 7c8554e (NOT pushed). Uncommitted: sitting 4 whole; the message drafted at <scratch>/commit_msg_ch6.txt.
+- NEXT ON HIS WORD: the commit; then 4b — THE COMPILE OF CHAPTER 6 in four runs (COMPILE_DEBT's box (a)-(l); the design first); or the schema.
 
 ## 3. THE STANDING LAWS (owner-ruled; verbatim in spirit — the long forms in the addenda's section 3)
 - NO AGENTS EVER; main thread only; a sitting opens on his word. DISCUSSION IS NOT A RULING. READ THEN COMPILE PER PORTION, never read ahead.
@@ -71,7 +71,7 @@ probes (*_probes.py), checkpoint_check.py, world_stepper.py, world_board.py, for
 newest sitting's form by sed). World/journal/data/world.sqlite the one database; Data/tanakh.sqlite the text store. Memory: <memory>/ — MEMORY.md the
 index; deuteronomy-walk.md; cost-rules-no-polling.md; step9-exam-era.md.
 
-## 5. THE SITTING SHAPES (the long forms: the addenda's section 5; the newest instances: the map's "Sitting 3" and "Sitting 3b")
+## 5. THE SITTING SHAPES (the long forms: the addenda's section 5; the newest instances: the map's "Sitting 4" and "Sitting 3b")
 THE READING: measure first (Onkelos whole + the spine by position; the parser on every number verse) → the ink asserts → the rows → the ledger
 with coverage COMPUTED → the unit yaml + manifest → the claims seated → the fold predicted and matched → build_world → the records from the sheet.
 THE COMPILE: the measurements → THE DESIGN in the map before any code → probes to FAIL → the docket by the union rule → the types by script →
@@ -83,7 +83,7 @@ with THE REST → `gates_chain.sh` (one summary) → the records from the sheet 
 - THE LOOP (the sink, the index, installation, the cursor, scenarios, the readback, the stepper, the port, the board, D1-D33): THE_LOOP.md.
 - Numbers' sittings and lessons: NUMBERS_WALK.md; the addenda §8-17. The project review: §18.
 - The one database (D7's merge), the portable repo: the addenda §23-24, §27-29; reviews/PORTABLE_repo_2026-09-15.md.
-- Deuteronomy's sittings: the map; the addenda §31-37. The cost cuts: §35.
+- Deuteronomy's sittings: the map; the addenda §31-38. The cost cuts: §35.
 - The Decalogue-schema question: the state doc's #185 addendum 1 and the map's tail (ON THE TABLE).
 - THE_STEPS Step 2, Step 5 and the compiler-law block: before a READING sitting's ledger is written.
 

@@ -24,7 +24,7 @@ STEPS="tape probes daemon dependency build journal register positions checkpoint
 if [ $LIST = 1 ]; then echo "$STEPS"; exit 0; fi
 mkdir -p "$OUT"; SUM="$OUT/SUMMARY.txt"; : > "$SUM"
 FAILED=0; STARTED=0; [ -z "$FROM" ] && STARTED=1
-PROBES="census installation readback register clock sequence view population journal cursor"
+PROBES="census installation readback register clock sequence view population journal cursor large_letter"
 run_step() {   # name, command...
   name="$1"; shift
   if [ $STARTED = 0 ]; then [ "$name" = "$FROM" ] && STARTED=1 || { echo "SKIP $name (before --from)" >> "$SUM"; return 0; }; fi

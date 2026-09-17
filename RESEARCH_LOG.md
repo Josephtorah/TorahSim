@@ -3215,3 +3215,78 @@ checkpoints (CT9, CV2, CV9, CX9, CY9, CZ9, CW9, CR9) hold the tape's closes as a
 named only the newest three. Retyped to 127 as of this sitting; 10/10 on the second run. Beside it the fast checkpoint check refused before the tape
 ran — the journal's base had moved at the giving's ordinal, where the new daemon now writes — so a daemon that writes on an older line means the tape
 runs first and the fast check follows.
+
+## 2026-09-17 — THE LARGE LETTERS AS A MARKER LAYER (a HYPOTHESIS on the owner's word; THE DEUTERONOMY WALK sitting 4, run 1)
+
+The owner, on the store's dropped letters at the Shema: "could it be a marker for a different use in the code?" — then "yes lets put it in as hypothesis".
+THE SEATS: the scroll writes a few letters oversized; the Bible's XML (Data/*.xml, the segment type x-large) carries FOUR, all in the Torah — the ayin
+(ע, the last letter of "hear") and the dalet (ד, the last letter of "one") of Deuteronomy 6:4, which together read עד ("witness"); the vav of "belly"
+(גחון, gachon) at Leviticus 11:42; the final nun of "their case" (משפטן, "their judgment", mishpatan) at Numbers 27:5. THE HYPOTHESIS: the large letter is a SECOND
+CHANNEL of the program's text — a mark beside the word, as the parser's own marks (the star for a refused homograph, the caret for a construct) ride on a
+token — and its three seats land on three classes the engine already has: a COUNT CHECK (Kiddushin 30a: the vav of belly is the middle letter of the
+Torah — the scribes' checksum), a HALT (the Sifrei Bamidbar 133:4 and Bava Batra 119a on the daughters' plea; the tape's line at 27:5 is
+judgment_brought_near, the halt's third form), an ATTESTATION (6:4 as testimony — the "witness" reading is later than the core shelf, so this seat is the
+hypothesis proper, OPEN until a teacher on the shelf is found or the compile files its edge under `link: hypothesis`).
+THE EXHIBITS, measured by World/step9/large_letter_probes.py (6/6; the probe joined to the gates chain's list): H1 the XML's four segments; H2 the
+store drops all four letters (the 2026-09-09 defect — the four tokens differing from the Tanakh DB at an equal count are exactly these), the DB carries
+them whole; H3 KIDDUSHIN 30A AGAINST THE COUNT — our text has 304,850 letters, 79,982 words, 5,853 verses (Genesis 78,069 letters, Exodus 63,531,
+Leviticus 44,795, Numbers 63,545, Deuteronomy 54,910); its middle letters fall at Leviticus 8:29, its middle words at 8:15, its middle verse at 8:9 — the
+Talmud's vav of belly (11:42) sits 4,813 letters PAST the half, its "darosh darash" (10:16) 929 words past, its "vehitgalach" (13:33) 159
+verses past: DIVERGE, as the gemara's own "we are no longer expert in the count" admits (the Masorah's middle verse 8:8 is one off ours — the verse
+divisions differ); H4 the nun on the halt (the journal's lines at 27:5 carry the halt kind); H5 the creed unclassed — no tape line, no register seat at
+6:4 (OPEN); H6 the count agrees both ways. WHAT IS OWED, on the owner's word and not built here: the parser's mark — the Tanakh DB rebuilt carrying the
+XML's segment type (its wtype marks the ketiv, not the majuscule), the store's rebuild the same (every frozen hash would move); the compile's edge at
+6:4 filed `link: hypothesis`; a search of the core shelf for a teacher on 6:4's two letters. No engine file changed; run 1 remains closed.
+
+## 2026-09-17 — THE FRONTLETS' THIRD SPELLING: THE SHELF'S COUNT AGAINST THE INK'S LETTER (THE DEUTERONOMY WALK sitting 4, run 2)
+
+THE FINDING. The Sifrei on Deuteronomy 35:4 (on 6:8) counts the tefillin's four compartments from the word "frontlets" at its three seats — two defective
+spellings (one each) and one plene (two): לטטפת ("for frontlets", Deuteronomy 6:8), טטפת read defective again at 11:18, and טוטפת ("frontlets", Exodus
+13:16) plene — "behold four". The Talmud counts the same way (Sanhedrin 4b; Menachot 34b). THE INK AS THE MACHINE HOLDS IT (Data/tanakh.sqlite, the Open
+Scriptures Hebrew Bible = the Leningrad codex; asserted in the sitting's ink script, FRONT): 6:8 לטטפת ("for frontlets", defective), 11:18 לטוטפת ("for
+frontlets", WITH THE VAV), Exodus 13:16 ולטוטפת ("and for frontlets", with the vav) — the shelf's middle seat is plene in the codex. The English translator
+of the export transliterates 11:18 as the shelf reads it ("totaft"), not as the codex spells it. WHAT IT MEANS FOR THE COMPILE: the count of four is the
+shelf's reading of a text whose 11:18 differs from ours by one letter; the machine cannot reproduce "four" from its own ink by the shelf's rule (its count
+would be 1 + 2 + 2). Filed as the tefillin cell's OPEN ROW for the compile of chapter 6 (sitting 4b): the compartments' number a PARAMETER taught by the
+shelf, its derivation from the spellings a recorded argument that reads a different witness. The witness question itself (the Talmud's Torah text against
+the Masoretic codex on this word — a known discrepancy in the tradition's own literature) is NOT ours to rule; recorded, not resolved. The ledger:
+logic/oral_triage/deu_06_vaetchanan_2026-09-17.md (the row 35:4 and the crown).
+
+## 2026-09-17 — DEUTERONOMY 6 READ (THE DEUTERONOMY WALK sitting 4 — CHAPTER 6, the first sitting under THE FOUR-RUN RULE): THE SPINE LANDS ON THE SHEMA — SIX PISKAOT
+## ON SIX VERSES; THE CREED'S FIRST UTTERANCE AT JACOB'S DEATHBED; THE EXPORT'S TWO FILES DIVERGE AT ONE ROW; THE TWO SETS RECITED AND BOUND; THE VERBAL ANALOGY
+## WITH TWO CANDIDATES; THE RECEIPT WITHOUT THE NAME (the frontlets' spelling and the large letters at their own entries of this date)
+
+THE SPINE LANDS ON THE SHEMA. The Sifrei on Deuteronomy, silent by position over chapters 4 and 5, heads piskaot 31-36 on 6:4, 6:5, 6:6, 6:7, 6:8, 6:9 —
+one per verse of the Shema — and nothing else of the chapter (piska 37 heads on 11:10; chapters 7-10 have none): 67 rows in both files, 100 KB. The
+shelf reads the creed and its four duties alone; 6:1-3 and 6:10-25 are read here through Onkelos and eight rows citing them from elsewhere. Read at a
+short cut (the English capped, the Hebrew's opening for the cuts) under the four-run rule; 97 sources, coverage computed.
+
+THE CREED'S FIRST UTTERANCE. Piska 31 reads "Israel" in 6:4 as Jacob's own name (31:1) and puts the creed's first saying in his sons' mouths at his
+deathbed (31:6): "Hear, O Israel our father — the LORD our God, the LORD is one", the father's doubt answered; the response line "blessed be the name
+of His glorious kingdom" supplied between 6:4 and 6:5 for the recitation (the export's note: not scriptural). The ink beside it: "hear, O Israel" four
+seats, all this book's; "the LORD one" at 6:4 and Zechariah 14:9 alone in the Bible (31:10 quotes the one other seat); the parser reads the creed's word
+as the numeral [1] and Zechariah's pair as [1, 1]; heaven answers Israel's "one" with "one nation" (355:27, 1 Chronicles 17:21).
+
+THE EXPORT'S TWO FILES DIVERGE AT ONE ROW. At Sifrei 36:10 the Hebrew file carries the parable of the king who told his wife to adorn herself (the
+close of 36:9's "beloved is Israel"); the English file carries the Hebron-and-Zoan paragraph — its own 37:2 repeated (both files sixteen rows in piska
+37). A Genesis sitting had credited "36:10" on the English's text. The rule: a credit is a credit on the file that was read; the two files are compared
+row by row, not row-counted; the quick look opens the other file.
+
+THE TWO SETS RECITED AND BOUND. Piskaot 34 and 35 define the Shema's text and the tefillin's from the two verbs: "teach them diligently" — these are
+recited (6:4-9, 11:13-21, Numbers 15:37-41), the two Exodus passages are not; "bind them" — these are bound (Exodus 13:1-10, 13:11-16, 6:4-9, 11:13-21),
+the fringes are not; four a-fortiori arguments that would merge the sets are each cut by "these", and the ten words belong to neither (34:2-3, 35:1-2).
+The ink: the four bound passages are the four seats of "for a sign upon your hand", in four spellings of "your hand".
+
+THE VERBAL ANALOGY WITH TWO CANDIDATES. Piska 36:2 joins "write" at 6:9 by the same word to 27:8 (the stones) or to Numbers 5:23 (the scroll and ink)
+and chooses by a stated rule (a thing for the generations from a thing for the generations), then grades its own proof "a hint": the shelf's own
+exhibit of the reception rule the link review law rests on — the shared word generates two joins; the teacher picks. 36:3 reads the one-letter pair
+"doorposts" (6:9 defective, 11:20 plene) by extension-after-extension as one post; 36:4 builds the father from Exodus 12:7's "two doorposts".
+
+THE RECEIPT WITHOUT THE NAME. 6:25 closes the chapter with "as He commanded us" — with Ezra 4:3 the two seats of the form; the register gate's census
+reads "as the LORD commanded" and does not see it: the chapter has no seat in the gate (no index line, no yaml key — computed). The finder taught the
+form, or the seat declared by hand, owed to the compile; the son's question at 6:20 quotes 4:45's footer ("the testimonies, the statutes and the
+judgments" — the two seats), and his answer (6:21-25) is a retelling of the exodus in the first person plural — the readback's next form.
+
+THE STORE'S GLOSSES READ BACK (the display layer): 33 rows by gloss and 24 by reference — "to-fillet-for-the-forehead" FOR FRONTLETS, "very-you/your"
+YOUR MIGHT, "and-point-them/their" AND YOU SHALL TEACH THEM DILIGENTLY, "deferred" TOMORROW, "and-rightness" AND RIGHTEOUSNESS, "strike-in" PLANT, "glow"
+BE KINDLED, "and-sate" AND BE SATISFIED, the two "?" made "I", "strength" made GOD and "nose" ANGER at 6:15; by_ref 496, by_gloss 385 after.

@@ -1536,6 +1536,42 @@ narrative strength. By cluster:
     R. Yishmael — the generals at Sinai only: the readback's own status on the shelf, a DATA setting.
   · THE TEN AS ONE READING, ABOLISHED (Berakhot 12a:4-8; Kiddushin 31a:6-7): read daily in the Temple, sought outside and abolished for the heretics'
     grievance; the nations conceded the first words when the fifth was said — the schema question's exhibits, no rule.
+- **THE SIFREI ON DEUTERONOMY'S OWN CASE LAW ON CHAPTER 6 (Deuteronomy 6:1-25; THE DEUTERONOMY WALK sitting 4, 2026-09-17;
+  the ledger logic/oral_triage/deu_06_vaetchanan_2026-09-17.md — PISKAOT 31-36 ON 6:4-9, one per verse of the Shema, 67 rows read in
+  both files; the rows below the ones that argue by a numbered rule, each at its row):**
+  · THE CREED'S FIRST UTTERANCE (31:6 on 6:4): the law's words given their narrative seat — Jacob's sons' answer at the deathbed
+    ("Hear, O ISRAEL" the father), the response line supplied for the recitation — E28's kin; a history, not a mashal.
+  · THE TWO EPITHETS (31:8, 31:10 on 6:4): "our God" beside "one" read as an addition (E10 — the repeated expression signifies), then
+    the verse's two halves given two scopes and two times (E11's kin), Zechariah 14:9 the proof — THE INK AGREES: "the LORD one" two seats.
+  · THE DOUBLED LETTER (32:3 on 6:5): "your heart" with its doubled bet read as two inclinations — E10's kin (a spelling as a count;
+    Mishnah Berakhot 9:5); 32:4 the same word divided, "a heart in you" — E30's form.
+  · MIGHT AS MONEY, MEASURE, THANKS (32:6, 32:7, 32:21 on 6:5): the one-seat word given three readings — 32:6 two terms each given a case
+    (E10), 32:7 an a-fortiori STATED AND SET ASIDE as making the word idle (I1 refused), then the word read by its sound (the tradition's
+    own play, outside the numbered rules); Onkelos's "your property" the same reading as 32:6.
+  · THE TWO SETS, RECITED AND BOUND (34:2-3 on 6:7; 35:1-2 on 6:8): four a-fortiori arguments that would merge the Shema's passages and
+    the tefillin's, each cut by the ink's "these" (I1 stated and refused — the restriction E2's kin); the ten words in neither set.
+  · THE TIMES OF THE RECITATION (34:8-10 on 6:7): "when you lie down" and "when you rise" each bounded by the third clause "when you walk
+    by the way" — I13's form (two decided by a third); the two houses' postures the dispute row (Mishnah Berakhot 1:3).
+  · THE COUNT FROM THE SPELLINGS (35:4 on 6:8): "frontlets" at three seats counted 1 + 1 + 2 = four compartments — E10's kin (a spelling as
+    a count) — WHERE THE INK DIVERGES: the codex spells 11:18 plene (the ink's FRONT asserts the three spellings); "memorial" singular
+    (Exodus 13:9) the one case; Sanhedrin 4b, Menachot 34b the same count; the compile's open row.
+  · THE TWO LIMBS BY ONE RULE (35:5, 35:12 on 6:8): the hand's place from the head's and the head's from the hand's — E8 (binyan av's form);
+    35:11 the order of the acts from the order of the clauses — E11's kin.
+  · THE PERFECT WRITING (36:1 on 6:9): "and you shall write them" divided into "a perfect writing" — E30 (notarikon); the scribe's rule of
+    letter shapes (Shabbat 103b).
+  · THE VERBAL ANALOGY WITH TWO CANDIDATES (36:2 on 6:9): "write" joined by the same word to 27:8's stones or to Numbers 5:23's scroll and
+    ink — I2 (gezerah shavah, the Sifrei's own, LR1: taught), with a RULE OF CHOICE stated (the standing over the momentary) and the proof
+    graded "a hint" — the shelf's own exhibit of I2's reception rule: the shared word an unbounded generator, the teacher picks.
+  · EXTENSION AFTER EXTENSION (36:3 on 6:9): "doorposts" plural at 6:9 and again at 11:20 read as ONE post — E3 (the numbered rule itself,
+    in R. Ishmael's name); THE INK: the two seats one letter apart, defective and plene. 36:4 R. Isaac's father from Exodus 12:7 — I3.
+  · WHICH GATES (36:6-8 on 6:9): "your gates" bounded by "your house" — a dwelling, a place of honor, the profane — I6's form (the particular
+    bounding the general); Mishnah Maaser Sheni 3:8 the case row.
+  · SINGULAR AGAINST PLURAL (41:20 on 11:13 from 6:5): the suffix's number the reading — the individual's study, the community's deed —
+    E10 (the repetition distinguished by its number); THE INK AGREES: seven singular seats, four plural.
+  · THE SPOIL PERMITTED (201:3 on 20:17 from 6:11): a later law bounded by an earlier promise — I13's form (two verses reconciled), the
+    Sifrei's own (LR1); the war chapter's CALL into 6:11 at its compile.
+  · THE CREED ANSWERED (355:27 on 33:26 from 6:4): six antiphonal pairs, Israel's "the LORD is ONE" met by heaven's "ONE nation" — E27
+    (symmetry); the row's Hebrew cites 6:4 as "ibid.".
 
 ## Exodus block campaign — owner's word "Do 3")
 
