@@ -15,6 +15,7 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
 ## SCOREBOARD (as of 2026-09-17, latest)
+- **CHAPTER 6 COMPILED — THE SHEMA'S LAW GIVEN AT ITS OWN DAY FOR THE FIRST TIME, THE READBACK'S THIRD FORM (A RETELLING INSIDE A LAW), THE RECEIPT WITHOUT THE NAME THE GATE CANNOT SEE, AND THE WHOLE-ROW RULE RULED AND PAID INSIDE THE SITTING** (2026-09-17, on your "Go", "Next go" and "Ok go"; World/step9/DEUTERONOMY_WALK.md "Sitting 4b" + AS BUILT): cold_run_hear_o_israel.py the 61st runner (42/42), law_hear_o_israel the 66th daemon (454 functions); the readback's seven rows; the tape 10/10 on its first run with RUN (1304, 96, 88, 0, 12, 1595, 37, 319, pairs, 127) as predicted, markers 167; the docket 747 rows every one read whole; every gate GREEN, the sweep 61/61. NEXT: the commit on your word; chapter 7's reading, or the schema sitting first.
 - **CHAPTER 6 READ AND FROZEN — THE SHEMA: THE SIFREI'S SIX SECTIONS LAND ON SIX VERSES, THE CREED'S FIRST SAYING IS JACOB'S SONS' ANSWER, AND THE SHELF COUNTS A SPELLING OUR TEXT DOES NOT HAVE** (2026-09-17, on your "ok lets start the next chapter" and the runs' "go", "Continue", "Go" — the first sitting in four runs; World/step9/DEUTERONOMY_WALK.md "Sitting 4"): Onkelos on all 25 verses, the Sifrei's 67 rows on 6:4-9 and eight rows from elsewhere — 97 sources, coverage computed; "the LORD is one" two seats in the Bible; "might" one seat, read as money, measure, thanks; the Shema's text and the tefillin's two sets with the ten commandments in neither; one row where the shelf's two files diverge; the tefillin's four compartments counted from a spelling of 11:18 our text writes differently — an open row for the compile; the store's dropped large letters a parked hypothesis; one unit frozen (the 220th), 6 claims verified, the ritual 13 PASS, standing facts 2203 (+6 as predicted), hash unmoved, every gate green. NEXT: the commit on your word; then the compile of chapter 6 in four runs, or the schema sitting first.
 - **CHAPTER 5 COMPILED — THE CODE SAID AGAIN AND GRADED AGAINST THE CODE: SIXTEEN ROWS OF THE TEN WORDS, EACH NAMING THE CELL THAT COMPILES IT; TWO WORDS HAD NO CELL ANYWHERE — THE SECOND AND THE TENTH — COMPILED HERE AND WRITTEN AT THE DAY THEY WERE FIRST SPOKEN; A SECOND HOLE IN THE TAPE, THE REQUEST FOR A MEDIATOR, FILLED; THE RECEIPT READ TWO WAYS** (2026-09-16, on your "go"; World/step9/DEUTERONOMY_WALK.md "Sitting 3b" + AS BUILT): cold_run_covenant_at_horeb.py the 60th runner (49/49), law_covenant_at_horeb the 65th daemon; the readback's twenty-one rows; the tape 10/10 with RUN (1302, 96, 88, 0, 12, 1593, 36, 319, pairs, 127) as predicted, markers 167; every gate GREEN, the sweep 60/60. NEXT: the commit on your word; chapter 6's reading, or the schema sitting first.
 - **CHAPTER 5 READ AND FROZEN — THE TEN WORDS SAID AGAIN: FIVE VERSES MATCH EXACTLY, THE SABBATH'S REASON CHANGES WHOLE, AND TWICE THE LAW CITES ITS OWN GIVING** (2026-09-16, on your "go" after the rereads; World/step9/DEUTERONOMY_WALK.md "Sitting 3"): the translation's thirty verses mapped to the Bible's thirty-three by an instrument before a row was written (the four short words one line there); Onkelos on all 33 verses, the Sifrei's five rows from elsewhere; the two copies diffed word for word — 172 words against 189; "keep" for "remember" (the Sifrei: one utterance), the exodus for the creation, the receipt "as the LORD your God commanded you" inside two commandments, the vain witness for the false, the wife first, "his" written and "my" read; one unit frozen (the 219th), 6 claims verified, the ritual 13 PASS, the world's standing facts 2197 (+6 as predicted), hash unmoved, every gate green. NEXT: the compile of chapter 5 (the laws read back as code against code), or the schema sitting first, on your word.
@@ -484,6 +485,32 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   Next alongside it: Leviticus (new spine — Sifra).
 
 ## ENTRIES (newest first)
+
+### 2026-09-17 — CHAPTER 6 COMPILED: THE SHEMA GIVEN AT ITS OWN DAY, AND THE READBACK'S THIRD FORM
+
+Every chapter so far had its law compiled somewhere already, or told of acts already on the tape. Chapter 6 is the first whose law had no cell anywhere:
+the recitation, the teaching, the tefillin, the mezuzah — the Shema — were read at the last sitting and are compiled here for the first time, and they
+are given at the day Moses speaks them, not carried back to Sinai, because nothing on the tape gave them before. The Talmud's answer sheets on them are
+long (Berakhot's first three chapters, Menachot's pages on the straps and the boxes, Yoma's on the gates), and one of them turned out to count from
+the text's spellings a number the stored text does not support: the four compartments of the head's box. The cell returns four because the tradition
+teaches four, and the row that shows the spelling stands open. The readback grew its third form: the chapter tells a father what to answer his son
+about the exodus, so the answer is a retelling inside a law — graded against the tape like Moses' own retellings, but by the law's own cell, and the
+Talmud itself says the first clause of the Passover telling is this chapter's verse. One small receipt, "as He commanded us", has no Name in it, and
+the gate that finds receipts cannot see it — measured, asserted, and owed to a sitting on the gate. In the middle of this sitting you ruled that no row
+of the Talmud is ever read cut; the docket was reread whole, seventy rows corrected, and the earlier dockets reread where a shortcut had been taken —
+one cell of chapter 4 had been typed from the Talmud's challenge instead of its answer, and was retyped. The runner matched its sheet on the first run,
+the tape reached ten of ten on the first run with the previous tape reproduced exactly, and every gate is green in one chain. Next, on your word: the
+commit, then chapter 7 — or the schema question first.
+
+### 2026-09-17 — THE WHOLE-ROW RULE: NO CUT ON THE SHELF, EVER
+
+You asked whether every case still runs by the Talmud, and then where a case could slip. The answer was a cut I had made one day earlier inside the
+four-run rule: the docket's rows printed at their first 170 characters, the verdict typed from the opening. Reading the first forty rows of chapter 6's
+docket whole against those verdicts found two verdicts wrong, one row carrying another row's content, and nine notes short of the row's point. Your
+word: "never ever cut corners with the Talmud, go back and fix the ones where the shortcut was taken, and write it in the rules forever." So: every
+row of the shelf is read whole before its verdict, no character cap ever; a docket takes as many runs as that needs; the rows that were cut (chapter
+6's docket, the Sifrei rows of sitting 4 past 1,500 characters, the topic rows of chapters 5, 4 and 1-3 past 650) are reread whole and corrected, a
+committed file by an appended section. The economy that stays is on our own scripts, never on the shelf.
 
 ### 2026-09-17 — CHAPTER 6 READ: THE SHEMA, AND THE FIRST SITTING IN FOUR RUNS
 

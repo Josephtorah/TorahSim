@@ -3,7 +3,7 @@
 WHY: at 2b the records step spent ten tool calls learning each record file's shape before one call wrote them. This sheet holds the shape of every
 record so the records writer is ONE script built from it (`--check` first, then the write), its numbers parsed from the gates' prints (COVERAGE
 COMPUTED, NEVER RECITED), every text built whole before any file is opened, the ledgers appended only. The writer's form:
-World/step9/forms_deuteronomy_walk/write_ch4b_records.py. Keep this sheet current when a record's anchor moves (a stale anchor fails the writer's
+World/step9/forms_deuteronomy_walk/write_ch6b_records.py (write_ch5b_records.py and write_ch4b_records.py the earlier forms). Keep this sheet current when a record's anchor moves (a stale anchor fails the writer's
 assert — retype it here, never work around it).
 
 | record | path | mode | anchor / place | head form | lint baseline |
@@ -35,4 +35,4 @@ whole conversation, so the bill is the NUMBER OF TURNS, not the size of a batch 
 ONE chain (gates_chain.sh) in the background and read its SUMMARY once when the harness says it ended; (2) ONE fast check before the tape
 (checkpoint_check.py) shows every fault of a new checkpoint block at once; (3) the records from THIS SHEET in one call, never ten reads first.
 
-THE FOUR-RUN RULE (owner-ruled 2026-09-16, "Yes write it"): a sitting is FOUR RUNS, a clean compaction point after each — (1) the rereads, the measurements, the design in the map; (2) the docket (the scan, the verdicts in parts, the writer); (3) the types, the runner, the stitch, the tape to 10/10; (4) the gates chain, the records, the forms — each near 150-200k tokens, never one run of 600k; a reading sitting split the same way (the measurements and the ink; the rows and the ledger; the seat, the chain and the fold; the records). Inside a run: the docket's rows read at a short cut; a prior sitting's form derived by sed and read only where it differs, never whole; the state doc's checkpoint at each run's end names the next run's first step.
+THE FOUR-RUN RULE (owner-ruled 2026-09-16, "Yes write it"): a sitting is FOUR RUNS, a clean compaction point after each — (1) the rereads, the measurements, the design in the map; (2) the docket (the scan, the verdicts in parts, the writer); (3) the types, the runner, the stitch, the tape to 10/10; (4) the gates chain, the records, the forms — each near 150-200k tokens, never one run of 600k; a reading sitting split the same way (the measurements and the ink; the rows and the ledger; the seat, the chain and the fold; the records). Inside a run: EVERY SHELF ROW READ WHOLE (THE WHOLE-ROW RULE, owner-ruled 2026-09-17 — the short cut STRUCK; a docket takes the runs it needs); a prior sitting's form derived by sed and read only where it differs, never whole; the state doc's checkpoint at each run's end names the next run's first step.

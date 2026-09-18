@@ -76,10 +76,14 @@ def h4_the_halt():
     H('H4 the nun on the halt', any('judgment_brought_near' in d for _, _, d in rows) and 'run.event' in classes, f'{len(rows)} lines, classes {classes}, the halt kind present: {any("judgment_brought_near" in d for _, _, d in rows)}')
 
 def h5_the_creed():
-    """H5 — Deuteronomy 6:4 has NO machine class yet (no tape line, no register seat): the "witness" reading is the hypothesis, OPEN until the compile files its edge"""
-    n = len(_lines_at('Deut 6:4'))
+    """H5 — Deuteronomy 6:4 CLASSED by the compile (THE DEUTERONOMY WALK 4b, 2026-09-17: shema_declared the STATUTE line at 6:4-9, the daemon's write beside it) — still NO register seat at 6:4;
+    the large-letter reading itself stays a PARKED hypothesis: no edge `link: hypothesis` at 6:4 in the dispositions. (At sitting 4 this probe asserted NO tape line — the exhibit moved when the compile filed the line; retyped from the chain's print at RUN 4.)"""
+    rows = _lines_at('Deut 6:4'); n = len(rows); classes = sorted({k for _, k, _ in rows})
     RI = open(f'{_ROOT}/World/step9/REGISTER_INDEX.md', encoding='utf-8').read()
-    H('H5 the creed unclassed (OPEN)', n == 0 and not re.search(r'Deut 6:4\b', RI), f'tape lines at 6:4: {n}; register lines: {bool(re.search(r"Deut 6:4", RI))}')
+    DD = open(f'{_ROOT}/World/step9/dependency_dispositions.yaml', encoding='utf-8').read()
+    hyp = bool(re.search(r'link: hypothesis[^\n]*6:4|6:4[^\n]*link: hypothesis', DD))
+    H('H5 the creed classed by the compile, the hypothesis parked', n > 0 and any('shema_declared' in d for _, _, d in rows) and 'run.event' in classes and not re.search(r'Deut 6:4\b', RI) and not hyp,
+      f'tape lines at 6:4: {n}, classes {classes}, shema_declared present: {any("shema_declared" in d for _, _, d in rows)}; register lines: {bool(re.search(r"Deut 6:4", RI))}; a hypothesis edge at 6:4: {hyp}')
 
 def h6_the_count_check(db):
     """H6 — the count check the vav stands for is the machine's own: the Torah's letters, words and verses counted twice (by book order, by id order) agree"""

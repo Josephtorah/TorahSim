@@ -1642,7 +1642,7 @@ follows the last check mark.
 ## CHAPTER 5 IS OWED TO A LATER SITTING OF ITS OWN.
 
 ## DEUTERONOMY SITTING 4 — CHAPTER 6, Deuteronomy 6:1-25 READ AND FROZEN (2026-09-17; DEUTERONOMY_WALK.md "Sitting 4" and "Sitting 4 — AS BUILT"; the ledger
-## deu_06_vaetchanan_2026-09-17.md, 97 sources; one unit deu_06_shema FROZEN, the 220th) — OWED TO THE COMPILE (sitting 4b): (a) THE SHEMA'S FOUR DUTIES AS
+## deu_06_vaetchanan_2026-09-17.md, 97 sources; one unit deu_06_shema FROZEN, the 220th) — PAID AT 4b (the 4b box below, item by item) — AS WRITTEN AT THE READING, OWED TO THE COMPILE (sitting 4b): (a) THE SHEMA'S FOUR DUTIES AS
 ## LAW CELLS (6:6-9) — the words on the heart and THE RECITATION (its times, postures, audibility, places: Mishnah Berakhot 1:1-3:5, 9:5; Berakhot 2a-16a;
 ## the Sifrei 31:7, 34:8-10, 258:1), the teaching (34:1-4; Kiddushin 30a-b), THE TEFILLIN (the four passages 34:2-3, 35:1-2; the compartments 35:3-4; the
 ## arm, the side, the order, the head 35:5-12; Menachot 34b-37b) WITH THE SPELLINGS' OPEN ROW — the shelf's count of four needs 11:18 "frontlets" defective,
@@ -1659,3 +1659,24 @@ follows the last check mark.
 ## the owner's word (the DB and the store rebuilt with the segment type; the 6:4 edge `link: hypothesis`); (l) THE DOCKET by the union rule (the TESTING
 ## paragraph's tractates above; Sanhedrin 4b and 74a; Sotah 7:1; the Mekhilta Pisha 17 named by the Sifrei 35:4-12's notes — the first copy's spine on
 ## the tefillin, unopened by any ledger). NOTHING ELSE IN CHAPTER 6 IS OWED TO A LATER SITTING OF ITS OWN.
+
+## DEUTERONOMY SITTING 4b — THE COMPILE OF CHAPTER 6 (2026-09-17; DEUTERONOMY_WALK.md "Sitting 4b" design + AS BUILT; logic/oral_triage/deu_06_vaetchanan_exam_2026-09-17.md
+## 747 rows, every row read whole; cold_run_hear_o_israel.py 42/42; law_hear_o_israel the 66th daemon; the tape 10/10 with RUN (1304, 96, 88, 0, 12, 1595, 37, 319, pairs, 127)). THE
+## SITTING-4 BOX (a)-(l) PAID — (a) THE FOUR DUTIES as law cells — F3 the_four_duties: recite_when / recite_how / recite_who (Mishnah Berakhot 1:1-3:6 the answer sheet; the
+## postures, the audibility, the language, the exemptions), the_passages, teach_your_sons, the tefillin's five asks and the mezuzah's three, the_seven; THE COMPARTMENTS FOUR A
+## PARAMETER taught by the shelf, the spellings' open row a DATA row (6:8 defective, 11:18 plene, Exodus 13:16 plene; the shelf's count needs 11:18 defective — recorded, not
+## resolved); the write shema_commanded a STATUS on Israel at the chapter's own line; (b) FEAR, SERVE, SWEAR — 6:13 a positive clause (Temurah 3b:17 the true oath permitted),
+## the prohibition's side decalogue.vain_name by CALL; (c) NO OTHER GODS — covenant_at_horeb.the_second_word by CALL, other_gods_barred standing (CO5); Tosefta Avodah Zarah 1:3's
+## "go along with" the application; (d) THE TEST — exodus_story.trials by CALL, the Rephidim lines FOUND, test_barred a BLOCK at the second line, the pointer at 6:16 (Massah);
+## (e) THE RIGHT AND THE GOOD — the abutter (Bava Metzia 108a) the exam's case, its bounds (108b) DATA; (f) THE SON'S ANSWER — THE READBACK'S THIRD FORM (T1) BUILT: seven rows
+## VERBATIM 3 / EXPANDED 3 / SHORTENED 1, the four askings, no write; (g) 6:1'S EDGE — a reference row against stand_here_commanded, the charge's close unmoved (CO7), the
+## triad 5:31 / 6:1 / 7:11; (h) THE LIST — a DATA row (Chullin 17a's conquest houses beside it); (i) "SWORE TO YOUR FATHERS" — the citations carried by the mamre and joseph
+## CALL edges' whys, the census demanding no pointer (the design's three amended away); (j) THE RECEIPT WITHOUT THE NAME — a RUN_CITATION pointer (AS_WHEN) at 6:25, the finder's
+## blindness asserted at CO6 by CALL; (k) THE LARGE LETTERS — parked, a DATA row, no edge; (l) THE DOCKET — 747 rows by the union rule, EVERY ROW READ WHOLE under the owner's rule
+## of this date. OWED FROM 4b: (i) THE FINDER'S THIRD FORM — "as He commanded" (the comparative with the verb and a suffix, no Name: Deuteronomy 6:25 and Ezra 4:3 the Bible's
+## two seats) taught to register_census.py's receipts finder at a GATE SITTING (a gate change across the whole Torah, never one runner's); until then 6:25 stands on its pointer;
+## (ii) THE WAR CHAPTER'S CALL INTO 6:11 — the spoil of the seven nations permitted (the Sifrei 201:3; Chullin 17a) compiles at chapter 20's sitting and cites 6:11 by CALL;
+## (iii) THE FRINGES' LAW — Numbers 15:37-41 the Shema's third passage, held in mekoshesh's span by REFERENCE; its own cell (the corners, the thread, who is bound — Menachot 38a
+## on) a sitting of the second pass; (iv) THE SPELLINGS' OPEN ROW stands open — a codex question (RESEARCH_LOG 2026-09-17), no sitting owns it; (v) the Mekhilta Pisha 17 (the
+## first copy's spine on the tefillin) named, unopened — a reading sitting's if the tefillin's Exodus seats are reread; (vi) THE LARGE LETTERS parked on the owner's word.
+## NOTHING ELSE IN CHAPTER 6 IS OWED TO A LATER SITTING OF ITS OWN.

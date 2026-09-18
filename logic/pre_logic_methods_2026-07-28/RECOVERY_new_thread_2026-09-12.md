@@ -13,15 +13,14 @@ tape of events in verse order; every verse adds a line or installs a law (a daem
 EVERYTHING ELSE IN A COMPUTER PROGRAM (his frame, 2026-09-16). The repo <repo> = /Users/Shared/TorahSim, public under CC0 at
 github.com/Josephtorah/TorahSim.
 
-## 2. WHERE IT STANDS (2026-09-17, after sitting 4 — chapter 6's reading in four runs; the state doc #190 addendum 3)
-- NUMBERS CLOSED. DEUTERONOMY 1:1-5:33 READ, FROZEN, COMPILED AND ON THE TAPE (sittings 1-3b); 6:1-25 READ AND FROZEN (sitting 4).
-- 220 frozen units, standing 2203, hash 8b8fff1fa28953af. 60 runners, 65 daemons, 448 functions; registries 1122 kinds / 1023 effects.
-- THE TAPE unmoved since 3b (markers 167, closes 127, the counter (40, 11, 1)); the sweep 60/60; every gate GREEN; the register gate
-  DECLARED 100 / DEBT 0 (no seat in chapter 6).
-- CHAPTER 6'S FINDS: the Sifrei's piskaot 31-36 ON 6:4-9; the export's two files DIVERGE at 36:10; the shelf's four compartments need 11:18
-  "frontlets" defective where the ink is plene (the compile's open row); the large letters a PARKED hypothesis.
-- LAST COMMIT 7c8554e (NOT pushed). Uncommitted: sitting 4 whole; the message drafted at <scratch>/commit_msg_ch6.txt.
-- NEXT ON HIS WORD: the commit; then 4b — THE COMPILE OF CHAPTER 6 in four runs (COMPILE_DEBT's box (a)-(l); the design first); or the schema.
+## 2. WHERE IT STANDS (2026-09-17, after sitting 4b — chapter 6's compile; the state doc #193 addendum 1)
+- NUMBERS CLOSED. DEUTERONOMY 1:1-6:25 READ, FROZEN, COMPILED AND ON THE TAPE (sittings 1-4b).
+- 220 frozen units, standing 2203, hash 8b8fff1fa28953af. 61 runners, 66 daemons, 454 functions; registries 1125 kinds / 1025 effects.
+- THE TAPE at RUN (1304, 96, 88, 0, 12, 1595, 37, 319, the four pairs, 127), markers 167, closes 127, the counter (40, 11, 1); the sweep 61/61;
+  every gate GREEN; the register gate DECLARED 100 / DEBT 0 (no seat in chapter 6 — the finder blind to 6:25, its third form owed to a gate sitting).
+- THE READBACK'S THREE FORMS BUILT (acts 1b, laws 3b, a retelling inside a law 4b). THE WHOLE-ROW RULE ruled and its fix (a)-(d) paid inside 4b.
+- LAST COMMIT a7955cc (2026-09-17, NOT pushed): sitting 4. Uncommitted: 4b whole, the rule and its fix, one chapter-4 cell retyped.
+- NEXT ON HIS WORD: the commit; then CHAPTER 7's reading (7:1-26) — or the schema sitting first (on the table, not a ruling).
 
 ## 3. THE STANDING LAWS (owner-ruled; verbatim in spirit — the long forms in the addenda's section 3)
 - NO AGENTS EVER; main thread only; a sitting opens on his word. DISCUSSION IS NOT A RULING. READ THEN COMPILE PER PORTION, never read ahead.
@@ -42,8 +41,8 @@ github.com/Josephtorah/TorahSim.
   (`sh World/step9/gates_chain.sh <out_dir>`, the SUMMARY read once); ONE fast check before the tape (`checkpoint_check.py --all`); the
   records from the sheet in ONE call; independent reads batched. ⚠ A SITTING IS FOUR RUNS, a clean compaction point after each (owner-ruled
   2026-09-16): (1) the rereads, the measurements, the design; (2) the docket; (3) the types, the runner, the stitch, the tape to 10/10; (4) the
-  gates chain, the records, the forms — each near 150-200k, never 600k; a reading sitting the same; the docket's rows at a short cut; a prior
-  form by sed, read where it differs.
+  gates chain, the records, the forms — each near 150-200k, never 600k; a reading sitting the same; a prior form by sed, read where it differs.
+  ⚠ EVERY SHELF ROW READ WHOLE, NEVER A CUT (owner-ruled 2026-09-17); a docket takes the runs it needs.
 - NEVER a probe or a second stepper under the live session's source name; the journal gate never concurrently with the sweep; after any
   freeze `python3 World/build_world.py` before the journal gate. The register gate `--strict` at every compile sitting's gates step.
 - THE LINK REVIEW LAW: no link of our own unless a teacher taught it (REFERENCE vs TRANSFER vs a labeled HYPOTHESIS; every edge carries
@@ -64,14 +63,14 @@ first), THE_WORLD.md, RESEARCH_LOG.md, SETUP.md. logic/: MIDDOT.md, MOVE_CATALOG
 oral_triage/ (ledgers + dockets), corpus/CORPUS_TRUTH.py, solo_tools/, pre_logic_methods_2026-07-28/ (the state doc
 PROMPT_continue_solo_era_2026-08-06.md — its newest COMPACTION POINT; this page; the addenda).
 World/step9/: DEUTERONOMY_WALK.md (the walk's map — every sitting's design + AS BUILT), NUMBERS_WALK.md, THE_LOOP.md, THE_TENT.md,
-COMPILE_DEBT.md, RECORD_FORMS.md (the records sheet), cold_run_sequence.py (THE TAPE), cold_run_<span>.py (60 runners;
-cold_run_covenant_at_horeb.py the newest form), the registries (*_vocabulary.yaml, *_dispositions.yaml, calendar_parameters, population_schema),
+COMPILE_DEBT.md, RECORD_FORMS.md (the records sheet), cold_run_sequence.py (THE TAPE), cold_run_<span>.py (61 runners;
+cold_run_hear_o_israel.py the newest form), the registries (*_vocabulary.yaml, *_dispositions.yaml, calendar_parameters, population_schema),
 the gates (daemon_census, dependency_census, register_census --strict, world_journal --gate, run_cold_all — gates_chain.sh runs them all), the
 probes (*_probes.py), checkpoint_check.py, world_stepper.py, world_board.py, forms_deuteronomy_walk/ (the walk's scripts and prints — derive the
 newest sitting's form by sed). World/journal/data/world.sqlite the one database; Data/tanakh.sqlite the text store. Memory: <memory>/ — MEMORY.md the
 index; deuteronomy-walk.md; cost-rules-no-polling.md; step9-exam-era.md.
 
-## 5. THE SITTING SHAPES (the long forms: the addenda's section 5; the newest instances: the map's "Sitting 4" and "Sitting 3b")
+## 5. THE SITTING SHAPES (the long forms: the addenda's section 5; the newest instances: the map's "Sitting 4" and "Sitting 4b")
 THE READING: measure first (Onkelos whole + the spine by position; the parser on every number verse) → the ink asserts → the rows → the ledger
 with coverage COMPUTED → the unit yaml + manifest → the claims seated → the fold predicted and matched → build_world → the records from the sheet.
 THE COMPILE: the measurements → THE DESIGN in the map before any code → probes to FAIL → the docket by the union rule → the types by script →
@@ -79,12 +78,12 @@ the gates to FAIL → the runner (parts; the fast checker; CASES generated) → 
 with THE REST → `gates_chain.sh` (one summary) → the records from the sheet in one call — the four runs' edges after the design, the docket, the tape.
 
 ## 6. READ ON DEMAND (open these only when the sitting touches the subject)
-- The whole standing-law text, the old staging form, the corpus bake: the addenda §3-4. The two sitting shapes in full: the addenda §5.
+- The standing laws in full, the old staging form, the corpus bake: the addenda §3-4; the two sitting shapes in full: §5.
 - THE LOOP (the sink, the index, installation, the cursor, scenarios, the readback, the stepper, the port, the board, D1-D33): THE_LOOP.md.
-- Numbers' sittings and lessons: NUMBERS_WALK.md; the addenda §8-17. The project review: §18.
+- Numbers' sittings and lessons: NUMBERS_WALK.md; the addenda §8-17. §18 the project review.
 - The one database (D7's merge), the portable repo: the addenda §23-24, §27-29; reviews/PORTABLE_repo_2026-09-15.md.
-- Deuteronomy's sittings: the map; the addenda §31-38. The cost cuts: §35.
-- The Decalogue-schema question: the state doc's #185 addendum 1 and the map's tail (ON THE TABLE).
+- Deuteronomy's sittings: the map; the addenda §31-40 (§39 the whole-row rule). The cost cuts: §35.
+- The Decalogue-schema question: the state doc's #185 addendum 1 (ON THE TABLE).
 - THE_STEPS Step 2, Step 5 and the compiler-law block: before a READING sitting's ledger is written.
 
 ## 7. IF THIS COMPACTS MID-SITTING

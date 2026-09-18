@@ -4302,8 +4302,10 @@ your word; then chapter 6's reading — or the schema sitting first, on your wor
 THE FOUR-RUN RULE (2026-09-16, on Brian's "Yes write it", after chapter 5's compile ran as one sitting of six hundred thousand tokens). A sitting is
 no longer one run. It is four, with a clean stopping point after each: first the rereads, the measurements and the design; second the docket;
 third the runner and the tape to ten of ten; fourth the gates and the records. Each run stays near a fifth of a context, and the state doc's
-checkpoint at each edge names the next run's first step, so the reread after a compaction is the same three files. Two economies inside a run:
-the docket's rows are read at a short cut, and a prior sitting's script is derived by substitution and read only where it differs. The reason is
+checkpoint at each edge names the next run's first step, so the reread after a compaction is the same three files. One economy inside a run:
+a prior sitting's script is derived by substitution and read only where it differs. The shelf's rows are never an economy: every row is read
+whole before its verdict is typed (Brian's rule, 2026-09-17: "never ever cut corners with the Talmud" — a short cut on the docket's rows stood one
+day, was struck, and its rows were reread whole). The reason for the four runs is
 his: a million tokens in one run is not to be trusted, and the instruments that caught this sitting's misses are no excuse for a long context.
 DEUTERONOMY — SITTING 4 — CHAPTER 6, Deuteronomy 6:1-25 (2026-09-17, on Brian's "ok lets start the next chapter", then "go", "Continue" and "Go" for the
 runs — the first sitting under the four-run rule; World/step9/DEUTERONOMY_WALK.md "Sitting 4" and "Sitting 4 — AS BUILT").
@@ -4320,6 +4322,18 @@ large letters of "Hear" and "one" — a marker layer we named a hypothesis and p
 standing facts up by six as predicted, its hash unmoved, every gate green. Next: the compile of chapter 6 in four runs — the creed's duties as
 code, the son's answer graded against the tape as a story told to a son — or the ten-commandments schema first, on your word.
 
+
+DEUTERONOMY — SITTING 4b — CHAPTER 6 COMPILED (2026-09-17, on Brian's "Go", "Next go" and "Ok go" for its runs; World/step9/DEUTERONOMY_WALK.md
+"Sitting 4b" and "Sitting 4b — AS BUILT"). The Shema's law — hear, love, keep the words on your heart, teach them, bind them, write them on the
+doorposts — had never been compiled anywhere in the machine, so this sitting compiled it for the first time and gave it at the day the chapter is
+spoken, with no marker: the four duties stand on Israel's ledger from that day, and the test at Massah is barred from it. The readback took its third
+form here: the son's question and the answer are a law that commands a retelling, so the answer's rows are graded against the tape as before, and the
+grading is the law's own cell doing its work — the Talmud itself puts the chapter's verse in the first clause of the Passover telling. In the middle of
+the sitting Brian ruled that no row of the Talmud is ever read cut: the docket's seven hundred and forty-seven rows were reread whole, seventy
+corrected, and the four earlier dockets reread where a cut had been taken — one cell of chapter 4 had been typed from a challenge instead of its
+answer and was retyped. The runner matched its answer sheet on the first run; the tape reached ten of ten on the first run with the previous tape
+reproduced exactly; every probe suite and every gate green in one chain, the sweep whole. Next: the commit on your word; then chapter 7's reading — or
+the schema sitting first, on your word.
 
 ## Step 6 — Publish
 Export, parity check against the public repo, deploy. Owner's word.

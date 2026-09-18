@@ -1646,7 +1646,7 @@ one reading abolished for the heretics' grievance). Nothing committed: the tree 
 
 ## THE FOUR-RUN RULE (owner-ruled 2026-09-16 at 3b's close — "Yes write it")
 
-THE FOUR-RUN RULE (owner-ruled 2026-09-16, "Yes write it"): a sitting is FOUR RUNS, a clean compaction point after each — (1) the rereads, the measurements, the design in the map; (2) the docket (the scan, the verdicts in parts, the writer); (3) the types, the runner, the stitch, the tape to 10/10; (4) the gates chain, the records, the forms — each near 150-200k tokens, never one run of 600k; a reading sitting split the same way (the measurements and the ink; the rows and the ledger; the seat, the chain and the fold; the records). Inside a run: the docket's rows read at a short cut; a prior sitting's form derived by sed and read only where it differs, never whole; the state doc's checkpoint at each run's end names the next run's first step. The next sitting (chapter 6's reading, or the schema sitting) opens by naming its four runs; sitting 3b (one run, ~600k) is the case that ruled it.
+THE FOUR-RUN RULE (owner-ruled 2026-09-16, "Yes write it"): a sitting is FOUR RUNS, a clean compaction point after each — (1) the rereads, the measurements, the design in the map; (2) the docket (the scan, the verdicts in parts, the writer); (3) the types, the runner, the stitch, the tape to 10/10; (4) the gates chain, the records, the forms — each near 150-200k tokens, never one run of 600k; a reading sitting split the same way (the measurements and the ink; the rows and the ledger; the seat, the chain and the fold; the records). Inside a run: the docket's rows read at a short cut; a prior sitting's form derived by sed and read only where it differs, never whole; the state doc's checkpoint at each run's end names the next run's first step. [AMENDED 2026-09-17: "the docket's rows read at a short cut" STRUCK on the owner's word — THE WHOLE-ROW RULE, the map's tail.] The next sitting (chapter 6's reading, or the schema sitting) opens by naming its four runs; sitting 3b (one run, ~600k) is the case that ruled it.
 
 ## Sitting 4 — CHAPTER 6, Deuteronomy 6:1-25 (2026-09-17; the owner: "ok lets start the next chapter"): the reading and the unit — THE DESIGN, written at the close of RUN 1 of four
 
@@ -1828,3 +1828,322 @@ Pesachim 10:4; Sotah 7:1; Maaser Sheni 3:8) with the tefillin cell's open row on
 swear; the test; the right and the good; the son's answer as THE READBACK'S THIRD FORM — a retelling told to a son graded against the tape's exodus
 lines; the receipt without the Name declared or the finder taught), the stitch, the tape to 10/10; (4) the gates chain, the records, the forms. Or
 THE DECALOGUE-SCHEMA SITTING first, on the owner's word. Then chapter 7, and on in order.
+
+## Sitting 4b — THE COMPILE OF CHAPTER 6, Deuteronomy 6:1-25 (2026-09-17; the owner: "Go" after sitting 4's commit a7955cc): THE DESIGN — written at the
+## close of RUN 1 of four (the rereads: THE_STEPS' compiler block and Step 5, the 4b box (a)-(l), the 3b design and AS BUILT as the compile's form; the
+## measurements: ch6_compile_recon.py, ch6_docket_scan.py in the scratchpad) and BEFORE any code; the four-run rule's second sitting
+
+THE FOUR RUNS: RUN 1 the rereads, the measurements and this design — CLOSED HERE, a clean compaction point (#190 addendum 5); RUN 2 the probes to FAIL
+(readback Q13-Q15), then THE DOCKET by the union rule at a short cut (four parts A-D on ch5's instrument, the writer write_ch6_docket.py, coverage
+computed); RUN 3 the types by script, the recorder and the stitcher, the gates to FAIL, the runner in parts with the fast checker and the generated
+CASES, the literals CO1-CO9, checkpoint_check.py --all, the tape to 10/10 with THE REST; RUN 4 gates_chain.sh in one summary, the records from the
+sheet in one call, the forms copied, this section's AS BUILT.
+
+THE MEASUREMENTS (what the tape, the runners and the gates say before a line is typed): THE COUNTER stands at (40, 11, 1); the tape's LAST LINE is
+stand_here_commanded (5:28-31, dated (1, 3, 7) inside 5:23's retrograde stretch) and its LAST MARKER the FORWARD one at Deut 5:32 (M['charge'] =
+M['speech'], (40, 11, 1)) — the stretch ENDED: CHAPTER 6 OPENS ON THE COUNTER'S OWN DAY, NO MARKER (2b's lesson 2 checked again). NO LINE OF THE
+CHAPTER'S OWN MATTER IS ON THE TAPE — no runner holds a cell for the recitation, the tefillin, the mezuzah, the teaching, the test at 6:16 or the
+right-and-good (the recon's regex per def over all sixty runners: "tefillin" only as a word in erection, family, vestments; "mezuzah" nowhere;
+"fringes" a MODULE mention in mekoshesh, whose span holds Numbers 15:37-41; "shema/recite" only as the verb "recite" elsewhere) — THE SHEMA'S LAW IS
+COMPILED HERE FOR THE FIRST TIME, its giving the chapter's own day. THE CELLS THE CHAPTER CALLS, located first: the other gods and the jealous God —
+covenant_at_horeb.the_second_word (F2 of 3b: no_other_gods, no_image, bow_and_serve, the_visiting; other_gods_barred a BLOCK on Israel at the giving's
+line); the oath by the Name — decalogue.vain_name (the third word's cell: vain_oath, false_future_oath) the prohibition's side, holiness.deposit_case and
+vayikra5's graded_offering the oath's cases; the son's question — pesach.firstborn (Exodus 13:2-16 the passover's runner: the firstborn's consecration and
+13:13-14's "when your son asks you"; the sign on the hand at 13:9, 13:16 in its ink, NO tefillin cell); the forgetting — obey_horeb's FORGET census
+(thirteen seats, 6:12 among them) and the_exile_case (4:29's "with all your heart"); the testimonies' header — obey_horeb's 4:45 assert (the three seats
+4:45, 6:17, 6:20); the trials — exodus_story.trials (count_by_exodus 6, ten_list — "two at the water" Marah and Rephidim; Arakhin 15a) and its 'murmured'
+kind writing tested_the_lord; the oath to the fathers — mamre (sworn_by_himself at Genesis 22:16-18; oath_upheld at 26:3-5) and joseph (visitation_promised
+at 50:24), opening_speech's 1:8 seats. THE TAPE'S LINES THE CHAPTER RETELLS (the son's answer 6:21-23 and the test 6:16 — every one FOUND): the ten
+plague_struck lines (blood, frogs, lice, swarms, pestilence, boils, hail, locusts, darkness, the_firstborn — Exodus 7:20 to 12:29, with their closes),
+sent_out (12:31-33), brought_out (12:51 — "the LORD brought out the sons of Israel"; the closes sent_to_pharaoh, to_be_brought_out), sea_split and
+saved_at_the_sea (14:21, 14:30), believed (14:31); Rephidim — murmured (17:2-3, the trial "give us water"), rock_struck (17:6), named "Massah and
+Meribah" (17:7); the oath — sworn_by_himself (Genesis 22:16-18), oath_upheld (26:3-5), visitation_promised (50:24); the giving — ten_words_declared and
+tablets_given (2b's lines at Deut 4:10-13, (1, 3, 7)), stand_here_commanded (5:28-31 — "all the commandment … which you shall teach them": THE CHARGE
+6:1 EXECUTES, its debit CLOSED at 3b by the prior run's Deut 1:5). THE REGISTER GATE'S FINDER IS BLIND TO 6:25 (its own code, section (7) of the recon):
+the receipt form is "as (k/834) commanded (6680) the LORD (3068) within three" and the second form "according to ALL that the LORD commanded" — 6:25's
+"AS HE COMMANDED US" (k/834 + 6680 with the suffix, NO Name; Ezra 4:3 the one other seat) is not scanned, so the gate lists no seat in chapter 6 (DECLARED
+100 unmoved) — THE DECISION below. THE CHECKPOINT PREFIX measured FREE: CO (CO, CQ, CU free; none a label elsewhere). THE GLOBAL COUNTS grepped before the
+tape run: markers 167 (F 129, R 23, P 15) UNMOVED — no marker this chapter; closes 127 UNMOVED — no close; entities 319 UNMOVED (Israel the written-on
+party); daemons 65 → 66 (I5 65 → 66); kinds 1122 → 1125 (two tape kinds, one case kind), effects 1023 → 1025; CENSUS on tape 1302 → 1304, kinds 847 →
+849; PLACEMENT events page_order 1138 → 1140 (the lines on the counter's day, no marker), markers unmoved; the positions table 226 → 235 checkpoints.
+THE DOCKET SIZED (ch6_docket_scan.py — the export's chapter 6 the DB's, no division map): 95 LINK rows in 33 works (Menachot 21, Berakhot 12, Kiddushin
+7, Bava Metzia 5, Megillah 4, Sanhedrin 4, Sotah 4, Yoma 4, Chullin 3 …; every verse of the chapter cited by someone) + THE TOPIC RANGES SIZED: Mishnah
+Berakhot 1:1-3:6 whole (19 rows) with 9:5, Pesachim 10:4, Sotah 7:1, Maaser Sheni 3:8, Menachot 3:7 (the four passages); Berakhot 2a-16a 787 rows (102
+credited), 61b 16; Menachot 31b-37b 156 (23 credited), 43b 18; Kiddushin 29a-30b 75 (47 credited — the father's duties read at a Genesis sitting);
+Pesachim 56a 13, 116a-116b 26; Sanhedrin 4b 17, 74a 23; Shabbat 103b 17; Yoma 11a 14; Bava Metzia 108a 15; Temurah 3b-4a 29 — THE DESIGN DECLARES: every
+range whole EXCEPT Berakhot 2a-16a, of which the VERSE-ANCHORED amudim are read whole — 2a-2b (the evening's time from "when you lie down"), 10b-11a (the
+postures — the Sifrei 34:9's dispute), 13a-13b (the intention; "hear" in any language; the passages' order; "upon your heart"), 15a-15b (the audibility —
+31:7's "hear"), 16a (the laborers, the bridegroom) — and the remainder of the range (the night's watches, David's harp, the laws of prayer and the
+synagogue) is ENUMERATED and marked outside declared scope (Step 2's standing rule; the scan's count the enumeration): the docket near 650 rows, some 100
+credited, in FOUR parts at a short cut (the four-run rule's docket). THE CHAPTER'S OWN INK (the reading's asserts, reused in the runner): one number
+verse (6:4 [1] — the creed's word the numeral), no gap; no divine frame, one "saying" (the son's), two imperatives, one infinitive absolute (6:17), two
+plural prohibitions in a singular chapter, the answer in the first person plural; the four seats of "a sign upon your hand", the three spellings of
+"frontlets" (11:18 plene in the ink — the shelf's four compartments counted on a defective 11:18: THE OPEN ROW), the one-letter pair "doorposts"; the
+two seats of "the LORD one", of "when your son asks you tomorrow" (6:20 = Exodus 13:14), of "as He commanded us" (6:25, Ezra 4:3).
+
+THE NAME: cold_run_hear_o_israel.py — the 61st runner ("hear, O Israel", 6:4); law_hear_o_israel the 66th daemon (given_at Deut 6:4 — the Shema's
+first and only giving, the chapter's own line; installed_by boot — the two Deuteronomy daemons' form, law_opening_speech and law_obey_horeb); the span
+[[Deut, 6, 1, 25]]; the checkpoints CO1-CO9; the unit deu_06_shema the frozen reading.
+
+THE READBACK'S THIRD FORM — A RETELLING INSIDE A LAW (the box's (f); the first form's (R1)-(R6) and the laws' form's (L1)-(L6) both hold; ONE new
+rule): (T1) THE RETELLING IS COMMANDED — "and you shall say to your son" (6:21) is itself a law's clause: the answer's rows are REFERENCE ROWS graded
+against the tape (never a second act — R1) AND the cell that compiles the DUTY TO ANSWER (the four askings, Mishnah Pesachim 10:4 "according to the
+son's understanding"; Pesachim 116a-b the four sons; the passover's 13:8 "you shall tell your son" by CALL) returns its verdict on the answer's FORM:
+the retelling's grades are the exam's cells. THE ROWS (seven — the answer's five, the header's one, the test's one): 6:1 "this is the commandment …
+which the LORD your God commanded to teach you" — REFERENCE against stand_here_commanded (5:31 "all the commandment … which you shall teach them"):
+the charge EXECUTED, its debit closed by the prior run (VERBATIM in kind — the triad's three seats 5:31 / 6:1 / 7:11); 6:16 "as you tested at Massah" —
+REFERENCE against murmured (17:2-3), rock_struck (17:6), named (17:7): a RUN CITATION by name (VERBATIM — the name the tape wrote); 6:21 "we were slaves
+to Pharaoh … the LORD brought us out of Egypt with a strong hand" — against brought_out (12:51): EXPANDED ("with a strong hand" the ink of 13:9); 6:22
+"signs and wonders great and grievous upon Egypt, Pharaoh and all his house before our eyes" — against the TEN plague_struck lines: SHORTENED (ten lines
+to one clause; the retelling's one word for the ten — Onkelos "all the men of his house" supplied); 6:23 "and us He brought out from there, to bring us
+in, to give us the land which He swore to our fathers" — against brought_out and the oath's three lines (sworn_by_himself, oath_upheld,
+visitation_promised): EXPANDED (the purpose "to bring us in"); 6:24 "and the LORD commanded us to do all these statutes, to fear … for our good always,
+to keep us alive as at this day" — against ten_words_declared and stand_here_commanded: EXPANDED (the three purpose clauses); 6:25 "as He commanded us"
+— THE RECEIPT WITHOUT THE NAME: a RUN CITATION of stand_here_commanded (5:31's "all the commandment"), VERBATIM in kind. Every row's entry FOUND on the
+running world by kind and first verse (CO4); no row OPEN; the grades' census VERBATIM 3 / EXPANDED 3 / SHORTENED 1 typed from the runner's print.
+
+THE DESIGN'S DECISIONS (the box's (a)-(l) settled on the measurements):
+(a) THE FOUR DUTIES AS LAW CELLS — F3 the_four_duties: THE RECITATION (asks: recite_when — the evening from "when you lie down": the priests' entering
+to eat their terumah, until the first watch / midnight / dawn (Mishnah Berakhot 1:1, the dispute Eliezer / the sages / Gamliel), the morning from blue-
+against-white until sunrise / three hours (1:2); recite_how — the postures (1:3: Shammai reclining and standing by the letter, Hillel "in his way" from
+"when you walk by the way"; the Sifrei 34:9-10), the audibility (2:3: R. Yose "did not fulfil" from "hear", the sages fulfilled; the Sifrei 31:7), the
+intention (2:1), the language (Sotah 7:1: in any language, from "hear"); recite_who — the exemptions (3:1-6: the mourner, the bridegroom, women and
+slaves and minors, the one in doubt); the_passages — the three passages in their order (2:2; the Sifrei 34:2-3: the fringes recited, Exodus 13's not, the
+ten words excluded — Berakhot 12a credited from 3b; mekoshesh's span holds the third passage by REFERENCE); THE TEACHING (teach_your_sons — "sons" the
+disciples, the Sifrei 34:1-4; Kiddushin 29a-30b the father's duties, credited where read); THE TEFILLIN (tefillin_passages — the four, Menachot 3:7 "the
+four passages invalidate each other"; tefillin_compartments — the hand's ONE and the head's FOUR (the Sifrei 35:3-4; Menachot 34b-35a; Sanhedrin 4b):
+THE NUMBER FOUR A PARAMETER taught by the shelf, its derivation from the three spellings a recorded argument that reads 11:18 defective where the ink is
+plene — THE OPEN ROW, a DATA row the_spellings naming the divergence, the cell returning the parameter, never the count from the ink; tefillin_arm — the
+left, the bicep, the amputee (35:5-10; Menachot 36b-37a); tefillin_order — the hand first, the head first off (35:11; Menachot 36a); tefillin_head — the
+hairline, the plague-mark's place (35:12; Menachot 37a-b)); THE MEZUZAH (mezuzah_writing — a scroll in ink, not stone, the perfect letters (36:1-2;
+Shabbat 103b; Menachot 31b-34a); mezuzah_doorpost — one post, the right of the entrance, the height (36:3-5; Menachot 33a-34a); mezuzah_gates — the
+dwelling's, not the shed's, the bath's, the Temple's except the profane chambers (36:6-8; Yoma 11a; Maaser Sheni 3:8)); the_seven (36:9; Menachot 43b);
+the WRITE shema_commanded — a STATUS on Israel (the four duties standing) at the chapter's own line shema_declared (6:4-9).
+(b) FEAR, SERVE, SWEAR — F4's fear_serve_swear: 6:13 "by His name you shall swear" a POSITIVE clause (Temurah 3b-4a: "swear" a command when one swears
+truly; Shevuot 35a the Name in an oath) with the prohibition's side decalogue.vain_name by CALL (the third word: vain_oath, false_future_oath); "serve"
+BEFORE Him (Onkelos) a DATA note; no write (the block of the second word stands).
+(c) NO OTHER GODS (6:14) — F4's no_other_gods: covenant_at_horeb.the_second_word('no_other_gods') by CALL; other_gods_barred stands from 3b (no second
+write — CO5); the plural prohibition a DATA note (the two plural prohibitions in a singular chapter).
+(d) THE TEST (6:16) — F5's you_shall_not_test: exodus_story.trials('ten_list') by CALL ("two at the water"); the tape's Rephidim lines FOUND (CO3); the
+WRITE test_barred — a BLOCK on Israel at the chapter's second line testing_barred (6:16-19); the RUN_CITATION pointer at Deut 6:16 (Massah — the tape's
+named line at 17:7).
+(e) THE RIGHT AND THE GOOD (6:18) — F5's the_right_and_the_good: Bava Metzia 108a's abutter (the buyer of a field adjoining another's yields to the
+neighbor — "you shall do the right and the good"): the exam's case row, the verdict accepted for the abutter; a DATA row the_abutter — a rule beyond the
+letter seated in the ink's own words (the shelf's teaching; no link of our own).
+(f) THE SON'S ANSWER — (T1) above: F6 the_sons_question (asks: the_four_askings — Exodus 12:26, 13:8, 13:14, 6:20 the four sons (Pesachim 116a-b;
+Mishnah Pesachim 10:4); pesach.firstborn by CALL for 13:14's ink; the_answer_rows — the five reference rows graded; the_receipt — (j); righteousness_for_us
+— Genesis 15:6's kin, 24:13's pledge, a DATA note); NO write (the answer's duty a REFERENCE to the passover's telling; the retelling never a second act).
+(g) 6:1'S EDGE — F1 the_header: the triad 5:31 → 6:1 → 7:11 (the reading's assert), 6:1 a REFERENCE row against stand_here_commanded (the charge
+executed; the debit's close by the prior run unmoved — CO7); "hear, O Israel, and observe to do" (6:3) the frame (R6, no write); the land flowing
+with milk and honey the book's first (the oath's seats).
+(h) 6:10-11'S LIST — F4's the_list: a DATA row (the cities, houses, cisterns, vineyards and olives "which you did not …"; Joshua 24:13 and Nehemiah 9:25
+the retellings; the Sifrei 38:10's merit; 201:3's spoil permitted — the war chapter's CALL into 6:11 declared OWED FORWARD in the dispositions when
+chapter 20 compiles).
+(i) "SWORE TO YOUR FATHERS" (6:10, 18, 23) — RUN_CITATION pointers (three) naming the tape's sworn_by_himself (Genesis 22:16), oath_upheld (26:3),
+visitation_promised (50:24); the land's promise the covenant's (the erection's book by CALL where the cell asks).
+(j) THE RECEIPT WITHOUT THE NAME (6:25) — the register gate's finder BLIND (measured): a RUN_CITATION pointer at Deut 6:25 on the runner (form AS_WHEN,
+the referent stand_here_commanded — 5:31's "all the commandment", the giving's ten_words_declared the second referent) declared with this why; THE
+FINDER'S THIRD FORM ("as He commanded" — k/834 + 6680 with a suffix and no Name: 6:25, Ezra 4:3 the two Bible seats) OWED TO A GATE SITTING — a gate
+change across the whole Torah, not this runner's; recorded in the 4b box's PAID line as owed forward; the gate's DECLARED 100 unmoved; CO6 asserts the
+blindness by CALL to the gate's own receipts() finder.
+(k) THE LARGE LETTERS — PARKED: no work; the DATA row the_large_letters names the store's two dropped tokens and the parked hypothesis; no edge.
+(l) THE DOCKET by the union rule — the scan's 95 link rows + the Mishnah rows (24) + the ranges declared above (near 650 rows, some 100 credited) in
+FOUR parts A-D — LAW / DERIVATION / DISPUTE / CONTEXT / OUTSIDE; the crowns expected: the times from "lie down" and "rise" (Berakhot 2a, 10b); the
+postures (10b-11a); the audibility from "hear" (15a-b); any language from "hear" (Sotah 7:1; Berakhot 13a); the three terms — the two inclinations, the
+soul, the money (9:5; 61b — R. Akiva's "with all your soul"); the four passages and the compartments from the spellings (Menachot 34b-35a; Sanhedrin 4b);
+the left arm from "your hand" (36b-37a); the order (36a); the mezuzah's scroll, post, side, gates (31b-34a; Yoma 11a); the perfect letters (Shabbat 103b);
+the seven (Menachot 43b); the father's duties (Kiddushin 29a-30b); the creed at Jacob's bed (Pesachim 56a); the four sons (Pesachim 116a-b); the martyr
+(Sanhedrin 74a); the oath by the Name (Temurah 3b-4a); the abutter (Bava Metzia 108a).
+
+THE CELLS (six, each returning out(verdict, effects); the INK block exec'd from the sequence file; the token probes zero-report; every seat list typed
+from the reading's print and the recon): F1 the_header (6:1-3 — asks: the_triad, the_charge_executed (6:1 — the reference row; CO7), hear_and_observe
+(6:3 — 5:1's kin), the_land_flowing (6:3 — the book's first; the oath's seats), your_sons_son (6:2 — three generations; Exodus 10:2 the kin, DATA)); F2
+the_creed (6:4-5 — asks: hear_o_israel (the four seats; the imperative; Jacob's sons — Pesachim 56a; the response line), the_lord_is_one (the two seats;
+the parser [1]; the_large_letters DATA), with_all_your_heart (the two inclinations — 9:5), with_all_your_soul (the martyr — Sanhedrin 74a; R. Akiva —
+Berakhot 61b), with_all_your_might (the money — 9:5; the measure — the Sifrei 32:7), love_and_fear (the Sifrei 32:1; Sotah 31a)); F3 the_four_duties
+((a) — the asks named there; the write shema_commanded); F4 the_gift_and_the_warning (6:10-15 — asks: the_list (h), lest_you_forget (6:12 — obey_horeb's
+FORGET by CALL), fear_serve_swear (b), no_other_gods (c), the_jealous_god (6:15 — the_visiting by CALL; the Shekhinah DATA)); F5 the_test_and_the_right
+(6:16-19 — asks: you_shall_not_test (d — the write test_barred), surely_keep (6:17 — the infinitive absolute; the testimonies' three seats), the_right_and_
+the_good (e), thrust_out_enemies (6:19 — DATA; 9:4 forward)); F6 the_sons_question (f). The readback table the_readback (the seven rows of (T1)).
+
+THE DATA ROWS (eighteen): the_readback, the_large_letters (k), the_spellings (the open row — 6:8 defective, 11:18 plene, Exodus 13:16 plene; the shelf's
+1 + 1 + 2), the_two_sets (recited / bound; the ten words in neither), the_recitation_times (1:1-2's table), the_postures (1:3; the Sifrei 34:9-10),
+the_exemptions (3:1-6), the_passages_order (2:2), the_tefillin_table (compartments, arm, order, head), the_mezuzah_table (writing, post, side, gates),
+the_seven (36:9), the_list (h), the_oath_by_the_name (b), the_abutter (e), the_four_sons (f), the_receipt_without_the_name (j), the_creed_terms (heart /
+soul / might — money, measure, thanks; Onkelos "property"), the_files_diverge (the export's 36:10 — the reading's caution, a note).
+
+THE DAEMON law_hear_o_israel (given_at Deut 6:4; installed_by boot): watches shema_declared → [shema_commanded]; testing_barred → [test_barred];
+shema_case → [accepted, exempt]. No timer; literal W dicts per kind; the case kind dispatching to the cells by name in EXPLICIT branches.
+
+THE TYPES (add_types_ch6.py): TWO tape kinds — shema_declared (speech, 6:4-9; the four duties; the witnesses the verses), testing_barred (speech,
+6:16-19; the first telling Exodus 17:2-7 named in the row) — ONE case kind (shema_case); TWO new effects — shema_commanded (status on Israel; 6:4-9),
+test_barred (block on Israel; 6:16); the effects reused — accepted, exempt; NO registry row (Israel the written-on party); the daemon block; the
+functions block hear_o_israel (the six cells WRAPPED); the span [[Deut, 6, 1, 25]]; the CALL edges by the ink — covenant_at_horeb (the second word, the
+visiting; the charge's line), obey_horeb (the forgetting; the testimonies' header; the exile's heart), decalogue (the vain name — the oath's prohibition),
+exodus_story (the trials; the plagues and the going out read back), pesach (the son's question at 13:14; the firstborn's passages), opening_speech (the
+oath's seats at 1:8), mamre and joseph (the oath's lines), mekoshesh (the fringes — the third passage, REFERENCE), erection (the covenant's book where
+asked); the pointers RUN_CITATION — Deut 6:16 (Massah), 6:10 / 6:18 / 6:23 (sworn to the fathers), 6:25 (the receipt without the Name — (j)); every
+demand the census makes past the imports read on the DB and declared, never a blanket row; I5 65 → 66.
+
+THE TAPE (two lines, NO marker): under "# ---- Deut 6 ----" after the tape's last Deuteronomy 5 line and the forward marker at 5:32: shema_declared
+(6:4-9) then testing_barred (6:16-19), both on the counter's own day (40, 11, 1), page_order. The markers 167 UNMOVED; the closes 127 UNMOVED; the
+counter ends at (40, 11, 1) UNMOVED.
+
+THE CHECKPOINTS CO1-CO9 (the prefix measured free):
+CO1 THE LINES — two events of the sitting's kinds on the tape in the ink's order, both AFTER the tape's last Deuteronomy 5 line, both on the counter's day
+(40, 11, 1), NO marker added (markers 167); the counter ends at (40, 11, 1).
+CO2 THE FOUR DUTIES — shema_commanded on israel_people ONE (a status), source beginning "Deut 6:4"; law_hear_o_israel registered, given_at Deut 6:4,
+installed_by boot; the functions block's six cells WRAPPED.
+CO3 THE TEST BARRED — test_barred on israel_people ONE (a block), source beginning "Deut 6:16"; the tape's Rephidim lines FOUND by kind and first verse:
+murmured at Exod 17:2 ONE, rock_struck at Exod 17:6 ONE, named at Exod 17:7 ONE ("Massah and Meribah").
+CO4 THE READBACK'S THIRD FORM — the_readback's rows SEVEN (the answer's five, the header's, the test's), every row's tape entry FOUND on the running
+world by kind and first verse (rows n = found n): brought_out at Exod 12:51, plague_struck ten (the ten plagues by value), sworn_by_himself at Gen 22:16,
+oath_upheld at Gen 26:3, visitation_promised at Gen 50:24, stand_here_commanded at Deut 5:28, ten_words_declared at Deut 4:10; the grades' census typed
+from the runner's print (VERBATIM 3, EXPANDED 3, SHORTENED 1); no row OPEN.
+CO5 THE SECOND WORD STANDS — other_gods_barred on israel_people ONE UNMOVED (no second write; the cell CALLED), coveting_barred ONE unmoved.
+CO6 THE RECEIPT WITHOUT THE NAME — the register gate's own finder (register_census.receipts, by CALL) lists NO seat at Deut 6:25 on the chapter's ink
+(the blindness measured, asserted); the RUN_CITATION pointer 'Deut 6:25' on file; DECLARED 100 unmoved (the gate's --strict print at the chain).
+CO7 THE CHARGE EXECUTED — commanded on moses valued teach_the_commandment ONE, CLOSED, closed_by beginning "Deut 1:" UNMOVED (6:1 a reference row, no
+write); closes 127.
+CO8 THE EXODUS READ BACK — the ten plague_struck lines and their closes UNMOVED; brought_out ONE; sea_split ONE; the four sons' first telling
+Exod 13:14 in the ink (the DATA row); nothing written on Egypt or Pharaoh.
+CO9 THE REST — entities 319 UNMOVED, closes 127, markers 167, the population table 148 UNMOVED, the two kinds present; the other counts 3b's exactly
+with the two lines and the daemon's two writes dropped (THE REST test — NO declared delta this sitting: the daemon writes only on its own lines).
+NO retype of the older REST literals (closes and markers unmoved — 3b's lesson 3 checked by grep before the tape); every miss shown at once by
+checkpoint_check.py --all before the tape.
+
+THE PREDICTION'S ARITHMETIC: RUN = (1304, 96, 88, 0, 12, 1595, 37, 319, the four pairs, 127) — events +2 (the two lines), timers set +0, fired +0 (no
+clock walk), cancels 0, retro-writes 12 UNMOVED, writes +2 (the daemon's watches summed: shema_commanded at the first line, test_barred at the second),
+daemons fired +1 (law_hear_o_israel), entities +0, closes +0; PREVIOUS_RUN = 3b's RUN EXACTLY (1302, 96, 88, 0, 12, 1593, 36, 319, the four pairs, 127):
+THE REST drops the two lines by the runner's tag and the span and the daemon's two writes with them — no delta; NEWEST_RUNNER 'hear_o_israel'; PLACEMENT
+markers UNMOVED ({'text_constrained': 106, 'reading_placed': 46}), events page_order 1138 → 1140 (text_constrained 109, reading_placed 55 unmoved) —
+read at the stitcher's print; CENSUS typed from the stitcher's print (on tape 1302 → 1304, history +2, kinds 847 → 849 — the two tape kinds, subjects
+272 UNMOVED, markers 167 (F 129, R 23), closes 71 unmoved; the case rows the exam's persons); the population table 148 UNMOVED; the scene's tuple
+PREDICTED BY SCRIPT at the runner step (the exam's persons through shema_case — each written once; no timer; no close); the narrative's (on its own
+world: 2 writes, 0 closes, the entities israel = 1, the counter's day (11, 1), 0 dated lines, no row).
+
+THE PROBES (RUN 2's first step): readback_probes.py Q13-Q15 written to FAIL before the runner exists — Q13 the runner and its the_readback table (seven
+rows; the grades' census VERBATIM 3 / EXPANDED 3 / SHORTENED 1; every row's entry found), Q14 the two lines on the counter's day with NO marker (markers
+167 after the run) and shema_commanded / test_barred on Israel with their sources, Q15 the receipt without the Name — the gate's finder blind at Deut
+6:25 on the chapter's ink and the RUN_CITATION pointer on file; Q10-Q12 unchanged; NO parser rule this sitting (the one number verse read right at the
+reading — census_probes unmoved at 224); the register gate unchanged; checkpoint_probes' verse computed (2b's form).
+
+THE ORDER: this design → the state doc's checkpoint (#190 addendum 5 — RUN 1 closed) → RUN 2: the probes to FAIL (Q13-Q15 0/3) → THE DOCKET by the
+union rule (the scan rerun with the Berakhot amudim named, the dump; four parts A-D on ch5_docket_rows.py's instrument at a short cut; the writer
+write_ch6_docket.py with the coverage computed and the cite index) → the checkpoint (#190 addendum 6) → RUN 3: the types by script (add_types_ch6.py) →
+the recorder and the stitcher (the scratch copies: SPAN_ORDER + 'hear_o_israel'; no marker row) → the gates to FAIL (daemon, dependency) → the runner
+(ch6_part1-4.py assembled by cat; the fast checker over parts 1 and 2; the honest-pairing guard; zero-report probes; the scene and the narrative
+predicted by script; CASES generated from the cells' asks) → the recorder → the stitcher → the literals CO1-CO9 (patch_seq_literals_ch6.py) →
+`checkpoint_check.py --all` → the tape run (10/10 with THE REST) → the checkpoint (#190 addendum 7) → RUN 4: `gates_chain.sh` in the background (one
+summary: the probe gates, the daemon and dependency gates, build_world, the journal gate, THE REGISTER GATE --strict unmoved, the positions table,
+checkpoint_probes, the sweep, the journal gate again) → the records from the sheet in one call (this section's AS BUILT, COMPILE_DEBT's sitting-4 box
+PAID + the 4b box with the finder's third form owed forward, MOVE_CATALOG (checked), MIDDOT's docket entries, MISHNAH_TOPICS (Berakhot 1-3, 9:5;
+Pesachim 10:4; Sotah 7:1; Maaser Sheni 3:8; Menachot 3:7), RESEARCH_LOG, THE_STEPS, THE_BRIEFING, THE_LOOP.md's step 6 row (the third form), RESUME,
+memory, the state doc's addendum, the recovery page rewritten, the addenda's section) → the forms copied.
+
+## THE WHOLE-ROW RULE (owner-ruled 2026-09-17: "OK, never ever cut corners with the Talmud go back and fix the ones where the shortcut was taken and write it in the rules forever") — written between 4b's RUN 2 and RUN 3
+
+THE WHOLE-ROW RULE (owner-ruled 2026-09-17: "never ever cut corners with the Talmud"): EVERY ROW OF THE SHELF — Talmud, Mishnah, Tosefta, the spine's books (the Sifrei and its kin), Onkelos — IS READ WHOLE BEFORE ITS VERDICT IS TYPED. No character cap on a row, ever; no verdict from a row's opening; a range read is every row of the range whole. The four-run rule's "short cut" clause (2026-09-16) is STRUCK: a docket takes as many runs as its whole reading needs (the run count yields, the clean point after each run stands); a prior sitting's SCRIPT is still derived by sed and read where it differs — that economy is on our own text, never on the shelf's. THE CUTS TAKEN ARE REREAD WHOLE AND CORRECTED: a corrected verdict on an uncommitted docket by an overlay in its part (the cut's verdict kept beside it as the record); a correction to a committed ledger or docket by an APPENDED section (append-only); a cell typed from a cut row retyped from the whole one. THE MEASURE THAT RULED IT: the first forty rows of chapter 6's docket reread whole against their 170-character verdicts — two verdicts wrong, one row carrying another row's content, nine notes short of the row's point.
+
+WHERE THE CUT WAS TAKEN (measured on the record before the fix): (1) SITTING 4b — chapter 6's docket, all 747 rows printed at 170 characters (708 rows longer than the cut; the dump 407,226 characters); (2) SITTING 4 — the Sifrei's 67 spine rows printed with the English capped at 1,500 characters and the Hebrew's opening 150 (seven rows past the cap: 31:1, 31:4, 31:6, 32:7, 32:18, 36:1, 36:2; the ledger COMMITTED at a7955cc); (3) SITTING 3b — the docket's part C (rows 140-209) printed at 650 characters on the record (fifteen rows longer), the other parts' print not on record (82 of 275 rows longer than 650; the docket COMMITTED at 7c8554e); (4) SITTINGS 2b AND 1b — the instrument existed with N a parameter and the print not on record (2b: 114 of 327 rows longer than 650; 1b's dump in the scratchpad); the link rows of 1b-3b "read whole" by their parts' own headers. Before the four-run rule (2026-09-16) — the Numbers walk's dockets — every row was read whole from the dump by the parts' own headers.
+
+THE FIX (in this order; each chunk's corrections on disk before the next is read): (a) chapter 6's docket reread whole in chunks of forty rows on ch6_docket_rows.py with N = 100000; each part carries a WHOLE overlay {address: (verdict, note)} applied by ch6_docket_common.apply_whole (the cut's verdict stays above it; a corrected note ends "[whole: what the cut missed]"); the docket (uncommitted) deleted and rewritten with the counts in its header; (b) sitting 4's seven Sifrei rows reread past the cap and the 67 Hebrew rows whole — a correction to the committed ledger an APPENDED section; (c) 3b's rows over 650 reread whole — a correction to the committed docket an appended section, a cell typed from a cut row retyped; (d) 2b's and 1b's rows over 650 the same. Then 4b's RUN 3 as designed.
+
+THE FIX — AS BUILT (2026-09-17, parts (a)-(c)): (a) chapter 6's docket reread whole — 70 of 747 rows corrected, 21 verdicts changed (six rows had carried another row's content; nine rules and five arms missed; the open row's principle at Sanhedrin 4b:12-14, not 4b:2); the docket rewritten with a REREAD WHOLE header, the WHOLE overlays in the parts. (b) sitting 4's Sifrei — the seven spine rows and three outside rows past the 1,500 cap reread: nothing the ledger lacks; the 67 Hebrew rows read whole against the English: the one divergence 36:10 as recorded; an appended section on the ledger. (c) 3b's 82 rows over 650 reread whole: NO verdict changed, three notes would grow; an appended section on the docket. THE MEASURE: at 170 characters one verdict in ten was wrong in substance and two in a hundred sat on the wrong row; at 650 none. (d) 2b (114 rows over 650 of 327) and 1b (215 of 864) are the next run's work; then 4b's RUN 3.
+
+THE FIX — AS BUILT, part (d) (2026-09-17; the owner: "Go"): 2b's 114 rows over 650 (of 327) and 1b's 215 (of 864) printed whole beside their verdicts (whole_rows_d.py, seven chunks) and read. 2b: SIX rows corrected, TWO verdicts moved — Berakhot 21b:15 DISPUTE → DERIVATION (the cut had R. Yehoshua ben Levi's "awe and fear" where the row has "as if received from Horeb"); Tosefta Rosh Hashanah 2:11 CONTEXT → DISPUTE (the Talmud twin's dispute with R. Yehuda's reason) — and four notes: Sanhedrin 89a:2 the CHALLENGE typed as the resolution (R. Zeira's answer makes the fifth compartment spoil either way), Gittin 12a:11 a rejected hypothesis typed as the ruling, Gittin 88a:17 the seven counted from "seven verbs" instead of "beget" and "children" thrice, Eruvin 96a:6 R. Yosei HaGelili's baraita credited to R. Akiva; the crowns' two lines corrected by the appended section. ONE CELL RETYPED: cold_run_obey_horeb.py's add_beside from exempt to accepted (R. Zeira) with its DATA setting, its moves and its CASES literal; the runner's cases 52/52; the tape and the gates carry the flip at 4b's runs 3-4 (one ledger effect on one exam person; no line, marker, timer or entity moves). 1b: NO verdict changed; one credited note corrected (Makkot 10a:13 — the Angel of Death, not the evil inclination). Appended REREAD WHOLE sections on both committed dockets. THE MEASURE, WHOLE: at 170 characters (4b) one verdict in ten wrong in substance and one row in fifty carrying another row's content; 2b (the cut not on record) six in 114 with two verdicts and one cell; 3b's 650 none in 82; 1b one note in 215; sitting 4's 1,500 none. THE LESSON — A CUT ROW ENDS BEFORE THE ANSWER: the Gemara's challenge, its hypothesis and its first reading sit at a row's head and the resolution at its tail; three of 2b's six errors (89a:2, 12a:11, 96a:6) and the worst of chapter 6's (Temurah 3b:16 / 4a:2, Berakhot 2a:6) have that shape — the reason a row is read to its end before its verdict is typed. THE FIX'S FOUR PARTS ARE CLOSED; 4b's RUN 3 next.
+
+
+## Sitting 4b — THE COMPILE OF CHAPTER 6 — AS BUILT (2026-09-17; the design above stands as written; every departure from it named here; THE WHOLE-ROW
+## RULE was ruled between this sitting's RUN 2 and RUN 3 and its fix (a)-(d) ran inside the sitting — the two tail sections above)
+
+THE RESULT. Deuteronomy 6:1-25 is COMPILED AND ON THE TAPE: World/step9/cold_run_hear_o_israel.py the 61st runner (MATRIX 42/42 on its first graded
+run; six cells F1 the_header, F2 the_creed, F3 the_four_duties, F4 the_gift_and_the_warning, F5 the_test_and_the_right, F6 the_sons_question with 42
+asks; eighteen DATA rows; the readback's seven rows; fourteen exam persons, three exempt — the bridegroom, the daughter, the bathhouse owner; the scene
+and the narrative tuples matched as predicted by script), law_hear_o_israel the 66th daemon (given_at Deut 6:4 — the Shema's first and only giving;
+installed_by boot; six functions WRAPPED; no timer), three kinds and two effects in the registries (1125 kinds, 1025 effects), TWO LINES AND NO MARKER
+on the tape — shema_declared (6:4-9) and testing_barred (6:16-19) under "# ---- Deut 6 ----" on the counter's own day (40, 11, 1). THE TAPE 10/10 WITH
+THE REST ON ITS FIRST RUN: RUN (1304, 96, 88, 0, 12, 1595, 37, 319, the four pairs, 127) exactly as THE PREDICTION'S ARITHMETIC wrote it; PREVIOUS_RUN
+3b's RUN EXACTLY — no declared delta (the daemon writes only on its own lines, so the tape minus this runner's lines reproduces 3b's tuple);
+NEWEST_RUNNER hear_o_israel; markers 167 UNMOVED (forward 129, retrograde 23, proleptic 15); entities 319, closes 127, the population table 148
+UNMOVED; PLACEMENT markers {'text_constrained': 106, 'reading_placed': 46}, events {'text_constrained': 109, 'page_order': 1140, 'reading_placed': 55} (page_order 1138 → 1140 — AS PREDICTED); CENSUS (2487, 1313, 1304, 1158, 6, 10, 9, 0, 71, 167, 129, 15, 23,
+849, 272) as the stitcher printed it (on tape 1302 → 1304, kinds 847 → 849, subjects 272 unmoved); CO1-CO9 all MATCH; the run 16.7s. THE SHEMA'S LAW IS
+COMPILED FOR THE FIRST TIME, its giving the chapter's own day: shema_commanded a STATUS on Israel (the four duties standing — the recitation, the
+teaching, the tefillin, the mezuzah), test_barred a BLOCK on Israel; the second word's block stands from 3b (no second write — CO5); the charge to
+teach stands CLOSED by the prior run (6:1 a reference row — CO7). THE DOCKET logic/oral_triage/deu_06_vaetchanan_exam_2026-09-17.md by the union rule: 747 rows (link 95 / topic 652; LAW 346, DERIVATION 57, DISPUTE 83, CONTEXT 261; credited 174; 204,382 bytes), EVERY ROW READ WHOLE — 70 rows carry a "[whole: …]" note naming what the 170-character pass had missed; Berakhot 2a-16a's five verse-anchored
+stretches (2a-2b, 10b-11a, 13a-13b, 15a-16a) and 61b read whole, the remainder of the range (541 rows) ENUMERATED outside declared scope; the crowns
+twenty-two in the docket's own list.
+
+THE READBACK'S THIRD FORM — A RETELLING INSIDE A LAW (T1) BUILT: seven reference rows — the son's answer's five (6:21-25), the header's (6:1 against
+stand_here_commanded — the charge executed, the debit's close by the prior run unmoved), the test's (6:16 against Rephidim's named line, Massah — a RUN
+CITATION by name) — graded VERBATIM 3 / EXPANDED 3 / SHORTENED 1 (typed from the runner's print; the design's prediction held), every row's tape entry
+FOUND on the running world by kind and first verse (CO4: brought_out at Exodus 12:51, the ten plague_struck lines, sworn_by_himself at Genesis 22:16,
+oath_upheld at 26:3, visitation_promised at 50:24, stand_here_commanded at Deuteronomy 5:28, ten_words_declared at 4:10); no row OPEN. THE RULE T1 HELD:
+"and you shall say to your son" (6:21) is a law's clause, so the retelling's rows are graded by the cell that compiles the duty to answer — F6
+the_sons_question (the four askings: Exodus 12:26, 13:8, 13:14, Deuteronomy 6:20 — Mishnah Pesachim 10:4, Pesachim 116a-b; the passover runner's
+firstborn cell by CALL for 13:14's ink) — and the shelf itself taught the form's seat: Pesachim 116a:11 puts the chapter's own verse in the answer's
+first clause ("we were slaves to Pharaoh" — Shmuel's opening of the telling), the readback's row 6:21 the telling's obligatory clause. THE RECEIPT
+WITHOUT THE NAME (6:25 "as He commanded us") a RUN_CITATION pointer of form AS_WHEN naming stand_here_commanded and the giving; the register gate's
+own finder (class_receipts, by CALL at CO6) lists no seat at 6:25 nor anywhere in the chapter — the blindness MEASURED and ASSERTED, the finder's third
+form owed to a gate sitting (the 4b box below).
+
+THE DEPARTURES FROM THE DESIGN, each found by an instrument and each a lesson below: (1) THE TWO KINDS ARE STATUTE BY FORM, not speech — the stitcher's
+register test dropped both lines as register-off on its first print (no narrative verb within ten verses; the chapter's verbs are the law's own), and
+the design had missed 2b's lesson that the own-day giving of a law passes the register test by form (add_nothing_commanded, chapter 4): retyped
+from the stitcher's print, the registry comment names it; (2) THE OATH'S THREE POINTERS (the design's (i) — 6:10, 6:18, 6:23 "swore to your fathers")
+WERE NOT DEMANDED by the token census: the citations ride the mamre and joseph edges' whys; the census demanded instead FOUR AS_WHEN pointers (6:3,
+6:16, 6:19, 6:25 — each a RUN_CITATION with its referent named) and ONE uncited installation token at 6:11 — "and you shall EAT and be satisfied" is
+the land's eating, matched by the census to the offerings' institution (the tzav span): a homograph, dispositioned FALSE with its why; (3) THE FAST
+CHECK REFUSED BEFORE THE TAPE — checkpoint_check.py rides the journal, and the tape had grown by two lines (the stepper's base shorter than the tape):
+the order when lines are ADDED is the tape first, then the check (235 rows after — 226 + the nine CO rows; the standing eighteen DIVERGE-expected misses
+read by label, none CO); (4) THREE INK ASSERTS TYPED FROM MEMORY FAILED THE FAST CHECKER (the readback's deltas; Exodus 17:7's and Numbers 14:22's
+tokens) — retyped from the print (1b's lesson, three times over); (5) A FORMS COPY CARRIES THE PORTABLE THREE-LEVEL ROOT HEADER — a scratch derivation
+by plain sed ran with the wrong root (the effects layer not found; the wrong database): derive_form.py turns the header back to git and applies its
+substitutions asserted; (6) YAML READS FALSE AS A BOOLEAN — the pointer script's check compared the disposition as a string and found none; the check
+reads it back as str().upper(); (7) THE DOCKET'S SHORT CUT WAS STRUCK BY THE OWNER'S RULE mid-sitting — the 747 rows had been read at 170 characters
+at RUN 2; every row was printed whole and reread between RUN 2 and RUN 3 (70 rows corrected, 21 verdicts moved, the parts' WHOLE overlays the record),
+and the four older cuts were reread and corrected in the same pass (the two tail sections above); (8) A CELL OF CHAPTER 4 RODE THIS SITTING'S TAPE —
+cold_run_obey_horeb.py's add_beside retyped from a whole row (Sanhedrin 89a:2 — the cut had typed the Gemara's challenge as the ruling; R. Zeira's
+answer makes the fifth compartment spoil either way: accepted), one ledger effect on one exam person, no count moved; (9) TWO PROBES RETYPED FROM THE
+CHAIN'S FIRST PRINT — readback Q13, written at RUN 2 before the runner existed, looked for a 'found' key the runner's rows never carry (it now finds
+each row on the running world by kind and first verse — Q2's form, the tape's CO4); large_letter H5, sitting 4's exhibit that 6:4 had NO tape line,
+moved when the compile filed the Shema's line there (retyped to the new state: a statute line at 6:4, still no register seat, the large-letter edge
+still unfiled — PARKED): the chain's first run stopped at the probes step (14/15, 5/6), the second run from that step ALL GREEN (the tape's print
+the first run's, kept).
+
+THE GATES, COMPUTED FROM THEIR PRINTS (one chain, gates_chain.sh — run twice, the first stopped at the probes step by the two retypes above, the
+second from that step ALL GREEN; the tape's print the first run's): the probe suites census 224/224, installation 6/6 (I5 66), readback 15/15 (Q13-Q15 the third form), register 7/7, clock 22/22, sequence 4/4, view 6/6, population 9/9, journal 7/7, cursor 6/6, large_letter 6/6, checkpoint 7/7; the daemon gate GREEN (66 daemons, 454 functions WRAPPED); the dependency gate GREEN (545 edges and 199 pointers on file — the link census reference 526 / transfer 48 / hypothesis 9 / none 161; required 264 edges and 200 pointers, live import edges 392); build_world ALL GREEN (220 units, standing 2203, hash 8b8fff1fa28953af unmoved — no freeze this sitting); the journal gate GREEN twice — before and after the sweep (12 kinds, 9674 rows in the index); THE REGISTER GATE --strict GREEN (DECLARED 100, DEBT 0, FAILS 0 — no seat in chapter 6: the finder blind to 6:25 as measured; Deut 5:12, 5:16, 5:32 CHAPTER and 4:45 DAEMONS unmoved); the positions table 235 checkpoints over 169 pauses (CO1-CO9 in it; checkpoint_probes 7/7 after the rebuild); the sweep 61/61 at 6,618 graded cells; the home-path gate GREEN.
+
+⚠ THE LESSONS OF 4b (eleven): (1) THE OWN-DAY GIVING OF A LAW IS STATUTE BY FORM — the stitcher's register test passes a statute by its form and an act
+or a speech only by a narrative verb within ten verses of the same chapter; a chapter of law has no such verb, so its lines are typed statute (2b's
+lesson, missed at the design and caught by the print); (2) THE DESIGN'S POINTER LIST IS A PREDICTION — the token census decides which citations need
+a pointer (the AS_WHEN receipts) and which ride an edge's why; read its demands on the DB, one by one; (3) THE CENSUS READS HOMOGRAPHS — an
+institution's token ("eat", the offerings') matches the land's eating: named FALSE with its why, never a blanket row; (4) THE TAPE FIRST, THEN THE
+FAST CHECK, when the tape grows — the checker rides the journal; its standing misses are the declared divergences, read by label; (5) THE PRINT FIRST,
+THEN THE ASSERT (the callees' facts printed by ch6_callees.py before part 3; the ink's deltas from the fast checker's print) — three asserts typed from
+memory failed; (6) A FORMS COPY IS PORTABLE, A SCRATCH DERIVATION IS NOT — derive_form.py turns the three-level header back to git and asserts every
+substitution; (7) YAML'S FALSE IS A BOOLEAN — compare str(value).upper(); (8) A CUT ROW ENDS BEFORE THE ANSWER — the Gemara's challenge or hypothesis
+sits at a row's head and the resolution at its tail, so a verdict from an opening is right in kind and wrong in substance about one time in ten (the
+measure: at 170 characters one in ten wrong, two in a hundred on the wrong row; at 650 none) — EVERY ROW WHOLE, the owner's rule; (9) A DAEMON THAT
+WATCHES ONLY ITS OWN LINES LEAVES THE REST WITHOUT A DELTA — PREVIOUS_RUN is the prior sitting's tuple exactly, the first sitting since 1b with no
+declared delta; (10) THE READBACK HAS THREE FORMS NOW — acts (1b), laws (3b), a retelling inside a law (4b: the grades are the cell's verdicts) — and the
+third's seat was taught by the shelf (Pesachim 116a: the telling opens with the chapter's verse); (11) A PROBE WRITTEN TO FAIL BEFORE THE RUNNER
+EXISTS IS RETYPED ONCE TO THE RUNNER'S SHAPE (Q13's key), AND A HYPOTHESIS'S EXHIBIT MOVES WHEN THE TAPE GROWS (H5's premise — 1b's lesson on a
+probe's verse, now on a probe's premise): the chain's first FAIL is read and both retyped from its print, the chain rerun from the failed step.
+
+THE DISPOSITIONS ADDED: eleven edges (ten CALL — covenant_at_horeb, obey_horeb, decalogue, exodus_story, pesach, opening_speech, mamre, joseph,
+mekoshesh, erection; the registration edge sequence → hear_o_israel), one FALSE edge (hear_o_israel → tzav at 6:11, the homograph) and four pointers
+(RUN_CITATION, form AS_WHEN — Deut 6:3, 6:16, 6:19, 6:25); the span hear_o_israel [[Deut, 6, 1, 25]]; the token census demanded NO further edge.
+MOVE_CATALOG CHECKED, unmoved: the runner's law cells return the shelf's parameters (the compartments FOUR, the times, the postures, the gates) and CALL
+the callees' cells; the shelf's own moves on the chapter (the count from the spellings, the two analogies with the rule of choice, the re-pointed verb
+that exempts the mother, the particle withdrawn) are the docket's and MIDDOT's rows, no new move of the compiler.
+
+THE FORMS: the sitting's scripts and prints copied into World/step9/forms_deuteronomy_walk/ by copy_ch6b_forms.py (the recon, the scan and the dump,
+the docket's parts with their WHOLE overlays and the common helper, the types, the callees' print, the runner's four parts with the generator, the
+assembler and the fast checker, the recorder and the stitcher under their sitting's names, the literals' patcher, the pointers, the design's, the
+runs' and the records' writers, the whole-row instruments and their seven chunk prints, the chapter-4 retype, the checkpoints' writers, the gates
+chain's folder — no scratch path and no home path in any copied form).
+
+NEXT on the ruling: the commit on the owner's word (4b whole, the rule and its fix, since a7955cc); then CHAPTER 7's reading (7:1-26 — the seven
+nations and the ban, the chosen people, the reward; the reading shape, in four runs, every row whole) — or the Decalogue-schema sitting first (ON THE
+TABLE, not a ruling). Nothing committed: the tree uncommitted since a7955cc, on the owner's word only.

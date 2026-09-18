@@ -975,3 +975,38 @@ logic/glosses/word_gloss_overrides.yaml (+24 by reference, +33 by gloss); logic/
 (new) and gates_chain.sh; the records (the map, COMPILE_DEBT, MIDDOT, RESEARCH_LOG (three entries of this date), THE_STEPS, THE_BRIEFING, RESUME, the
 state doc, the recovery page, this file, STAMP_LEDGER, the memory); World/step9/forms_deuteronomy_walk/ (the sitting's scripts and prints).
 NEXT ON THE RULING: the commit; then the compile of chapter 6 (4b) in four runs — or the Decalogue-schema sitting first — on the owner's word.
+
+## 39. ADDENDUM (2026-09-17, THE WHOLE-ROW RULE — owner-ruled between 4b's RUN 2 and RUN 3 on "OK, never ever cut corners with the Talmud go back and fix the ones where the shortcut was taken and write it in the rules forever")
+
+THE WHOLE-ROW RULE (owner-ruled 2026-09-17: "never ever cut corners with the Talmud"): EVERY ROW OF THE SHELF — Talmud, Mishnah, Tosefta, the spine's books (the Sifrei and its kin), Onkelos — IS READ WHOLE BEFORE ITS VERDICT IS TYPED. No character cap on a row, ever; no verdict from a row's opening; a range read is every row of the range whole. The four-run rule's "short cut" clause (2026-09-16) is STRUCK: a docket takes as many runs as its whole reading needs (the run count yields, the clean point after each run stands); a prior sitting's SCRIPT is still derived by sed and read where it differs — that economy is on our own text, never on the shelf's. THE CUTS TAKEN ARE REREAD WHOLE AND CORRECTED: a corrected verdict on an uncommitted docket by an overlay in its part (the cut's verdict kept beside it as the record); a correction to a committed ledger or docket by an APPENDED section (append-only); a cell typed from a cut row retyped from the whole one. THE MEASURE THAT RULED IT: the first forty rows of chapter 6's docket reread whole against their 170-character verdicts — two verdicts wrong, one row carrying another row's content, nine notes short of the row's point.
+
+The cuts measured and the fix's order: the map's tail section "THE WHOLE-ROW RULE"; the memory talmud-rows-whole.md; the state doc's #191 addendum 1.
+
+## 40. ADDENDUM (2026-09-17, THE DEUTERONOMY WALK sitting 4b — THE COMPILE OF CHAPTER 6, Deuteronomy 6:1-25 COMPILED AND ON THE TAPE in four runs; the owner: "Go", "One more run", "Next go", "Ok go"; the state doc's #193 addendum 1)
+
+THE SITTING RAN IN THE COMPILE SHAPE IN FOUR RUNS (section 5; "Sitting 3b" the form; the whole-row rule of §39 ruled between its runs 2 and 3 and paid
+inside it): World/step9/DEUTERONOMY_WALK.md "Sitting 4b" (the design, written before any code) and "Sitting 4b — AS BUILT" (the departures and the
+ten lessons). THE STATE: cold_run_hear_o_israel.py the 61st runner (42/42 — six cells, eighteen DATA rows, the readback's seven rows, fourteen exam
+persons), law_hear_o_israel the 66th daemon (given_at Deut 6:4, installed_by boot; 66 daemons, 454 functions), event_vocabulary +3 (1125), effect_vocabulary
++2 (1025), dependency_dispositions +12 edges +4 pointers (545 edges, 199 pointers on file); THE TAPE 10/10 WITH THE REST ON ITS FIRST RUN — RUN (1304, 96,
+88, 0, 12, 1595, 37, 319, the four pairs, 127) as predicted, PREVIOUS_RUN 3b's EXACTLY (no declared delta), NEWEST_RUNNER hear_o_israel, markers 167
+UNMOVED, entities 319, closes 127, the population table 148, CO1-CO9 MATCH; the docket logic/oral_triage/deu_06_vaetchanan_exam_2026-09-17.md (747 rows —
+link 95 / topic 652; LAW 346; credited 174; EVERY ROW READ WHOLE). THE GATES: the probe suites census 224/224, installation 6/6 (I5 66), readback 15/15 (Q13-Q15 the third form), register 7/7, clock 22/22, sequence 4/4, view 6/6, population 9/9, journal 7/7, cursor 6/6, large_letter 6/6, checkpoint 7/7; the daemon gate GREEN (66 daemons, 454 functions WRAPPED); the dependency gate GREEN (545 edges and 199 pointers on file — the link census reference 526 / transfer 48 / hypothesis 9 / none 161; required 264 edges and 200 pointers, live import edges 392); build_world ALL GREEN (220 units, standing 2203, hash 8b8fff1fa28953af unmoved — no freeze this sitting); the journal gate GREEN twice — before and after the sweep (12 kinds, 9674 rows in the index); THE REGISTER GATE --strict GREEN (DECLARED 100, DEBT 0, FAILS 0 — no seat in chapter 6: the finder blind to 6:25 as measured; Deut 5:12, 5:16, 5:32 CHAPTER and 4:45 DAEMONS unmoved); the positions table 235 checkpoints over 169 pauses (CO1-CO9 in it; checkpoint_probes 7/7 after the rebuild); the sweep 61/61 at 6,618 graded cells; the home-path gate GREEN.
+
+WHAT THE SITTING FOUND (RESEARCH_LOG 2026-09-17, the compile entry): THE READBACK'S THIRD FORM — a retelling inside a law, the grades the cell's verdicts
+(T1), the shelf's own seat at Pesachim 116a; THE SHEMA'S LAW compiled for the first time at the chapter's own day, STATUTE BY FORM (the stitcher's
+register test); THE RECEIPT WITHOUT THE NAME — the finder blind at 6:25, asserted by calling it; THE COMPARTMENTS A PARAMETER over the spellings' open
+row; THE CENSUS AND A HOMOGRAPH ("eat" at 6:11 FALSE; the oath's pointers not demanded); THE WHOLE-ROW MEASURE (one verdict in ten wrong at 170
+characters; a cut row ends before the answer). THE ELEVEN LESSONS in the map's AS BUILT (the eleventh from the gates step: two probes retyped from the
+chain's first print — Q13's key, H5's exhibit moved by the tape's growth).
+
+THE FILES CHANGED BY 4b: World/step9/cold_run_hear_o_israel.py (new), cold_run_sequence.py (the two lines under "# ---- Deut 6 ----", the literals,
+CO1-CO9), cold_run_obey_horeb.py (the fifth-compartment cell retyped under the rule), event_vocabulary.yaml, effect_vocabulary.yaml,
+daemon_dispositions.yaml, dependency_dispositions.yaml (the span, twelve edges, four pointers), readback_probes.py (Q13-Q15; Q13 retyped at RUN 4),
+large_letter_probes.py (H5 retyped — the creed classed, the hypothesis parked), installation_probes.py (I5 66), checkpoint_positions.yaml (rebuilt — 235), DAEMON_INDEX.md and DEPENDENCY_INDEX.md (regenerated), the docket (new; rewritten whole), the four
+appended REREAD WHOLE sections (the chapter-6 ledger, the 3b, 2b and 1b dockets), the forms folder (copy_ch6b_forms.py), the records (the map, COMPILE_DEBT,
+MIDDOT, MISHNAH_TOPICS, RESEARCH_LOG, THE_STEPS, THE_BRIEFING, THE_LOOP, RESUME, RECORD_FORMS, the recovery page, this file, the state doc, memory).
+NOT COMMITTED — the tree uncommitted since a7955cc; commit on the owner's word only.
+
+NEXT ON THE RULING: the commit on the owner's word; then CHAPTER 7's READING (7:1-26 — the seven nations and the ban, the chosen people, the reward; the
+reading shape in four runs, every row whole). ON THE TABLE, NOT A RULING: the Decalogue-schema sitting — on the owner's word.

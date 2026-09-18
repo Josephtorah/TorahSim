@@ -1573,6 +1573,52 @@ narrative strength. By cluster:
   · THE CREED ANSWERED (355:27 on 33:26 from 6:4): six antiphonal pairs, Israel's "the LORD is ONE" met by heaven's "ONE nation" — E27
     (symmetry); the row's Hebrew cites 6:4 as "ibid.".
 
+- THE CHAPTER-6 DOCKET (THE DEUTERONOMY WALK sitting 4b, 2026-09-17; logic/oral_triage/deu_06_vaetchanan_exam_2026-09-17.md — 747 rows, every row read
+  whole; the rules about rules the docket carries, each at its row):
+  · ONE WORD READ TWICE (Berakhot 15a:9-10 on 6:4 "hear"; the Sifrei 31:7): R. Yose takes two rules from one word — make it heard to your ear AND in any
+    language; the first tanna one — the recitation's audibility and language from a single imperative: F3 recite_how; the arms at Sotah 32b:18-21 and
+    Berakhot 13a:26-27 (Rabbi: Hebrew, from "and these words shall be", 6:6; the Rabbis: any language, from "hear").
+  · A DUTY'S TIMES FROM THE VERB'S TWO CLAUSES (Berakhot 2a:8, 10b:31 on 6:7 "when you lie down and when you rise"): the evening first because the verse
+    says lying down first; the morning until three hours (R. Yehoshua) — the answer sheet's times a PARAMETER table read off the clause order: F3 recite_when.
+  · "THE WAY" IS A VOLUNTARY WALK (Berakhot 11a:4-8 on 6:7; Tosefta Berakhot 1:5 the clauses assigned the other way round): one busy with a duty is exempt
+    because the verse's walking is one's own — the groom of a virgin: F3 recite_who (the exemptions' ground in the verse).
+  · THE COUNT FROM THE SPELLINGS (Menachot 34b:1; Sanhedrin 4b:12-14 on 6:8, 11:18, Exodus 13:16 "frontlets"): two seats written defective and one plene
+    make FOUR compartments — "the vocalization against the tradition" (Rabbi's count by the written form); the ink spells 11:18 plene, so the number is a
+    PARAMETER the shelf teaches and the derivation a recorded argument: F3 tefillin_compartments, the DATA row the_spellings (THE OPEN ROW).
+  · THE TWO ANALOGIES AND THE RULE OF CHOICE (Menachot 34a:12 on 6:9 "you shall write"; the Sifrei 36:2): "writing" here resembles the stones (27:8) or
+    the suspected wife's scroll (Numbers 5:23) — "let us see which it resembles": a writing for the generations from a writing for the generations —
+    the reception rule's own exhibit, a verbal analogy with two candidates settled by the like: F3 mezuzah_writing.
+  · "YOUR HOUSE" IS YOUR RESIDENCE (Yoma 11a:3, 11a:7-14; Bava Metzia 101b:19; Chullin 135b:15 on 6:9; Mishnah Maaser Sheni 3:8): city gates and
+    courtyards obligated, the store and the bath exempt, the renter and the partners obligated, the Temple's chambers by what they open to: F3 mezuzah_gates.
+  · THE ORDER OF DONNING FROM THE ORDER OF THE VERSE (Menachot 36a:5 on 6:8; the Sifrei 35:11): the arm bound first, the head first removed — "as long as
+    they are between your eyes, let them be two": F3 tefillin_order.
+  · THE JUXTAPOSITION REFUSED (Arakhin 3b:10 on 6:8 "bind … frontlets"): the priests bound in the head's tefillin though the garments bar the arm's — the
+    two words side by side do not make the two one duty: F3 tefillin (the arm and the head two duties — DATA the_tefillin_table).
+  · THE PARTICLE'S EXTENSION WITHDRAWN (Bava Kamma 41b:7; Bekhorot 6b:4 on 6:13 "you shall fear ET the LORD"): Shimon HaAmasoni expounded every accusative
+    particle and withdrew at this one — whose fear beside God's? — his reward for the withdrawal as for the expositions: E1 refused on F4 fear_serve_swear.
+  · THE POSITIVE CLAUSE THAT PERMITS (Temurah 3b:16-17, 4a:2 on 6:13 "by His name you shall swear"): the true oath is permitted by the clause itself (with
+    the bailee's oath of Exodus 22:10 its pair), and "you shall fear" is refused as the warning a flogging needs: F4 fear_serve_swear (the oath's cases
+    holiness.deposit_case and vayikra5's by CALL).
+  · A RULE BEYOND THE LETTER SEATED IN THE INK (Bava Metzia 108a:10, 108b:4, 16b:13, 35a:12 on 6:18 "the right and the good"): the abutter's right, the
+    debtor's land returned, the appraisal reversed — a verse of conduct made a rule of property with its bounds (the gentile buyer, the seller's ban): F5
+    the_right_and_the_good, the DATA row the_abutter.
+  · THE ONE EXCEPTION TO "YOU SHALL NOT TEST" (Taanit 9a:3 on 6:16 with Malachi 3:10): the tithe — "test Me in this" — R. Yochanan's exception written into
+    the prohibition's own cell: F5 you_shall_not_test (DATA).
+  · THE ANSWER OPENS WITH THE CHAPTER'S VERSE (Pesachim 116a:11-12 on 6:21; Mishnah Pesachim 10:4; Pesachim 116b the four sons): "we were slaves to
+    Pharaoh" is Shmuel's "disgrace" — the telling's first clause is the retelling the chapter commands; "according to the son's understanding" the four
+    askings' rule — THE READBACK'S THIRD FORM taught by the shelf: F6 the_answer_rows, the_four_askings.
+  · TWO CLAUSES, TWO MEN (Berakhot 61b:5-10; Sanhedrin 74a:15; Mishnah Berakhot 9:5; Tosefta Berakhot 6:11 on 6:5): R. Eliezer reads "with all your soul"
+    to the man whose body is dearer and "with all your might" to the man whose money is dearer; R. Akiva — "even if He takes your soul", and lived it: F2
+    with_all_your_soul, with_all_your_might (the creed's three terms — the DATA row the_creed_terms).
+  · THE CREED FIRST SAID AT A DEATHBED (Pesachim 56a:6-8 on 6:4): "hear, Israel" addressed to the father Jacob by his sons, and his answer the whispered
+    response line — Moses did not say it, Jacob said it: F2 hear_o_israel (DATA; the Sifrei 31:6's Talmud seat).
+  · THE VERB RE-POINTED EXEMPTS THE MOTHER (Kiddushin 29b:8-11 on 6:7 / 11:19 "and you shall teach them"): "you shall teach" read as "you shall learn" —
+    one whose duty it is to learn teaches, the mother not obligated; he before his son: F3 teach_your_sons (the father's duty; the Sifrei 34:1-4).
+  · THE TRIAD READ AS ONE SCOPE (Bava Kamma 87a:2 on 6:1; Pesachim 116b:12): "the commandment, the statutes and the judgments" juxtaposed — whoever is in
+    the judgments is in the commandments (R. Yehuda: the blind exempt from all); the blind obligated to tell (116b): F1 the_header (DATA the_blind).
+  · "GO AFTER" READ AS "GO ALONG WITH" (Tosefta Avodah Zarah 1:3 on 6:14): the caravan to the idolaters' festival — the plural prohibition's application
+    to conduct, the second word's cell by CALL: F4 no_other_gods.
+
 ## Exodus block campaign — owner's word "Do 3")
 
 The campaign's exam rounds banked RULES-ABOUT-RULES on the corpus's

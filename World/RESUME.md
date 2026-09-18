@@ -1,3 +1,11 @@
+# ⚠ THE DEUTERONOMY WALK sitting 4b (2026-09-17; step9/DEUTERONOMY_WALK.md "Sitting 4b" + "Sitting 4b — AS BUILT"): CHAPTER 6 COMPILED —
+# step9/cold_run_hear_o_israel.py the 61st runner (42/42; six cells; the readback's third form — seven rows, a retelling inside a law), law_hear_o_israel
+# the 66th daemon (given_at Deut 6:4, boot); THE SHEMA'S LAW compiled for the first time and given at the chapter's own day (40, 11, 1), NO marker —
+# shema_commanded a status, test_barred a block on Israel; the receipt without the Name (6:25) a pointer, the gate's finder blind (asserted); the
+# compartments FOUR a parameter over the spellings' open row; the tape 10/10 on its first run with RUN (1304, 96, 88, 0, 12, 1595, 37, 319, pairs, 127)
+# as predicted, PREVIOUS_RUN 3b's exactly, markers 167, closes 127; THE WHOLE-ROW RULE (2026-09-17) ruled inside the sitting — the docket's 747 rows
+# read whole, the older cuts reread, one chapter-4 cell retyped; every probe suite and gate GREEN, the sweep 61/61.
+# NEXT on the ruling: the commit on the owner's word; chapter 7's reading (7:1-26) — or the schema sitting first, on his word.
 # ⚠ THE DEUTERONOMY WALK sitting 4 (2026-09-17; step9/DEUTERONOMY_WALK.md "Sitting 4" + "Sitting 4 — AS BUILT"): CHAPTER 6 READ AND FROZEN as one
 # unit (the 220th — deu_06_shema 6:1-25), THE FIRST SITTING IN FOUR RUNS (a clean point after each): the Sifrei's piskaot 31-36 ON 6:4-9 (67 rows,
 # both files) + eight rows from elsewhere + Onkelos whole — 97 sources, coverage computed; the creed's first utterance at Jacob's deathbed (31:6);

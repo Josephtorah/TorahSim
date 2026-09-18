@@ -632,3 +632,6 @@ Sanhedrin 60b:19
 Sanhedrin 60b:20
 
 **read: 275 of 275 — COMPLETE** (the link-driven rows 43: CONTEXT 9, DERIVATION 3, DISPUTE 1, LAW 30; the topic windows 232: CONTEXT 156, DERIVATION 16, DISPUTE 13, LAW 47; all rows: CONTEXT 165, DERIVATION 19, DISPUTE 14, LAW 77; credited 94 — the counts this script computed from the dump and the verdict lists, never typed).
+
+## REREAD WHOLE (2026-09-17 — THE WHOLE-ROW RULE, owner-ruled "never ever cut corners with the Talmud"; appended, the docket above unchanged)
+The 82 rows of this docket longer than the 650-character print (the print on record for part C, rows 140-209; the other parts' print not on record, so every long row was taken as cut) were printed whole on 2026-09-17 and read against the verdict each had received: NO VERDICT CHANGED. Three notes would be extended by the whole row — Avodah Zarah 5a:7 (the Gemara's answer: "return to your tents" is conjugal rights, not procreation), Moed Katan 7b:5 (R. Yehuda: the leper barred only in the days of his counting — Ezekiel 44:26), Shabbat 87a:4 (the second source for God's agreement with Moses' separation — Numbers 12:8). The 650 print had reached the ruling in every row; the cells typed from these rows stand. The count of long rows computed from the scan's dump.

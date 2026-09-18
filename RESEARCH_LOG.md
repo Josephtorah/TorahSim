@@ -3290,3 +3290,49 @@ judgments" — the two seats), and his answer (6:21-25) is a retelling of the ex
 THE STORE'S GLOSSES READ BACK (the display layer): 33 rows by gloss and 24 by reference — "to-fillet-for-the-forehead" FOR FRONTLETS, "very-you/your"
 YOUR MIGHT, "and-point-them/their" AND YOU SHALL TEACH THEM DILIGENTLY, "deferred" TOMORROW, "and-rightness" AND RIGHTEOUSNESS, "strike-in" PLANT, "glow"
 BE KINDLED, "and-sate" AND BE SATISFIED, the two "?" made "I", "strength" made GOD and "nose" ANGER at 6:15; by_ref 496, by_gloss 385 after.
+
+
+## 2026-09-17 — DEUTERONOMY 6 COMPILED (THE DEUTERONOMY WALK sitting 4b — CHAPTER 6): THE READBACK'S THIRD FORM — A RETELLING INSIDE A LAW; THE SHEMA'S
+## LAW COMPILED AT ITS OWN DAY, STATUTE BY FORM; THE RECEIPT WITHOUT THE NAME — THE FINDER'S BLINDNESS ASSERTED; THE COMPARTMENTS A PARAMETER OVER AN
+## OPEN SPELLING; THE CENSUS AND A HOMOGRAPH; THE WHOLE-ROW MEASURE
+
+THE READBACK'S THIRD FORM. The readback's first form (1b) graded Moses' retelling of acts against the tape; the second (3b) graded the code said again
+against the code. Chapter 6 holds a third: a retelling COMMANDED — "and you shall say to your son: we were slaves to Pharaoh …" (6:21-25) is a law's
+clause, and the son's answer retells the exodus in the first person plural. The form's one new rule (T1): the answer's rows are reference rows graded
+against the tape as before, AND the cell that compiles the duty to answer returns its verdict on the answer's form — the retelling's grades are the
+exam's cells. Seven rows: the answer's five (6:21-25), the header's (6:1 against the charge to teach at 5:31 — executed, its debit closed by the prior
+run at 3b) and the test's (6:16 against the tape's named line at Exodus 17:7, Massah — a run citation by name); VERBATIM 3, EXPANDED 3, SHORTENED 1
+(the ten plagues shortened to one clause — "signs and wonders great and grievous"); every row's entry found on the running world. The shelf taught the
+form's seat before the runner did: Pesachim 116a:11 puts the chapter's own verse in the telling's first clause ("we were slaves" — Shmuel's "disgrace"),
+and Mishnah Pesachim 10:4's "according to the son's understanding" is the four askings' rule (Exodus 12:26, 13:8, 13:14, Deuteronomy 6:20 — the four sons).
+
+THE SHEMA'S LAW AT ITS OWN DAY. No runner held a cell for the recitation, the teaching, the tefillin or the mezuzah — the chapter compiles them for the
+first time, and their giving is the chapter's own day on the counter, (40, 11, 1), with no marker: two lines, shema_declared (6:4-9) and testing_barred
+(6:16-19), the daemon writing shema_commanded (a status: the four duties standing) and test_barred (a block) on Israel. The stitcher's register test
+dropped both lines on its first print — the design had typed them speech, and a chapter of law has no narrative verb within ten verses — so they are
+STATUTE BY FORM, as chapter 4's own-day law was at 2b. The tape reached ten of ten on its first run with the previous sitting's tuple reproduced
+exactly: a daemon that writes only on its own lines leaves the rest of the tape without a delta.
+
+THE RECEIPT WITHOUT THE NAME. 6:25 "and it shall be righteousness for us … AS HE COMMANDED US" is a receipt with no Name in it — the comparative, the
+verb and a suffix (Ezra 4:3 the Bible's one other seat). The register gate's finder scans two forms, both with the Name, so it lists no seat in the
+chapter: measured at the design, asserted at the tape by calling the finder itself (CO6), and dispositioned as a run-citation pointer naming the
+charge to teach (5:31) and the giving. The finder's third form is owed to a gate sitting — a change across the whole Torah, never one runner's.
+
+THE COMPARTMENTS A PARAMETER OVER AN OPEN SPELLING. The shelf's four compartments of the head's tefillin are counted from the spellings of "frontlets"
+(Menachot 34b; Sanhedrin 4b — "the vocalization against the tradition"): two seats written defective and one plene make four. The ink spells 11:18
+plene (6:8 defective, Exodus 13:16 plene), so the count does not run from the text as stored. The cell returns FOUR as a parameter the shelf teaches,
+the derivation stands as a recorded argument on another witness, and the DATA row the_spellings names the divergence — recorded at the reading, carried
+by the compile, resolved by neither.
+
+THE CENSUS AND A HOMOGRAPH. The token census, run past the runner's imports, demanded four AS_WHEN pointers (6:3, 6:16, 6:19, 6:25 — receipts of
+what "the LORD has spoken" or "commanded") and one edge the runner never imports: an installation token at 6:11, "and you shall EAT and be satisfied",
+matched to the offerings' eating of Leviticus 6-7. The verse's eating is the land's; the edge is dispositioned FALSE with its why. The oath's three
+"swore to your fathers" seats (6:10, 6:18, 6:23) were not demanded at all — the citations ride the edges to the oath's own runners. The design's pointer
+list is a prediction; the census decides.
+
+THE WHOLE-ROW MEASURE. The owner ruled between this sitting's second and third runs that every row of the shelf is read whole before its verdict is
+typed, and the cuts taken since the four-run rule were reread whole and corrected. The measure across the five dockets: at 170 characters one verdict
+in ten was wrong in substance and two in a hundred sat on the wrong row (chapter 6: 70 of 747 rows corrected, 21 verdicts moved); at 650 characters
+none moved in chapters 1-5 but one cell had been typed from a cut row's challenge instead of its answer (Sanhedrin 89a:2 — the fifth compartment
+spoils even beside the four, R. Zeira; the chapter-4 cell retyped and carried by this sitting's tape); at 1,500 none. The lesson stands in the map: a
+cut row ends before the answer — the Gemara's challenge sits at a row's head, the resolution at its tail.
