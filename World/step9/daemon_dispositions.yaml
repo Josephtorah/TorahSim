@@ -437,6 +437,16 @@ daemons:
       shema_declared: [shema_commanded]   # Deut 6:4-9: the creed and the four duties (the recitation, the teaching, the tefillin, the mezuzah) — a STATUS on Israel on the counter's day
       testing_barred: [test_barred]       # Deut 6:16-19: 'you shall not test … as you tested at Massah' — a BLOCK on Israel; Massah the tape's named line (Exod 17:7), a run citation by name
       shema_case: [accepted, exempt]      # the exam's rows on the chapter — the persons through the cells' asks (the priest at evening accepted, the bridegroom exempt, the abutter's buyer accepted …)
+  law_seven_nations:
+    file: cold_run_seven_nations.py
+    wraps: seven_nations
+    given_at: Deut 7:1
+    installed_by: boot   # THE DEUTERONOMY WALK 5b (2026-09-18): THE BAN'S FIRST AND ONLY GIVING — the chapter's own line on the counter's day (40, 11, 1), no marker (the speech continuing from chapter 6's own-day lines); installed by boot like law_opening_speech, law_obey_horeb and law_hear_o_israel (the Deuteronomy daemons' form); the code's four holes compiled here (the ban, no favor, no pity, the abomination into the house); the debit and the blocks written at the chapter's own lines; the readback on the kin (Exodus 23, 34, Numbers 33, the two words) a REFERENCE table, no second write
+    watches:
+      nations_devoted: [commanded, covenant_barred, favor_barred, intermarriage_barred]   # Deut 7:1-5: the ban a DEBIT on Israel valued devote_the_seven_nations, OPEN to Joshua; no covenant (23:32's block, its first tape write), no favor (NEW — the three readings), no marriage (34:16's block valued both directions, its first tape write) — four writes on Israel on the counter's day
+      hearing_blessed: [blessings_for_hearing, pity_barred]   # Deut 7:12-16: the covenant kept and the blessings — a conditional HEAVEN entry (NEW, the form of treasured_people); 'your eye shall not pity' a BLOCK (NEW — no row on the shelf; the ink alone); 'consume' the war's spoil (Bava Kamma 113b); no serving the second word's clause, no second write
+      abomination_barred: [house_abomination_barred]   # Deut 7:25-26: 'you shall not bring an abomination into your house' a BLOCK (NEW); 'you shall not covet' the tenth word's — coveting_barred stands, no second write; the images burned the demolition's reference row
+      seven_nations_case: [accepted, exempt, lashes]   # the exam's rows on the chapter — the persons through the cells' asks (the renter of a house in the Land accepted, the thanks-giver exempt, the Asherah's wood-burner flogged …)
   law_census:
     file: cold_run_bamidbar.py
     wraps: bamidbar
@@ -2007,6 +2017,13 @@ functions:
     the_gift_and_the_warning: {status: WRAPPED, by: law_hear_o_israel}
     the_test_and_the_right: {status: WRAPPED, by: law_hear_o_israel}
     the_sons_question: {status: WRAPPED, by: law_hear_o_israel}
+  seven_nations:   # THE DEUTERONOMY WALK 5b (2026-09-18)
+    the_seven_nations: {status: WRAPPED, by: law_seven_nations}
+    the_holy_people: {status: WRAPPED, by: law_seven_nations}
+    the_faithful_god: {status: WRAPPED, by: law_seven_nations}
+    because_you_hear: {status: WRAPPED, by: law_seven_nations}
+    do_not_fear: {status: WRAPPED, by: law_seven_nations}
+    the_images_and_the_devoted: {status: WRAPPED, by: law_seven_nations}
   pre_sinai:
     creation: {status: WRAPPED, by: law_pre_sinai}
     day_boundary: {status: WRAPPED, by: law_pre_sinai}

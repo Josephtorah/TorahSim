@@ -14,7 +14,9 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   baked into an epub.
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
-## SCOREBOARD (as of 2026-09-17, latest)
+## SCOREBOARD (as of 2026-09-18, latest)
+- **CHAPTER 7 COMPILED — THE OLD LAW SAID AGAIN FOR THE NEW PLACE, GRADED AGAINST THE CELLS THAT COMPILED IT FIRST; FOUR HOLES COMPILED AT THE CHAPTER'S OWN DAY; TWO EFFECTS FROM EXODUS WRITTEN ON THE TAPE FOR THE FIRST TIME** (2026-09-18, on your "Go" and "keep going"; World/step9/DEUTERONOMY_WALK.md "Sitting 5b" + AS BUILT): cold_run_seven_nations.py the 62nd runner (51/51), law_seven_nations the 67th daemon (460 functions); the readback on the kin twenty-one rows; the tape 10/10 with RUN (1307, 96, 88, 0, 12, 1602, 38, 319, pairs, 127) as predicted, markers 167; the docket 520 rows every one read whole from the start; every gate GREEN, the sweep 62/62. NEXT: the commit on your word; chapter 8's reading, or the schema sitting first.
+- **CHAPTER 7 READ AND FROZEN — THE SEVEN NATIONS: THE SIFREI IS SILENT ON THE CHAPTER, THE VERSE COUNTS ITS OWN LIST, AND THE OLD CODE IS SAID AGAIN FOR THE NEW PLACE** (2026-09-18, on your "Go" and the runs' "go for run 2", "run 3 go", "4 go" — four runs, every row whole; World/step9/DEUTERONOMY_WALK.md "Sitting 5"): Onkelos on all 26 verses and the Sifrei's three rows from elsewhere — 29 sources, coverage computed, the kin's spine credited by name; "seven nations" counted by the verse's own seven names, seven where Exodus had six; both directions of marriage, four objects, "you shall not covet" on the idols' silver and gold; one extra token in our store at 7:9 (written one way, read another); Onkelos's doctrine at 7:10; the flock's young tagged a goddess's name in our word table; one unit frozen (the 221st), 6 claims verified, the ritual 13 PASS, standing facts 2209 (+6 as predicted), hash unmoved, every gate green. NEXT: the commit on your word; then the compile of chapter 7 in four runs, or the schema sitting first.
 - **CHAPTER 6 COMPILED — THE SHEMA'S LAW GIVEN AT ITS OWN DAY FOR THE FIRST TIME, THE READBACK'S THIRD FORM (A RETELLING INSIDE A LAW), THE RECEIPT WITHOUT THE NAME THE GATE CANNOT SEE, AND THE WHOLE-ROW RULE RULED AND PAID INSIDE THE SITTING** (2026-09-17, on your "Go", "Next go" and "Ok go"; World/step9/DEUTERONOMY_WALK.md "Sitting 4b" + AS BUILT): cold_run_hear_o_israel.py the 61st runner (42/42), law_hear_o_israel the 66th daemon (454 functions); the readback's seven rows; the tape 10/10 on its first run with RUN (1304, 96, 88, 0, 12, 1595, 37, 319, pairs, 127) as predicted, markers 167; the docket 747 rows every one read whole; every gate GREEN, the sweep 61/61. NEXT: the commit on your word; chapter 7's reading, or the schema sitting first.
 - **CHAPTER 6 READ AND FROZEN — THE SHEMA: THE SIFREI'S SIX SECTIONS LAND ON SIX VERSES, THE CREED'S FIRST SAYING IS JACOB'S SONS' ANSWER, AND THE SHELF COUNTS A SPELLING OUR TEXT DOES NOT HAVE** (2026-09-17, on your "ok lets start the next chapter" and the runs' "go", "Continue", "Go" — the first sitting in four runs; World/step9/DEUTERONOMY_WALK.md "Sitting 4"): Onkelos on all 25 verses, the Sifrei's 67 rows on 6:4-9 and eight rows from elsewhere — 97 sources, coverage computed; "the LORD is one" two seats in the Bible; "might" one seat, read as money, measure, thanks; the Shema's text and the tefillin's two sets with the ten commandments in neither; one row where the shelf's two files diverge; the tefillin's four compartments counted from a spelling of 11:18 our text writes differently — an open row for the compile; the store's dropped large letters a parked hypothesis; one unit frozen (the 220th), 6 claims verified, the ritual 13 PASS, standing facts 2203 (+6 as predicted), hash unmoved, every gate green. NEXT: the commit on your word; then the compile of chapter 6 in four runs, or the schema sitting first.
 - **CHAPTER 5 COMPILED — THE CODE SAID AGAIN AND GRADED AGAINST THE CODE: SIXTEEN ROWS OF THE TEN WORDS, EACH NAMING THE CELL THAT COMPILES IT; TWO WORDS HAD NO CELL ANYWHERE — THE SECOND AND THE TENTH — COMPILED HERE AND WRITTEN AT THE DAY THEY WERE FIRST SPOKEN; A SECOND HOLE IN THE TAPE, THE REQUEST FOR A MEDIATOR, FILLED; THE RECEIPT READ TWO WAYS** (2026-09-16, on your "go"; World/step9/DEUTERONOMY_WALK.md "Sitting 3b" + AS BUILT): cold_run_covenant_at_horeb.py the 60th runner (49/49), law_covenant_at_horeb the 65th daemon; the readback's twenty-one rows; the tape 10/10 with RUN (1302, 96, 88, 0, 12, 1593, 36, 319, pairs, 127) as predicted, markers 167; every gate GREEN, the sweep 60/60. NEXT: the commit on your word; chapter 6's reading, or the schema sitting first.
@@ -485,6 +487,36 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   Next alongside it: Leviticus (new spine — Sifra).
 
 ## ENTRIES (newest first)
+
+### 2026-09-18 — CHAPTER 7 COMPILED: THE OLD LAW GRADED AGAINST ITS FIRST TELLING, AND THE HOLES FILLED
+
+Chapter 7 is Deuteronomy doing what you asked about at the reading — altering old code and then creating new. Most of its verses say again what Exodus
+and Numbers said first: no covenant with the nations, no marriage, break their altars, the hornet, little by little. So this sitting did not compile
+those again. It graded each verse against the cell that compiled the law the first time — the machine called the old cell and read its verdict — the
+way the earlier sittings graded Moses' retellings against the tape: fifteen rows that way, six against the tape's own lines, twenty-one in all, and the
+grades came out exactly as the design predicted. What no old cell held is the new code: the ban on the seven nations, show them no favor, your eye shall
+not pity, no abomination into your house — four cells compiled here and written at the day the chapter is spoken, the ban a debt on Israel that stays
+open until Joshua. Two effects that had sat in the registry since Exodus — the covenant barred, the marriage barred — reached the tape for the first
+time, because their first tellings were conditions for the land and this chapter gives them at Moab. The Talmud's tractate on idolatry was read whole for
+the answer sheet, five hundred and twenty rows, and it supplied two things the text states bare: why the Asherim had to be burned rather than revoked,
+and that the ban has a condition — the nations that repent are accepted. One rule in the chapter, the pity, has no row on the shelf at all; the machine
+holds it on the verse alone and says so. The runner matched its sheet on the first run; the tape reached ten of ten on the second — the new debt moved
+four old counts, retyped from the print; every gate is green in one chain. Next, on your word: the commit, then chapter 8 — or the schema question first.
+
+### 2026-09-18 — CHAPTER 7 READ: THE SEVEN NATIONS, AND A CHAPTER THE SHELF DOES NOT EXPOUND
+
+The chapter that names the seven nations and gives the rules for the land they hold: destroy them, no treaty, no marriage either way, tear down their altars;
+you were chosen for love and for the oath, not for size; keep the covenant and it will go well; do not fear them; burn their images and do not covet the silver
+and gold on them. Two things stand out. The first is the shelf: the Sifrei, which had six sections on the Shema, has none at all here — nothing between the end
+of chapter 6 and the middle of chapter 11 — so what the tradition says about this chapter by position is three rows quoted from other places, and one of those
+is the translator's own note about where the next weekly portion starts. The chapter's real kin — the angel's promise in Exodus 23, the renewed covenant in
+Exodus 34, the order to dispossess in Numbers 33 — had been read at their own sittings, so they are credited by name with the counts taken from those ledgers.
+The second is what the chapter does to that kin: it says the old code again for the new place. The Exodus lists have six nations; this one has seven and
+counts them, and our parser reads the count with the seven names as its witness. Exodus barred taking their daughters; this bars both directions. Exodus named
+three things to destroy; this names four. The tenth commandment's verb, "you shall not covet", is aimed here at the silver and gold on the idols. That pattern
+is part of what we have on the table as the "install" reading of Deuteronomy — recorded, not ruled. Two small finds for the machine: our text store carries an
+extra token at 7:9 where the word is written one way and read another, and our word table tags "the young of your flock" as a goddess's name — both noted, not
+acted on. The chapter is frozen as one unit, the 221st, every gate green.
 
 ### 2026-09-17 — CHAPTER 6 COMPILED: THE SHEMA GIVEN AT ITS OWN DAY, AND THE READBACK'S THIRD FORM
 

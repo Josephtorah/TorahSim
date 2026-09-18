@@ -4334,6 +4334,30 @@ corrected, and the four earlier dockets reread where a cut had been taken — on
 answer and was retyped. The runner matched its answer sheet on the first run; the tape reached ten of ten on the first run with the previous tape
 reproduced exactly; every probe suite and every gate green in one chain, the sweep whole. Next: the commit on your word; then chapter 7's reading — or
 the schema sitting first, on your word.
+DEUTERONOMY — SITTING 5 — CHAPTER 7, Deuteronomy 7:1-26 (2026-09-18, on Brian's "Go" after chapter 6's commit, then "go for run 2", "run 3 go" and "4 go" for
+the runs; World/step9/DEUTERONOMY_WALK.md "Sitting 5" and "Sitting 5 — AS BUILT").
+The chapter of the seven nations. The Sifrei has no section here — nothing between the Shema's last verse and 11:10 — so the shelf's whole voice on the chapter
+is three rows quoted from elsewhere, one of them the translator's own aside about where the next portion begins; the chapter's kin in Exodus 23 and 34 and
+Numbers 33 had been read at their own sittings and are credited by name. The sitting ran as four runs with a stopping point after each, every row read whole.
+What the reading found: the verse that names the seven nations also counts them, and our parser reads the count with the verse's own seven names as its
+witness — seven where Exodus had six; the chapter re-says the old code for the new place in several ways (both directions of marriage barred, four things to
+destroy instead of three, "you shall not covet" aimed at the idols' silver and gold); our text store carries one extra token at 7:9 where a word is written one
+way and read another; Onkelos doubles 7:10 into a teaching about the wicked being paid in this world; and our word table tags "the young of your flock" as a
+goddess's name — a note for the table, not for the code. The chapter is frozen as one unit, the 221st, the world's standing facts up by six as predicted, its
+hash unmoved, every gate green. Next: the commit on your word; then the compile of chapter 7 in four runs — the ban, no covenant, no marriage, the altars, the
+chosen people, the blessings, do not fear, little by little, the idols' silver and gold — or the ten-commandments schema first.
+
+
+DEUTERONOMY — SITTING 5b — CHAPTER 7 COMPILED (2026-09-18, on Brian's "Go", "Go", "keep going" and "keep going" for its runs; World/step9/DEUTERONOMY_WALK.md
+"Sitting 5b" and "Sitting 5b — AS BUILT"). Chapter 7 says the old law again for the new place — no covenant, no marriage, the altars and the Asherim,
+the hornet, little by little — so this sitting graded each verse against the cell that compiled the law the first time, in Exodus and Numbers, the way
+earlier sittings graded a retelling against the tape: fifteen rows by call to the older cells, six against the tape's lines, and four holes the older
+code never held — the ban on the seven nations, show them no favor, your eye shall not pity, no abomination into the house — compiled here and written
+at the day the chapter is spoken. Two effects that had waited in the registry since Exodus were written on the tape for the first time. The docket read
+the tractate on idolatry whole — five hundred and twenty rows, every one read entire before its verdict, seventy-five of them digressions named as such.
+The runner matched its answer sheet on the first run; the tape reached ten of ten on the second, the first run's one miss four older checkpoints that
+count Israel's debits, moved by the new one and retyped from the print; every probe suite and every gate green in one chain, the sweep whole. Next: the
+commit on your word; then chapter 8's reading — or the schema sitting first, on your word.
 
 ## Step 6 — Publish
 Export, parity check against the public repo, deploy. Owner's word.

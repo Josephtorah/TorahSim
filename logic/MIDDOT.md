@@ -1618,6 +1618,71 @@ narrative strength. By cluster:
     the judgments is in the commandments (R. Yehuda: the blind exempt from all); the blind obligated to tell (116b): F1 the_header (DATA the_blind).
   · "GO AFTER" READ AS "GO ALONG WITH" (Tosefta Avodah Zarah 1:3 on 6:14): the caravan to the idolaters' festival — the plural prohibition's application
     to conduct, the second word's cell by CALL: F4 no_other_gods.
+- **THE SIFREI ON DEUTERONOMY'S OWN CASE LAW ON CHAPTER 7 (Deuteronomy 7:1-26; THE DEUTERONOMY WALK sitting 5, 2026-09-18;
+  the ledger logic/oral_triage/deu_07_vaetchanan_ekev_2026-09-17.md — THE SPINE SILENT ON THE CHAPTER, no piska head between 36 on 6:9
+  and 37 on 11:10; its three rows outside any piska read whole in both files, the two that argue by a numbered rule below, each at its row):**
+  · THE COUNT READ FROM THE REPETITION (50:4 on 11:23 from 7:1): 11:23's "greater and mightier than you" (the plural) beside 7:1's
+    "seven nations greater and mightier than you" (the singular) — the second "than you" read as a teaching: EACH ONE of the seven
+    greater than all Israel, Amos 2:9's Amorite the proof — E10 (the repeated expression signifies); THE INK: "seven nations" one seat,
+    the verse's seven gentilic tokens the numeral's own witness; the singular phrase three seats, the plural one.
+  · THE SHRINES RENAMED FOR THE WORSE (61:7 on 12:3 from 7:26): "and you shall destroy their name" beside 12:2's "you shall utterly
+    destroy" — a DISPUTE: R. Eliezer the Asherah uprooted, R. Akiva the redundancy given a teaching (E10), the shrines RENAMED; 7:26's
+    doubled verbs "utterly detest, utterly abhor" fix the direction — a name for the worse, never for the better (Tosefta Avodah Zarah
+    6:4: "the Face of God" made "Dog-Face"); THE INK: the two infinitive absolutes one seat; the detesting verb Leviticus 11's.
+  · THE INTERPOLATION (37:1 on 11:10): no rule — the English's own "(Dt.7:12)" with its note that the Sifrei does not expound the verse;
+    the Hebrew cites 11:10 alone; read and marked, chapter 6's 104:8 the form.
+
+- THE CHAPTER-7 DOCKET (THE DEUTERONOMY WALK sitting 5b, 2026-09-18; logic/oral_triage/deu_07_vaetchanan_ekev_exam_2026-09-18.md — 520 rows, every row read
+  whole from the start; the rules about rules the docket carries, each at its row):
+  · THE SPELLING ARGUMENT (Avodah Zarah 20a:2-3 on 7:2 "show them no favor"): the defective verb yields THREE readings — spelled with the vav it would mean
+    favor alone, with the yod the gift alone; spelled short, learn all three (the land, the praise, the gift): F1 no_favor, the DATA row the_three_readings_of_favor.
+  · THE REASON EXPOUNDED (Avodah Zarah 36b:6; Kiddushin 68b:6-7; Yevamot 23a:13-14 on 7:3-4): R. Shimon reads the verse's reason ("for he will turn your son")
+    and extends the marriage bar to every nation; the Rabbis, who do not expound the reason, find the other nations at 21:13 (the captive) and the child at
+    21:15: F1 no_marriage (the scope's two arms; the exam's parameter).
+  · THE TORAH'S BAR IS THE SEVEN NATIONS (Avodah Zarah 36b:5 on 7:3): by Torah law the seven; the other nations by the students' decree — a chain of decrees
+    wine → daughters → idolatry (36b:4): F1 no_marriage; the write intermarriage_barred's scope by Torah law.
+  · "HEW DOWN" AND "BURN" ARE TWO CASES (Avodah Zarah 45b:9; 48a:9 on 7:5 / 12:3): since "burn their asherim" is written, "hew down their asherim" is superfluous
+    and read of the tree planted and afterward worshipped — the fourth verb the shelf's hook; reversible (48a:9): F1 the_four_objects (the readback row 7:5 EXPANDED).
+  · THE ORDER FROM THE VERB (Avodah Zarah 45b:10-12 on 7:5 "hew down"): R. Yehoshua ben Levi — fell the Asherim, conquer the land, then eradicate; Rav Yosef: break
+    the altars and leave them; Rav Huna: pursue the enemy, return and burn — the demolition's stages read off one verb: F1 the_four_objects (the demolition a
+    reference row against the dispossession's OPEN debit).
+  · THE DOUBLED VERB (Avodah Zarah 45b:13-14 on 12:2 "you shall utterly destroy"; the Sifrei 61:7 on 7:26 "utterly detest … utterly abhor"): two stages (R. Yosei
+    son of R. Yehuda) or the traces rooted out (the Rabbis); on 7:26 the renaming for the worse (R. Akiva against R. Eliezer): F1 the_four_objects, the DATA row
+    the_renaming; F6 utterly_detest.
+  · THE CALF'S AGENCY (Avodah Zarah 53b:7-11 on 12:3 / 7:5): the Land is Israel's inheritance and a person cannot forbid what is not his — so the gentiles who
+    worshipped its trees were ISRAEL'S AGENTS after the calf ("these are your GODS", plural): the Asherim a Jew's idols, irrevocable, hence burned: F1
+    the_four_objects, the DATA row the_calfs_agency (the reason of the demolition command the design took as bare).
+  · THE LAWS OF IDOLATRY DERIVED FROM JOSHUA'S WAR (Avodah Zarah 53b:5-6 on 7:2): the idols of the gentiles killed in the war, who meant to return, NOT revoked —
+    the ban's run read back by the shelf: F6 burn_the_images; F1 the_ban's debit OPEN to Joshua.
+  · "ON THEM" READ BY "WITH THEM" (Avodah Zarah 51b:10-12 on 7:25 / 29:16): the two verses reconciled — the DECORATIVE item forbidden, the rest permitted, and
+    why the chapter's clause stands (else inferred a fortiori): F6 not_covet_silver_gold.
+  · THE WORD READ AS "THE REVOKED OF" (Avodah Zarah 52a:9-10 on 7:25 "the graven images of their gods"): the nullification by a gentile from the word's letters
+    (R. Yishmael) or from the verse's two halves — "not covet" against "take it for yourself" (Shmuel for R. Akiva): F6 burn_the_images.
+  · "LEST", "BEWARE", "DO NOT" ARE PROHIBITIONS (Avodah Zarah 51b:3 — R. Avin in R. Ilea's name): the chapter's sixteen prohibitions and its two "lest" (7:22, 7:25):
+    F6 lest_snared (a DATA note).
+  · TWO VERSES THAT COME AS ONE (Avodah Zarah 54b:6-11; Kiddushin 58a:12 on 7:26 "for IT is devoted" / Leviticus 25:12 "IT is a Jubilee"): idolatry's and the
+    Sabbatical's exchange rules teach no third case — or they do, and "it" excludes orla and diverse kinds: F6 devoted_like_it.
+  · "BECOME DEVOTED LIKE IT" — WHAT YOU GENERATE (Chullin 140a:12; Temurah 30b:7; Kiddushin 58a:7; Avodah Zarah 54b:3 on 7:26): the verb "become" read as "give
+    life to" — whatever comes from the idol is like it (the birds, the money, the animal exchanged); the exchange's exchange two arms (54b:4-5): F6 devoted_like_it.
+  · A PERSON CANNOT FORBID WHAT IS NOT HIS — AND A RITE UPON IT DOES (Avodah Zarah 54a:2-54b:2): bowing to another's animal does not forbid it, a sacrificial rite
+    upon it does; Ahaz's vessels the source (II Chronicles 29:19 "prepared" = interred): F6 burn_the_images (the run's case by REFERENCE).
+  · THE INFERENCE BARRED BY A VERSE (Avodah Zarah 46a:14 on 7:26): the worshipped boulders — though one might derive by inference to permit them, "you shall
+    not bring an abomination … detest it" says do not derive: F6 utterly_detest's verse as a bar on inference (a parameter row).
+  · THE TREATED-AS-DEITY TEST AND ITS FIVE ANSWERS WEIGHED (Mishnah Avodah Zarah 3:4; Avodah Zarah 44b:7-15 on 12:2 "their gods" / 7:25): each of Rabban Gamliel's
+    answers to Proclus tried as deceptive or true (Peor's manner; Mishnah 4:3's favor; the passing scorn; the adornment): F6 burn_the_images.
+  · THE IMPORTANT PERSON IS DIFFERENT (Avodah Zarah 48b:10 on 7:5): one with no other way may pass beneath the Asherah, and Rav Sheshet ran — lest others learn
+    from him: F1 the_four_objects (the exam's edge no_other_way EXEMPT).
+  · THE MIXED CAUSE (Avodah Zarah 48b:12-18 on 7:5): the foliage and the ground both grow the vegetables — forbidden or permitted? the attribution reversed, or
+    Rav Mari's offset (the foliage's gain against the shade's damage): F1 the_four_objects (DATA).
+  · THE STRINGENT A FORTIORI (Avodah Zarah 46b:6-9): between an inference to leniency and one to stringency, the stringency — with R. Akiva's exception that
+    was no inference but a reminder: a rule about inferences on the docket, outside the chapter's cells.
+  · THE BAN'S CONDITION AND SCOPE (Sotah 35b:10-13, 36a:1 on 20:16-18, 21:10 / 7:2): the law written on the plaster and "lest they teach you" below for the
+    nations — the inhabitants who repent accepted; the Canaanite outside the Land not devoted: F1 the_ban (the DATA row the_bans_condition; the war chapter's
+    cell owed forward).
+  · "CONSUME" IS THE WAR'S SPOIL (Bava Kamma 113b:7 on 7:16): robbing a gentile prohibited — the peoples' property consumed only when delivered into your
+    hand: F4 consume_no_pity.
+  · A THOUSAND FOR FEAR, THOUSANDS FOR LOVE (Sotah 31a:9-10 on 7:9 / Exodus 20:6): the numbered clause against the bare plural read as two motives: F3
+    thousand_generations (the readback row 7:9 VARIANT's shelf reading).
 
 ## Exodus block campaign — owner's word "Do 3")
 

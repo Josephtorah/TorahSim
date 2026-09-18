@@ -3336,3 +3336,95 @@ in ten was wrong in substance and two in a hundred sat on the wrong row (chapter
 none moved in chapters 1-5 but one cell had been typed from a cut row's challenge instead of its answer (Sanhedrin 89a:2 — the fifth compartment
 spoils even beside the four, R. Zeira; the chapter-4 cell retyped and carried by this sitting's tape); at 1,500 none. The lesson stands in the map: a
 cut row ends before the answer — the Gemara's challenge sits at a row's head, the resolution at its tail.
+
+## 2026-09-18 — DEUTERONOMY 7 READ (THE DEUTERONOMY WALK sitting 5 — CHAPTER 7, in four runs, every row whole): THE SPINE SILENT ON THE CHAPTER; 7:1 COUNTS ITS OWN
+## LIST — SEVEN WHERE EXODUS HAD SIX; THE OATH'S NOUN STARRED; THE WRITTEN/READ PAIR AT 7:9; ONKELOS'S SUPPLIED DOCTRINE AT 7:10; THE FLOCK'S YOUNG TAGGED A NAME;
+## "YOU SHALL NOT COVET" ON THE IDOLS' SILVER AND GOLD
+
+THE SPINE SILENT ON THE CHAPTER. The Sifrei on Deuteronomy has no section between piska 36 on 6:9 and piska 37 on 11:10 — chapters 7, 8, 9, 10 and 11:1-9 are
+not expounded by position (the heads computed from the Hebrew's first rows; chapter 4 the earlier case). Its whole voice on chapter 7 is three rows from
+elsewhere, found by the union of both files' citations: 37:1 (the English translator's own "(Dt.7:12)" for the portion's opening, with his note that the verse
+is not expounded — an interpolation, read and marked), 50:4 on 11:23 (even one of the seven nations greater than all Israel — 7:1's count read), 61:7 on 12:3
+(7:26's doubled verbs the rule of renaming the shrines for the worse). The chapter's kin — the angel's clauses (Exodus 23:20-33), the renewed covenant (34:11-16),
+the dispossession (Numbers 33:50-56) — were read by position at the Exodus and Numbers sittings and are credited by name, the counts computed from those ledgers.
+29 sources, coverage computed; the twenty-six Onkelos rows whole.
+
+7:1 COUNTS ITS OWN LIST. The engine's parser reads "seven nations" as [7], and the verse carries its own witness: seven gentilic tokens beside the numeral
+(the Hittite, the Girgashite, the Amorite, the Canaanite, the Perizzite, the Hivite, the Jebusite — the morphology's Ng tag). Over the Bible the seven-name
+lists are three (7:1; Joshua 3:10, 24:11) and the six-name lists eleven (Exodus 3:8, 3:17, 23:23, 33:2, 34:11; 20:17; Joshua 9:1, 11:3, 12:8; Judges 3:5;
+Nehemiah 9:8) — none of them counts; 7:1 alone does. The seventh is the Girgashite, absent from every Exodus list and from 20:17 (seven seats: Genesis 10:16,
+15:21; 7:1; Joshua's two; Nehemiah 9:8; 1 Chronicles 1:14). The same re-declaration runs through the chapter's kin: both directions of marriage barred where
+Exodus 34:16 barred one (no token shared); four objects to destroy where 34:13 had three (the images added); "you shall not covet" moved to the idols' silver
+and gold. Beside it the second number verse, 7:9 "to a thousand generations" [1000] — the ten words' "to thousands" (Exodus 20:6, 5:10, 34:7) the bare plural,
+no number; Onkelos makes 7:9 the plural too ("to thousands of generations" — 5:10 and 7:9 alone).
+
+THE OATH'S NOUN STARRED. "The oath which He swore to your fathers" (7:8): the parser stars the noun as the seven-stem homograph and reads the verb "swore" as no
+number — the noun's ten Torah seats (Genesis 26:3; Exodus 22:10 "the oath of the LORD"; Leviticus 5:4; Numbers 5:21, 30:3, 11, 14; Genesis 24:8); Onkelos makes
+noun and verb both the covenant's word ("the covenant which He established"). No gap: the chapter's two numbers are the two the parser reads.
+
+THE WRITTEN/READ PAIR AT 7:9. The snapshot store carries seventeen tokens where the DB carries sixteen: "His commandments" written without the yod (the DB's
+one written-marked token in the chapter, of 1,268 over the Bible) AND read with it — the chapter's one mismatch, the same written form as 5:10's (there the read
+form is Exodus 20:6's "MY commandments"). Asserted as the exact difference; no claim's check uses the word (the check at 7:9 sits on "the faithful", before the
+store's extra token). Chapter 6's large letters were the store's other kind of difference (a dropped letter); this is an added token — the mismatch census
+names both.
+
+ONKELOS'S SUPPLIED DOCTRINE AT 7:10. "And repays those who hate Him to their face, to destroy them; He will not delay with him who hates Him" — twelve tokens —
+becomes twenty-two in the Aramaic: "He repays those who hate Him THE GOOD THAT THEY DO BEFORE HIM IN THEIR LIFETIME, to destroy them; He does not delay THE
+GOOD DEED of those who hate Him …" — the wicked paid for their good in this world so as to be destroyed in the next; six bracketed supplements in the English
+(the chapter's seventeen over ten verses). The row's length computed; the doctrine the compile's cell (5b). The chapter's other renderings: "beloved" for
+treasured (7:6, 14:2, 26:18), "desired" for set His love, "in exchange for" for "because" (7:12 — the noun "heel" read as a conjunction at five seats, the
+portion Ekev named by it), "the miracles" for the trials (4:34, 7:19, 16:1), "His Shekhinah is among you" (6:15, 7:21 — the pair), "a thing distanced" for the
+abomination (7:25, 24:4, 27:15), "detest … keep far" (7:26).
+
+THE FLOCK'S YOUNG TAGGED A NAME. "The increase of your cattle and the young of your flock" (7:13; 28:4, 18, 51 the other seats): the DB's morphology tags the
+flock's word a proper name (Np) at all four seats — the goddess's homograph (the same consonants as the name at Judges 2:13 and 1 Samuel 7:3); the store's
+gloss is the goddess too. A note for the DB, recorded and not resolved: the display layer rewrites the gloss ("and-the-young-of"), the parser is unaffected
+(no number on the word), and no cell reads the tag.
+
+"YOU SHALL NOT COVET" ON THE IDOLS' SILVER AND GOLD. 7:25 and Exodus 20:17 are the two seats of the phrase in this form (5:21 "and you shall not covet"); the
+tenth word's verb moved from the neighbor's house to the images' silver and gold, with "and take it for yourself" — Achan's "I coveted them and took them"
+(Joshua 7:21) the run's own case, Zechariah 6:11 the other "silver and gold … take". The compile's cell calls 3b's coveting cell (5b's box (l)); Mishnah
+Avodah Zarah 3:5 on this verse was graded at the Exodus 34 sitting and is credited.
+
+THE STORE'S GLOSSES READ BACK (the display layer): 49 rows by gloss and 36 by reference — "seclude" BAN, "try" CHOOSE, "wealth" TREASURE,
+"the-something-sworn" THE OATH, "the-build-up" THE FAITHFUL, "fetus" THE INCREASE OF, the goddess's name AND THE YOUNG OF, "the-wasp" THE HORNET, "the-testing"
+THE TRIALS, "physical--a-net" DEVOTED, "be-filthy" DETEST, "something-disgusting" ABOMINATION, "heel" BECAUSE (by reference at 7:12), "?" made "I" at 7:11,
+"strength" GOD and "nose" ANGER; by_ref 532, by_gloss 434 after.
+
+
+## 2026-09-18 — DEUTERONOMY 7 COMPILED (THE DEUTERONOMY WALK sitting 5b — CHAPTER 7): THE READBACK ON THE KIN — THE LAWS' FORM RUN ON ANOTHER CHAPTER'S CODE;
+## THE CODE'S FOUR HOLES COMPILED AT THE CHAPTER'S OWN DAY; TWO OLD EFFECTS WRITTEN ON THE TAPE FOR THE FIRST TIME; THE REGISTRY DECIDES A NAME; A DEBIT
+## MOVES THE OLDER COUNTS; THE SHELF'S REASON AND CONDITION FOR A COMMAND THE DESIGN TOOK AS BARE
+
+THE READBACK ON THE KIN. The readback's three forms (1b the acts, 3b the laws, 4b a retelling inside a law) each graded a chapter against its own first
+telling. Chapter 7 re-says ANOTHER chapter's law with the target's names — the angel's clauses of Exodus 23, the renewed covenant of 34, the
+dispossession of Numbers 33, the second and the tenth words — so the laws' form ran with the kin's cells as the first telling: fifteen rows graded by
+CALL to ordinances.land, erection.covenant, journeys.the_command and covenant_at_horeb's two words (each cell's verdict asserted when the row was built),
+six against tape lines found by kind and first verse; VERBATIM 4, VARIANT 5, EXPANDED 8, TURNED 3, SHORTENED 1, exactly the design's census. What the
+kin never said is the code's hole: the ban on the seven nations, "show them no favor", "your eye shall not pity", "you shall not bring an abomination into
+your house" — four cells compiled here, their writes at the chapter's own day. The install hypothesis (the code re-declared for the land) was tested in
+passing by these rows and not ruled.
+
+TWO OLD EFFECTS WRITTEN FOR THE FIRST TIME. covenant_barred (Exodus 23:32's block) and intermarriage_barred (34:16's) had stood in the registry since the
+Exodus sittings and never reached the tape — their case kinds are Joshua's (the entry into the land) and the exam's (the daughters taken). Chapter 7
+writes both at nations_devoted, the marriage bar valued in both directions where 34:16 had one; when the entry fires at the run, the ordinances' daemon
+will write its own on its own case — a second write on a second act, not a doubled law. The ban's debit on Israel stands OPEN to Joshua beside the
+dispossession's two debits, the demolition of 7:5 a reference row against those, no second debit.
+
+THE REGISTRY DECIDES A NAME. The design named the blessings' heaven entry blessing_promised; the types script added three effects of four — the name was
+Abram's, the ladder's entry (Genesis 12:2-3; 26:24). The chapter's entry is blessings_for_hearing. The 'added N of M' line is the tripwire, and the
+probe written before the runner was retyped once to the registry's name.
+
+A DEBIT MOVES THE OLDER COUNTS. The tape reached nine of ten on its first run: every checkpoint of the chapter matched and the previous sitting's tuple
+was reproduced exactly, but four checkpoints from the Numbers walk (the vows, Midian, the borders, the refuge cities) hold the current count of the
+commanded entries on Israel — eighteen, the newest Sihon's land, seven open — and the ban's debit makes nineteen, eight open. Retyped from the print
+with the sitting's note. The lesson of 3b on the closes, now on the debits: a literal that counts a ledger is a current count, and a design's "no retype"
+clause covers only what it names.
+
+THE SHELF'S REASON AND CONDITION. Two things the design took as bare commands the shelf supplies with a reason and a condition. The demolition: the Land
+is Israel's inheritance from the fathers and a person cannot forbid what is not his — so the gentiles who worshipped its trees were Israel's agents after
+the calf, the Asherim a Jew's idols, irrevocable, hence burned rather than revoked (Avodah Zarah 53b:7-11; the laws of idolatry derived from Joshua's
+war, 53b:5-6). The ban: the law written on the plaster with "lest they teach you" below for the nations to read — the inhabitants who repent accepted;
+the Canaanite outside the Land not devoted (Sotah 35b:10-13, 36a:1). Both are DATA rows on the runner; the war chapter's cells (20:16-18, 20:1-8) are
+owed forward. And one hole the design predicted has no row on the shelf at all — 7:16's "your eye shall not pity" is cited by no link row (the verse
+once, for "consume": robbing a gentile prohibited); pity_barred stands on the ink alone, its exam rows the book's four later seats.

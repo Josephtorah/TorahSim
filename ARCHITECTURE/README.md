@@ -67,6 +67,17 @@ scores from the sweep's own print.
 
 ![the six layers](diagrams/01_layers.svg)
 
+## The discussion documents
+
+Beside the tutorials, this folder keeps the discussion documents: findings measured on the database and argued with the owner before any
+build, none of them rulings. [DATABASE_SPECULATION.md](DATABASE_SPECULATION.md) (the population table and the ink's own architecture,
+2026-09-11). [THE_TEN_AS_A_SCHEMA.md](THE_TEN_AS_A_SCHEMA.md) (the ten words as the program's table of contents, 2026-09-16, the walk
+thread). [DEUTERONOMY_SO_FAR.md](DEUTERONOMY_SO_FAR.md) (the public tutorial, rewritten from scratch 2026-09-18 on the owner's word: what Deuteronomy is, then what each of the five books and the Joseph story do on the machine and where each sits; with its epub). [THE_BOOKS_AS_A_PROGRAM.md](THE_BOOKS_AS_A_PROGRAM.md)
+(2026-09-18, the main thread: law is code and narrative is data; what each book does, Deuteronomy the release, Joshua the install, Judges
+the loop without the operator, the Prophets the event stream, Ezekiel a second spec; the Decalogue as schema and how the pass missed it;
+the proposals that wait on the owner's word). A finding that becomes a ruling moves into the tutorials and the maps; until then it stays
+here, dated.
+
 ## The six layers
 
 | Layer | What it holds | Where it lives | Size on 2026-09-13 |

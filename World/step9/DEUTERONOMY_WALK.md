@@ -2147,3 +2147,674 @@ chain's folder — no scratch path and no home path in any copied form).
 NEXT on the ruling: the commit on the owner's word (4b whole, the rule and its fix, since a7955cc); then CHAPTER 7's reading (7:1-26 — the seven
 nations and the ban, the chosen people, the reward; the reading shape, in four runs, every row whole) — or the Decalogue-schema sitting first (ON THE
 TABLE, not a ruling). Nothing committed: the tree uncommitted since a7955cc, on the owner's word only.
+
+## Sitting 5 — CHAPTER 7, Deuteronomy 7:1-26 (2026-09-17; the owner: "Go" after 4b's commit 64a8362): the reading and the unit — THE DESIGN, written at the close of RUN 1 of four
+
+THE FOUR RUNS: RUN 1 the rereads (the recovery page, the map's "Sitting 4" design and AS BUILT as the reading's form, the tail sections — the whole-row rule and its
+fix — and the memory), the measurements (ch7_dump0.py DERIVED from ch6_dump0.py by twenty-two asserted substitutions; ch7_measure1.py), the ink (ch7_ink.py —
+119 asserts, seven fell on the first pass, all forms and none facts, 0 on the second) and this design — CLOSED HERE, a clean compaction point (#194); RUN 2 the
+rereads THE_STEPS Step 2 + Step 5's head + the compiler block, then the rows — the three outside rows WHOLE (ch7_sifrei_outside.txt, 4 KB) and the twenty-six Onkelos
+rows WHOLE (ch7_onkelos.txt, read at run 1) under the whole-row rule — ch7_rows_onkelos_a/b.py and ch7_rows_outside.py on sitting 4's forms, write_ch7_ledger.py from
+write_ch6_ledger.py by sed (lint 0; coverage computed); RUN 3 the display layer's patch (49 rewrites by gloss, 36 by reference), the manifest (six claims), the seat,
+the chain (the ritual), the fold predicted and matched, build_world, the journal gate, the register gate --strict, the home-path gate; RUN 4 the records from the
+sheet in one call, the forms copied, this section's AS BUILT, the compaction point.
+
+THE DRAFT: deu_07_nations_cherem 7:1-26 — 26 of 26 verses, missing 0 (computed from the DB's verse table), depends_on deu_06_shema, 33 scenarios, 30 comment lines, no
+operators, no step E; the next draft deu_08_manna_humility opens at 8:1 (8:1-20; depends_on this unit and the manna's); the step ids STEP_Dt_7_<v>. THE CHAPTER THE
+UNIT, per the ruling — THE PORTION'S EDGE SITS INSIDE IT: 7:12 opens the next portion (176 tokens before the edge, 236 after); the chapter is read whole. ONE ledger:
+logic/oral_triage/deu_07_vaetchanan_ekev_2026-09-17.md; the claims' prefix DV07 (absent everywhere, asserted).
+
+THE TWO DIVISIONS AGREE: the export's chapter 7 twenty-six rows, the DB's twenty-six verses; the alignment instrument gives the identity at cost 20; chapter 5 the
+book's ONE split (asserted on all thirty-four).
+
+THE SHELF, BY POSITION — THE SPINE IS SILENT ON THE CHAPTER (chapter 4's form): no piska heads in chapter 7 — 36 on 6:9 before it, 37 on 11:10 after (the Sifrei reads
+nothing between the Shema's last verse and 11:10: chapters 7, 8, 9, 10 and 11:1-9 have no section). THE OUTSIDE ROWS by the union of both files: THREE — 37:1 (the first
+row of the next portion's first piska, on 11:10: the English's own "(Dt.7:12)" names the portion's opening verse and its footnote says the Sifrei does not expound it;
+the Hebrew cites 11:10 alone — READ and marked an INTERPOLATION, chapter 6's 104:8 the form), 50:4 on 11:23 (citing 7:1 "seven nations greater and mightier than
+you": even ONE of the seven greater and harsher than all Israel — Amos 2:9 the Amorite tall as cedars), 61:7 on 12:3 (citing 7:26 "utterly detest it, utterly abhor
+it": R. Eliezer — the Asherah uprooted; R. Akiva — "destroy their name" means the shrines' names CHANGED FOR THE WORSE, never for the better; the English's note to
+Tosefta Avodah Zarah 6:4 — "the Face of God" to "Dog-Face"). No slip (no cited verse beyond 26). None of the three read before; 294 strict Sifrei rows anywhere. NO
+Onkelos row of chapter 7 in any ledger. THE KIN'S SPINE READ ALREADY, to be CREDITED by name at the ledger: Exodus 23:20-33 (the angel's clauses — no covenant, the
+hornet, little by little, a snare; exo_23_escort_land: eight Onkelos rows on 23:21-33; the Mekhilta rows on Exodus 23 and 34 twenty-one over the ledgers), Exodus 34:11-16
+(the renewed covenant — the six nations, no covenant, the altars, the daughters; exo_34_second_tablets; the erection docket's Mishnah Avodah Zarah 3:5 on 7:25's silver
+and gold, and 3:6, 3:10, 4:2 — the compile's CREDITS), Numbers 33:50-56 (the dispossession, the figured stones, "thorns in your eyes"; num_33_journeys: seven Onkelos
+rows). Six ledgers NAME a verse of chapter 7 (the erection docket 7:3-5 and 7:25-26; the nazirite's 7:21; the dues' 7:1; the conquest's 7:2; the journeys' 7:5; the
+refuge cities' 7:12).
+
+THE INK, COMPUTED (ch7_dump0.py, ch7_measure1.py; the asserts typed from the print — SEVEN fell on the first pass, all forms: a count typed as twelve where the print
+said eleven, a token's variants summed short, a gloss already rewritten at chapter 6 ("in your midst"), the Aramaic row's length; each retyped from the print, none
+after):
+- THE PARSER MEASURED FIRST: TWO number verses in 26 — 7:1 "SEVEN NATIONS" [7] WITH THE VERSE'S OWN WITNESS: seven gentilic tokens (the Hittite, the Girgashite, the
+  Amorite, the Canaanite, the Perizzite, the Hivite, the Jebusite) beside the numeral; the Bible's seven-name lists THREE (7:1; Joshua 3:10, 24:11 — with the Girgashite,
+  whose seven seats are Genesis 10 and 15, this verse, Joshua's two, Nehemiah 9:8, 1 Chronicles 1), the six-name lists ELEVEN (Exodus 3:8, 3:17, 23:23, 33:2, 34:11;
+  20:17; Joshua 9:1, 11:3, 12:8; Judges 3:5; Nehemiah 9:8) — 7:1 ALONE COUNTS ITS LIST, and the shelf reads the count (50:4); 7:9 "to a thousand generations" [1000]
+  (1 Chronicles 16:15 and Psalm 105:8 the same reading; "to thousands" of the ten words — Exodus 20:6, 5:10, 34:7 — NO number, the bare plural, the 1b rule); THE
+  SEVEN-STEM HOMOGRAPH "THE OATH" (7:8, the lemma 7621) STARRED — the noun's ten Torah seats (Genesis 26:3 "the oath", Exodus 22:10 "the oath of the LORD", the vows'
+  chapter); "swore" (7:8, 12, 13) not a number at all; no ordinal; NO GAP. The tokens 412, the letters 1,637.
+- THE STORE = THE DB at every verse but 7:9: the store carries the written מצותו ("His commandments", the ketiv — no yod) AND the read מצותיו (the qere, with the yod) —
+  THE CHAPTER'S ONE WRITTEN/READ PAIR, the same written form as 5:10's (there the read form is Exodus 20:6's "MY commandments"; the DB's 1,268 ketiv tokens over the
+  Bible); no large letter in the chapter; the one unglossed token "I" (7:11).
+- THE KIN DIFFED (the DB's tokens): 7:1-2 against Exodus 23:23, 23:32 and 34:11-15 — SIX names there, SEVEN here; "you shall not make a covenant with them" 7:2 and
+  23:32 the two seats ("lest you make" 34:12, 15); "nor show them favor" ONE; 7:3 against 34:16 — the daughters TAKEN there (one direction), BOTH directions barred
+  here ("you shall not intermarry" the Torah's one seat of the verb; Shechem's offer Genesis 34:9 the kin); 7:5 against 34:13 and 12:3 — the FOUR objects (altars,
+  pillars, Asherim, images; 12:3 adds "destroy their name"); 7:6 against 14:2 (a letter and a word apart) and Exodus 19:5-6 ("treasure … holy"); 7:7-8 against 4:37
+  and 10:15 (the fathers loved, the seed chosen), 6:21 and Exodus 13:14 (the strong hand — the son's answer), 13:6 (the enticer's "who redeemed you"); 7:9 against
+  Exodus 20:6 and 5:10 — ONE token shared with 20:6 ("and those who keep"), TWO with 5:10 (the ketiv "His commandments" in both); 7:10 against Exodus 34:7 and 20:5 —
+  the fathers' iniquity VISITED there, the hater REPAID TO HIS OWN FACE here; 7:11 against 6:1 and 5:31 — the triad's third seat (5:31, 6:1, 7:11 in that order); 7:13
+  against 28:4, 11, 18, 51 (the blessings' and the curses' fruit, increase and young), 11:14 (grain, wine, oil), 30:9; 7:14 against Exodus 23:26 (barren); 7:15 against
+  Exodus 15:26, 23:25, 28:60 (the diseases of Egypt); 7:16 against Exodus 23:33 ("serve their gods … a snare" shared) and 13:9, 19:13 (the eye's pity); 7:17-18 against
+  1:28-29, 9:1, 20:1, 20:3 (the fear of the nations — "you shall not fear them" 7:18 and 20:1); 7:19 against 4:34, 29:2 ("great which your eyes saw" shared), 26:8, 6:22
+  (the trials, signs, wonders, hand, arm); 7:20 against Exodus 23:28 and Joshua 24:12 (THE HORNET'S three seats — the town Zorah the homograph); 7:21 against 6:15
+  ("the LORD your God in your midst" — the two seats and Zephaniah), 10:17, 1:29, 31:6; 7:22-23 against Exodus 23:27-30 ("LITTLE BY LITTLE" — the two seats; the
+  beasts of the field; the confusion); 7:24 against Joshua 1:5 ("no man shall stand" — the two seats), 9:14, 25:19, 29:19, Exodus 17:14 (the name from under heaven —
+  Amalek, the calf, the curse); 7:25 against 7:5, 12:3, Exodus 20:17 and 5:21 — "YOU SHALL NOT COVET" THE TENTH WORD'S VERB on the idols' silver and gold, the phrase's
+  two seats (Achan's "I coveted them and took them", Joshua 7:21, the kin), 27:15; 7:26 against 13:18 (the devoted thing), Joshua 6:18, 7:12, Leviticus 11:43 (the
+  detesting verb Leviticus 11's), 23:8 ("you shall not abhor an Edomite … an Egyptian" — the abhorring verb's other seat), 27:28.
+- THE PHRASE CENSUSES (the crowns): "seven nations" ONE seat; "greater and mightier than you" three, all this book's; "you shall utterly destroy" 7:2 and 20:17; "holy
+  people" five, four this book's; "treasure" six (Exodus 19:5 the first); "chose you" ONE; "the fewest of all peoples" ONE; "set His love" eight (10:15 the fathers;
+  21:11 the captive woman); "the oath which He swore to your fathers" ONE; "redeemed you from the house of bondage" ONE (the verb's six Deuteronomy seats); "THE
+  FAITHFUL GOD" ONE; "the LORD your God, He is God" six (4:35, 39; 7:9; Solomon, Elijah, Manasseh); "keeps the covenant and the kindness" four (7:9; Solomon's prayer,
+  Daniel's) and 7:12 the pair again; "to a thousand generations" three; "and repays those who hate Him to their face" ONE; "He will not delay" 7:10 and Habakkuk; the
+  triad "the commandment, the statutes and the judgments" 5:31, 6:1, 7:11; "because you hear" ONE — "because" the noun "heel" read as a conjunction (7:12, 8:20,
+  Genesis 22:18, 26:5, Numbers 14:24); "the fruit of your womb and the fruit of your ground" 7:13, 28:4, 28:18; "the increase of your cattle and the young of your
+  flock" 7:13 and 28:51 — THE FLOCK'S "YOUNG" TAGGED A NAME in the DB's morph at its four seats (the goddess's homograph); "barren" five Torah (Sarah, Rebekah,
+  Rachel; Exodus 23:26); "the diseases of Egypt" 7:15 and 28:60; "your eye shall not pity" five, all this book's; "a snare" four Torah; "if you say in your heart" ONE;
+  "surely remember" ONE (the infinitive absolute 7:18 and Jeremiah 31:20); "the great trials" ONE ("trials" 4:34, 7:19; 16:10's "measure" the homograph); "the signs
+  and the wonders" five; "the hornet" Exodus 23:28, 7:20, Joshua 24:12; "those who hide" ONE; "a great and awesome God" ONE; "little by little" 7:22 and Exodus 23:30;
+  "great confusion" ONE; "destroy their name from under heaven" ONE; "no man shall stand before you" 7:24 and Joshua 1:5; "YOU SHALL NOT COVET" 7:25 and Exodus 20:17;
+  "an abomination to the LORD your God" five and "abomination to the LORD" eight, all this book's — "abomination" thirteen Deuteronomy seats, 7:25-26 the first two;
+  "you shall not bring an abomination into your house", "devoted like it", "utterly detest, utterly abhor", "for it is devoted" ONE each.
+- THE FRAMES AND THE REGISTER: NO divine frame, NO "saying" — the whole chapter Moses' voice; the narrative verbs TWO, both God's past acts inside the reason (7:7 "and
+  He chose", 7:8 "and He redeemed you"); NO imperative; FIVE INFINITIVE ABSOLUTES ("utterly destroy" 7:2, "surely remember" 7:18, "utterly detest … utterly abhor"
+  7:26 — and "quickly" 7:4, 22 in the adverb's form); the law's form the consecutive perfect in fourteen verses; SIXTEEN PROHIBITIONS — eleven in the second person
+  (7:2 two, 7:3 three, 7:16, 18, 21, 22, 25, 26), five in the third (7:10 "He will not delay", 14 "there shall not be a barren", 15 "He will not put", 16 "your eye
+  shall not pity", 24 "no man shall stand"); the second person SINGULAR in nineteen verses, PLURAL in two (7:5 the altars, 7:7 the fewest), BOTH in four (7:4, 8, 12,
+  25 — "you shall burn" plural inside a singular verse), NEITHER in 7:10; the first person God's (7:4 "from after Me", 7:11 "I command") and the doubter's (7:17 "than I …
+  how can I"); "for/when" twelve seats, "lest" two (22, 25), "but rather" once (7:5) — no "if", no "or"; the Name twenty; "the LORD your God" fourteen, singular only;
+  Moses and Israel never named; Egypt and Pharaoh at 8, 15, 18.
+- ONKELOS (the renderings' seats over the book): 7:2 "utterly destroy" MADE "utterly ANNIHILATE" (7:2 and 20:17 — the ban's two seats), "nor show them favor" MADE
+  "have no MERCY on them" (7:2, 13:9 the enticer); 7:4 "from after Me" MADE "from after MY SERVICE", "other gods" MADE "the IDOLS of the peoples" (eight); 7:5 "their
+  altars" the idolaters' word (7:5, 12:3), "their graven images" MADE "the images of their idols" (7:5, 7:25, 12:3); 7:6 "a treasured people" MADE "a BELOVED people"
+  (7:6, 14:2, 26:18); 7:7 "set His love" MADE "desired" (7:7, 10:15); 7:8 "the oath which He swore" MADE "the COVENANT which He established" — the oath's noun and verb
+  both the covenant's word; 7:9 "the faithful God" (7:9, 32:4), "TO A THOUSAND GENERATIONS" MADE "TO THOUSANDS OF GENERATIONS" — the ten words' plural, at 5:10 and
+  7:9 alone; 7:10 THE SUPPLIED DOCTRINE — "He repays those who hate Him THE GOOD THEY DO BEFORE HIM IN THEIR LIFETIME, to destroy them; He does not delay THE GOOD
+  DEED of those who hate Him …": twelve tokens made twenty-two, the six bracketed supplements of the English (seventeen brackets over ten verses in the chapter);
+  7:12 "because" MADE "IN EXCHANGE FOR" (Caleb's 1:36 the first of eight); 7:13 the cattle's increase and the flock's young MADE "the herds of your oxen and the
+  flocks of your sheep" (7:13, 28:4, 18, 51); 7:15 "diseases" MADE "plagues" (7:15, 28:60, 32:23); 7:16 "consume" MADE "finish off", "a snare" MADE "a stumbling-block"
+  (one); 7:19 "THE TRIALS" MADE "THE MIRACLES" (4:34, 7:19, 16:1 — the trial's word for the wonder; 6:16's Massah "the trial" another word); 7:20 "the hornet" ONE;
+  7:21 "in your midst" MADE "HIS SHEKHINAH IS AMONG YOU" (6:15, 7:21 — the pair); 7:22 "little by little" ONE; 7:23 "confusion" ONE; 7:24 "no man shall stand" (7:24,
+  11:25); 7:25 "an abomination to the LORD" MADE "a thing DISTANCED before the LORD" (7:25, 24:4, 27:15), 7:26 "devoted" the same word (7:26, 13:18), "detest … abhor"
+  MADE "detest … keep far" — the abhorring verb the distancing's; no parenthesised variant in the chapter's Hebrew rows; the English keeps two transliterations
+  ("tzir'oh" the hornet, "cheirem" the devoted thing).
+- THE DISPLAY LAYER (run 3): 49 rewrites BY GLOSS ("seclude" → "ban", "try" → "choose", "wealth" → "treasure", "the-something-sworn" → "the-oath", "the-build-up" →
+  "the-faithful", "fetus" → "the-increase-of", "and-'Ashtᵉrah" → "and-the-young-of", "the-wasp" → "the-hornet", "physical--a-net" → "devoted", "be-filthy" →
+  "detest", "the-testing" → "the-trials" …) and 36 BY REFERENCE ("nations" and "the-peoples" for the store's singulars; "I" at 7:11; "because" for "heel"; "set-his-love"
+  for "cling"; "the-fewest"; "but rather thus" at 7:5; "the-anger" for "nose" …); six of the chapter's families already rewritten at sittings 1-4 ("other", "covet",
+  "like-it", "destroyed-them", "and-destroy-you", "in-your-midst").
+
+THE CLAIMS PLANNED (write_ch7_manifest.py, run 3): SIX — DV07-01 7:1-5 the seven nations (the ban; no covenant, no favor, no marriage; the altars); DV07-02 7:6-8 the
+holy people chosen for love and for the oath, not for number; DV07-03 7:9-11 the faithful God — covenant and kindness to a thousand generations, the hater repaid to
+his face, keep the commandment; DV07-04 7:12-16 because you hear — love, blessing, fruit, no barrenness, no disease; consume the peoples, no pity, no serving their
+gods; DV07-05 7:17-24 do not fear — remember Pharaoh, the trials, the hornet, little by little, the kings, their name; DV07-06 7:25-26 the images burned, the silver
+and gold not coveted, no abomination into the house, devoted — each check the block's longest store-piece whole (7:9's "His commandments" NOT a check — the store's two
+tokens). THE FOLD PREDICTED: units 221, standing 2203 + 6 = 2209, hash unmoved (the tripwire's literals set before the bake). THE SEATS: six WITNESS_READ operators at
+7:1, 6, 9, 12, 17, 25, step E. THE REGISTER GATE: no seat in the chapter (no receipt form; "swore to your fathers" 7:8, 12, 13 the compile's citations) — GREEN
+unchanged (DECLARED 100). THE LEDGER PREDICTED: Onkelos 26 rows; the Sifrei 3 outside rows FRESH (37:1 marked an interpolation); the kin's rows CREDITED by name (the
+Exodus 23 and 34 ledgers, the Numbers 33 ledger, the erection docket); coverage COMPUTED at the writing.
+
+OWED TO THE COMPILE (sitting 5b; the box in COMPILE_DEBT.md at run 4): THE BAN (7:2 with 20:16-18 — the seven nations' cell; the Sifrei's war sections at chapter 20),
+NO COVENANT AND NO FAVOR (7:2 — Avodah Zarah 20a's readings of "show them no favor": no settlement, no gift, no praise), NO MARRIAGE (7:3-4 — "for he will turn your
+son": the child of a gentile mother follows her, Kiddushin 68b; Mishnah Kiddushin 3:12 CREDITED at the erection docket; Yevamot 23a; Avodah Zarah 36b), THE ALTARS AND
+THE ASHERIM (7:5 with 12:3 — Mishnah Avodah Zarah 3:5-10 CREDITED; Avodah Zarah 45b-48b), THE CHOSEN PEOPLE (7:6-8 — Chullin 89a "not because you were more … but
+because you humble yourselves"), THE FAITHFUL GOD AND THE HATER REPAID (7:9-10 — Onkelos's doctrine of the wicked paid in this world; the thousand generations),
+"BECAUSE YOU HEAR" (7:12), THE BLESSINGS (7:13-15 — no barrenness, the diseases of Egypt), NO PITY AND NO SERVING (7:16), DO NOT FEAR (7:17-21 — Sotah 36a's hornet on
+the Jordan's bank), LITTLE BY LITTLE (7:22 — Exodus 23:29-30 the first telling, by CALL), THE IDOLS' SILVER AND GOLD (7:25 — Mishnah Avodah Zarah 3:5 CREDITED, 4:4-5
+the nullification; Avodah Zarah 44b-52a; "you shall not covet" the tenth word's verb — 3b's coveting cell by CALL), THE ABOMINATION INTO THE HOUSE (7:26 — Makkot 22a
+the lashes; Mishnah Avodah Zarah 3:3; the devoted like it), the docket by the union rule (the scan will name the tractates; the topic ranges expected: Avodah Zarah
+20a, 36b, 42a-54b; Kiddushin 68b; Yevamot 23a; Sotah 35b-36a; Chullin 89a; Makkot 22a; Mishnah Avodah Zarah 1-4; Kiddushin 3:12). NOTHING ELSE IN CHAPTER 7 IS OWED TO
+A LATER SITTING OF ITS OWN.
+
+⚠ LESSONS (run 1): A CHAPTER WITHOUT A SPINE READS ITS KIN'S SPINE BY CREDIT — the Exodus and Numbers ledgers hold the angel's clauses and the dispossession; the three
+outside rows are the Sifrei's whole voice on the chapter. THE TRANSLATOR'S PARENTHESIS AGAIN — 37:1's "(Dt.7:12)" names the portion's opening the Sifrei skips: read and
+marked, never counted as the Sifrei's citation. A NUMBER VERSE CAN CARRY ITS OWN WITNESS — 7:1's seven gentilic tokens beside "seven": the count is checkable from the
+ink alone, and the shelf reads the count (50:4). THE WRITTEN/READ PAIR IS THE STORE'S EXTRA TOKEN — 7:9 as 5:10: the store carries both forms, the DB the written one
+marked; the mismatch census names the seat. THE FIRST TYPED PASS FELL SEVEN WAYS ON FORMS — a token's variants summed short, a count typed from memory, a gloss already
+rewritten at chapter 6: the print first, then the assert. A DERIVATION BY ASSERTED SUBSTITUTIONS — ch7_dump0.py from ch6_dump0.py by twenty-two named replacements,
+each asserted present; the forms copy kept the git-root line, so the derivation's header check is conditional. A PORTION'S EDGE INSIDE A CHAPTER — 7:12 opens the next
+portion; the chapter is the unit per the ruling; the token split recorded.
+
+THE ORDER (RUN 2, the first step): reread THE_STEPS Step 2 + Step 5's head + the compiler block; the three outside rows WHOLE (ch7_sifrei_outside.txt) and the twenty-six
+Onkelos rows WHOLE (ch7_onkelos.txt) → ch7_rows_onkelos_a.py (7:1-13), ch7_rows_onkelos_b.py (7:14-26), ch7_rows_outside.py (sitting 4's ch6_rows_*.py the forms; the
+cuts by consonants — HP / AP / SP_) → write_ch7_ledger.py (from write_ch6_ledger.py) → lint 0, coverage computed (Onkelos 26; the Sifrei 3; the kin's credits by name)
+→ the state doc's checkpoint (RUN 2's close, a clean point).
+
+RUN 2 — AS RUN (2026-09-18, on "go for run 2" after the compaction): the rereads (the recovery page, the map's two newest sections, the memory; then THE_STEPS' compiler block,
+Step 2 and Step 5's head); the three outside rows and the twenty-six Onkelos rows read WHOLE again from the run-1 prints (ch7_sifrei_outside.txt, ch7_onkelos.txt — the
+compaction had emptied them from the window; the whole-row rule); three row scripts and the ledger writer on sitting 4's forms with the spine sections dropped (chapter 4's
+shape on chapter 6's form — no CREDITED spine rows, no piska loop); the ledger logic/oral_triage/deu_07_vaetchanan_ekev_2026-09-17.md — 29 sources (Onkelos 26: MATERIAL 19 / CONTEXT 7;
+the outside rows 3: MATERIAL 2 / CONTEXT 1, 37:1 marked an INTERPOLATION in its own line), coverage computed (missing 0, extra 0; the spine's 0 rows on the chapter said
+and why), lint 0, NO CUT MISSED on the first run (65,967 bytes); the kin's spine CREDITED BY NAME in its own section with the counts computed from those ledgers (the angel's
+clauses 8 Onkelos rows, the renewed covenant 7, the dispossession 7, the erection docket's Mishnah Avodah Zarah 3:5 on 7:25; the Mekhilta rows 21) — not this ledger's sources,
+not in its cite index. ⚠ LESSONS (run 2): A CHAPTER WITHOUT A SPINE HAS A LEDGER WITHOUT A SPINE SECTION — the form drops the spine's loop, the credits dict and the
+divergence check whole, and the coverage line says "0 rows" with the heads computed, never a blank. THE OUTSIDE ROWS ARE THE SPINE'S WHOLE VOICE — three rows, one the
+translator's own: 50:4 reads 7:1's count (each of the seven greater than all Israel) and 61:7 reads 7:26's doubled verbs as the rule of RENAMING the shrines for the worse — the
+shelf's two moves on the chapter both by E10, the repetition made to teach. A SINGULAR AND A PLURAL "THAN YOU" — the ink's phrase census had the singular's three seats (4:38,
+7:1, 9:1); the shelf's 50:4 puts 11:23's PLURAL beside 7:1's singular, and the plural's one seat was computed at the write (a census by spelling splits what the shelf joins by
+sense — the row names the seat). THE ORDER (RUN 3, the first step): write_ch7_overrides.py — the display-layer patch (49 by gloss, 36 by reference) under the sitting's marker
+"THE DEUTERONOMY WALK sitting 5 (2026-09-17, Deuteronomy 7)", the ink rerun PATCHED; then the manifest (six claims DV07-01..06, each check the block's longest store-piece
+whole — 7:9's "His commandments" not a check), the seat (six WITNESS_READ operators at 7:1, 6, 9, 12, 17, 25, step E), the chain (the ritual), the fold (221 / 2209 / the hash
+unmoved), build_world, the journal gate, the register gate --strict (no seat), the home-path gate → the checkpoint (#194 addendum 2, a clean point).
+
+RUN 3 — AS RUN (2026-09-18, on "run 3 go" after run 2): the display layer patched (49 by gloss, 36 by reference; by_ref 532, by_gloss 434 — the anchors the last rows of
+sitting 4's two blocks), the ink rerun PATCHED with 0 failing; the manifest's six claims with every CITE INDEX name used (29), verify_claims 6/0, the labels census GREEN
+(385 claims labeled, debt 0); six WITNESS_READ seats at 7:1, 6, 9, 12, 17, 25, step E, seven anchor scenarios (the tree-derived thirty-three rewritten), verify_text GREEN
+(26 steps, 7 scenarios); the ritual 13 PASS — the 221st frozen unit and its Python layer; the fold predicted and matched (221 units, standing 2209, hash 8b8fff1fa28953af; 1809 facts,
+341 demands, 191 open) before and after the bake; build_world ALL GREEN; the journal gate GREEN (12 kinds, 9688 rows — 9674 + 14, the fold layer's rows for the new unit; the
+tape unmoved); the register gate --strict GREEN (DECLARED 100, DEBT 0, FAILS 0 — no seat in the chapter, as designed); the home-path gate GREEN. ⚠ LESSONS (run 3):
+THE FORMS HELD FIRST TIME — five scripts derived from sitting 4's by name changes alone (the patch's anchors the prior sitting's last rows; the manifest's checks cut
+from the store's bytes, 7:9's placed on "the faithful" BEFORE the store's extra token so the written/read pair stays out of every check; the seat's anchors the claims'
+first verses), none retyped: a reading's run 3 is a form, not a design. THE FOLD LAYER GROWS WITH A FREEZE WHILE THE TAPE STANDS — the journal's index +14 rows on the
+221st unit with no line added to the tape; the gate re-pins the header to the unmoved hash. THE ORDER (RUN 4, the first step): the sheet RECORD_FORMS.md read,
+write_ch7_records.py from write_ch6_records.py by sed → the records in one call (this section's AS BUILT, COMPILE_DEBT's sitting-5 box — 5b's owed list, MIDDOT
+(E10 twice on the chapter: 50:4, 61:7), MISHNAH_TOPICS (the testing shelf routed — Avodah Zarah, Kiddushin 3:12, Makkot), RESEARCH_LOG (the reading's entry — the
+flock's word tagged a name in the morph; the written/read pair at 7:9; the spine silent), THE_STEPS, THE_BRIEFING (the scoreboard 221 units / standing 2209 + an entry),
+THE_WORLD, RESUME, the stamp row, the recovery page whole, the memory, copy_ch7_forms.py) → the lints → #194 addendum 3 (the sitting's close) → the commit
+message drafted for the owner's word.
+
+## THE INSTALL HYPOTHESIS — DEUTERONOMY AS THE PROGRAM'S INSTALL (ON THE TABLE, not a ruling; recorded 2026-09-18 on the owner's "yes record it", after his question
+## "do you think deuteronomy is a run instruction. why else does it alter old code then create new code?")
+
+THE READING OFFERED: not the run itself but THE INSTALL — the program read back to the generation that will execute it, re-declared for the environment it will run in,
+patched where that environment needs it, and written onto the runtime; THE RUN IS JOSHUA (the crossing). Why the book alters old code and then adds new: the target
+changed — the first four books are the specification written for a camp under a cloud; Deuteronomy is the same program prepared for the land.
+
+THE EVIDENCE ALREADY MEASURED BY THE WALK (nothing of it typed for the hypothesis; each is a record of sittings 1-5): (1) IT READS THE LOG BACK before it does anything —
+the readback's first form, chapters 1-4: forty-two rows and eleven rows of the retelling graded against the tape, the acts told nowhere else written once at their own
+day; (2) IT RE-DECLARES THE CODE FOR THE NEW AUDIENCE — chapter 5's ten words with receipts INSIDE them ("as the LORD your God commanded you": the code citing its own
+prior giving — the register gate's CHAPTER class), the Sabbath's ground moved from the creation to Egypt (from the designer's ground to the audience's own history),
+"that it may go well with you" added; (3) IT PATCHES WHAT THE LAND NEEDS — the cities of refuge east (4:41-43) with the west owed; ahead: the one place, the king, the
+courts, the prophet, the war laws; (4) IT WRITES THE PROGRAM ONTO THE RUNTIME — chapter 6 as an install script: on the heart (memory), on the hand and between the eyes
+(the person), on the doorposts and the gates (the house), taught to the sons (replication), recited lying down and rising (a heartbeat); the two lines given at the
+chapter's own day, STATUTE by form, no marker back to Sinai; (5) THE REGISTRY ALREADY SAYS SO — the book's three daemons (law_opening_speech, law_obey_horeb,
+law_hear_o_israel) are installed_by BOOT, not by an act on the tape; (6) THE RECEIPT WITHOUT THE NAME (6:25 "as He commanded us") — the install verifying itself against
+the spec in the first person plural; (7) chapter 7's first measurement: the code re-declared with the target's names (SEVEN nations where Exodus had six; both
+directions of marriage where Exodus 34:16 barred one; four objects where 34:13 had three; "you shall not covet" moved from the neighbor's house to the idols' silver
+and gold).
+
+WHAT WOULD TEST IT (the chapters ahead; nothing of the engine is touched now): the stones at the crossing (27:2-8 — the code copied onto the target), the blessings and
+the curses (27:11-28:68 — the exit codes), the covenant at Moab (29 — the install's own covenant, distinct from Horeb's, 28:69), the reading every seven years (31:10-13 —
+the reload), the song as a witness (31:19-22, 32), the handoff to Joshua (31:7-8, 23; 34:9), Moses' death outside the target (34). If those compile as install steps
+rather than as law cells — writes on the world's own configuration rather than on Israel's ledger — the picture holds; if they compile as ordinary law and narrative,
+it falls. THE MACHINE'S OWN CLASSES bear on it: the register gate's headers (4:45 "these are the testimonies" — DAEMONS), the daemons' installed_by field (boot / by an
+act), THE LOOP's port (the run's inputs) and its second pass; a class for install steps beside the law cells would be the hypothesis's first engine change, and it is
+NOT made until the owner's word after the evidence.
+
+BESIDE IT ON THE TABLE: the Decalogue as a SCHEMA over the laws (the state doc's #185 addendum 1; ARCHITECTURE/THE_TEN_AS_A_SCHEMA.md). The two questions may be one:
+a schema is what an install declares. The walk continues in order; neither is a ruling.
+
+
+## Sitting 5 — CHAPTER 7 — AS BUILT (2026-09-18; the design above stands as written — the four runs ran as designed, the RUN 2 and RUN 3 paragraphs their record; every departure from the design named here)
+
+THE RESULT: Deuteronomy 7:1-26 READ AND FROZEN as one unit — deu_07_nations_cherem, the 221st frozen unit (the portion's edge at 7:12 inside it — the chapter the unit, per the
+ruling); the ledger logic/oral_triage/deu_07_vaetchanan_ekev_2026-09-17.md (29 sources: Onkelos 26 — MATERIAL 19 / CONTEXT 7; the Sifrei's spine 0 rows — SILENT on the
+chapter; the outside rows 3 — MATERIAL 2 / CONTEXT 1, 37:1 an interpolation; the kin's spine credited by name in its own section; 65,967 bytes; lint 0); the
+manifest deu_07_nations_cherem_claims.json (6 claims DV07-01..06, verify_claims 6/0, the labels census GREEN — 385 labeled, debt 0); six WITNESS_READ seats at 7:1, 6, 9,
+12, 17, 25, step E, seven anchor scenarios; the ritual 13 PASS; the fold predicted and matched before and after the bake (221 units, standing 2209, hash
+8b8fff1fa28953af; 1809 facts, 341 demands, 191 open); the display layer +36 by reference and +49 by gloss (by_ref 532, by_gloss 434 after); the stamp row
+delegated (FULL RULE). No engine file changed — the tape as at 4b's close (RUN (1304, 96, 88, 0, 12, 1595, 37, 319, the four pairs, 127), markers 167, closes 127);
+the sweep as at 4b.
+
+THE DEPARTURES FROM THE DESIGN: none in substance. THE FOUR RUNS held their edges — run 1 the rereads, the measurements, the ink (119 asserts, seven failing
+on the first pass and 0 on the second) and the design (#194, the compaction); run 2 the rows whole and the ledger (#194 addendum 1); run 3 the display layer, the
+manifest, the seat, the chain, the fold and the gates (#194 addendum 2); run 4 the records (#194 addendum 3) — the owner compacted after run 1 only and said
+"reread", "go for run 2", "run 3 go", "4 go". Three small departures: the run-3 record named THE_WORLD among run 4's records, but a reading's sheet has no
+THE_WORLD row (the compile's) — not written; the recovery page's cap tripped twice by a few bytes (run 3, run 4) and the lines were shortened, nothing else
+touched; THE INSTALL HYPOTHESIS was recorded ON THE TABLE at run 1 on the owner's "yes record it" — the map's tail section, not this sitting's work, no engine
+change. The design's OWED TO THE COMPILE list stands as the 5b box below (COMPILE_DEBT).
+
+THE GATES, COMPUTED FROM THEIR PRINTS: the ritual 13 PASS (RITUAL COMPLETE, 221 frozen units); CORPUS TRUTH GREEN twice (221 units, 1809 facts, 341
+demands (191 open), hash 8b8fff1fa28953af — the tripwire's literals set to the prediction before the bake, matched); build_world ALL GREEN; the journal gate
+GREEN (12 kinds, 9688 rows — 9674 at sitting 4b, +14 on the fold layer with the tape unmoved); the register gate --strict GREEN (DECLARED 100, DEBT 0,
+FAILS 0 — no seat in chapter 7); the home-path gate GREEN; the labels census GREEN (385 claims labeled, debt 0); large_letter_probes 6/6; the lints at their
+baselines.
+
+⚠ THE LESSONS (the three runs', gathered — the numbered list the sheet asks for): (1) A CHAPTER WITHOUT A SPINE READS ITS KIN'S SPINE BY CREDIT — the Exodus 23
+and 34 ledgers and the Numbers 33 ledger hold the angel's clauses, the renewed covenant and the dispossession; the credit is by name, with the counts computed
+from those ledgers, never a source of this one. (2) THE TRANSLATOR'S PARENTHESIS AGAIN — 37:1's "(Dt.7:12)" names the portion's opening the Sifrei skips; read and
+marked, never counted. (3) A NUMBER VERSE CAN CARRY ITS OWN WITNESS — 7:1's seven gentilic tokens beside "seven": the count checkable from the ink alone, and the
+shelf reads the count (50:4). (4) THE WRITTEN/READ PAIR IS THE STORE'S EXTRA TOKEN — the store carries both forms, the DB the written one marked; the mismatch
+census names the seat; no check on that word. (5) THE FIRST TYPED PASS FELL SEVEN WAYS ON FORMS — a token's variants summed short, a count typed from memory, a
+gloss already rewritten at chapter 6: the print first, then the assert. (6) A DERIVATION BY ASSERTED SUBSTITUTIONS — the dump script from the prior chapter's by
+twenty-two named replacements, each asserted present; the forms copy keeps its git-root line, so the header check is conditional. (7) A PORTION'S EDGE INSIDE A
+CHAPTER — 7:12 opens the next portion; the chapter is the unit per the ruling; the token split recorded. (8) A CHAPTER WITHOUT A SPINE HAS A LEDGER WITHOUT A
+SPINE SECTION — the form drops the spine's loop, the credits dict and the divergence check whole; the coverage line says "0 rows" with the heads computed. (9) THE
+OUTSIDE ROWS ARE THE SPINE'S WHOLE VOICE — 50:4 the count, 61:7 the renaming, both by E10. (10) A SINGULAR AND A PLURAL "THAN YOU" — a census by spelling splits
+what the shelf joins by sense; the row names the seat. (11) THE FORMS HELD FIRST TIME — five run-3 scripts derived by name changes alone, none retyped: a
+reading's run 3 is a form, not a design. (12) THE FOLD LAYER GROWS WITH A FREEZE WHILE THE TAPE STANDS — the journal's index +14 rows on the new unit, the
+header re-pinned to the unmoved hash. (13) THE FOUR-RUN RULE HELD ON A SECOND READING SITTING — one compaction, the reread three files, each checkpoint naming
+the next run's first step; the recovery page's cap is a tripwire, not a target.
+
+THE FORMS: World/step9/forms_deuteronomy_walk/ — the four runs' scripts (derive_ch7_dump0.py, ch7_dump0.py, ch7_measure1.py, ch7_ink.py, the three row files,
+write_ch7_ledger.py, ch7_patch_overrides.py, write_ch7_manifest.py, seat_ch7.py, ch7_chain.sh, ch7_fold.sh, write_ch7_design.py, write_ch7_run2.py,
+write_ch7_run3.py, write_ch7_records.py, copy_ch7_forms.py) and the prints (the dump, the measurement, the Onkelos dump, the outside rows, the store's glosses,
+the ink runs, the chain log, the ritual, verify_text, the claims' verifier, the labels census, the fold's checks, the gates).
+
+NEXT on the ruling: THE COMPILE OF CHAPTER 7 (sitting 5b) in four runs — (1) the rereads (THE_STEPS Step 5 + the compiler block; this section; the 5b box in
+COMPILE_DEBT.md), the measurements (the tape's state at Deut 6:19; the runners' cells the chapter calls — the Exodus 23 runner's clauses for the hornet and
+little by little, 3b's coveting cell for 7:25, the second word's cell for 7:4 and 7:16; the erection docket's Mishnah Avodah Zarah rows credited) and THE DESIGN
+in this file before any code; (2) the docket by the union rule (Avodah Zarah 20a, 36b, 42a-54b whole; Kiddushin 68b; Yevamot 23a; Sotah 35b-36a; Chullin 89a;
+Makkot 22a; Mishnah Avodah Zarah 1-4; Mishnah Kiddushin 3:12), every row whole; (3) the runner (the ban with chapter 20's cell owed; no covenant, no favor, no
+marriage; the altars and the Asherim; the chosen people; the faithful God and the hater repaid; because you hear and the blessings; no pity, no serving; do not
+fear; little by little by CALL; the idols' silver and gold with the tenth word's cell by CALL; the abomination into the house; the run citations as the
+readback's reference rows), the stitch, the tape to 10/10; (4) the gates chain, the records, the forms. Or THE DECALOGUE-SCHEMA SITTING first, on the owner's
+word — THE INSTALL HYPOTHESIS stays on the table beside it. Then chapter 8, and on in order.
+
+## Sitting 5b — THE COMPILE OF CHAPTER 7, Deuteronomy 7:1-26 (2026-09-18; the owner: "Go" after sitting 5's run 4): THE DESIGN — written at the close of
+## RUN 1 of four (the rereads: THE_STEPS' compiler block and Step 5's head (this window), the 5b box (a)-(p), the 4b design and AS BUILT as the compile's
+## form; the measurements: ch7_compile_recon.py, ch7_docket_scan.py in the scratchpad, the one database queried) and BEFORE any code; the four-run rule's
+## fourth sitting, every row of the docket WHOLE under THE WHOLE-ROW RULE
+
+THE FOUR RUNS: RUN 1 the rereads, the measurements and this design — CLOSED HERE, a clean compaction point (#194 addendum 4); RUN 2 the probes to FAIL
+(readback Q16-Q18), then THE DOCKET by the union rule, EVERY ROW WHOLE (four parts A-D on 4b's whole-row instruments, the writer write_ch7_docket.py,
+coverage computed) — the docket takes the runs it needs; RUN 3 the types by script, the recorder and the stitcher, the gates to FAIL, the runner in parts
+with the fast checker and the generated CASES, the literals CQ1-CQ9, checkpoint_check.py --all AFTER the tape (the tape grows), the tape to 10/10 with
+THE REST; RUN 4 gates_chain.sh in one summary, the records from the sheet in one call, the forms copied, this section's AS BUILT.
+
+THE MEASUREMENTS (what the tape, the runners, the registries and the one database say before a line is typed): THE COUNTER stands at (40, 11, 1); the
+tape's LAST LINES are chapter 6's two (shema_declared 6:4-9, testing_barred 6:16-19, both on the counter's day, no marker) and its LAST MARKER the
+forward one at Deut 5:32 (M['charge']) — CHAPTER 7 OPENS ON THE COUNTER'S OWN DAY, NO MARKER, the speech continuing. THE CHAPTER'S KIN IS ON THE TAPE
+AND IN THE CODE: the angel's clauses (Exodus 23:20-33) are ordinances.land — its asks hornet, little_by_little, no_barren, no_covenant, not_dwell (the
+snare), break_pillars, bread_water, serve_before, angel, borders, not_forgive (the recon's section 2); the renewed covenant (34:10-16) is erection.covenant
+— its asks nations_seven_orders, no_covenant_by_call, daughters_two_seats, intermarriage_channels, child_follows_mother (Kiddushin 68b's rule already
+there), cut_four, pillars_exod, molten_two_seats, demolition_first_seat, demolition_grows, sheet_az_2_3 / 3_5 / 4_2 / 4_4 (Mishnah Avodah Zarah's rows
+graded at the erection docket); the dispossession (Numbers 33:50-56) is journeys.the_command — drive_out, figured_stones, molten_images, high_places,
+three_objects_own, negative_arm, when_you_pass, possess_and_dwell; the second word and the tenth are covenant_at_horeb.the_second_word (no_other_gods,
+the_visiting — "to thousands", "those who hate Me") and the_tenth_word (covet_and_desire, the_coveter_who_pays, the_wife_first); the plagues, the sea,
+Marah's healer, the trials, Amalek's blotting and the treasure at 19:5-6 are exodus_story (plagues, sea, marah(healer_condition), trials(ten_list,
+count_by_exodus), amalek(blotting), sinai(treasure_seats)); 4:34's trials, 4:37's "because He loved your fathers" and 4:35/39's "He is God" are
+obey_horeb.the_one_god (because_he_loved_your_fathers, to_dispossess_nations, you_were_shown); 1:28's fear is opening_speech.the_spies_read_back; Baal
+Peor's whoring (Numbers 25:1-3 — the marriage law's exhibit) is balak.peor; Leviticus 11:43's detesting verb is shemini.classify. THE EFFECTS ALREADY IN
+THE REGISTRY for the chapter's matter: covenant_barred (a BLOCK "on the people entering the land" — ordinances' case kind entered_the_land, Exodus
+23:32-33), intermarriage_barred (a BLOCK "at the border" — erection's case kind daughters_taken, 34:16), nations_driven_out (a TRANSFER — 34:11),
+treasured_people (a conditional HEAVEN entry — 19:5-6), other_gods_barred and coveting_barred (the two words' BLOCKS from 3b), high_places_banned (the
+erection's BLOCK on the land), amalek_to_be_blotted (17:14), cherem_vowed (Hormah), destroyed (the sacrificer's ban); the case kinds daughters_taken,
+sacrifice_of_inhabitant_eaten, entered_the_land, dispossession_case. THE ONE DATABASE READ (run_ledger): on the running world covenant_barred is ABSENT
+(its case kind entered_the_land is Joshua's — never fired), intermarriage_barred ABSENT (the exam's case only), nations_driven_out ABSENT;
+treasured_people PRESENT on Israel (a heaven entry, open), other_gods_barred and coveting_barred PRESENT (3b's lines), shema_commanded PRESENT (4b's),
+high_places_banned PRESENT on the land; the journeys' dispossession debits FOUND on the world — commanded on israel_people valued ['destroy_their_images', 'dispossess_the_inhabitants_and_possess_the_land'], OPEN (Num 33:50-56). THE TAPE'S LINES THE CHAPTER RETELLS (every one FOUND by the recon's section 5): the ten
+plague_struck lines with their closes (Exodus 7:20 to 12:29), sent_out, brought_out (12:51), sea_split, saved_at_the_sea, believed (14:21-31),
+healer_promised (15:26), blotting_sworn (17:14-16 — Amalek; the phrase "from under heaven"), covenant_offered (19:5-6 — the treasure, the holy nation),
+the oath's three lines (sworn_by_himself 22:16-18, oath_upheld 26:3-5, visitation_promised 50:24), covenant_cut_at_sinai (34:10 — the renewed covenant's
+head), the Shittim lines (25:1-3 — the whoring after the daughters of Moab, the yoke to Baal Peor), dispossession_commanded (33:50-56), and the tape's own
+DEVOTINGS — sihons_cities_devoted and ogs_cities_devoted (2:34, 3:6 — Israel's ban executed on the east before the ban's spec for the west), Hormah's
+cherem_vowed (21:2-3). NO LINE OF THE CHAPTER'S OWN LAW IS ON THE TAPE: the cherem on the seven nations, "show them no favor", "your eye shall not
+pity", the abomination into the house and the devoted thing have NO CELL anywhere (the recon's regex per def over all sixty-one runners: "favor" only
+the loan's "gracious" and holiness' mrow; "pity" nowhere; "abomination" the shepherds' and Leviticus 18's land; "cherem/devoted" the vow's, the
+sacrificer's, the temurah's devotings, Hormah's, Sihon's and Og's — none the seven nations' spec) — THE CODE'S FOUR HOLES, compiled here at the chapter's
+own day. THE CHECKPOINT PREFIX measured FREE: CQ (CQ, CU free; neither a label elsewhere). THE GLOBAL COUNTS grepped before the tape run: markers 167
+(F 129, R 23, P 15) UNMOVED — no marker this chapter; closes 127 UNMOVED — no close (the ban's debit OPEN to Joshua); entities 319 UNMOVED (Israel the
+written-on party; the seven nations a counterparty string — no registry row for the-nations, the-hittite … the-jebusite; the-amorite alone has an entity,
+Sihon's, untouched); daemons 66 → 67 (I5 66 → 67); kinds 1125 → 1129 (three tape kinds, one case kind), effects 1025 → 1029 (four new); CENSUS on tape
+1304 → 1307, kinds 849 → 852; PLACEMENT events page_order 1140 → 1143 (the lines on the counter's day, no marker), markers unmoved; the positions table
+235 → 244 checkpoints. THE REGISTER GATE: no receipt form in the chapter ("swore to your fathers" 7:8, 12, 13 are RUN_CITATION pointers, not receipts) —
+DECLARED 100 unmoved, no seat.
+THE DOCKET SIZED (ch7_docket_scan.py — the export's chapter 7 the DB's, no division map): 52 LINK rows in 19 works (Avodah Zarah 18, Kiddushin 5, Sotah 4,
+Chullin 3, Mishnah Avodah Zarah 3, Tosefta Avodah Zarah 3, Eruvin 2, Shabbat 2, Temurah 2, Bava Kamma, Bava Metzia, Bekhorot, Berakhot, Makkot,
+Pesachim, Sanhedrin, Tosefta Sotah, Tosefta Zavim, Yevamot one each); the verses cited 2, 3, 4, 5, 7, 9, 10, 11, 13, 14, 15, 16, 20, 25 (ten rows), 26
+(seventeen) — ELEVEN VERSES CITED BY NO ONE (1, 6, 8, 12, 17-19, 21-24: the list, the reason, the fear and the promises — narrative and promise, not
+law); + THE TOPIC RANGES SIZED: Mishnah Avodah Zarah 1:1-4:12 whole (38 rows, 24 CREDITED at the erection docket and the decalogue docket), Mishnah
+Kiddushin 3:12; Avodah Zarah 20a-20b 31 rows, 36b-37a 34, 42a-54b 465 (40 credited, 11 link rows); Kiddushin 68b 10; Yevamot 23a 14; Sotah 35b-36a 27
+(8 credited); Chullin 89a 16 (6 credited); Makkot 22a 16 — THE DESIGN DECLARES: every range whole EXCEPT Avodah Zarah 42a-54b, of which the
+VERSE-ANCHORED amudim are read whole — 42a-42b (41: the mishna on an idol's fragments — 7:25-26's abomination into the house), 44b-46b (70: the
+mountains and hills worshipped, the Asherah, "the graven images of their gods" — 7:5, 7:25; 46a's renaming, the Sifrei 61:7's kin), 47b-48b (53: the
+Asherah's wood and shade; the house adjacent to the idol's — Mishnah 3:6), 49b (21: the Asherah's wood — Makkot 22a's lashes), 51b-52b (66: the money
+and ornaments on the idol — 7:25 read by R. Akiva and R. Yishmael; the nullification 4:4-5), 53b-54b (52: Ahaz's vessels, the exchange's exchange —
+7:26) — 303 rows; the remainder 43a-44a (57 — the heavenly bodies' images, chapter 4's matter), 47a (22 — bestiality, chapter 27's), 49a (19 — orlah,
+Leviticus 19's), 50a-51a (48 — Markulis, the offerings to idols; the erection docket's kin), 53a (16 — partnership) ENUMERATED and marked outside
+declared scope (Step 2's standing rule; the scan's count the enumeration): the docket near 540 rows (52 + 39 + 148 + 303), some 90 credited (89
+addresses found — some in the enumerated part), in FOUR parts A-D, EVERY ROW WHOLE — the four-run rule's docket takes the runs it needs. THE CHAPTER'S
+OWN INK (the reading's 119 asserts, reused in the runner): two number verses (7:1 [7] with the seven gentilic tokens as its witness — the Bible's three
+seven-name lists and eleven six-name lists carry no numeral; 7:9 [1000] against the ten words' bare "to thousands"), no gap; the oath's noun starred;
+no divine frame, no "saying", two narrative verbs (7:7 "and He chose", 7:8 "and He redeemed you"), five infinitive absolutes, sixteen prohibitions
+(eleven second person, five third), plural at 7:5 and 7:7 only; the written/read pair at 7:9 (the store's extra token — kept out of every check); the
+phrase censuses (the design of sitting 5): "seven nations" one seat, "you shall not covet" 7:25 and Exodus 20:17, "little by little" 7:22 and Exodus
+23:30, the hornet's three seats, "no man shall stand before you" 7:24 and Joshua 1:5, "an abomination to the LORD your God" the book's five.
+
+THE NAME: cold_run_seven_nations.py — the 62nd runner ("seven nations", 7:1); law_seven_nations the 67th daemon (given_at Deut 7:1 — the ban's first and
+only giving, the chapter's own line; installed_by boot — the three Deuteronomy daemons' form); the span [[Deut, 7, 1, 26]]; the checkpoints CQ1-CQ9; the
+unit deu_07_nations_cherem the frozen reading.
+
+THE READBACK ON THIS CHAPTER — THE CODE RE-DECLARED FOR THE LAND (the laws' form (L1)-(L6) of 3b, run for the first time on a chapter that re-says
+ANOTHER chapter's law rather than its own copy: the row's first telling is a KIN CELL — Exodus 23's, 34's, Numbers 33's, the two words' — or a tape line;
+the retelling's rows are REFERENCE ROWS graded against the cell's verdict by CALL or the tape's entry by kind and verse, never a second write; what has
+no first telling is THE CODE'S HOLE, compiled here). THE ROWS (twenty-one predicted; the grades' census typed from the runner's print at run 3): 7:1 the
+seven-name list — against ordinances.land's 23:23 and erection.covenant's 34:11 (six names each): EXPANDED (the Girgashite; the count); 7:1 "clears
+away" — against journeys.the_command's 33:52 "you shall drive out": VARIANT (the verb); 7:2 "you shall make no covenant with them" — against 23:32
+(ordinances.land no_covenant; 34:12, 15 "lest"): VERBATIM in kind; 7:3 no intermarriage BOTH WAYS — against 34:16 (erection.covenant daughters_two_seats
+— one direction): EXPANDED; 7:4 the reason (he will turn your son) — against 34:16's "whore after their gods … make your sons whore": VARIANT (the
+tape's Shittim lines the exhibit — a DATA note); 7:5 the four objects — against 34:13's three (cut_four) and 33:52's three (three_objects_own): EXPANDED
+(the images burned); 7:6 holy people, chosen, treasure — against covenant_offered (19:5-6, the tape's line; exodus_story.sinai treasure_seats) and
+4:37's "chose" (obey_horeb): EXPANDED; 7:8 the oath, "brought you out with a strong hand", "redeemed you" — against brought_out (12:51) and the oath's
+three lines: EXPANDED (as 6:21-23); 7:9 "to a thousand generations, those who love Him" — against the second word's clause (5:10 / Exodus 20:6;
+covenant_at_horeb.the_second_word the_visiting): VARIANT ([1000] for the bare plural; the third person for the first); 7:10 the hater repaid to his own
+face — against 5:9 / 34:7 "visiting the fathers' iniquity on the sons": TURNED (the recipient; Onkelos's doctrine a DATA note); 7:11 the triad — against
+stand_here_commanded (5:31) and 6:1 (hear_o_israel.the_header the_triad): VERBATIM in kind; 7:12 "because you hear … He will keep the covenant" —
+against covenant_offered's condition (19:5 "if you will hear My voice and keep My covenant"): VARIANT; 7:13-15 the blessing's list, no barrenness, the
+sickness removed — against 23:25-26 (ordinances.land bread_water, no_barren): EXPANDED (the fruit, the grain, the increase and the young); 7:14 "there
+shall not be a barren" — against 23:26: VERBATIM in kind; 7:15 the diseases of Egypt not put on you but on those who hate you — against healer_promised
+(15:26): TURNED (the diseases redirected); 7:16 not serve their gods, a snare — against 23:33 (ordinances.land not_dwell): VARIANT; 7:18-19 what He did
+to Pharaoh, the trials, the signs and wonders, the hand and the arm — against the ten plague_struck lines, sea_split, saved_at_the_sea (and 4:34's list,
+obey_horeb): SHORTENED; 7:20 the hornet — against 23:28 (ordinances.land hornet): EXPANDED ("those who remain and hide"); 7:22 little by little, the
+beasts of the field — against 23:29-30 (little_by_little): VERBATIM in kind; 7:23-24 the confusion, the kings, the name from under heaven, no man shall
+stand — against 23:27 ("My terror … confusion") and 23:31 ("the inhabitants into your hand"): EXPANDED (the kings; the name — blotting_sworn's phrase);
+7:25 "you shall not covet" the idols' silver and gold — against the tenth word (covenant_at_horeb.the_tenth_word covet_and_desire): TURNED (the object
+— the neighbor's house to the idols' silver and gold). THE CENSUS PREDICTED: VERBATIM 4 / VARIANT 5 / EXPANDED 8 / TURNED 3 / SHORTENED 1 — twenty-one
+rows; no row OPEN. THE CODE'S FOUR HOLES (no first telling in any cell): THE BAN on the seven nations (7:2 "you shall utterly destroy them" — Exodus 23
+says cut off and drive out, Numbers 33 dispossess; the tape's own devotings of Sihon and Og and Hormah's vow are RUNS before the spec; 20:16-18's cell
+OWED forward), NO FAVOR (7:2 — Avodah Zarah 20a's three readings), NO PITY (7:16 — the book's five seats, this the first), THE ABOMINATION INTO THE
+HOUSE AND THE DEVOTED THING (7:25-26 — Mishnah Avodah Zarah 1:8-9, 3:6; Makkot 22a; Avodah Zarah 54b) — compiled here, their writes at the chapter's
+own day. THE INSTALL HYPOTHESIS (on the table) is TESTED IN PASSING and not ruled: the seventh exhibit's rows are graded here as the laws' readback —
+the code re-declared with the target's names — and nothing of the engine changes for the hypothesis.
+
+THE DESIGN'S DECISIONS (the box's (a)-(p) settled on the measurements):
+(a) THE BAN — F1's the_ban: the code's hole — the WRITE commanded valued devote_the_seven_nations, a DEBIT on Israel OPEN to Joshua (the run), at the
+chapter's first line nations_devoted (7:1-5); the dispossession's two debits (journeys.the_command('drive_out') by CALL — dispossess_the_inhabitants_and_possess_the_land, destroy_their_images, both OPEN on the world) REFERENCED, not doubled; 20:16-18's
+cell declared OWED FORWARD in the dispositions (the war chapter's runner) — the Sifrei's war sections unread; the tape's prior devotings (Sihon, Og,
+Hormah) named in the cell's DATA row the_devotings as RUNS before the spec (the tent's reverse flow noted, not claimed).
+(b) NO COVENANT AND NO FAVOR — F1's no_covenant: ordinances.land('no_covenant') by CALL (23:32) and erection.covenant('no_covenant_by_call') by CALL
+(34:12, 15); the WRITE covenant_barred on Israel at nations_devoted — THE EFFECT'S FIRST TAPE WRITE (its case kind entered_the_land is Joshua's; the
+Moab giving stands from here; when the entry fires at the run, the ordinances' daemon writes it again on its own case — a second write on a second act,
+not a doubled law); F1's no_favor: the code's hole — the WRITE favor_barred (a BLOCK, NEW) with Avodah Zarah 20a's three readings as the exam's rows
+(no settlement, no gift, no praise).
+(c) NO MARRIAGE, BOTH DIRECTIONS — F1's no_marriage: erection.covenant('daughters_two_seats', 'intermarriage_channels', 'child_follows_mother') by
+CALL (34:16 one direction; Kiddushin 68b's rule already in that cell); the WRITE intermarriage_barred on Israel at nations_devoted, valued both
+directions — THE EFFECT'S FIRST TAPE WRITE (the exam's case daughters_taken until now); Mishnah Kiddushin 3:12, Yevamot 23a, Avodah Zarah 36b the
+exam's rows; 7:4's reason a VARIANT row with the Shittim lines as the tape's exhibit (balak.peor by CALL for the DATA).
+(d) THE ALTARS, THE PILLARS, THE ASHERIM, THE IMAGES — F1's the_four_objects: erection.covenant('cut_four', 'pillars_exod') and journeys.the_command
+('figured_stones', 'molten_images', 'high_places') by CALL; the demolition a REFERENCE row against journeys' OPEN debit destroy_their_images (33:52's three objects — no second debit, R1; the ban's debit
+values the devoting alone); 12:3's fuller form forward; the Sifrei 61:7's renaming for the worse a DATA row the_renaming (Avodah Zarah 46a the
+exam's row); Mishnah Avodah Zarah 3:5-10 CREDITED (the erection docket).
+(e) THE CHOSEN PEOPLE — F2 the_holy_people: exodus_story.sinai('treasure_seats') by CALL (19:5-6; treasured_people on the world a heaven entry — CQ5
+unmoved), obey_horeb.the_one_god('because_he_loved_your_fathers') by CALL (4:37); Chullin 89a's "not because you were more" the exam's row; no write
+(the readback's rows 7:6, 7:8).
+(f) THE FAITHFUL GOD AND THE HATER REPAID — F3 the_faithful_god: covenant_at_horeb.the_second_word('the_visiting') by CALL ("to thousands", "those who
+hate Me" — 5:9-10); the rows 7:9 VARIANT, 7:10 TURNED; Onkelos's doctrine of the wicked paid in this world a DATA row the_supplied_doctrine (Eruvin
+22a's reading the exam's row); Shabbat 10b's "the faithful God" in the bathroom the exam's row; the triad 7:11 by CALL to hear_o_israel.the_header
+('the_triad'); the written/read pair at 7:9 a DATA row the_written_read_pair; no write.
+(g) "BECAUSE YOU HEAR" AND THE BLESSINGS — F4 because_you_hear: the WRITE blessing_promised — a conditional HEAVEN entry on Israel (NEW; the form of
+treasured_people) at the chapter's second line hearing_blessed (7:12-16); the conjunction "because" (the heel) a DATA row the_heel (the five seats);
+ordinances.land('bread_water', 'no_barren') by CALL (23:25-26); exodus_story.marah('healer_condition') by CALL (15:26 — the row 7:15 TURNED); 28:4, 11,
+18, 51, 60 forward (the blessings and the curses); Bekhorot 44b, Bava Metzia 107b, Berakhot 51b, Chullin 84b the exam's rows.
+(h) NO PITY AND NO SERVING — F4's consume_no_pity: the code's hole — the WRITE pity_barred (a BLOCK, NEW) at hearing_blessed ("your eye shall not pity"
+the book's five seats, 13:9, 19:13, 19:21, 25:12 forward); F4's no_serving_snare: covenant_at_horeb.the_second_word('no_other_gods') by CALL
+(other_gods_barred stands — CQ5) and ordinances.land('not_dwell') by CALL (23:33's snare); Bava Kamma 113b's "consume" the exam's row.
+(i) DO NOT FEAR — F5 do_not_fear: NO LINE, NO WRITE — 7:17-24 is promise and exhortation whose law seat is the war chapter's (20:1-4, 20:8 — the
+officers' proclamation), declared OWED FORWARD; the cell's asks by CALL: opening_speech.the_spies_read_back (1:28's fear), exodus_story.plagues,
+sea, trials('ten_list', 'count_by_exodus'), obey_horeb.the_one_god('you_were_shown') (4:34), ordinances.land('hornet', 'little_by_little')
+(23:28-30), hear_o_israel.the_gift_and_the_warning('the_jealous_god') (6:15's Shekhinah pair), exodus_story.amalek('blotting') (17:14's phrase); the
+rows 7:18-19 SHORTENED, 7:20 EXPANDED, 7:22 VERBATIM, 7:23-24 EXPANDED; Sotah 36a's hornet at the Jordan the exam's row (Joshua 24:12 the receipt, forward).
+(j) LITTLE BY LITTLE — inside (i): ordinances.land('little_by_little') by CALL; the beasts of the field the reason kept whole; a RUN_CITATION pointer
+at Deut 7:22 (the promise's seat 23:29-30, a law speech — the pointer names the cell, not a tape line).
+(k) THE KINGS AND THE NAME — inside (i): the phrase "from under heaven" blotting_sworn's (17:14 — exodus_story.amalek by CALL); 25:19 forward; Joshua
+1:5's "no man shall stand" the receipt, forward — a DATA row the_name_from_under_heaven.
+(l) THE IDOLS' SILVER AND GOLD — F6 the_images_and_the_devoted: covenant_at_horeb.the_tenth_word('covet_and_desire') by CALL (coveting_barred stands —
+CQ7; the row 7:25 TURNED); Mishnah Avodah Zarah 3:5 CREDITED, 4:4-5 the nullification; Avodah Zarah 51b-52b the exam's rows (R. Akiva / R. Yishmael on
+"the graven images of their gods"); Achan's Joshua 7:21 the run's case, forward; no second write for the coveting.
+(m) THE ABOMINATION INTO THE HOUSE AND THE DEVOTED THING — F6's into_your_house: the code's hole — the WRITE house_abomination_barred (a BLOCK, NEW) at
+the chapter's third line abomination_barred (7:25-26); Mishnah Avodah Zarah 1:8-9 (the renting), 3:6 (the wall), Avodah Zarah 21a, 42a-42b, 54b (the
+exchange's exchange), Kiddushin 58a, Temurah 30b, Chullin 140a, Makkot 22a and Pesachim 48a (the Asherah's wood flogged) the exam's rows; the devoted
+thing's lemma against the ban's (7:2) a DATA row the_two_lemmas; shemini.classify by CALL for Leviticus 11:43's detesting verb (Avodah Zarah 47b and
+Tosefta Zavim 5:6 — "idol worship is like a creeping thing" — the exam's rows).
+(n) THE RUN CITATIONS — RUN_CITATION pointers: Deut 7:6 (covenant_offered 19:5-6), 7:8 / 7:12 / 7:13 (the oath's three lines — 6:10's form), 7:18 (the
+plagues), 7:19 (the sea; 4:34's list), 7:22 (the promise's cell); every demand the census makes past the imports read on the DB and declared, never a
+blanket row (4b's lesson: the design's pointer list is a prediction — the census decides).
+(o) THE DOCKET by the union rule — the scan's 52 link rows + the Mishnah rows (39) + the ranges declared above (near 540 rows, some 90 credited) in
+FOUR parts A-D — LAW / DERIVATION / DISPUTE / CONTEXT / OUTSIDE, EVERY ROW WHOLE; the crowns expected: "show them no favor" read three ways (20a); the
+gentile's betrothal ineffective and the child follows the mother (Kiddushin 68b; 36b's decree); the Asherah defined — its shade, its wood, its trunk
+(45b-48b), the renaming for the worse (46a — the Sifrei 61:7's kin); the money and ornaments on the idol, "the graven images of THEIR GODS" (51b-52b),
+the nullification by a gentile (4:4-5); the exchange's exchange (54b); the house adjacent and the renting (Mishnah 1:8-9, 3:6; 21a); the Asherah's
+wood flogged (Makkot 22a; Pesachim 48a); "not because you were more" (Chullin 89a); the hornet at the Jordan (Sotah 36a); arrogance as idolatry
+(Sotah 4b-5a on 7:26 and 7:5); "today to do them, tomorrow to receive" (Avodah Zarah 3a, 4b; Eruvin 22a); the hater repaid (Eruvin 22a); the barren
+and the sickness (Bekhorot 44b; Bava Metzia 107b); Daniel and the images (Sanhedrin 93a); stealing from a gentile (Bava Kamma 113b).
+(p) THE FLOCK'S "YOUNG" TAGGED A NAME — a DATA row the_morph_tag (the four seats); no cell, no edge, the parser unaffected.
+
+THE CELLS (six, each returning out(verdict, effects); the INK block exec'd from the sequence file; the token probes zero-report; every seat list typed
+from the reading's print and the recon): F1 the_seven_nations (7:1-5 — asks: the_seven (the count and its witness; the three seven-name lists, the
+eleven six-name; the Girgashite), the_ban (a), no_covenant (b), no_favor (b — the hole), no_marriage (c), the_four_objects (d); the writes commanded
+valued devote_the_seven_nations, covenant_barred, favor_barred, intermarriage_barred); F2 the_holy_people (7:6-8 — asks: holy_people (14:2, 26:19;
+19:6 by CALL), chose_you (4:37 by CALL), the_fewest (Chullin 89a — DATA), the_oath (the three lines by CALL — mamre, joseph, opening_speech; the
+noun starred), brought_out_redeemed (the row 7:8)); F3 the_faithful_god (7:9-11 — asks: he_is_god (4:35, 39 by CALL), the_faithful (the one seat;
+Shabbat 10b), thousand_generations (f — the row 7:9), the_hater_repaid (f — the row 7:10), the_triad (7:11 by CALL), the_written_read_pair (DATA)); F4
+because_you_hear (7:12-16 — asks: the_heel (g — DATA), covenant_kept (g — the write blessing_promised), the_blessing_list (g), no_barren (23:26 by
+CALL — the row 7:14), the_diseases (15:26 by CALL — the row 7:15), consume_no_pity (h — the write pity_barred), no_serving_snare (h)); F5 do_not_fear
+(7:17-24 — asks: the_doubt (1:28 by CALL), remember_pharaoh (the rows 7:18-19), the_trials (4:34 by CALL), the_hornet (23:28 by CALL — the row 7:20),
+in_your_midst (6:15 by CALL), little_by_little (j — the row 7:22), the_kings_and_the_name (k — the row 7:23-24); no write); F6 the_images_and_the_devoted
+(7:25-26 — asks: burn_the_images (7:5's clause; 12:3 forward), not_covet_silver_gold (l — the row 7:25), lest_snared (23:33 by CALL — DATA),
+abomination_to_the_lord (the book's eight seats — DATA), into_your_house (m — the write house_abomination_barred), devoted_like_it (m — the two
+lemmas), utterly_detest (m — Leviticus 11:43 by CALL)). The readback table the_readback (the twenty-one rows and the four holes).
+
+THE DATA ROWS (sixteen): the_readback, the_devotings (a — Sihon, Og, Hormah on the tape), the_three_readings_of_favor (b — 20a), the_shittim_exhibit (c —
+the tape's 25:1-3 lines), the_renaming (d — 61:7; 46a), the_fewest (e — 89a), the_supplied_doctrine (f — Onkelos 7:10), the_written_read_pair (f), the_heel
+(g — the five seats), the_blessing_list (g — 28's seats forward), the_name_from_under_heaven (k), the_two_lemmas (m — the ban's and the devoted thing's),
+the_abomination_seats (the book's thirteen; the eight "to the LORD"), the_morph_tag (p), the_eleven_uncited (the scan's verses cited by no one), the_credits
+(the erection docket's Mishnah Avodah Zarah rows — the addresses).
+
+THE DAEMON law_seven_nations (given_at Deut 7:1; installed_by boot): watches nations_devoted → [commanded, covenant_barred, favor_barred,
+intermarriage_barred]; hearing_blessed → [blessing_promised, pity_barred]; abomination_barred → [house_abomination_barred]; seven_nations_case →
+[accepted, exempt, lashes]. No timer; literal W dicts per kind; the case kind dispatching to the cells by name in EXPLICIT branches.
+
+THE TYPES (add_types_ch7.py from add_types_ch6.py): THREE tape kinds — nations_devoted (statute by form, 7:1-5; the seven names in the row; the
+witnesses the verses), hearing_blessed (statute by form, 7:12-16; the blessing's condition and the two prohibitions), abomination_barred (statute by
+form, 7:25-26) — ONE case kind (seven_nations_case); FOUR new effects — favor_barred (block on Israel; 7:2), pity_barred (block on Israel; 7:16),
+blessing_promised (heaven on Israel, conditional; 7:12-15), house_abomination_barred (block on Israel; 7:26); the effects reused — commanded (the
+ban's debit, valued devote_the_seven_nations), covenant_barred (23:32's, its first tape write), intermarriage_barred (34:16's, its first tape write),
+accepted, exempt, lashes; NO registry row (Israel the written-on party; the seven nations a counterparty string); the daemon block; the functions block
+seven_nations (the six cells WRAPPED); the span [[Deut, 7, 1, 26]]; the CALL edges by the ink — ordinances (the angel's clauses), erection (the renewed
+covenant; the exam's credits), journeys (the dispossession; the three objects), covenant_at_horeb (the second word's visiting, the tenth word's
+coveting, the charge's line for the triad), decalogue (20:5-6, 20:17 the first copies), exodus_story (the plagues, the sea, the healer, the trials, the
+treasure, Amalek's phrase), obey_horeb (4:34-39), hear_o_israel (6:1's triad, 6:15's pair), opening_speech (1:28; 1:8's oath seats; the east's
+devotings), mamre and joseph (the oath's lines), balak (the Shittim exhibit — DATA), shemini (Leviticus 11:43's verb); the pointers RUN_CITATION of (n);
+every demand the census makes past the imports read on the DB and declared; I5 66 → 67.
+
+THE TAPE (three lines, NO marker): under "# ---- Deut 7 ----" after the tape's last Deuteronomy 6 line: nations_devoted (7:1-5), hearing_blessed
+(7:12-16), abomination_barred (7:25-26), all on the counter's own day (40, 11, 1), page_order. The markers 167 UNMOVED; the closes 127 UNMOVED (the
+ban's debit OPEN); the counter ends at (40, 11, 1) UNMOVED.
+
+THE CHECKPOINTS CQ1-CQ9 (the prefix measured free):
+CQ1 THE LINES — three events of the sitting's kinds on the tape in the ink's order, all AFTER the tape's last Deuteronomy 6 line, all on the counter's day
+(40, 11, 1), NO marker added (markers 167); the counter ends at (40, 11, 1).
+CQ2 THE BAN — commanded on israel_people valued devote_the_seven_nations ONE, OPEN, source beginning "Deut 7:1"; law_seven_nations registered, given_at
+Deut 7:1, installed_by boot; the functions block's six cells WRAPPED.
+CQ3 THE BORDER BLOCKS — covenant_barred on israel_people ONE (its first tape write; the case kind entered_the_land ABSENT from the tape), favor_barred
+ONE, intermarriage_barred ONE valued both directions — sources beginning "Deut 7:2" / "Deut 7:2" / "Deut 7:3".
+CQ4 THE READBACK ON THE KIN — the_readback's rows twenty-one, every row's entry FOUND: the tape lines by kind and first verse (covenant_offered at Exod
+19:4, brought_out at Exod 12:51, plague_struck ten by value, sea_split at Exod 14:21, healer_promised at Exod 15:26, sworn_by_himself at Gen 22:16,
+oath_upheld at Gen 26:3, visitation_promised at Gen 50:24, stand_here_commanded at Deut 5:28, ten_words_declared at Deut 4:10) and the kin's cells by
+CALL (ordinances.land, erection.covenant, journeys.the_command, covenant_at_horeb.the_second_word and the_tenth_word — each returning its verdict on its
+own ask); the grades' census typed from the runner's print (VERBATIM 4, VARIANT 5, EXPANDED 8, TURNED 3, SHORTENED 1 predicted); no row OPEN; the four
+holes named.
+CQ5 THE KIN STANDS — other_gods_barred on israel_people ONE UNMOVED, coveting_barred ONE UNMOVED (the cells CALLED, no second write), treasured_people
+ONE UNMOVED (a heaven entry, open), high_places_banned UNMOVED, the dispossession's two debits (dispossess_the_inhabitants_and_possess_the_land, destroy_their_images) OPEN UNMOVED.
+CQ6 THE BLESSING AND THE PITY — blessing_promised on israel_people ONE (heaven, open), pity_barred ONE (a block), sources beginning "Deut 7:12" and
+"Deut 7:16".
+CQ7 THE ABOMINATION — house_abomination_barred on israel_people ONE (a block), source beginning "Deut 7:25"; coveting_barred UNMOVED (the object's turn a
+readback row, not a second write).
+CQ8 THE EXODUS READ BACK — the ten plague_struck lines and their closes UNMOVED; brought_out ONE; sea_split ONE; healer_promised ONE; the Shittim
+lines UNMOVED; nothing written on Egypt, Pharaoh, Amalek or the seven nations (no entity for the seven; the-amorite untouched).
+CQ9 THE REST — entities 319 UNMOVED, closes 127, markers 167, the population table 148 UNMOVED, the three kinds present; the other counts 4b's exactly
+with the three lines and the daemon's seven writes dropped (THE REST test — NO declared delta this sitting: the daemon writes only on its own lines).
+NO retype of the older REST literals (closes and markers unmoved — checked by grep before the tape); every miss shown at once by checkpoint_check.py
+--all AFTER the tape (4b's lesson: the tape first when the tape grows).
+
+THE PREDICTION'S ARITHMETIC: RUN = (1307, 96, 88, 0, 12, 1602, 38, 319, the four pairs, 127) — events +3 (the three lines), timers set +0, fired +0 (no
+clock walk), cancels 0, retro-writes 12 UNMOVED, writes +7 (the daemon's watches summed: four at the first line, two at the second, one at the third),
+daemons fired +1 (law_seven_nations), entities +0, closes +0; PREVIOUS_RUN = 4b's RUN EXACTLY (1304, 96, 88, 0, 12, 1595, 37, 319, the four pairs, 127):
+THE REST drops the three lines by the runner's tag and the span and the daemon's seven writes with them — no delta; NEWEST_RUNNER 'seven_nations';
+PLACEMENT markers UNMOVED ({'text_constrained': 106, 'reading_placed': 46}), events page_order 1140 → 1143 (text_constrained 109, reading_placed 55
+unmoved) — read at the stitcher's print; CENSUS typed from the stitcher's print (on tape 1304 → 1307, history +3, kinds 849 → 852 — the three tape
+kinds, subjects 272 UNMOVED, markers 167 (F 129, R 23), closes 71 unmoved; the case rows the exam's persons); the population table 148 UNMOVED; the
+scene's tuple PREDICTED BY SCRIPT at the runner step (the exam's persons through seven_nations_case — each written once; no timer; no close); the
+narrative's (on its own world: 7 writes, 0 closes, the entities israel = 1, the counter's day (11, 1), 0 dated lines, no row).
+
+THE PROBES (RUN 2's first step): readback_probes.py Q16-Q18 written to FAIL before the runner exists — Q16 the runner and its the_readback table
+(twenty-one rows; the census VERBATIM 4 / VARIANT 5 / EXPANDED 8 / TURNED 3 / SHORTENED 1; every row's entry found — the tape lines by kind and verse,
+the kin's cells by CALL; the four holes named), Q17 the three lines on the counter's day with NO marker (markers 167 after the run) and the seven
+writes on Israel with their sources (the ban's debit OPEN; the three border blocks; the blessing's heaven entry; the pity's block; the abomination's
+block), Q18 the kin stands — other_gods_barred, coveting_barred, treasured_people, high_places_banned and the dispossession's debit UNMOVED, no second
+write for the coveting or the other gods; Q13-Q15 unchanged; NO parser rule this sitting (the two number verses read right at the reading —
+census_probes unmoved at 224); the register gate unchanged; checkpoint_probes' verse computed (2b's form).
+
+THE ORDER: this design → the state doc's checkpoint (#194 addendum 4 — RUN 1 closed) → RUN 2: the probes to FAIL (Q16-Q18 0/3) → THE DOCKET by the
+union rule (the scan rerun with the Avodah Zarah amudim named — 42a-42b, 44b-46b, 47b-48b, 49b, 51b-52b, 53b-54b — and the rest of 42a-54b dropped to
+the enumeration, the dump; the rows read WHOLE in four parts A-D on 4b's whole-row instruments (ch6_docket_A-D.py with their WHOLE overlays the forms:
+the address, the kind, the row entire); the verdicts LAW / DERIVATION / DISPUTE / CONTEXT / OUTSIDE with the crowns the design expects; the writer
+write_ch7_docket.py from write_ch6_docket.py by sed with the coverage computed and the cite index) → the checkpoint (#194 addendum 5) → RUN 3: the
+types by script (add_types_ch7.py) → the recorder and the stitcher (the scratch copies: SPAN_ORDER + 'seven_nations'; no marker row) → the gates to
+FAIL (daemon, dependency) → the runner (ch7_part1-4.py assembled by cat; the fast checker over parts 1 and 2; the honest-pairing guard; zero-report
+probes; the scene and the narrative predicted by script; CASES generated from the cells' asks) → the recorder → the stitcher → the literals CQ1-CQ9
+(patch_seq_literals_ch7.py) → the tape run (10/10 with THE REST) → `checkpoint_check.py --all` AFTER the tape → the checkpoint (#194 addendum 6) →
+RUN 4: `gates_chain.sh` in the background (one summary: the probe gates incl. readback Q16-Q18 to 18/18, the daemon and dependency gates, build_world,
+the journal gate, THE REGISTER GATE --strict unmoved, the positions table 235 → 244, checkpoint_probes, the sweep 62 runners, the journal gate again) →
+the records from the sheet in one call (this section's AS BUILT, COMPILE_DEBT's sitting-5 box PAID + the 5b box with the war chapter's cells owed
+forward, MOVE_CATALOG (checked), MIDDOT's docket entries, MISHNAH_TOPICS (Avodah Zarah 1-4; Kiddushin 3:12), RESEARCH_LOG, THE_STEPS, THE_BRIEFING,
+THE_LOOP.md's step 6 row (the laws' form on the kin), RESUME, memory, the state doc's addendum, the recovery page rewritten, the addenda's section) →
+the forms copied → the commit message for the owner's word.
+
+RUN 2 — AS RUN (2026-09-18, on "Go" after the reread; the compaction point #195 with its addenda 1-3): THE PROBES FIRST — readback_probes.py Q16-Q18 written
+to FAIL before the runner exists, 15/18 (Q16 the runner absent; Q17-Q18 their tuples). THE SCAN RERUN with the six Avodah Zarah amudim named and the
+remainder enumerated (465 whole, 303 read, 162 by amud [('43a', 18), ('43b', 20), ('44a', 19), ('47a', 22), ('49a', 19), ('50a', 12), ('50b', 13), ('51a', 23), ('53a', 16)]); the dump 520 rows (link 52, topic 468, credited 65 — the whole-range scan's 89 had
+counted credits in the enumerated part). THE INSTRUMENTS by sed from 4b's (the ADDRS assert from the dump's header, never typed; N huge prints the row
+whole); the four parts printed WHOLE and every row read whole before its verdict — no cut, no overlay, apply_whole's counts zero (computed). THE VERDICTS
+LAW 145, DERIVATION 34, DISPUTE 110, CONTEXT 156, OUTSIDE 75 in the four parts (A 88, B 169, C 134, D 129); LAW by cell F1 64, F4 1, F5 1, F6 79; OUTSIDE 75 — a declared range's digression on another matter (1b's
+form: Avodah Zarah 49, Makkot 10, Sotah 9, Chullin 4, Yevamot 3). THE DOCKET logic/oral_triage/deu_07_vaetchanan_ekev_exam_2026-09-18.md (230305 bytes; coverage computed, the cite index, lint 0) with its
+fifteen crowns — the design's (o) expected them and the rows gave them: the three readings of favor (20a:1-4); the seven nations only by Torah law and the
+child follows the mother (36b:5; Kiddushin 68b:2-3; Yevamot 23a:11; Mishnah Kiddushin 3:12); THE ASHERAH DEFINED — the shelf reads 7:5 "hew" and 12:3 "burn"
+AS TWO CASES (45b:9); THE ORDER OF THE DEMOLITION (45b:10-12: fell, conquer, eradicate; break and leave; pursue then return to burn) — the demolition's
+reference row against journeys' OPEN debit reads as the shelf reads it; the renaming for the worse (45b:16-46a:3 — the Sifrei 61:7's seat); the altar
+and the platform (53b:18: one stone / many; most destroyed); the nullification from 7:25's word (52a:9-10) and the Joshua-war idols NOT revoked
+(53b:5); "on them" against "with them" (51b:10-11); the abomination into the house (Mishnah 1:9; 47b:4-12 — a house bowed to); the devoted thing and the
+exchange, the Asherah's wood flogged (54b:4-11; Makkot 22a:2-3); which figure (42b:13-14; 44b:1-15); another's property and Ahaz's vessels (54a:9-54b:2);
+"consume" the war's spoil (Bava Kamma 113b:7); the ban's condition and scope and the hornet at the Jordan (Sotah 35b:10-36a:1, 36a:8-10). THREE THINGS
+THE DESIGN DID NOT PREDICT, carried to RUN 3 as DATA rows: (1) THE PITY'S HOLE HAS NO ROW — "your eye shall not pity" (7:16) is cited by no link row on the
+shelf; the write pity_barred stands on the ink alone, its exam rows the book's later seats forward (the runner's F4 carries the note); (2) the shelf's
+THEORY OF THE DEMOLITION COMMAND (53b:7-11 — the Land already Israel's from the fathers, so the gentiles could not forbid its trees except as Israel's
+agents after the calf: the Asherim a Jew's idols, irrevocable, hence burned) — the_calfs_agency beside the_devotings in F1; (3) THE BAN'S CONDITION on
+the shelf (35b:10: R. Shimon's "lest they teach you" written below the plaster — the inhabitants who repent accepted; 35b:13, 36a:1: the Canaanite
+outside the Land not devoted) — the_bans_condition in F1 the_ban, with 20:16-18's cell OWED FORWARD as designed. NEXT: RUN 3 per THE ORDER above.
+
+
+RUN 3 — AS RUN (2026-09-18, on "keep going" after run 2's close; the compaction point #195 with its addenda 4-6): THE TYPES BY SCRIPT (add_types_ch7.py from
+add_types_ch6.py): kinds 1125 -> 1129, effects 1025 -> 1029 — with ONE COLLISION the design did not see: blessing_promised was already Abram's ladder
+entry (Genesis 12:2-3; 26:24) — the first run added three of four, and the chapter's conditional heaven entry is named blessings_for_hearing (the
+registry decides; the daemon watch, the kind's text, the runner and the probe Q17 carry the name); daemons 66 -> 67; the span and thirteen CALL edges; I5
+67. THE CALLEES' FACTS PRINTED BEFORE ANY ASSERT (ch7_callees.py — the asks' signatures: ordinances.land and erection.covenant take a string and return a
+dict, journeys.the_command and the words take (case, data), shemini.classify a signs dict) and THE TAPE'S FIRST VERSES BY GREP of the runners' submits —
+covenant_offered at Exod 19:5 (the design's CQ4 said 19:4; the case_source is 'Exod 19:5-6': THE CENSUS DECIDES), brought_out 12:51, healer_promised 15:26,
+plague_struck 7:20, stand_here_commanded Deut 5:28. THE RUNNER cold_run_seven_nations.py in four parts (part 1 the header, the guard, the INK block
+exec'd and the reading's DB asserts with the readback's deltas; part 2 the six cells, 51 asks; part 3 the callees' facts asserted from the print, the
+READBACK table — twenty-one rows, six on the tape by kind and first verse, fifteen in the kin's cells by CALL with cell_found asserted at build — the four
+HOLES, nineteen DATA rows (the docket's three among them: the_calfs_agency, the_bans_condition, the_pitys_row), the daemon, LINES, CLOSES, PERSONS
+(fourteen), scene(), narrative(); part 4 the CASES generated from the cells' own asks): the fast checker part1 0 / part2 0 ON THE FIRST PASS (the reading's
+asserts proven once hold), the DELTA assert typed from its print; ONE ASSEMBLY FAULT — the exam asks returned the WRITE effects (favor_barred …) and the
+daemon's case branch maps accepted / exempt / lashes only: the seven exam asks retyped to accepted, the writes on the the_write asks alone (4b's form);
+THE FIRST GRADED RUN 51/51, THE SCENE ((1,)*14, four exempt arms, one lashes, no timer, 14 entities, 0 closes) and THE NARRATIVE (7, 0, 1, (11, 1),
+0, 0, 0, 0) AS PREDICTED. THE RECORDER AND THE STITCHER (seq_record_ch7.py, seq_stitch_ch7.py — 'seven_nations' appended to the order): statute 3, case
+14, register-off 0 — STATUTE BY FORM held; PLACEMENT {'markers': {'text_constrained': 106, 'reading_placed': 46}, 'events': {'text_constrained': 109, 'page_order': 1143, 'reading_placed': 55}} and the CENSUS (2504, 1316, 1307, 1172, 6, 10, 9, 0, 71, 167, 129, 15, 23, 852, 272) AS PREDICTED (on tape 1307, kinds 852, markers 167). THE LITERALS
+(patch_seq_literals_ch7.py — RUN (1307, 96, 88, 0, 12, 1602, 38, 319, the four pairs, 127), PREVIOUS_RUN 4b's exactly, NEWEST_RUNNER 'seven_nations',
+PLACEMENT and CENSUS read, CQ1-CQ9). THE TAPE 9/10 ON ITS FIRST RUN — every CQ MATCH, THE REST reproduced 4b's tuple exactly; THE ONE MISS four older
+checkpoints (CV2, CX2, CW3, CR3) holding the CURRENT COUNT of the commanded entries on israel_people — the ban's DEBIT moves 18 -> 19, the newest
+devote_the_seven_nations, open 7 -> 8: RETYPED FROM THE PRINT with the 5b note (the first retype tripped on an unescaped apostrophe — escaped); THE TAPE
+10/10 ON ITS SECOND RUN. checkpoint_check.py --all AFTER the tape: 244 rows, 18 misses — EXACTLY 4b's eighteen (the tape's known diverges), 0 raised.
+readback_probes.py: readback_probes: 18/18. DEPARTURE FROM THE ORDER: the gates-to-FAIL step (daemon, dependency) was not run separately before the runner; the gates
+run in run 4's chain. THE LESSONS: a registry name the design predicts may already exist — the types script's 'added N' count is the tripwire; a DEBIT
+on Israel moves the older checkpoints' commanded-count literals (3b's closes lesson, now on the debits — a 'no retype' clause covers only what it
+names); the callees' facts print settles the signatures and the first verses before an assert is typed; a probe written before the runner is retyped
+once; A GUARD THAT MATCHES A STRING ANOTHER SITTING ALSO WROTE IS NO GUARD (run 2's map paragraph was skipped by one that matched sitting 5's
+"RUN 2 — AS RUN (2026-09-18" — both paragraphs appended at this close; a guard names the sitting). ALSO AT THIS CLOSE: the other thread had appended a
+"§8 THE OTHER THREAD" to the recovery page (over its 10 KB cap) — folded into one READ ON DEMAND line, the page under the cap again. NEXT: RUN 4 per
+THE ORDER — the gates chain, the records, the forms.
+
+
+## Sitting 5b — THE COMPILE OF CHAPTER 7 — AS BUILT (2026-09-18; the design above stands as written — the four runs ran as designed, the RUN 2 and RUN 3
+## paragraphs their record; every departure from the design named here)
+
+THE RESULT. Deuteronomy 7:1-26 is COMPILED AND ON THE TAPE: World/step9/cold_run_seven_nations.py the 62nd runner (MATRIX 51/51 on its first graded
+run; six cells F1 the_seven_nations, F2 the_holy_people, F3 the_faithful_god, F4 because_you_hear, F5 do_not_fear, F6 the_images_and_the_devoted with
+51 asks; nineteen DATA rows; the readback's twenty-one rows and four holes; fourteen exam persons — four exempt (the praiser who thanks the Creator, the
+one without another way, the Canaanite outside the Land, the finder of the money at the idol's head), one flogged (the Asherah's wood-burner); the scene
+and the narrative tuples matched as predicted by script), law_seven_nations the 67th daemon (given_at Deut 7:1 — the ban's first and only giving;
+installed_by boot; six functions WRAPPED; no timer), four kinds and four effects in the registries (1129 kinds, 1029 effects), THREE LINES AND NO MARKER
+on the tape — nations_devoted (7:1-5), hearing_blessed (7:12-16), abomination_barred (7:25-26) under "# ---- Deut 7 ----" on the counter's own day
+(40, 11, 1). THE CODE'S FOUR HOLES COMPILED: the ban (commanded valued devote_the_seven_nations — a DEBIT on Israel OPEN to Joshua), no favor
+(favor_barred — the three readings), no pity (pity_barred — on the ink alone), the abomination into the house (house_abomination_barred); and TWO OLD
+EFFECTS WRITTEN ON THE TAPE FOR THE FIRST TIME — covenant_barred (Exodus 23:32's; its case kind entered_the_land Joshua's) and intermarriage_barred
+(34:16's, valued both directions); blessings_for_hearing the conditional heaven entry. THE TAPE 10/10 WITH THE REST ON ITS SECOND RUN: RUN (1307, 96,
+88, 0, 12, 1602, 38, 319, the four pairs, 127) exactly as THE PREDICTION'S ARITHMETIC wrote it; PREVIOUS_RUN 4b's RUN EXACTLY — no declared delta;
+NEWEST_RUNNER seven_nations; markers 167 UNMOVED (forward 129, retrograde 23, proleptic 15); entities 319, closes 127, the population table 148
+UNMOVED; PLACEMENT markers {'text_constrained': 106, 'reading_placed': 46}, events {'text_constrained': 109, 'page_order': 1143, 'reading_placed': 55} (page_order 1140 → 1143 — AS PREDICTED); CENSUS (2504, 1316, 1307, 1172, 6, 10, 9, 0, 71, 167, 129, 15, 23,
+852, 272) as the stitcher printed it (on tape 1304 → 1307, kinds 849 → 852, subjects 272 unmoved); CQ1-CQ9 all MATCH; the run 16.4s. THE DOCKET logic/oral_triage/deu_07_vaetchanan_ekev_exam_2026-09-18.md by
+the union rule: 520 rows (link 52 / topic 468; LAW 145, DERIVATION 34, DISPUTE 110, CONTEXT 156, OUTSIDE 75; credited 117; 230,305 bytes), EVERY ROW READ WHOLE FROM THE START — no cut, no overlay (the parts' WHOLE dicts empty, the correction counts zero and computed); Avodah Zarah 42a-54b's six verse-anchored amudim (42a-42b, 44b-46b, 47b-48b, 49b, 51b-52b, 53b-54b — 303 rows) read whole, the
+remainder (162 rows) ENUMERATED outside declared scope; the crowns fifteen in the docket's own list.
+
+THE READBACK ON THE KIN — THE LAWS' FORM RUN ON ANOTHER CHAPTER'S CODE (THE LOOP's step 6; the fourth exhibit of the form): twenty-one reference rows —
+six against the tape's lines found by kind and first verse (covenant_offered at Exodus 19:5 twice, brought_out at 12:51, stand_here_commanded at
+Deuteronomy 5:28, healer_promised at 15:26, the ten plague_struck lines at 7:20), fifteen against the KIN'S CELLS BY CALL (ordinances.land — no_covenant,
+bread_water, no_barren, not_dwell, hornet, little_by_little, borders; erection.covenant — nations_seven_orders, daughters_two_seats,
+child_follows_mother, demolition_grows; journeys.the_command — drive_out, three_objects_own; covenant_at_horeb — the_visiting twice, covet_and_desire),
+each cell's verdict asserted at build (cell_found) — graded VERBATIM 4 / VARIANT 5 / EXPANDED 8 / TURNED 3 / SHORTENED 1 as the design predicted; no
+row OPEN; no second write (R1) — the demolition of 7:5 a reference row against journeys' OPEN debit destroy_their_images. THE INSTALL HYPOTHESIS tested in
+passing and not ruled: the code re-declared with the target's names graded as the laws' readback, nothing of the engine changed.
+
+THE DEPARTURES FROM THE DESIGN, each found by an instrument and each a lesson below: (1) THE EFFECT NAME blessing_promised WAS ALREADY ABRAM'S — the
+ladder's heaven entry (Genesis 12:2-3; 26:24) sat in the registry, so the types script's first run added three of four: the chapter's entry is
+blessings_for_hearing (the daemon watch, the kind's text, the runner and the probe Q17 carry it); (2) covenant_offered's FIRST VERSE IS 19:5, not the
+design's 19:4 (the case_source 'Exod 19:5-6' — read by grep of the runners' submits before the rows were typed); (3) THE EXAM ASKS RETURNED THE WRITE
+EFFECTS at the first assembly (favor_barred and its kin) and the daemon's case branch maps accepted / exempt / lashes only — the seven exam asks retyped
+to accepted, the writes on the the_write asks alone (4b's form); (4) FOUR OLDER CHECKPOINTS DIVERGED ON THE FIRST TAPE RUN — CV2, CX2, CW3, CR3 hold the
+CURRENT COUNT of the commanded entries on israel_people (18, the newest begin_to_possess_sihons_land, open 7) and the ban's DEBIT makes 19 /
+devote_the_seven_nations / 8: retyped from the print with the 5b note (the design's 'no retype' clause named closes and markers only); (5) THE
+GATES-TO-FAIL STEP (daemon, dependency) WAS NOT RUN SEPARATELY before the runner — the runner was built directly and the gates ran in the chain;
+(6) THE MAP'S RUN-2 PARAGRAPH WAS SKIPPED by a guard that tested for 'RUN 2 — AS RUN (2026-09-18' — a string sitting 5's reading paragraph already
+carried — and appended at run 3's close from the writer's print; (7) THE PITY'S HOLE HAS NO ROW ON THE SHELF — the docket's scan cites 7:16 once, for
+'consume' (Bava Kamma 113b): pity_barred stands on the ink alone, its exam rows the book's later seats forward; (8) THE DOCKET'S CREDIT COUNT — the
+whole-range scan's 89 counted credits in the enumerated part; the rerun with the amudim named gives 65; (9) OUTSIDE USED — 75 rows of the declared
+ranges are digressions on another matter (the gazing and the Angel of Death, the permissive court and the bill of divorce, the newborn in the pit, the
+Ark's journeys, the ephod's stones, the plower's lashes list): the honest verdict when a range is read whole (1b's form); (10) THE OTHER THREAD HAD
+APPENDED A §8 TO THE RECOVERY PAGE (over its cap) — folded into one READ ON DEMAND line at run 3's close; (11) THE DEPENDENCY GATE DEMANDED ONE
+EDGE AND NO POINTER — the token census matched 'king' in 7:8's 'Pharaoh KING of Egypt' to the sanctions span's Molech (the same consonants; the lemmas
+4428 and 4432 on the DB): a HOMOGRAPH, dispositioned FALSE with its why (add_pointers_ch7.py); the design's (n) had predicted seven RUN_CITATION
+pointers (7:6, 7:8, 7:12, 7:13, 7:18, 7:19, 7:22) and the census demanded none — the citations ride the CALL edges' whys (4b's lesson held again);
+the chain's first run stopped at that step, the second from it ALL GREEN (the tape's and the probes' prints the first run's).
+
+THE GATES, COMPUTED FROM THEIR PRINTS (one chain, gates_chain.sh — run twice: the first stopped at the dependency gate by the one homograph demand,
+the second from that step ALL GREEN; the tape's and the probes' prints the first run's): the probe suites census 224/224, installation 6/6 (I5 67), readback 18/18 (Q16-Q18 the readback on the kin), register 7/7, clock 22/22, sequence 4/4, view 6/6, population 9/9, journal 7/7, cursor 6/6, large_letter 6/6, checkpoint 7/7; the daemon gate GREEN (67 daemons, 460 functions WRAPPED); the dependency gate GREEN (560 edges and 199 pointers on file — the link census reference 539 / transfer 48 / hypothesis 9 / none 163; required 265 edges and 200 pointers, live import edges 406); build_world ALL GREEN (221 units, standing 2209, hash 8b8fff1fa28953af unmoved — no freeze this sitting); the journal gate GREEN twice — before and after the sweep (12 kinds, 9688 rows in the index); THE REGISTER GATE --strict GREEN (DECLARED 100, DEBT 0, FAILS 0 — no seat in chapter 7: no receipt form in it, as the design measured); the positions table 244 checkpoints over 169 pauses (CQ1-CQ9 in it; checkpoint_probes 7/7 after the rebuild); the sweep 62/62 at 6,669 graded cells; the home-path gate GREEN.
+
+⚠ THE LESSONS OF 5b (eleven): (1) A REGISTRY NAME THE DESIGN PREDICTS MAY ALREADY EXIST — the types script's 'added N of M' count is the tripwire; the
+registry decides the name; (2) THE CENSUS DECIDES THE FIRST VERSE — a tape line's first verse is read from the runner's submit, never from the design's
+memory (19:5, not 19:4); (3) THE EXAM ASKS RETURN VERDICTS, THE WRITE ASKS RETURN WRITES — the daemon's case branch maps the verdict effects only;
+(4) A DEBIT ON ISRAEL MOVES THE OLDER CHECKPOINTS' COMMANDED-COUNT LITERALS (3b's closes lesson, now on the debits): a 'no retype' clause covers only
+what it names; grep the older cp() names for the counts a write moves before the tape; (5) THE CALLEES' FACTS PRINT FIRST — the asks' signatures differ
+by runner (a string and a dict; a case and a tuple; a signs dict): read them before an assert is typed; (6) A PROBE WRITTEN BEFORE THE RUNNER IS RETYPED
+ONCE (Q17's effect name); (7) A GUARD NAMES THE SITTING — a string another sitting also wrote is no guard; (8) A HOLE THE DESIGN PREDICTS MAY HAVE NO ROW
+ON THE SHELF — the write stands on the ink alone and the docket says so; (9) THE WHOLE-RANGE SCAN'S CREDIT COUNT IS NOT THE DOCKET'S — rerun the scan
+with the amudim named before the credits are counted; (10) THE SHELF TEACHES THE REASON AND THE CONDITION of a command the design took as bare — the
+calf's agency behind the demolition (Avodah Zarah 53b:7-11), repentance and the Land's border behind the ban (Sotah 35b:10-36a:1): DATA rows added at
+run 3, the war chapter's cells still owed forward; (11) THE CENSUS READS HOMOGRAPHS AND DECIDES THE POINTERS — 'king' matched Molech, named FALSE
+with its why; the design's seven pointers not demanded: read the gate's print, disposition each demand on the DB, never a blanket row.
+
+THE DISPOSITIONS ADDED: the span seven_nations [[Deut, 7, 1, 26]]; thirteen CALL edges (ordinances, erection, journeys, covenant_at_horeb, decalogue,
+exodus_story, obey_horeb, hear_o_israel, opening_speech, mamre, joseph, balak, shemini) and the registration edge sequence → seven_nations; the
+one FALSE edge the census demanded past the imports (seven_nations → sanctions at 7:8 — 'king' / Molech, the homograph named on the DB) and NO
+pointer (the design's seven RUN_CITATION pointers ride the CALL edges' whys — the dependency gate's print). MOVE_CATALOG CHECKED, unmoved:
+the runner's law cells return the shelf's parameters (the three readings of favor, the marriage bar's scope and the child, the Asherah's definition,
+the nullification, the decorative item, the exchange) and CALL the callees' cells; the shelf's own moves on the chapter (the spelling argument, the reason
+expounded, two verses as one, the doubled verb, the inference barred, the calf's agency) are the docket's and MIDDOT's rows, no new move of the compiler.
+
+THE FORMS: the sitting's scripts and prints copied into World/step9/forms_deuteronomy_walk/ by copy_ch7b_forms.py (the recon, the scan and the dump, the
+docket's four parts with the common helper and the four row prints, the writer, the run-2 close, the design's writer, the types, the callees' print, the
+runner's four parts with the generator, the assembler and the fast checker, the recorder and the stitcher under their sitting's names, the literals'
+patcher, the pointers, the records' writer, the gates chain's folder — no scratch path, no home path, no git root in any copied form).
+
+NEXT on the ruling: the commit on the owner's word (sitting 5, 5b, the tutorial and the design thread's files, since 64a8362); then CHAPTER 8's reading
+(8:1-20 — the manna and the humility, the good land, the forgetting; the reading shape, in four runs, every row whole) — or the Decalogue-schema sitting
+first (ON THE TABLE, not a ruling). Nothing committed: the tree uncommitted since 64a8362, on the owner's word only.

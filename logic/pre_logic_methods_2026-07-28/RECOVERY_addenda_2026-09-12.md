@@ -1010,3 +1010,49 @@ NOT COMMITTED — the tree uncommitted since a7955cc; commit on the owner's word
 
 NEXT ON THE RULING: the commit on the owner's word; then CHAPTER 7's READING (7:1-26 — the seven nations and the ban, the chosen people, the reward; the
 reading shape in four runs, every row whole). ON THE TABLE, NOT A RULING: the Decalogue-schema sitting — on the owner's word.
+
+## 41. ADDENDUM (2026-09-18, THE DEUTERONOMY WALK sitting 5 — CHAPTER 7, Deuteronomy 7:1-26 READ AND FROZEN in four runs, every row whole; the owner: "Go", "go for run 2", "run 3 go", "4 go"; the state doc's #194 and its addenda 1-3)
+THE STATE: chapter 7 read and frozen as one unit (deu_07_nations_cherem, the 221st); the corpus 221 units, standing 2209 (2203 + 6 as predicted), hash
+8b8fff1fa28953af unmoved; the tape UNMOVED since 4b (RUN (1304, 96, 88, 0, 12, 1595, 37, 319, the four pairs, 127), markers 167, closes 127); the
+journal gate GREEN (12 kinds, 9688 rows); the register gate --strict GREEN (DECLARED 100, DEBT 0, FAILS 0); uncommitted since 64a8362.
+WHAT THE SITTING FOUND: the Sifrei SILENT on the chapter (no piska between 36 on 6:9 and 37 on 11:10) — three rows from elsewhere its whole voice, 37:1 the
+translator's interpolation; the kin's spine credited by name with the counts computed; 7:1 COUNTS ITS OWN LIST — the parser's [7] with seven gentilic tokens
+as the witness, SEVEN WHERE EXODUS HAD SIX (the Girgashite); both directions of marriage, four objects, "you shall not covet" on the idols' silver and gold —
+the old code re-said for the new place (THE INSTALL HYPOTHESIS on the table, the map's tail); the oath's noun starred; THE WRITTEN/READ PAIR at 7:9 (the
+store's extra token, 5:10's kin); "to a thousand generations" [1000] against the ten words' bare plural; Onkelos's SUPPLIED DOCTRINE at 7:10; "because" the
+heel at 7:12, the portion's edge inside the chapter; THE FLOCK'S YOUNG TAGGED A NAME in the morph; the hornet's three seats; little by little's two.
+THE FOUR-RUN RULE'S SECOND READING SITTING: the runs' edges held; the reread after the one compaction three files; the forms of run 3 held first time.
+THE FILES CHANGED: logic/oral_triage/deu_07_vaetchanan_ekev_2026-09-17.md (new); logic/units/deu_07_nations_cherem.yaml (draft → frozen, six operators, step E, the
+scenarios in the anchor form) and logic/py_units/deu_07_nations_cherem.py; logic/oral_audit/manifests/deu_07_nations_cherem_claims.json (new); logic/glosses/word_gloss_overrides.yaml
+(+36 by reference, +49 by gloss); logic/corpus/CORPUS_TRUTH.py (221, 2209) and corpus_world.sqlite; the records (the map, COMPILE_DEBT, MIDDOT, RESEARCH_LOG,
+THE_STEPS, THE_BRIEFING, RESUME, the state doc, the recovery page, this file, STAMP_LEDGER, the memory); World/step9/forms_deuteronomy_walk/ (the sitting's
+scripts and prints); ARCHITECTURE/DEUTERONOMY_SO_FAR.md + epub (the tutorial on the owner's word, run 1); the design thread's ARCHITECTURE files (its own).
+NEXT ON THE RULING: the commit; then the compile of chapter 7 (5b) in four runs — or the Decalogue-schema sitting first — on the owner's word.
+
+## 42. ADDENDUM (2026-09-18, THE DEUTERONOMY WALK sitting 5b — THE COMPILE OF CHAPTER 7, Deuteronomy 7:1-26 COMPILED AND ON THE TAPE in four runs; the owner: "Go", "Go", "keep going", "keep going"; the state doc's #195 addendum 9)
+
+THE SITTING RAN IN THE COMPILE SHAPE IN FOUR RUNS (section 5; "Sitting 4b" the form): World/step9/DEUTERONOMY_WALK.md "Sitting 5b" (the design, written
+before any code) and "Sitting 5b — AS BUILT" (the departures and the ten lessons). THE STATE: cold_run_seven_nations.py the 62nd runner (51/51 — six cells,
+nineteen DATA rows, the readback's twenty-one rows and four holes, fourteen exam persons), law_seven_nations the 67th daemon (given_at Deut 7:1,
+installed_by boot; 67 daemons, 460 functions), event_vocabulary +4 (1129), effect_vocabulary +4 (1029 — blessings_for_hearing, not the design's
+blessing_promised, Abram's), dependency_dispositions +15 edges (thirteen CALL, the registration, one FALSE — the king / Molech homograph at 7:8) and NO pointer (560 edges, 199 pointers on file); THE TAPE 10/10 WITH
+THE REST ON ITS SECOND RUN — RUN (1307, 96, 88, 0, 12, 1602, 38, 319, the four pairs, 127) as predicted, PREVIOUS_RUN 4b's EXACTLY (no declared delta),
+NEWEST_RUNNER seven_nations, markers 167 UNMOVED, entities 319, closes 127, the population table 148, CQ1-CQ9 MATCH (the first run's one miss: four older
+debit-count checkpoints CV2, CX2, CW3, CR3 retyped from the print); the docket logic/oral_triage/deu_07_vaetchanan_ekev_exam_2026-09-18.md (520 rows —
+link 52 / topic 468; LAW 145; OUTSIDE 75; credited 117; EVERY ROW READ WHOLE FROM THE START). THE GATES: the probe suites census 224/224, installation 6/6 (I5 67), readback 18/18 (Q16-Q18 the readback on the kin), register 7/7, clock 22/22, sequence 4/4, view 6/6, population 9/9, journal 7/7, cursor 6/6, large_letter 6/6, checkpoint 7/7; the daemon gate GREEN (67 daemons, 460 functions WRAPPED); the dependency gate GREEN (560 edges and 199 pointers on file — the link census reference 539 / transfer 48 / hypothesis 9 / none 163; required 265 edges and 200 pointers, live import edges 406); build_world ALL GREEN (221 units, standing 2209, hash 8b8fff1fa28953af unmoved — no freeze this sitting); the journal gate GREEN twice — before and after the sweep (12 kinds, 9688 rows in the index); THE REGISTER GATE --strict GREEN (DECLARED 100, DEBT 0, FAILS 0 — no seat in chapter 7: no receipt form in it, as the design measured); the positions table 244 checkpoints over 169 pauses (CQ1-CQ9 in it; checkpoint_probes 7/7 after the rebuild); the sweep 62/62 at 6,669 graded cells; the home-path gate GREEN.
+
+WHAT THE SITTING FOUND (RESEARCH_LOG 2026-09-18, the compile entry): THE READBACK ON THE KIN — the laws' form run on another chapter's code, the kin's
+cells the first telling by CALL; THE CODE'S FOUR HOLES compiled at the chapter's own day; TWO OLD EFFECTS written on the tape for the first time
+(covenant_barred, intermarriage_barred both ways); THE REGISTRY DECIDES A NAME (blessing_promised was Abram's); A DEBIT MOVES THE OLDER COUNTS (the four
+checkpoints); THE SHELF'S REASON AND CONDITION for the demolition (the calf's agency) and the ban (repentance; the Land's border); THE PITY'S HOLE with
+no row on the shelf. THE ELEVEN LESSONS in the map's AS BUILT.
+
+THE FILES CHANGED BY 5b: World/step9/cold_run_seven_nations.py (new), cold_run_sequence.py (the three lines under "# ---- Deut 7 ----", the literals,
+CQ1-CQ9, four older checkpoints retyped), event_vocabulary.yaml, effect_vocabulary.yaml, daemon_dispositions.yaml, dependency_dispositions.yaml (the
+span, fifteen edges, no pointer), readback_probes.py (Q16-Q18; Q17 retyped), installation_probes.py (I5 67), checkpoint_positions.yaml (rebuilt),
+DAEMON_INDEX.md and DEPENDENCY_INDEX.md (regenerated), the docket (new), the forms folder (copy_ch7b_forms.py), the records (the map, COMPILE_DEBT, MIDDOT,
+MISHNAH_TOPICS, RESEARCH_LOG, THE_STEPS, THE_BRIEFING, THE_LOOP, RESUME, RECORD_FORMS, the recovery page, this file, the state doc, memory). NOT COMMITTED —
+the tree uncommitted since 64a8362; commit on the owner's word only.
+
+NEXT ON THE RULING: the commit on the owner's word; then CHAPTER 8's READING (8:1-20 — the manna and the humility, the good land, the forgetting; the
+reading shape in four runs, every row whole). ON THE TABLE, NOT A RULING: the Decalogue-schema sitting; THE INSTALL HYPOTHESIS (tested in passing at 5b).

@@ -1,3 +1,19 @@
+# ⚠ THE DEUTERONOMY WALK sitting 5b (2026-09-18; step9/DEUTERONOMY_WALK.md "Sitting 5b" + "Sitting 5b — AS BUILT"): CHAPTER 7 COMPILED —
+# step9/cold_run_seven_nations.py the 62nd runner (51/51; six cells; THE READBACK ON THE KIN — twenty-one rows, fifteen by CALL to the kin's cells, six on
+# the tape; four holes compiled), law_seven_nations the 67th daemon (given_at Deut 7:1, boot); THREE LINES on the counter's own day (40, 11, 1), NO marker —
+# the ban a DEBIT on Israel OPEN to Joshua, covenant_barred and intermarriage_barred written on the tape for the first time, favor_barred, pity_barred,
+# house_abomination_barred three new blocks, blessings_for_hearing a conditional heaven entry; the tape 10/10 on its second run with RUN (1307, 96, 88, 0,
+# 12, 1602, 38, 319, pairs, 127) as predicted, PREVIOUS_RUN 4b's exactly, markers 167, closes 127 (four older debit-count checkpoints retyped); the docket
+# 520 rows read whole from the start; every probe suite and gate GREEN, the sweep 62/62.
+# NEXT on the ruling: the commit on the owner's word; chapter 8's reading (8:1-20) — or the schema sitting first, on his word.
+# ⚠ THE DEUTERONOMY WALK sitting 5 (2026-09-18; step9/DEUTERONOMY_WALK.md "Sitting 5" + "Sitting 5 — AS BUILT"): CHAPTER 7 READ AND FROZEN as one
+# unit (the 221st — deu_07_nations_cherem 7:1-26, the portion's edge at 7:12 inside it), FOUR RUNS with a clean point after each, every row whole: THE SIFREI
+# SILENT ON THE CHAPTER (three rows from elsewhere, one an interpolation) + Onkelos whole + the kin's spine credited by name — 29 sources, coverage
+# computed; 7:1 counts its own list (seven where Exodus had six); the oath's noun starred; the written/read pair at 7:9; Onkelos's supplied doctrine at
+# 7:10; the flock's young tagged a name; "you shall not covet" on the idols' silver and gold; the ritual 13 PASS, CORPUS TRUTH GREEN (221 units,
+# standing 2209 = 2203 + 6, hash unmoved), build_world, the journal gate (12 kinds, 9688 rows), the register gate --strict (DECLARED 100, DEBT 0,
+# FAILS 0) GREEN; the tape unmoved since 4b. THE INSTALL HYPOTHESIS on the table (the map's tail). NEXT on the ruling: the commit; then 5b — the compile of
+# chapter 7 in four runs, or the schema sitting first.
 # ⚠ THE DEUTERONOMY WALK sitting 4b (2026-09-17; step9/DEUTERONOMY_WALK.md "Sitting 4b" + "Sitting 4b — AS BUILT"): CHAPTER 6 COMPILED —
 # step9/cold_run_hear_o_israel.py the 61st runner (42/42; six cells; the readback's third form — seven rows, a retelling inside a law), law_hear_o_israel
 # the 66th daemon (given_at Deut 6:4, boot); THE SHEMA'S LAW compiled for the first time and given at the chapter's own day (40, 11, 1), NO marker —

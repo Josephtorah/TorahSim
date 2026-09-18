@@ -1,0 +1,15 @@
+7 failing statements
+--- line 274: assert sum(1 for v in PRO for _, m in PRO[v] if 'i2' in m) == 12 and sum(1 for v in PRO for _, m in PRO[v] if 'i3' in m) == 4
+    AssertionError()
+--- line 340: assert P('כי', 'תאמר', 'בלבבך') == ['Deut 7:17'] and P('ואמרת', 'בלבבך') == ['Deut 8:17', 'Isa 49:21'] and P('רבים', 'הגוים', 'האלה', 'ממני') == ['Deut 7:17'] a
+    AssertionError()
+--- line 341: assert P('לא', 'תירא', 'מהם') == ['Deut 20:1', 'Deut 7:18'] and U('תיראום') + P('לא', 'תיראו', 'מהם') == ['Deut 3:22', 'Jer 10:5'] and P('זכר', 'תזכר') == ['Deu
+    AssertionError()
+--- line 343: assert sorted(P('והאתת', 'והמפתים') + P('האתת', 'והמפתים') + P('האתות', 'והמופתים')) == ['Deut 29:2', 'Deut 34:11', 'Deut 7:19', 'Jer 32:21', 'Neh 9:10'] and P(
+    AssertionError()
+--- line 350: assert sorted(set(P('תועבת', 'יהוה', 'אלהיך'))) == ['Deut 12:31', 'Deut 17:1', 'Deut 18:12', 'Deut 22:5', 'Deut 23:19', 'Deut 25:16', 'Deut 7:25'] and len(set(P
+    AssertionError()
+--- line 369: assert onk_seats('טבן די אנון עבדין קדמוהי בחייהון') == [(7, 10)] and onk_tok('בחייהון') == [(7, 10)] and len(aramaic(7, 10)) == 23 and len(W7(10)) == 12 and on
+    AssertionError()
+--- line 405: assert all(f'"{k}": ' in OV for k in ALREADY) and all(f'"{k}": ' not in OV for k, _ in OVERRIDE_GLOSS if not PATCHED) and (PATCHED or '"Deut.7.' not in OV), [k 
+    AssertionError(['in-nearest-part-you/your'])

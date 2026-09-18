@@ -168,8 +168,37 @@ def q15():
     got = ('Deut 6:25' in cr, len(ptr), 'law_hear_o_israel' in dd['daemons'], dd['daemons'].get('law_hear_o_israel', {}).get('given_at'))
     return got == (False, 1, True, 'Deut 6:4'), "got (the gate sees 6:25, the pointer rows, the daemon registered, given_at) = %s" % (got,)
 
+# ---- THE DEUTERONOMY WALK 5b (2026-09-18): the readback on the kin — chapter 7's laws re-declared for the land, graded against the kin's cells by CALL and
+# the tape's lines by kind and verse; written to FAIL before the runner exists (the design's Q16-Q18) ----
+def q16():
+    import cold_run_seven_nations as SN
+    tbl = SN.DATA['the_readback']; rows = tbl['value']; holes = tbl.get('holes') or []
+    gs = collections.Counter(r['grade'] for r in rows)
+    on_tape = sum(1 for r in rows if r.get('tape_kind') and any(e[2]['kind'] == r['tape_kind'] and WE.first_verse(e[2].get('case_source')) == WE.first_verse(r['tape_verse']) for e in EV))
+    by_call = sum(1 for r in rows if r.get('cell') and r.get('cell_found'))
+    ok = len(rows) == 21 and on_tape + by_call == 21 and gs == collections.Counter({'VERBATIM': 4, 'VARIANT': 5, 'EXPANDED': 8, 'TURNED': 3, 'SHORTENED': 1}) and len(holes) == 4 and not any(r.get('open') for r in rows)
+    return ok, 'rows %d (found on the tape %d, in the kin\'s cells by CALL %d), grades %s, the code\'s holes %d, open %d' % (len(rows), on_tape, by_call, dict(gs), len(holes), sum(1 for r in rows if r.get('open')))
+def q17():
+    nd = [e for e in EV if e[2]['kind'] == 'nations_devoted']; hb = [e for e in EV if e[2]['kind'] == 'hearing_blessed']; ab = [e for e in EV if e[2]['kind'] == 'abomination_barred']
+    mk = {str(l[2].get('verse', '')): l for l in W.log if l[0] == 'MARKER'}; nm = len([l for l in W.log if l[0] == 'MARKER'])
+    isr = W.entities.get('israel_people')
+    def L(eff): return [e for e in isr.ledger if e['effect'] == eff] if isr else []
+    cmd = [e for e in L('commanded') if e.get('value') == 'devote_the_seven_nations']; hab = L('house_abomination_barred')
+    got = (len(nd), len(hb), len(ab), any(k.startswith('Deut 7:') for k in mk), nm, len(cmd), len(L('covenant_barred')), len(L('favor_barred')), len(L('intermarriage_barred')), len(L('blessings_for_hearing')), len(L('pity_barred')), len(hab), str(cmd[0].get('case_source', ''))[:8] if cmd else None, str(hab[0].get('case_source', ''))[:9] if hab else None)
+    return got == (1, 1, 1, False, 167, 1, 1, 1, 1, 1, 1, 1, 'Deut 7:1', 'Deut 7:25'), 'got (nations_devoted, hearing_blessed, abomination_barred, a chapter-7 marker, markers, the ban\'s debit, covenant_barred, favor_barred, intermarriage_barred, blessing_promised, pity_barred, house_abomination_barred, their sources) = %s' % (got,)
+def q18():
+    import yaml as _y
+    isr = W.entities.get('israel_people')
+    def L(eff): return [e for e in isr.ledger if e['effect'] == eff] if isr else []
+    dsp = [e for e in L('commanded') if str(e.get('value', '')).startswith('dispossess') or e.get('value') == 'destroy_their_images']
+    land = W.entities.get('the-land'); hp = [e for e in land.ledger if e['effect'] == 'high_places_banned'] if land else []
+    dd = _y.safe_load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'daemon_dispositions.yaml'), encoding='utf-8'))
+    d = dd['daemons'].get('law_seven_nations', {})
+    got = (len(L('other_gods_barred')), len(L('coveting_barred')), len(L('treasured_people')), len(dsp), bool(hp), 'law_seven_nations' in dd['daemons'], d.get('given_at'), d.get('installed_by'))
+    return got == (1, 1, 1, 2, True, True, 'Deut 7:1', 'boot'), 'got (other_gods_barred, coveting_barred, treasured_people, the dispossession\'s debits, high_places_banned present, the daemon registered, given_at, installed_by) = %s' % (got,)
+
 print('READBACK PROBES (THE LOOP step 6, the first form)')
-for n, f in (('Q1 the table', q1), ('Q2 found', q2), ('Q3 the close by a prior run', q3), ('Q4 the retrograde dating', q4), ('Q5 the open disagreements', q5), ('Q6 the register seats', q6), ('Q7 chapter 4\'s table', q7), ('Q8 the Horeb lines dated', q8), ('Q9 the seats and the debit after chapter 4', q9), ("Q10 chapter 5's table — the laws' readback", q10), ('Q11 the request and the answer dated; the charge closed by the prior run', q11), ('Q12 the seats after chapter 5; the code\'s hole filled', q12), ('Q13 chapter 6\'s table — the readback\'s third form', q13), ('Q14 the two lines on the speech\'s day, no marker', q14), ('Q15 the receipt without the Name; the pointer; the daemon', q15)):
+for n, f in (('Q1 the table', q1), ('Q2 found', q2), ('Q3 the close by a prior run', q3), ('Q4 the retrograde dating', q4), ('Q5 the open disagreements', q5), ('Q6 the register seats', q6), ('Q7 chapter 4\'s table', q7), ('Q8 the Horeb lines dated', q8), ('Q9 the seats and the debit after chapter 4', q9), ("Q10 chapter 5's table — the laws' readback", q10), ('Q11 the request and the answer dated; the charge closed by the prior run', q11), ('Q12 the seats after chapter 5; the code\'s hole filled', q12), ('Q13 chapter 6\'s table — the readback\'s third form', q13), ('Q14 the two lines on the speech\'s day, no marker', q14), ('Q15 the receipt without the Name; the pointer; the daemon', q15), ('Q16 chapter 7\'s table — the readback on the kin', q16), ('Q17 the three lines on the speech\'s day, no marker; the seven writes', q17), ('Q18 the kin stands; the daemon', q18)):
     probe(n, f)
 n_ok = sum(1 for _, ok in R if ok)
 print('readback_probes: %d/%d' % (n_ok, len(R)))

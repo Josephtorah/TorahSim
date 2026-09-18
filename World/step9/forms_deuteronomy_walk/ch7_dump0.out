@@ -1,0 +1,73 @@
+==== A0. THE TWO DIVISIONS — the export's chapter 7 against the DB's
+  DB verses 26 | export verses HE 26 EN 26 | per-chapter export lengths vs DB, chapters 1-8: [(5, 30, 33)]
+  the alignment cost 20 | export verses mapped to MORE THAN ONE DB verse: {}
+  the offset per export verse (DB minus export, the first DB verse of each): Counter({0: 26}) | the runs: [(1, 1, 1), (16, 16, 16), (17, 17, 17), (18, 18, 18), (19, 19, 19)]
+  the shared export verse against its DB verses (tokens, negations): []
+==== A. THE SHELF BY POSITION — the Sifrei on Deuteronomy around chapter 7
+  piskaot 357 357 rows 2357 2357
+  heads 34-39 (HE first citation | rows | EN first quote):
+    34 head (6, 7) | HE rows 10 EN rows 10 | 'And drill them (shinantem)85The root, sh-n-n, is etymologica'
+    35 head (6, 8) | HE rows 12 EN rows 12 | 'And bind them'
+    36 head (6, 9) | HE rows 10 EN rows 10 | 'And inscribe them (ketavtam)'
+    37 head (11, 10) | HE rows 16 EN rows 16 | 'And as a result of obeying these laws . . .then HASHEM your '
+    38 head (11, 10) | HE rows 11 EN rows 11 | 'It is not like the land of Egypt'
+    39 head (11, 11) | HE rows 11 EN rows 11 | 'But the Land, which you are crossing to possess,is a land of'
+  heads whose chapter is 7 : [] | heads by chapter 1-8: [(1, 24), (3, 4), (6, 6), (11, 21), (12, 20), (13, 14), (14, 14), (15, 16)]
+  HE rows citing Deut 7 (the export's verse → the DB's): 2 [(50, 4, 1, [1]), (61, 7, 26, [26])]
+  EN rows citing Deut 7 : 3 [(37, 1, 12, [12]), (50, 4, 1, [1]), (61, 7, 26, [26])]
+  EN "ibid 7:n" candidates: 0
+  the union of rows (both files): 3 [(37, 1), (50, 4), (61, 7)]
+  outside rows file bytes 4217
+==== B. ONKELOS chapter 7 and the DB (the dump per DB verse; a shared export row printed at its first DB verse)
+  the store's chapter 7 verses 26 | verses whose store token count differs from the DB: [(7, 9, 17, 16)]
+  token count chapter 7 : 412
+  onkelos dump bytes 36004
+==== C. THE PARSER on every verse of chapter 7
+  7:1   N [7]                      O []             marked []
+  7:8   N []                       O []             marked ['השבעה*']
+  7:9   N [1000]                   O []             marked []
+  number-word tokens present per verse (the bare check against the parser): {'7:8': ['נשבע'], '7:9': ['לאלף'], '7:12': ['נשבע'], '7:13': ['נשבע']}
+  7:1 tokens: ['כי', 'יביאך', 'יהוה', 'אלהיך', 'אל', 'הארץ', 'אשר', 'אתה', 'בא', 'שמה', 'לרשתה', 'ונשל', 'גוים', 'רבים', 'מפניך', 'החתי', 'והגרגשי', 'והאמרי', 'והכנעני', 'והפרזי', 'והחוי', 'והיבוסי', 'שבעה', 'גוים', 'רבים', 'ועצומים', 'ממך']
+  7:8 tokens: ['כי', 'מאהבת', 'יהוה', 'אתכם', 'ומשמרו', 'את', 'השבעה*', 'אשר', 'נשבע', 'לאבתיכם', 'הוציא', 'יהוה', 'אתכם', 'ביד', 'חזקה', 'ויפדך', 'מבית', 'עבדים', 'מיד', 'פרעה', 'מלך', 'מצרים']
+  7:9 tokens: ['וידעת', 'כי', 'יהוה', 'אלהיך', 'הוא', 'האלהים', 'האל', 'הנאמן', 'שמר', 'הברית', 'והחסד', 'לאהביו', 'ולשמרי', 'מצותו', 'לאלף', 'דור']
+  7:12 tokens: ['והיה', 'עקב', 'תשמעון', 'את', 'המשפטים', 'האלה', 'ושמרתם', 'ועשיתם', 'אתם', 'ושמר', 'יהוה', 'אלהיך', 'לך', 'את', 'הברית', 'ואת', 'החסד', 'אשר', 'נשבע', 'לאבתיך']
+  7:13 tokens: ['ואהבך', 'וברכך', 'והרבך', 'וברך', 'פרי', 'בטנך', 'ופרי', 'אדמתך', 'דגנך', 'ותירשך', 'ויצהרך', 'שגר', 'אלפיך', 'ועשתרת', 'צאנך', 'על', 'האדמה', 'אשר', 'נשבע', 'לאבתיך', 'לתת', 'לך']
+  7:26 tokens: ['ולא', 'תביא', 'תועבה', 'אל', 'ביתך', 'והיית', 'חרם', 'כמהו', 'שקץ', 'תשקצנו', 'ותעב', 'תתעבנו', 'כי', 'חרם', 'הוא']
+==== D. CASE TOKENS, FRAMES, REGISTER, NAMES
+  case tokens (כי "when/for" / אם "if" / ואם / או "or" / פן "lest"): {'7:1': ['כי'], '7:4': ['כי'], '7:5': ['כי', 'אם'], '7:6': ['כי'], '7:7': ['כי'], '7:8': ['כי'], '7:9': ['כי'], '7:16': ['כי'], '7:17': ['כי'], '7:21': ['כי'], '7:22': ['פן'], '7:25': ['פן', 'כי'], '7:26': ['כי']}
+  divine frames (ויאמר/וידבר + יהוה): []
+  לאמר "saying" seats: []
+  narrative-form verbs (V.w) per verse: {7: ['ויבחר'], 8: ['ויפדך']}
+  first-person verb forms (1cs / 1cp) per verse: {17: [('אוכל', 'HVqi1cs')]}
+  imperatives (Vq.v / Vp.v / Vh.v) per verse: {}
+  prohibitions לא + imperfect (the ten's form) per verse: {2: [('תכרת', 'HVqi2ms'), ('תחנם', 'HVqi2ms/Sp3mp')], 3: [('תתחתן', 'HVti2ms'), ('תתן', 'HVqi2ms'), ('תקח', 'HVqi2ms')], 7: [], 10: [('יאחר', 'HVpi3ms')], 14: [('יהיה', 'HVqi3ms')], 15: [('ישימם', 'HVqi3ms/Sp3mp')], 16: [('תחס', 'HVqi3fs'), ('תעבד', 'HVqi2ms')], 18: [('תירא', 'HVqi2ms')], 21: [('תערץ', 'HVqi2ms')], 22: [('תוכל', 'HVqi2ms')], 24: [('יתיצב', 'HVti3ms')], 25: [('תחמד', 'HVqi2ms')], 26: [('תביא', 'HVhi2ms')]}
+  name tokens (Np): {1: ['יהוה'], 2: ['יהוה'], 4: ['יהוה'], 5: ['ואשירהם'], 6: ['ליהוה', 'יהוה'], 7: ['יהוה'], 8: ['יהוה', 'נשבע', 'יהוה', 'פרעה', 'מצרים'], 9: ['יהוה'], 12: ['יהוה', 'נשבע'], 13: ['ועשתרת', 'נשבע'], 15: ['יהוה', 'מצרים'], 16: ['יהוה'], 18: ['יהוה', 'לפרעה', 'מצרים'], 19: ['יהוה', 'יהוה'], 20: ['יהוה'], 21: ['יהוה'], 22: ['יהוה'], 23: ['יהוה'], 25: ['יהוה']}
+  second-person plural vs singular (2mp / 2ms tokens per verse): {1: (0, 5), 2: (0, 6), 3: (0, 5), 4: (1, 2), 5: (5, 0), 6: (0, 4), 7: (4, 0), 8: (3, 1), 9: (0, 2), 10: (0, 0), 11: (0, 2), 12: (3, 3), 13: (0, 11), 14: (0, 3), 15: (0, 3), 16: (0, 4), 17: (0, 2), 18: (0, 3), 19: (0, 5), 20: (0, 2), 21: (0, 3), 22: (0, 4), 23: (0, 2), 24: (0, 4), 25: (1, 4), 26: (0, 5)}
+==== E. THE REGISTER GATE on Deut 7
+  dispositions naming Deut 7: []
+  REGISTER_INDEX lines on Deut 7:
+==== F. THE PRIOR READS
+  ledgers with an Onkelos Deut 7 row: []
+  prior Sifrei Devarim rows anywhere (strict form), those among the outside rows: [] | all prior rows count 294
+  ledgers NAMING a verse of Deut 7: 6
+    ('erection_docket_2026-09-06.md', 5, ['Deut 7:25', 'Deut 7:26', 'Deut 7:3', 'Deut 7:4', 'Deut 7:5'])
+    ('num_06_nazir_2026-09-09.md', 1, ['Deut 7:21'])
+    ('num_18_priest_levite_dues_2026-09-10.md', 1, ['Deut 7:1'])
+    ('num_21_snakes_conquest_2026-09-11.md', 1, ['Deut 7:2'])
+    ('num_33_journeys_2026-09-12.md', 2, ['Deuteronomy 7:5'])
+    ('num_35_refuge_cities_2026-09-13.md', 2, ['Deuteronomy 7:12'])
+  ledgers with an Onkelos Exod 23 or 34 row (the kin's reading — the angel's covenant clauses 23:20-33, the renewed covenant 34:11-16): ['erection_docket_2026-09-06.md', 'exo_23_escort_land_2026-09-01.md', 'exo_23_justice_calendar_2026-09-01.md', 'exo_34_second_tablets_2026-09-01.md'] | Mekhilta rows on Exod 23/34 anywhere: 21 | ledgers with an Onkelos Num 33 row (33:50-56 the dispossession): ['num_33_journeys_2026-09-12.md']
+==== G. THE DRAFTS
+  deu_06_shema: refs 6:1-25; steps (6, 1)..(6, 25) n=25; draft False; operators True; depends_on ['    - "deu_05_decalogue"\n']; scenarios 32; binary_trees True; step E True; comment lines 30
+  deu_07_nations_cherem: refs 7:1-26; steps (7, 1)..(7, 26) n=26; draft True; operators False; depends_on ['    - "deu_06_shema"\n']; scenarios 33; binary_trees True; step E False; comment lines 30
+    the step verses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26] | covers DB 26 ? True
+  deu_08_manna_humility: refs 8:1-20; steps (8, 1)..(8, 20) n=20; draft True; operators False; depends_on ['    - "deu_07_nations_cherem"\n    - "exo_16_manna_shabbat"\n']; scenarios 27; binary_trees True; step E False; comment lines 24
+  the units' claim prefixes present anywhere? {'DV07': 0, 'DV07A': 0, 'DV07B': 0, 'DV06': 2, 'DV08': 0}
+  existing manifests deu_07*: [] | ledgers deu_*: ['deu_01_03_devarim_2026-09-15.md', 'deu_01_03_devarim_exam_2026-09-15.md', 'deu_04_vaetchanan_2026-09-16.md', 'deu_04_vaetchanan_exam_2026-09-16.md', 'deu_05_vaetchanan_2026-09-16.md', 'deu_05_vaetchanan_exam_2026-09-16.md', 'deu_06_vaetchanan_2026-09-17.md', 'deu_06_vaetchanan_exam_2026-09-17.md']
+  unit count and standing (CORPUS_TRUTH literals): []
+==== H. THE STORE'S GLOSSES on chapter 7
+  gloss Counter (the 50 commonest): [('YHWH', 19), ('God-you/your', 15), ('not', 13), ('which', 12), ('that', 11), ('obj-marker·et', 11), ('the-people', 6), ('to-you/your', 5), ('to', 4), ('you', 4), ('and-not', 4), ('from-all', 4), ('he/it', 4), ('many/great', 3), ('from-face-you/your', 3), ('and-set-them/their', 3), ('obj-marker·et-them/their', 3), ('in-you/your (pl)', 3), ('make', 3), ('in-you/your', 3), ('swear', 3), ('Egypt', 3), ('and-keep/guard', 3), ('and-obj-marker·et', 3), ('the-these', 3), ('until', 3), ('come/bring', 2), ('and-pluck-off', 2), ('nation', 2), ('from-you/your', 2), ('to-face-you/your', 2), ('seclude', 2), ('to-them/their', 2), ('in-them/their', 2), ('set', 2), ('hurrying', 2), ('be--on-fire-suffix', 2), ('in-fire', 2), ('to-him/its', 2), ('over', 2), ('the-ground', 2), ('obj-marker·et-you/your (pl)', 2), ('the-covenant', 2), ('commandment-him/its', 2), ('to-hate-him/its', 2), ('face-him/its', 2), ('the-judgment', 2), ('and-be', 2), ('to-father-you/your', 2), ('be', 2)]
+  gloss file bytes 13303
+  overrides already for Deut.7: [] | by_ref last Deut.6 line: ['  "Deut.6.20:5": "what"   # מה']
+==== I. THE SPINE ON THE CHAPTER — none: no piska head in chapter 7 (the heads by chapter above); the outside rows are the spine here
+  the heads whose chapter is 7 : [] | the nearest heads: {36: (6, 9), 37: (11, 10)}

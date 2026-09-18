@@ -1680,3 +1680,48 @@ follows the last check mark.
 ## on) a sitting of the second pass; (iv) THE SPELLINGS' OPEN ROW stands open — a codex question (RESEARCH_LOG 2026-09-17), no sitting owns it; (v) the Mekhilta Pisha 17 (the
 ## first copy's spine on the tefillin) named, unopened — a reading sitting's if the tefillin's Exodus seats are reread; (vi) THE LARGE LETTERS parked on the owner's word.
 ## NOTHING ELSE IN CHAPTER 6 IS OWED TO A LATER SITTING OF ITS OWN.
+
+## DEUTERONOMY SITTING 5 — CHAPTER 7, Deuteronomy 7:1-26 READ AND FROZEN (2026-09-18; DEUTERONOMY_WALK.md "Sitting 5" and "Sitting 5 — AS BUILT"; the ledger
+## deu_07_vaetchanan_ekev_2026-09-17.md, 29 sources; one unit deu_07_nations_cherem FROZEN, the 221st) — PAID AT 5b (the 5b box below, item by item) — AS WRITTEN AT THE READING, OWED TO THE COMPILE (sitting 5b): (a) THE BAN (7:2 "you shall
+## utterly destroy them" with 20:16-18 — the seven nations' cell; the Sifrei's war sections at chapter 20 unread — the cell's ink here, the war chapter's CALL when
+## it compiles); (b) NO COVENANT AND NO FAVOR (7:2 — Avodah Zarah 20a's readings of "show them no favor": no settlement, no gift, no praise; Exodus 23:32 and 34:12,
+## 15 the kin by CALL into the Exodus 23 and 34 runners); (c) NO MARRIAGE, BOTH DIRECTIONS (7:3-4 — "for he will turn your son": the child of a gentile mother follows
+## her, Kiddushin 68b; Mishnah Kiddushin 3:12 CREDITED at the erection docket; Yevamot 23a; Avodah Zarah 36b; 7:4's "other gods" a CALL into 3b's second-word cell);
+## (d) THE ALTARS, THE PILLARS, THE ASHERIM, THE IMAGES (7:5 with 12:3 — Mishnah Avodah Zarah 3:5-10 CREDITED; Avodah Zarah 45b-48b; the Sifrei 61:7's renaming for
+## the worse with Tosefta Avodah Zarah 6:4); (e) THE CHOSEN PEOPLE (7:6-8 — Chullin 89a "not because you were more … but because you humble yourselves"; Exodus 19:5-6
+## the kin); (f) THE FAITHFUL GOD AND THE HATER REPAID (7:9-10 — Onkelos's doctrine of the wicked paid in this world; "to a thousand generations" against the ten
+## words' "to thousands" — 3b's cell by CALL; the fathers' iniquity visited there, the hater repaid to his face here); (g) "BECAUSE YOU HEAR" AND THE BLESSINGS
+## (7:12-15 — the fruit, the increase and the young, no barrenness, the diseases of Egypt — Exodus 15:26, 23:25-26 the kin; 28:4, 11, 18, 51, 60 the blessings' and
+## the curses' seats ahead); (h) NO PITY AND NO SERVING (7:16 — Exodus 23:33 "a snare" the kin by CALL; "your eye shall not pity" the book's five seats); (i) DO NOT
+## FEAR (7:17-21 — Sotah 36a's hornet on the Jordan's bank; the run citations "did to Pharaoh" 7:18 and the trials, signs, wonders 7:19 as the readback's reference
+## rows against the tape's plague and sea lines); (j) LITTLE BY LITTLE (7:22 — Exodus 23:29-30 the first telling, by CALL into the Exodus 23 runner; "the beasts of
+## the field" the reason kept whole); (k) THE KINGS AND THE NAME (7:23-24 — "destroy their name from under heaven" beside Amalek's 25:19 ahead; Joshua 1:5's receipt);
+## (l) THE IDOLS' SILVER AND GOLD (7:25 — Mishnah Avodah Zarah 3:5 CREDITED at the erection docket, 4:4-5 the nullification; Avodah Zarah 44b-52a; "you shall not
+## covet" THE TENTH WORD'S VERB — 3b's coveting cell by CALL; Achan's Joshua 7:21 the run's case); (m) THE ABOMINATION INTO THE HOUSE (7:26 — Makkot 22a the lashes;
+## Mishnah Avodah Zarah 3:3; "devoted like it" — the devoted thing's lemma, not the ban's); (n) THE RUN CITATIONS — "swore to your fathers" (7:8, 12, 13), the oath's
+## tape entries as at chapter 6's (i); the hornet (7:20 ← Exodus 23:28, → Joshua 24:12); (o) THE DOCKET by the union rule (Avodah Zarah 20a, 36b, 42a-54b; Kiddushin
+## 68b; Yevamot 23a; Sotah 35b-36a; Chullin 89a; Makkot 22a; Mishnah Avodah Zarah 1-4; Mishnah Kiddushin 3:12 — the scan will name the rest), every row whole;
+## (p) THE FLOCK'S "YOUNG" TAGGED A NAME in the DB's morph at its four seats (7:13, 28:4, 18, 51) — a note for the DB, no cell (the gloss rewritten; the parser
+## unaffected). NOTHING ELSE IN CHAPTER 7 IS OWED TO A LATER SITTING OF ITS OWN.
+
+## DEUTERONOMY SITTING 5b — THE COMPILE OF CHAPTER 7 (2026-09-18; DEUTERONOMY_WALK.md "Sitting 5b" design + AS BUILT; logic/oral_triage/deu_07_vaetchanan_ekev_exam_2026-09-18.md
+## 520 rows, every row read whole from the start; cold_run_seven_nations.py 51/51; law_seven_nations the 67th daemon; the tape 10/10 with RUN (1307, 96, 88, 0, 12, 1602, 38, 319, pairs, 127)).
+## THE SITTING-5 BOX (a)-(p) PAID — (a) THE BAN — F1 the_ban: the code's hole, commanded valued devote_the_seven_nations a DEBIT on Israel OPEN to Joshua at nations_devoted; the
+## dispossession's two debits referenced by CALL, not doubled; the east's devotings a DATA row; (b) NO COVENANT AND NO FAVOR — ordinances.land and erection.covenant by CALL,
+## covenant_barred's FIRST TAPE WRITE; favor_barred NEW (the three readings — Avodah Zarah 20a); (c) NO MARRIAGE BOTH WAYS — erection.covenant by CALL, intermarriage_barred's
+## first tape write valued both directions; the child follows the mother (Kiddushin 68b, Yevamot 23a, Mishnah Kiddushin 3:12); (d) THE FOUR OBJECTS — the demolition a REFERENCE
+## row against journeys' OPEN debit (no second debit); the renaming a DATA row; the shelf's order fell / conquer / eradicate and the calf's agency DATA; (e) THE CHOSEN PEOPLE — F2
+## by CALL (exodus_story.sinai, obey_horeb.the_one_god), no write; (f) THE FAITHFUL GOD — F3 by CALL (covenant_at_horeb.the_second_word), the rows 7:9 VARIANT and 7:10 TURNED;
+## Onkelos's doctrine and the written/read pair DATA rows; (g) BECAUSE YOU HEAR — F4, blessings_for_hearing a conditional HEAVEN entry (NOT blessing_promised — Abram's);
+## (h) NO PITY — pity_barred NEW, on the ink alone (no row on the shelf); no serving the second word's clause by CALL, no second write; (i) DO NOT FEAR — F5 no write, the war
+## chapter's fear rule OWED FORWARD; (j) LITTLE BY LITTLE — ordinances.land by CALL, the pointer at 7:22; (k) THE KINGS AND THE NAME — a DATA row; Amalek's phrase by CALL;
+## (l) THE IDOLS' SILVER AND GOLD — covenant_at_horeb.the_tenth_word by CALL, coveting_barred UNMOVED; the decorative item (51b) the exam's rule; (m) THE ABOMINATION INTO THE
+## HOUSE — house_abomination_barred NEW; the two lemmas a DATA row; shemini.classify by CALL; (n) THE RUN CITATIONS — the pointers the census demanded, on the DB, one by one;
+## (o) THE DOCKET — 520 rows by the union rule, EVERY ROW WHOLE FROM THE START; (p) THE FLOCK'S "YOUNG" — a DATA row the_morph_tag. OWED FROM 5b: (i) THE WAR CHAPTER'S CELLS —
+## 20:16-18 (the ban's spec for the Land's cities: 'keep alive none that breathes … lest they teach you' — the ban's condition on the shelf, Sotah 35b:10-36a:1, waits for that
+## cell), 20:1-4 and 20:8 (the fear rule 7:17-24 promises: 'you shall not fear them' 7:18 / 20:1); (ii) THE FINDER'S THIRD FORM (4b's owed item, unchanged — no receipt in
+## chapter 7); (iii) THE BLESSINGS AND THE CURSES — 28:4, 11, 18, 51, 60 (7:13-15's list said again) compile at chapter 28's sitting and cite 7:13 by CALL; (iv) 12:2-3 — the
+## demolition's fuller form (five verbs; 'destroy their name' — the renaming) at chapter 12's sitting, citing 7:5 by CALL; (v) 13:18's 'nothing of the devoted shall cleave' — the
+## devoted thing's second seat, at chapter 13's sitting; (vi) THE PITY'S FOUR LATER SEATS (13:9, 19:13, 19:21, 25:12) each at its chapter, citing 7:16 by CALL; (vii) Joshua's
+## receipts (1:5 'no man shall stand', 24:12 the hornet, 7:21 Achan's coveting, 2:34 / 3:6 the east's devotings already on the tape) — the run, outside the Torah.
+## NOTHING ELSE IN CHAPTER 7 IS OWED TO A LATER SITTING OF ITS OWN.
