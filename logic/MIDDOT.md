@@ -1683,6 +1683,91 @@ narrative strength. By cluster:
     hand: F4 consume_no_pity.
   · A THOUSAND FOR FEAR, THOUSANDS FOR LOVE (Sotah 31a:9-10 on 7:9 / Exodus 20:6): the numbered clause against the bare plural read as two motives: F3
     thousand_generations (the readback row 7:9 VARIANT's shelf reading).
+- **THE SIFREI ON DEUTERONOMY'S OWN CASE LAW ON CHAPTER 8 (Deuteronomy 8:1-20; THE DEUTERONOMY WALK sitting 6, 2026-09-18;
+  the ledger logic/oral_triage/deu_08_ekev_2026-09-18.md — THE SPINE SILENT ON THE CHAPTER, no piska head between 36 on 6:9 and 37 on
+  11:10; its sixteen rows outside any piska read whole in both files, the rows that argue by a numbered rule below, each at its row):**
+  · TWELVE LANDS FOR TWELVE TRIBES (39:4 on 11:11 from 8:7-10): the repeated "land" — "the land which you go in to possess", "a land of
+    hills and valleys", "a land of brooks of water", "a land of wheat and barley …", "a land of olive oil and honey", "a land where you
+    shall eat bread without poverty", "a land whose stones are iron" — each repetition given a tribe, twelve in all — E10 (the repeated
+    expression signifies); THE INK: "a good land" twelve seats, 8:7-10 four "land" clauses in a row; the range citation 8:7-10 in the
+    Hebrew's form, asserted by string.
+  · WATER SAID TWICE (39:8 on 11:11 from 8:7): "from the rain of heaven it drinks WATER" — the second "water" read as irrigation water
+    too, 8:7's "a land of brooks of water" the proof — E10; THE INK: "brooks of water" three seats (8:7; 10:7 Jotbathah's; Deuteronomy
+    the book's two); the English's 39:6 runs through the Hebrew's 39:6-8, each file's own row read whole.
+  · THE FIRST AND THE LAST (48:8 on 11:22 from 8:19): "if you SURELY keep" and "if you SURELY forget" — the doubled verb given a
+    teaching: one who keeps first by first keeps the last, one who forgets first by first loses the last — E10 on the infinitive
+    absolute; THE INK: 8:19's "surely forget" the lemma's one such form in the Bible.
+  · THE FIRST FRUITS FROM THE SEVEN SPECIES (297:4 on 26:2 from 8:8): "BRING" said of the community's first fruits (Leviticus 23) and
+    "BRING" said of the individual's (26:2) — the shared word runs the analogy: as the community's come from the seven species, so the
+    individual's, 8:8 the list — I2 (the verbal analogy, "an equal decree"); Mishnah Bikkurim 1:3 the answer sheet, owed to 6b.
+  · THE NAME FOR ITS SOUND (37:5 on 11:10 from 8:9): "the world" (Proverbs 8:26) is the Land of Israel because it is SPICED with
+    everything — a homily on the sound of the word, no numbered rule; 8:9 "you shall not lack anything" the proof.
+
+- THE CHAPTER-8 DOCKET (THE DEUTERONOMY WALK sitting 6b, 2026-09-19; logic/oral_triage/deu_08_ekev_exam_2026-09-19.md — 451 rows, every row read
+  whole from the start; the rules about rules the docket carries, each at its row):
+  · THE VERBAL ANALOGY GUARDED TWICE (I2, gezerah shavah — Yoma 74b:11-13): the Day's "afflict" (Leviticus 16:29) from 8:3's "he afflicted you" — the school of
+    R. Yishmael; then the guards: not from Laban's "if you afflict my daughters" (Genesis 31:50) because THE PUBLIC'S AFFLICTION IS DERIVED FROM THE PUBLIC'S; not
+    from Egypt's "our affliction" (26:7) because AFFLICTION BY THE HAND OF GOD IS DERIVED FROM GOD'S HAND, not from man's — two governance rules on which seats may
+    teach a received analogy (the shelf's own reading of 8:3's hunger as God's act on the whole people — the readback row 8:3 TURNED's ground).
+  · THE PREFIX'S IDENTITY IN A VERBAL ANALOGY (I2 — Makkot 13b:12-15): "before the eyes of" (Leviticus 20:17, the excision) from "before your eyes" (25:3, the
+    lashes) — yes; "from the eyes of" (Numbers 15:24) from "before your eyes" — no: the analogy runs on the surface form with its prefix; the objection from the
+    school of R. Yishmael's "return"/"come" (Leviticus 14:39, 44) left standing — the docket carries both.
+  · THE ARTICLE BREAKS THE ANALOGY (I2 — Yoma 76a:1): "man" (Psalm 78:25) from "a MAN in whom is spirit" (Numbers 27:18, Joshua) — yes; from "THE man Moses" (12:3)
+    — no: "the man" is not "man".
+  · THE VERBAL ANALOGIES THE DOCKET NAMES (I2, each at its row): "land" / "your land" (8:8 / 26:2 — the first fruits the seven species, Menachot 84b:14; the Sifrei
+    297:4's runs on "bring"); "afflicted" (8:3 / Psalm 90:15 — the messianic forty, Sanhedrin 99a:5); "gave" / "I will give" (8:10 / Exodus 24:12 — the Torah's
+    blessing from the grace, Berakhot 48b:10); "produce" (Leviticus 19:25 / 22:9 — the fourth year's vineyard, Berakhot 35a:5); "covenant" (the salt / the
+    afflictions, Berakhot 5a:19); "hewn down" / "hew down" (Isaiah 10:33 / 7:5 — the arrogant as an Asherah, Sotah 5a:10); "opened" / "opened" (Genesis 7:11 /
+    Psalm 78:23 — the manna's sixty cubits, Yoma 76a:10).
+  · THE A-FORTIORI REFUTED (I1, qal wa-chomer — the refutable one, as this file's I1 note says): from the SATIATED to the HUNGRY (Berakhot 35a:7, 35a:17, 48b:5;
+    R. Yochanan's pair 21a:5 — the Torah's blessing after from food's, food's before from the Torah's) refuted at 21a:6 (food gives bodily pleasure, the Torah
+    eternal life; and the mishna itself has the impure bless after, not before) and at 35a:18 (meat, eggs and fish have no verse) — THE BLESSING BEFORE FOUNDED
+    ON REASON (35a:18-19); the a-fortiori that stands: the slave's tooth and eye to the afflictions' atonement (5a:18), R. Yishmael's from food to the Torah (48b:10).
+  · "BEWARE", "LEST", "NOT" — NOTHING BUT A PROHIBITION (a form rule on the code's own words — R. Avin in R. Ile'a's name at Sotah 5a:3, Makkot 13b:5, Eruvin
+    96a:8): 8:11's "take heed to yourself lest you forget" a negative command; THE LIMIT (Eruvin 96a:9): "observe" beside a positive has a positive's force (the
+    Paschal lamb's "observe this ordinance"); THE LASHES' EDGE (Makkot 13b:6-8): a prohibition without an action is not flogged ("if you will not observe TO
+    PERFORM"), nor one rectified by a positive — lashes only for what is like the muzzling (25:4, juxtaposed to the lashes' passage).
+  · "A LAND" CONCLUDED THE MATTER (Berakhot 44a:10 — a scope rule by a repeated word): the second "a land" (8:9) closes the seven species' clause, so "eat, be
+    satisfied, bless" (8:10) falls on BREAD alone (the Rabbis); for Rabban Gamliel the word excludes the raw wheat chewer.
+  · RAV HAMNUNA'S TWO "LAND"S (Berakhot 41b:5 — counting from each occurrence): the order of blessings by the verse (41a:8 — "each food that precedes in the verse
+    precedes in the blessing") refined by the verse's own structure: the date second to the second "land", the pomegranate fifth to the first.
+  · ABAYE'S "HERE ON THE VERSE, THERE ON REASONING" (Berakhot 49b:9-10; Pesachim 49b:17): R. Meir's olive-bulk and R. Yehuda's egg-bulk read the two verbs
+    ("eat" eating, "be satisfied" drinking / eating that satisfies) — not reversed though the same sages reverse elsewhere on reasoning.
+  · "ONE DOES NOT PERFORM COMMANDMENTS IN BUNDLES" (Berakhot 49a:12 — why a blessing concludes with one theme); "THE HALAKHA IS AS THE DECISOR" (43b:9 — Rabban
+    Gamliel between the houses); "ONE SHOULD NEVER EXCLUDE HIMSELF FROM THE COLLECTIVE" (49b:16 — the invitation's "let us bless").
+  · THE "DO NOT READ" READINGS (no code in this file's lists — described): "whose stones" read "whose builders" (Taanit 4a:3 on 8:9); "he will bless" read "you
+    shall bless" (Berakhot 48b:7 on Exodus 23:25); "how little" read "an altar" (Sotah 4b:13); "him" read "with him" (Sotah 5a:14); "teach him" read "teach us"
+    (Berakhot 5a:17); "spread" read "slaughtered" (Yoma 75b:3); "mighty" read "limbs" (Yoma 75b:16) — each a homily on the letters, none a rule the machine runs.
+  · THE COUNT FROM THE SPELLING (Yoma 75b:10): the 248 limbs from "fine flaky" WITHOUT the vav (254 with it) — the defective spelling counted, the chapter-6
+    lesson's kin; THE WRITTEN/READ PAIR ON THE SHELF (Yoma 75b:6): the quail written with shin, read with samekh (Numbers 11:31) — the righteous in peace, the
+    wicked as thorns.
+  · A COMMAND CONDITIONAL ON AN ACT (Berakhot 49b:4): the grace "not an obligation — if he wants he eats, if not, not" — the shelf's reading of 8:10's own order
+    (eat, be satisfied, bless), against the prayer's standing obligation: a status whose trigger is the eating, the write's form.
+- **THE SIFREI ON DEUTERONOMY'S OWN CASE LAW ON CHAPTER 9 (Deuteronomy 9:1-29; THE DEUTERONOMY WALK sitting 7, 2026-09-19;
+  the ledger logic/oral_triage/deu_09_ekev_2026-09-19.md — THE SPINE SILENT ON THE CHAPTER, no piska head between 36 on 6:9 and 37 on
+  11:10; its seven rows outside any piska read whole in both files, the rows that argue by a numbered rule below, each at its row):**
+  · THE ONE FOR THE MANY, THE MANY FOR THE ONE (27:2 on 3:24 from 9:14): "let Me alone and I will destroy them" — the door God opened
+    for Moses to stand and pray; the prayer of one for the many heard, so the prayer of the many for one all the more — I1 (qal
+    wa-chomer, the a-fortiori; the row's own words "קל וחמר" ("light and heavy") on its bytes); THE INK: "let Me alone" the Bible's one
+    seat of the form (Exodus 32:10's "let Me be" another verb); Onkelos supplies the prayer in the clause ("leave your prayer from
+    before Me") at both tellings; 9:19's "the LORD hearkened to me" the prayer heard.
+  · BEFORE YOUR EYES, BEFORE THE EYES OF ALL ISRAEL (357:44 on 34:12 from 9:17): "it is said there: and I broke them BEFORE YOUR EYES;
+    and here it says: which Moses did BEFORE THE EYES OF ALL ISRAEL" — the breaking of the tablets counted among Moses' wonders by the
+    shared phrase — I2 (gezerah shavah, the verbal analogy; the row's own form "נאמר להלן … וכאן הוא אומר" ("it is said there … and
+    here it says")); THE INK: "before your eyes" 1:30, 9:17, 29:1 in the book; 9:17 shares one token with Exodus 32:19 — the breaking
+    retold in Moses' own words; 34:12 the book's last verse.
+  · THE SCRIPTURES SPEAK IN HYPERBOLE (25:4 on 1:28 from 9:1): "cities great and fortified to the heavens" — Rabban Shimon ben Gamliel's
+    rule that Scripture exaggerates, 9:1 the proof, and the promise to Abraham of the stars and the dust the exception — a rule of
+    reading, not a numbered middah (E10 the nearest label: the expression read for what it signifies); THE INK: the phrase's two seats
+    spelled plene there and defective here; Onkelos "to the height of heaven" at both.
+  · THE TEN NAMES OF PRAYER (26:7 on 3:23 from 9:25-26): "falling" (9:25) and "prayer" (9:26) two of the ten, "imploring" (Exodus 32:11)
+    the same prayer's first telling — E10 (the words' seats gathered); THE INK: "fell down before the LORD" the hithpael's two Torah
+    seats both this chapter's; "I prayed" 9:20, 9:26 among the Torah's eight.
+  · THE FORTY DAYS AS SUFFERING (14:1 on 1:14 and 306:25 on 32:2 from 9:9): "I stayed on the mountain forty days and forty nights"
+    read beside Exodus 34:28 as the price Moses paid for the Torah — E10; THE INK: the phrase's nine Bible seats, four in the chapter;
+    the English's "Ex.36:28" at 306:25 a slip for the Hebrew's 34:28 (asserted on both files' bytes).
+  · THE HARSH WORDS FIRST (342:1 on 33:1 from 9:7-8): "at Horeb you provoked the LORD", "you have been rebellious" among the hard words
+    before the blessing — a reading of order, no rule (the range citation "9:7-8" in the Hebrew's form, found through the English).
 
 ## Exodus block campaign — owner's word "Do 3")
 

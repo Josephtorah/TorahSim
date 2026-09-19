@@ -21,7 +21,7 @@ SINCE STEP 7 (a) WRITE AS YOU GO (2026-09-14; THE_LOOP.md "Step 7 THE LOOP THAT 
 live sink attached (attach) writes every line to the segment's body file and into the one database AT THE END OF ITS BLOCK — the engine's
 outermost call returning; the seal writes the header and runs THE AUDIT (the chain, the count, an independent conversion equal on every
 field but the bound's right edge, the rebuilt index equal to the live rows). The database is the state between blocks; --gate proves it.
-Run: python3 World/step9/world_journal.py --gate | --reindex | --verify <segment>
+Run: python3 World/step9/world_journal.py --gate | --reindex | --verify <segment> | --stamp <file> | --unmoved <file>   (THE GATES CUT 2026-09-19: the two gate runs concurrent; the stamp and the unmoved check the second gate's cheap form)
 """
 import os, re, sys, glob, json, sqlite3, subprocess, tempfile, collections, hashlib
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -578,11 +578,77 @@ def _tuple_of(stdout):
             'run.close': int(classes.get('CLOSE', 0))}                    # THE CLOSE LINE (2026-09-12): the tenth class — the closes performed, read from the runner's own class census
 
 
+def sources_key():
+    """THE GATES CUT (2026-09-19): the key of the running world's snapshot — a digest of every source the replay depends on (the runners, the engine,
+    the effects layer, the guards, this file, the registries, the text store's size and stamp): a snapshot is served only under the same key"""
+    import hashlib, glob
+    h = hashlib.sha256()
+    files = sorted(glob.glob(os.path.join(HERE, 'cold_run_*.py')) + glob.glob(os.path.join(HERE, '*_vocabulary.yaml')) + glob.glob(os.path.join(HERE, '*_dispositions.yaml'))
+                   + glob.glob(os.path.join(HERE, 'calendar_parameters*.yaml')) + glob.glob(os.path.join(HERE, 'population_schema*.yaml'))
+                   + [os.path.join(HERE, f) for f in ('world_engine.py', 'effects_layer.py', 'compile_guards.py', 'world_journal.py')]
+                   + [os.path.normpath(os.path.join(HERE, '..', '..', 'logic', 'corpus', 'entity_registry.yaml'))])
+    for p in files:
+        if os.path.exists(p):
+            h.update(os.path.basename(p).encode('utf-8')); h.update(open(p, 'rb').read())
+    db = os.path.normpath(os.path.join(HERE, '..', '..', 'Data', 'tanakh.sqlite'))
+    if os.path.exists(db):
+        st = os.stat(db); h.update(('tanakh %d %d' % (st.st_size, int(st.st_mtime))).encode('utf-8'))
+    return h.hexdigest()
+
+
+def snapshot_paths(out_dir=None):
+    d = data_dir(out_dir); return os.path.join(d, 'running_world.pickle'), os.path.join(d, 'running_world.json')
+
+
+def save_snapshot(w, out_dir=None, key=None):
+    """THE GATES CUT (2026-09-19): the running world saved after its replay — the daemons stripped (functions of the runners' modules; a reader
+    of the world needs none and must not pay their import), the journal handle dropped; the sidecar carries the sources key. The replay costs
+    two seconds; the import of sixty-three runners costs two minutes: the snapshot spares the readers the second."""
+    import pickle, json, time
+    snap, side = snapshot_paths(out_dir)
+    laws, journal = w.laws, getattr(w, 'journal', None)
+    w.laws = []; w.journal = None
+    try:
+        with open(snap + '.tmp', 'wb') as f: f.write(pickle.dumps(w, protocol=pickle.HIGHEST_PROTOCOL))
+    finally:
+        w.laws, w.journal = laws, journal
+    with open(side + '.tmp', 'w', encoding='utf-8') as f:
+        json.dump({'key': key or sources_key(), 'when': time.strftime('%Y-%m-%d %H:%M'), 'events': sum(1 for l in w.log if l[0] == 'EVENT'), 'entities': len(w.entities), 'log': len(w.log)}, f)
+    os.replace(snap + '.tmp', snap); os.replace(side + '.tmp', side)   # atomic — two readers replaying at once never see a half-written snapshot
+    return snap
+
+
+def load_snapshot(out_dir=None, key=None):
+    """the snapshot if its key is the current sources key, else None (the caller replays and saves)"""
+    import pickle, json
+    snap, side = snapshot_paths(out_dir)
+    if not (os.path.exists(snap) and os.path.exists(side)): return None
+    meta = json.load(open(side, encoding='utf-8'))
+    if meta.get('key') != (key or sources_key()): return None
+    import world_engine   # the classes the pickle names
+    return pickle.load(open(snap, 'rb'))
+
+
+def live_digest(out_dir=None):
+    """THE GATES CUT (2026-09-19): a digest of the LIVE rows of every L3 source in the one database (the rows in their stored order) — what the chain
+    stamps before the sweep and compares after: equal digests = the sweep moved nothing in the journal (the second gate's claim, proved in seconds)"""
+    import hashlib
+    dd = data_dir(out_dir); db = os.path.join(dd, 'world.sqlite')
+    srcs = l3_sources(dd); h = hashlib.sha256()
+    for s in srcs:
+        h.update(s.encode('utf-8')); h.update(repr(rows_of(db, s)).encode('utf-8'))
+    return h.hexdigest(), len(srcs)
+
+
 def gate():
     """two processes, two directories: byte-identical segments, verified chains, the index's counts = the RUN tuple"""
     with tempfile.TemporaryDirectory() as t1, tempfile.TemporaryDirectory() as t2:
-        out1 = _run_sequence(t1)
-        out2 = _run_sequence(t2)
+        # THE GATES CUT (2026-09-19): the two processes run CONCURRENTLY — two directories, two databases, no shared file; the proof (byte-identical
+        # segments from two independent runs) is the same, the wall time half
+        import concurrent.futures
+        with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
+            f1, f2 = pool.submit(_run_sequence, t1), pool.submit(_run_sequence, t2)
+            out1, out2 = f1.result(), f2.result()
         want = _tuple_of(out1)
         if want != _tuple_of(out2):
             raise SystemExit('THE GATE: the two runs printed different RUN tuples')
@@ -637,6 +703,17 @@ def gate():
 
 
 if __name__ == '__main__':
+    if '--stamp' in sys.argv:          # THE GATES CUT (2026-09-19): write the live rows' digest to a file (the chain, before the sweep)
+        import json, time
+        d, n = live_digest(); p = sys.argv[sys.argv.index('--stamp') + 1]
+        json.dump({'digest': d, 'sources': n, 'when': time.strftime('%Y-%m-%d %H:%M')}, open(p, 'w', encoding='utf-8'))
+        print('THE JOURNAL STAMPED: %d sources, digest %s… (%s)' % (n, d[:16], p)); sys.exit(0)
+    if '--unmoved' in sys.argv:        # THE GATES CUT (2026-09-19): compare the live rows' digest with the stamp (the chain, after the sweep — the second gate's claim)
+        import json
+        p = sys.argv[sys.argv.index('--unmoved') + 1]; st = json.load(open(p, encoding='utf-8')); d, n = live_digest()
+        same = d == st['digest'] and n == st['sources']
+        print('THE JOURNAL %s: the live rows\' digest %s the stamp\'s (%d sources; stamped %s) — %s' % ('UNMOVED' if same else 'MOVED', 'equals' if same else 'DIFFERS FROM', n, st.get('when'), 'GATE GREEN — the sweep wrote nothing the journal keeps' if same else 'GATE RED — run the full gate'))
+        sys.exit(0 if same else 1)
     if '--gate' in sys.argv:
         sys.exit(0 if gate() else 1)
     if '--views' in sys.argv:                                  # step 2's remainder: the four views' counts against the table's, per world

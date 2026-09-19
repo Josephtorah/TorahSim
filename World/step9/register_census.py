@@ -56,9 +56,13 @@ def base(lm): return lm.split('/')[-1].split(' ')[0]
 class Ink:
     """the Torah's tokens off the DB in canonical order (the DB's ids run alphabetically by book) and the parser"""
     def __init__(self):
-        with contextlib.redirect_stdout(io.StringIO()):
-            import cold_run_sequence as CS
-        self.CS = CS
+        # THE GATES CUT (2026-09-19): ONE copy of the parser — the sequence file's INK block exec'd here (the stitcher's and the runners' way), never
+        # the module imported: the import runs sixty-three runners (two minutes); the block reads in a second
+        import types, world_engine as WE
+        _SRC = open(os.path.join(HERE, 'cold_run_sequence.py'), encoding='utf-8').read()
+        _INK = {'re': re, 'sqlite3': sqlite3, 'os': os, 'WE': WE, '_ROOT': os.path.normpath(os.path.join(HERE, '..', '..'))}
+        exec(_SRC.split('# ==== INK BEGIN')[1].split('# ==== INK END ====')[0].split('\n', 1)[1], _INK)
+        self.CS = types.SimpleNamespace(ink_numbers=_INK['ink_numbers'], ink_ordinals=_INK['ink_ordinals'], verse_words=_INK['verse_words'], UNITS=_INK['UNITS'])
         db = sqlite3.connect('file:%s?mode=ro' % DB, uri=True)
         rows = db.execute("SELECT v.book, v.chapter, v.verse, w.idx, w.he, w.lemma, w.morph FROM words w JOIN verses v ON w.verse_id=v.id "
                           "WHERE v.book IN ('Gen','Exod','Lev','Num','Deut') ORDER BY v.id, w.idx").fetchall()
@@ -176,11 +180,21 @@ def register_headers(ink):
 
 
 # ---------------------------------------------------------------- the world --------------------------------------------------------------
-def running_world():
+def running_world(fresh=False):
+    """the running world for a READER (this gate, readback_probes, register_probes): THE GATES CUT (2026-09-19) — served from the snapshot the tape's
+    own run saved (world_journal.save_snapshot; its key the digest of every source the replay depends on) when the key is current, else replayed here
+    as before (the import of the runners and the replay under the source 'cold_run_sequence/<setting>') and saved for the next reader"""
+    import world_journal as WJ
+    if not fresh:
+        with contextlib.redirect_stdout(io.StringIO()):   # the unpickle imports the runner modules whose classes the world's objects carry; their import chatter stays off the reader's print
+            w = WJ.load_snapshot()
+        if w is not None:
+            return w
     with contextlib.redirect_stdout(io.StringIO()):
         import cold_run_sequence as CS
         reg = CS.registry_map()
         w, M = CS.run_world(CS.PARAMS['sojourn_start']['value'], reg, 'register-gate')
+    WJ.save_snapshot(w)
     return w
 
 

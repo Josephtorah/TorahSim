@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ALL_UNITS.py — frozen only (deu_07 frozen 2026-09-18; 221 frozen units)."""
+"""ALL_UNITS.py — frozen only (deu_09 frozen 2026-09-19; 223 frozen units)."""
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
@@ -83771,6 +83771,673 @@ if __name__ == "__main__":
     assert m.WITNESS_READS[5]["cites"] == ['Onkelos Deut 7:25', 'Onkelos Deut 7:26', 'Sifrei Devarim 61:7']
     assert all('silver_and_gold_not_coveted_no_abomination_into_your_house' not in f for f in m.WORLD["facts"])
     assert 'the_images_and_the_devoted_thing' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: deu_08_manna_humility
+###############################################################################
+
+m = Machine("deu_08_manna_humility")
+
+# -------------------------- Deut.8.1 · ETNACHTA_SPLIT ----------------------
+# ‹כל המצוה אשר› (“all the-commandment which”)
+# ‹אנכי מצוך היום› (“I command-you/your the-day”)
+# ‹תשמרון לעשות … למען› (“keep to-make … so-that”)
+# ‹תחיון ורביתם ובאתם› (“you-may-live and-multiply and-come/bring”)
+# ‹וירשתם את הארץ› (“and-possess/inherit obj-marker the-earth”)
+# ‹אשר נשבע יהוה› (“which swear YHWH”)
+# ‹לאבתיכם› (“to-father-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:1."
+m.step("Deut.8.1")
+# witness-tier presupposed read:
+# all_the_commandment_that_you_may_live_and_possess_the_land on the_frame —
+# read, not installed
+m.witness_read("the_frame", "all_the_commandment_that_you_may_live_and_possess_the_land",
+                cites=["Onkelos Deut 8:1"])
+
+# -------------------------- Deut.8.2 · ETNACHTA_SPLIT ----------------------
+# ‹וזכרת את כל› (“and-remember obj-marker all”)
+# ‹הדרך אשר הליכך› (“the-way/road which led-you”)
+# ‹יהוה אלהיך זה› (“YHWH God-you/your this”)
+# ‹ארבעים שנה במדבר› (“forty years in-the-wilderness”)
+# ‹… למען ענתך לנסתך› (“so-that to-humble-you to-test-you/your”)
+# ‹לדעת את אשר› (“to-know obj-marker which”)
+# ‹בלבבך התשמר מצותו› (“in-heart-you/your will-you-keep his-commandments”)
+# ‹מצותיו אם לא› (“his-commandments if not”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:2."
+m.step("Deut.8.2")
+# witness-tier presupposed read:
+# the_humbling_the_manna_not_by_bread_alone_the_discipline_of_a_son on
+# the_way_of_forty_years — read, not installed
+m.witness_read("the_way_of_forty_years", "the_humbling_the_manna_not_by_bread_alone_the_discipline_of_a_son",
+                cites=["Onkelos Deut 8:2", "Onkelos Deut 8:3", "Onkelos Deut 8:4", "Onkelos Deut 8:5", "Onkelos Deut 8:6", "Sifrei Devarim 32:10", "Sifrei Devarim 32:12", "Sifrei Devarim 32:15", "Sifrei Devarim 48:10"])
+
+# -------------------------- Deut.8.3 · ETNACHTA_SPLIT ----------------------
+# ‹ויענך וירעבך ויאכלך› (“and-he-humbled-you and-let-you-hunger and-fed-
+# you”)
+# ‹את המן אשר› (“obj-marker the-manna which”)
+# ‹לא ידעת ולא› (“not know and-not”)
+# ‹ידעון אבתיך … למען› (“know father-you/your … so-that”)
+# ‹הודעך כי לא› (“know-you/your that not”)
+# ‹על הלחם לבדו› (“over the-food alone”)
+# ‹יחיה האדם כי› (“live the-human that”)
+# ‹על כל מוצא› (“over all what-proceeds-from”)
+# ‹פי יהו› (“mouth ?”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:3."
+m.step("Deut.8.3")
+
+# -------------------------- Deut.8.4 · ETNACHTA_SPLIT ----------------------
+# ‹שמלתך לא בלתה› (“your-garment not wore-out”)
+# ‹מעליך ורגלך לא› (“from-over-you/your and-foot-you/your not”)
+# ‹בצקה … זה ארבעים› (“swelled … this forty”)
+# ‹שנה› (“years”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:4."
+m.step("Deut.8.4")
+
+# -------------------------- Deut.8.5 · COND_כי (“that”) --------------------
+# ‹וידעת עם לבבך› (“and-know with heart-you/your”)
+# ‹… כי כאשר ייסר› (“that like-as/which chastise”)
+# ‹איש את בנו› (“man obj-marker son-him/its”)
+# ‹יהוה אלהיך מיסרך› (“YHWH God-you/your chastise-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:5."
+m.step("Deut.8.5")
+
+# -------------------------- Deut.8.6 · ETNACHTA_SPLIT ----------------------
+# ‹ושמרת את מצות› (“and-keep/guard obj-marker commandment”)
+# ‹יהוה אלהיך … ללכת› (“YHWH God-you/your … to-go”)
+# ‹בדרכיו וליראה אתו› (“in-way/road-him/its and-to-fear obj-marker-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:6."
+m.step("Deut.8.6")
+
+# -------------------------- Deut.8.7 · COND_כי (“that”) --------------------
+# ‹כי יהוה אלהיך› (“that YHWH God-you/your”)
+# ‹מביאך אל ארץ› (“is-bringing-you to earth”)
+# ‹טובה … ארץ נחלי› (“good … earth brooks-of”)
+# ‹מים עינת ותהמת› (“waters springs and-deeps”)
+# ‹יצאים בבקעה ובהר› (“flowing-out in-the-valley and-in-mountain”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:7."
+m.step("Deut.8.7")
+# witness-tier presupposed read:
+# brooks_and_deeps_the_seven_species_iron_and_copper_eat_be_satisfied_bless
+# on the_good_land — read, not installed
+m.witness_read("the_good_land", "brooks_and_deeps_the_seven_species_iron_and_copper_eat_be_satisfied_bless",
+                cites=["Onkelos Deut 8:7", "Onkelos Deut 8:8", "Onkelos Deut 8:9", "Onkelos Deut 8:10", "Sifrei Devarim 19:2", "Sifrei Devarim 37:5", "Sifrei Devarim 39:4", "Sifrei Devarim 39:6", "Sifrei Devarim 39:8", "Sifrei Devarim 40:10", "Sifrei Devarim 297:4"])
+
+# -------------------------- Deut.8.8 · ETNACHTA_SPLIT ----------------------
+# ‹ארץ חטה ושערה› (“earth wheat and-barley”)
+# ‹וגפן ותאנה ורמון› (“and-vine and-fig and-pomegranate”)
+# ‹… ארץ זית שמן› (“earth olive oil”)
+# ‹ודבש› (“and-honey”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:8."
+m.step("Deut.8.8")
+
+# -------------------------- Deut.8.9 · ETNACHTA_SPLIT ----------------------
+# ‹ארץ אשר לא› (“earth which not”)
+# ‹במסכנת תאכל בה› (“in-poverty eat in-her/its”)
+# ‹לחם לא תחסר› (“food not lack”)
+# ‹כל בה … ארץ› (“all in-her/its … earth”)
+# ‹אשר אבניה ברזל› (“which stone-her/its iron”)
+# ‹ומהרריה תחצב נחשת› (“and-from-mountain-her/its you-shall-hew copper”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:9."
+m.step("Deut.8.9")
+
+# -------------------------- Deut.8.10 · ETNACHTA_SPLIT ---------------------
+# ‹ואכלת ושבעת … וברכת› (“and-eat and-be-satisfied … and-bless”)
+# ‹את יהוה אלהיך› (“obj-marker YHWH God-you/your”)
+# ‹על הארץ הטבה› (“over the-earth the-good”)
+# ‹אשר נתן לך› (“which gave to-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:10."
+m.step("Deut.8.10")
+
+# -------------------------- Deut.8.11 · ETNACHTA_SPLIT ---------------------
+# ‹השמר לך פן› (“keep/guard to-you/your lest”)
+# ‹תשכח את יהוה› (“forget obj-marker YHWH”)
+# ‹אלהיך … לבלתי שמר› (“God-you/your … so-as-not keep/guard”)
+# ‹מצותיו ומשפטיו וחקתיו› (“his-commandments and-judgment-him/its and-
+# statute-him/its”)
+# ‹אשר אנכי מצוך› (“which I command-you/your”)
+# ‹היום› (“the-day”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:11."
+m.step("Deut.8.11")
+# witness-tier presupposed read:
+# the_houses_the_herds_the_silver_and_gold_the_heart_lifted_up on
+# take_heed_lest_you_forget — read, not installed
+m.witness_read("take_heed_lest_you_forget", "the_houses_the_herds_the_silver_and_gold_the_heart_lifted_up",
+                cites=["Onkelos Deut 8:11", "Onkelos Deut 8:12", "Onkelos Deut 8:13", "Onkelos Deut 8:14", "Sifrei Devarim 43:7", "Sifrei Devarim 318:1"])
+
+# -------------------------- Deut.8.12 · ETNACHTA_SPLIT ---------------------
+# ‹פן תאכל ושבעת› (“lest eat and-be-satisfied”)
+# ‹… ובתים טובים תבנה› (“and-house good build”)
+# ‹וישבת› (“and-dwell/sit”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:12."
+m.step("Deut.8.12")
+
+# -------------------------- Deut.8.13 · ETNACHTA_SPLIT ---------------------
+# ‹ובקרך וצאנך ירבין› (“and-herd-you/your and-flock-you/your multiply”)
+# ‹וכסף וזהב ירבה› (“and-silver and-gold multiply”)
+# ‹לך … וכל אשר› (“to-you/your … and-all which”)
+# ‹לך ירבה› (“to-you/your multiply”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:13."
+m.step("Deut.8.13")
+
+# -------------------------- Deut.8.14 · ETNACHTA_SPLIT ---------------------
+# ‹ורם לבבך … ושכחת› (“and-be-lifted-up heart-you/your … and-forget”)
+# ‹את יהוה אלהיך› (“obj-marker YHWH God-you/your”)
+# ‹המוציאך מארץ מצרים› (“who-brought-you-out from-earth Egypt”)
+# ‹מבית עבדים› (“from-house bondage”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:14."
+m.step("Deut.8.14")
+
+# -------------------------- Deut.8.15 · ETNACHTA_SPLIT ---------------------
+# ‹המוליכך במדבר הגדל› (“who-led-you in-the-wilderness the-great”)
+# ‹והנורא נחש שרף› (“and-the-terrible snake fiery-serpent”)
+# ‹ועקרב וצמאון אשר› (“and-scorpion and-drought which”)
+# ‹אין מים … המוציא› (“there-is-not waters … who-brought-out”)
+# ‹לך מים מצור› (“to-you/your waters from-the-rock”)
+# ‹החלמיש› (“the-flint”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:15."
+m.step("Deut.8.15")
+# witness-tier presupposed read:
+# who_led_you_who_fed_you_my_power_and_my_hand_the_covenant_established on
+# the_chain_and_the_covenant — read, not installed
+m.witness_read("the_chain_and_the_covenant", "who_led_you_who_fed_you_my_power_and_my_hand_the_covenant_established",
+                cites=["Onkelos Deut 8:15", "Onkelos Deut 8:16", "Onkelos Deut 8:17", "Onkelos Deut 8:18", "Sifrei Devarim 53:1", "Sifrei Devarim 313:15"])
+
+# -------------------------- Deut.8.16 · ETNACHTA_SPLIT ---------------------
+# ‹המאכלך מן במדבר› (“who-fed-you manna in-the-wilderness”)
+# ‹אשר לא ידעון› (“which not know”)
+# ‹אבתיך … למען ענתך› (“father-you/your … so-that to-humble-you”)
+# ‹ולמען נסתך להיטבך› (“and-so-that test-you/your to-do-you-good”)
+# ‹באחריתך› (“in-your-end”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:16."
+m.step("Deut.8.16")
+
+# -------------------------- Deut.8.17 · ETNACHTA_SPLIT ---------------------
+# ‹ואמרת בלבבך … כחי› (“and-say in-heart-you/your … my-power”)
+# ‹ועצם ידי עשה› (“and-the-might-of hand-me/my make”)
+# ‹לי את החיל› (“to-me/my obj-marker the-wealth”)
+# ‹הזה› (“the-this”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:17."
+m.step("Deut.8.17")
+
+# -------------------------- Deut.8.18 · ETNACHTA_SPLIT ---------------------
+# ‹וזכרת את יהוה› (“and-remember obj-marker YHWH”)
+# ‹אלהיך כי הוא› (“God-you/your that he/it”)
+# ‹הנתן לך כח› (“who-gives to-you/your power”)
+# ‹לעשות חיל … למען› (“to-make wealth … so-that”)
+# ‹הקים את בריתו› (“to-establish obj-marker covenant-him/its”)
+# ‹אשר נשבע לאבתיך› (“which swear to-father-you/your”)
+# ‹כיום הזה› (“like-day the-this”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:18."
+m.step("Deut.8.18")
+
+# -------------------------- Deut.8.19 · COND_אם (“if”) ---------------------
+# ‹והיה אם שכח› (“and-be if forget”)
+# ‹תשכח את יהוה› (“forget obj-marker YHWH”)
+# ‹אלהיך והלכת אחרי› (“God-you/your and-walk/go after”)
+# ‹אלהים אחרים ועבדתם› (“God other and-work/serve-them/their”)
+# ‹… העדתי בכם היום› (“testify in-you/your(pl) the-day”)
+# ‹כי אבד תאבדון› (“that perish you-shall-perish”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:19."
+m.step("Deut.8.19")
+# witness-tier presupposed read: if_you_forget_and_serve_other_gods_you_shal
+# l_surely_perish_like_the_nations on the_testimony — read, not installed
+m.witness_read("the_testimony", "if_you_forget_and_serve_other_gods_you_shall_surely_perish_like_the_nations",
+                cites=["Onkelos Deut 8:19", "Onkelos Deut 8:20", "Sifrei Devarim 48:8"])
+
+# -------------------------- Deut.8.20 · ETNACHTA_SPLIT ---------------------
+# ‹כגוים אשר יהוה› (“like-the-nations which YHWH”)
+# ‹מאביד מפניכם כן› (“makes-perish from-face-you/your(pl) so”)
+# ‹תאבדון … עקב לא› (“you-shall-perish … because not”)
+# ‹תשמעון בקול יהוה› (“hear in-voice/sound YHWH”)
+# ‹אלהיכם› (“God-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:20."
+m.step("Deut.8.20")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('the_frame', 'all_the_commandment_that_you_may_live_and_possess_the_land'), ('the_way_of_forty_years', 'the_humbling_the_manna_not_by_bread_alone_the_discipline_of_a_son'), ('the_good_land', 'brooks_and_deeps_the_seven_species_iron_and_copper_eat_be_satisfied_bless'), ('take_heed_lest_you_forget', 'the_houses_the_herds_the_silver_and_gold_the_heart_lifted_up'), ('the_chain_and_the_covenant', 'who_led_you_who_fed_you_my_power_and_my_hand_the_covenant_established'), ('the_testimony', 'if_you_forget_and_serve_other_gods_you_shall_surely_perish_like_the_nations')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Deut 8:1']
+    assert all('all_the_commandment_that_you_may_live_and_possess_the_land' not in f for f in m.WORLD["facts"])
+    assert 'the_frame' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Deut 8:2', 'Onkelos Deut 8:3', 'Onkelos Deut 8:4', 'Onkelos Deut 8:5', 'Onkelos Deut 8:6', 'Sifrei Devarim 32:10', 'Sifrei Devarim 32:12', 'Sifrei Devarim 32:15', 'Sifrei Devarim 48:10']
+    assert all('the_humbling_the_manna_not_by_bread_alone_the_discipline_of_a_son' not in f for f in m.WORLD["facts"])
+    assert 'the_way_of_forty_years' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Deut 8:7', 'Onkelos Deut 8:8', 'Onkelos Deut 8:9', 'Onkelos Deut 8:10', 'Sifrei Devarim 19:2', 'Sifrei Devarim 37:5', 'Sifrei Devarim 39:4', 'Sifrei Devarim 39:6', 'Sifrei Devarim 39:8', 'Sifrei Devarim 40:10', 'Sifrei Devarim 297:4']
+    assert all('brooks_and_deeps_the_seven_species_iron_and_copper_eat_be_satisfied_bless' not in f for f in m.WORLD["facts"])
+    assert 'the_good_land' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Deut 8:11', 'Onkelos Deut 8:12', 'Onkelos Deut 8:13', 'Onkelos Deut 8:14', 'Sifrei Devarim 43:7', 'Sifrei Devarim 318:1']
+    assert all('the_houses_the_herds_the_silver_and_gold_the_heart_lifted_up' not in f for f in m.WORLD["facts"])
+    assert 'take_heed_lest_you_forget' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Deut 8:15', 'Onkelos Deut 8:16', 'Onkelos Deut 8:17', 'Onkelos Deut 8:18', 'Sifrei Devarim 53:1', 'Sifrei Devarim 313:15']
+    assert all('who_led_you_who_fed_you_my_power_and_my_hand_the_covenant_established' not in f for f in m.WORLD["facts"])
+    assert 'the_chain_and_the_covenant' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Deut 8:19', 'Onkelos Deut 8:20', 'Sifrei Devarim 48:8']
+    assert all('if_you_forget_and_serve_other_gods_you_shall_surely_perish_like_the_nations' not in f for f in m.WORLD["facts"])
+    assert 'the_testimony' not in m.WORLD["witnessed"]
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: deu_09_not_righteousness
+###############################################################################
+
+m = Machine("deu_09_not_righteousness")
+
+# -------------------------- Deut.9.1 · ETNACHTA_SPLIT ----------------------
+# ‹שמע ישראל אתה› (“hear Israel you”)
+# ‹עבר היום את› (“pass-over the-day obj-marker”)
+# ‹הירדן לבא לרשת› (“the-Jordan to-come/bring to-possess/inherit”)
+# ‹גוים גדלים ועצמים› (“nation great and-mighty”)
+# ‹מ … ערים גדלת› (“? … city great”)
+# ‹ובצרת בשמים› (“and-fortified in-heavens”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:1."
+m.step("Deut.9.1")
+# witness-tier presupposed read:
+# the_nations_greater_the_consuming_fire_the_word_sworn_the_stiff_neck on
+# not_for_your_righteousness — read, not installed
+m.witness_read("not_for_your_righteousness", "the_nations_greater_the_consuming_fire_the_word_sworn_the_stiff_neck",
+                cites=["Onkelos Deut 9:1", "Onkelos Deut 9:2", "Onkelos Deut 9:3", "Onkelos Deut 9:4", "Onkelos Deut 9:5", "Onkelos Deut 9:6", "Sifrei Devarim 25:4"])
+
+# -------------------------- Deut.9.2 · ETNACHTA_SPLIT ----------------------
+# ‹עם גדול ורם› (“people great and-tall”)
+# ‹בני ענקים … אשר› (“son Anakim … which”)
+# ‹אתה ידעת ואתה› (“you know and-you”)
+# ‹שמעת מי יתיצב› (“hear who? stand”)
+# ‹לפני בני ענק› (“to-face son Anak”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:2."
+m.step("Deut.9.2")
+
+# -------------------------- Deut.9.3 · COND_כי (“that”) --------------------
+# ‹וידעת היום כי› (“and-know the-day that”)
+# ‹יהוה אלהיך הוא› (“YHWH God-you/your he/it”)
+# ‹העבר לפניך אש› (“who-passes-over to-face-you/your fire”)
+# ‹אכלה הוא ישמידם› (“eat he/it destroyed-them”)
+# ‹ו … והורשתם והאבדתם› (“? … and-you-shall-dispossess-them and-destroy-
+# them”)
+# ‹מהר כאשר דבר› (“quickly like-as/which speak”)
+# ‹יהוה לך› (“YHWH to-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:3."
+m.step("Deut.9.3")
+
+# -------------------------- Deut.9.4 · ETNACHTA_SPLIT ----------------------
+# ‹אל תאמר בלבבך› (“do-not say in-heart-you/your”)
+# ‹בהדף יהוה אלהיך› (“when-thrusting-out YHWH God-you/your”)
+# ‹אתם מלפניך לאמר› (“obj-marker-them/their from-to-face-you/your to-say”)
+# ‹בצדקתי הביאני … וברשעת› (“for-my-righteousness has-brought-me … and-in-
+# wrong”)
+# ‹הגוים האלה יהוה› (“the-nation the-these YHWH”)
+# ‹מורישם מפניך› (“dispossessing-them from-face-you/your”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:4."
+m.step("Deut.9.4")
+
+# -------------------------- Deut.9.5 · ETNACHTA_SPLIT ----------------------
+# ‹לא בצדקתך ובישר› (“not for-your-righteousness and-for-the-uprightness-
+# of”)
+# ‹לבבך אתה בא› (“heart-you/your you come/bring”)
+# ‹לרשת את ארצם› (“to-possess/inherit obj-marker earth-them/their”)
+# ‹… כי ברשעת הגוים› (“that for-the-wickedness-of the-nation”)
+# ‹האלה יהוה אלהיך› (“the-these YHWH God-you/your”)
+# ‹מורישם מפניך ולמען› (“dispossessing-them from-face-you/your and-so-that”)
+# ‹הקים את הד› (“to-establish obj-marker ?”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:5."
+m.step("Deut.9.5")
+
+# -------------------------- Deut.9.6 · COND_כי (“that”) --------------------
+# ‹וידעת כי לא› (“and-know that not”)
+# ‹בצדקתך יהוה אלהיך› (“for-your-righteousness YHWH God-you/your”)
+# ‹נתן לך את› (“set to-you/your obj-marker”)
+# ‹הארץ הטובה הזאת› (“the-earth the-good the-this”)
+# ‹לרשת … כי עם› (“to-possess/inherit … that people”)
+# ‹קשה ערף אתה› (“stiff neck you”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:6."
+m.step("Deut.9.6")
+
+# -------------------------- Deut.9.7 · ETNACHTA_SPLIT ----------------------
+# ‹זכר אל תשכח› (“remember do-not forget”)
+# ‹את אשר הקצפת› (“obj-marker which provoke”)
+# ‹את יהוה אלהיך› (“obj-marker YHWH God-you/your”)
+# ‹במדבר … למן היום› (“in-the-wilderness … from the-day”)
+# ‹אשר יצאת מארץ› (“which bring-forth from-earth”)
+# ‹מצרים עד באכם› (“Egypt until come/bring-you/your(pl)”)
+# ‹עד המקום הזה› (“until the-place the-this”)
+# ‹ממרים היית› (“rebellious be”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:7."
+m.step("Deut.9.7")
+# witness-tier presupposed read: the_first_forty_days_the_tablets_of_the_cov
+# enant_the_finger_of_God_let_me_alone on the_calf_retold — read, not
+# installed
+m.witness_read("the_calf_retold", "the_first_forty_days_the_tablets_of_the_covenant_the_finger_of_God_let_me_alone",
+                cites=["Onkelos Deut 9:7", "Onkelos Deut 9:8", "Onkelos Deut 9:9", "Onkelos Deut 9:10", "Onkelos Deut 9:11", "Onkelos Deut 9:12", "Onkelos Deut 9:13", "Onkelos Deut 9:14", "Sifrei Devarim 14:1", "Sifrei Devarim 27:2", "Sifrei Devarim 306:25", "Sifrei Devarim 342:1"])
+
+# -------------------------- Deut.9.8 · ETNACHTA_SPLIT ----------------------
+# ‹ובחרב הקצפתם את› (“and-in-Horeb provoke obj-marker”)
+# ‹יהוה … ויתאנף יהוה› (“YHWH … and-was-angry YHWH”)
+# ‹בכם להשמיד אתכם› (“in-you/your(pl) to-destroy obj-marker-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:8."
+m.step("Deut.9.8")
+
+# -------------------------- Deut.9.9 · ETNACHTA_SPLIT ----------------------
+# ‹בעלתי ההרה לקחת› (“when-I-went-up to-the-mountain to-take”)
+# ‹לוחת האבנים לוחת› (“tablets the-stone tablets”)
+# ‹הברית אשר כרת› (“the-covenant which cut”)
+# ‹יהוה עמכם … ואשב› (“YHWH with-you/your(pl) … and-I-stayed”)
+# ‹בהר ארבעים יום› (“in-mountain forty day”)
+# ‹וארבעים לילה לחם› (“and-forty night bread”)
+# ‹לא אכלתי ומים› (“not eat and-waters”)
+# ‹לא שתיתי› (“not drink”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:9."
+m.step("Deut.9.9")
+
+# -------------------------- Deut.9.10 · ETNACHTA_SPLIT ---------------------
+# ‹ויתן יהוה אלי› (“and-set YHWH to-me/my”)
+# ‹את שני לוחת› (“obj-marker two tablets”)
+# ‹האבנים כתבים באצבע› (“the-stone written with-the-finger”)
+# ‹אלהים … ועליהם ככל› (“God … and-over-them/their like-all”)
+# ‹הדברים אשר דבר› (“the-word/thing which speak”)
+# ‹יהוה עמכם בהר› (“YHWH with-you/your(pl) in-mountain”)
+# ‹מתוך האש ביום› (“from-midst the-fire in-day”)
+# ‹הקהל› (“the-assembly”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:10."
+m.step("Deut.9.10")
+
+# -------------------------- Deut.9.11 · ETNACHTA_SPLIT ---------------------
+# ‹ויהי מקץ ארבעים› (“and-be at-the-end-of forty”)
+# ‹יום וארבעים לילה› (“day and-forty night”)
+# ‹… נתן יהוה אלי› (“set YHWH to-me/my”)
+# ‹את שני לחת› (“obj-marker two tablets”)
+# ‹האבנים לחות הברית› (“the-stone tablets the-covenant”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:11."
+m.step("Deut.9.11")
+
+# -------------------------- Deut.9.12 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר יהוה אלי› (“and-say YHWH to-me/my”)
+# ‹קום רד מהר› (“arise go-down quickly”)
+# ‹מזה כי שחת› (“from-this that has-corrupted”)
+# ‹עמך אשר הוצאת› (“people-you/your which bring-forth”)
+# ‹ממצרים … סרו מהר› (“from-Egypt … turn-aside quickly”)
+# ‹מן הדרך אשר› (“from the-way/road which”)
+# ‹צויתם עשו להם› (“I-commanded-them make to-them/their”)
+# ‹מסכה› (“molten-image”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:12."
+m.step("Deut.9.12")
+# witness-tier presupposed read: the_calf_the_forty_days_the_tablets_the_pro
+# vocations_the_prayer_owed_to_the_compile on the_retelling_on_the_tape —
+# read, not installed
+m.witness_read("the_retelling_on_the_tape", "the_calf_the_forty_days_the_tablets_the_provocations_the_prayer_owed_to_the_compile",
+                cites=["Onkelos Deut 9:8", "Onkelos Deut 9:9", "Onkelos Deut 9:10", "Onkelos Deut 9:11", "Onkelos Deut 9:12", "Onkelos Deut 9:13", "Onkelos Deut 9:14", "Onkelos Deut 9:15", "Onkelos Deut 9:16", "Onkelos Deut 9:17", "Onkelos Deut 9:18", "Onkelos Deut 9:19", "Onkelos Deut 9:20", "Onkelos Deut 9:21", "Onkelos Deut 9:25", "Onkelos Deut 9:26", "Onkelos Deut 9:27", "Onkelos Deut 9:28", "Onkelos Deut 9:29"])
+
+# -------------------------- Deut.9.13 · ETNACHTA_SPLIT ---------------------
+# ‹ויאמר יהוה אלי› (“and-say YHWH to-me/my”)
+# ‹לאמר … ראיתי את› (“to-say … see obj-marker”)
+# ‹העם הזה והנה› (“the-people the-this and-behold”)
+# ‹עם קשה ערף› (“people stiff neck”)
+# ‹הוא› (“he/it”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:13."
+m.step("Deut.9.13")
+
+# -------------------------- Deut.9.14 · ETNACHTA_SPLIT ---------------------
+# ‹הרף ממני ואשמידם› (“let-alone from-me/my and-destroyed-them”)
+# ‹ואמחה את שמם› (“and-blot-out obj-marker their-name”)
+# ‹מתחת השמים … ואעשה› (“beneath the-heavens … and-make”)
+# ‹אותך לגוי עצום› (“obj-marker-you/your to-nation powerful”)
+# ‹ורב ממנו› (“and-more-numerous from-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:14."
+m.step("Deut.9.14")
+
+# -------------------------- Deut.9.15 · ETNACHTA_SPLIT ---------------------
+# ‹ואפן וארד מן› (“and-I-turned and-I-came-down from”)
+# ‹ההר וההר בער› (“the-mountain and-the-mountain burn”)
+# ‹באש … ושני לחת› (“in-fire … and-two tablets”)
+# ‹הברית על שתי› (“the-covenant over two”)
+# ‹ידי› (“my-hands”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:15."
+m.step("Deut.9.15")
+# witness-tier presupposed read:
+# the_second_forty_days_aarons_peril_the_calfs_dust on the_breaking — read,
+# not installed
+m.witness_read("the_breaking", "the_second_forty_days_aarons_peril_the_calfs_dust",
+                cites=["Onkelos Deut 9:15", "Onkelos Deut 9:16", "Onkelos Deut 9:17", "Onkelos Deut 9:18", "Onkelos Deut 9:19", "Onkelos Deut 9:20", "Onkelos Deut 9:21", "Sifrei Devarim 357:44"])
+
+# -------------------------- Deut.9.16 · ETNACHTA_SPLIT ---------------------
+# ‹וארא והנה חטאתם› (“and-see and-behold sin”)
+# ‹ליהוה אלהיכם עשיתם› (“to-YHWH God-you/your(pl) make”)
+# ‹לכם עגל מסכה› (“to-you/your(pl) calf molten-image”)
+# ‹… סרתם מהר מן› (“turn-aside quickly from”)
+# ‹הדרך אשר צוה› (“the-way/road which command”)
+# ‹יהוה אתכם› (“YHWH obj-marker-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:16."
+m.step("Deut.9.16")
+
+# -------------------------- Deut.9.17 · ETNACHTA_SPLIT ---------------------
+# ‹ואתפש בשני הלחת› (“and-I-took-hold-of the-two the-tablets”)
+# ‹ואשלכם מעל שתי› (“and-I-threw-them from-upon two”)
+# ‹ידי … ואשברם לעיניכם› (“my-hands … and-broke-them before-your-eyes”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:17."
+m.step("Deut.9.17")
+
+# -------------------------- Deut.9.18 · ETNACHTA_SPLIT ---------------------
+# ‹ואתנפל לפני יהוה› (“and-I-fell-down to-face YHWH”)
+# ‹כראשנה ארבעים יום› (“as-at-the-first forty day”)
+# ‹וארבעים לילה לחם› (“and-forty night bread”)
+# ‹לא אכלתי … על› (“not eat … over”)
+# ‹כל חטאתכם אשר› (“all your-sin which”)
+# ‹חטאתם לעשות הרע› (“sin to-make the-bad”)
+# ‹בעיני יהוה להכעיסו› (“in-eye YHWH to-provoke-him”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:18."
+m.step("Deut.9.18")
+
+# -------------------------- Deut.9.19 · COND_כי (“that”) -------------------
+# ‹כי יגרתי מפני› (“that fear from-face”)
+# ‹האף והחמה אשר› (“the-anger and-the-wrath which”)
+# ‹קצף יהוה עליכם› (“provoke YHWH over-you/your(pl)”)
+# ‹להשמיד אתכם … וישמע› (“to-destroy obj-marker-you/your(pl) … and-hear”)
+# ‹יהוה אלי גם› (“YHWH to-me/my also”)
+# ‹בפעם ההוא› (“at-the-time that”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:19."
+m.step("Deut.9.19")
+
+# -------------------------- Deut.9.20 · ETNACHTA_SPLIT ---------------------
+# ‹ובאהרן התאנף יהוה› (“and-in-Aaron was-angry YHWH”)
+# ‹מאד להשמידו … ואתפלל› (“very to-destroy-him … and-I-prayed”)
+# ‹גם בעד אהרן› (“also for Aaron”)
+# ‹בעת ההוא› (“at-the-time that”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:20."
+m.step("Deut.9.20")
+
+# -------------------------- Deut.9.21 · ETNACHTA_SPLIT ---------------------
+# ‹ואת חטאתכם אשר› (“and-obj-marker your-sin which”)
+# ‹עשיתם את העגל› (“make obj-marker the-calf”)
+# ‹לקחתי ואשרף אתו› (“take and-I-burned obj-marker-him/its”)
+# ‹באש ואכת אתו› (“in-fire and-I-crushed obj-marker-him/its”)
+# ‹טח … ואשלך את› (“? … and-I-threw obj-marker”)
+# ‹עפרו אל הנחל› (“its-dust to the-brook”)
+# ‹הירד מן ההר› (“that-descends from the-mountain”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:21."
+m.step("Deut.9.21")
+
+# -------------------------- Deut.9.22 · ETNACHTA_SPLIT ---------------------
+# ‹ובתבערה ובמסה ובקברת› (“and-in-Taberah and-in-Massah and-in-Kibroth”)
+# ‹התאוה … מקצפים הייתם› (“hattaavah … provoke be”)
+# ‹את יהוה› (“obj-marker YHWH”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:22."
+m.step("Deut.9.22")
+# witness-tier presupposed read:
+# taberah_massah_kibroth_hattaavah_kadesh_barnea on the_four_provocations —
+# read, not installed
+m.witness_read("the_four_provocations", "taberah_massah_kibroth_hattaavah_kadesh_barnea",
+                cites=["Onkelos Deut 9:22", "Onkelos Deut 9:23", "Onkelos Deut 9:24"])
+
+# -------------------------- Deut.9.23 · ETNACHTA_SPLIT ---------------------
+# ‹ובשלח יהוה אתכם› (“and-when-sent YHWH obj-marker-you/your(pl)”)
+# ‹מקדש ברנע לאמר› (“from-Kadesh barnea to-say”)
+# ‹עלו ורשו את› (“go-up and-possess/inherit obj-marker”)
+# ‹הארץ אשר נתתי› (“the-earth which set”)
+# ‹לכם … ותמרו את› (“to-you/your(pl) … and-you-rebelled-against obj-marker”)
+# ‹פי יהוה אלהיכם› (“mouth YHWH God-you/your(pl)”)
+# ‹ולא האמנתם לו› (“and-not you-believed to-him/its”)
+# ‹ולא שמעתם בקלו› (“and-not hear in-voice/sound-him/its”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:23."
+m.step("Deut.9.23")
+
+# -------------------------- Deut.9.24 · ETNACHTA_SPLIT ---------------------
+# ‹ממרים הייתם עם› (“rebellious be with”)
+# ‹יהוה … מיום דעתי› (“YHWH … from-day I-knew”)
+# ‹אתכם› (“obj-marker-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:24."
+m.step("Deut.9.24")
+
+# -------------------------- Deut.9.25 · ETNACHTA_SPLIT ---------------------
+# ‹ואתנפל לפני יהוה› (“and-I-fell-down to-face YHWH”)
+# ‹את ארבעים היום› (“obj-marker forty the-day”)
+# ‹ואת ארבעים הלילה› (“and-obj-marker forty the-night”)
+# ‹אשר התנפלתי … כי› (“which I-fell-down … that”)
+# ‹אמר יהוה להשמיד› (“say YHWH to-destroy”)
+# ‹אתכם› (“obj-marker-you/your(pl)”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:25."
+m.step("Deut.9.25")
+# witness-tier presupposed read:
+# your_people_and_your_inheritance_remember_your_servants_lest_the_land_say
+# on the_intercession — read, not installed
+m.witness_read("the_intercession", "your_people_and_your_inheritance_remember_your_servants_lest_the_land_say",
+                cites=["Onkelos Deut 9:25", "Onkelos Deut 9:26", "Onkelos Deut 9:27", "Onkelos Deut 9:28", "Onkelos Deut 9:29", "Sifrei Devarim 26:7"])
+
+# -------------------------- Deut.9.26 · ETNACHTA_SPLIT ---------------------
+# ‹ואתפלל אל יהוה› (“and-I-prayed to YHWH”)
+# ‹ואמר אדני יהוה› (“and-say Lord YHWH”)
+# ‹אל תשחת עמך› (“do-not destroy people-you/your”)
+# ‹ונחלתך אשר פדית› (“and-your-inheritance which you-redeemed”)
+# ‹בג … אשר הוצאת› (“? … which bring-forth”)
+# ‹ממצרים ביד חזקה› (“from-Egypt in-hand strong”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:26."
+m.step("Deut.9.26")
+
+# -------------------------- Deut.9.27 · ETNACHTA_SPLIT ---------------------
+# ‹זכר לעבדיך לאברהם› (“remember to-your-servants to-Abraham”)
+# ‹ליצחק וליעקב … אל› (“to-Isaac and-to-Jacob … do-not”)
+# ‹תפן אל קשי› (“turn to stubbornness”)
+# ‹העם הזה ואל› (“the-people the-this and-to”)
+# ‹רשעו ואל חטאתו› (“its-wickedness and-to its-sin”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:27."
+m.step("Deut.9.27")
+
+# -------------------------- Deut.9.28 · ETNACHTA_SPLIT ---------------------
+# ‹פן יאמרו הארץ› (“lest say the-earth”)
+# ‹אשר הוצאתנו משם› (“which brought-us-out from-there”)
+# ‹מבלי יכלת יהוה› (“for-lack-of be-able YHWH”)
+# ‹להביאם אל הארץ› (“to-bring-them to the-earth”)
+# ‹… ומשנאתו אותם הוציאם› (“and-because-of-his-hatred-of obj-marker-
+# them/their he-brought-them-out”)
+# ‹להמתם במדבר› (“to-kill-them in-the-wilderness”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:28."
+m.step("Deut.9.28")
+
+# -------------------------- Deut.9.29 · ETNACHTA_SPLIT ---------------------
+# ‹והם עמך ונחלתך› (“and-they people-you/your and-your-inheritance”)
+# ‹… אשר הוצאת בכחך› (“which bring-forth with-your-power”)
+# ‹הגדל ובזרעך הנטויה› (“the-great and-with-your-arm the-outstretched”)
+# "[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 9:29."
+m.step("Deut.9.29")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted([])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('not_for_your_righteousness', 'the_nations_greater_the_consuming_fire_the_word_sworn_the_stiff_neck'), ('the_calf_retold', 'the_first_forty_days_the_tablets_of_the_covenant_the_finger_of_God_let_me_alone'), ('the_retelling_on_the_tape', 'the_calf_the_forty_days_the_tablets_the_provocations_the_prayer_owed_to_the_compile'), ('the_breaking', 'the_second_forty_days_aarons_peril_the_calfs_dust'), ('the_four_provocations', 'taberah_massah_kibroth_hattaavah_kadesh_barnea'), ('the_intercession', 'your_people_and_your_inheritance_remember_your_servants_lest_the_land_say')]
+    assert m.WITNESS_READS[0]["cites"] == ['Onkelos Deut 9:1', 'Onkelos Deut 9:2', 'Onkelos Deut 9:3', 'Onkelos Deut 9:4', 'Onkelos Deut 9:5', 'Onkelos Deut 9:6', 'Sifrei Devarim 25:4']
+    assert all('the_nations_greater_the_consuming_fire_the_word_sworn_the_stiff_neck' not in f for f in m.WORLD["facts"])
+    assert 'not_for_your_righteousness' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[1]["cites"] == ['Onkelos Deut 9:7', 'Onkelos Deut 9:8', 'Onkelos Deut 9:9', 'Onkelos Deut 9:10', 'Onkelos Deut 9:11', 'Onkelos Deut 9:12', 'Onkelos Deut 9:13', 'Onkelos Deut 9:14', 'Sifrei Devarim 14:1', 'Sifrei Devarim 27:2', 'Sifrei Devarim 306:25', 'Sifrei Devarim 342:1']
+    assert all('the_first_forty_days_the_tablets_of_the_covenant_the_finger_of_God_let_me_alone' not in f for f in m.WORLD["facts"])
+    assert 'the_calf_retold' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[2]["cites"] == ['Onkelos Deut 9:8', 'Onkelos Deut 9:9', 'Onkelos Deut 9:10', 'Onkelos Deut 9:11', 'Onkelos Deut 9:12', 'Onkelos Deut 9:13', 'Onkelos Deut 9:14', 'Onkelos Deut 9:15', 'Onkelos Deut 9:16', 'Onkelos Deut 9:17', 'Onkelos Deut 9:18', 'Onkelos Deut 9:19', 'Onkelos Deut 9:20', 'Onkelos Deut 9:21', 'Onkelos Deut 9:25', 'Onkelos Deut 9:26', 'Onkelos Deut 9:27', 'Onkelos Deut 9:28', 'Onkelos Deut 9:29']
+    assert all('the_calf_the_forty_days_the_tablets_the_provocations_the_prayer_owed_to_the_compile' not in f for f in m.WORLD["facts"])
+    assert 'the_retelling_on_the_tape' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[3]["cites"] == ['Onkelos Deut 9:15', 'Onkelos Deut 9:16', 'Onkelos Deut 9:17', 'Onkelos Deut 9:18', 'Onkelos Deut 9:19', 'Onkelos Deut 9:20', 'Onkelos Deut 9:21', 'Sifrei Devarim 357:44']
+    assert all('the_second_forty_days_aarons_peril_the_calfs_dust' not in f for f in m.WORLD["facts"])
+    assert 'the_breaking' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[4]["cites"] == ['Onkelos Deut 9:22', 'Onkelos Deut 9:23', 'Onkelos Deut 9:24']
+    assert all('taberah_massah_kibroth_hattaavah_kadesh_barnea' not in f for f in m.WORLD["facts"])
+    assert 'the_four_provocations' not in m.WORLD["witnessed"]
+    assert m.WITNESS_READS[5]["cites"] == ['Onkelos Deut 9:25', 'Onkelos Deut 9:26', 'Onkelos Deut 9:27', 'Onkelos Deut 9:28', 'Onkelos Deut 9:29', 'Sifrei Devarim 26:7']
+    assert all('your_people_and_your_inheritance_remember_your_servants_lest_the_land_say' not in f for f in m.WORLD["facts"])
+    assert 'the_intercession' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
 
 

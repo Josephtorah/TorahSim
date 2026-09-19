@@ -2,12 +2,13 @@
 """A markdown file to an EPUB (2026-09-16, on the owner's "create an epub also" for THE_TEN_AS_A_SCHEMA.md).
     python3 ARCHITECTURE/tools/build_md_epub.py ARCHITECTURE/THE_TEN_AS_A_SCHEMA.md
 Writes the .epub beside the .md. Handles: # / ## / ### headers (each ## opens a chapter), paragraphs, bullet and numbered lists,
-pipe tables, horizontal rules, **bold**, *italic*, `code`. No external tool (pandoc is not installed here)."""
+pipe tables, horizontal rules, **bold**, *italic*, `code`, [links] (as their text). No external tool (pandoc is not installed here)."""
 import html, os, re, sys, time, uuid, zipfile
 import xml.etree.ElementTree as ET
 
 def inline(s):
     s = html.escape(s, quote=False)
+    s = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'\1', s)   # [text](file) -> text (the target file is not inside the epub; 2026-09-18)
     s = re.sub(r'`([^`]+)`', r'<code>\1</code>', s)
     s = re.sub(r'\*\*([^*]+)\*\*', r'<b>\1</b>', s)
     s = re.sub(r'(?<![\w*])\*([^*\n]+)\*(?![\w*])', r'<i>\1</i>', s)

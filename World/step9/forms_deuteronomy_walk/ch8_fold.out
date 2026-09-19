@@ -1,0 +1,13 @@
+the tripwire set to the prediction: units 222, standing 2215, hash 8b8fff1fa28953af unmoved
+=== CHECK BEFORE THE BAKE (fold unwritten)
+CORPUS TRUTH GREEN — one world, 222 units, 1809 facts, 341 demands (191 open), hash 8b8fff1fa28953af
+=== THE BAKE
+exit 0
+  OPEN  lev_19       Lev.19.2    LET(YHWH)  daber_el_kal_adat(moshe)
+state hash 8b8fff1fa28953af
+wrote corpus_world.sqlite + CORPUS_TRUTH.py
+=== CHECK AFTER THE BAKE
+CORPUS TRUTH GREEN — one world, 222 units, 1809 facts, 341 demands (191 open), hash 8b8fff1fa28953af
+27:assert len(W["units"]) == 222
+32:assert len(W["standing"]) == 2215
+37:assert corpus_world._state_hash(W) == '8b8fff1fa28953af'

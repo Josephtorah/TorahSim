@@ -4359,6 +4359,69 @@ The runner matched its answer sheet on the first run; the tape reached ten of te
 count Israel's debits, moved by the new one and retyped from the print; every probe suite and every gate green in one chain, the sweep whole. Next: the
 commit on your word; then chapter 8's reading — or the schema sitting first, on your word.
 
+THE TWO-RUN RULE (2026-09-18, on Brian's "Yes" to "Can we combine runs? These are too short", after chapter 7's commit). The four-run rule of 2026-09-16 was written
+after one sitting ran to six hundred thousand tokens. Under it the runs came in at one to two hundred thousand each against a window of a million, and the
+window that finished chapter 7's compile, rewrote the tutorial and made the commit used two hundred and thirty thousand. So a compile sitting is now TWO RUNS,
+with a stopping point after each: RUN A is the rereads, the measurements, the design in the map, and the docket with every row read whole; RUN B is the types,
+the runner, the tape to ten of ten, the gates in one chain, the records in one call, the forms, and the commit message for Brian's word. A reading sitting is
+ONE run. Each run near three hundred thousand, never six hundred. A docket past about seven hundred rows takes a run of its own. Nothing else changes: every
+row whole, the design before the code, the gates in one chain, the records in one call, the stopping point announced and Brian compacting.
+DEUTERONOMY — SITTING 6 — CHAPTER 8, Deuteronomy 8:1-20 (2026-09-18, on Brian's "Go" after chapter 7's commit and the two-run rule, then "Reread" after the
+one compaction; World/step9/DEUTERONOMY_WALK.md "Sitting 6" and "Sitting 6 — AS BUILT").
+The chapter of the manna and the good land: remember the forty years, the humbling and the testing, "not by bread alone"; a land of brooks and of the seven
+kinds of fruit; eat, be satisfied, bless; take heed lest, full and rich, you forget who brought you out; "my power and the might of my hand" answered by "He
+gives you the power"; if you forget and serve other gods, you perish like the nations. The first reading sitting under the two-run rule, and it fit one run
+with one stopping point inside it. The Sifrei has no section on this chapter either, but it quotes the chapter sixteen times from elsewhere — mostly from
+its sections on the next chapter's praise of the Land, which quote this chapter's praise back at it — and every one of those rows was read whole, five of
+them for the second time. What the reading found: one verse (8:8) is the only place in the whole Bible that names all seven kinds of fruit the Land is praised
+for, and it names honey without milk; 8:10 is the Torah's one command to bless God, the seat of the grace after meals, which no cell of our machine yet
+compiles; the chapter's "silver and gold shall multiply for you" uses the very words of the king's law "he shall not multiply silver and gold"; our text
+store carries an extra token at 8:2 where a word is written one way and read another; and the garment that did not wear out for forty years is a state the
+tape never wrote as an event — a question for the compile. The chapter is frozen as one unit, the 222nd, the world's standing facts up by six as predicted,
+its hash unmoved, every gate green. Next: the commit on your word; then the compile of chapter 8 in two runs — the grace after meals, the seven kinds, the
+manna, the forty years as a state, the discipline, the warnings, the testimony — or the ten-commandments schema first.
+
+
+DEUTERONOMY — SITTING 6b — CHAPTER 8 COMPILED (2026-09-18/19, on Brian's "Next" for the design, "Go" for the docket and "Go run b" for the build;
+World/step9/DEUTERONOMY_WALK.md "Sitting 6b" and "Sitting 6b — AS BUILT"). Chapter 8 tells the wilderness again as a reason — remember the way, lest you
+forget — so this sitting graded each retelling against the tape's own line or the older cell that holds it, eighteen rows, and found one thing the tape
+could not hold: the garment that did not wear out and the foot that did not swell over forty years is a condition, not an act, and a condition has no
+day. That row got a new grade, SUPPLIED, and no line was written back into the past; the machine asserts that no ledger anywhere names the state, and
+the answer sheet turned out to cite that verse nowhere. Two commands had no code: eat, be satisfied and bless — the Torah's one command to bless Him — and
+take heed lest you forget, which chapter 6's cell asked about and never wrote; both were compiled here and written at the day the chapter is spoken. The
+testimony of 8:19 reuses chapter 4's, and that reuse moved one old count in the checks, retyped from the print. The docket read the tractate on blessings
+at its verse-anchored pages whole — four hundred and fifty-one rows, every one entire — and taught what the design had not guessed: the grace is not an
+obligation but follows the eating, and Moses instituted the first blessing when the manna fell, before the verse that commands it. The runner matched its
+sheet on the first run; the tape reached ten of ten on the second; every gate green in one chain. This was the two-run rule's first compile: the design,
+then the docket as its own run, then the build. Next: the commit on your word; then chapter 9's reading.
+
+
+THE GATES CUT (2026-09-19, on Brian's "What is gate chain and why does it take so long" and "Yes make that change. It's too long as it is"; World/step9/
+GATES_CHAIN.md). The gates chain is the machine's whole test bench run in order after a compile — the tape, the probes, the daemon and dependency
+gates, the fold, the journal gate, the register gate, the positions table, the sweep of every runner. It took ninety minutes, and the measuring
+showed where: replaying the three books costs two seconds, but loading the sixty-three runners' code costs two minutes, and every step paid that
+loading, some twice. So the tape's run now saves the running world to a file and the readers load it in a second; the probes run side by side;
+the sweep runs eight runners at a time and grades only the runners that changed since the last green sweep (a shared piece changed means all of
+them); the table of where every checkpoint falls is measured by eight workers at once instead of one. Every guard is a digest of the source,
+never a date: if anything moved, the full work runs. One cut was built and thrown out the same day — asking only the changed checkpoints — because
+a test showed the checkpoints lean on each other across the whole block, so a partial run was nearly the whole run; the table is always measured
+whole. The first chain after the cut took 43 min 23 s with everything in full; the second, with nothing changed, 18 min 27 s; both gave every verdict the old one
+gave. Next: the commit on your word; then chapter 9.
+DEUTERONOMY — SITTING 7 — CHAPTER 9, Deuteronomy 9:1-29 (2026-09-19, on Brian's "Let's keep run as it is and do another section" after the gates cut;
+World/step9/DEUTERONOMY_WALK.md "Sitting 7" and "Sitting 7 — AS BUILT"; a reading sitting is one run). Chapter 9 is Moses telling the calf again in his own
+voice — not for your righteousness, the forty days, the tablets written with God's finger, God's word to go down, the tablets broken before your eyes, forty days
+more of prayer, Aaron's danger, the calf ground to dust, the four places of provoking, and the prayer that God should not destroy His people. The reading measured
+each verse against its first telling: where God speaks, the retelling is word for word (9:13 with Exodus 32:9, eleven tokens of thirteen); where Moses acts, he
+tells it in his own words (9:17 shares one token with Exodus 32:19); one thing has no first telling at all — the LORD's anger at Aaron and Moses' prayer for him
+(9:20) — and that is a question for the compile: an act told only here is written once at its own time. The Sifrei has no section on the chapter; its seven rows
+from elsewhere read the chapter for its prayer, its forty days, its hyperbole, its harsh words and the breaking of the tablets among Moses' wonders. The chapter
+is frozen as one unit, the 223rd, the world's standing facts up by six as predicted, its hash unmoved, every gate green. The ink script fell eighteen ways on its
+first pass — all forms (the shelf's own spellings, a count of one token), none a fact — and held on the second. Next: the commit on your word; then the compile of
+chapter 9 in two runs — the calf's retelling graded against the tape, Aaron's retrograde write, the stiff neck as a state, the three forties and the answer sheet's
+date for the breaking, a new checkpoint series — or the ten-commandments schema first.
+
+
+
 ## Step 6 — Publish
 Export, parity check against the public repo, deploy. Owner's word.
 

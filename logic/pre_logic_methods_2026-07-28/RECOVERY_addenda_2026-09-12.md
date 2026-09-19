@@ -1056,3 +1056,70 @@ the tree uncommitted since 64a8362; commit on the owner's word only.
 
 NEXT ON THE RULING: the commit on the owner's word; then CHAPTER 8's READING (8:1-20 — the manna and the humility, the good land, the forgetting; the
 reading shape in four runs, every row whole). ON THE TABLE, NOT A RULING: the Decalogue-schema sitting; THE INSTALL HYPOTHESIS (tested in passing at 5b).
+
+## 43. ADDENDUM (2026-09-18, THE DEUTERONOMY WALK sitting 6 — CHAPTER 8, Deuteronomy 8:1-20 READ AND FROZEN in ONE run under THE TWO-RUN RULE, every row whole; the owner: "Go", "Get ready to compact", "Reread"; the state doc's #196 and its addendum 1)
+THE STATE: chapter 8 read and frozen as one unit (deu_08_manna_humility, the 222nd); the corpus 222 units, standing 2215 (2209 + 6 as predicted), hash
+8b8fff1fa28953af unmoved; the tape UNMOVED since 5b (RUN (1307, 96, 88, 0, 12, 1602, 38, 319, the four pairs, 127), markers 167, closes 127); the
+journal gate GREEN (12 kinds, 9702 rows); the register gate --strict GREEN (DECLARED 100, DEBT 0, FAILS 0); uncommitted since 29c189b.
+WHAT THE SITTING FOUND: the Sifrei SILENT on the chapter (no piska between 36 on 6:9 and 37 on 11:10) but SIXTEEN rows from elsewhere its whole voice
+— the Ekev piskaot on 11:10-12 quoting the chapter's praise of the Land back at it, eight other piskaot quoting its sentences (five rows reread whole);
+the range citations the Hebrew regex cannot read, found through the English and asserted by string; the two files dividing 39:6-8 differently; the
+kin's spine credited by name from the Numbers walk (Exodus 16-17 through the Mekhilta only); THE SEVEN SPECIES at one seat (8:8) and HONEY WITHOUT
+MILK; "EAT, BE SATISFIED, BLESS" the Torah's one command to bless — no cell anywhere, owed to 6b; the book's one interrogative he (8:2) with the
+manna's test-clause; THE KING'S LAW'S TOKENS at 8:13 and 8:14; "not by bread alone" the one seat; THE WRITTEN/READ PAIR at 8:2 (the store's extra
+token); THE FORTY YEARS AS A STATE the tape never wrote (the compile's design decision); the infinitive absolute of forgetting at 8:19; "because" the
+heel at 8:20; Onkelos's Word twice, the fear thrice, the shoes, the counsel.
+THE TWO-RUN RULE'S FIRST READING SITTING: one run, one compaction inside it (#196), the reread three files, the run resumed at the step named; the
+gates ONE chain in the background with one summary; a middah analogy retyped from the row's words before the manifest was typed.
+THE FILES CHANGED: logic/oral_triage/deu_08_ekev_2026-09-18.md (new); logic/units/deu_08_manna_humility.yaml (draft → frozen, six operators, step E, the scenarios in
+the anchor form) and logic/py_units/deu_08_manna_humility.py; logic/oral_audit/manifests/deu_08_manna_humility_claims.json (new); logic/glosses/word_gloss_overrides.yaml (+20 by
+reference, +32 by gloss); logic/corpus/CORPUS_TRUTH.py (222, 2215) and corpus_world.sqlite; the records (the map, COMPILE_DEBT, MIDDOT, MISHNAH_TOPICS,
+RESEARCH_LOG, THE_STEPS, THE_BRIEFING, RESUME, the state doc, the recovery page, this file, STAMP_LEDGER, the memory); World/step9/forms_deuteronomy_walk/
+(the sitting's scripts and prints); with the two-run rule's records of the same date (RECORD_FORMS, THE_STEPS, THE_BRIEFING, the map, the memory).
+NEXT ON THE RULING: the commit; then the compile of chapter 8 (6b) in two runs — or the Decalogue-schema sitting first — on the owner's word.
+
+## 44. ADDENDUM (2026-09-19, THE DEUTERONOMY WALK sitting 6b — THE COMPILE OF CHAPTER 8, Deuteronomy 8:1-20 COMPILED AND ON THE TAPE in two runs with the docket its own run; the owner: "Next", "Go", "Go run b"; the state doc's #196 addenda 2-4)
+
+THE SHAPE: THE TWO-RUN RULE's first compile sitting — RUN A the rereads, the measurements (ch8_compile_recon.py, ch8_docket_scan.py, the one database) and the design in
+the map (2026-09-18); THE DOCKET its own run by the rule's clause (451 rows in three parts, every row whole; deu_08_ekev_exam_2026-09-19.md; 2026-09-19); RUN B the
+build (the probes to fail, the types, the callees' print, the runner in parts with the fast checker, the cases generated, the recorder and the stitcher, the
+literals, the tape twice, the checkpoint check, the chain once, the records in one call, the forms) — three clean points, the owner compacting after each.
+THE FIFTH FORM: a state told only in the retelling (8:4) is graded SUPPLIED with no retrograde write — its ledger scan asserted at build and at the tape; the
+decision the owner's, the shelf silent. THE HOLES: the grace after the meal (a status) and the forgetting barred (a block — 6:12's ask without a write) compiled
+at the chapter's own day; the testimony's effect reused, and the reuse moved chapter 4's CC7 (retyped from the print). THE DESIGN'S ERRORS caught by prints: the
+decalogue edge (no cell), the line's first verse (4:25, 8:7), the finder's third seat (1:19), the word list ("wore" in "swore"), the generator's count, the
+pointers (eight predicted, one demanded — 8:5's 'as', a run citation of 1:31; the chain run twice). THE
+SHELF'S UNPREDICTED: the grace conditional on eating (49b:4), the first blessing at the manna (48b:2), the fourth blessing's standing (49a:5), "a land concluded
+the matter" (44a:10), the analogy's two guards (Yoma 74b:12-13), 12:21 a receipt seat, 28:48's inversion. THE NUMBERS: cold_run_good_land.py 55/55; the tape 10/10
+on its second run, RUN (1310, 96, 88, 0, 12, 1605, 39, 319, pairs, 127) as predicted; kinds 1133, effects 1031, daemons 68, thirteen CALL edges; the docket 451 rows;
+the sweep 63/63; every gate green. OWED FORWARD: the king's law's tokens (17:17, 17:20), THE CHECKPOINT PREFIX SPACE (CU the last two-letter prefix — the next compile
+opens a new series, the probes' regexes measured first), the finder's third form, 12:21's receipt seat, 28:48, 10:12, 11:13-17, 30:18, Joshua's receipts, the owner's
+word on SUPPLIED. The records on the sheet, the forms in World/step9/forms_deuteronomy_walk/ (copy_ch8b_forms.py).
+
+## 45. ADDENDUM (2026-09-19, THE GATES CUT — the gates chain from ninety minutes to 18 min 27 s; the owner: "What is gate chain and why does it take so long", "Yes make that change. It's too long as it is"; the state doc's #197)
+THE MEASUREMENT: the chain's steps 5,380 s (tape 156, probes 609, journal 316, register 141, positions 1,562, checkpoint 205, sweep 2,011, journal2 315);
+the import of the sixty-three runners 135.9 s against a replay of 1.7 s; the running world 1.5 MB pickled, 1.09 s to reload. THE SIX CUTS (World/step9/
+GATES_CHAIN.md; THE_LOOP D34-D37): the SNAPSHOT saved by the tape's run and loaded by the readers under a sources key; the eleven probe suites in
+parallel; the journal gate's two replays concurrent; the positions table measured WHOLE by eight workers (an incremental form by regions built,
+tested against a moved region and STRUCK the same day — seven of CU's nine rows NOT YET; the closure 429 of 630 statements); the sweep parallel and
+incremental against its stamp (a shared piece moved = full; the stamp by a green sweep only, tracked); the second journal gate the UNMOVED digest.
+AS RUN: the first chain 43 min 23 s (wall 43 min 13 s) with everything in full, the second 18 min 27 s (wall 17 min 49 s) with nothing moved — ALL GREEN both, every verdict the old
+chain gave. THE FILES: run_cold_all.py, world_journal.py (sources_key, save/load_snapshot, live_digest, --stamp/--unmoved, the concurrent gate),
+register_census.py (Ink by the INK block; running_world from the snapshot), cold_run_sequence.py (save_snapshot in run(); _cp_block the parse-once
+cache; checkpoint_names cached), checkpoint_positions.py (--jobs, the workers), gates_chain.sh (the twelve steps; --full). THE RECORDS on the sheet;
+the forms in World/step9/forms_gates_cut_2026-09-19/. NOT COMMITTED — in the chapter-8 commit on the owner's word.
+
+## 46. ADDENDUM (2026-09-19, THE DEUTERONOMY WALK sitting 7 — CHAPTER 9, Deuteronomy 9:1-29 READ AND FROZEN in ONE run under THE TWO-RUN RULE, every row whole; the owner: "Let's keep run as it is and do another section"; the state doc's #197 addendum 1)
+THE READING: Onkelos Deuteronomy 9 whole (29 = 29, the identity, cost 37); the Sifrei SILENT on the chapter — seven rows outside any piska by the union of both files
+(14:1, 25:4, 26:7, 27:2 reread whole from sitting 1; 306:25, 342:1, 357:44 fresh; 342:1 the Hebrew's range form "9:7-8" found through the English); the kin credited by
+name (the Exodus ledgers on the calf, the ascent, the second tablets, the craftsmen; the Numbers ledgers on Taberah, Kibroth, the spies, Meribah); the unit
+deu_09_not_righteousness the 223rd (standing 2221, hash unmoved); the ledger 36 sources (Onkelos MATERIAL 28 / CONTEXT 1; the outside rows MATERIAL 6 / CONTEXT 1);
+six claims 6/0 seated at 9:1, 7, 12, 15, 22, 25; the display layer +60 by reference, +36 by gloss; every gate green in one chain (ch9_gates.sh — the chain stopped
+once at the seat, the spec's fifth element dropped in the derivation, retyped and rerun). THE FINDS: 9:13 eleven of thirteen tokens with Exodus 32:9; 9:17 one with
+32:19; AARON'S PERIL told only here (9:20 — the retrograde question); stiff-necked six seats all the calf's; "tablets" in three spellings; the forty days four times;
+the offer's three forms; the Kings' formula's one Torah seat (9:18); the prayer's second telling quoted by Solomon and Nehemiah; the taunt's four forms; three voices
+on one pronoun; Onkelos's two fires, the names translated, the prayer supplied; the English Sifrei's "Ex.36:28" slip. THE LESSONS (ten, in the map): the shelf's
+bytes spell their own words; a summarizer counting runs misses single tokens; a spelling splits a census; a derived tuple is retyped whole; the kin's credits are
+counted. OWED TO 7b (COMPILE_DEBT's box): the readback's rows of the calf, Aaron's retrograde write, the stiff neck as a state, the three forties and Ta'anit 4:6's
+date, the four provocations, the intercession's second telling, a NEW checkpoint series, the docket. The records on the sheet; the forms in
+World/step9/forms_deuteronomy_walk/ (copy_ch9_forms.py).

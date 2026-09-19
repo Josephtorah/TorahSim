@@ -1725,3 +1725,72 @@ follows the last check mark.
 ## devoted thing's second seat, at chapter 13's sitting; (vi) THE PITY'S FOUR LATER SEATS (13:9, 19:13, 19:21, 25:12) each at its chapter, citing 7:16 by CALL; (vii) Joshua's
 ## receipts (1:5 'no man shall stand', 24:12 the hornet, 7:21 Achan's coveting, 2:34 / 3:6 the east's devotings already on the tape) — the run, outside the Torah.
 ## NOTHING ELSE IN CHAPTER 7 IS OWED TO A LATER SITTING OF ITS OWN.
+
+## DEUTERONOMY SITTING 6 — CHAPTER 8, Deuteronomy 8:1-20 READ AND FROZEN (2026-09-18; DEUTERONOMY_WALK.md "Sitting 6" and "Sitting 6 — AS BUILT"; the ledger
+## deu_08_ekev_2026-09-18.md, 36 sources; one unit deu_08_manna_humility FROZEN, the 222nd) — PAID AT 6b (the 6b box below, item by item) — AS WRITTEN AT THE READING, OWED TO THE COMPILE (sitting 6b): (a) THE BLESSING AFTER THE MEAL
+## (8:10 "eat, be satisfied, bless" — the Torah's one command to bless: Berakhot 48b the grace's blessings from the verse, 20b-21a the Torah obligation, 49b and
+## Mishnah Berakhot 7:2 the measure of "satisfied", 35a the blessing before as an inference; Mishnah Berakhot 6-7 whole by topic — NO CELL ANYWHERE in the
+## machine, compiled at 6b for the first time); (b) THE SEVEN SPECIES (8:8 — Berakhot 41a-b the order of blessings by the verse's order and its two "land"s, 44a
+## the after-blessing; Mishnah Berakhot 6:4; Bikkurim 1:3, 1:10 the first fruits (the Sifrei 297:4 by I2); Menachot 84b CREDITED at the offerings-calendar exam);
+## (c) THE MANNA AND THE HUMBLING (8:2-3, 8:16 — Yoma 74b-76a "afflicted you and let you hunger", the manna's forms; the readback rows against the tape's manna
+## lines by kind — Exodus 16, exodus_story by CALL); (d) THE FORTY YEARS AS A STATE (8:2, 8:4 — the garment not wearing out, the foot not swelling: a state over
+## forty years with NO EARLIER LINE on the tape — the readback's SUPPLIED grade on a state, not an act: THE DESIGN DECISION of 6b); (e) THE DISCIPLINE (8:5 —
+## Berakhot 5a's afflictions of love; the Sifrei 32:10-15 CREDITED here); (f) "TAKE HEED LEST" (8:11 — Makkot 13b / Eruvin 96a: "take heed, lest, do not" a
+## negative command, the rule's exhibit; a cell forgetting_barred?); (g) THE HEART LIFTED UP (8:14 — Sotah 4b-5a arrogance as idolatry; 17:20 the king's law by
+## CALL when chapter 17 compiles); (h) THE EXODUS FORMULA (8:14 — brought_out 12:51 by kind, the readback); (i) THE SERPENTS AND THE ROCK (8:15 — Numbers 21:6-9
+## and 20:8-11, Exodus 17:6 by the tape's lines and by CALL into chukat and exodus_story); (j) "MY POWER AND THE MIGHT OF MY HAND" (8:17 — a DATA row; the Sifrei
+## 48:10's "not by bread alone" reading); (k) THE COVENANT ESTABLISHED (8:18 — the oath's lines by kind, as 7:8); (l) THE TESTIMONY (8:19-20 — 4:26's line by
+## kind, obey_horeb's cell by CALL; the perishing "like the nations" a DATA row; the heel's second seat 7:12's cell by CALL; "other gods" the second word's cell
+## by CALL); (m) THE KING'S LAW'S TOKENS (8:13 "silver and gold shall multiply for you" against 17:17 "he shall not multiply" — the pair's CALL when chapter 17
+## compiles; a note now); (n) THE DOCKET by the union rule (Berakhot 20b-21a, 35a-b, 41a-44a, 48b-49b; Mishnah Berakhot 6-7; Bikkurim 1; Yoma 74b-76a; Sotah
+## 4b-5a; Makkot 13b; Eruvin 96a; Berakhot 5a — the scan will name the rest), every row whole. NOTHING ELSE IN CHAPTER 8 IS OWED TO A LATER SITTING OF ITS OWN.
+
+## DEUTERONOMY SITTING 6b — THE COMPILE OF CHAPTER 8 (2026-09-19; DEUTERONOMY_WALK.md "Sitting 6b" design + AS BUILT; logic/oral_triage/deu_08_ekev_exam_2026-09-19.md
+## 451 rows, every row read whole from the start; cold_run_good_land.py 55/55; law_good_land the 68th daemon; the tape 10/10 with RUN (1310, 96, 88, 0, 12, 1605, 39, 319, pairs, 127)).
+## THE SITTING-6 BOX (a)-(n) PAID — (a) THE BLESSING AFTER THE MEAL — F3 eat_be_satisfied_bless: the code's hole, bless_after_eating_commanded a STATUS on Israel at
+## grace_commanded (8:7-10); the measure of "satisfied" a PARAMETER (R. Meir's olive / R. Yehuda's egg; the Torah edge 20b:14), the four blessings cut three ways
+## (48b:5, Tosefta 6:1, 48b:6), the before-blessing refuted and rabbinic, the grace conditional on eating (49b:4), bread its object (44a:10) — the exam's rows;
+## (b) THE SEVEN SPECIES — F3 the_seven_species: no write; the order by the verse and the two "land"s (41a:8, 41b:5), the first fruits (Bikkurim 1:3, 1:10; Menachot
+## 84a-b), the measures a DATA row (Eruvin 4a, Sukkah 5b; the Rambam's row), honey without milk a DATA row; (c) THE MANNA AND THE HUMBLING — F2, the rows 8:3 TURNED
+## and 8:16 EXPANDED against manna_fell (exodus_story and beha by CALL); Yoma 74b's analogy with its two guards; manna_provided UNMOVED (CU5); (d) THE FORTY YEARS
+## AS A STATE — F2 the_garment_and_the_foot SUPPLIED, the fifth form, no retrograde write (the owner's decision open; the shelf silent on 8:4); the decree's row
+## 8:2 EXPANDED (shelach by CALL); Sanhedrin 99a's forty a DATA note; (e) THE DISCIPLINE — the row 8:5 VARIANT (opening_speech by CALL); Berakhot 5a's afflictions of
+## love and the Land through suffering the exam's rows; (f) TAKE HEED LEST — F4 take_heed_lest: the code's hole, forgetting_barred a BLOCK at forgetting_warned (8:11-18),
+## 6:12's cell called (the ask without a write); "beware, lest, not" nothing but a prohibition at three seats; no action, no lashes; (g) THE HEART LIFTED — a DATA row
+## (Sotah 4b-5a; the eighth of an eighth); 17:20 OWED forward; (h) THE EXODUS FORMULA — the row 8:14 VERBATIM (brought_out by kind; covenant_at_horeb's first word by CALL);
+## (i) THE SERPENTS AND THE ROCK — the rows 8:15 EXPANDED and VARIANT (chukat by CALL; the two rocks' two words a DATA row); serpents_sent and water_from_the_rock UNMOVED;
+## (j) MY POWER — a DATA row; (k) THE COVENANT ESTABLISHED — the row 8:18 VERBATIM against the oath's three lines (seven_nations, mamre, joseph by CALL); (l) THE
+## TESTIMONY — F6: the rows 8:19 VARIANT (witnesses_called by kind; obey_horeb by CALL), 8:19 VARIANT (the second word by CALL — the serve/bow order a DATA row), 8:20
+## TURNED (nations_devoted by kind); heaven_and_earth_witness REUSED at perishing_testified — no new effect (CU6); (m) THE KING'S LAW'S TOKENS — a DATA row; the CALL
+## OWED forward; (n) THE DOCKET — 451 rows by the union rule, EVERY ROW WHOLE FROM THE START (its own run). OWED FROM 6b: (i) THE KING'S LAW — 17:17's "silver and gold he
+## shall not multiply" and 17:20's "that his heart be not lifted up" cite 8:13-14 by CALL when chapter 17 compiles; (ii) THE CHECKPOINT PREFIX SPACE ENDS AT CU — the
+## two-letter series CA-CZ is spent; the next compile (7b, chapter 9) opens a NEW SERIES at its design, and the probes' 'C[A-Z]' regexes (the recon's finder,
+## checkpoint_positions.py, checkpoint_probes.py, cold_run_sequence's VERDICTS list) are MEASURED there before a name is typed; (iii) THE FINDER'S THIRD FORM (4b's
+## owed item, unchanged — no receipt in chapter 8; the rule now replicated in a runner, cold_run_good_land.py's receipt_seats); (iv) 12:21 "as I have commanded you"
+## — a RECEIPT SEAT for chapter 12's compile (Yoma 75b:4 — Moses commanded the slaughter's laws); (v) 28:48's "in want of all things" — the inversion of 8:9 at
+## chapter 28's sitting, citing 8:9 by CALL; (vi) 10:12's "what does the LORD your God ask of you" at chapter 10, citing 8:6 (keep, walk, fear); (vii) 11:13-17
+## the rain and the grain conditional on hearing (Berakhot 35b:5 — whose grain) at chapter 11, citing 8:12-14; (viii) 30:18's third "surely perish" and 30:19's
+## testimony at chapter 30, citing 8:19 and 4:26 by CALL; (ix) JOSHUA'S RECEIPTS — the entry's bread_and_water_blessed (ordinances' entered_the_land, in the
+## registry and absent from the world), the manna ceasing (Joshua 5:12), Joshua's manna at Sinai (Yoma 76a:1) — the run, outside the Torah; (x) THE OWNER'S WORD
+## ON THE SUPPLIED GRADE — the fifth form's decision (a state told only in the retelling, no retrograde write) stands as the design's, ON THE TABLE.
+## NOTHING ELSE IN CHAPTER 8 IS OWED TO A LATER SITTING OF ITS OWN.
+
+
+## SITTING 7 — CHAPTER 9 (2026-09-19, the reading; deu_09_not_righteousness frozen) — OWED TO THE COMPILE 7b: (a) THE READBACK'S ROWS OF THE CALF — 9:8-21 and 9:25-29
+## against the kitisa runner's lines (the calf made, God's word to go down, the offer, the prayer, the tablets broken, the calf burned), the ascent's (Exodus
+## 24:12-18), the second tablets' (34:1-4, 28) and the craftsmen's (31:18): 9:13 VERBATIM (eleven of thirteen tokens with Exodus 32:9), 9:12 VARIANT, 9:9 and 9:18
+## VARIANT (the forty days), 9:21 VARIANT (the calf ground), 9:17 EXPANDED in Moses' own words, 9:19 TURNED (the relenting as "hearkened"); (b) AARON'S PERIL (9:20)
+## — an act told ONLY in the retelling: the LORD's anger at Aaron and Moses' prayer for him — the RETROGRADE WRITE at Exodus 32's own day, the design question
+## (the milluim and investiture ledgers read his re-acceptance from this verse); (c) THE STATE "stiff-necked" (9:6, 9:13) — Exodus 32:9's line measured: a status on
+## Israel or nothing on the tape; the six Bible seats all the calf's; (d) THE THREE FORTIES — the tradition's three ascents (Exodus 24:18; 32:30-34:9; 34:28) against
+## the tape's lines and DATES: Ta'anit 4:6 the tablets broken on the seventeenth of Tammuz (THE ANSWER SHEET'S DATE for 9:17), Ta'anit 28b and Shabbat 87a-88a the
+## forty-day arithmetic from 7 Sivan to 10 Tishri — the clock's test; the Sifrei 14:1 and 306:25 read 9:9 with 34:28; (e) THE FOUR PROVOCATIONS (9:22-23) — run
+## citations of Numbers 11:1-3, Exodus 17:1-7, Numbers 11:31-34 and 13-14, out of the tape's order; (f) THE INTERCESSION'S SECOND TELLING (9:26-29) against Exodus
+## 32:11-13 and Numbers 14:13-19 — the same argument twice on the tape (Israel/Jacob, the Egyptians/the land, the mountains/the wilderness); Solomon (1 Kings 8:51)
+## and Nehemiah (1:10) quoting THIS telling — the run, outside the Torah; (g) THE OFFER'S THREE FORMS (Exodus 32:10, Numbers 14:12, 9:14) a DATA row; (h) THE THREE
+## SPELLINGS OF "TABLETS" and the Bible's three "tablets of the covenant" a DATA row; (i) THE CHECKPOINT PREFIX SPACE — 7b OPENS A NEW SERIES (CU the last two-letter
+## prefix): the probes' 'C[A-Z]' regexes (the recon's finder, checkpoint_positions.py, checkpoint_probes.py, cold_run_sequence's VERDICTS list) MEASURED at the
+## design before a name is typed; (j) THE DOCKET by the union rule — Berakhot 32a and 7a (the prayer), Shabbat 87a-89a (the breaking approved; the forty days),
+## Menachot 99a-b and Bava Batra 14b (the broken tablets in the ark), Ta'anit 4:6 and 28b, Avodah Zarah 43b-44a with Mishnah Avodah Zarah 3:3 (the calf's
+## destruction the idol's), Sanhedrin 102a and Vayikra Rabbah 10:5 (Aaron), Beitzah 25b (the stiff neck), Shabbat 55a (the merit of the fathers), Devarim Rabbah 2:1
+## (the ten names of prayer) — EVERY ROW WHOLE; a docket past ~700 rows its own run. NOTHING ELSE IN CHAPTER 9 IS OWED TO A LATER SITTING OF ITS OWN.

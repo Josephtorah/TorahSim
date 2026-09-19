@@ -14,7 +14,11 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   baked into an epub.
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
-## SCOREBOARD (as of 2026-09-18, latest)
+## SCOREBOARD (as of 2026-09-19, latest)
+- **CHAPTER 9 READ AND FROZEN — THE CALF RETOLD: GOD'S WORD COMES BACK VERBATIM, MOSES' ACTS COME BACK IN HIS OWN WORDS, AND AARON'S DANGER IS TOLD NOWHERE ELSE; STIFF-NECKED SIX TIMES IN THE BIBLE, ALL FOR THE CALF; THE PRAYER SOLOMON AND NEHEMIAH QUOTE IS THIS ONE** (2026-09-19, on your "Let's keep run as it is and do another section"; World/step9/DEUTERONOMY_WALK.md "Sitting 7" and "Sitting 7 — AS BUILT"; the ledger deu_09_ekev_2026-09-19.md, 36 sources whole; the unit deu_09_not_righteousness the 223rd, standing 2221, hash unmoved; six claims 6/0; every gate green; one run, every row whole).
+- **THE GATES CHAIN CUT FROM NINETY MINUTES TO 18 MIN 27 S — THE COST WAS LOADING THE RUNNERS' CODE, NOT RUNNING THE WORLD; THE RUNNING WORLD SAVED ONCE AND READ BY EVERY GATE, THE PROBES SIDE BY SIDE, THE SWEEP EIGHT AT A TIME AND ONLY WHAT MOVED, THE CHECKPOINT TABLE BY EIGHT WORKERS, EVERY SHORT CUT GUARDED BY A DIGEST OF THE SOURCE AND ONE STRUCK BY ITS OWN TEST** (2026-09-19, on your "Yes make that change. It's too long as it is"; World/step9/GATES_CHAIN.md).
+- **CHAPTER 8 COMPILED — THE RETELLING OF A STATE: A CONDITION HAS NO DAY, SO THE MACHINE GRADES IT AND WRITES NOTHING BACK; THE TORAH'S ONE COMMAND TO BLESS AND THE FORGETTING BARRED COMPILED AT THE CHAPTER'S OWN DAY; THE SHELF SAYS THE GRACE FOLLOWS THE EATING AND THE FIRST BLESSING CAME BEFORE ITS VERSE** (2026-09-19, on your "Next", "Go" and "Go run b"; World/step9/DEUTERONOMY_WALK.md "Sitting 6b" + AS BUILT): cold_run_good_land.py the 63rd runner (55/55), law_good_land the 68th daemon (466 functions); the readback's fifth form eighteen rows, one SUPPLIED; the tape 10/10 with RUN (1310, 96, 88, 0, 12, 1605, 39, 319, pairs, 127) as predicted; the docket 451 rows every row whole; every gate green, the sweep 63/63; the two-run rule's first compile sitting, three clean points.
+- **CHAPTER 8 READ AND FROZEN — THE MANNA AND THE GOOD LAND: THE SIFREI QUOTES THE CHAPTER SIXTEEN TIMES FROM ELSEWHERE, ONE VERSE HOLDS ALL SEVEN KINDS OF FRUIT, AND THE TORAH'S ONE COMMAND TO BLESS HAS NO CELL YET** (2026-09-18, on your "Go" after chapter 7's commit and the two-run rule, then "Reread" — ONE run, every row whole; World/step9/DEUTERONOMY_WALK.md "Sitting 6"): Onkelos on all 20 verses and the Sifrei's sixteen rows from elsewhere (five reread whole) — 36 sources, coverage computed, the kin's spine credited by name from the Numbers walk; the seven kinds at one seat, honey without milk; "eat, be satisfied, bless" the one command to bless; the king's law's words at 8:13; the extra token in our store at 8:2; the forty years a state the tape never wrote; one unit frozen (the 222nd), 6 claims verified, the ritual 13 PASS, standing facts 2215 (+6 as predicted), hash unmoved, every gate green. NEXT: the commit on your word; then the compile of chapter 8 in two runs, or the schema sitting first.
 - **CHAPTER 7 COMPILED — THE OLD LAW SAID AGAIN FOR THE NEW PLACE, GRADED AGAINST THE CELLS THAT COMPILED IT FIRST; FOUR HOLES COMPILED AT THE CHAPTER'S OWN DAY; TWO EFFECTS FROM EXODUS WRITTEN ON THE TAPE FOR THE FIRST TIME** (2026-09-18, on your "Go" and "keep going"; World/step9/DEUTERONOMY_WALK.md "Sitting 5b" + AS BUILT): cold_run_seven_nations.py the 62nd runner (51/51), law_seven_nations the 67th daemon (460 functions); the readback on the kin twenty-one rows; the tape 10/10 with RUN (1307, 96, 88, 0, 12, 1602, 38, 319, pairs, 127) as predicted, markers 167; the docket 520 rows every one read whole from the start; every gate GREEN, the sweep 62/62. NEXT: the commit on your word; chapter 8's reading, or the schema sitting first.
 - **CHAPTER 7 READ AND FROZEN — THE SEVEN NATIONS: THE SIFREI IS SILENT ON THE CHAPTER, THE VERSE COUNTS ITS OWN LIST, AND THE OLD CODE IS SAID AGAIN FOR THE NEW PLACE** (2026-09-18, on your "Go" and the runs' "go for run 2", "run 3 go", "4 go" — four runs, every row whole; World/step9/DEUTERONOMY_WALK.md "Sitting 5"): Onkelos on all 26 verses and the Sifrei's three rows from elsewhere — 29 sources, coverage computed, the kin's spine credited by name; "seven nations" counted by the verse's own seven names, seven where Exodus had six; both directions of marriage, four objects, "you shall not covet" on the idols' silver and gold; one extra token in our store at 7:9 (written one way, read another); Onkelos's doctrine at 7:10; the flock's young tagged a goddess's name in our word table; one unit frozen (the 221st), 6 claims verified, the ritual 13 PASS, standing facts 2209 (+6 as predicted), hash unmoved, every gate green. NEXT: the commit on your word; then the compile of chapter 7 in four runs, or the schema sitting first.
 - **CHAPTER 6 COMPILED — THE SHEMA'S LAW GIVEN AT ITS OWN DAY FOR THE FIRST TIME, THE READBACK'S THIRD FORM (A RETELLING INSIDE A LAW), THE RECEIPT WITHOUT THE NAME THE GATE CANNOT SEE, AND THE WHOLE-ROW RULE RULED AND PAID INSIDE THE SITTING** (2026-09-17, on your "Go", "Next go" and "Ok go"; World/step9/DEUTERONOMY_WALK.md "Sitting 4b" + AS BUILT): cold_run_hear_o_israel.py the 61st runner (42/42), law_hear_o_israel the 66th daemon (454 functions); the readback's seven rows; the tape 10/10 on its first run with RUN (1304, 96, 88, 0, 12, 1595, 37, 319, pairs, 127) as predicted, markers 167; the docket 747 rows every one read whole; every gate GREEN, the sweep 61/61. NEXT: the commit on your word; chapter 7's reading, or the schema sitting first.
@@ -487,6 +491,76 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   Next alongside it: Leviticus (new spine — Sifra).
 
 ## ENTRIES (newest first)
+
+### 2026-09-19 — CHAPTER 9 READ: THE CALF TOLD TWICE, AND WHAT THE SECOND TELLING ADDS
+
+Chapter 9 is Moses retelling the golden calf. The reading laid every verse
+beside its first telling in Exodus and counted the shared words. The pattern
+is clean: where God speaks, the retelling is word for word (God's "I have
+seen this people, a stiff-necked people" comes back eleven words of
+thirteen); where Moses acts, he retells it in his own words (his breaking of
+the tablets shares one word with Exodus). And one thing has no first telling
+at all: the LORD's anger at Aaron and Moses' prayer for him (9:20). That is
+the compile's question next sitting — an act told only in the retelling is
+written once, at its own day. Other things the counting found: "stiff-necked"
+occurs six times in the Bible and every one is about the calf; the word for
+"tablets" is spelled three ways in this chapter, two of them inside one
+verse; the forty days and nights appear four times here out of nine in the
+whole Bible; and when Solomon and Nehemiah later pray "Your people and Your
+inheritance … Your great power", they quote Moses' prayer as chapter 9 tells
+it, not as Exodus does. The Sifrei has no section on the chapter; seven rows
+from elsewhere read it for its prayer, its forty days and its hyperbole.
+The chapter is frozen as one unit, every gate green, in one run with every
+row read whole.
+
+### 2026-09-19 — The test bench got fast without getting looser
+
+You asked what the gates chain is and why it takes so long. It is every test the machine has, run in order after a compile: the tape, eleven
+probe suites, the law and dependency censuses, the fold, the journal's replay check, the register gate, the table of where every checkpoint
+falls, and a sweep of all sixty-three runners against their answer sheets. Ninety minutes. The measuring said the world itself replays in two
+seconds; what costs two minutes is loading the runners' code, and every step was paying that, some of them twice, one after another on a
+machine with sixteen idle cores. The cut: the tape saves the running world once and the other gates read it; the probes run side by side; the
+sweep runs eight at a time and grades only the runners that changed since the last green sweep; the checkpoint table is measured by eight
+workers at once. What keeps it honest: every short cut is guarded by a digest of the source files it depends on, never a date, and a miss falls
+back to the full work — change a shared piece and the whole sweep runs. One cut was struck by its own test the same day (asking only the changed
+checkpoints — they lean on each other across the whole block), which is the other half of honest: a short cut is tested against a moved piece
+before it is trusted. The first chain after the cut took 43 min 23 s with everything in full; the second, with nothing changed, 18 min 27 s; every verdict the same.
+
+### 2026-09-19 — CHAPTER 8 COMPILED: A STATE THE TAPE CANNOT HOLD, AND THE GRACE THAT FOLLOWS THE EATING
+
+Chapter 8 is Moses telling the wilderness again as a reason: remember the way, the manna, the rock, the serpents — lest you forget when the houses and the
+herds and the silver multiply. The machine's readback has graded retellings before: against the tape's own lines, against the older cell that compiled
+the law first. This chapter added a case those forms could not hold. Your garment did not wear out, your foot did not swell, these forty years. That is
+not an act at a day; it is a condition over forty years, and the tape records acts at days. So the row got a new grade — SUPPLIED — and nothing was written
+back into the past: the machine asserts instead that no ledger anywhere names a garment or a shoe or a swelling on Israel, and the Talmud, read whole for
+the answer sheet, cites that verse nowhere. The decision that no line be written is yours to keep or reverse; the shelf does not press either way. Two
+commands in the chapter had no code at all. Eat and be satisfied and bless — the Torah's one command to bless God — had no cell in sixty-two runners; it
+is compiled here, and the Talmud's tractate on blessings is its answer sheet: the grace is from the Torah, its four blessings are cut from this one verse
+three different ways, the measure of "satisfied" is a parameter the sages disputed from the verse's two verbs, and — the thing the design did not guess —
+the grace is not an obligation like the prayer but follows the eating, "if he wants he eats, if not, not". The shelf also says Moses instituted the first
+blessing when the manna fell, forty years before the verse commands it: the blessing before its verse, filed beside the install hypothesis. The second
+hole is "take heed lest you forget": chapter 6's cell had asked the question and never written the block; it is written now. The testimony at the end
+reuses chapter 4's, and that reuse moved one old count in the checks, retyped from the print — the machine keeps counts as literals so that a change
+shows. The runner matched its sheet on the first run; the tape reached ten of ten on the second; every gate is green in one chain. This was the first
+compile under your two-run rule, with the docket as its own run between: three clean points. Next, on your word: the commit, then chapter 9.
+
+### 2026-09-18 — CHAPTER 8 READ: THE MANNA, THE GOOD LAND, AND THE FIRST ONE-RUN READING
+
+The chapter that tells the wilderness back to the people about to leave it: remember the forty years, the hunger and the manna, "not by bread alone"; the
+garment that did not wear out; a father's discipline. Then the land ahead — brooks and springs, wheat and barley and vine and fig and pomegranate, olive oil
+and honey, iron and copper — and the one instruction the Torah gives about a full stomach: eat, be satisfied, and bless. Then the warning: when the houses are
+built and the herds and the silver multiply, do not say "my power and the might of my hand"; if you forget and serve other gods you perish like the nations.
+Three things stand out. The shelf again has no section on the chapter, but it cannot leave it alone: sixteen rows elsewhere quote it, most of them from the
+Sifrei's sections on the next chapter's praise of the Land, which quote this chapter's praise back at it — every row read whole, five of them for the second
+time. The chapter holds two things the machine has nowhere else: 8:8 is the only verse in the Bible that names all seven kinds of fruit the Land is praised
+for (and it names honey with no milk), and 8:10 is the Torah's one command to bless God, the seat of the grace after meals — no cell of ours compiles it yet;
+both go to the compile. And the garment that did not wear out for forty years is a state, not an event: the tape has lines for the manna and the serpents and
+the rock, none for the clothes, so the compile must decide how a retelling of a state is graded. This was the first reading under the two-run rule, and it
+fit one run with one stopping point inside it. The chapter is frozen as one unit, the 222nd, every gate green.
+
+### 2026-09-18 — THE TWO-RUN RULE: A COMPILE SITTING IS TWO RUNS, A READING ONE
+
+On Brian's "Can we combine runs? These are too short" and his "Yes" to the recommendation, after chapter 7's commit 29c189b. The four-run rule (2026-09-16) had cut a six-hundred-thousand-token sitting into four; the four came in at one to two hundred thousand each against a window of a million, and the window that finished chapter 7's compile, rewrote the public tutorial and committed used two hundred and thirty thousand. Now: RUN A the rereads, the measurements, the design and the docket (every row whole); RUN B the types, the runner, the tape, the gates chain, the records, the forms, the commit message. A reading sitting one run. Each run near three hundred thousand, never six hundred; a docket past about seven hundred rows its own run. Everything else stands: every row whole, the design before the code, one chain, one call, the stopping point announced. Chapter 8 runs this way.
 
 ### 2026-09-18 — CHAPTER 7 COMPILED: THE OLD LAW GRADED AGAINST ITS FIRST TELLING, AND THE HOLES FILLED
 

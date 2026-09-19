@@ -3428,3 +3428,136 @@ war, 53b:5-6). The ban: the law written on the plaster with "lest they teach you
 the Canaanite outside the Land not devoted (Sotah 35b:10-13, 36a:1). Both are DATA rows on the runner; the war chapter's cells (20:16-18, 20:1-8) are
 owed forward. And one hole the design predicted has no row on the shelf at all — 7:16's "your eye shall not pity" is cited by no link row (the verse
 once, for "consume": robbing a gentile prohibited); pity_barred stands on the ink alone, its exam rows the book's four later seats.
+
+## 2026-09-18 — DEUTERONOMY 8 READ (THE DEUTERONOMY WALK sitting 6 — CHAPTER 8, in one run under THE TWO-RUN RULE, every row whole): THE SPINE SILENT, THE SHELF NOT —
+## SIXTEEN ROWS FROM ELSEWHERE; THE RANGE CITATIONS THE REGEX CANNOT READ; THE TWO FILES DIVIDE A PISKA DIFFERENTLY; THE SEVEN SPECIES AT ONE SEAT AND HONEY
+## WITHOUT MILK; THE BOOK'S ONE INTERROGATIVE HE; THE KING'S LAW'S TOKENS AT 8:13; THE WRITTEN/READ PAIR AT 8:2; THE FORTY YEARS AS A STATE
+
+THE SPINE SILENT, THE SHELF NOT. The Sifrei on Deuteronomy has no section on chapter 8 (nothing between piska 36 on 6:9 and 37 on 11:10 — chapter 7's
+finding, the heads computed), but the shelf cites the chapter sixteen times from elsewhere: the Ekev piskaot on 11:10-12 quote the chapter's praise of the
+Land back at it (19:2's tutor's parable on 8:7; 37:5 the Land spiced with everything on 8:9; 39:4 twelve lands for twelve tribes on 8:7-10; 39:6 and 39:8
+the Land's drinking on 8:7; 40:10 the blessing in eating and satisfaction on 8:10; 297:4 the first fruits from the seven species on 8:8), and eight other
+piskaot quote its sentences as proof-texts (32:10, 32:12, 32:15 the discipline of a son beside the good land; 43:7 and 318:1 rebellion out of satiety;
+48:8 forgetting the first and losing the last; 48:10 "not by bread alone"; 53:1 "to do you good in your end"; 313:15 the great and terrible wilderness as
+the four kingdoms). Found by the union of both files' citations — the Hebrew's book-named form fifteen on twelve rows, the English's "(Dt.8:n" twenty-six on
+fifteen rows — every row read whole in both files, five of them read before at other sittings and reread whole here; none excluded, no interpolation. The
+chapter's kin — the manna (Exodus 16), the rock at Horeb (17:1-7), the craving (Numbers 11:4-9), the forty years (14:33-34), Meribah (20:1-13), the serpents
+(21:4-9) — were read at their own sittings and are credited by name, the counts computed from those ledgers; the Numbers kin whole through Onkelos, the
+Exodus kin through the Mekhilta only (no Onkelos row of Exodus 16 or 17 exists in any ledger — the shelf's default gives Exodus the Mekhilta). 36 sources,
+coverage computed; the twenty Onkelos rows whole.
+
+THE RANGE CITATIONS THE REGEX CANNOT READ. The Hebrew export writes some citations as ranges — "(דברים ח ה-ז)" ("Deuteronomy 8:5-7") at 32:15, "8:7-10" at
+39:4, "8:12-13" at 43:7 — and the citation regex reads a single verse; the union of both files found these rows through the English's citations, and the
+Hebrew's range strings are asserted on the row's bytes. A slip this way is a row missed, never a row invented; the scan's blind spot is recorded for the
+scanner (the range form to be read at a gate sitting).
+
+THE TWO FILES DIVIDE A PISKA DIFFERENTLY. The English's 39:6 runs on through the Hebrew's 39:6, 39:7 and 39:8; the citation of 8:7 sits in the Hebrew's 39:8
+and the English's 39:6. Both rows were read whole, each file's own row counted, neither counted twice — chapter 6's lesson (the two files compared row by
+row) in its third form after the mis-cited book and the divergent row.
+
+THE SEVEN SPECIES AT ONE SEAT AND HONEY WITHOUT MILK. 8:8 alone in the Bible holds all seven lemmas of the species for which the Land is praised — wheat,
+barley, vine, fig, pomegranate, olive oil, honey (three or more together at five other seats: Numbers 20:5, Haggai 2:19, Joel 1:12, Habakkuk 3:17, Jeremiah
+41:8); "milk" is absent from the chapter — the formula "flowing with milk and honey" nowhere in it. The shelf makes the verse the first fruits' list (the Sifrei
+297:4, by the verbal analogy on "bring"; Mishnah Bikkurim 1:3) and the order of blessings (Berakhot 41a-b) — both owed to the compile. 8:8 is also the
+chapter's one verse with no verb and neither person. Beside it 8:10 "eat, be satisfied, bless" — the Torah's ONE command to bless the LORD (the blessing
+after the meal's seat; Berakhot 48b; no cell anywhere in the machine, compiled at 6b for the first time); "and you shall be satisfied" is the seven-stem
+homograph the parser stars at 8:10 and 8:12, as at 6:11.
+
+THE BOOK'S ONE INTERROGATIVE HE. 8:2 "whether you would keep His commandments or not" — the interrogative he on a verb, the book's one seat; the verse ends
+with the manna's own test-clause "whether … or not", shared with Exodus 16:4 ("whether they will walk in My law or not") at the verse's end; the verse-ending
+pair at seven seats over the Bible. The chapter's two number verses are 8:2 and 8:4 "these forty years" [40] — 2:7 the same phrase; the parser reads [40] at
+every seat of the wilderness's forty years; no gap.
+
+THE KING'S LAW'S TOKENS AT 8:13. "Silver and gold shall multiply for you" (8:13) and "silver and gold he shall not multiply" (17:17) share their tokens — the
+blessing and the king's bar; 8:14 "and your heart be lifted up" against 17:20 "that his heart be not lifted up"; Hosea 13:6 puts the chapter's sequence
+(satisfied, lifted, forgot) in the prophet's mouth. The shelf reads 8:12-14 as the rule that a people rebels only out of satiety (43:7; 318:1 — the Flood, the
+Tower, Sodom, the calf, Jeshurun). 8:11 shares six tokens with 6:12 ("take heed to yourself lest you forget the LORD") — the Shema's warning said again; the
+chapter's one imperative.
+
+THE WRITTEN/READ PAIR AT 8:2. The snapshot store carries twenty-four tokens where the DB carries twenty-three: "His commandments" written without the yod
+(the DB's one written-marked token in the chapter) AND read with it — the chapter's one mismatch, 5:10's and 7:9's kin (the token's five Bible seats: 5:10,
+7:9, 8:2, 27:10, Numbers 15:31). Asserted as the exact difference; no claim's check uses the word (the check at 8:2 sits on "forty", before the store's extra
+token).
+
+THE FORTY YEARS AS A STATE. "Your garment did not wear out upon you, nor did your foot swell, these forty years" (8:4; 29:4 the plural garments; Nehemiah 9:21
+the only other "did not swell") — a state over forty years with no line on the tape: the manna has lines (Exodus 16), the serpents and the rock have lines
+(Numbers 21, 20; Exodus 17), the garment has none. The readback's grade for a state told only in the retelling is the compile's design decision (6b): a
+SUPPLIED grade on a state, not an act — recorded here, not resolved.
+
+ONKELOS ON THE CHAPTER. The Word supplied twice — 8:3 "not by bread alone is man sustained, but by everything that proceeds from the Word of the LORD" and
+8:20 "accept the Word" for "hearken to the voice"; the fear supplied at the three forgettings (8:11, 8:14, 8:19 "lest you forget THE FEAR OF the LORD");
+"your shoes did not go bare" for the foot that did not swell (8:4, 29:4); "teaches" for "disciplines" (8:5); "the mighty rock" for the flint (8:15);
+"possessions" for wealth (8:17, 8:18, 32:15) and "He gives you COUNSEL to acquire possessions" for the power (8:18); "in exchange for" for "because" (8:20 —
+7:12's); "the idols of the peoples" for other gods (8:19). THE STORE'S GLOSSES READ BACK (the display layer): 32 rows by gloss and 20 by reference —
+"the-whatness" THE MANNA, "and-mark" AND REMEMBER, "to-separation-him" ALONE, "going-forth" WHAT PROCEEDS FROM, "fail" WORE OUT, "perhaps-to-swell-up"
+SWELLED, "in-indigence" IN POVERTY, "the-set" WHO GIVES, "and-mislay" AND FORGET, "burning" FIERY SERPENT, "from-cliff" FROM THE ROCK, "vigor-me" MY POWER,
+"duplicate" TESTIFY, "wander-away" PERISH, "heel" BECAUSE (by reference at 8:20), "?" made "I" at 8:1 and 8:11; by_ref 552, by_gloss 466 after.
+
+
+## 2026-09-19 — DEUTERONOMY 8 COMPILED (THE DEUTERONOMY WALK sitting 6b — CHAPTER 8): THE READBACK'S FIFTH FORM — THE RETELLING OF A STATE; THE CODE'S TWO HOLES
+## COMPILED AT THE CHAPTER'S OWN DAY AND THE TESTIMONY'S EFFECT REUSED; A REUSED EFFECT MOVES AN OLDER COUNT; THE SHELF READS THE GRACE AS CONDITIONAL ON THE ACT;
+## THE FIRST BLESSING INSTITUTED BEFORE ITS VERSE
+
+THE READBACK OF A STATE. Chapter 8 retells the wilderness as the reason for a law — remember the way, lest you forget — so its rows are reference rows
+against the tape's lines (the decree, the manna, the going out, the serpents, the rock, the oath, the testimony, the ban) and the kin's cells (4:1's
+exhortation, 1:31's carrying, 2:7's lacking nothing, 6:3's land and 6:10-12's gift and warning, 5:6's formula and 5:9's second word): eighteen rows,
+VERBATIM 6 / VARIANT 5 / EXPANDED 4 / TURNED 2 as the design predicted. And ONE row retells a state the tape never wrote and cannot write as an act: your
+garment did not wear out, your foot did not swell, these forty years (8:4). The tape records acts at days; a forty-year condition has no day. The row was
+graded SUPPLIED — a new grade — with NO retrograde write, its ledger scan asserted empty at build (the one database) and at the tape (CU7 on the running
+world), its kin named (29:4, Nehemiah 9:21), and the docket found NO ROW on the shelf citing 8:4: the shelf does not challenge the decision, which stays
+the owner's. THE CODE'S HOLES: no runner held the Torah's one command to bless Him (8:10) — bless_after_eating_commanded a STATUS on Israel; 6:12's cell held
+"take heed to yourself lest you forget" as an ask WITHOUT A WRITE — forgetting_barred a BLOCK on Israel, its first tape write; 4:26's testimony is on the tape
+with its effect, so 8:19 REUSES heaven_and_earth_witness at its second seat, no new effect — and the reuse moved an older checkpoint's count literal (chapter
+4's CC7: ONE -> TWO), retyped from the print. THE SHELF'S FINDS THE DESIGN DID NOT PREDICT (the docket's own run): the grace "not an obligation — if he wants
+he eats" (Berakhot 49b:4), a status whose trigger is the eating; MOSES INSTITUTED THE FIRST BLESSING WHEN THE MANNA FELL (48b:2) — the blessing before its
+verse, an install-order note beside THE INSTALL HYPOTHESIS; the verse cut into the four blessings THREE ways and the fourth blessing's standing disputed;
+"a land" (8:9) concluded the matter — bread the grace's object; the analogy's two guards (Yoma 74b:12-13 — the public's from the public's, God's hand from
+God's hand) read 8:3's hunger as God's act on the whole people, which is the readback row's own TURNED grade; 12:21 a receipt seat for chapter 12; 28:48
+inverts 8:9. THE NUMBERS: cold_run_good_land.py the 63rd runner 55/55 on its first graded run; the tape 10/10 on its second (the first 9/10, CC7); RUN
+(1310, 96, 88, 0, 12, 1605, 39, 319, the four pairs, 127) as predicted; kinds 1133, effects 1031, daemons 68, thirteen CALL edges (the design's decalogue
+edge dropped — no cell there); the docket 451 rows (link 34 / topic 417; LAW 80, DERIVATION 82, DISPUTE 36, CONTEXT 160, OUTSIDE 93; credited 105; 184,226 bytes), EVERY ROW READ WHOLE FROM THE START — no cut, no overlay (the parts' WHOLE dicts empty, the correction counts zero and computed); every gate green in one chain (the sweep 63/63). THE TWO-RUN RULE'S FIRST COMPILE SITTING: RUN A the design,
+the docket its own run, RUN B the build — three clean points, the owner compacting twice.
+
+## 2026-09-19 — THE GATES CUT: THE CHAIN FROM NINETY MINUTES TO 18 MIN 27 S — THE IMPORT WAS THE COST, NOT THE REPLAY; THE SNAPSHOT, THE PARALLEL PROBES,
+## THE STAMPED SWEEP, THE INCREMENTAL POSITIONS, THE UNMOVED CHECK
+On the owner's "What is gate chain and why does it take so long" and "Yes make that change. It's too long as it is" (after sitting 6b). MEASURED: the
+chain's eleven steps 5,380 s; the import of the sixty-three runners 135.9 s against a replay of 1.7 s; the running world 1.5 MB pickled, 1.09 s to
+reload; the positions table 169 pauses × a fresh parse of the 750 KB sequence file; the sweep sixty-three sequential runners. BUILT (World/step9/
+GATES_CHAIN.md; THE_LOOP D34-D37): the running world SAVED by the tape's run and LOADED by its readers under a sources key; the eleven probe suites
+in parallel; the journal gate's two replays concurrent; the positions table measured WHOLE by eight workers (an incremental form by regions was
+built, tested against a moved region and STRUCK the same day — seven of CU's nine rows NOT YET, the region's checkpoints reading helpers bound
+across most of the block; the closure measured at 429 of 630 statements); the sweep parallel (--jobs) and incremental (--changed against
+sweep_stamp.json, a shared piece moved = full, the stamp by a green sweep only); the second journal gate replaced by a digest of the live rows
+before and after the sweep. AS RUN: the first chain 43 min 23 s (wall 43 min 13 s) with everything in full, the second 18 min 27 s (wall 17 min 49 s) with nothing moved — ALL GREEN
+both, every verdict the old chain gave (the tape 10/10 checkpoints; the sweep 62/62, 6714 cells; the positions 253 over 169 pauses; the journal 12 kinds, 9702 rows,
+UNMOVED; the register DECLARED 100 / DEBT 0 / FAILS 0). THE LESSONS: measure before cutting — the obvious cost (the replay) was not the cost; a
+cache keyed on a date lies, one keyed on the sources' digests does not; a miss falls back to the full work; an incremental cut is only as good
+as the independence it assumes — test it against a moved piece before trusting it.
+
+
+## 2026-09-19 — DEUTERONOMY 9 READ AND FROZEN (THE DEUTERONOMY WALK sitting 7, one run): THE CALF RETOLD IN MOSES' FIRST PERSON — GOD'S WORD VERBATIM, MOSES' ACTS
+## IN HIS OWN WORDS, AARON'S PERIL TOLD ONLY HERE; STIFF-NECKED SIX SEATS ALL THE CALF'S; THREE SPELLINGS OF "TABLETS"; THE FORTY DAYS FOUR TIMES; THE PRAYER'S SECOND
+## TELLING QUOTED BY SOLOMON AND NEHEMIAH
+On the owner's "Let's keep run as it is and do another section" after THE GATES CUT. THE READING: Deuteronomy 9:1-29 with Onkelos whole (the export's 29 rows the DB's
+29 — the identity, asserted) and the Sifrei on Deuteronomy SILENT ON THE CHAPTER (36 on 6:9, 37 on 11:10 — chapters 7-10 without a section), its whole voice
+seven rows from elsewhere found by the union of both files' citations and read whole (14:1 and 306:25 the forty days as suffering, with Exodus 34:28; 25:4 the
+hyperbole rule; 26:7 the ten names of prayer; 27:2 the door opened — I1; 342:1 the harsh words, the Hebrew's range form; 357:44 the breaking among the wonders —
+I2); four reread whole from sitting 1. FROZEN as ONE unit deu_09_not_righteousness (the 223rd; standing 2221 = 2215 + 6 as predicted, hash unmoved); the ledger
+deu_09_ekev_2026-09-19.md (36 sources — Onkelos 29: MATERIAL 28 / CONTEXT 1; the outside rows 7: MATERIAL 6 / CONTEXT 1; coverage computed, lint 0, no cut
+missed); six claims DV09-01..06 verified 6/0, seated as six WITNESS_READ at 9:1, 7, 12, 15, 22, 25; the ritual 13 PASS; the fold +14 on the journal; the display
+layer +60 by reference and +36 by gloss. THE FINDS: 9:13 shares ELEVEN OF THIRTEEN tokens with Exodus 32:9 — God's word quoted whole but for "to me, saying"; 9:17
+shares ONE with 32:19 — the breaking retold in Moses' own words ("before your eyes" for "beneath the mountain"); AARON'S PERIL (9:20 — the anger, "to destroy him",
+the prayer for him) has no telling in Exodus 32 — an act told only in the retelling, the compile's retrograde question; STIFF-NECKED six seats in the Bible, all
+the calf's (Exodus 32:9, 33:3, 33:5, 34:9; 9:6, 9:13) and "stubbornness" (9:27) the noun's one seat; "TABLETS" in THREE SPELLINGS (plene 9:9-10 and 10:1 alone;
+defective 9:11, 9:15, Exodus's form; the second plene 9:11 with 4:13 and 1 Kings 8:9) — two inside one verse — and "the tablets of the covenant" the Bible's three
+seats all here; THE FORTY DAYS FOUR TIMES of the phrase's nine Bible seats, 9:25 alone with the article; THE OFFER'S THREE FORMS (Exodus 32:10, Numbers 14:12,
+9:14); "to do what is evil in the eyes of the LORD" (9:18) the Kings' formula at its ONE Torah seat, "and I looked, and behold" (9:16) the vision formula's one;
+THE PRAYER'S SECOND TELLING — Israel/Jacob, the Egyptians/the land, the mountains/the wilderness — quoted by Solomon (1 Kings 8:51) and Nehemiah (1:10) from THIS
+telling; THE NATIONS' TAUNT IN FOUR FORMS; "because the LORD was not able" at two seats spelled two ways; THREE VOICES ON ONE PRONOUN (Israel's "you", God's to
+Moses, Moses' to God) and Moses never named; the register switching inside 9:7; ONKELOS — the Memra a consuming fire (4:24 the kin), merit for righteousness,
+the reverential "before" at eleven seats, the prayer supplied at "let Me alone" and "hearkened", the file for the grinding, TWO ARAMAIC WORDS FOR FIRE (the calf
+burned in the burnings' fire, the mountain in the theophany's), the three place names translated, Rekem Geah, the double Name; JOSIAH'S KIDRON the kin of the calf's
+dust (2 Kings 23:6, 12). THE CAUTION: the English Sifrei mis-cites 306:25's Exodus verse ("Ex.36:28" for 34:28) — chapter 6's lesson again; the Hebrew right, the
+row kept. THE LESSONS (ten, in the map): the shelf's bytes spell their own words; a summarizer counting runs misses single tokens; a spelling splits a census; a
+derived tuple is retyped whole. OWED TO 7b: the readback's rows of the calf, Aaron's retrograde write, the state of the stiff neck, the three forties and their
+dates (Ta'anit 4:6), the four provocations, the intercession's second telling, a new checkpoint series.

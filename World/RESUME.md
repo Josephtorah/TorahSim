@@ -1,3 +1,27 @@
+# ⚠ THE DEUTERONOMY WALK sitting 7 (2026-09-19; step9/DEUTERONOMY_WALK.md "Sitting 7" + "Sitting 7 — AS BUILT"): CHAPTER 9 READ AND FROZEN as ONE unit
+# (deu_09_not_righteousness, the 223rd; standing 2221, hash unmoved) — the calf retold: 9:13 verbatim with Exodus 32:9, 9:17 in Moses' own words, Aaron's peril
+# (9:20) told only here (the compile's retrograde question); the Sifrei silent, seven outside rows whole; the ledger deu_09_ekev_2026-09-19.md (36 sources); six claims
+# seated; the fold +14 on the journal (9716 rows); every gate green. NEXT on the owner's word: the commit; then 7b — the compile of chapter 9 (a new checkpoint series).
+# ⚠ THE GATES CUT (2026-09-19; step9/GATES_CHAIN.md, THE_LOOP D34-D37): the gates chain 18 min 27 s against ninety minutes — the tape saves the running world
+# (World/journal/data/running_world.pickle, keyed on the sources' digests) and the register gate and the readers load it; the probes in parallel; the sweep
+# `--changed --jobs 8` against step9/sweep_stamp.json (a shared piece moved = full); the positions `--jobs 8` (eight workers, the whole measure); the second
+# journal gate the UNMOVED digest; `gates_chain.sh <out> --full` for the full sweep. NEVER a reader's replay under the live source name — the readers take the snapshot.
+# ⚠ THE DEUTERONOMY WALK sitting 6b (2026-09-18/19; step9/DEUTERONOMY_WALK.md "Sitting 6b" + "Sitting 6b — AS BUILT"): CHAPTER 8 COMPILED —
+# step9/cold_run_good_land.py the 63rd runner (55/55; six cells; THE READBACK'S FIFTH FORM — the retelling of a STATE: eighteen rows, ten on the tape, seven
+# by CALL, ONE SUPPLIED (8:4 the garment and the foot — no retrograde write, the scan empty); two holes compiled), law_good_land the 68th daemon (given_at
+# Deut 8:1, boot); THREE LINES on the counter's own day (40, 11, 1), NO marker — bless_after_eating_commanded a STATUS, forgetting_barred a BLOCK (6:12's ask
+# without a write), heaven_and_earth_witness REUSED at 8:19; the tape 10/10 on its second run with RUN (1310, 96, 88, 0, 12, 1605, 39, 319, pairs, 127) as
+# predicted, PREVIOUS_RUN 5b's exactly, markers 167, closes 127 (chapter 4's CC7 retyped — the reuse a second entry); the docket 451 rows read whole from
+# the start (its own run); every probe suite and gate GREEN, the sweep 63/63. THE TWO-RUN RULE's first compile sitting: three clean points.
+# NEXT on the ruling: the commit on the owner's word; chapter 9's reading (9:1-29) — the next compile opens a NEW checkpoint series (CU the last two-letter prefix).
+# ⚠ THE DEUTERONOMY WALK sitting 6 (2026-09-18; step9/DEUTERONOMY_WALK.md "Sitting 6" + "Sitting 6 — AS BUILT"): CHAPTER 8 READ AND FROZEN as one
+# unit (the 222nd — deu_08_manna_humility 8:1-20), ONE RUN under THE TWO-RUN RULE with one compaction inside it, every row whole: THE SIFREI SILENT ON THE CHAPTER
+# but SIXTEEN rows from elsewhere (the Ekev piskaot on 11:10-12 quoting the Land's praise back; five reread whole) + Onkelos whole + the kin's spine credited
+# by name from the Numbers walk — 36 sources, coverage computed; the seven species at one seat (8:8) and honey without milk; "eat, be satisfied, bless" the
+# Torah's one command to bless (no cell yet); the king's law's tokens at 8:13; the written/read pair at 8:2; the forty years a STATE the tape never wrote;
+# the ritual 13 PASS, CORPUS TRUTH GREEN (222 units, standing 2215 = 2209 + 6, hash unmoved), build_world, the journal gate (12 kinds, 9702 rows),
+# the register gate --strict (DECLARED 100, DEBT 0, FAILS 0) GREEN; the tape unmoved since 5b. NEXT on the ruling: the commit; then 6b — the
+# compile of chapter 8 in TWO runs (the debt box (a)-(n)), or the schema sitting first.
 # ⚠ THE DEUTERONOMY WALK sitting 5b (2026-09-18; step9/DEUTERONOMY_WALK.md "Sitting 5b" + "Sitting 5b — AS BUILT"): CHAPTER 7 COMPILED —
 # step9/cold_run_seven_nations.py the 62nd runner (51/51; six cells; THE READBACK ON THE KIN — twenty-one rows, fifteen by CALL to the kin's cells, six on
 # the tape; four holes compiled), law_seven_nations the 67th daemon (given_at Deut 7:1, boot); THREE LINES on the counter's own day (40, 11, 1), NO marker —

@@ -1,0 +1,1459 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>deu_08_manna_humility — derived logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/deu_08_manna_humility?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Remember wilderness; manna; do not forget (8:1–20) <span class='badge frozen'>MODEL · REV 1 · GATES GREEN</span></h1>
+<div class="meta">unit <b>deu_08_manna_humility</b> · Deuteronomy 8:1-20 · derive tree_derived_v1 · phase C</div>
+<div class="meta"><a href="/#Deut/8/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">כָּל־הַמִּצְוָה</span> · <i>kol-ha-mitzvah</i> · All the commandment</p>
+<div class="note">Tree-derived v1: each verse top binary split (left/right) grounds one STEP. Not multi-verse English smear. Not full TIR yet.</div>
+<div class="meta">confidence: hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>Reprocess deu_08_manna_humility (8:1-20, 20 vv) tree-first phase C.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Trees</td><td>Every verse via taamim_tree_parse.py v1; full tree_ascii recorded.</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Tree → steps</td><td>One STEP per verse citing left/right top-split arms. English [EN-AID] only.</td><td>hypothesis</td></tr>
+<tr><td><b>D</b></td><td>Oral dual-track</td><td>Sifrei Devarim samples when available; dual-track only; never silent-merge.</td><td>hypothesis</td></tr>
+<tr><td><b>E</b></td><td>Deuteronomy 8:1-20 derivation 2026-09-18 — THE DEUTERONOMY WALK sitting 6, chapter 8</td><td>The book&#x27;s sixth reading, at the chapter&#x27;s grain (chapter 8 as one draft — the way of forty years and the good land (8:1-20)), ONE run under the two-run rule and every row whole under the whole-row rule: Onkelos Deuteronomy 8:1-20 whole and fresh (the export&#x27;s twenty rows the DB&#x27;s twenty — the identity, asserted); THE SIFREI ON DEUTERONOMY SILENT ON THE CHAPTER (no piska head between 36 on 6:9 and 37 on 11:10) — its sixteen rows outside any piska citing chapter 8 read whole in both files (the Ekev piskaot on 11:10-12 quoting the Land&#x27;s praise back at it; five read before and reread whole), the kin&#x27;s spine (Numbers 11:4-9, 14:33-34, 20:1-13, 21:4-9; the Mekhilta on Exodus 16-17) credited by name from the Numbers and Exodus ledgers. Ledger deu_08_ekev_2026-09-18.md, coverage computed by script, the ink facts computed from the Tanakh DB and the snapshot store (every fact an assert — four fell on the first typed pass, forms not facts, retyped from the print), the engine&#x27;s numeral parser measured on every verse (two number verses — &quot;these forty years&quot; [40] at 8:2 and 8:4; the sated verb starred at 8:10 and 8:12; no gap), the store&#x27;s extra read-form token at 8:2 asserted as the chapter&#x27;s one written/read pair and kept out of every check, every quotation cut by consonants (no miss). Seated as claims DV08-01..06: the frame: all the commandment which i command you this day you shall keep to do, that you may live and multiply and go in and possess the land which the lord swore to your fathers; the way of forty years: remember all the way the lord your god led you these forty years in the wilderness, to humble you, to test you, to know what was in your heart, whether you would keep his commandments or not; he humbled you and let you hunger and fed you the manna which you did not know nor your fathers, to make you know that not by bread alone does man live but by all that proceeds from the mouth of the lord; your garment did not wear out nor your foot swell these forty years; know in your heart that as a man disciplines his son the lord your god disciplines you; keep his commandments, walk in his ways, fear him; the good land: for the lord your god is bringing you into a good land — a land of brooks of water, of springs and deeps flowing out in valley and hill; a land of wheat and barley and vine and fig and pomegranate, a land of olive oil and honey; a land where you shall eat bread without poverty and lack nothing, whose stones are iron and from whose hills you shall hew copper; and you shall eat and be satisfied and bless the lord your god for the good land he has given you; take heed lest you forget: take heed to yourself lest you forget the lord your god by not keeping his commandments, his judgments and his statutes which i command you this day — lest, when you have eaten and are satisfied and have built good houses and dwelt in them, and your herds and flocks multiply and your silver and gold multiply and all you have multiplies, your heart be lifted up and you forget the lord your god who brought you out of the land of egypt, out of the house of bondage; the chain and the covenant: who led you through the great and terrible wilderness of fiery serpents and scorpions and thirst where there was no water, who brought you water out of the rock of flint, who fed you manna in the wilderness which your fathers did not know, to humble you and test you, to do you good in your end — and you say in your heart, my power and the might of my hand have gotten me this wealth; remember the lord your god, for it is he who gives you power to get wealth, to establish his covenant which he swore to your fathers, as at this day; the testimony: and it shall be, if you surely forget the lord your god and go after other gods and serve them and bow down to them, i testify against you this day that you shall surely perish; like the nations the lord makes perish before you, so shall you perish, because you would not hearken to the voice of the lord your god. The compile (the blessing after the meal; the seven species; the manna and the humbling; the forty years as a state; the discipline; take heed lest; the heart lifted up; the exodus formula; the serpents and the rock; my power and the might of my hand; the covenant established; the testimony) follows in its own sitting (World/step9/DEUTERONOMY_WALK.md).</td><td>tested</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Dt_8_1 · Deut.8.1 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">כל המצוה אשר אנכי מצוך היום תשמרון לעשות … למען תחיון ורביתם ובאתם וירשתם את הארץ אשר נשבע יהוה לאבתיכם</span> · <i>kl hmtzvh &#x27;shr &#x27;nky mtzvk hyvm tshmrvn l&#x27;shvt … lm&#x27;n tchyvn vrbytm vb&#x27;tm vyrshtm &#x27;t h&#x27;rtz &#x27;shr nsh</i> · From top split: LEFT «כל המצוה אשר אנכי מצוך היום תשמרון לעשות» / RIGHT «למען תחיון ורביתם ובאתם וירשתם את הארץ אשר נשבע יהוה לאבתיכם». Derive claim from Hebrew arms. Deut 8:1.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כל המצוה אשר אנכי מצוך היום תשמרון לעשות</span> · <i>kl hmtzvh &#x27;shr &#x27;nky mtzvk hyvm tshmrvn l&#x27;shvt</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">למען תחיון ורביתם ובאתם וירשתם את הארץ אשר נשבע יהוה לאבתיכם</span> · <i>lm&#x27;n tchyvn vrbytm vb&#x27;tm vyrshtm &#x27;t h&#x27;rtz &#x27;shr nshb&#x27; yhvh l&#x27;btykm</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_frame, all_the_commandment_that_you_may_live_and_possess_the_land)</span><br><span class="gloss">= WITNESS-READ(the-frame, all-the-commandment-that-you-may-live-and-possess-the-land)</span><br>THE FRAME: ALL THE COMMANDMENT WHICH I COMMAND YOU THIS DAY YOU SHALL KEEP TO DO, THAT YOU MAY LIVE AND MULTIPLY AND GO IN AND POSSESS THE LAND WHICH THE LORD SWORE TO YOUR FATHERS [claim DV08-01]. THE FRAME: ALL THE COMMANDMENT WHICH I COMMAND YOU THIS DAY YOU SHALL KEEP TO DO, THAT YOU MAY LIVE AND MULTIPLY AND GO IN AND POSSESS THE LAND WHICH THE LORD SWORE TO YOUR FATHERS. &#x27;All the commandment&#x27; eight seats, all this book&#x27;s; &#x27;which I command you this day&#x27; eighteen; &#x27;that you may live&#x27; five — with the lengthened verb ending (the paragogic nun) at 5:33 and 8:1 alone; &#x27;and go in and possess&#x27; 4:1, 8:1, 11:8 (six tokens shared with 4:1 and 11:8 — &#x27;all the commandment which I command you this day&#x27;); &#x27;swore&#x27; (8:1, 8:18) no number in the parser; the verse the chapter&#x27;s frame — BOTH persons (the singular &#x27;you shall keep&#x27;, the plural &#x27;that you may live and multiply and go in&#x27;), the first person Moses&#x27; (&#x27;I command&#x27;); &#x27;I&#x27; the store&#x27;s unglossed token, rewritten by reference; the fathers at 8:1, 3, 16, 18; NO divine frame, NO &#x27;saying&#x27; — the whole chapter Moses&#x27; voice; the register gate&#x27;s finder sees no receipt in the chapter (&#x27;which I command you&#x27; the giving). No piska and no outside row on the verse — the spine silent on the chapter (no head between 36 on 6:9 and 37 on 11:10; chapters 7-10 without a section). ONKELOS: &#x27;swore&#x27; MADE &#x27;ESTABLISHED&#x27; (as at 7:8 — twenty-two seats of the rendering). THE COMPILE: the frame&#x27;s clause the chapter&#x27;s header, no cell of its own; the chapter&#x27;s cells owed are listed at the ledger&#x27;s testing shelf.
+</td><td>—</td><td class='cite'>Onkelos Deut 8:1</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_2 · Deut.8.2 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">וזכרת את כל הדרך אשר הליכך יהוה אלהיך זה ארבעים שנה במדבר … למען ענתך לנסתך לדעת את אשר בלבבך התשמר מצותו מצותיו אם לא</span> · <i>vzkrt &#x27;t kl hdrk &#x27;shr hlykk yhvh &#x27;lhyk zh &#x27;rb&#x27;ym s … lm&#x27;n &#x27;ntk lnstk ld&#x27;t &#x27;t &#x27;shr blbbk htshmr mtzvtv m</i> · From top split: LEFT «וזכרת את כל הדרך אשר הליכך יהוה אלהיך זה ארבעים שנה במדבר» / RIGHT «למען ענתך לנסתך לדעת את אשר בלבבך התשמר מצותו מצותיו אם לא». Derive claim from Hebrew arms. Deut 8:2.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וזכרת את כל הדרך אשר הליכך יהוה אלהיך זה ארבעים שנה במדבר</span> · <i>vzkrt &#x27;t kl hdrk &#x27;shr hlykk yhvh &#x27;lhyk zh &#x27;rb&#x27;ym shnh bmdbr</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">למען ענתך לנסתך לדעת את אשר בלבבך התשמר מצותו מצותיו אם לא</span> · <i>lm&#x27;n &#x27;ntk lnstk ld&#x27;t &#x27;t &#x27;shr blbbk htshmr mtzvtv mtzvtyv &#x27;m l&#x27;</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_way_of_forty_years, the_humbling_the_manna_not_by_bread_alone_the_discipline_of_a_son)</span><br><span class="gloss">= WITNESS-READ(the-way-fowl-forty-years, the-humbling-the-manna-not-by-bread-alone-the-discipline-fowl-a-son)</span><br>THE WAY OF FORTY YEARS: REMEMBER ALL THE WAY THE LORD YOUR GOD LED YOU THESE FORTY YEARS IN THE WILDERNESS, TO HUMBLE YOU, TO TEST YOU, TO KNOW WHAT WAS IN YOUR HEART, WHETHER YOU WOULD KEEP HIS COMMANDMENTS OR NOT; HE HUMBLED YOU AND LET YOU HUNGER AND FED YOU THE MANNA WHICH YOU DID NOT KNOW NOR YOUR FATHERS, TO MAKE YOU KNOW THAT NOT BY BREAD ALONE DOES MAN LIVE BUT BY ALL THAT PROCEEDS FROM THE MOUTH OF THE LORD; YOUR GARMENT DID NOT WEAR OUT NOR YOUR FOOT SWELL THESE FORTY YEARS; KNOW IN YOUR HEART THAT AS A MAN DISCIPLINES HIS SON THE LORD YOUR GOD DISCIPLINES YOU; KEEP HIS COMMANDMENTS, WALK IN HIS WAYS, FEAR HIM [claim DV08-02]. THE WAY OF FORTY YEARS: REMEMBER ALL THE WAY THE LORD YOUR GOD LED YOU THESE FORTY YEARS IN THE WILDERNESS, TO HUMBLE YOU, TO TEST YOU, TO KNOW WHAT WAS IN YOUR HEART, WHETHER YOU WOULD KEEP HIS COMMANDMENTS OR NOT; HE HUMBLED YOU AND LET YOU HUNGER AND FED YOU THE MANNA WHICH YOU DID NOT KNOW NOR YOUR FATHERS, TO MAKE YOU KNOW THAT NOT BY BREAD ALONE DOES MAN LIVE BUT BY ALL THAT PROCEEDS FROM THE MOUTH OF THE LORD; YOUR GARMENT DID NOT WEAR OUT NOR YOUR FOOT SWELL THESE FORTY YEARS; KNOW IN YOUR HEART THAT AS A MAN DISCIPLINES HIS SON THE LORD YOUR GOD DISCIPLINES YOU; KEEP HIS COMMANDMENTS, WALK IN HIS WAYS, FEAR HIM. &#x27;These forty years&#x27; [40] at 8:2 and 8:4 (2:7 the same phrase; [40] at every seat of the wilderness&#x27;s forty years — Exodus 16:35, Numbers 14:33-34, 32:13, 29:4, Joshua 5:6, Nehemiah 9:21, Psalm 95:10, Amos 2:10), the chapter&#x27;s two number verses, no gap; &#x27;to humble you&#x27; the verb&#x27;s seven Deuteronomy seats, three this chapter&#x27;s; &#x27;to test you&#x27; the lemma&#x27;s fifteen Torah seats; &#x27;WHETHER … OR NOT&#x27; the verse-ending pair at seven seats — 8:2 and Exodus 16:4 THE MANNA&#x27;S OWN TEST-CLAUSE, the two tokens shared; THE INTERROGATIVE HE ON A VERB the book&#x27;s ONE (8:2 &#x27;whether you would keep&#x27;); THE CHAPTER&#x27;S ONE WRITTEN/READ PAIR at 8:2 — &#x27;His commandments&#x27; written without the yod and read with it (the store&#x27;s two tokens, twenty-four where the DB has twenty-three, kept out of every check; 5:10&#x27;s and 7:9&#x27;s kin); the narrative verbs THREE, all at 8:3 (humbled, let hunger, fed — God&#x27;s past acts); &#x27;the manna&#x27; thirteen; &#x27;nor did your fathers know&#x27; 8:3 and 8:16 alone; &#x27;for they did not know&#x27; shared with Exodus 16:15; &#x27;NOT BY BREAD ALONE&#x27; ONE; &#x27;all that proceeds from the mouth of the LORD&#x27; ONE (&#x27;the mouth of the LORD&#x27; twenty-five Torah seats); &#x27;man shall live&#x27; 8:3 and Ecclesiastes (Leviticus 18:5 the kin); &#x27;did not swell&#x27; the verb&#x27;s TWO Bible seats (8:4, Nehemiah 9:21); 29:4 &#x27;did not wear out&#x27; the plural garments, the singular here; &#x27;as a man disciplines his son&#x27; ONE — 1:31 &#x27;as a man carries his son&#x27; the pair, carried there and disciplined here; &#x27;discipline&#x27; eight Torah; &#x27;to walk in His ways&#x27; three; &#x27;and to fear Him&#x27; ONE. THE SIFREI OUTSIDE ANY PISKA (on 6:5, the discipline): 32:10 — R. Meir: you know your deeds and the chastisements, the latter not as the deeds (&#x27;as a man disciplines his son&#x27;); 32:12 — R. Nathan b. R. Joseph: a covenant cut for chastisements as for the Land — 8:5 then 8:7, the discipline beside the good land; 32:15 — the Land, whence? 8:5-7 (the range citation, invisible to the Hebrew regex, asserted by string); 48:10 on 11:22 — &#x27;not by bread alone&#x27; the exposition (midrash), &#x27;all that proceeds from the mouth of the LORD&#x27; the laws and the homilies (8:3). ONKELOS: 8:3 THE MEMRA (&#x27;the Word&#x27;) — &#x27;not by bread alone is man SUSTAINED, but by everything that proceeds from the Word of the LORD is man sustained&#x27; (the sustaining verb five seats; &#x27;the Word of the LORD&#x27; twenty-four over the book, 8:3 and 8:20 the chapter&#x27;s two); 8:4 &#x27;your foot did not swell&#x27; MADE &#x27;YOUR SHOES DID NOT GO BARE&#x27; (8:4, 29:4); 8:5 &#x27;disciplines&#x27; MADE &#x27;TEACHES&#x27; (4:1&#x27;s word); 8:6 &#x27;in His ways&#x27; MADE &#x27;the ways that are RIGHT BEFORE HIM&#x27; (five seats). THE COMPILE&#x27;S CELLS OWED: the manna and the humbling (Yoma 74b-76a; Exodus 16&#x27;s lines by kind, exodus_story by CALL — the readback); the forty years as a STATE (the garment, the foot — no earlier line on the tape: the readback&#x27;s supplied grade on a state, not an act); the discipline (Berakhot 5a; the Sifrei 32:10-15 credited here).
+</td><td>—</td><td class='cite'>Onkelos Deut 8:2, Onkelos Deut 8:3, Onkelos Deut 8:4, Onkelos Deut 8:5, Onkelos Deut 8:6, Sifrei Devarim 32:10, Sifrei Devarim 32:12, Sifrei Devarim 32:15, Sifrei Devarim 48:10</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_3 · Deut.8.3 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ויענך וירעבך ויאכלך את המן אשר לא ידעת ולא ידעון אבתיך … למען הודעך כי לא על הלחם לבדו יחיה האדם כי על כל מוצא פי יהו</span> · <i>vy&#x27;nk vyr&#x27;bk vy&#x27;klk &#x27;t hmn &#x27;shr l&#x27; yd&#x27;t vl&#x27; yd&#x27;vn  … lm&#x27;n hvd&#x27;k ky l&#x27; &#x27;l hlchm lbdv ychyh h&#x27;dm ky &#x27;l kl</i> · From top split: LEFT «ויענך וירעבך ויאכלך את המן אשר לא ידעת ולא ידעון אבתיך» / RIGHT «למען הודעך כי לא על הלחם לבדו יחיה האדם כי על כל מוצא פי יהוה יחיה האדם». Derive claim from Hebrew arms. Deut 8:3.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויענך וירעבך ויאכלך את המן אשר לא ידעת ולא ידעון אבתיך</span> · <i>vy&#x27;nk vyr&#x27;bk vy&#x27;klk &#x27;t hmn &#x27;shr l&#x27; yd&#x27;t vl&#x27; yd&#x27;vn &#x27;btyk</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">למען הודעך כי לא על הלחם לבדו יחיה האדם כי על כל מוצא פי יהוה יחיה האדם</span> · <i>lm&#x27;n hvd&#x27;k ky l&#x27; &#x27;l hlchm lbdv ychyh h&#x27;dm ky &#x27;l kl mvtz&#x27; py yhvh ychyh h&#x27;dm</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_4 · Deut.8.4 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">שמלתך לא בלתה מעליך ורגלך לא בצקה … זה ארבעים שנה</span> · <i>shmltk l&#x27; blth m&#x27;lyk vrglk l&#x27; btzqh … zh &#x27;rb&#x27;ym shnh</i> · From top split: LEFT «שמלתך לא בלתה מעליך ורגלך לא בצקה» / RIGHT «זה ארבעים שנה». Derive claim from Hebrew arms. Deut 8:4.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">שמלתך לא בלתה מעליך ורגלך לא בצקה</span> · <i>shmltk l&#x27; blth m&#x27;lyk vrglk l&#x27; btzqh</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">זה ארבעים שנה</span> · <i>zh &#x27;rb&#x27;ym shnh</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_5 · Deut.8.5 · <span class='expr'>COND_כי</span></h3>
+<p><span class="he">וידעת עם לבבך … כי כאשר ייסר איש את בנו יהוה אלהיך מיסרך</span> · <i>vyd&#x27;t &#x27;m lbbk … ky k&#x27;shr yysr &#x27;ysh &#x27;t bnv yhvh &#x27;lhyk mysrk</i> · From top split: LEFT «וידעת עם לבבך» / RIGHT «כי כאשר ייסר איש את בנו יהוה אלהיך מיסרך». Derive claim from Hebrew arms. Deut 8:5.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וידעת עם לבבך</span> · <i>vyd&#x27;t &#x27;m lbbk</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">כי כאשר ייסר איש את בנו יהוה אלהיך מיסרך</span> · <i>ky k&#x27;shr yysr &#x27;ysh &#x27;t bnv yhvh &#x27;lhyk mysrk</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_6 · Deut.8.6 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ושמרת את מצות יהוה אלהיך … ללכת בדרכיו וליראה אתו</span> · <i>vshmrt &#x27;t mtzvt yhvh &#x27;lhyk … llkt bdrkyv vlyr&#x27;h &#x27;tv</i> · From top split: LEFT «ושמרת את מצות יהוה אלהיך» / RIGHT «ללכת בדרכיו וליראה אתו». Derive claim from Hebrew arms. Deut 8:6.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ושמרת את מצות יהוה אלהיך</span> · <i>vshmrt &#x27;t mtzvt yhvh &#x27;lhyk</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">ללכת בדרכיו וליראה אתו</span> · <i>llkt bdrkyv vlyr&#x27;h &#x27;tv</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_7 · Deut.8.7 · <span class='expr'>COND_כי</span></h3>
+<p><span class="he">כי יהוה אלהיך מביאך אל ארץ טובה … ארץ נחלי מים עינת ותהמת יצאים בבקעה ובהר</span> · <i>ky yhvh &#x27;lhyk mby&#x27;k &#x27;l &#x27;rtz tvbh … &#x27;rtz nchly mym &#x27;ynt vthmt ytz&#x27;ym bbq&#x27;h vbhr</i> · From top split: LEFT «כי יהוה אלהיך מביאך אל ארץ טובה» / RIGHT «ארץ נחלי מים עינת ותהמת יצאים בבקעה ובהר». Derive claim from Hebrew arms. Deut 8:7.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כי יהוה אלהיך מביאך אל ארץ טובה</span> · <i>ky yhvh &#x27;lhyk mby&#x27;k &#x27;l &#x27;rtz tvbh</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">ארץ נחלי מים עינת ותהמת יצאים בבקעה ובהר</span> · <i>&#x27;rtz nchly mym &#x27;ynt vthmt ytz&#x27;ym bbq&#x27;h vbhr</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_good_land, brooks_and_deeps_the_seven_species_iron_and_copper_eat_be_satisfied_bless)</span><br><span class="gloss">= WITNESS-READ(the-good-land, brooks-and-deeps-the-seven-species-iron-and-copper-eat-in-satisfied-bless)</span><br>THE GOOD LAND: FOR THE LORD YOUR GOD IS BRINGING YOU INTO A GOOD LAND — A LAND OF BROOKS OF WATER, OF SPRINGS AND DEEPS FLOWING OUT IN VALLEY AND HILL; A LAND OF WHEAT AND BARLEY AND VINE AND FIG AND POMEGRANATE, A LAND OF OLIVE OIL AND HONEY; A LAND WHERE YOU SHALL EAT BREAD WITHOUT POVERTY AND LACK NOTHING, WHOSE STONES ARE IRON AND FROM WHOSE HILLS YOU SHALL HEW COPPER; AND YOU SHALL EAT AND BE SATISFIED AND BLESS THE LORD YOUR GOD FOR THE GOOD LAND HE HAS GIVEN YOU [claim DV08-03]. THE GOOD LAND: FOR THE LORD YOUR GOD IS BRINGING YOU INTO A GOOD LAND — A LAND OF BROOKS OF WATER, OF SPRINGS AND DEEPS FLOWING OUT IN VALLEY AND HILL; A LAND OF WHEAT AND BARLEY AND VINE AND FIG AND POMEGRANATE, A LAND OF OLIVE OIL AND HONEY; A LAND WHERE YOU SHALL EAT BREAD WITHOUT POVERTY AND LACK NOTHING, WHOSE STONES ARE IRON AND FROM WHOSE HILLS YOU SHALL HEW COPPER; AND YOU SHALL EAT AND BE SATISFIED AND BLESS THE LORD YOUR GOD FOR THE GOOD LAND HE HAS GIVEN YOU. &#x27;A good land&#x27; twelve (8:7 and 8:10 two of them); &#x27;brooks of water&#x27; three (10:7 Jotbathah&#x27;s); &#x27;springs and deeps&#x27; ONE — &#x27;deeps&#x27; in the Torah here and the Song of the Sea alone; THE SEVEN SPECIES — 8:8 ALONE in the Bible holds all seven lemmas (three or more at five other seats: Numbers 20:5, Haggai 2:19, Joel 1:12, Habakkuk 3:17, Jeremiah 41:8); &#x27;milk&#x27; absent — HONEY WITHOUT MILK; 8:8 the chapter&#x27;s one verse with NO VERB and neither person; 2 Kings 18:32 the Rabshakeh&#x27;s &#x27;a land of olive oil and honey&#x27; the kin; &#x27;in poverty&#x27; ONE; &#x27;you shall not lack anything&#x27; ONE (2:7 &#x27;you lacked nothing&#x27; the wilderness&#x27;s) — the prohibition&#x27;s form as a promise; &#x27;iron&#x27; eight, &#x27;copper&#x27; three, &#x27;hew&#x27; three Torah; &#x27;EAT, BE SATISFIED, BLESS&#x27; ONE — the Torah&#x27;s ONE command to bless the LORD; &#x27;eat and be satisfied&#x27; six; &#x27;and you shall be satisfied&#x27; the seven-stem homograph STARRED by the parser at 8:10 and 8:12 (as at 6:11, 11:15, 31:20). THE SIFREI OUTSIDE ANY PISKA — the Ekev piskaot on 11:10-12 quote the chapter&#x27;s praise of the Land back at it: 19:2 on 1:20 — the tutor&#x27;s parable: all the forty years Moses said &#x27;a good land, a land of brooks of water&#x27; (8:7), at the Land &#x27;you have come&#x27; (read before at sitting 1, reread whole); 37:5 on 11:10 — R. Shimon b. Yohai: &#x27;the world&#x27; is the Land, spiced with everything — &#x27;you shall lack nothing&#x27; (8:9); 39:4 on 11:11 — twelve lands for twelve tribes, 8:7-10&#x27;s &#x27;land&#x27; clauses counted among them (the range citation 8:7-10); 39:6 and 39:8 — the Land drinks rain, irrigation, snow and dew, &#x27;a land of brooks of water&#x27; (8:7): the English&#x27;s 39:6 running through the Hebrew&#x27;s 39:6-8, each file&#x27;s own row read whole and counted once; 40:10 on 11:12 — the blessing in the house as in the field, even in eating and satisfaction (8:10), even in the belly (Exodus 23:25); 297:4 on 26:2 — the first fruits from the seven species for which the Land is praised, 8:8 the list (Mishnah Bikkurim 1:3 the answer sheet). ONKELOS: &#x27;flowing brooks&#x27;, &#x27;fountains of springs&#x27; (one each); the seven species PLURAL, &#x27;a land whose olives make oil and which makes honey&#x27; (the English&#x27;s brackets); &#x27;in straits&#x27; for poverty (one). THE COMPILE&#x27;S CELLS OWED: THE BLESSING AFTER THE MEAL (8:10 — Berakhot 48b the grace&#x27;s blessings from the verse, 20b-21a the Torah obligation, 49b and Mishnah Berakhot 7:2 the measure of &#x27;satisfied&#x27;, 35a the blessing before; Mishnah Berakhot 6-7 whole by topic); THE SEVEN SPECIES (8:8 — Berakhot 41a-b the order of blessings by the verse&#x27;s order and its two &#x27;land&#x27;s, 44a the after-blessing; Mishnah Berakhot 6:4; Bikkurim 1:3, 1:10; Menachot 84b credited at the offerings-calendar exam).
+</td><td>—</td><td class='cite'>Onkelos Deut 8:7, Onkelos Deut 8:8, Onkelos Deut 8:9, Onkelos Deut 8:10, Sifrei Devarim 19:2, Sifrei Devarim 37:5, Sifrei Devarim 39:4, Sifrei Devarim 39:6, Sifrei Devarim 39:8, Sifrei Devarim 40:10, Sifrei Devarim 297:4</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_8 · Deut.8.8 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ארץ חטה ושערה וגפן ותאנה ורמון … ארץ זית שמן ודבש</span> · <i>&#x27;rtz chth vsh&#x27;rh vgpn vt&#x27;nh vrmvn … &#x27;rtz zyt shmn vdbsh</i> · From top split: LEFT «ארץ חטה ושערה וגפן ותאנה ורמון» / RIGHT «ארץ זית שמן ודבש». Derive claim from Hebrew arms. Deut 8:8.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ארץ חטה ושערה וגפן ותאנה ורמון</span> · <i>&#x27;rtz chth vsh&#x27;rh vgpn vt&#x27;nh vrmvn</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">ארץ זית שמן ודבש</span> · <i>&#x27;rtz zyt shmn vdbsh</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_9 · Deut.8.9 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ארץ אשר לא במסכנת תאכל בה לחם לא תחסר כל בה … ארץ אשר אבניה ברזל ומהרריה תחצב נחשת</span> · <i>&#x27;rtz &#x27;shr l&#x27; bmsknt t&#x27;kl bh lchm l&#x27; tchsr kl bh … &#x27;rtz &#x27;shr &#x27;bnyh brzl vmhrryh tchtzb nchsht</i> · From top split: LEFT «ארץ אשר לא במסכנת תאכל בה לחם לא תחסר כל בה» / RIGHT «ארץ אשר אבניה ברזל ומהרריה תחצב נחשת». Derive claim from Hebrew arms. Deut 8:9.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ארץ אשר לא במסכנת תאכל בה לחם לא תחסר כל בה</span> · <i>&#x27;rtz &#x27;shr l&#x27; bmsknt t&#x27;kl bh lchm l&#x27; tchsr kl bh</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">ארץ אשר אבניה ברזל ומהרריה תחצב נחשת</span> · <i>&#x27;rtz &#x27;shr &#x27;bnyh brzl vmhrryh tchtzb nchsht</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_10 · Deut.8.10 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ואכלת ושבעת … וברכת את יהוה אלהיך על הארץ הטבה אשר נתן לך</span> · <i>v&#x27;klt vshb&#x27;t … vbrkt &#x27;t yhvh &#x27;lhyk &#x27;l h&#x27;rtz htbh &#x27;shr ntn lk</i> · From top split: LEFT «ואכלת ושבעת» / RIGHT «וברכת את יהוה אלהיך על הארץ הטבה אשר נתן לך». Derive claim from Hebrew arms. Deut 8:10.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואכלת ושבעת</span> · <i>v&#x27;klt vshb&#x27;t</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">וברכת את יהוה אלהיך על הארץ הטבה אשר נתן לך</span> · <i>vbrkt &#x27;t yhvh &#x27;lhyk &#x27;l h&#x27;rtz htbh &#x27;shr ntn lk</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_11 · Deut.8.11 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">השמר לך פן תשכח את יהוה אלהיך … לבלתי שמר מצותיו ומשפטיו וחקתיו אשר אנכי מצוך היום</span> · <i>hshmr lk pn tshkch &#x27;t yhvh &#x27;lhyk … lblty shmr mtzvtyv vmshptyv vchqtyv &#x27;shr &#x27;nky mtzv</i> · From top split: LEFT «השמר לך פן תשכח את יהוה אלהיך» / RIGHT «לבלתי שמר מצותיו ומשפטיו וחקתיו אשר אנכי מצוך היום». Derive claim from Hebrew arms. Deut 8:11.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">השמר לך פן תשכח את יהוה אלהיך</span> · <i>hshmr lk pn tshkch &#x27;t yhvh &#x27;lhyk</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">לבלתי שמר מצותיו ומשפטיו וחקתיו אשר אנכי מצוך היום</span> · <i>lblty shmr mtzvtyv vmshptyv vchqtyv &#x27;shr &#x27;nky mtzvk hyvm</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(take_heed_lest_you_forget, the_houses_the_herds_the_silver_and_gold_the_heart_lifted_up)</span><br><span class="gloss">= WITNESS-READ(take-heed-lest-you-forget, the-houses-the-herds-the-silver-and-gold-the-heart-lifted-up)</span><br>TAKE HEED LEST YOU FORGET: TAKE HEED TO YOURSELF LEST YOU FORGET THE LORD YOUR GOD BY NOT KEEPING HIS COMMANDMENTS, HIS JUDGMENTS AND HIS STATUTES WHICH I COMMAND YOU THIS DAY — LEST, WHEN YOU HAVE EATEN AND ARE SATISFIED AND HAVE BUILT GOOD HOUSES AND DWELT IN THEM, AND YOUR HERDS AND FLOCKS MULTIPLY AND YOUR SILVER AND GOLD MULTIPLY AND ALL YOU HAVE MULTIPLIES, YOUR HEART BE LIFTED UP AND YOU FORGET THE LORD YOUR GOD WHO BROUGHT YOU OUT OF THE LAND OF EGYPT, OUT OF THE HOUSE OF BONDAGE [claim DV08-04]. TAKE HEED LEST YOU FORGET: TAKE HEED TO YOURSELF LEST YOU FORGET THE LORD YOUR GOD BY NOT KEEPING HIS COMMANDMENTS, HIS JUDGMENTS AND HIS STATUTES WHICH I COMMAND YOU THIS DAY — LEST, WHEN YOU HAVE EATEN AND ARE SATISFIED AND HAVE BUILT GOOD HOUSES AND DWELT IN THEM, AND YOUR HERDS AND FLOCKS MULTIPLY AND YOUR SILVER AND GOLD MULTIPLY AND ALL YOU HAVE MULTIPLIES, YOUR HEART BE LIFTED UP AND YOU FORGET THE LORD YOUR GOD WHO BROUGHT YOU OUT OF THE LAND OF EGYPT, OUT OF THE HOUSE OF BONDAGE. &#x27;Take heed to yourself lest&#x27; nine — the chapter&#x27;s ONE IMPERATIVE (8:11, the reflexive-passive stem); &#x27;lest you forget the LORD&#x27; 6:12 and 8:11 — SIX tokens shared, the Shema&#x27;s warning said again; &#x27;forget&#x27; fourteen in the book; &#x27;His commandments, His judgments and His statutes&#x27; ONE in this order (the triads seventeen verses over the Bible, no two in one order but 5:31, 6:1 and 7:11&#x27;s); &#x27;lest&#x27; 8:11 and 8:12 the chapter&#x27;s two; &#x27;good houses you build and dwell&#x27; ONE (6:10-11 the houses you did not build); &#x27;silver and gold&#x27; seven Torah seats — 8:13 and 17:17 THE PAIR: &#x27;silver and gold SHALL multiply for you&#x27; against THE KING&#x27;S LAW &#x27;silver and gold he shall NOT multiply&#x27;, the same tokens; &#x27;multiply&#x27; twenty in the book, three at 8:13; &#x27;and your heart be lifted up&#x27; ONE — 17:20 &#x27;that his heart be not lifted up&#x27; the king&#x27;s, Hosea 13:6 the chapter&#x27;s sequence (satisfied, lifted, forgot) in the prophet&#x27;s mouth; THE ARTICLE + PARTICIPLE CHAIN begins — &#x27;who brought you out&#x27; (8:14-18, five participles of God&#x27;s acts); the exodus formula &#x27;who brought you out of the land of Egypt, out of the house of bondage&#x27; SEVEN tokens shared whole with its seats at 5:6, 6:12, 13:6, 13:11; &#x27;the house of bondage&#x27; twelve; Egypt at 8:14 alone in the chapter. THE SIFREI OUTSIDE ANY PISKA: 43:7 on 11:15-16 — a person rebels only out of satiety: &#x27;lest, when you have eaten and are satisfied … your heart be lifted up&#x27; (8:12-14 — the range citation 8:12-13 asserted by string), 31:20, the calf; 318:1 on 32:15 — Jeshurun grew fat: out of satiety they rebel — the Flood, the Tower, Sodom, the calf, and Israel in the Land (8:12-14; the copyist&#x27;s abridgement marked in both files; read before at a Genesis sitting, reread whole here). ONKELOS: 8:11 and 8:14 THE FEAR SUPPLIED — &#x27;lest you forget THE FEAR OF the LORD your God&#x27; (the chapter&#x27;s three forgettings, 8:19 the third; the fear-word twelve seats over the book); 8:12 &#x27;BEAUTIFUL houses&#x27; (one). THE COMPILE&#x27;S CELLS OWED: &#x27;take heed lest&#x27; (Makkot 13b / Eruvin 96a — &#x27;take heed, lest, do not&#x27; a negative command, the rule&#x27;s exhibit); the heart lifted up (Sotah 4b-5a arrogance as idolatry; 17:20 the king&#x27;s law by CALL at chapter 17); the exodus formula (brought_out 12:51 by kind, the readback).
+</td><td>—</td><td class='cite'>Onkelos Deut 8:11, Onkelos Deut 8:12, Onkelos Deut 8:13, Onkelos Deut 8:14, Sifrei Devarim 43:7, Sifrei Devarim 318:1</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_12 · Deut.8.12 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">פן תאכל ושבעת … ובתים טובים תבנה וישבת</span> · <i>pn t&#x27;kl vshb&#x27;t … vbtym tvbym tbnh vyshbt</i> · From top split: LEFT «פן תאכל ושבעת» / RIGHT «ובתים טובים תבנה וישבת». Derive claim from Hebrew arms. Deut 8:12.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">פן תאכל ושבעת</span> · <i>pn t&#x27;kl vshb&#x27;t</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">ובתים טובים תבנה וישבת</span> · <i>vbtym tvbym tbnh vyshbt</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_13 · Deut.8.13 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ובקרך וצאנך ירבין וכסף וזהב ירבה לך … וכל אשר לך ירבה</span> · <i>vbqrk vtz&#x27;nk yrbyn vksp vzhb yrbh lk … vkl &#x27;shr lk yrbh</i> · From top split: LEFT «ובקרך וצאנך ירבין וכסף וזהב ירבה לך» / RIGHT «וכל אשר לך ירבה». Derive claim from Hebrew arms. Deut 8:13.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ובקרך וצאנך ירבין וכסף וזהב ירבה לך</span> · <i>vbqrk vtz&#x27;nk yrbyn vksp vzhb yrbh lk</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">וכל אשר לך ירבה</span> · <i>vkl &#x27;shr lk yrbh</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_14 · Deut.8.14 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ורם לבבך … ושכחת את יהוה אלהיך המוציאך מארץ מצרים מבית עבדים</span> · <i>vrm lbbk … vshkcht &#x27;t yhvh &#x27;lhyk hmvtzy&#x27;k m&#x27;rtz mtzrym mbyt &#x27;</i> · From top split: LEFT «ורם לבבך» / RIGHT «ושכחת את יהוה אלהיך המוציאך מארץ מצרים מבית עבדים». Derive claim from Hebrew arms. Deut 8:14.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ורם לבבך</span> · <i>vrm lbbk</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">ושכחת את יהוה אלהיך המוציאך מארץ מצרים מבית עבדים</span> · <i>vshkcht &#x27;t yhvh &#x27;lhyk hmvtzy&#x27;k m&#x27;rtz mtzrym mbyt &#x27;bdym</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_15 · Deut.8.15 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">המוליכך במדבר הגדל והנורא נחש שרף ועקרב וצמאון אשר אין מים … המוציא לך מים מצור החלמיש</span> · <i>hmvlykk bmdbr hgdl vhnvr&#x27; nchsh shrp v&#x27;qrb vtzm&#x27;vn … hmvtzy&#x27; lk mym mtzvr hchlmysh</i> · From top split: LEFT «המוליכך במדבר הגדל והנורא נחש שרף ועקרב וצמאון אשר אין מים» / RIGHT «המוציא לך מים מצור החלמיש». Derive claim from Hebrew arms. Deut 8:15.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">המוליכך במדבר הגדל והנורא נחש שרף ועקרב וצמאון אשר אין מים</span> · <i>hmvlykk bmdbr hgdl vhnvr&#x27; nchsh shrp v&#x27;qrb vtzm&#x27;vn &#x27;shr &#x27;yn mym</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">המוציא לך מים מצור החלמיש</span> · <i>hmvtzy&#x27; lk mym mtzvr hchlmysh</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_chain_and_the_covenant, who_led_you_who_fed_you_my_power_and_my_hand_the_covenant_established)</span><br><span class="gloss">= WITNESS-READ(the-chain-and-the-covenant, who-led-you-who-fed-you-my-power-and-my-hand-the-covenant-established)</span><br>THE CHAIN AND THE COVENANT: WHO LED YOU THROUGH THE GREAT AND TERRIBLE WILDERNESS OF FIERY SERPENTS AND SCORPIONS AND THIRST WHERE THERE WAS NO WATER, WHO BROUGHT YOU WATER OUT OF THE ROCK OF FLINT, WHO FED YOU MANNA IN THE WILDERNESS WHICH YOUR FATHERS DID NOT KNOW, TO HUMBLE YOU AND TEST YOU, TO DO YOU GOOD IN YOUR END — AND YOU SAY IN YOUR HEART, MY POWER AND THE MIGHT OF MY HAND HAVE GOTTEN ME THIS WEALTH; REMEMBER THE LORD YOUR GOD, FOR IT IS HE WHO GIVES YOU POWER TO GET WEALTH, TO ESTABLISH HIS COVENANT WHICH HE SWORE TO YOUR FATHERS, AS AT THIS DAY [claim DV08-05]. THE CHAIN AND THE COVENANT: WHO LED YOU THROUGH THE GREAT AND TERRIBLE WILDERNESS OF FIERY SERPENTS AND SCORPIONS AND THIRST WHERE THERE WAS NO WATER, WHO BROUGHT YOU WATER OUT OF THE ROCK OF FLINT, WHO FED YOU MANNA IN THE WILDERNESS WHICH YOUR FATHERS DID NOT KNOW, TO HUMBLE YOU AND TEST YOU, TO DO YOU GOOD IN YOUR END — AND YOU SAY IN YOUR HEART, MY POWER AND THE MIGHT OF MY HAND HAVE GOTTEN ME THIS WEALTH; REMEMBER THE LORD YOUR GOD, FOR IT IS HE WHO GIVES YOU POWER TO GET WEALTH, TO ESTABLISH HIS COVENANT WHICH HE SWORE TO YOUR FATHERS, AS AT THIS DAY. &#x27;The great and terrible&#x27; 1:19 and 8:15 the wilderness; &#x27;fiery serpent&#x27; 8:15 and Numbers 21:6, 8; &#x27;scorpion&#x27; six; &#x27;flint&#x27; five; &#x27;the rock&#x27; Exodus 17:6&#x27;s צור (&#x27;rock&#x27;) — Numbers 20&#x27;s סלע (&#x27;crag&#x27;) another word; the participle chain&#x27;s four here (who led you, who brought out water, who fed you, who gives you power); 8:16 against Exodus 16:35 NOTHING SHARED — the retelling&#x27;s own words on the manna; &#x27;nor did your fathers know&#x27; 8:3 and 8:16 alone; &#x27;to do you good in your end&#x27; ONE; &#x27;end&#x27; ten Torah; &#x27;and you say in your heart&#x27; 8:17 and Isaiah 49:21 (7:17 and 9:4 the book&#x27;s &#x27;if you say in your heart&#x27;; Judges 7:2 the kin); &#x27;MY POWER AND THE MIGHT OF MY HAND&#x27; ONE — the boaster&#x27;s first person (my power, my hand, for me); &#x27;to get wealth&#x27; seven (the census&#x27;s five forms); &#x27;that He may establish His covenant&#x27; ONE (twenty-three &#x27;establish … covenant&#x27; seats; 7:8 and 7:12 the oath&#x27;s kin); &#x27;as at this day&#x27; six in the book; the article + participle chain answered by the boast. THE SIFREI OUTSIDE ANY PISKA: 53:1 on 11:26 — the two paths: the righteous suffer two or three days, &#x27;to do you good in your end&#x27; (8:16 — the English&#x27;s own form (be&#x27;akharitecha — &#x27;in your end&#x27;) found through the Hebrew); 313:15 on 32:10 — the great and terrible wilderness the four kingdoms (8:15). ONKELOS: 8:15 &#x27;A PLACE OF serpents, burning ones and scorpions&#x27;, &#x27;a house of thirst&#x27; (8:15, 32:10), &#x27;THE MIGHTY ROCK&#x27; for the flint (eight brackets in the English at this verse); 8:17 &#x27;wealth&#x27; MADE &#x27;POSSESSIONS&#x27; (8:17, 8:18, 32:15 Jeshurun&#x27;s); 8:18 THE COUNSEL — &#x27;He gives you COUNSEL to acquire possessions&#x27; (power made counsel; two seats); &#x27;swore&#x27; MADE &#x27;established&#x27; as at 8:1. THE COMPILE&#x27;S CELLS OWED: the serpents and the rock (Numbers 21:6-9 and 20:8-11, Exodus 17:6 by the tape&#x27;s lines and by CALL into chukat and exodus_story); the manna (8:16); &#x27;my power and the might of my hand&#x27; a DATA row (the Sifrei 48:10&#x27;s &#x27;not by bread alone&#x27; reading); the covenant established (8:18 — the oath&#x27;s lines by kind, as 7:8).
+</td><td>—</td><td class='cite'>Onkelos Deut 8:15, Onkelos Deut 8:16, Onkelos Deut 8:17, Onkelos Deut 8:18, Sifrei Devarim 53:1, Sifrei Devarim 313:15</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_16 · Deut.8.16 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">המאכלך מן במדבר אשר לא ידעון אבתיך … למען ענתך ולמען נסתך להיטבך באחריתך</span> · <i>hm&#x27;klk mn bmdbr &#x27;shr l&#x27; yd&#x27;vn &#x27;btyk … lm&#x27;n &#x27;ntk vlm&#x27;n nstk lhytbk b&#x27;chrytk</i> · From top split: LEFT «המאכלך מן במדבר אשר לא ידעון אבתיך» / RIGHT «למען ענתך ולמען נסתך להיטבך באחריתך». Derive claim from Hebrew arms. Deut 8:16.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">המאכלך מן במדבר אשר לא ידעון אבתיך</span> · <i>hm&#x27;klk mn bmdbr &#x27;shr l&#x27; yd&#x27;vn &#x27;btyk</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">למען ענתך ולמען נסתך להיטבך באחריתך</span> · <i>lm&#x27;n &#x27;ntk vlm&#x27;n nstk lhytbk b&#x27;chrytk</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_17 · Deut.8.17 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">ואמרת בלבבך … כחי ועצם ידי עשה לי את החיל הזה</span> · <i>v&#x27;mrt blbbk … kchy v&#x27;tzm ydy &#x27;shh ly &#x27;t hchyl hzh</i> · From top split: LEFT «ואמרת בלבבך» / RIGHT «כחי ועצם ידי עשה לי את החיל הזה». Derive claim from Hebrew arms. Deut 8:17.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואמרת בלבבך</span> · <i>v&#x27;mrt blbbk</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">כחי ועצם ידי עשה לי את החיל הזה</span> · <i>kchy v&#x27;tzm ydy &#x27;shh ly &#x27;t hchyl hzh</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_18 · Deut.8.18 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">וזכרת את יהוה אלהיך כי הוא הנתן לך כח לעשות חיל … למען הקים את בריתו אשר נשבע לאבתיך כיום הזה</span> · <i>vzkrt &#x27;t yhvh &#x27;lhyk ky hv&#x27; hntn lk kch l&#x27;shvt chyl … lm&#x27;n hqym &#x27;t brytv &#x27;shr nshb&#x27; l&#x27;btyk kyvm hzh</i> · From top split: LEFT «וזכרת את יהוה אלהיך כי הוא הנתן לך כח לעשות חיל» / RIGHT «למען הקים את בריתו אשר נשבע לאבתיך כיום הזה». Derive claim from Hebrew arms. Deut 8:18.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וזכרת את יהוה אלהיך כי הוא הנתן לך כח לעשות חיל</span> · <i>vzkrt &#x27;t yhvh &#x27;lhyk ky hv&#x27; hntn lk kch l&#x27;shvt chyl</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">למען הקים את בריתו אשר נשבע לאבתיך כיום הזה</span> · <i>lm&#x27;n hqym &#x27;t brytv &#x27;shr nshb&#x27; l&#x27;btyk kyvm hzh</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_19 · Deut.8.19 · <span class='expr'>COND_אם</span></h3>
+<p><span class="he">והיה אם שכח תשכח את יהוה אלהיך והלכת אחרי אלהים אחרים ועבדתם … העדתי בכם היום כי אבד תאבדון</span> · <i>vhyh &#x27;m shkch tshkch &#x27;t yhvh &#x27;lhyk vhlkt &#x27;chry &#x27;lh … h&#x27;dty bkm hyvm ky &#x27;bd t&#x27;bdvn</i> · From top split: LEFT «והיה אם שכח תשכח את יהוה אלהיך והלכת אחרי אלהים אחרים ועבדתם והשתחוית להם» / RIGHT «העדתי בכם היום כי אבד תאבדון». Derive claim from Hebrew arms. Deut 8:19.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">והיה אם שכח תשכח את יהוה אלהיך והלכת אחרי אלהים אחרים ועבדתם והשתחוית להם</span> · <i>vhyh &#x27;m shkch tshkch &#x27;t yhvh &#x27;lhyk vhlkt &#x27;chry &#x27;lhym &#x27;chrym v&#x27;bdtm vhshtchvyt lhm</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">העדתי בכם היום כי אבד תאבדון</span> · <i>h&#x27;dty bkm hyvm ky &#x27;bd t&#x27;bdvn</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>WITNESS_READ</td><td><span class="expr">WITNESS-READ(the_testimony, if_you_forget_and_serve_other_gods_you_shall_surely_perish_like_the_nations)</span><br><span class="gloss">= WITNESS-READ(the-testimony, if-you-forget-and-serve-other-gods-you-shall-surely-perish-like-the-nations)</span><br>THE TESTIMONY: AND IT SHALL BE, IF YOU SURELY FORGET THE LORD YOUR GOD AND GO AFTER OTHER GODS AND SERVE THEM AND BOW DOWN TO THEM, I TESTIFY AGAINST YOU THIS DAY THAT YOU SHALL SURELY PERISH; LIKE THE NATIONS THE LORD MAKES PERISH BEFORE YOU, SO SHALL YOU PERISH, BECAUSE YOU WOULD NOT HEARKEN TO THE VOICE OF THE LORD YOUR GOD [claim DV08-06]. THE TESTIMONY: AND IT SHALL BE, IF YOU SURELY FORGET THE LORD YOUR GOD AND GO AFTER OTHER GODS AND SERVE THEM AND BOW DOWN TO THEM, I TESTIFY AGAINST YOU THIS DAY THAT YOU SHALL SURELY PERISH; LIKE THE NATIONS THE LORD MAKES PERISH BEFORE YOU, SO SHALL YOU PERISH, BECAUSE YOU WOULD NOT HEARKEN TO THE VOICE OF THE LORD YOUR GOD. &#x27;If you surely forget&#x27; ONE — 8:19&#x27;s INFINITIVE ABSOLUTE the lemma&#x27;s one such form in the Bible; TWO INFINITIVE ABSOLUTES in the verse, the chapter&#x27;s two; &#x27;if&#x27; 8:19 the case (8:2 the question&#x27;s tail); &#x27;after other gods&#x27; sixteen, &#x27;other gods&#x27; seventeen in the book; &#x27;serve … and bow&#x27; the pair ten Torah seats — serve-then-bow at 8:19, 11:16, 17:3, 29:25; bow-then-serve at 4:19, 30:17 and the ten words; &#x27;I testify against you this day&#x27; ONE (the verb&#x27;s ten Torah seats; 4:26 and 30:19 the heaven-and-earth form) — the first person Moses&#x27; with the PLURAL &#x27;you&#x27; inside a singular verse (BOTH persons at 8:1 and 8:19); &#x27;that you shall surely perish&#x27; 4:26, 8:19, 30:18 — the infinitive absolute at those three alone, three tokens shared with 4:26; &#x27;like the nations … so shall you perish&#x27; ONE — the measure-for-measure form; 8:20 the chapter&#x27;s ONE plural-only verse; &#x27;BECAUSE&#x27; THE HEEL — 8:20&#x27;s conjunction the noun read as &#x27;in consequence of&#x27; (7:12, 8:20, Genesis 22:18, 26:5, Numbers 14:24 — fifteen over the Bible, five in the Torah), the portion&#x27;s second seat; &#x27;hearken to the voice of the LORD your God&#x27; ten in the book, 8:20 the ONE plural; &#x27;you would not hear&#x27; the prohibition&#x27;s form as a report. THE SIFREI OUTSIDE ANY PISKA: 48:8 on 11:22 — forget the first and the last go: &#x27;if you surely forget&#x27; (8:19); &#x27;a day you leave Me, two I leave you&#x27;. ONKELOS: 8:19 &#x27;other gods&#x27; MADE &#x27;the IDOLS of the peoples&#x27; (eighteen), THE FEAR SUPPLIED a third time (&#x27;if you forget the fear of the LORD your God&#x27;), &#x27;I testify&#x27; (4:26, 8:19, 30:19), &#x27;surely perish&#x27; (4:26, 8:19, 30:18); 8:20 &#x27;because&#x27; MADE &#x27;IN EXCHANGE FOR&#x27; (eight — 7:12&#x27;s), &#x27;hearken to the voice&#x27; MADE &#x27;ACCEPT THE MEMRA&#x27; (&#x27;accept the Word&#x27; — five in this form, thirteen with &#x27;to the Memra&#x27;), the chapter&#x27;s second Word. THE COMPILE&#x27;S CELLS OWED: the testimony (4:26&#x27;s line by kind — obey_horeb&#x27;s cell by CALL; the perishing &#x27;like the nations&#x27; a DATA row; the heel&#x27;s second seat 7:12&#x27;s cell by CALL; &#x27;other gods&#x27; the second word&#x27;s cell by CALL).
+</td><td>—</td><td class='cite'>Onkelos Deut 8:19, Onkelos Deut 8:20, Sifrei Devarim 48:8</td><td>witnessed</td></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<div class="step">
+<h3>STEP_Dt_8_20 · Deut.8.20 · <span class='expr'>ETNACHTA_SPLIT</span></h3>
+<p><span class="he">כגוים אשר יהוה מאביד מפניכם כן תאבדון … עקב לא תשמעון בקול יהוה אלהיכם</span> · <i>kgvym &#x27;shr yhvh m&#x27;byd mpnykm kn t&#x27;bdvn … &#x27;qb l&#x27; tshm&#x27;vn bqvl yhvh &#x27;lhykm</i> · From top split: LEFT «כגוים אשר יהוה מאביד מפניכם כן תאבדון» / RIGHT «עקב לא תשמעון בקול יהוה אלהיכם». Derive claim from Hebrew arms. Deut 8:20.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כגוים אשר יהוה מאביד מפניכם כן תאבדון</span> · <i>kgvym &#x27;shr yhvh m&#x27;byd mpnykm kn t&#x27;bdvn</i> · Left arm of top binary split [EN-AID]</div><div class="arm"><b>RIGHT</b><br><span class="he">עקב לא תשמעון בקול יהוה אלהיכם</span> · <i>&#x27;qb l&#x27; tshm&#x27;vn bqvl yhvh &#x27;lhykm</i> · Right arm of top binary split [EN-AID]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+</table>
+<div class="meta">Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">Coarse states for deu_08_manna_humility after tree-derived steps.</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_block_open</b></td><td>Entered 8:1-20</td></tr>
+<tr><td><b>S_block_mid</b></td><td>Mid-block after ~half of verse steps</td></tr>
+<tr><td><b>S_block_closed</b></td><td>Completed tree-derived steps for 8:1-20</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_block_open</td><td>S_block_mid</td><td>STEP_Dt_8_11</td></tr>
+<tr><td>S_block_mid</td><td>S_block_closed</td><td>STEP_Dt_8_20</td></tr>
+</table>
+<div class="note"><b>AFTER_S_block_closed</b> — Tree-derived v1 complete for deu_08_manna_humility</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Dt_8_1 — Deut 8:1</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Dt_8_2 — Deut 8:2</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Dt_8_3 — Deut 8:3</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Dt_8_4 — Deut 8:4</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Dt_8_5 — Deut 8:5</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Dt_8_6 — Deut 8:6</td><td></td><td>no test, no name.</td><td></td></tr>
+<tr><td><b>S_last</b></td><td>after STEP_Dt_8_20 — Deut 8:20</td><td></td><td>no test, no name.</td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_deu_08_manna_humility_tree_derived</td><td>Tree-derived v1 for 8:1-20</td></tr>
+<tr><td>EXPORT_tree_derived_v1_deu_08_manna_humility</td><td>Unit reprocessed tree-first (one STEP per verse, arm-cited)</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Deuteronomy tree-derive oral policy</b><br><br><i>Written trees first. Prefer Sifrei Devarim on law densification; MH possible; never silent-merge.</i></div>
+<div class="note"><span class="badge tier-o">dual_track</span> <b>Sifrei Devarim</b><br><i>see Hebrew sample in local Data dump</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
+<div class="note"><span class="badge tier-o">dual_track</span> <b>Sifrei Devarim</b><br><i>see Hebrew sample in local Data dump</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
+<div class="note"><span class="badge tier-o">dual_track</span> <b>Sifrei Devarim</b><br><i>see Hebrew sample in local Data dump</i><br><i>Dual-track sample — does not rewrite Written tree-derived STEPs.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Deut.8.1 · parser unique · 19 words</h3>
+<div class="meta"><span class="he">כל המצוה אשר אנכי מצוך היום תשמרון לעשות למען תחיון ורביתם ובאתם וירשתם את הארץ אשר נשבע יהוה לאבתיכם</span> · <i>kl hmtzvh &#x27;shr &#x27;nky mtzvk hyvm tshmrvn l&#x27;shvt lm&#x27;n tchyvn vrbytm vb&#x27;tm vyrshtm &#x27;t h&#x27;rtz &#x27;shr nshb&#x27; yhvh l&#x27;btykm</i> · Free gloss — structure from Hebrew tree. 8:1.</div>
+<pre>PHRASE (binary 19w) כָּל הַ/מִּצְוָ֗ה אֲשֶׁ֨ר אָנֹכִ֧י מְצַוְּ/ךָ֛ …
+├── PHRASE (binary 8w) כָּל הַ/מִּצְוָ֗ה אֲשֶׁ֨ר אָנֹכִ֧י מְצַוְּ/ךָ֛ …
+│   ├── PHRASE (binary 6w) כָּל הַ/מִּצְוָ֗ה אֲשֶׁ֨ר אָנֹכִ֧י מְצַוְּ/ךָ֛ …
+│   │   ├── PHRASE (binary 2w) כָּל הַ/מִּצְוָ֗ה
+│   │   │   ├── [0] כָּל (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │   └── [1] הַ/מִּצְוָ֗ה (revia, rank=3)
+│   │   └── PHRASE (binary 4w) אֲשֶׁ֨ר אָנֹכִ֧י מְצַוְּ/ךָ֛ הַ/יּ֖וֹם
+│   │       ├── PHRASE (3-ary 3w) אֲשֶׁ֨ר אָנֹכִ֧י מְצַוְּ/ךָ֛
+│   │       │   ├── [2] אֲשֶׁ֨ר (qadma (conjunctive), rank=9)
+│   │       │   ├── [3] אָנֹכִ֧י (darga (conjunctive), rank=9)
+│   │       │   └── [4] מְצַוְּ/ךָ֛ (tevir, rank=3)
+│   │       └── [5] הַ/יּ֖וֹם (tifcha, rank=2)
+│   └── PHRASE (binary 2w) תִּשְׁמְר֣וּ/ן לַ/עֲשׂ֑וֹת
+│       ├── [6] תִּשְׁמְר֣וּ/ן (munach (conjunctive), rank=9)
+│       └── [7] לַ/עֲשׂ֑וֹת (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 11w) לְמַ֨עַן תִּֽחְי֜וּ/ן וּ/רְבִיתֶ֗ם וּ/בָאתֶם֙ ו…
+    ├── PHRASE (binary 7w) לְמַ֨עַן תִּֽחְי֜וּ/ן וּ/רְבִיתֶ֗ם וּ/בָאתֶם֙ ו…
+    │   ├── PHRASE (binary 3w) לְמַ֨עַן תִּֽחְי֜וּ/ן וּ/רְבִיתֶ֗ם
+    │   │   ├── PHRASE (binary 2w) לְמַ֨עַן תִּֽחְי֜וּ/ן
+    │   │   │   ├── [8] לְמַ֨עַן (qadma (conjunctive), rank=9)
+    │   │   │   └── [9] תִּֽחְי֜וּ/ן (geresh, rank=4)
+    │   │   └── [10] וּ/רְבִיתֶ֗ם (revia, rank=3)
+    │   └── PHRASE (binary 4w) וּ/בָאתֶם֙ וִֽ/ירִשְׁתֶּ֣ם אֶת הָ/אָ֔רֶץ
+    │       ├── [11] וּ/בָאתֶם֙ (pashta, rank=3)
+    │       └── PHRASE (3-ary 3w) וִֽ/ירִשְׁתֶּ֣ם אֶת הָ/אָ֔רֶץ
+    │           ├── [12] וִֽ/ירִשְׁתֶּ֣ם (munach (conjunctive), rank=9)
+    │           ├── [13] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+    │           └── [14] הָ/אָ֔רֶץ (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) אֲשֶׁר נִשְׁבַּ֥ע יְהוָ֖ה לַ/אֲבֹתֵי/כֶֽם
+        ├── PHRASE (3-ary 3w) אֲשֶׁר נִשְׁבַּ֥ע יְהוָ֖ה
+        │   ├── [15] אֲשֶׁר (no cantillation mark — bind as conjunctive, rank=9)
+        │   ├── [16] נִשְׁבַּ֥ע (mercha (conjunctive), rank=9)
+        │   └── [17] יְהוָ֖ה (tifcha, rank=2)
+        └── [18] לַ/אֲבֹתֵי/כֶֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.2 · parser unique · 24 words</h3>
+<div class="meta"><span class="he">וזכרת את כל הדרך אשר הליכך יהוה אלהיך זה ארבעים שנה במדבר למען ענתך לנסתך לדעת את אשר בלבבך התשמר מצותו מצותיו אם לא</span> · <i>vzkrt &#x27;t kl hdrk &#x27;shr hlykk yhvh &#x27;lhyk zh &#x27;rb&#x27;ym shnh bmdbr lm&#x27;n &#x27;ntk lnstk ld&#x27;t &#x27;t &#x27;shr blbbk htshmr mtzvtv mtzvtyv &#x27;m l&#x27;</i> · Free gloss — structure from Hebrew tree. 8:2.</div>
+<pre>PHRASE (binary 24w) וְ/זָכַרְתָּ֣ אֶת כָּל הַ/דֶּ֗רֶךְ אֲשֶׁ֨ר הֹלִ…
+├── PHRASE (binary 12w) וְ/זָכַרְתָּ֣ אֶת כָּל הַ/דֶּ֗רֶךְ אֲשֶׁ֨ר הֹלִ…
+│   ├── PHRASE (binary 11w) וְ/זָכַרְתָּ֣ אֶת כָּל הַ/דֶּ֗רֶךְ אֲשֶׁ֨ר הֹלִ…
+│   │   ├── PHRASE (4-ary 4w) וְ/זָכַרְתָּ֣ אֶת כָּל הַ/דֶּ֗רֶךְ
+│   │   │   ├── [0] וְ/זָכַרְתָּ֣ (munach (conjunctive), rank=9)
+│   │   │   ├── [1] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │   ├── [2] כָּל (no cantillation mark — bind as conjunctive, rank=9)
+│   │   │   └── [3] הַ/דֶּ֗רֶךְ (revia, rank=3)
+│   │   └── PHRASE (binary 7w) אֲשֶׁ֨ר הֹלִֽיכֲ/ךָ֜ יְהוָ֧ה אֱלֹהֶ֛י/ךָ זֶ֛ה א…
+│   │       ├── PHRASE (binary 4w) אֲשֶׁ֨ר הֹלִֽיכֲ/ךָ֜ יְהוָ֧ה אֱלֹהֶ֛י/ךָ
+│   │       │   ├── PHRASE (binary 2w) אֲשֶׁ֨ר הֹלִֽיכֲ/ךָ֜
+│   │       │   │   ├── [4] אֲשֶׁ֨ר (qadma (conjunctive), rank=9)
+│   │       │   │   └── [5] הֹלִֽיכֲ/ךָ֜ (geresh, rank=4)
+│   │       │   └── PHRASE (binary 2w) יְהוָ֧ה אֱלֹהֶ֛י/ךָ
+│   │       │       ├── [6] יְהוָ֧ה (darga (conjunctive), rank=9)
+│   │       │       └── [7] אֱלֹהֶ֛י/ךָ (tevir, rank=3)
+│   │       └── PHRASE (binary 3w) זֶ֛ה אַרְבָּעִ֥ים שָׁנָ֖ה
+│   │           ├── [8] זֶ֛ה (tevir, rank=3)
+│   │           └── PHRASE (binary 2w) אַרְבָּעִ֥ים שָׁנָ֖ה
+│   │               ├── [9] אַרְבָּעִ֥ים (mercha (conjunctive), rank=9)
+│   │               └── [10] שָׁנָ֖ה (tifcha, rank=2)
+│   └── [11] בַּ/מִּדְבָּ֑ר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 12w) לְמַ֨עַן עַנֹּֽתְ/ךָ֜ לְ/נַסֹּֽתְ/ךָ֗ לָ/דַ֜עַת…
+    ├── PHRASE (binary 10w) לְמַ֨עַן עַנֹּֽתְ/ךָ֜ לְ/נַסֹּֽתְ/ךָ֗ לָ/דַ֜עַת…
+    │   ├── PHRASE (binary 3w) לְמַ֨עַן עַנֹּֽתְ/ךָ֜ לְ/נַסֹּֽתְ/ךָ֗
+    │   │   ├── PHRASE (binary 2w) לְמַ֨עַן עַנֹּֽתְ/ךָ֜
+    │   │   │   ├── [12] לְמַ֨עַן (qadma (conjunctive), rank=9)
+    │   │   │   └── [13] עַנֹּֽתְ/ךָ֜ (geresh, rank=4)
+    │   │   └── [14] לְ/נַסֹּֽתְ/ךָ֗ (revia, rank=3)
+    │   └── PHRASE (binary 7w) לָ/דַ֜עַת אֶת אֲשֶׁ֧ר בִּֽ/לְבָבְ/ךָ֛ הֲ/תִשְׁמ…
+    │       ├── PHRASE (binary 4w) לָ/דַ֜עַת אֶת אֲשֶׁ֧ר בִּֽ/לְבָבְ/ךָ֛
+    │       │   ├── [15] לָ/דַ֜עַת (geresh, rank=4)
+    │       │   └── PHRASE (3-ary 3w) אֶת אֲשֶׁ֧ר בִּֽ/לְבָבְ/ךָ֛
+    │       │       ├── [16] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+    │       │       ├── [17] אֲשֶׁ֧ר (darga (conjunctive), rank=9)
+    │       │       └── [18] בִּֽ/לְבָבְ/ךָ֛ (tevir, rank=3)
+    │       └── PHRASE (3-ary 3w) הֲ/תִשְׁמֹ֥ר מצות/ו מִצְוֺתָ֖י/ו
+    │           ├── [19] הֲ/תִשְׁמֹ֥ר (mercha (conjunctive), rank=9)
+    │           ├── [20] מצות/ו (no cantillation mark — bind as conjunctive, rank=9)
+    │           └── [21] מִצְוֺתָ֖י/ו (tifcha, rank=2)
+    └── PHRASE (binary 2w) אִם לֹֽא
+        ├── [22] אִם (no cantillation mark — bind as conjunctive, rank=9)
+        └── [23] לֹֽא (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.3 · parser unique · 28 words</h3>
+<div class="meta"><span class="he">ויענך וירעבך ויאכלך את המן אשר לא ידעת ולא ידעון אבתיך למען הודעך כי לא על הלחם לבדו יחיה האדם כי על כל מוצא פי יהוה יחיה האדם</span> · <i>vy&#x27;nk vyr&#x27;bk vy&#x27;klk &#x27;t hmn &#x27;shr l&#x27; yd&#x27;t vl&#x27; yd&#x27;vn &#x27;btyk lm&#x27;n hvd&#x27;k ky l&#x27; &#x27;l hlchm lbdv ychyh h&#x27;dm ky &#x27;l kl mvtz&#x27; py yhvh ychyh h&#x27;dm</i> · Free gloss — structure from Hebrew tree. 8:3.</div>
+<pre>PHRASE (binary 28w) וַֽ/יְעַנְּ/ךָ֮ וַ/יַּרְעִבֶ/ךָ֒ וַ/יַּֽאֲכִֽלְ…
+├── PHRASE (binary 11w) וַֽ/יְעַנְּ/ךָ֮ וַ/יַּרְעִבֶ/ךָ֒ וַ/יַּֽאֲכִֽלְ…
+│   ├── PHRASE (binary 2w) וַֽ/יְעַנְּ/ךָ֮ וַ/יַּרְעִבֶ/ךָ֒
+│   │   ├── [0] וַֽ/יְעַנְּ/ךָ֮ (zinor (poetic cousin; rare in prose), rank=3)
+│   │   └── [1] וַ/יַּרְעִבֶ/ךָ֒ (segol, rank=2)
+│   └── PHRASE (binary 9w) וַ/יַּֽאֲכִֽלְ/ךָ֤ אֶת הַ/מָּן֙ אֲשֶׁ֣ר לֹא יָד…
+│       ├── PHRASE (binary 6w) וַ/יַּֽאֲכִֽלְ/ךָ֤ אֶת הַ/מָּן֙ אֲשֶׁ֣ר לֹא יָד…
+│       │   ├── PHRASE (3-ary 3w) וַ/יַּֽאֲכִֽלְ/ךָ֤ אֶת הַ/מָּן֙
+│       │   │   ├── [2] וַ/יַּֽאֲכִֽלְ/ךָ֤ (mahpach (conjunctive), rank=9)
+│       │   │   ├── [3] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│       │   │   └── [4] הַ/מָּן֙ (pashta, rank=3)
+│       │   └── PHRASE (3-ary 3w) אֲשֶׁ֣ר לֹא יָדַ֔עְתָּ
+│       │       ├── [5] אֲשֶׁ֣ר (munach (conjunctive), rank=9)
+│       │       ├── [6] לֹא (no cantillation mark — bind as conjunctive, rank=9)
+│       │       └── [7] יָדַ֔עְתָּ (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) וְ/לֹ֥א יָדְע֖וּ/ן אֲבֹתֶ֑י/ךָ
+│           ├── PHRASE (binary 2w) וְ/לֹ֥א יָדְע֖וּ/ן
+│           │   ├── [8] וְ/לֹ֥א (mercha (conjunctive), rank=9)
+│           │   └── [9] יָדְע֖וּ/ן (tifcha, rank=2)
+│           └── [10] אֲבֹתֶ֑י/ךָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 17w) לְמַ֣עַן הוֹדִֽעֲ/ךָ֗ כִּ֠י לֹ֣א עַל הַ/לֶּ֤חֶם…
+    ├── PHRASE (binary 9w) לְמַ֣עַן הוֹדִֽעֲ/ךָ֗ כִּ֠י לֹ֣א עַל הַ/לֶּ֤חֶם…
+    │   ├── PHRASE (binary 2w) לְמַ֣עַן הוֹדִֽעֲ/ךָ֗
+    │   │   ├── [11] לְמַ֣עַן (munach (conjunctive), rank=9)
+    │   │   └── [12] הוֹדִֽעֲ/ךָ֗ (revia, rank=3)
+    │   └── PHRASE (binary 7w) כִּ֠י לֹ֣א עַל הַ/לֶּ֤חֶם לְ/בַדּ/וֹ֙ יִחְיֶ֣ה …
+    │       ├── PHRASE (binary 5w) כִּ֠י לֹ֣א עַל הַ/לֶּ֤חֶם לְ/בַדּ/וֹ֙
+    │       │   ├── [13] כִּ֠י (telisha gedola, rank=4)
+    │       │   └── PHRASE (4-ary 4w) לֹ֣א עַל הַ/לֶּ֤חֶם לְ/בַדּ/וֹ֙
+    │       │       ├── [14] לֹ֣א (munach (conjunctive), rank=9)
+    │       │       ├── [15] עַל (no cantillation mark — bind as conjunctive, rank=9)
+    │       │       ├── [16] הַ/לֶּ֤חֶם (mahpach (conjunctive), rank=9)
+    │       │       └── [17] לְ/בַדּ/וֹ֙ (pashta, rank=3)
+    │       └── PHRASE (binary 2w) יִחְיֶ֣ה הָֽ/אָדָ֔ם
+    │           ├── [18] יִחְיֶ֣ה (munach (conjunctive), rank=9)
+    │           └── [19] הָֽ/אָדָ֔ם (zaqef qatan, rank=2)
+    └── PHRASE (binary 8w) כִּ֛י עַל כָּל מוֹצָ֥א פִֽי יְהוָ֖ה יִחְיֶ֥ה הָ…
+        ├── PHRASE (binary 6w) כִּ֛י עַל כָּל מוֹצָ֥א פִֽי יְהוָ֖ה
+        │   ├── [20] כִּ֛י (tevir, rank=3)
+        │   └── PHRASE (5-ary 5w) עַל כָּל מוֹצָ֥א פִֽי יְהוָ֖ה
+        │       ├── [21] עַל (no cantillation mark — bind as conjunctive, rank=9)
+        │       ├── [22] כָּל (no cantillation mark — bind as conjunctive, rank=9)
+        │       ├── [23] מוֹצָ֥א (mercha (conjunctive), rank=9)
+        │       ├── [24] פִֽי (no cantillation mark — bind as conjunctive, rank=9)
+        │       └── [25] יְהוָ֖ה (tifcha, rank=2)
+        └── PHRASE (binary 2w) יִחְיֶ֥ה הָ/אָדָֽם
+            ├── [26] יִחְיֶ֥ה (mercha (conjunctive), rank=9)
+            └── [27] הָ/אָדָֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.4 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">שמלתך לא בלתה מעליך ורגלך לא בצקה זה ארבעים שנה</span> · <i>shmltk l&#x27; blth m&#x27;lyk vrglk l&#x27; btzqh zh &#x27;rb&#x27;ym shnh</i> · Free gloss — structure from Hebrew tree. 8:4.</div>
+<pre>PHRASE (binary 10w) שִׂמְלָ֨תְ/ךָ֜ לֹ֤א בָֽלְתָה֙ מֵֽ/עָלֶ֔י/ךָ וְ/…
+├── PHRASE (binary 7w) שִׂמְלָ֨תְ/ךָ֜ לֹ֤א בָֽלְתָה֙ מֵֽ/עָלֶ֔י/ךָ וְ/…
+│   ├── PHRASE (binary 4w) שִׂמְלָ֨תְ/ךָ֜ לֹ֤א בָֽלְתָה֙ מֵֽ/עָלֶ֔י/ךָ
+│   │   ├── PHRASE (binary 3w) שִׂמְלָ֨תְ/ךָ֜ לֹ֤א בָֽלְתָה֙
+│   │   │   ├── [0] שִׂמְלָ֨תְ/ךָ֜ (geresh, rank=4)
+│   │   │   └── PHRASE (binary 2w) לֹ֤א בָֽלְתָה֙
+│   │   │       ├── [1] לֹ֤א (mahpach (conjunctive), rank=9)
+│   │   │       └── [2] בָֽלְתָה֙ (pashta, rank=3)
+│   │   └── [3] מֵֽ/עָלֶ֔י/ךָ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וְ/רַגְלְ/ךָ֖ לֹ֣א בָצֵ֑קָה
+│       ├── [4] וְ/רַגְלְ/ךָ֖ (tifcha, rank=2)
+│       └── PHRASE (binary 2w) לֹ֣א בָצֵ֑קָה
+│           ├── [5] לֹ֣א (munach (conjunctive), rank=9)
+│           └── [6] בָצֵ֑קָה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) זֶ֖ה אַרְבָּעִ֥ים שָׁנָֽה
+    ├── [7] זֶ֖ה (tifcha, rank=2)
+    └── PHRASE (binary 2w) אַרְבָּעִ֥ים שָׁנָֽה
+        ├── [8] אַרְבָּעִ֥ים (mercha (conjunctive), rank=9)
+        └── [9] שָׁנָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.5 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">וידעת עם לבבך כי כאשר ייסר איש את בנו יהוה אלהיך מיסרך</span> · <i>vyd&#x27;t &#x27;m lbbk ky k&#x27;shr yysr &#x27;ysh &#x27;t bnv yhvh &#x27;lhyk mysrk</i> · Free gloss — structure from Hebrew tree. 8:5.</div>
+<pre>PHRASE (binary 12w) וְ/יָדַעְתָּ֖ עִם לְבָבֶ֑/ךָ כִּ֗י כַּ/אֲשֶׁ֨ר …
+├── PHRASE (binary 3w) וְ/יָדַעְתָּ֖ עִם לְבָבֶ֑/ךָ
+│   ├── [0] וְ/יָדַעְתָּ֖ (tifcha, rank=2)
+│   └── PHRASE (binary 2w) עִם לְבָבֶ֑/ךָ
+│       ├── [1] עִם (no cantillation mark — bind as conjunctive, rank=9)
+│       └── [2] לְבָבֶ֑/ךָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 9w) כִּ֗י כַּ/אֲשֶׁ֨ר יְיַסֵּ֥ר אִישׁ֙ אֶת בְּנ֔/וֹ…
+    ├── PHRASE (binary 6w) כִּ֗י כַּ/אֲשֶׁ֨ר יְיַסֵּ֥ר אִישׁ֙ אֶת בְּנ֔/וֹ
+    │   ├── [3] כִּ֗י (revia, rank=3)
+    │   └── PHRASE (binary 5w) כַּ/אֲשֶׁ֨ר יְיַסֵּ֥ר אִישׁ֙ אֶת בְּנ֔/וֹ
+    │       ├── PHRASE (3-ary 3w) כַּ/אֲשֶׁ֨ר יְיַסֵּ֥ר אִישׁ֙
+    │       │   ├── [4] כַּ/אֲשֶׁ֨ר (qadma (conjunctive), rank=9)
+    │       │   ├── [5] יְיַסֵּ֥ר (mercha (conjunctive), rank=9)
+    │       │   └── [6] אִישׁ֙ (pashta, rank=3)
+    │       └── PHRASE (binary 2w) אֶת בְּנ֔/וֹ
+    │           ├── [7] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+    │           └── [8] בְּנ֔/וֹ (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) יְהוָ֥ה אֱלֹהֶ֖י/ךָ מְיַסְּרֶֽ/ךָּ
+        ├── PHRASE (binary 2w) יְהוָ֥ה אֱלֹהֶ֖י/ךָ
+        │   ├── [9] יְהוָ֥ה (mercha (conjunctive), rank=9)
+        │   └── [10] אֱלֹהֶ֖י/ךָ (tifcha, rank=2)
+        └── [11] מְיַסְּרֶֽ/ךָּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.6 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">ושמרת את מצות יהוה אלהיך ללכת בדרכיו וליראה אתו</span> · <i>vshmrt &#x27;t mtzvt yhvh &#x27;lhyk llkt bdrkyv vlyr&#x27;h &#x27;tv</i> · Free gloss — structure from Hebrew tree. 8:6.</div>
+<pre>PHRASE (binary 9w) וְ/שָׁ֣מַרְתָּ֔ אֶת מִצְוֺ֖ת יְהוָ֣ה אֱלֹהֶ֑י/ך…
+├── PHRASE (binary 5w) וְ/שָׁ֣מַרְתָּ֔ אֶת מִצְוֺ֖ת יְהוָ֣ה אֱלֹהֶ֑י/ךָ
+│   ├── [0] וְ/שָׁ֣מַרְתָּ֔ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) אֶת מִצְוֺ֖ת יְהוָ֣ה אֱלֹהֶ֑י/ךָ
+│       ├── PHRASE (binary 2w) אֶת מִצְוֺ֖ת
+│       │   ├── [1] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│       │   └── [2] מִצְוֺ֖ת (tifcha, rank=2)
+│       └── PHRASE (binary 2w) יְהוָ֣ה אֱלֹהֶ֑י/ךָ
+│           ├── [3] יְהוָ֣ה (munach (conjunctive), rank=9)
+│           └── [4] אֱלֹהֶ֑י/ךָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) לָ/לֶ֥כֶת בִּ/דְרָכָ֖י/ו וּ/לְ/יִרְאָ֥ה אֹתֽ/וֹ
+    ├── PHRASE (binary 2w) לָ/לֶ֥כֶת בִּ/דְרָכָ֖י/ו
+    │   ├── [5] לָ/לֶ֥כֶת (mercha (conjunctive), rank=9)
+    │   └── [6] בִּ/דְרָכָ֖י/ו (tifcha, rank=2)
+    └── PHRASE (binary 2w) וּ/לְ/יִרְאָ֥ה אֹתֽ/וֹ
+        ├── [7] וּ/לְ/יִרְאָ֥ה (mercha (conjunctive), rank=9)
+        └── [8] אֹתֽ/וֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.7 · parser unique · 15 words</h3>
+<div class="meta"><span class="he">כי יהוה אלהיך מביאך אל ארץ טובה ארץ נחלי מים עינת ותהמת יצאים בבקעה ובהר</span> · <i>ky yhvh &#x27;lhyk mby&#x27;k &#x27;l &#x27;rtz tvbh &#x27;rtz nchly mym &#x27;ynt vthmt ytz&#x27;ym bbq&#x27;h vbhr</i> · Free gloss — structure from Hebrew tree. 8:7.</div>
+<pre>PHRASE (binary 15w) כִּ֚י יְהוָ֣ה אֱלֹהֶ֔י/ךָ מְבִֽיאֲ/ךָ֖ אֶל אֶ֣ר…
+├── PHRASE (binary 7w) כִּ֚י יְהוָ֣ה אֱלֹהֶ֔י/ךָ מְבִֽיאֲ/ךָ֖ אֶל אֶ֣ר…
+│   ├── PHRASE (binary 3w) כִּ֚י יְהוָ֣ה אֱלֹהֶ֔י/ךָ
+│   │   ├── [0] כִּ֚י (yetiv, rank=3)
+│   │   └── PHRASE (binary 2w) יְהוָ֣ה אֱלֹהֶ֔י/ךָ
+│   │       ├── [1] יְהוָ֣ה (munach (conjunctive), rank=9)
+│   │       └── [2] אֱלֹהֶ֔י/ךָ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) מְבִֽיאֲ/ךָ֖ אֶל אֶ֣רֶץ טוֹבָ֑ה
+│       ├── [3] מְבִֽיאֲ/ךָ֖ (tifcha, rank=2)
+│       └── PHRASE (3-ary 3w) אֶל אֶ֣רֶץ טוֹבָ֑ה
+│           ├── [4] אֶל (no cantillation mark — bind as conjunctive, rank=9)
+│           ├── [5] אֶ֣רֶץ (munach (conjunctive), rank=9)
+│           └── [6] טוֹבָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) אֶ֚רֶץ נַ֣חֲלֵי מָ֔יִם עֲיָנֹת֙ וּ/תְהֹמֹ֔ת יֹצ…
+    ├── PHRASE (binary 3w) אֶ֚רֶץ נַ֣חֲלֵי מָ֔יִם
+    │   ├── [7] אֶ֚רֶץ (yetiv, rank=3)
+    │   └── PHRASE (binary 2w) נַ֣חֲלֵי מָ֔יִם
+    │       ├── [8] נַ֣חֲלֵי (munach (conjunctive), rank=9)
+    │       └── [9] מָ֔יִם (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) עֲיָנֹת֙ וּ/תְהֹמֹ֔ת יֹצְאִ֥ים בַּ/בִּקְעָ֖ה וּ…
+        ├── PHRASE (binary 2w) עֲיָנֹת֙ וּ/תְהֹמֹ֔ת
+        │   ├── [10] עֲיָנֹת֙ (pashta, rank=3)
+        │   └── [11] וּ/תְהֹמֹ֔ת (zaqef qatan, rank=2)
+        └── PHRASE (binary 3w) יֹצְאִ֥ים בַּ/בִּקְעָ֖ה וּ/בָ/הָֽר
+            ├── PHRASE (binary 2w) יֹצְאִ֥ים בַּ/בִּקְעָ֖ה
+            │   ├── [12] יֹצְאִ֥ים (mercha (conjunctive), rank=9)
+            │   └── [13] בַּ/בִּקְעָ֖ה (tifcha, rank=2)
+            └── [14] וּ/בָ/הָֽר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.8 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ארץ חטה ושערה וגפן ותאנה ורמון ארץ זית שמן ודבש</span> · <i>&#x27;rtz chth vsh&#x27;rh vgpn vt&#x27;nh vrmvn &#x27;rtz zyt shmn vdbsh</i> · Free gloss — structure from Hebrew tree. 8:8.</div>
+<pre>PHRASE (binary 10w) אֶ֤רֶץ חִטָּה֙ וּ/שְׂעֹרָ֔ה וְ/גֶ֥פֶן וּ/תְאֵנָ…
+├── PHRASE (binary 6w) אֶ֤רֶץ חִטָּה֙ וּ/שְׂעֹרָ֔ה וְ/גֶ֥פֶן וּ/תְאֵנָ…
+│   ├── PHRASE (binary 3w) אֶ֤רֶץ חִטָּה֙ וּ/שְׂעֹרָ֔ה
+│   │   ├── PHRASE (binary 2w) אֶ֤רֶץ חִטָּה֙
+│   │   │   ├── [0] אֶ֤רֶץ (mahpach (conjunctive), rank=9)
+│   │   │   └── [1] חִטָּה֙ (pashta, rank=3)
+│   │   └── [2] וּ/שְׂעֹרָ֔ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וְ/גֶ֥פֶן וּ/תְאֵנָ֖ה וְ/רִמּ֑וֹן
+│       ├── PHRASE (binary 2w) וְ/גֶ֥פֶן וּ/תְאֵנָ֖ה
+│       │   ├── [3] וְ/גֶ֥פֶן (mercha (conjunctive), rank=9)
+│       │   └── [4] וּ/תְאֵנָ֖ה (tifcha, rank=2)
+│       └── [5] וְ/רִמּ֑וֹן (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) אֶֽרֶץ זֵ֥ית שֶׁ֖מֶן וּ/דְבָֽשׁ
+    ├── PHRASE (3-ary 3w) אֶֽרֶץ זֵ֥ית שֶׁ֖מֶן
+    │   ├── [6] אֶֽרֶץ (no cantillation mark — bind as conjunctive, rank=9)
+    │   ├── [7] זֵ֥ית (mercha (conjunctive), rank=9)
+    │   └── [8] שֶׁ֖מֶן (tifcha, rank=2)
+    └── [9] וּ/דְבָֽשׁ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.9 · parser unique · 18 words</h3>
+<div class="meta"><span class="he">ארץ אשר לא במסכנת תאכל בה לחם לא תחסר כל בה ארץ אשר אבניה ברזל ומהרריה תחצב נחשת</span> · <i>&#x27;rtz &#x27;shr l&#x27; bmsknt t&#x27;kl bh lchm l&#x27; tchsr kl bh &#x27;rtz &#x27;shr &#x27;bnyh brzl vmhrryh tchtzb nchsht</i> · Free gloss — structure from Hebrew tree. 8:9.</div>
+<pre>PHRASE (binary 18w) אֶ֗רֶץ אֲשֶׁ֨ר לֹ֤א בְ/מִסְכֵּנֻת֙ תֹּֽאכַל בָּ…
+├── PHRASE (binary 11w) אֶ֗רֶץ אֲשֶׁ֨ר לֹ֤א בְ/מִסְכֵּנֻת֙ תֹּֽאכַל בָּ…
+│   ├── PHRASE (binary 7w) אֶ֗רֶץ אֲשֶׁ֨ר לֹ֤א בְ/מִסְכֵּנֻת֙ תֹּֽאכַל בָּ…
+│   │   ├── [0] אֶ֗רֶץ (revia, rank=3)
+│   │   └── PHRASE (binary 6w) אֲשֶׁ֨ר לֹ֤א בְ/מִסְכֵּנֻת֙ תֹּֽאכַל בָּ֣/הּ לֶ…
+│   │       ├── PHRASE (3-ary 3w) אֲשֶׁ֨ר לֹ֤א בְ/מִסְכֵּנֻת֙
+│   │       │   ├── [1] אֲשֶׁ֨ר (qadma (conjunctive), rank=9)
+│   │       │   ├── [2] לֹ֤א (mahpach (conjunctive), rank=9)
+│   │       │   └── [3] בְ/מִסְכֵּנֻת֙ (pashta, rank=3)
+│   │       └── PHRASE (3-ary 3w) תֹּֽאכַל בָּ֣/הּ לֶ֔חֶם
+│   │           ├── [4] תֹּֽאכַל (no cantillation mark — bind as conjunctive, rank=9)
+│   │           ├── [5] בָּ֣/הּ (munach (conjunctive), rank=9)
+│   │           └── [6] לֶ֔חֶם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) לֹֽא תֶחְסַ֥ר כֹּ֖ל בָּ֑/הּ
+│       ├── PHRASE (3-ary 3w) לֹֽא תֶחְסַ֥ר כֹּ֖ל
+│       │   ├── [7] לֹֽא (no cantillation mark — bind as conjunctive, rank=9)
+│       │   ├── [8] תֶחְסַ֥ר (mercha (conjunctive), rank=9)
+│       │   └── [9] כֹּ֖ל (tifcha, rank=2)
+│       └── [10] בָּ֑/הּ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) אֶ֚רֶץ אֲשֶׁ֣ר אֲבָנֶ֣י/הָ בַרְזֶ֔ל וּ/מֵ/הֲרָר…
+    ├── PHRASE (binary 4w) אֶ֚רֶץ אֲשֶׁ֣ר אֲבָנֶ֣י/הָ בַרְזֶ֔ל
+    │   ├── [11] אֶ֚רֶץ (yetiv, rank=3)
+    │   └── PHRASE (3-ary 3w) אֲשֶׁ֣ר אֲבָנֶ֣י/הָ בַרְזֶ֔ל
+    │       ├── [12] אֲשֶׁ֣ר (munach (conjunctive), rank=9)
+    │       ├── [13] אֲבָנֶ֣י/הָ (munach (conjunctive), rank=9)
+    │       └── [14] בַרְזֶ֔ל (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וּ/מֵ/הֲרָרֶ֖י/הָ תַּחְצֹ֥ב נְחֹֽשֶׁת
+        ├── [15] וּ/מֵ/הֲרָרֶ֖י/הָ (tifcha, rank=2)
+        └── PHRASE (binary 2w) תַּחְצֹ֥ב נְחֹֽשֶׁת
+            ├── [16] תַּחְצֹ֥ב (mercha (conjunctive), rank=9)
+            └── [17] נְחֹֽשֶׁת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.10 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">ואכלת ושבעת וברכת את יהוה אלהיך על הארץ הטבה אשר נתן לך</span> · <i>v&#x27;klt vshb&#x27;t vbrkt &#x27;t yhvh &#x27;lhyk &#x27;l h&#x27;rtz htbh &#x27;shr ntn lk</i> · Free gloss — structure from Hebrew tree. 8:10.</div>
+<pre>PHRASE (binary 12w) וְ/אָכַלְתָּ֖ וְ/שָׂבָ֑עְתָּ וּ/בֵֽרַכְתָּ֙ אֶת…
+├── PHRASE (binary 2w) וְ/אָכַלְתָּ֖ וְ/שָׂבָ֑עְתָּ
+│   ├── [0] וְ/אָכַלְתָּ֖ (tifcha, rank=2)
+│   └── [1] וְ/שָׂבָ֑עְתָּ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 10w) וּ/בֵֽרַכְתָּ֙ אֶת יְהוָ֣ה אֱלֹהֶ֔י/ךָ עַל הָ/א…
+    ├── PHRASE (binary 4w) וּ/בֵֽרַכְתָּ֙ אֶת יְהוָ֣ה אֱלֹהֶ֔י/ךָ
+    │   ├── [2] וּ/בֵֽרַכְתָּ֙ (pashta, rank=3)
+    │   └── PHRASE (3-ary 3w) אֶת יְהוָ֣ה אֱלֹהֶ֔י/ךָ
+    │       ├── [3] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+    │       ├── [4] יְהוָ֣ה (munach (conjunctive), rank=9)
+    │       └── [5] אֱלֹהֶ֔י/ךָ (zaqef qatan, rank=2)
+    └── PHRASE (binary 6w) עַל הָ/אָ֥רֶץ הַ/טֹּבָ֖ה אֲשֶׁ֥ר נָֽתַן לָֽ/ךְ
+        ├── PHRASE (3-ary 3w) עַל הָ/אָ֥רֶץ הַ/טֹּבָ֖ה
+        │   ├── [6] עַל (no cantillation mark — bind as conjunctive, rank=9)
+        │   ├── [7] הָ/אָ֥רֶץ (mercha (conjunctive), rank=9)
+        │   └── [8] הַ/טֹּבָ֖ה (tifcha, rank=2)
+        └── PHRASE (3-ary 3w) אֲשֶׁ֥ר נָֽתַן לָֽ/ךְ
+            ├── [9] אֲשֶׁ֥ר (mercha (conjunctive), rank=9)
+            ├── [10] נָֽתַן (no cantillation mark — bind as conjunctive, rank=9)
+            └── [11] לָֽ/ךְ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.11 · parser unique · 16 words</h3>
+<div class="meta"><span class="he">השמר לך פן תשכח את יהוה אלהיך לבלתי שמר מצותיו ומשפטיו וחקתיו אשר אנכי מצוך היום</span> · <i>hshmr lk pn tshkch &#x27;t yhvh &#x27;lhyk lblty shmr mtzvtyv vmshptyv vchqtyv &#x27;shr &#x27;nky mtzvk hyvm</i> · Free gloss — structure from Hebrew tree. 8:11.</div>
+<pre>PHRASE (binary 16w) הִשָּׁ֣מֶר לְ/ךָ֔ פֶּן תִּשְׁכַּ֖ח אֶת יְהוָ֣ה …
+├── PHRASE (binary 7w) הִשָּׁ֣מֶר לְ/ךָ֔ פֶּן תִּשְׁכַּ֖ח אֶת יְהוָ֣ה …
+│   ├── PHRASE (binary 2w) הִשָּׁ֣מֶר לְ/ךָ֔
+│   │   ├── [0] הִשָּׁ֣מֶר (munach (conjunctive), rank=9)
+│   │   └── [1] לְ/ךָ֔ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) פֶּן תִּשְׁכַּ֖ח אֶת יְהוָ֣ה אֱלֹהֶ֑י/ךָ
+│       ├── PHRASE (binary 2w) פֶּן תִּשְׁכַּ֖ח
+│       │   ├── [2] פֶּן (no cantillation mark — bind as conjunctive, rank=9)
+│       │   └── [3] תִּשְׁכַּ֖ח (tifcha, rank=2)
+│       └── PHRASE (3-ary 3w) אֶת יְהוָ֣ה אֱלֹהֶ֑י/ךָ
+│           ├── [4] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│           ├── [5] יְהוָ֣ה (munach (conjunctive), rank=9)
+│           └── [6] אֱלֹהֶ֑י/ךָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 9w) לְ/בִלְתִּ֨י שְׁמֹ֤ר מִצְוֺתָי/ו֙ וּ/מִשְׁפָּטָ…
+    ├── PHRASE (binary 5w) לְ/בִלְתִּ֨י שְׁמֹ֤ר מִצְוֺתָי/ו֙ וּ/מִשְׁפָּטָ…
+    │   ├── PHRASE (3-ary 3w) לְ/בִלְתִּ֨י שְׁמֹ֤ר מִצְוֺתָי/ו֙
+    │   │   ├── [7] לְ/בִלְתִּ֨י (qadma (conjunctive), rank=9)
+    │   │   ├── [8] שְׁמֹ֤ר (mahpach (conjunctive), rank=9)
+    │   │   └── [9] מִצְוֺתָי/ו֙ (pashta, rank=3)
+    │   └── PHRASE (binary 2w) וּ/מִשְׁפָּטָ֣י/ו וְ/חֻקֹּתָ֔י/ו
+    │       ├── [10] וּ/מִשְׁפָּטָ֣י/ו (munach (conjunctive), rank=9)
+    │       └── [11] וְ/חֻקֹּתָ֔י/ו (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) אֲשֶׁ֛ר אָנֹכִ֥י מְצַוְּ/ךָ֖ הַ/יּֽוֹם
+        ├── PHRASE (binary 3w) אֲשֶׁ֛ר אָנֹכִ֥י מְצַוְּ/ךָ֖
+        │   ├── [12] אֲשֶׁ֛ר (tevir, rank=3)
+        │   └── PHRASE (binary 2w) אָנֹכִ֥י מְצַוְּ/ךָ֖
+        │       ├── [13] אָנֹכִ֥י (mercha (conjunctive), rank=9)
+        │       └── [14] מְצַוְּ/ךָ֖ (tifcha, rank=2)
+        └── [15] הַ/יּֽוֹם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.12 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">פן תאכל ושבעת ובתים טובים תבנה וישבת</span> · <i>pn t&#x27;kl vshb&#x27;t vbtym tvbym tbnh vyshbt</i> · Free gloss — structure from Hebrew tree. 8:12.</div>
+<pre>PHRASE (binary 7w) פֶּן תֹּאכַ֖ל וְ/שָׂבָ֑עְתָּ וּ/בָתִּ֥ים טוֹבִ֛…
+├── PHRASE (binary 3w) פֶּן תֹּאכַ֖ל וְ/שָׂבָ֑עְתָּ
+│   ├── PHRASE (binary 2w) פֶּן תֹּאכַ֖ל
+│   │   ├── [0] פֶּן (no cantillation mark — bind as conjunctive, rank=9)
+│   │   └── [1] תֹּאכַ֖ל (tifcha, rank=2)
+│   └── [2] וְ/שָׂבָ֑עְתָּ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וּ/בָתִּ֥ים טוֹבִ֛ים תִּבְנֶ֖ה וְ/יָשָֽׁבְתָּ
+    ├── PHRASE (binary 3w) וּ/בָתִּ֥ים טוֹבִ֛ים תִּבְנֶ֖ה
+    │   ├── PHRASE (binary 2w) וּ/בָתִּ֥ים טוֹבִ֛ים
+    │   │   ├── [3] וּ/בָתִּ֥ים (mercha (conjunctive), rank=9)
+    │   │   └── [4] טוֹבִ֛ים (tevir, rank=3)
+    │   └── [5] תִּבְנֶ֖ה (tifcha, rank=2)
+    └── [6] וְ/יָשָֽׁבְתָּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.13 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ובקרך וצאנך ירבין וכסף וזהב ירבה לך וכל אשר לך ירבה</span> · <i>vbqrk vtz&#x27;nk yrbyn vksp vzhb yrbh lk vkl &#x27;shr lk yrbh</i> · Free gloss — structure from Hebrew tree. 8:13.</div>
+<pre>PHRASE (binary 11w) וּ/בְקָֽרְ/ךָ֤ וְ/צֹֽאנְ/ךָ֙ יִרְבְּיֻ֔/ן וְ/כֶ…
+├── PHRASE (binary 7w) וּ/בְקָֽרְ/ךָ֤ וְ/צֹֽאנְ/ךָ֙ יִרְבְּיֻ֔/ן וְ/כֶ…
+│   ├── PHRASE (binary 3w) וּ/בְקָֽרְ/ךָ֤ וְ/צֹֽאנְ/ךָ֙ יִרְבְּיֻ֔/ן
+│   │   ├── PHRASE (binary 2w) וּ/בְקָֽרְ/ךָ֤ וְ/צֹֽאנְ/ךָ֙
+│   │   │   ├── [0] וּ/בְקָֽרְ/ךָ֤ (mahpach (conjunctive), rank=9)
+│   │   │   └── [1] וְ/צֹֽאנְ/ךָ֙ (pashta, rank=3)
+│   │   └── [2] יִרְבְּיֻ֔/ן (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וְ/כֶ֥סֶף וְ/זָהָ֖ב יִרְבֶּה לָּ֑/ךְ
+│       ├── PHRASE (binary 2w) וְ/כֶ֥סֶף וְ/זָהָ֖ב
+│       │   ├── [3] וְ/כֶ֥סֶף (mercha (conjunctive), rank=9)
+│       │   └── [4] וְ/זָהָ֖ב (tifcha, rank=2)
+│       └── PHRASE (binary 2w) יִרְבֶּה לָּ֑/ךְ
+│           ├── [5] יִרְבֶּה (no cantillation mark — bind as conjunctive, rank=9)
+│           └── [6] לָּ֑/ךְ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/כֹ֥ל אֲשֶׁר לְ/ךָ֖ יִרְבֶּֽה
+    ├── PHRASE (3-ary 3w) וְ/כֹ֥ל אֲשֶׁר לְ/ךָ֖
+    │   ├── [7] וְ/כֹ֥ל (mercha (conjunctive), rank=9)
+    │   ├── [8] אֲשֶׁר (no cantillation mark — bind as conjunctive, rank=9)
+    │   └── [9] לְ/ךָ֖ (tifcha, rank=2)
+    └── [10] יִרְבֶּֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.14 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ורם לבבך ושכחת את יהוה אלהיך המוציאך מארץ מצרים מבית עבדים</span> · <i>vrm lbbk vshkcht &#x27;t yhvh &#x27;lhyk hmvtzy&#x27;k m&#x27;rtz mtzrym mbyt &#x27;bdym</i> · Free gloss — structure from Hebrew tree. 8:14.</div>
+<pre>PHRASE (binary 11w) וְ/רָ֖ם לְבָבֶ֑/ךָ וְ/שָֽׁכַחְתָּ֙ אֶת יְהוָ֣ה …
+├── PHRASE (binary 2w) וְ/רָ֖ם לְבָבֶ֑/ךָ
+│   ├── [0] וְ/רָ֖ם (tifcha, rank=2)
+│   └── [1] לְבָבֶ֑/ךָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 9w) וְ/שָֽׁכַחְתָּ֙ אֶת יְהוָ֣ה אֱלֹהֶ֔י/ךָ הַ/מּוֹ…
+    ├── PHRASE (binary 4w) וְ/שָֽׁכַחְתָּ֙ אֶת יְהוָ֣ה אֱלֹהֶ֔י/ךָ
+    │   ├── [2] וְ/שָֽׁכַחְתָּ֙ (pashta, rank=3)
+    │   └── PHRASE (3-ary 3w) אֶת יְהוָ֣ה אֱלֹהֶ֔י/ךָ
+    │       ├── [3] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+    │       ├── [4] יְהוָ֣ה (munach (conjunctive), rank=9)
+    │       └── [5] אֱלֹהֶ֔י/ךָ (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) הַ/מּוֹצִיאֲ/ךָ֛ מֵ/אֶ֥רֶץ מִצְרַ֖יִם מִ/בֵּ֥ית…
+        ├── PHRASE (binary 3w) הַ/מּוֹצִיאֲ/ךָ֛ מֵ/אֶ֥רֶץ מִצְרַ֖יִם
+        │   ├── [6] הַ/מּוֹצִיאֲ/ךָ֛ (tevir, rank=3)
+        │   └── PHRASE (binary 2w) מֵ/אֶ֥רֶץ מִצְרַ֖יִם
+        │       ├── [7] מֵ/אֶ֥רֶץ (mercha (conjunctive), rank=9)
+        │       └── [8] מִצְרַ֖יִם (tifcha, rank=2)
+        └── PHRASE (binary 2w) מִ/בֵּ֥ית עֲבָדִֽים
+            ├── [9] מִ/בֵּ֥ית (mercha (conjunctive), rank=9)
+            └── [10] עֲבָדִֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.15 · parser unique · 16 words</h3>
+<div class="meta"><span class="he">המוליכך במדבר הגדל והנורא נחש שרף ועקרב וצמאון אשר אין מים המוציא לך מים מצור החלמיש</span> · <i>hmvlykk bmdbr hgdl vhnvr&#x27; nchsh shrp v&#x27;qrb vtzm&#x27;vn &#x27;shr &#x27;yn mym hmvtzy&#x27; lk mym mtzvr hchlmysh</i> · Free gloss — structure from Hebrew tree. 8:15.</div>
+<pre>PHRASE (binary 16w) הַ/מּוֹלִ֨יכֲ/ךָ֜ בַּ/מִּדְבָּ֣ר הַ/גָּדֹ֣ל וְ/…
+├── PHRASE (binary 11w) הַ/מּוֹלִ֨יכֲ/ךָ֜ בַּ/מִּדְבָּ֣ר הַ/גָּדֹ֣ל וְ/…
+│   ├── PHRASE (binary 7w) הַ/מּוֹלִ֨יכֲ/ךָ֜ בַּ/מִּדְבָּ֣ר הַ/גָּדֹ֣ל וְ/…
+│   │   ├── PHRASE (binary 4w) הַ/מּוֹלִ֨יכֲ/ךָ֜ בַּ/מִּדְבָּ֣ר הַ/גָּדֹ֣ל וְ/…
+│   │   │   ├── [0] הַ/מּוֹלִ֨יכֲ/ךָ֜ (geresh, rank=4)
+│   │   │   └── PHRASE (3-ary 3w) בַּ/מִּדְבָּ֣ר הַ/גָּדֹ֣ל וְ/הַ/נּוֹרָ֗א
+│   │   │       ├── [1] בַּ/מִּדְבָּ֣ר (munach (conjunctive), rank=9)
+│   │   │       ├── [2] הַ/גָּדֹ֣ל (munach (conjunctive), rank=9)
+│   │   │       └── [3] וְ/הַ/נּוֹרָ֗א (revia, rank=3)
+│   │   └── PHRASE (binary 3w) נָחָ֤שׁ שָׂרָף֙ וְ/עַקְרָ֔ב
+│   │       ├── PHRASE (binary 2w) נָחָ֤שׁ שָׂרָף֙
+│   │       │   ├── [4] נָחָ֤שׁ (mahpach (conjunctive), rank=9)
+│   │       │   └── [5] שָׂרָף֙ (pashta, rank=3)
+│   │       └── [6] וְ/עַקְרָ֔ב (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וְ/צִמָּא֖וֹן אֲשֶׁ֣ר אֵֽין מָ֑יִם
+│       ├── [7] וְ/צִמָּא֖וֹן (tifcha, rank=2)
+│       └── PHRASE (3-ary 3w) אֲשֶׁ֣ר אֵֽין מָ֑יִם
+│           ├── [8] אֲשֶׁ֣ר (munach (conjunctive), rank=9)
+│           ├── [9] אֵֽין (no cantillation mark — bind as conjunctive, rank=9)
+│           └── [10] מָ֑יִם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) הַ/מּוֹצִ֤יא לְ/ךָ֙ מַ֔יִם מִ/צּ֖וּר הַֽ/חַלָּמ…
+    ├── PHRASE (binary 3w) הַ/מּוֹצִ֤יא לְ/ךָ֙ מַ֔יִם
+    │   ├── PHRASE (binary 2w) הַ/מּוֹצִ֤יא לְ/ךָ֙
+    │   │   ├── [11] הַ/מּוֹצִ֤יא (mahpach (conjunctive), rank=9)
+    │   │   └── [12] לְ/ךָ֙ (pashta, rank=3)
+    │   └── [13] מַ֔יִם (zaqef qatan, rank=2)
+    └── PHRASE (binary 2w) מִ/צּ֖וּר הַֽ/חַלָּמִֽישׁ
+        ├── [14] מִ/צּ֖וּר (tifcha, rank=2)
+        └── [15] הַֽ/חַלָּמִֽישׁ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.16 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">המאכלך מן במדבר אשר לא ידעון אבתיך למען ענתך ולמען נסתך להיטבך באחריתך</span> · <i>hm&#x27;klk mn bmdbr &#x27;shr l&#x27; yd&#x27;vn &#x27;btyk lm&#x27;n &#x27;ntk vlm&#x27;n nstk lhytbk b&#x27;chrytk</i> · Free gloss — structure from Hebrew tree. 8:16.</div>
+<pre>PHRASE (binary 13w) הַ/מַּֽאֲכִ֨לְ/ךָ֥ מָן֙ בַּ/מִּדְבָּ֔ר אֲשֶׁ֥ר …
+├── PHRASE (binary 7w) הַ/מַּֽאֲכִ֨לְ/ךָ֥ מָן֙ בַּ/מִּדְבָּ֔ר אֲשֶׁ֥ר …
+│   ├── PHRASE (binary 3w) הַ/מַּֽאֲכִ֨לְ/ךָ֥ מָן֙ בַּ/מִּדְבָּ֔ר
+│   │   ├── PHRASE (binary 2w) הַ/מַּֽאֲכִ֨לְ/ךָ֥ מָן֙
+│   │   │   ├── [0] הַ/מַּֽאֲכִ֨לְ/ךָ֥ (qadma (conjunctive), rank=9)
+│   │   │   └── [1] מָן֙ (pashta, rank=3)
+│   │   └── [2] בַּ/מִּדְבָּ֔ר (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) אֲשֶׁ֥ר לֹא יָדְע֖וּ/ן אֲבֹתֶ֑י/ךָ
+│       ├── PHRASE (3-ary 3w) אֲשֶׁ֥ר לֹא יָדְע֖וּ/ן
+│       │   ├── [3] אֲשֶׁ֥ר (mercha (conjunctive), rank=9)
+│       │   ├── [4] לֹא (no cantillation mark — bind as conjunctive, rank=9)
+│       │   └── [5] יָדְע֖וּ/ן (tifcha, rank=2)
+│       └── [6] אֲבֹתֶ֑י/ךָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) לְמַ֣עַן עַנֹּֽתְ/ךָ֗ וּ/לְמַ֨עַן֙ נַסֹּתֶ֔/ךָ …
+    ├── PHRASE (binary 4w) לְמַ֣עַן עַנֹּֽתְ/ךָ֗ וּ/לְמַ֨עַן֙ נַסֹּתֶ֔/ךָ
+    │   ├── PHRASE (binary 2w) לְמַ֣עַן עַנֹּֽתְ/ךָ֗
+    │   │   ├── [7] לְמַ֣עַן (munach (conjunctive), rank=9)
+    │   │   └── [8] עַנֹּֽתְ/ךָ֗ (revia, rank=3)
+    │   └── PHRASE (binary 2w) וּ/לְמַ֨עַן֙ נַסֹּתֶ֔/ךָ
+    │       ├── [9] וּ/לְמַ֨עַן֙ (pashta, rank=3)
+    │       └── [10] נַסֹּתֶ֔/ךָ (zaqef qatan, rank=2)
+    └── PHRASE (binary 2w) לְ/הֵיטִֽבְ/ךָ֖ בְּ/אַחֲרִיתֶֽ/ךָ
+        ├── [11] לְ/הֵיטִֽבְ/ךָ֖ (tifcha, rank=2)
+        └── [12] בְּ/אַחֲרִיתֶֽ/ךָ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.17 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ואמרת בלבבך כחי ועצם ידי עשה לי את החיל הזה</span> · <i>v&#x27;mrt blbbk kchy v&#x27;tzm ydy &#x27;shh ly &#x27;t hchyl hzh</i> · Free gloss — structure from Hebrew tree. 8:17.</div>
+<pre>PHRASE (binary 10w) וְ/אָמַרְתָּ֖ בִּ/לְבָבֶ֑/ךָ כֹּחִ/י֙ וְ/עֹ֣צֶם…
+├── PHRASE (binary 2w) וְ/אָמַרְתָּ֖ בִּ/לְבָבֶ֑/ךָ
+│   ├── [0] וְ/אָמַרְתָּ֖ (tifcha, rank=2)
+│   └── [1] בִּ/לְבָבֶ֑/ךָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) כֹּחִ/י֙ וְ/עֹ֣צֶם יָדִ֔/י עָ֥שָׂה לִ֖/י אֶת הַ…
+    ├── PHRASE (binary 3w) כֹּחִ/י֙ וְ/עֹ֣צֶם יָדִ֔/י
+    │   ├── [2] כֹּחִ/י֙ (pashta, rank=3)
+    │   └── PHRASE (binary 2w) וְ/עֹ֣צֶם יָדִ֔/י
+    │       ├── [3] וְ/עֹ֣צֶם (munach (conjunctive), rank=9)
+    │       └── [4] יָדִ֔/י (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) עָ֥שָׂה לִ֖/י אֶת הַ/חַ֥יִל הַ/זֶּֽה
+        ├── PHRASE (binary 2w) עָ֥שָׂה לִ֖/י
+        │   ├── [5] עָ֥שָׂה (mercha (conjunctive), rank=9)
+        │   └── [6] לִ֖/י (tifcha, rank=2)
+        └── PHRASE (3-ary 3w) אֶת הַ/חַ֥יִל הַ/זֶּֽה
+            ├── [7] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+            ├── [8] הַ/חַ֥יִל (mercha (conjunctive), rank=9)
+            └── [9] הַ/זֶּֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.18 · parser unique · 20 words</h3>
+<div class="meta"><span class="he">וזכרת את יהוה אלהיך כי הוא הנתן לך כח לעשות חיל למען הקים את בריתו אשר נשבע לאבתיך כיום הזה</span> · <i>vzkrt &#x27;t yhvh &#x27;lhyk ky hv&#x27; hntn lk kch l&#x27;shvt chyl lm&#x27;n hqym &#x27;t brytv &#x27;shr nshb&#x27; l&#x27;btyk kyvm hzh</i> · Free gloss — structure from Hebrew tree. 8:18.</div>
+<pre>PHRASE (binary 20w) וְ/זָֽכַרְתָּ֙ אֶת יְהוָ֣ה אֱלֹהֶ֔י/ךָ כִּ֣י ה֗…
+├── PHRASE (binary 11w) וְ/זָֽכַרְתָּ֙ אֶת יְהוָ֣ה אֱלֹהֶ֔י/ךָ כִּ֣י ה֗…
+│   ├── PHRASE (binary 4w) וְ/זָֽכַרְתָּ֙ אֶת יְהוָ֣ה אֱלֹהֶ֔י/ךָ
+│   │   ├── [0] וְ/זָֽכַרְתָּ֙ (pashta, rank=3)
+│   │   └── PHRASE (3-ary 3w) אֶת יְהוָ֣ה אֱלֹהֶ֔י/ךָ
+│   │       ├── [1] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│   │       ├── [2] יְהוָ֣ה (munach (conjunctive), rank=9)
+│   │       └── [3] אֱלֹהֶ֔י/ךָ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 7w) כִּ֣י ה֗וּא הַ/נֹּתֵ֥ן לְ/ךָ֛ כֹּ֖חַ לַ/עֲשׂ֣וֹ…
+│       ├── PHRASE (binary 5w) כִּ֣י ה֗וּא הַ/נֹּתֵ֥ן לְ/ךָ֛ כֹּ֖חַ
+│       │   ├── PHRASE (binary 2w) כִּ֣י ה֗וּא
+│       │   │   ├── [4] כִּ֣י (munach (conjunctive), rank=9)
+│       │   │   └── [5] ה֗וּא (revia, rank=3)
+│       │   └── PHRASE (binary 3w) הַ/נֹּתֵ֥ן לְ/ךָ֛ כֹּ֖חַ
+│       │       ├── PHRASE (binary 2w) הַ/נֹּתֵ֥ן לְ/ךָ֛
+│       │       │   ├── [6] הַ/נֹּתֵ֥ן (mercha (conjunctive), rank=9)
+│       │       │   └── [7] לְ/ךָ֛ (tevir, rank=3)
+│       │       └── [8] כֹּ֖חַ (tifcha, rank=2)
+│       └── PHRASE (binary 2w) לַ/עֲשׂ֣וֹת חָ֑יִל
+│           ├── [9] לַ/עֲשׂ֣וֹת (munach (conjunctive), rank=9)
+│           └── [10] חָ֑יִל (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 9w) לְמַ֨עַן הָקִ֧ים אֶת בְּרִית֛/וֹ אֲשֶׁר נִשְׁבּ…
+    ├── PHRASE (binary 7w) לְמַ֨עַן הָקִ֧ים אֶת בְּרִית֛/וֹ אֲשֶׁר נִשְׁבּ…
+    │   ├── PHRASE (4-ary 4w) לְמַ֨עַן הָקִ֧ים אֶת בְּרִית֛/וֹ
+    │   │   ├── [11] לְמַ֨עַן (qadma (conjunctive), rank=9)
+    │   │   ├── [12] הָקִ֧ים (darga (conjunctive), rank=9)
+    │   │   ├── [13] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+    │   │   └── [14] בְּרִית֛/וֹ (tevir, rank=3)
+    │   └── PHRASE (3-ary 3w) אֲשֶׁר נִשְׁבַּ֥ע לַ/אֲבֹתֶ֖י/ךָ
+    │       ├── [15] אֲשֶׁר (no cantillation mark — bind as conjunctive, rank=9)
+    │       ├── [16] נִשְׁבַּ֥ע (mercha (conjunctive), rank=9)
+    │       └── [17] לַ/אֲבֹתֶ֖י/ךָ (tifcha, rank=2)
+    └── PHRASE (binary 2w) כַּ/יּ֥וֹם הַ/זֶּֽה
+        ├── [18] כַּ/יּ֥וֹם (mercha (conjunctive), rank=9)
+        └── [19] הַ/זֶּֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.19 · parser unique · 20 words</h3>
+<div class="meta"><span class="he">והיה אם שכח תשכח את יהוה אלהיך והלכת אחרי אלהים אחרים ועבדתם והשתחוית להם העדתי בכם היום כי אבד תאבדון</span> · <i>vhyh &#x27;m shkch tshkch &#x27;t yhvh &#x27;lhyk vhlkt &#x27;chry &#x27;lhym &#x27;chrym v&#x27;bdtm vhshtchvyt lhm h&#x27;dty bkm hyvm ky &#x27;bd t&#x27;bdvn</i> · Free gloss — structure from Hebrew tree. 8:19.</div>
+<pre>PHRASE (binary 20w) וְ/הָיָ֗ה אִם שָׁכֹ֤חַ תִּשְׁכַּח֙ אֶת יְהוָ֣ה …
+├── PHRASE (binary 14w) וְ/הָיָ֗ה אִם שָׁכֹ֤חַ תִּשְׁכַּח֙ אֶת יְהוָ֣ה …
+│   ├── PHRASE (binary 7w) וְ/הָיָ֗ה אִם שָׁכֹ֤חַ תִּשְׁכַּח֙ אֶת יְהוָ֣ה …
+│   │   ├── [0] וְ/הָיָ֗ה (revia, rank=3)
+│   │   └── PHRASE (binary 6w) אִם שָׁכֹ֤חַ תִּשְׁכַּח֙ אֶת יְהוָ֣ה אֱלֹהֶ֔י/ךָ
+│   │       ├── PHRASE (3-ary 3w) אִם שָׁכֹ֤חַ תִּשְׁכַּח֙
+│   │       │   ├── [1] אִם (no cantillation mark — bind as conjunctive, rank=9)
+│   │       │   ├── [2] שָׁכֹ֤חַ (mahpach (conjunctive), rank=9)
+│   │       │   └── [3] תִּשְׁכַּח֙ (pashta, rank=3)
+│   │       └── PHRASE (3-ary 3w) אֶת יְהוָ֣ה אֱלֹהֶ֔י/ךָ
+│   │           ├── [4] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+│   │           ├── [5] יְהוָ֣ה (munach (conjunctive), rank=9)
+│   │           └── [6] אֱלֹהֶ֔י/ךָ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 7w) וְ/הָֽלַכְתָּ֗ אַחֲרֵי֙ אֱלֹהִ֣ים אֲחֵרִ֔ים וַ/…
+│       ├── PHRASE (binary 4w) וְ/הָֽלַכְתָּ֗ אַחֲרֵי֙ אֱלֹהִ֣ים אֲחֵרִ֔ים
+│       │   ├── [7] וְ/הָֽלַכְתָּ֗ (revia, rank=3)
+│       │   └── PHRASE (binary 3w) אַחֲרֵי֙ אֱלֹהִ֣ים אֲחֵרִ֔ים
+│       │       ├── [8] אַחֲרֵי֙ (pashta, rank=3)
+│       │       └── PHRASE (binary 2w) אֱלֹהִ֣ים אֲחֵרִ֔ים
+│       │           ├── [9] אֱלֹהִ֣ים (munach (conjunctive), rank=9)
+│       │           └── [10] אֲחֵרִ֔ים (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) וַ/עֲבַדְתָּ֖/ם וְ/הִשְׁתַּחֲוִ֣יתָ לָ/הֶ֑ם
+│           ├── [11] וַ/עֲבַדְתָּ֖/ם (tifcha, rank=2)
+│           └── PHRASE (binary 2w) וְ/הִשְׁתַּחֲוִ֣יתָ לָ/הֶ֑ם
+│               ├── [12] וְ/הִשְׁתַּחֲוִ֣יתָ (munach (conjunctive), rank=9)
+│               └── [13] לָ/הֶ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) הַעִדֹ֤תִי בָ/כֶם֙ הַ/יּ֔וֹם כִּ֥י אָבֹ֖ד תֹּאב…
+    ├── PHRASE (binary 3w) הַעִדֹ֤תִי בָ/כֶם֙ הַ/יּ֔וֹם
+    │   ├── PHRASE (binary 2w) הַעִדֹ֤תִי בָ/כֶם֙
+    │   │   ├── [14] הַעִדֹ֤תִי (mahpach (conjunctive), rank=9)
+    │   │   └── [15] בָ/כֶם֙ (pashta, rank=3)
+    │   └── [16] הַ/יּ֔וֹם (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) כִּ֥י אָבֹ֖ד תֹּאבֵדֽוּ/ן
+        ├── PHRASE (binary 2w) כִּ֥י אָבֹ֖ד
+        │   ├── [17] כִּ֥י (mercha (conjunctive), rank=9)
+        │   └── [18] אָבֹ֖ד (tifcha, rank=2)
+        └── [19] תֹּאבֵדֽוּ/ן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Deut.8.20 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">כגוים אשר יהוה מאביד מפניכם כן תאבדון עקב לא תשמעון בקול יהוה אלהיכם</span> · <i>kgvym &#x27;shr yhvh m&#x27;byd mpnykm kn t&#x27;bdvn &#x27;qb l&#x27; tshm&#x27;vn bqvl yhvh &#x27;lhykm</i> · Free gloss — structure from Hebrew tree. 8:20.</div>
+<pre>PHRASE (binary 13w) כַּ/גּוֹיִ֗ם אֲשֶׁ֤ר יְהוָה֙ מַאֲבִ֣יד מִ/פְּנֵ…
+├── PHRASE (binary 7w) כַּ/גּוֹיִ֗ם אֲשֶׁ֤ר יְהוָה֙ מַאֲבִ֣יד מִ/פְּנֵ…
+│   ├── PHRASE (binary 5w) כַּ/גּוֹיִ֗ם אֲשֶׁ֤ר יְהוָה֙ מַאֲבִ֣יד מִ/פְּנֵ…
+│   │   ├── [0] כַּ/גּוֹיִ֗ם (revia, rank=3)
+│   │   └── PHRASE (binary 4w) אֲשֶׁ֤ר יְהוָה֙ מַאֲבִ֣יד מִ/פְּנֵי/כֶ֔ם
+│   │       ├── PHRASE (binary 2w) אֲשֶׁ֤ר יְהוָה֙
+│   │       │   ├── [1] אֲשֶׁ֤ר (mahpach (conjunctive), rank=9)
+│   │       │   └── [2] יְהוָה֙ (pashta, rank=3)
+│   │       └── PHRASE (binary 2w) מַאֲבִ֣יד מִ/פְּנֵי/כֶ֔ם
+│   │           ├── [3] מַאֲבִ֣יד (munach (conjunctive), rank=9)
+│   │           └── [4] מִ/פְּנֵי/כֶ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) כֵּ֖ן תֹאבֵד֑וּ/ן
+│       ├── [5] כֵּ֖ן (tifcha, rank=2)
+│       └── [6] תֹאבֵד֑וּ/ן (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) עֵ֚קֶב לֹ֣א תִשְׁמְע֔וּ/ן בְּ/ק֖וֹל יְהוָ֥ה אֱל…
+    ├── PHRASE (binary 3w) עֵ֚קֶב לֹ֣א תִשְׁמְע֔וּ/ן
+    │   ├── [7] עֵ֚קֶב (yetiv, rank=3)
+    │   └── PHRASE (binary 2w) לֹ֣א תִשְׁמְע֔וּ/ן
+    │       ├── [8] לֹ֣א (munach (conjunctive), rank=9)
+    │       └── [9] תִשְׁמְע֔וּ/ן (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) בְּ/ק֖וֹל יְהוָ֥ה אֱלֹהֵי/כֶֽם
+        ├── [10] בְּ/ק֖וֹל (tifcha, rank=2)
+        └── PHRASE (binary 2w) יְהוָ֥ה אֱלֹהֵי/כֶֽם
+            ├── [11] יְהוָ֥ה (mercha (conjunctive), rank=9)
+            └── [12] אֱלֹהֵי/כֶֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 294/294 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Deut.8.1</td><td>0</td><td class='he-cell'>כל</td><td>kl</td><td>leaf 0 (כל)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>1</td><td class='he-cell'>המצוה</td><td>hmtzvh</td><td>leaf 1 (המצוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>2</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 2 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>3</td><td class='he-cell'>אנכי</td><td>&#x27;nky</td><td>leaf 3 (אנכי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>4</td><td class='he-cell'>מצוך</td><td>mtzvk</td><td>leaf 4 (מצוך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>5</td><td class='he-cell'>היום</td><td>hyvm</td><td>leaf 5 (היום)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>6</td><td class='he-cell'>תשמרון</td><td>tshmrvn</td><td>leaf 6 (תשמרון)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>7</td><td class='he-cell'>לעשות</td><td>l&#x27;shvt</td><td>leaf 7 (לעשות)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>8</td><td class='he-cell'>למען</td><td>lm&#x27;n</td><td>leaf 8 (למען)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>9</td><td class='he-cell'>תחיון</td><td>tchyvn</td><td>leaf 9 (תחיון)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>10</td><td class='he-cell'>ורביתם</td><td>vrbytm</td><td>leaf 10 (ורביתם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>11</td><td class='he-cell'>ובאתם</td><td>vb&#x27;tm</td><td>leaf 11 (ובאתם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>12</td><td class='he-cell'>וירשתם</td><td>vyrshtm</td><td>leaf 12 (וירשתם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>13</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 13 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>14</td><td class='he-cell'>הארץ</td><td>h&#x27;rtz</td><td>leaf 14 (הארץ)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>15</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 15 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>16</td><td class='he-cell'>נשבע</td><td>nshb&#x27;</td><td>leaf 16 (נשבע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>17</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 17 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.1</td><td>18</td><td class='he-cell'>לאבתיכם</td><td>l&#x27;btykm</td><td>leaf 18 (לאבתיכם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>0</td><td class='he-cell'>וזכרת</td><td>vzkrt</td><td>leaf 0 (וזכרת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>1</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 1 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>2</td><td class='he-cell'>כל</td><td>kl</td><td>leaf 2 (כל)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>3</td><td class='he-cell'>הדרך</td><td>hdrk</td><td>leaf 3 (הדרך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>4</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 4 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>5</td><td class='he-cell'>הליכך</td><td>hlykk</td><td>leaf 5 (הליכך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>6</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 6 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>7</td><td class='he-cell'>אלהיך</td><td>&#x27;lhyk</td><td>leaf 7 (אלהיך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>8</td><td class='he-cell'>זה</td><td>zh</td><td>leaf 8 (זה)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>9</td><td class='he-cell'>ארבעים</td><td>&#x27;rb&#x27;ym</td><td>leaf 9 (ארבעים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>10</td><td class='he-cell'>שנה</td><td>shnh</td><td>leaf 10 (שנה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>11</td><td class='he-cell'>במדבר</td><td>bmdbr</td><td>leaf 11 (במדבר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>12</td><td class='he-cell'>למען</td><td>lm&#x27;n</td><td>leaf 12 (למען)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>13</td><td class='he-cell'>ענתך</td><td>&#x27;ntk</td><td>leaf 13 (ענתך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>14</td><td class='he-cell'>לנסתך</td><td>lnstk</td><td>leaf 14 (לנסתך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>15</td><td class='he-cell'>לדעת</td><td>ld&#x27;t</td><td>leaf 15 (לדעת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>16</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 16 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>17</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 17 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>18</td><td class='he-cell'>בלבבך</td><td>blbbk</td><td>leaf 18 (בלבבך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>19</td><td class='he-cell'>התשמר</td><td>htshmr</td><td>leaf 19 (התשמר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>20</td><td class='he-cell'>מצותו</td><td>mtzvtv</td><td>leaf 20 (מצותו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>21</td><td class='he-cell'>מצותיו</td><td>mtzvtyv</td><td>leaf 21 (מצותיו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>22</td><td class='he-cell'>אם</td><td>&#x27;m</td><td>leaf 22 (אם)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.2</td><td>23</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 23 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>0</td><td class='he-cell'>ויענך</td><td>vy&#x27;nk</td><td>leaf 0 (ויענך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>1</td><td class='he-cell'>וירעבך</td><td>vyr&#x27;bk</td><td>leaf 1 (וירעבך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>2</td><td class='he-cell'>ויאכלך</td><td>vy&#x27;klk</td><td>leaf 2 (ויאכלך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>3</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 3 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>4</td><td class='he-cell'>המן</td><td>hmn</td><td>leaf 4 (המן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>5</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 5 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>6</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 6 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>7</td><td class='he-cell'>ידעת</td><td>yd&#x27;t</td><td>leaf 7 (ידעת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>8</td><td class='he-cell'>ולא</td><td>vl&#x27;</td><td>leaf 8 (ולא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>9</td><td class='he-cell'>ידעון</td><td>yd&#x27;vn</td><td>leaf 9 (ידעון)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>10</td><td class='he-cell'>אבתיך</td><td>&#x27;btyk</td><td>leaf 10 (אבתיך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>11</td><td class='he-cell'>למען</td><td>lm&#x27;n</td><td>leaf 11 (למען)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>12</td><td class='he-cell'>הודעך</td><td>hvd&#x27;k</td><td>leaf 12 (הודעך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>13</td><td class='he-cell'>כי</td><td>ky</td><td>leaf 13 (כי)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>14</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 14 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>15</td><td class='he-cell'>על</td><td>&#x27;l</td><td>leaf 15 (על)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>16</td><td class='he-cell'>הלחם</td><td>hlchm</td><td>leaf 16 (הלחם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>17</td><td class='he-cell'>לבדו</td><td>lbdv</td><td>leaf 17 (לבדו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>18</td><td class='he-cell'>יחיה</td><td>ychyh</td><td>leaf 18 (יחיה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>19</td><td class='he-cell'>האדם</td><td>h&#x27;dm</td><td>leaf 19 (האדם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>20</td><td class='he-cell'>כי</td><td>ky</td><td>leaf 20 (כי)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>21</td><td class='he-cell'>על</td><td>&#x27;l</td><td>leaf 21 (על)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>22</td><td class='he-cell'>כל</td><td>kl</td><td>leaf 22 (כל)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>23</td><td class='he-cell'>מוצא</td><td>mvtz&#x27;</td><td>leaf 23 (מוצא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>24</td><td class='he-cell'>פי</td><td>py</td><td>leaf 24 (פי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>25</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 25 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>26</td><td class='he-cell'>יחיה</td><td>ychyh</td><td>leaf 26 (יחיה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.3</td><td>27</td><td class='he-cell'>האדם</td><td>h&#x27;dm</td><td>leaf 27 (האדם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.4</td><td>0</td><td class='he-cell'>שמלתך</td><td>shmltk</td><td>leaf 0 (שמלתך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.4</td><td>1</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 1 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.4</td><td>2</td><td class='he-cell'>בלתה</td><td>blth</td><td>leaf 2 (בלתה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.4</td><td>3</td><td class='he-cell'>מעליך</td><td>m&#x27;lyk</td><td>leaf 3 (מעליך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.4</td><td>4</td><td class='he-cell'>ורגלך</td><td>vrglk</td><td>leaf 4 (ורגלך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.4</td><td>5</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 5 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.4</td><td>6</td><td class='he-cell'>בצקה</td><td>btzqh</td><td>leaf 6 (בצקה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.4</td><td>7</td><td class='he-cell'>זה</td><td>zh</td><td>leaf 7 (זה)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.4</td><td>8</td><td class='he-cell'>ארבעים</td><td>&#x27;rb&#x27;ym</td><td>leaf 8 (ארבעים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.4</td><td>9</td><td class='he-cell'>שנה</td><td>shnh</td><td>leaf 9 (שנה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.5</td><td>0</td><td class='he-cell'>וידעת</td><td>vyd&#x27;t</td><td>leaf 0 (וידעת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.5</td><td>1</td><td class='he-cell'>עם</td><td>&#x27;m</td><td>leaf 1 (עם)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.5</td><td>2</td><td class='he-cell'>לבבך</td><td>lbbk</td><td>leaf 2 (לבבך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.5</td><td>3</td><td class='he-cell'>כי</td><td>ky</td><td>leaf 3 (כי)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.5</td><td>4</td><td class='he-cell'>כאשר</td><td>k&#x27;shr</td><td>leaf 4 (כאשר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.5</td><td>5</td><td class='he-cell'>ייסר</td><td>yysr</td><td>leaf 5 (ייסר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.5</td><td>6</td><td class='he-cell'>איש</td><td>&#x27;ysh</td><td>leaf 6 (איש)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.5</td><td>7</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 7 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.5</td><td>8</td><td class='he-cell'>בנו</td><td>bnv</td><td>leaf 8 (בנו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.5</td><td>9</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 9 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.5</td><td>10</td><td class='he-cell'>אלהיך</td><td>&#x27;lhyk</td><td>leaf 10 (אלהיך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.5</td><td>11</td><td class='he-cell'>מיסרך</td><td>mysrk</td><td>leaf 11 (מיסרך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.6</td><td>0</td><td class='he-cell'>ושמרת</td><td>vshmrt</td><td>leaf 0 (ושמרת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.6</td><td>1</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 1 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.6</td><td>2</td><td class='he-cell'>מצות</td><td>mtzvt</td><td>leaf 2 (מצות)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.6</td><td>3</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 3 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.6</td><td>4</td><td class='he-cell'>אלהיך</td><td>&#x27;lhyk</td><td>leaf 4 (אלהיך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.6</td><td>5</td><td class='he-cell'>ללכת</td><td>llkt</td><td>leaf 5 (ללכת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.6</td><td>6</td><td class='he-cell'>בדרכיו</td><td>bdrkyv</td><td>leaf 6 (בדרכיו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.6</td><td>7</td><td class='he-cell'>וליראה</td><td>vlyr&#x27;h</td><td>leaf 7 (וליראה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.6</td><td>8</td><td class='he-cell'>אתו</td><td>&#x27;tv</td><td>leaf 8 (אתו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.7</td><td>0</td><td class='he-cell'>כי</td><td>ky</td><td>leaf 0 (כי)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.7</td><td>1</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 1 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.7</td><td>2</td><td class='he-cell'>אלהיך</td><td>&#x27;lhyk</td><td>leaf 2 (אלהיך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.7</td><td>3</td><td class='he-cell'>מביאך</td><td>mby&#x27;k</td><td>leaf 3 (מביאך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.7</td><td>4</td><td class='he-cell'>אל</td><td>&#x27;l</td><td>leaf 4 (אל)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.7</td><td>5</td><td class='he-cell'>ארץ</td><td>&#x27;rtz</td><td>leaf 5 (ארץ)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.7</td><td>6</td><td class='he-cell'>טובה</td><td>tvbh</td><td>leaf 6 (טובה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.7</td><td>7</td><td class='he-cell'>ארץ</td><td>&#x27;rtz</td><td>leaf 7 (ארץ)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.7</td><td>8</td><td class='he-cell'>נחלי</td><td>nchly</td><td>leaf 8 (נחלי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.7</td><td>9</td><td class='he-cell'>מים</td><td>mym</td><td>leaf 9 (מים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.7</td><td>10</td><td class='he-cell'>עינת</td><td>&#x27;ynt</td><td>leaf 10 (עינת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.7</td><td>11</td><td class='he-cell'>ותהמת</td><td>vthmt</td><td>leaf 11 (ותהמת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.7</td><td>12</td><td class='he-cell'>יצאים</td><td>ytz&#x27;ym</td><td>leaf 12 (יצאים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.7</td><td>13</td><td class='he-cell'>בבקעה</td><td>bbq&#x27;h</td><td>leaf 13 (בבקעה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.7</td><td>14</td><td class='he-cell'>ובהר</td><td>vbhr</td><td>leaf 14 (ובהר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.8</td><td>0</td><td class='he-cell'>ארץ</td><td>&#x27;rtz</td><td>leaf 0 (ארץ)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.8</td><td>1</td><td class='he-cell'>חטה</td><td>chth</td><td>leaf 1 (חטה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.8</td><td>2</td><td class='he-cell'>ושערה</td><td>vsh&#x27;rh</td><td>leaf 2 (ושערה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.8</td><td>3</td><td class='he-cell'>וגפן</td><td>vgpn</td><td>leaf 3 (וגפן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.8</td><td>4</td><td class='he-cell'>ותאנה</td><td>vt&#x27;nh</td><td>leaf 4 (ותאנה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.8</td><td>5</td><td class='he-cell'>ורמון</td><td>vrmvn</td><td>leaf 5 (ורמון)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.8</td><td>6</td><td class='he-cell'>ארץ</td><td>&#x27;rtz</td><td>leaf 6 (ארץ)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.8</td><td>7</td><td class='he-cell'>זית</td><td>zyt</td><td>leaf 7 (זית)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.8</td><td>8</td><td class='he-cell'>שמן</td><td>shmn</td><td>leaf 8 (שמן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.8</td><td>9</td><td class='he-cell'>ודבש</td><td>vdbsh</td><td>leaf 9 (ודבש)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>0</td><td class='he-cell'>ארץ</td><td>&#x27;rtz</td><td>leaf 0 (ארץ)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>1</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 1 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>2</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 2 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>3</td><td class='he-cell'>במסכנת</td><td>bmsknt</td><td>leaf 3 (במסכנת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>4</td><td class='he-cell'>תאכל</td><td>t&#x27;kl</td><td>leaf 4 (תאכל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>5</td><td class='he-cell'>בה</td><td>bh</td><td>leaf 5 (בה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>6</td><td class='he-cell'>לחם</td><td>lchm</td><td>leaf 6 (לחם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>7</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 7 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>8</td><td class='he-cell'>תחסר</td><td>tchsr</td><td>leaf 8 (תחסר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>9</td><td class='he-cell'>כל</td><td>kl</td><td>leaf 9 (כל)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>10</td><td class='he-cell'>בה</td><td>bh</td><td>leaf 10 (בה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>11</td><td class='he-cell'>ארץ</td><td>&#x27;rtz</td><td>leaf 11 (ארץ)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>12</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 12 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>13</td><td class='he-cell'>אבניה</td><td>&#x27;bnyh</td><td>leaf 13 (אבניה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>14</td><td class='he-cell'>ברזל</td><td>brzl</td><td>leaf 14 (ברזל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>15</td><td class='he-cell'>ומהרריה</td><td>vmhrryh</td><td>leaf 15 (ומהרריה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>16</td><td class='he-cell'>תחצב</td><td>tchtzb</td><td>leaf 16 (תחצב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.9</td><td>17</td><td class='he-cell'>נחשת</td><td>nchsht</td><td>leaf 17 (נחשת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.10</td><td>0</td><td class='he-cell'>ואכלת</td><td>v&#x27;klt</td><td>leaf 0 (ואכלת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.10</td><td>1</td><td class='he-cell'>ושבעת</td><td>vshb&#x27;t</td><td>leaf 1 (ושבעת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.10</td><td>2</td><td class='he-cell'>וברכת</td><td>vbrkt</td><td>leaf 2 (וברכת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.10</td><td>3</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 3 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.10</td><td>4</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 4 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.10</td><td>5</td><td class='he-cell'>אלהיך</td><td>&#x27;lhyk</td><td>leaf 5 (אלהיך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.10</td><td>6</td><td class='he-cell'>על</td><td>&#x27;l</td><td>leaf 6 (על)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.10</td><td>7</td><td class='he-cell'>הארץ</td><td>h&#x27;rtz</td><td>leaf 7 (הארץ)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.10</td><td>8</td><td class='he-cell'>הטבה</td><td>htbh</td><td>leaf 8 (הטבה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.10</td><td>9</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 9 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.10</td><td>10</td><td class='he-cell'>נתן</td><td>ntn</td><td>leaf 10 (נתן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.10</td><td>11</td><td class='he-cell'>לך</td><td>lk</td><td>leaf 11 (לך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.11</td><td>0</td><td class='he-cell'>השמר</td><td>hshmr</td><td>leaf 0 (השמר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.11</td><td>1</td><td class='he-cell'>לך</td><td>lk</td><td>leaf 1 (לך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.11</td><td>2</td><td class='he-cell'>פן</td><td>pn</td><td>leaf 2 (פן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.11</td><td>3</td><td class='he-cell'>תשכח</td><td>tshkch</td><td>leaf 3 (תשכח)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.11</td><td>4</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 4 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.11</td><td>5</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 5 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.11</td><td>6</td><td class='he-cell'>אלהיך</td><td>&#x27;lhyk</td><td>leaf 6 (אלהיך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.11</td><td>7</td><td class='he-cell'>לבלתי</td><td>lblty</td><td>leaf 7 (לבלתי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.11</td><td>8</td><td class='he-cell'>שמר</td><td>shmr</td><td>leaf 8 (שמר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.11</td><td>9</td><td class='he-cell'>מצותיו</td><td>mtzvtyv</td><td>leaf 9 (מצותיו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.11</td><td>10</td><td class='he-cell'>ומשפטיו</td><td>vmshptyv</td><td>leaf 10 (ומשפטיו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.11</td><td>11</td><td class='he-cell'>וחקתיו</td><td>vchqtyv</td><td>leaf 11 (וחקתיו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.11</td><td>12</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 12 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.11</td><td>13</td><td class='he-cell'>אנכי</td><td>&#x27;nky</td><td>leaf 13 (אנכי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.11</td><td>14</td><td class='he-cell'>מצוך</td><td>mtzvk</td><td>leaf 14 (מצוך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.11</td><td>15</td><td class='he-cell'>היום</td><td>hyvm</td><td>leaf 15 (היום)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.12</td><td>0</td><td class='he-cell'>פן</td><td>pn</td><td>leaf 0 (פן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.12</td><td>1</td><td class='he-cell'>תאכל</td><td>t&#x27;kl</td><td>leaf 1 (תאכל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.12</td><td>2</td><td class='he-cell'>ושבעת</td><td>vshb&#x27;t</td><td>leaf 2 (ושבעת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.12</td><td>3</td><td class='he-cell'>ובתים</td><td>vbtym</td><td>leaf 3 (ובתים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.12</td><td>4</td><td class='he-cell'>טובים</td><td>tvbym</td><td>leaf 4 (טובים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.12</td><td>5</td><td class='he-cell'>תבנה</td><td>tbnh</td><td>leaf 5 (תבנה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.12</td><td>6</td><td class='he-cell'>וישבת</td><td>vyshbt</td><td>leaf 6 (וישבת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.13</td><td>0</td><td class='he-cell'>ובקרך</td><td>vbqrk</td><td>leaf 0 (ובקרך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.13</td><td>1</td><td class='he-cell'>וצאנך</td><td>vtz&#x27;nk</td><td>leaf 1 (וצאנך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.13</td><td>2</td><td class='he-cell'>ירבין</td><td>yrbyn</td><td>leaf 2 (ירבין)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.13</td><td>3</td><td class='he-cell'>וכסף</td><td>vksp</td><td>leaf 3 (וכסף)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.13</td><td>4</td><td class='he-cell'>וזהב</td><td>vzhb</td><td>leaf 4 (וזהב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.13</td><td>5</td><td class='he-cell'>ירבה</td><td>yrbh</td><td>leaf 5 (ירבה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.13</td><td>6</td><td class='he-cell'>לך</td><td>lk</td><td>leaf 6 (לך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.13</td><td>7</td><td class='he-cell'>וכל</td><td>vkl</td><td>leaf 7 (וכל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.13</td><td>8</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 8 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.13</td><td>9</td><td class='he-cell'>לך</td><td>lk</td><td>leaf 9 (לך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.13</td><td>10</td><td class='he-cell'>ירבה</td><td>yrbh</td><td>leaf 10 (ירבה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.14</td><td>0</td><td class='he-cell'>ורם</td><td>vrm</td><td>leaf 0 (ורם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.14</td><td>1</td><td class='he-cell'>לבבך</td><td>lbbk</td><td>leaf 1 (לבבך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.14</td><td>2</td><td class='he-cell'>ושכחת</td><td>vshkcht</td><td>leaf 2 (ושכחת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.14</td><td>3</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 3 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.14</td><td>4</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 4 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.14</td><td>5</td><td class='he-cell'>אלהיך</td><td>&#x27;lhyk</td><td>leaf 5 (אלהיך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.14</td><td>6</td><td class='he-cell'>המוציאך</td><td>hmvtzy&#x27;k</td><td>leaf 6 (המוציאך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.14</td><td>7</td><td class='he-cell'>מארץ</td><td>m&#x27;rtz</td><td>leaf 7 (מארץ)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.14</td><td>8</td><td class='he-cell'>מצרים</td><td>mtzrym</td><td>leaf 8 (מצרים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.14</td><td>9</td><td class='he-cell'>מבית</td><td>mbyt</td><td>leaf 9 (מבית)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.14</td><td>10</td><td class='he-cell'>עבדים</td><td>&#x27;bdym</td><td>leaf 10 (עבדים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.15</td><td>0</td><td class='he-cell'>המוליכך</td><td>hmvlykk</td><td>leaf 0 (המוליכך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.15</td><td>1</td><td class='he-cell'>במדבר</td><td>bmdbr</td><td>leaf 1 (במדבר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.15</td><td>2</td><td class='he-cell'>הגדל</td><td>hgdl</td><td>leaf 2 (הגדל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.15</td><td>3</td><td class='he-cell'>והנורא</td><td>vhnvr&#x27;</td><td>leaf 3 (והנורא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.15</td><td>4</td><td class='he-cell'>נחש</td><td>nchsh</td><td>leaf 4 (נחש)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.15</td><td>5</td><td class='he-cell'>שרף</td><td>shrp</td><td>leaf 5 (שרף)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.15</td><td>6</td><td class='he-cell'>ועקרב</td><td>v&#x27;qrb</td><td>leaf 6 (ועקרב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.15</td><td>7</td><td class='he-cell'>וצמאון</td><td>vtzm&#x27;vn</td><td>leaf 7 (וצמאון)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.15</td><td>8</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 8 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.15</td><td>9</td><td class='he-cell'>אין</td><td>&#x27;yn</td><td>leaf 9 (אין)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.15</td><td>10</td><td class='he-cell'>מים</td><td>mym</td><td>leaf 10 (מים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.15</td><td>11</td><td class='he-cell'>המוציא</td><td>hmvtzy&#x27;</td><td>leaf 11 (המוציא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.15</td><td>12</td><td class='he-cell'>לך</td><td>lk</td><td>leaf 12 (לך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.15</td><td>13</td><td class='he-cell'>מים</td><td>mym</td><td>leaf 13 (מים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.15</td><td>14</td><td class='he-cell'>מצור</td><td>mtzvr</td><td>leaf 14 (מצור)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.15</td><td>15</td><td class='he-cell'>החלמיש</td><td>hchlmysh</td><td>leaf 15 (החלמיש)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.16</td><td>0</td><td class='he-cell'>המאכלך</td><td>hm&#x27;klk</td><td>leaf 0 (המאכלך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.16</td><td>1</td><td class='he-cell'>מן</td><td>mn</td><td>leaf 1 (מן)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.16</td><td>2</td><td class='he-cell'>במדבר</td><td>bmdbr</td><td>leaf 2 (במדבר)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.16</td><td>3</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 3 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.16</td><td>4</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 4 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.16</td><td>5</td><td class='he-cell'>ידעון</td><td>yd&#x27;vn</td><td>leaf 5 (ידעון)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.16</td><td>6</td><td class='he-cell'>אבתיך</td><td>&#x27;btyk</td><td>leaf 6 (אבתיך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.16</td><td>7</td><td class='he-cell'>למען</td><td>lm&#x27;n</td><td>leaf 7 (למען)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.16</td><td>8</td><td class='he-cell'>ענתך</td><td>&#x27;ntk</td><td>leaf 8 (ענתך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.16</td><td>9</td><td class='he-cell'>ולמען</td><td>vlm&#x27;n</td><td>leaf 9 (ולמען)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.16</td><td>10</td><td class='he-cell'>נסתך</td><td>nstk</td><td>leaf 10 (נסתך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.16</td><td>11</td><td class='he-cell'>להיטבך</td><td>lhytbk</td><td>leaf 11 (להיטבך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.16</td><td>12</td><td class='he-cell'>באחריתך</td><td>b&#x27;chrytk</td><td>leaf 12 (באחריתך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.17</td><td>0</td><td class='he-cell'>ואמרת</td><td>v&#x27;mrt</td><td>leaf 0 (ואמרת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.17</td><td>1</td><td class='he-cell'>בלבבך</td><td>blbbk</td><td>leaf 1 (בלבבך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.17</td><td>2</td><td class='he-cell'>כחי</td><td>kchy</td><td>leaf 2 (כחי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.17</td><td>3</td><td class='he-cell'>ועצם</td><td>v&#x27;tzm</td><td>leaf 3 (ועצם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.17</td><td>4</td><td class='he-cell'>ידי</td><td>ydy</td><td>leaf 4 (ידי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.17</td><td>5</td><td class='he-cell'>עשה</td><td>&#x27;shh</td><td>leaf 5 (עשה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.17</td><td>6</td><td class='he-cell'>לי</td><td>ly</td><td>leaf 6 (לי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.17</td><td>7</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 7 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.17</td><td>8</td><td class='he-cell'>החיל</td><td>hchyl</td><td>leaf 8 (החיל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.17</td><td>9</td><td class='he-cell'>הזה</td><td>hzh</td><td>leaf 9 (הזה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>0</td><td class='he-cell'>וזכרת</td><td>vzkrt</td><td>leaf 0 (וזכרת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>1</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 1 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>2</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 2 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>3</td><td class='he-cell'>אלהיך</td><td>&#x27;lhyk</td><td>leaf 3 (אלהיך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>4</td><td class='he-cell'>כי</td><td>ky</td><td>leaf 4 (כי)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>5</td><td class='he-cell'>הוא</td><td>hv&#x27;</td><td>leaf 5 (הוא)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>6</td><td class='he-cell'>הנתן</td><td>hntn</td><td>leaf 6 (הנתן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>7</td><td class='he-cell'>לך</td><td>lk</td><td>leaf 7 (לך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>8</td><td class='he-cell'>כח</td><td>kch</td><td>leaf 8 (כח)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>9</td><td class='he-cell'>לעשות</td><td>l&#x27;shvt</td><td>leaf 9 (לעשות)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>10</td><td class='he-cell'>חיל</td><td>chyl</td><td>leaf 10 (חיל)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>11</td><td class='he-cell'>למען</td><td>lm&#x27;n</td><td>leaf 11 (למען)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>12</td><td class='he-cell'>הקים</td><td>hqym</td><td>leaf 12 (הקים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>13</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 13 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>14</td><td class='he-cell'>בריתו</td><td>brytv</td><td>leaf 14 (בריתו)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>15</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 15 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>16</td><td class='he-cell'>נשבע</td><td>nshb&#x27;</td><td>leaf 16 (נשבע)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>17</td><td class='he-cell'>לאבתיך</td><td>l&#x27;btyk</td><td>leaf 17 (לאבתיך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>18</td><td class='he-cell'>כיום</td><td>kyvm</td><td>leaf 18 (כיום)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.18</td><td>19</td><td class='he-cell'>הזה</td><td>hzh</td><td>leaf 19 (הזה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>0</td><td class='he-cell'>והיה</td><td>vhyh</td><td>leaf 0 (והיה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>1</td><td class='he-cell'>אם</td><td>&#x27;m</td><td>leaf 1 (אם)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>2</td><td class='he-cell'>שכח</td><td>shkch</td><td>leaf 2 (שכח)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>3</td><td class='he-cell'>תשכח</td><td>tshkch</td><td>leaf 3 (תשכח)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>4</td><td class='he-cell'>את</td><td>&#x27;t</td><td>leaf 4 (את)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>5</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 5 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>6</td><td class='he-cell'>אלהיך</td><td>&#x27;lhyk</td><td>leaf 6 (אלהיך)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>7</td><td class='he-cell'>והלכת</td><td>vhlkt</td><td>leaf 7 (והלכת)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>8</td><td class='he-cell'>אחרי</td><td>&#x27;chry</td><td>leaf 8 (אחרי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>9</td><td class='he-cell'>אלהים</td><td>&#x27;lhym</td><td>leaf 9 (אלהים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>10</td><td class='he-cell'>אחרים</td><td>&#x27;chrym</td><td>leaf 10 (אחרים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>11</td><td class='he-cell'>ועבדתם</td><td>v&#x27;bdtm</td><td>leaf 11 (ועבדתם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>12</td><td class='he-cell'>והשתחוית</td><td>vhshtchvyt</td><td>leaf 12 (והשתחוית)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>13</td><td class='he-cell'>להם</td><td>lhm</td><td>leaf 13 (להם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>14</td><td class='he-cell'>העדתי</td><td>h&#x27;dty</td><td>leaf 14 (העדתי)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>15</td><td class='he-cell'>בכם</td><td>bkm</td><td>leaf 15 (בכם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>16</td><td class='he-cell'>היום</td><td>hyvm</td><td>leaf 16 (היום)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>17</td><td class='he-cell'>כי</td><td>ky</td><td>leaf 17 (כי)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>18</td><td class='he-cell'>אבד</td><td>&#x27;bd</td><td>leaf 18 (אבד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.19</td><td>19</td><td class='he-cell'>תאבדון</td><td>t&#x27;bdvn</td><td>leaf 19 (תאבדון)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.20</td><td>0</td><td class='he-cell'>כגוים</td><td>kgvym</td><td>leaf 0 (כגוים)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.20</td><td>1</td><td class='he-cell'>אשר</td><td>&#x27;shr</td><td>leaf 1 (אשר)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.20</td><td>2</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 2 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.20</td><td>3</td><td class='he-cell'>מאביד</td><td>m&#x27;byd</td><td>leaf 3 (מאביד)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.20</td><td>4</td><td class='he-cell'>מפניכם</td><td>mpnykm</td><td>leaf 4 (מפניכם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.20</td><td>5</td><td class='he-cell'>כן</td><td>kn</td><td>leaf 5 (כן)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.20</td><td>6</td><td class='he-cell'>תאבדון</td><td>t&#x27;bdvn</td><td>leaf 6 (תאבדון)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.20</td><td>7</td><td class='he-cell'>עקב</td><td>&#x27;qb</td><td>leaf 7 (עקב)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.20</td><td>8</td><td class='he-cell'>לא</td><td>l&#x27;</td><td>leaf 8 (לא)</td><td>glue</td><td>glue</td><td class='cite'></td></tr>
+<tr><td>Deut.8.20</td><td>9</td><td class='he-cell'>תשמעון</td><td>tshm&#x27;vn</td><td>leaf 9 (תשמעון)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.20</td><td>10</td><td class='he-cell'>בקול</td><td>bqvl</td><td>leaf 10 (בקול)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.20</td><td>11</td><td class='he-cell'>יהוה</td><td>yhvh</td><td>leaf 11 (יהוה)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+<tr><td>Deut.8.20</td><td>12</td><td class='he-cell'>אלהיכם</td><td>&#x27;lhykm</td><td>leaf 12 (אלהיכם)</td><td>logic_bearing_leaf</td><td>logic_bearing</td><td class='cite'></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: deu_08_manna_humility — Remember wilderness; manna; do not forget (8:1–20) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Dt_8_1 — Deut 8:1
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Dt_8_2 — Deut 8:2
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Dt_8_3 — Deut 8:3
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Dt_8_4 — Deut 8:4
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Dt_8_5 — Deut 8:5
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Dt_8_6 — Deut 8:6
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S_last — after STEP_Dt_8_20 — Deut 8:20
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the canonical YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/deu_08_manna_humility.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# deu_08_manna_humility — 8:1-20
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/deu_08_manna_humility.yaml) is CANONICAL (Pre-Code);
+# this file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Remember wilderness; manna; do not forget (8:1–20)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;deu_08_manna_humility&quot;)
+
+# -------------------------- Deut.8.1 · ETNACHTA_SPLIT ----------------------
+# ‹כל המצוה אשר› (“all the-commandment which”)
+# ‹אנכי מצוך היום› (“I command-you/your the-day”)
+# ‹תשמרון לעשות … למען› (“keep to-make … so-that”)
+# ‹תחיון ורביתם ובאתם› (“you-may-live and-multiply and-come/bring”)
+# ‹וירשתם את הארץ› (“and-possess/inherit obj-marker the-earth”)
+# ‹אשר נשבע יהוה› (“which swear YHWH”)
+# ‹לאבתיכם› (“to-father-you/your(pl)”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:1.&quot;
+m.step(&quot;Deut.8.1&quot;)
+# witness-tier presupposed read:
+# all_the_commandment_that_you_may_live_and_possess_the_land on the_frame —
+# read, not installed
+m.witness_read(&quot;the_frame&quot;, &quot;all_the_commandment_that_you_may_live_and_possess_the_land&quot;,
+                cites=[&quot;Onkelos Deut 8:1&quot;])
+
+# -------------------------- Deut.8.2 · ETNACHTA_SPLIT ----------------------
+# ‹וזכרת את כל› (“and-remember obj-marker all”)
+# ‹הדרך אשר הליכך› (“the-way/road which led-you”)
+# ‹יהוה אלהיך זה› (“YHWH God-you/your this”)
+# ‹ארבעים שנה במדבר› (“forty years in-the-wilderness”)
+# ‹… למען ענתך לנסתך› (“so-that to-humble-you to-test-you/your”)
+# ‹לדעת את אשר› (“to-know obj-marker which”)
+# ‹בלבבך התשמר מצותו› (“in-heart-you/your will-you-keep his-commandments”)
+# ‹מצותיו אם לא› (“his-commandments if not”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:2.&quot;
+m.step(&quot;Deut.8.2&quot;)
+# witness-tier presupposed read:
+# the_humbling_the_manna_not_by_bread_alone_the_discipline_of_a_son on
+# the_way_of_forty_years — read, not installed
+m.witness_read(&quot;the_way_of_forty_years&quot;, &quot;the_humbling_the_manna_not_by_bread_alone_the_discipline_of_a_son&quot;,
+                cites=[&quot;Onkelos Deut 8:2&quot;, &quot;Onkelos Deut 8:3&quot;, &quot;Onkelos Deut 8:4&quot;, &quot;Onkelos Deut 8:5&quot;, &quot;Onkelos Deut 8:6&quot;, &quot;Sifrei Devarim 32:10&quot;, &quot;Sifrei Devarim 32:12&quot;, &quot;Sifrei Devarim 32:15&quot;, &quot;Sifrei Devarim 48:10&quot;])
+
+# -------------------------- Deut.8.3 · ETNACHTA_SPLIT ----------------------
+# ‹ויענך וירעבך ויאכלך› (“and-he-humbled-you and-let-you-hunger and-fed-
+# you”)
+# ‹את המן אשר› (“obj-marker the-manna which”)
+# ‹לא ידעת ולא› (“not know and-not”)
+# ‹ידעון אבתיך … למען› (“know father-you/your … so-that”)
+# ‹הודעך כי לא› (“know-you/your that not”)
+# ‹על הלחם לבדו› (“over the-food alone”)
+# ‹יחיה האדם כי› (“live the-human that”)
+# ‹על כל מוצא› (“over all what-proceeds-from”)
+# ‹פי יהו› (“mouth ?”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:3.&quot;
+m.step(&quot;Deut.8.3&quot;)
+
+# -------------------------- Deut.8.4 · ETNACHTA_SPLIT ----------------------
+# ‹שמלתך לא בלתה› (“your-garment not wore-out”)
+# ‹מעליך ורגלך לא› (“from-over-you/your and-foot-you/your not”)
+# ‹בצקה … זה ארבעים› (“swelled … this forty”)
+# ‹שנה› (“years”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:4.&quot;
+m.step(&quot;Deut.8.4&quot;)
+
+# -------------------------- Deut.8.5 · COND_כי (“that”) --------------------
+# ‹וידעת עם לבבך› (“and-know with heart-you/your”)
+# ‹… כי כאשר ייסר› (“that like-as/which chastise”)
+# ‹איש את בנו› (“man obj-marker son-him/its”)
+# ‹יהוה אלהיך מיסרך› (“YHWH God-you/your chastise-you/your”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:5.&quot;
+m.step(&quot;Deut.8.5&quot;)
+
+# -------------------------- Deut.8.6 · ETNACHTA_SPLIT ----------------------
+# ‹ושמרת את מצות› (“and-keep/guard obj-marker commandment”)
+# ‹יהוה אלהיך … ללכת› (“YHWH God-you/your … to-go”)
+# ‹בדרכיו וליראה אתו› (“in-way/road-him/its and-to-fear obj-marker-him/its”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:6.&quot;
+m.step(&quot;Deut.8.6&quot;)
+
+# -------------------------- Deut.8.7 · COND_כי (“that”) --------------------
+# ‹כי יהוה אלהיך› (“that YHWH God-you/your”)
+# ‹מביאך אל ארץ› (“is-bringing-you to earth”)
+# ‹טובה … ארץ נחלי› (“good … earth brooks-of”)
+# ‹מים עינת ותהמת› (“waters springs and-deeps”)
+# ‹יצאים בבקעה ובהר› (“flowing-out in-the-valley and-in-mountain”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:7.&quot;
+m.step(&quot;Deut.8.7&quot;)
+# witness-tier presupposed read:
+# brooks_and_deeps_the_seven_species_iron_and_copper_eat_be_satisfied_bless
+# on the_good_land — read, not installed
+m.witness_read(&quot;the_good_land&quot;, &quot;brooks_and_deeps_the_seven_species_iron_and_copper_eat_be_satisfied_bless&quot;,
+                cites=[&quot;Onkelos Deut 8:7&quot;, &quot;Onkelos Deut 8:8&quot;, &quot;Onkelos Deut 8:9&quot;, &quot;Onkelos Deut 8:10&quot;, &quot;Sifrei Devarim 19:2&quot;, &quot;Sifrei Devarim 37:5&quot;, &quot;Sifrei Devarim 39:4&quot;, &quot;Sifrei Devarim 39:6&quot;, &quot;Sifrei Devarim 39:8&quot;, &quot;Sifrei Devarim 40:10&quot;, &quot;Sifrei Devarim 297:4&quot;])
+
+# -------------------------- Deut.8.8 · ETNACHTA_SPLIT ----------------------
+# ‹ארץ חטה ושערה› (“earth wheat and-barley”)
+# ‹וגפן ותאנה ורמון› (“and-vine and-fig and-pomegranate”)
+# ‹… ארץ זית שמן› (“earth olive oil”)
+# ‹ודבש› (“and-honey”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:8.&quot;
+m.step(&quot;Deut.8.8&quot;)
+
+# -------------------------- Deut.8.9 · ETNACHTA_SPLIT ----------------------
+# ‹ארץ אשר לא› (“earth which not”)
+# ‹במסכנת תאכל בה› (“in-poverty eat in-her/its”)
+# ‹לחם לא תחסר› (“food not lack”)
+# ‹כל בה … ארץ› (“all in-her/its … earth”)
+# ‹אשר אבניה ברזל› (“which stone-her/its iron”)
+# ‹ומהרריה תחצב נחשת› (“and-from-mountain-her/its you-shall-hew copper”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:9.&quot;
+m.step(&quot;Deut.8.9&quot;)
+
+# -------------------------- Deut.8.10 · ETNACHTA_SPLIT ---------------------
+# ‹ואכלת ושבעת … וברכת› (“and-eat and-be-satisfied … and-bless”)
+# ‹את יהוה אלהיך› (“obj-marker YHWH God-you/your”)
+# ‹על הארץ הטבה› (“over the-earth the-good”)
+# ‹אשר נתן לך› (“which gave to-you/your”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:10.&quot;
+m.step(&quot;Deut.8.10&quot;)
+
+# -------------------------- Deut.8.11 · ETNACHTA_SPLIT ---------------------
+# ‹השמר לך פן› (“keep/guard to-you/your lest”)
+# ‹תשכח את יהוה› (“forget obj-marker YHWH”)
+# ‹אלהיך … לבלתי שמר› (“God-you/your … so-as-not keep/guard”)
+# ‹מצותיו ומשפטיו וחקתיו› (“his-commandments and-judgment-him/its and-
+# statute-him/its”)
+# ‹אשר אנכי מצוך› (“which I command-you/your”)
+# ‹היום› (“the-day”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:11.&quot;
+m.step(&quot;Deut.8.11&quot;)
+# witness-tier presupposed read:
+# the_houses_the_herds_the_silver_and_gold_the_heart_lifted_up on
+# take_heed_lest_you_forget — read, not installed
+m.witness_read(&quot;take_heed_lest_you_forget&quot;, &quot;the_houses_the_herds_the_silver_and_gold_the_heart_lifted_up&quot;,
+                cites=[&quot;Onkelos Deut 8:11&quot;, &quot;Onkelos Deut 8:12&quot;, &quot;Onkelos Deut 8:13&quot;, &quot;Onkelos Deut 8:14&quot;, &quot;Sifrei Devarim 43:7&quot;, &quot;Sifrei Devarim 318:1&quot;])
+
+# -------------------------- Deut.8.12 · ETNACHTA_SPLIT ---------------------
+# ‹פן תאכל ושבעת› (“lest eat and-be-satisfied”)
+# ‹… ובתים טובים תבנה› (“and-house good build”)
+# ‹וישבת› (“and-dwell/sit”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:12.&quot;
+m.step(&quot;Deut.8.12&quot;)
+
+# -------------------------- Deut.8.13 · ETNACHTA_SPLIT ---------------------
+# ‹ובקרך וצאנך ירבין› (“and-herd-you/your and-flock-you/your multiply”)
+# ‹וכסף וזהב ירבה› (“and-silver and-gold multiply”)
+# ‹לך … וכל אשר› (“to-you/your … and-all which”)
+# ‹לך ירבה› (“to-you/your multiply”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:13.&quot;
+m.step(&quot;Deut.8.13&quot;)
+
+# -------------------------- Deut.8.14 · ETNACHTA_SPLIT ---------------------
+# ‹ורם לבבך … ושכחת› (“and-be-lifted-up heart-you/your … and-forget”)
+# ‹את יהוה אלהיך› (“obj-marker YHWH God-you/your”)
+# ‹המוציאך מארץ מצרים› (“who-brought-you-out from-earth Egypt”)
+# ‹מבית עבדים› (“from-house bondage”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:14.&quot;
+m.step(&quot;Deut.8.14&quot;)
+
+# -------------------------- Deut.8.15 · ETNACHTA_SPLIT ---------------------
+# ‹המוליכך במדבר הגדל› (“who-led-you in-the-wilderness the-great”)
+# ‹והנורא נחש שרף› (“and-the-terrible snake fiery-serpent”)
+# ‹ועקרב וצמאון אשר› (“and-scorpion and-drought which”)
+# ‹אין מים … המוציא› (“there-is-not waters … who-brought-out”)
+# ‹לך מים מצור› (“to-you/your waters from-the-rock”)
+# ‹החלמיש› (“the-flint”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:15.&quot;
+m.step(&quot;Deut.8.15&quot;)
+# witness-tier presupposed read:
+# who_led_you_who_fed_you_my_power_and_my_hand_the_covenant_established on
+# the_chain_and_the_covenant — read, not installed
+m.witness_read(&quot;the_chain_and_the_covenant&quot;, &quot;who_led_you_who_fed_you_my_power_and_my_hand_the_covenant_established&quot;,
+                cites=[&quot;Onkelos Deut 8:15&quot;, &quot;Onkelos Deut 8:16&quot;, &quot;Onkelos Deut 8:17&quot;, &quot;Onkelos Deut 8:18&quot;, &quot;Sifrei Devarim 53:1&quot;, &quot;Sifrei Devarim 313:15&quot;])
+
+# -------------------------- Deut.8.16 · ETNACHTA_SPLIT ---------------------
+# ‹המאכלך מן במדבר› (“who-fed-you manna in-the-wilderness”)
+# ‹אשר לא ידעון› (“which not know”)
+# ‹אבתיך … למען ענתך› (“father-you/your … so-that to-humble-you”)
+# ‹ולמען נסתך להיטבך› (“and-so-that test-you/your to-do-you-good”)
+# ‹באחריתך› (“in-your-end”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:16.&quot;
+m.step(&quot;Deut.8.16&quot;)
+
+# -------------------------- Deut.8.17 · ETNACHTA_SPLIT ---------------------
+# ‹ואמרת בלבבך … כחי› (“and-say in-heart-you/your … my-power”)
+# ‹ועצם ידי עשה› (“and-the-might-of hand-me/my make”)
+# ‹לי את החיל› (“to-me/my obj-marker the-wealth”)
+# ‹הזה› (“the-this”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:17.&quot;
+m.step(&quot;Deut.8.17&quot;)
+
+# -------------------------- Deut.8.18 · ETNACHTA_SPLIT ---------------------
+# ‹וזכרת את יהוה› (“and-remember obj-marker YHWH”)
+# ‹אלהיך כי הוא› (“God-you/your that he/it”)
+# ‹הנתן לך כח› (“who-gives to-you/your power”)
+# ‹לעשות חיל … למען› (“to-make wealth … so-that”)
+# ‹הקים את בריתו› (“to-establish obj-marker covenant-him/its”)
+# ‹אשר נשבע לאבתיך› (“which swear to-father-you/your”)
+# ‹כיום הזה› (“like-day the-this”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:18.&quot;
+m.step(&quot;Deut.8.18&quot;)
+
+# -------------------------- Deut.8.19 · COND_אם (“if”) ---------------------
+# ‹והיה אם שכח› (“and-be if forget”)
+# ‹תשכח את יהוה› (“forget obj-marker YHWH”)
+# ‹אלהיך והלכת אחרי› (“God-you/your and-walk/go after”)
+# ‹אלהים אחרים ועבדתם› (“God other and-work/serve-them/their”)
+# ‹… העדתי בכם היום› (“testify in-you/your(pl) the-day”)
+# ‹כי אבד תאבדון› (“that perish you-shall-perish”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:19.&quot;
+m.step(&quot;Deut.8.19&quot;)
+# witness-tier presupposed read: if_you_forget_and_serve_other_gods_you_shal
+# l_surely_perish_like_the_nations on the_testimony — read, not installed
+m.witness_read(&quot;the_testimony&quot;, &quot;if_you_forget_and_serve_other_gods_you_shall_surely_perish_like_the_nations&quot;,
+                cites=[&quot;Onkelos Deut 8:19&quot;, &quot;Onkelos Deut 8:20&quot;, &quot;Sifrei Devarim 48:8&quot;])
+
+# -------------------------- Deut.8.20 · ETNACHTA_SPLIT ---------------------
+# ‹כגוים אשר יהוה› (“like-the-nations which YHWH”)
+# ‹מאביד מפניכם כן› (“makes-perish from-face-you/your(pl) so”)
+# ‹תאבדון … עקב לא› (“you-shall-perish … because not”)
+# ‹תשמעון בקול יהוה› (“hear in-voice/sound YHWH”)
+# ‹אלהיכם› (“God-you/your(pl)”)
+# &quot;[EN-AID] From top split: LEFT «…» / RIGHT «…». Derive claim from Hebrew
+# arms. Deut 8:20.&quot;
+m.step(&quot;Deut.8.20&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 0
+    assert [(w[&quot;entity&quot;], w[&quot;state&quot;]) for w in m.WITNESS_READS] == [(&#x27;the_frame&#x27;, &#x27;all_the_commandment_that_you_may_live_and_possess_the_land&#x27;), (&#x27;the_way_of_forty_years&#x27;, &#x27;the_humbling_the_manna_not_by_bread_alone_the_discipline_of_a_son&#x27;), (&#x27;the_good_land&#x27;, &#x27;brooks_and_deeps_the_seven_species_iron_and_copper_eat_be_satisfied_bless&#x27;), (&#x27;take_heed_lest_you_forget&#x27;, &#x27;the_houses_the_herds_the_silver_and_gold_the_heart_lifted_up&#x27;), (&#x27;the_chain_and_the_covenant&#x27;, &#x27;who_led_you_who_fed_you_my_power_and_my_hand_the_covenant_established&#x27;), (&#x27;the_testimony&#x27;, &#x27;if_you_forget_and_serve_other_gods_you_shall_surely_perish_like_the_nations&#x27;)]
+    assert m.WITNESS_READS[0][&quot;cites&quot;] == [&#x27;Onkelos Deut 8:1&#x27;]
+    assert all(&#x27;all_the_commandment_that_you_may_live_and_possess_the_land&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;the_frame&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[1][&quot;cites&quot;] == [&#x27;Onkelos Deut 8:2&#x27;, &#x27;Onkelos Deut 8:3&#x27;, &#x27;Onkelos Deut 8:4&#x27;, &#x27;Onkelos Deut 8:5&#x27;, &#x27;Onkelos Deut 8:6&#x27;, &#x27;Sifrei Devarim 32:10&#x27;, &#x27;Sifrei Devarim 32:12&#x27;, &#x27;Sifrei Devarim 32:15&#x27;, &#x27;Sifrei Devarim 48:10&#x27;]
+    assert all(&#x27;the_humbling_the_manna_not_by_bread_alone_the_discipline_of_a_son&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;the_way_of_forty_years&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[2][&quot;cites&quot;] == [&#x27;Onkelos Deut 8:7&#x27;, &#x27;Onkelos Deut 8:8&#x27;, &#x27;Onkelos Deut 8:9&#x27;, &#x27;Onkelos Deut 8:10&#x27;, &#x27;Sifrei Devarim 19:2&#x27;, &#x27;Sifrei Devarim 37:5&#x27;, &#x27;Sifrei Devarim 39:4&#x27;, &#x27;Sifrei Devarim 39:6&#x27;, &#x27;Sifrei Devarim 39:8&#x27;, &#x27;Sifrei Devarim 40:10&#x27;, &#x27;Sifrei Devarim 297:4&#x27;]
+    assert all(&#x27;brooks_and_deeps_the_seven_species_iron_and_copper_eat_be_satisfied_bless&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;the_good_land&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[3][&quot;cites&quot;] == [&#x27;Onkelos Deut 8:11&#x27;, &#x27;Onkelos Deut 8:12&#x27;, &#x27;Onkelos Deut 8:13&#x27;, &#x27;Onkelos Deut 8:14&#x27;, &#x27;Sifrei Devarim 43:7&#x27;, &#x27;Sifrei Devarim 318:1&#x27;]
+    assert all(&#x27;the_houses_the_herds_the_silver_and_gold_the_heart_lifted_up&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;take_heed_lest_you_forget&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[4][&quot;cites&quot;] == [&#x27;Onkelos Deut 8:15&#x27;, &#x27;Onkelos Deut 8:16&#x27;, &#x27;Onkelos Deut 8:17&#x27;, &#x27;Onkelos Deut 8:18&#x27;, &#x27;Sifrei Devarim 53:1&#x27;, &#x27;Sifrei Devarim 313:15&#x27;]
+    assert all(&#x27;who_led_you_who_fed_you_my_power_and_my_hand_the_covenant_established&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;the_chain_and_the_covenant&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    assert m.WITNESS_READS[5][&quot;cites&quot;] == [&#x27;Onkelos Deut 8:19&#x27;, &#x27;Onkelos Deut 8:20&#x27;, &#x27;Sifrei Devarim 48:8&#x27;]
+    assert all(&#x27;if_you_forget_and_serve_other_gods_you_shall_surely_perish_like_the_nations&#x27; not in f for f in m.WORLD[&quot;facts&quot;])
+    assert &#x27;the_testimony&#x27; not in m.WORLD[&quot;witnessed&quot;]
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre>
+<div class="note">Tree-derived v1 (phase C). One STEP per verse from top-split arms. Not binding religious law.</div><p class='meta'>Rendered 2026-09-18 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
