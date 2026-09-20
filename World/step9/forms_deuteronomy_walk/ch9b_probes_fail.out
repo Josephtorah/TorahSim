@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/Shared/TorahSim/World/step9/readback_probes.py", line 46, in <module>
+    W = RG.running_world()
+  File "/Users/Shared/TorahSim/World/step9/register_census.py", line 196, in running_world
+    w, M = CS.run_world(CS.PARAMS['sojourn_start']['value'], reg, 'register-gate')
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Shared/TorahSim/World/step9/cold_run_sequence.py", line 2519, in run_world
+    w.laws = daemons()
+             ~~~~~~~^^
+  File "/Users/Shared/TorahSim/World/step9/cold_run_sequence.py", line 154, in daemons
+    assert sorted(names) == sorted(declared), ('the daemon order and the dispositions disagree', sorted(set(names) ^ set(declared)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('the daemon order and the dispositions disagree', ['law_not_righteousness'])

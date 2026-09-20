@@ -1,0 +1,14 @@
+THE LOOP — STEP 4 THE CURSOR / STEP 5 SCENARIOS: the fire-probes (base /Users/Shared/TorahSim/World/journal/data/L3_run_cold_run_sequence_seed_isaac.jsonl)
+  PASS  K1 run_to stops before the verse; the replayed prefix is byte-identical to the base segment's prefix
+        fork 3221 lines; position (4, 26, 63) below Num 27:1: True; prefix identical: True
+  PASS  K2 the appended segment continues the base's chain at the fork and names the base and the fork
+        appended 2 lines; first chain c2825ffab2d86c8e (want c2825ffab2d86c8e); header fork 3221 start c2b6d911c24e16cf; verified gone
+  PASS  K3 a cursor beyond the tape's last line is the whole tape
+        fork 3573, base events 3573, log 3573
+  PASS  K4 two cursors at the same verse with the same submission produce byte-identical appended segments
+        two appended segments, 1301 bytes each, IDENTICAL
+  PASS  K5 the index admits the appended segment as its own source and the views gate counts it
+        sources ['cold_run_sequence/cursor@Num 27:1']; segments 2; views gate True; ['  cold_run_sequence/cursor@Num 27:1            ledger     1 = writes     1 | timers    0 = sets    0 (fired 0 = fires 0, cancelled 0 = cancels 0, pending 0) | clock    0 = markers    0 | docket 0 (open 0) | population 0 = rows 0 | closed 0 = closes 0 (foreign 0) | skips 0  MATCH']
+  PASS  K6 a scenario event is journaled with prov.unit scenario and its label; the base is untouched
+        event lines 1; prov.unit scenario; label "K6 — the probe's labeled hypothetical (Mishnah Sanhedrin 5:1: no warning, exempt)"; base unchanged True; the answer exempt
+6/6 probes

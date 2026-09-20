@@ -28,7 +28,7 @@ The Bible store the runners read (`Data/tanakh.sqlite`) is tracked and arrives w
 ## 3. The one database (derived, not tracked)
 
     python3 World/build_world.py           # folds the frozen units, builds World/journal/data/world.sqlite, reconciles — ALL GREEN
-    python3 World/step9/cold_run_sequence.py   # runs the tape: the four books on one world, 10/10 at the end (about two minutes)
+    python3 World/step9/cold_run_sequence.py   # runs the tape: the four books on one world, 10/10 at the end (about a minute; the first run harvests the import cache, about four)
 
 ## 4. Watch it
 

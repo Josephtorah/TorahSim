@@ -12,7 +12,10 @@
 # measured WHOLE by eight workers, each stepping the tape in its own folder and asking the block at its own pauses; (5) the sweep runs IN PARALLEL and
 # INCREMENTALLY against its stamp (the runners moved and their importers; a shared piece moved = full), the sequence runner skipped (the chain's
 # own first step); (6) the second journal gate is the UNMOVED check — the live rows' digest stamped before the sweep and compared after.
-# --full forces the full sweep (the positions table is always the whole measure).
+# (7) THE VERIFIED-IMPORT CACHE (ink_cache.py; D38): every load of the sixty-three runners restores their verified constants and runs only their
+# definitions — the checks run in full on a miss (a runner's source or the text it reads moved) and always in the sweep (INK_CACHE=0); the probe
+# suite ink_cache_probes.py loads the engine full and cached and compares them value by value.
+# --full forces the full sweep and the full loads (INK_CACHE=0 for every step; the positions table is always the whole measure).
 #
 #   sh World/step9/gates_chain.sh <out_dir> [--from STEP] [--skip STEP,STEP] [--full] [--list]
 #
@@ -35,7 +38,7 @@ STEPS="tape probes daemon dependency build journal register positions checkpoint
 if [ $LIST = 1 ]; then echo "$STEPS"; exit 0; fi
 mkdir -p "$OUT"; SUM="$OUT/SUMMARY.txt"; : > "$SUM"
 FAILED=0; STARTED=0; [ -z "$FROM" ] && STARTED=1
-PROBES="census installation readback register clock sequence view population journal cursor large_letter"
+PROBES="census installation readback register clock sequence view population journal cursor large_letter ink_cache"
 run_step() {   # name, command...
   name="$1"; shift
   if [ $STARTED = 0 ]; then [ "$name" = "$FROM" ] && STARTED=1 || { echo "SKIP $name (before --from)" >> "$SUM"; return 0; }; fi
@@ -61,7 +64,7 @@ run_probes() {   # THE GATES CUT: the suites in parallel, each to its own print;
   return $rc
 }
 POSARGS="--jobs 8"; SWEEPARGS="--changed --jobs 8 --skip cold_run_sequence.py"
-[ $FULL = 1 ] && SWEEPARGS="--jobs 8 --skip cold_run_sequence.py"
+[ $FULL = 1 ] && { SWEEPARGS="--jobs 8 --skip cold_run_sequence.py"; export INK_CACHE=0; }   # --full: the sweep whole AND every load with the runners' checks in full (ink_cache.py)
 run_step tape        python3 World/step9/cold_run_sequence.py
 run_step probes      run_probes
 run_step daemon      python3 World/step9/daemon_census.py

@@ -132,3 +132,71 @@ statically: CU's closure is 429 of the block's 630 statements, CC's 336 — the 
 the whole run. The form was struck the same day, with its regions, digests and guards; what remains is the parse-once cache (`_cp_block`) and
 the WHOLE measure by N workers (D36). THE LESSON: an incremental cut is only as good as the independence it assumes — measure the dependency
 before building the guard.
+
+## D38 — THE VERIFIED-IMPORT CACHE
+
+THE RECORDER RUNS WITH THE CACHE OFF (THE DEUTERONOMY WALK 7b, 2026-09-19 — read at the first stitch of chapter 9's tape): seq_record.py captures every runner's
+scene by instrumenting submit/advance/close and IMPORTING every cold_run_*.py — a module restored from the cache never runs its scene, so its submits never happen:
+the first recording held 118 records of 2,983 and the stitcher wrote a 241-line tape into the sequence file (rerun native, 1,682 lines). Every instrument that
+needs a scene to RUN (the recorder, the sweep, --full) runs under INK_CACHE=0; every instrument that reads a module's STATE (the probes, the callees' print, the
+runner's own asserts) may take the cache. The rule stands beside the sweep's and --full's in this section.
+
+THE NINETEENTH SLIP (THE DEUTERONOMY WALK 8b, 2026-09-20 — the cache's OWN ERROR REPORT): when a node raises on the cached path the cache reports which node
+by `ast.get_source_segment(src, node)` — and `src`, the module's source text, had been REBOUND TO A MODULE a few lines above in the restore loop (an alias's home
+module; a patch's source module), so the report itself crashed ('expected string or bytes-like object, got module') and masked the real error at the positions
+table's eight workers. The two rebindings renamed srcm (patch_ink_cache_src_ch10.py); the report and the slow-node record read the source text again; FORM
+unmoved. The positions table measured by FOUR workers (7b's way) — the eight-worker step has failed two sittings running (the watchdog at 7b, a cached-path raise
+here) and four is its standing form until the eight are measured. The slips are nineteen.
+
+THE EIGHTEENTH SLIP (the same sitting, found by C2 at the first chain): a runner that READS THE SEQUENCE FILE at import (`_SRC = open(HERE/cold_run_sequence.py)
+.read()` — the INK block exec'd the stitcher's way) was keyed on its own source and the shared files alone, so after the tape was re-stitched the cached path
+restored the OLD text of the sequence file (the parser block unchanged, the value not — C2 fell on `_SRC` in every such module, NOTHING set aside). THE KEY NOW
+CARRIES the sequence file's digest for every module whose source names it (patch_ink_cache_key_ch9.py; FORM unmoved): those modules re-harvest once per tape
+change, the others keep their blobs. The slips are eighteen. (2026-09-19, the same day; on the owner's "ok do it make it permanent")
+
+THE MEASUREMENT THAT RULED IT: after the cut, the chain's long steps were still the ones that LOAD the sixty-three runners — the tape 155 s, the
+probes 151 s, the journal gate 166 s, the checkpoint suite 205 s, each of the positions' eight workers a load — and a profile of the import
+(stmt_profile.py, importtime.txt; the forms) put the load at 135 s, ALL of it the runners' own self-checks at module level (the whole-text scans,
+the censuses, the asserts, the honest-pairing guards): good_land 14.3 s, joseph 9.0, hear_o_israel 8.8, obey_horeb 8.4, seven_nations 7.8 …
+twenty runners over 2 s each; the replay of the world itself 1.7 s. The owner asked "Do we really need to rebuild everything on every run?" and
+then, on the explanation of steps 8 and 9, ruled "ok do it make it permanent". THE LAW: a runner's checks run in full when its source or the
+text it reads has moved, and always in the sweep; every other loader restores what the checks verified.
+
+THE FORM — World/step9/ink_cache.py (its header the full statement; installed by world_engine.py, so every loader of the engine has it): a
+meta-path finder for the cold_run_* modules. A MISS (the runner's source digest or the SHARED KEY moved — the text store, the shelf's files,
+the snapshot store, the engine's modules, the registries — or no stamp) runs the module statement by statement and harvests, after EACH
+statement, every name it bound or may have mutated, every name a function of the module may mutate (a static scan of its defs), every small
+container, every container whose length moved, every object with attributes — each value that pickles into a content-addressed blob
+(World/journal/data/ink_cache/, gitignored), recorded on that statement when its content changed; the other runners whose functions ran inside
+the statement (a call tracer, one event per code object per statement) have their mutables re-examined and a change recorded as module::name;
+an object that IS another name's live object is recorded as an alias, an element of a value that is one as a nested alias with its path; the
+index is written only if nothing raised. A HIT walks the statements: one that only binds recorded names (an assignment, a loop, a with-block, a
+branch), an assert, a print, a method call on a recorded name is SKIPPED and its names bound from the cache at that point — a fresh object for a
+binding, IN PLACE for a name a call had mutated, the live object for an alias, the callee's container in place for a module::name entry, a name
+passed to a call and unchanged left as it stands; everything else runs as written — imports, defs, classes, calls into modules, an alias
+assignment, ANY BLOCK HOLDING AN IMPORT (the modules load in the full path's order), statements binding what does not pickle; the fixpoint
+un-skips a skipped statement binding a name some running statement reads without a recorded value. INK_CACHE=0 turns it off for a process.
+
+THE HONESTY GUARDS: (1) the sweep (run_cold_all.py) runs every runner with INK_CACHE=0 — the checks in full every time it grades; (2) the chain's
+--full sets INK_CACHE=0 for every step; (3) THE PROBE ink_cache_probes.py, in the chain's probes step, imports the whole engine twice in two fresh
+processes — full and cached — and asserts EIGHT things: C1 the same runners; C2 every picklable module value equal in canonical form, NOTHING SET
+ASIDE; C3 no name lost; C4 the daemons by module and name in order; C5 the registry map; C6 the same sharing groups (no alias gained or lost);
+C7 the cached load at least three times faster; C8 the engine's own modules (world_engine, effects_layer, events_layer, compile_guards,
+world_journal) hold the same state — no registration lost to a restored statement; (4) a stamp is written only by an import that raised
+nothing; (5) a cached-path statement that raises names the module, the line and the values it read, and says to run INK_CACHE=0.
+
+AS BUILT — MEASURED BY THE PROBE: the full load 169 s (two processes: the import and the sequence's own load), the harvest on a cold cache 211 s
+(the first load after a clear, or after a shared piece moved), the cached load 35 s; 7,542 statements restored and 2,386 run (the slowest run
+pre_sinai's with-block 1.7 s, incense_shekel's 1.1 s — the blocks holding imports); about 4,600 blobs, 41 MB. THE PROBE 8/8 on its last run; the
+tape 10/10 through the cache with the same print. THE SEVENTEEN SLIPS, each found by the probe or by the engine refusing on the cached path, and
+each a rule now: 1. comprehension variables read as bound names (KeyError 'kv' on the cached path) — the walker skips comprehension, lambda and def scopes. 2. a def's locals read as bound names (NameError 'n') — a def binds its own name only. 3. the module's FINAL state harvested for a name bound twice (mishpatim_3's `failed`) — the harvest is per statement, each name's value AS OF that statement. 4. one empty list shared by every runner (foreign trails in the zero-report exits) — a fresh object for every binding. 5. a mutation through an attribute or subscript chain missed (pre_sinai's TOK empty) — the base of the chain is the touched name. 6. two statements on one line collided by line number (balak's PLENE_KIN lost) — the index is by statement position. 7. a touched name that does not pickle (a connection) forced the statement to run — only recorded names are restore targets. 8. the probe's byte compare tripped by the hash seed's set order — a canonical form (sets and dicts sorted, objects by class and attributes). 9. the probe timed a cold harvest as the cached load — the warm load first, the hit timed. 10. the probe's pickle bytes memoize repeated objects and two processes intern strings differently (fifty-four scene worlds 'differed') — the hash over the canonical form's TEXT. 11. a name passed to a call and unchanged was restored fresh, breaking every alias (seventeen sharing groups lost: erection's VS_E29 is vestments' E29_ORDER) — recorded as KEPT, and an object that is another name's live object recorded as an ALIAS the cached path binds. 12. a length heuristic missed a same-length change (mishpatim's counter, a trail cleared and refilled) — the static scan of every name a function of the module may mutate, re-examined after every statement; every small container too. 13. a callee's trail mutated by the CALLER's statement (the residue of the last caller: twenty-one runners' P) — invisible to the caller's source: the call tracer (sys.monitoring, one event per code object per statement) names the runners whose functions ran, their mutables re-examined, a change recorded as module::name and restored IN PLACE. 14. a self-test's result tuple holding the callee's trail BY REFERENCE (clocks' `_r`, korach's V5_ASHAM) — nested aliases with their paths, patched into the restored value. 15. a with-block holding the imports SKIPPED (pre_sinai's) — the modules loaded in another order than the full path's, so the calendar's trail and the family alias came out different — ANY BLOCK HOLDING AN IMPORT RUNS. 16. the tracer's set clobbered by the whole harvests an import nests inside one statement — a stack of sets, each level merged upward on exit. 17. the probe's lost-name check flagged a case table of functions (tzav's CASES) the fixpoint rightly dropped — the check on picklable names.
+
+THE THIRD CHAIN (AS RUN, with the cache in place; world_engine.py moved, so the sweep FULL): the tape 27 s (against 155 before the cache), the probes 237 s (the cache probe inside them), the daemon and dependency gates 5 s, build 61 s, the journal gate 34 s (against 166), the register gate 2 s, the positions 229 s (eight workers, each a cached load), the checkpoint suite 75 s (against 205), the sweep 312 s (the stamp written: /Users/Shared/TorahSim/World/step9/sweep_stamp.json (62 runners, 12 shared pieces)), the unmoved check 1 s — THE TOTAL 983 s (16 min 23 s) against 18 min 27 s before the cache and ninety minutes before the cut; every verdict the same.
+
+THE STEADY STATE: a chain of a compile sitting now pays the load only where the checks must run — the moved runner's own harvest (its miss, once)
+and the sweep (always full, eight at a time, only the moved runners and their importers); every other step loads in about half a minute.
+
+THE LESSONS: A CACHE'S PROBE IS THE CACHE — the definition of "the same" was made strict eight times, and each time it found a slip the tape's
+10/10 had not (the tape reads what a case needs; the probe reads everything); THE RESIDUE A CALLEE LEAVES IS PART OF THE STATE — a trail, a counter,
+a returned reference; THE ORDER OF THE IMPORTS IS PART OF THE STATE; PICKLE BYTES ARE NOT THE STATE (a memo, an interning) — compare the canonical
+form's text; A TOUCHED NAME IS KEPT, A BOUND NAME IS FRESH, AN ALIAS IS THE LIVE OBJECT; THE FULL PATH IS ALWAYS ONE VARIABLE AWAY (INK_CACHE=0).

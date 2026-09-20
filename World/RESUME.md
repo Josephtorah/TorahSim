@@ -1,3 +1,52 @@
+# ⚠ THE DEUTERONOMY WALK sitting 9 (2026-09-20; step9/DEUTERONOMY_WALK.md "Sitting 9" + "Sitting 9 — AS BUILT"): CHAPTER 11 READ AND FROZEN as ONE unit
+# (deu_11_bless_curse_set, the 225th; standing 2233, hash unmoved) — THE SPINE ON THE CHAPTER for the first time since chapter 6 (piskaot 37-58, 171 rows whole in
+# both files; seven outside), the rain conditional (11:13-17) with NO CELL in the machine, the frontlets' three spellings measured (4b's open row carried), 11:25's
+# receipt by "spoke" pointed at Exodus 23:27 by the shelf (the finder's third form), Joshua saying the chapter's sentences at seven seats; the ledger
+# deu_11_ekev_reeh_2026-09-20.md (210 sources); six claims seated; the fold +14 on the journal (9744 rows); every gate green. NEXT on the owner's word: the
+# commit (the cache, 7b, 8, 8b, this); then 9b — the compile of chapter 11 (the rain cell; DB the open series).
+# ⚠ THE DEUTERONOMY WALK sitting 8b (2026-09-20; step9/DEUTERONOMY_WALK.md "Sitting 8b" + "THE DOCKET — AS RUN" + "Sitting 8b — AS BUILT"): CHAPTER 10 COMPILED —
+# step9/cold_run_second_tablets.py the 65th runner (62/62; six cells; THE READBACK'S FORMS COMBINED, NO SEVENTH: twenty-five rows, ten on the tape, thirteen by CALL,
+# TWO SUPPLIED WITH A WRITE (the fragments in the ark at the erection's day (2, 1, 1); Aaron's burial at his death (40, 5, 1) — the retrograde markers at Deut 10:2 and
+# 10:6), ONE stretch row (10:10's third forty to the timers' fire = 40; THE SECOND ASCENT'S DATE MATCH — Seder Olam Rabbah 6:2), the laws' form on 10:12-22 with FOUR
+# own-day lines after the forward marker at 10:12 — demand_declared (fear_of_heaven_asked), heart_circumcision_commanded (+ stiffening_barred the one prohibition),
+# stranger_love_commanded (love_owed's FIRST write — a debit toward the stranger), cleaving_commanded (the scholars)), law_second_tablets the 70th daemon (given_at
+# Deut 10:1, boot); the tape 10/10 on its fourth run with RUN (1317, 96, 88, 0, 12, 1613, 41, 319, pairs, 127) as predicted, PREVIOUS_RUN 7b's exactly, markers 172,
+# closes 127 (four runs: DA1 — 7b's own count literal — retyped; two attempts at import on the hole-ground scans; CA1, DB1, DB4, DB7 from the third run's print); the docket 532 rows read whole from the start (its own
+# run); every probe suite and gate GREEN (the chain three times — the first pass stopped at the probes step (three older probes' marker counts retyped) and the dependency gate (four homograph edges FALSE, the two predicted pointers RUN_CITATION); the second green to the register gate and failed at the eight-worker positions table (a worker raising on the cached path, the cache's own report masked by a shadowed name — the nineteenth slip, fixed); the positions by four workers and the third pass from the checkpoint probe ALL GREEN), the sweep 64/64. ⚠ the open debits on Israel 8 -> 9 (love_owed a DEBIT by its registry op); the opening_speech edge dropped at the callees' print (17 CALL edges).
+# NEXT on the ruling: the commit on the owner's word (the cache's, 7b's, 8's and 8b's — ONE message); chapter 11's reading (11:1-32) — one run.
+# ⚠ THE DEUTERONOMY WALK sitting 8b — THE DOCKET DONE (2026-09-20; logic/oral_triage/deu_10_ekev_exam_2026-09-20.md — 532 rows whole, LAW 78, DERIVATION 76, DISPUTE 14, CONTEXT 117, OUTSIDE 247): THE SECOND
+# ASCENT'S DATE MATCHES SEDER OLAM 6:2 (the 29th of Av — 7b's open row closed), the ark one in the Bavli and two in the Tosefta (a dispute row), the fear of
+# Heaven the one free variable (Berakhot 33b:23), the heart's foreskin guarded by grammar (Shabbat 108a:7), the cleaving = the scholars (Ketubot 111b:7), the
+# four clauses positive (Temurah 4a:2). NEXT: RUN B after a compaction (the probes to FAIL, the types, the runner, the tape, the chain, the records).
+# ⚠ THE DEUTERONOMY WALK sitting 8b — THE COMPILE OF CHAPTER 10, RUN A DONE (2026-09-20; the design in step9/DEUTERONOMY_WALK.md "Sitting 8b … THE DESIGN"):
+# the readback's forms COMBINED — two acts told only in the retelling SUPPLIED WITH THEIR WRITES by retrograde markers (the fragments in the ark at the erection's
+# day; Aaron's burial at his death day), the third forty a stretch on the clock, the laws' form on 10:12-22 with four own-day lines for the code's holes (the
+# demand, the heart and the neck, the stranger, the cleaving), the ark ONE, the place of the death OPEN; DB1-DB9. NEXT: the docket (its own run, 510 rows whole),
+# then RUN B. UNCOMMITTED: the cache, 7b, 8 and this design (one message).
+# ⚠ THE DEUTERONOMY WALK sitting 8 (2026-09-20; step9/DEUTERONOMY_WALK.md "Sitting 8" + "Sitting 8 — AS BUILT"): CHAPTER 10 READ AND FROZEN as ONE unit
+# (deu_10_second_tablets, the 224th; standing 2227, hash unmoved) — the ark inserted into God's quoted word (10:1-2 against Exodus 34:1: eleven of fourteen, the ark's
+# clause added), the stations reversed and Aaron moved (the compile's OPEN row), three receipt forms (10:5 the register's seat), 6:13 said again with "cleave"; the
+# Sifrei silent, three outside rows whole; the ledger deu_10_ekev_2026-09-19.md (25 sources); six claims seated; the fold +14 on the journal (9730 rows); every
+# gate green. NEXT on the owner's word: the commit (the cache, 7b, this); then 8b — the compile of chapter 10 (the fragments in the ark; DA the open series).
+# ⚠ THE DEUTERONOMY WALK sitting 7b (2026-09-19; step9/DEUTERONOMY_WALK.md "Sitting 7b" + "THE DOCKET — AS RUN" + "Sitting 7b — AS BUILT"): CHAPTER 9 COMPILED —
+# step9/cold_run_not_righteousness.py the 64th runner (51/51; six cells; THE READBACK'S SIXTH FORM — the retelling of a STRETCH: thirty-two rows, twenty-two on the
+# tape, nine by CALL, four STRETCH rows measured on the clock (the three forties 40 / 40 / 40 — Ta'anit 28b:9's 24 + 16 reproduced, Mishnah Ta'anit 4:6 MATCH), ONE
+# SUPPLIED WITH A WRITE (9:20 Aaron's peril)), law_not_righteousness the 69th daemon (given_at Deut 9:1, boot); ONE LINE prayed_for_aaron dated (1, 4, 18) by the
+# RETROGRADE marker at Deut 9:20 (M['aaron_told'] = M['morrow']), the forward marker at 9:21 — destruction_halved a STATUS on aaron (the name from Vayikra Rabbah
+# 10:5); the tape 10/10 on its second run with RUN (1311, 96, 88, 0, 12, 1606, 40, 319, pairs, 127) as predicted, PREVIOUS_RUN 6b's exactly, markers 169, closes
+# 127 (CA1 — the markers' list literal — retyped; the nine 'markers 167' counts retyped as designed); the docket 397 rows read whole from the start (its own run);
+# every probe suite and gate GREEN over the chain's third and fourth passes (the first: three demands, three older probes, the cache's eighteenth slip; the second, from the probes step, the readback probe without the live journal — a rerun with the probes starts at the tape; the third killed at the positions table by the memory watchdog, the fourth there again, the positions by four workers, the fifth from the checkpoint probe), the sweep 63/63. ⚠ THE RECORDER RUNS WITH THE CACHE OFF (INK_CACHE=0 — a restored module never submits); the cache's key now covers the sequence file a runner reads at import.
+# NEXT on the ruling: the commit on the owner's word (the cache's message and 7b's); chapter 10's reading (10:1-22) — the fragments in the ark owed to its compile.
+# ⚠ THE DEUTERONOMY WALK sitting 7b — THE DOCKET DONE (2026-09-19; logic/oral_triage/deu_09_ekev_exam_2026-09-19.md — 397 rows whole, LAW 46, DERIVATION 48, DISPUTE 10, CONTEXT 160, OUTSIDE 133): the
+# effect on Aaron NAMED destruction_halved (Vayikra Rabbah 10:5 — half the edict, two died and two remained), the fathers' merit a parameter (Shabbat
+# 55a:11), Taberah not among the ten trials (Arakhin 15a:14). NEXT: RUN B (the probes to FAIL, the types, the runner, the tape, the chain, the records).
+# ⚠ THE DEUTERONOMY WALK sitting 7b — THE COMPILE OF CHAPTER 9, RUN A DONE (2026-09-19; the design in step9/DEUTERONOMY_WALK.md "Sitting 7b … THE DESIGN"):
+# the readback's SIXTH FORM (the forties graded against the clock — the tape already holds Ta'anit 4:6's 17 Tammuz), Aaron's peril a retrograde write, the D
+# series of checkpoints (DA1-DA9). NEXT: the docket (its own run, 395 rows whole), then RUN B. UNCOMMITTED: the import cache and this design.
+# ⚠ THE VERIFIED-IMPORT CACHE (2026-09-19; step9/ink_cache.py, GATES_CHAIN.md D38, THE_LOOP D38): the runners' load 169 s → 35 s — a MISS (the
+# runner's source or the shared key moved) harvests every statement's values, a HIT restores them; the sweep and `gates_chain.sh --full` run INK_CACHE=0
+# (the checks in full); `ink_cache_probes.py` (in the chain) compares a full load against a cached one in two processes, 8/8; `ink_cache.py --status|--clear`.
+# The chain 16 min 23 s with a full sweep. UNCOMMITTED: the message at <scratch>/commit_msg_cache.txt for the owner's word.
 # ⚠ THE DEUTERONOMY WALK sitting 7 (2026-09-19; step9/DEUTERONOMY_WALK.md "Sitting 7" + "Sitting 7 — AS BUILT"): CHAPTER 9 READ AND FROZEN as ONE unit
 # (deu_09_not_righteousness, the 223rd; standing 2221, hash unmoved) — the calf retold: 9:13 verbatim with Exodus 32:9, 9:17 in Moses' own words, Aaron's peril
 # (9:20) told only here (the compile's retrograde question); the Sifrei silent, seven outside rows whole; the ledger deu_09_ekev_2026-09-19.md (36 sources); six claims

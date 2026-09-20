@@ -4422,6 +4422,75 @@ date for the breaking, a new checkpoint series — or the ten-commandments schem
 
 
 
+DEUTERONOMY — SITTING 7b — CHAPTER 9 COMPILED (2026-09-19, on Brian's "Ok do ch 9" for the design, "Go" for the docket and "Go" for the build after a compaction;
+World/step9/DEUTERONOMY_WALK.md "Sitting 7b", "THE DOCKET — AS RUN" and "Sitting 7b — AS BUILT"). Chapter 9 is Moses telling the golden calf again in his own
+words, so this sitting graded each sentence of his telling against the tape's own line from Exodus or the older cell that compiled it: God's words come back
+word for word, Moses' own acts come back rephrased, and the calf's destruction comes back without the drinking — which is exactly the detail the sages argued
+over. Three times the chapter says "forty days and forty nights", and that is not an event but a stretch of the clock between two of the tape's date marks.
+So the machine measured the stretches on its own calendar: the day Moses went up to the day the tablets broke is forty; the day after the breaking to his
+second ascent is forty; and the Talmud's own count — twenty-four days left in Sivan plus sixteen of Tammuz — comes out of the calendar unprompted, landing
+on the seventeenth of Tammuz the Mishnah names. One thing in the chapter is told nowhere else: God's anger at Aaron and Moses' prayer for him. That act was
+written back once into Exodus's own day, the day after the breaking, and the ledger entry it writes took its name from the Talmud's midrash — half the
+edict withheld, two of Aaron's sons died and two lived. The reading of the shelf, four hundred rows read whole, corrected the design in small ways: the
+fasting's proof-text is this chapter's own verse; Taberah, the first provocation the chapter names, is not among the ten trials the sages count; the merit
+of the fathers is a disputed parameter with four dates for when it ran out. The machine learned one rule of its own: the instrument that records the runners'
+scenes must run with the new import cache off, because a runner restored from the cache never re-runs its scene. The runner matched its sheet on the first run;
+the tape reached ten of ten on the second; every gate was green over the chain's third to fifth passes — the first asked for three dispositions (two look-alike words the census matched to other laws, one citation) and
+found three older checks and the cache holding stale counts and text, each retyped from its print; the second, started past the tape, showed that the checks
+which read the tape's own record need the tape run first; the third was cut off by the session's memory watchdog after seven green steps, the fourth at the same eight-worker step, and the table was then measured by
+four workers and the fifth pass finished the rest. Next: the commit on your word; then chapter 10's reading.
+DEUTERONOMY — SITTING 8 — CHAPTER 10, Deuteronomy 10:1-22 (2026-09-20, on Brian's "Go" after the reread that followed the chapter-9 compile's compaction;
+World/step9/DEUTERONOMY_WALK.md "Sitting 8" and "Sitting 8 — AS BUILT"; a reading sitting is one run). Chapter 10 finishes the retelling and turns to the law: the
+second tablets and an ark to hold them, the stations where Aaron died and Eleazar took his place, the tribe of Levi set apart, the third forty days and the command
+to go; then what the LORD asks — to fear, to walk, to love, to serve, to keep — the heavens His and the fathers chosen, the heart to be circumcised and the neck no
+more stiff; the God of gods who takes no bribe and loves the stranger; fear, serve, cleave, swear; seventy souls become the stars. The reading laid each verse
+beside its first telling and counted the shared words: God's word to hew the tablets comes back word for word from Exodus 34 — with an ark put into the middle of
+it that Exodus never mentions there; the stations come back in another order, and Aaron's death at another station than Numbers gives; the ark is "of the
+covenant" here where Exodus always says "of the testimony"; three verses carry a receipt ("as the LORD commanded me", "as He spoke to him", "which I swore");
+the Shema's "fear, serve, swear" comes back with a fourth clause, "cleave". The Sifrei has no section on the chapter; three rows from elsewhere read it for one
+clause of 10:20 and for the seventy of 10:22 — and quote that verse with two spellings. The chapter is frozen as one unit, the 224th, the world's standing facts
+up by six as predicted, its hash unmoved, every gate green. The ink script fell eight ways on its first pass — all forms, none a fact — and held on the second.
+Next: the commit on your word; then the compile of chapter 10 in two runs — the ark and the fragments in it, the receipt seats, the stations' open row, the third
+forty's end on the clock, the laws restated graded against their cells — or the ten-commandments schema first.
+
+
+
+DEUTERONOMY — SITTING 8b — CHAPTER 10 COMPILED (2026-09-20, on Brian's "Go" for the design, "The docket go" for the docket and "Go" for the build after a
+compaction; World/step9/DEUTERONOMY_WALK.md "Sitting 8b", "THE DOCKET — AS RUN" and "Sitting 8b — AS BUILT"). Chapter 10 finishes Moses' retelling of the calf
+and begins his restatement of the law, so the sitting used the grading forms it already had and needed no new one: each sentence of the retelling against the
+tape's own line or the older cell, and each restated law against the cell that compiles it. Two things in the chapter are told nowhere else. "Put them in the
+ark" — the sages read "them" as both sets, the whole tablets and the broken ones — and "he was buried there" of Aaron, which Numbers never says. Each was
+written once into its own day: the fragments on the day the tabernacle was raised and the tablets placed, the burial on the day Aaron died; the entry for the
+fragments took its value from the Talmud's argument over what else the ark held (a Torah scroll inside it or beside it, depending on the size of a cubit), and
+the entry for the burial reused the one the machine already had for Sarah and the others, Aaron the ninth. Where the chapter puts Aaron's death (Moserah) and
+where Numbers puts it (Mount Hor) disagree, and that disagreement stays open inside the line — the sages' answer, a retreat of seven stations, was already a
+parameter the machine had from the Numbers compile. The third forty days on the mountain measured forty on the calendar from the second ascent to the day
+the tablets came down, and this time the shelf's own chronology, read in full, gave the same date for the ascent as the machine's subtraction — the earlier
+open question on that date was a misreading and is closed. Four laws in the chapter had no code anywhere: what the LORD asks of you (the sages' "everything
+is in the hands of Heaven except the fear of Heaven" is their name for this verse), circumcise your heart and stiffen your neck no more (the Talmud names the
+evil inclination "foreskin" from this verse, and its grammar refuses to let the heart's foreskin fall under the law of circumcision), love the stranger (the
+older law's effect had been in the vocabulary since Leviticus and never once written on the tape), and cleave to Him (the scholars, the sages say; and all
+four clauses of that verse are positive commands, so the entry is a status, not a prohibition). The runner matched its sheet on the first run; the tape
+reached ten of ten on the fourth — one of last sitting's own checks held the old marker count, two older scans of the machine's own database found this sitting's fresh entries and had to be told to look past them, and the book's list of date marks grew by two; the chain three times — the first pass stopped at the probes step (three older probes' marker counts retyped) and the dependency gate (four homograph edges FALSE, the two predicted pointers RUN_CITATION); the second green to the register gate and failed at the eight-worker positions table (a worker raising on the cached path, the cache's own report masked by a shadowed name — the nineteenth slip, fixed); the positions by four workers and the third pass from the checkpoint probe ALL GREEN. Next: the commit on your word; then chapter 11.
+DEUTERONOMY — SITTING 9 — CHAPTER 11, Deuteronomy 11:1-32 (2026-09-20, on Brian's "Go" after the reread that followed the chapter-10 compile's compaction and
+"Continue" after a clean point inside the run; World/step9/DEUTERONOMY_WALK.md "Sitting 9" and "Sitting 9 — AS BUILT"; a reading sitting is one run). Chapter 11 is
+the end of the long charge and the hinge to the laws: love the LORD and keep His charge; the discipline your children have not seen — Egypt, the sea, the wilderness,
+Dathan and Abiram swallowed; keep all the commandment and prolong your days on a land not like Egypt, a land that drinks the rain of heaven and that the LORD's eyes
+are on all year; if you hearken, the rain in its season — if you turn aside, the heavens shut; the words on the heart, the hand, the eyes, the sons and the
+doorposts, said again to all of you; keep and cleave, and every place your foot treads is yours, from the wilderness to the river to the sea, and no man will stand
+before you; see, a blessing and a curse — the blessing on Mount Gerizim and the curse on Mount Ebal, across the Jordan by Gilgal; you are crossing to possess and
+dwell, so keep the statutes set before you today. For the first time since chapter 6 the Sifrei has sections on the chapter — twenty-two of them, from the Land's
+praise at 11:10 to the last verse, every row read whole in both files, with seven more rows from elsewhere; forty-one earlier reads of thirty-seven rows were found
+in the older ledgers by computation and reread. The reading laid each verse beside its kin and counted the shared words: Joshua says this chapter's sentences back
+at seven places; the rain clause has no code anywhere in the machine yet; the frontlets are spelled three ways at their three seats and the tradition's count of four
+needs a spelling the text does not have; the Sifrei quotes a Mishnah by name inside its own text for the borders; and where Moses says "as He spoke to you", the
+teacher names the place — Exodus 23:27. The chapter is frozen as one unit, the 225th, the world's standing facts up by six as predicted, its hash unmoved, every gate
+green. The ink script fell ten ways on its first pass — all forms, none a fact — and held on the second. Next: the commit on your word; then the compile of chapter
+11 in two runs — the rain clause as a new cell, the frontlets and the doorposts by call, the borders, the receipt's pointer, the blessing and the curse set, Gerizim
+and Ebal by chapter 27's ceremony — or the ten-commandments schema first.
+
+
+
 ## Step 6 — Publish
 Export, parity check against the public repo, deploy. Owner's word.
 
@@ -4802,3 +4871,14 @@ COUNTED, and GENESIS IS WHOLE AND STAMPED (its d6419ee — the record
 of the 65 batch stamps, which likewise stay there). This tree's
 chronicle of the same events is the state doc,
 logic/pre_logic_methods_2026-07-28/PROMPT_continue_solo_era_2026-08-06.md.]
+
+THE VERIFIED-IMPORT CACHE (2026-09-19, the same day, on Brian's "Do we really need to rebuild everything on every run?", the explanation of what steps 8
+and 9 spend, and his "ok do it make it permanent"; World/step9/GATES_CHAIN.md's D38 section, World/step9/ink_cache.py). After the cut, the slow steps
+were still the ones that load the sixty-three runners' code, and the measuring showed why: two minutes of every load is the runners checking
+themselves against the text — the same checks, the same answers, every time. So the machine now remembers the answers. The first load after a
+change runs every check as before and writes down, after each line of each runner, what that line produced; every later load puts those results
+back in place and runs only what has to run — the definitions, the imports, the calls into other parts. If a runner's text or anything it reads
+has changed, its checks run again in full; the sweep that grades every runner always runs them in full. The proof that nothing changed: a probe
+loads the machine both ways in two separate processes and compares everything — every value in every runner, which values are one and the same
+object, what the engine's own parts hold — and it found seventeen ways the shortcut was wrong before it found none; each one is a rule now. The
+load went from 169 seconds to 35; the tape step from 155 seconds to 27; the chain to 16 min 23 s with a full sweep. Next: the commit on your word; then 7b.

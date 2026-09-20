@@ -23,6 +23,15 @@
   Q19 chapter 8's table — THE READBACK'S FIFTH FORM (the retelling of a STATE): eighteen rows, VERBATIM 6 / VARIANT 5 / EXPANDED 4 / TURNED 2 / SUPPLIED 1; seventeen found (the tape by kind and first verse, the kin's cells by CALL), the one SUPPLIED row 8:4's (the garment and the foot) with its ledger scan EMPTY — no retrograde write; the three holes named; no row OPEN
   Q20 the three lines of chapter 8 (grace_commanded 8:7-10, forgetting_warned 8:11-18, perishing_testified 8:19-20) on the speech's own day — NO marker, the markers 167; bless_after_eating_commanded (a status) and forgetting_barred (a block) on Israel ONE each, heaven_and_earth_witness TWO (4:26's entry and the reuse at 8:19), their sources the lines' first verses
   Q21 the kin stands — manna_provided 1, water_from_the_rock 2, serpents_sent 1, shema_commanded 1, test_barred 1, other_gods_barred 1, blessings_for_hearing 1, treasured_people 1 on Israel UNMOVED (measured on the one database per source before the run); the daemon law_good_land registered, given_at Deut 8:1, installed_by boot
+  THE DEUTERONOMY WALK 7b (2026-09-19; DEUTERONOMY_WALK.md "Sitting 7b" THE PROBES) — written to FAIL before cold_run_not_righteousness.py exists:
+  Q22 chapter 9's table — THE READBACK'S SIXTH FORM (the retelling of a STRETCH): thirty-two rows predicted from the design (VERBATIM 14 / VARIANT 12 / EXPANDED 4 / TURNED 1 / SUPPLIED 1; twenty-two on the tape by kind and first verse, nine in the kin's cells by CALL — retyped once from the print if the census moves); the FOUR stretch rows (9:9, 9:11, 9:18, 9:25) measured on the running world by the markers' days (Exod 24:18 to 32:19 forty, 32:30 to 34:4 forty); the one SUPPLIED row 9:20's WITH its write destruction_halved; the two OPEN rows (the calf's own day, the second ascent's date); the one hole
+  Q23 the retrograde line prayed_for_aaron dated (1, 4, 18) under the RETROGRADE marker at Deut 9:20 (stated the morrow's day, Exod 32:30's), the FORWARD marker at 9:21 at the counter's day, markers 169 (172 since THE DEUTERONOMY WALK 8b, 2026-09-20 — the retrograde markers at Deut 10:2 and 10:6 and the forward marker at 10:12), the counter (40, 11, 1); destruction_halved on aaron ONE, source 'Deut 9:20', dated with the line; the line reading_placed, first_telling told only here
+  Q24 the kin stands — decree_relented 1, blotted_from_the_book 1, tablets_delivered 4 (moses, the tablets twice, the ark), fire_sank 1, atoned_forgiven on aaron 1 UNMOVED; moses_interceded two lines, moses_pleaded_on_the_attributes one; THE CLOCK READ BACK — the four markers' dates (1, 3, 7), (1, 4, 17), (1, 4, 18), (1, 5, 29) and the three forties (the last to 10 Tishri); the daemon law_not_righteousness registered, given_at Deut 9:1, installed_by boot
+  (Q14, Q17 and Q20's marker count 167 -> 169 at THE DEUTERONOMY WALK 7b, 2026-09-19 — the two markers at Deut 9:20 and 9:21; 169 -> 172 at THE DEUTERONOMY WALK 8b, 2026-09-20 — the three markers at Deut 10:2, 10:6 and 10:12; a count literal in a probe moves like one in a checkpoint: retyped from the chain's print each time)
+  THE DEUTERONOMY WALK 8b (2026-09-20; DEUTERONOMY_WALK.md "Sitting 8b" THE PROBES) — written to FAIL before cold_run_second_tablets.py exists:
+  Q25 chapter 10's table — THE FORMS COMBINED, NO SEVENTH (the retelling's tail 10:1-11 and the laws' head 10:12-22): twenty-five rows predicted from the design (VERBATIM 9 / VARIANT 10 / EXPANDED 3 / TURNED 1 / SUPPLIED 2; ten on the tape by kind and first verse, thirteen in the kin's cells by CALL — retyped once from the print if the census moves); the ONE stretch row (10:10, the third forty — Exod 34:4 to 34:28 forty) measured on the running world by the markers' days; the two SUPPLIED rows 10:2's and 10:6's WITH their writes fragments_in_the_ark and buried; the one OPEN row (the place of the death); the one hole (the go — outside the span)
+  Q26 the two retrograde lines — fragments_placed_in_the_ark dated (2, 1, 1) under the RETROGRADE marker at Deut 10:2 (stated the erection's day, Exod 40:17's), aaron_buried dated (40, 5, 1) under the RETROGRADE marker at Deut 10:6 (stated Aaron's death, Num 20:28's) — the FORWARD marker at 10:12 at the counter's day, markers 172, the counter (40, 11, 1); fragments_in_the_ark on the ark ONE (source 'Deut 10:2', dated with its line), buried on aaron ONE (source 'Deut 10:6', dated with its line — the world's ninth buried); both lines reading_placed, first_telling told only here
+  Q27 the four own-day lines (demand_declared 10:12-13, heart_circumcision_commanded 10:16, stranger_love_commanded 10:17-19, cleaving_commanded 10:20-22) after the forward marker at 10:12 on the counter's day, no dated field; their five writes on israel_people ONE each — fear_of_heaven_asked, heart_circumcision_commanded (statuses), stiffening_barred (a block), love_owed (REUSED — its first on the tape), cleaving_commanded; THE KIN STANDING — shema_commanded 1, test_barred 1, invested_office on the Levites 1 with its value (1, 2), given_to_aaron 2, inheritance_barred 1 on the Levites and 1 on aaron, tithe_granted 1, aaron's entries 30, eleazar's invested_office 1; the daemon law_second_tablets registered, given_at Deut 10:1, installed_by boot
 Run: python3 World/step9/readback_probes.py   (the running world replays the tape: ~3 minutes)
 """
 import os, sys, io, re, contextlib, collections
@@ -161,7 +170,7 @@ def q14():
     isr = W.entities.get('israel_people')
     sc = [e for e in isr.ledger if e['effect'] == 'shema_commanded'] if isr else []; tbd = [e for e in isr.ledger if e['effect'] == 'test_barred'] if isr else []
     got = (len(sd), len(tb), any(k.startswith('Deut 6:') for k in mk), nm, len(sc), len(tbd), str(sc[0].get('case_source', ''))[:8] if sc else None, str(tbd[0].get('case_source', ''))[:9] if tbd else None)
-    return got == (1, 1, False, 167, 1, 1, 'Deut 6:4', 'Deut 6:16'), 'got (shema_declared, testing_barred, a chapter-6 marker, markers, shema_commanded, test_barred, their sources) = %s' % (got,)
+    return got == (1, 1, False, 172, 1, 1, 'Deut 6:4', 'Deut 6:16'), 'got (shema_declared, testing_barred, a chapter-6 marker, markers, shema_commanded, test_barred, their sources) = %s' % (got,)
 def q15():
     import yaml as _y
     with contextlib.redirect_stdout(io.StringIO()):
@@ -189,7 +198,7 @@ def q17():
     def L(eff): return [e for e in isr.ledger if e['effect'] == eff] if isr else []
     cmd = [e for e in L('commanded') if e.get('value') == 'devote_the_seven_nations']; hab = L('house_abomination_barred')
     got = (len(nd), len(hb), len(ab), any(k.startswith('Deut 7:') for k in mk), nm, len(cmd), len(L('covenant_barred')), len(L('favor_barred')), len(L('intermarriage_barred')), len(L('blessings_for_hearing')), len(L('pity_barred')), len(hab), str(cmd[0].get('case_source', ''))[:8] if cmd else None, str(hab[0].get('case_source', ''))[:9] if hab else None)
-    return got == (1, 1, 1, False, 167, 1, 1, 1, 1, 1, 1, 1, 'Deut 7:1', 'Deut 7:25'), 'got (nations_devoted, hearing_blessed, abomination_barred, a chapter-7 marker, markers, the ban\'s debit, covenant_barred, favor_barred, intermarriage_barred, blessing_promised, pity_barred, house_abomination_barred, their sources) = %s' % (got,)
+    return got == (1, 1, 1, False, 172, 1, 1, 1, 1, 1, 1, 1, 'Deut 7:1', 'Deut 7:25'), 'got (nations_devoted, hearing_blessed, abomination_barred, a chapter-7 marker, markers, the ban\'s debit, covenant_barred, favor_barred, intermarriage_barred, blessing_promised, pity_barred, house_abomination_barred, their sources) = %s' % (got,)
 def q18():
     import yaml as _y
     isr = W.entities.get('israel_people')
@@ -220,7 +229,7 @@ def q20():
     def L(eff): return [e for e in isr.ledger if e['effect'] == eff] if isr else []
     bl = L('bless_after_eating_commanded'); fb = L('forgetting_barred'); hw = L('heaven_and_earth_witness')
     got = (len(gc), len(fw), len(pt), any(k.startswith('Deut 8:') for k in mk), nm, len(bl), len(fb), len(hw), str(bl[0].get('case_source', ''))[:8] if bl else None, str(fb[0].get('case_source', ''))[:9] if fb else None, str(hw[-1].get('case_source', ''))[:9] if hw else None, str(hw[0].get('case_source', ''))[:9] if hw else None)
-    return got == (1, 1, 1, False, 167, 1, 1, 2, 'Deut 8:7', 'Deut 8:11', 'Deut 8:19', 'Deut 4:25'), 'got (grace_commanded, forgetting_warned, perishing_testified, a chapter-8 marker, markers, bless_after_eating_commanded, forgetting_barred, heaven_and_earth_witness, their sources — the status at the first line, the block at the second, the testimony\'s reuse at the third, the 4:26 entry first) = %s' % (got,)
+    return got == (1, 1, 1, False, 172, 1, 1, 2, 'Deut 8:7', 'Deut 8:11', 'Deut 8:19', 'Deut 4:25'), 'got (grace_commanded, forgetting_warned, perishing_testified, a chapter-8 marker, markers, bless_after_eating_commanded, forgetting_barred, heaven_and_earth_witness, their sources — the status at the first line, the block at the second, the testimony\'s reuse at the third, the 4:26 entry first) = %s' % (got,)
 def q21():
     import yaml as _y
     isr = W.entities.get('israel_people')
@@ -230,8 +239,115 @@ def q21():
     got = (len(L('manna_provided')), len(L('water_from_the_rock')), len(L('serpents_sent')), len(L('shema_commanded')), len(L('test_barred')), len(L('other_gods_barred')), len(L('blessings_for_hearing')), len(L('treasured_people')), 'law_good_land' in dd['daemons'], d.get('given_at'), d.get('installed_by'))
     return got == (1, 2, 1, 1, 1, 1, 1, 1, True, 'Deut 8:1', 'boot'), 'got (manna_provided, water_from_the_rock, serpents_sent, shema_commanded, test_barred, other_gods_barred, blessings_for_hearing, treasured_people on Israel — the kin UNMOVED, no second write; the daemon registered, given_at, installed_by) = %s' % (got,)
 
+# ---- THE DEUTERONOMY WALK 7b (2026-09-19): THE READBACK'S SIXTH FORM — the retelling of a STRETCH: chapter 9 is Moses telling the calf in his own voice; its rows are
+# reference rows against the tape's lines by kind and first verse or the kin's cells by CALL (T1's form), ONE row fills a hole with a retrograde WRITE (9:20 Aaron's
+# peril — T2's form, 3b's), and FOUR rows retell "forty days and forty nights" — a STRETCH between two markers graded against the clock's own arithmetic (the
+# markers' days on the running world); written to FAIL before the runner exists (the design's Q22-Q24) ----
+def q22():
+    import cold_run_not_righteousness as NR
+    tbl = NR.DATA['the_readback']; rows = tbl['value']; holes = tbl.get('holes') or []; opens = tbl.get('open_rows') or []
+    gs = collections.Counter(r['grade'] for r in rows)
+    on_tape = sum(1 for r in rows if r.get('tape_kind') and any(e[2]['kind'] == r['tape_kind'] and WE.first_verse(e[2].get('case_source')) == WE.first_verse(r['tape_verse']) for e in EV))
+    by_call = sum(1 for r in rows if r.get('cell') and r.get('cell_found'))
+    sup = [r for r in rows if r['grade'] == 'SUPPLIED']
+    mk = {str(l[2].get('verse', '')): l for l in W.log if l[0] == 'MARKER'}
+    st = [r for r in rows if r.get('stretch')]
+    st_ok = bool(st) and all(r['stretch']['from'] in mk and r['stretch']['to'] in mk and mk[r['stretch']['to']][1] - mk[r['stretch']['from']][1] == r['stretch']['days'] for r in st)
+    ok = len(rows) == 32 and on_tape + by_call == 31 and gs == collections.Counter({'VERBATIM': 14, 'VARIANT': 12, 'EXPANDED': 4, 'TURNED': 1, 'SUPPLIED': 1}) and len(holes) == 1 and len(opens) == 2 and not any(r.get('open') for r in rows) and len(sup) == 1 and sup[0]['verses'] == 'Deut 9:20' and sup[0].get('write') == 'destruction_halved' and len(st) == 4 and st_ok
+    return ok, 'rows %d (found on the tape %d, in the kin\'s cells by CALL %d), grades %s, the hole %d, the OPEN rows %d, open-flagged %d, the SUPPLIED row %s with its write %s, the STRETCH rows %d measured on the running world %s' % (len(rows), on_tape, by_call, dict(gs), len(holes), len(opens), sum(1 for r in rows if r.get('open')), [r['verses'] for r in sup], [r.get('write') for r in sup], len(st), st_ok)
+def q23():
+    pa = [e for e in EV if e[2]['kind'] == 'prayed_for_aaron']
+    mk = {str(l[2].get('verse', '')): l for l in W.log if l[0] == 'MARKER'}; nm = len([l for l in W.log if l[0] == 'MARKER'])
+    d = ex.date(pa[0][2]['dated']) if pa and pa[0][2].get('dated') is not None else None
+    m20 = mk.get('Deut 9:20'); m21 = mk.get('Deut 9:21')
+    retro = bool(m20) and bool(m20[2].get('retrograde')) and m20[2].get('stated') is not None and ex.date(m20[2]['stated']) == (1, 4, 18)
+    fwd = bool(m21) and not m21[2].get('retrograde') and ex.date(m21[1]) == (40, 11, 1)
+    aa = W.entities.get('aaron'); dh = [e for e in aa.ledger if e['effect'] == 'destruction_halved'] if aa else []
+    d_w = ex.date(dh[0]['dated']) if dh and dh[0].get('dated') is not None else None
+    got = (len(pa), d, retro, fwd, nm, ex.date(W.clock.day), len(dh), str(dh[0].get('case_source', ''))[:9] if dh else None, d_w, pa[0][2].get('placement') if pa else None, 'told only here' in str(pa[0][2].get('first_telling', '')) if pa else False)
+    return got == (1, (1, 4, 18), True, True, 172, (40, 11, 1), 1, 'Deut 9:20', (1, 4, 18), 'reading_placed', True), 'got (prayed_for_aaron, its dated day, the RETROGRADE marker at Deut 9:20 stated (1, 4, 18), the FORWARD marker at 9:21 at the counter\'s day, markers, the counter, destruction_halved on aaron, its source, its dated day, the line\'s placement, first_telling told only here) = %s' % (got,)
+def q24():
+    import yaml as _y
+    def L(ent, eff):
+        e_ = W.entities.get(ent); return [e for e in e_.ledger if e['effect'] == eff] if e_ else []
+    td = sum(len(L(x, 'tablets_delivered')) for x in ('moses', 'the-tablets', 'the_ark'))
+    mi = [e for e in EV if e[2]['kind'] == 'moses_interceded']; mp = [e for e in EV if e[2]['kind'] == 'moses_pleaded_on_the_attributes']
+    mk = {str(l[2].get('verse', '')): l for l in W.log if l[0] == 'MARKER'}
+    FOUR = ('Exod 24:18', 'Exod 32:19', 'Exod 32:30', 'Exod 34:4')
+    days = {v: mk[v][1] for v in FOUR if v in mk}
+    dates = tuple(ex.date(days[v]) for v in FOUR if v in days)
+    ten_tishri = W.clock.day_in('exodus', 1, 7, 10)
+    forties = (days['Exod 32:19'] - days['Exod 24:18'], days['Exod 34:4'] - days['Exod 32:30'], ten_tishri - days['Exod 34:4']) if len(days) == 4 else None
+    dd = _y.safe_load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'daemon_dispositions.yaml'), encoding='utf-8'))
+    d = dd['daemons'].get('law_not_righteousness', {})
+    got = (len(L('israel_people', 'decree_relented')), len(L('the-sinners', 'blotted_from_the_book')), td, len(L('israel_people', 'fire_sank')), len(L('aaron', 'atoned_forgiven')), len(mi), len(mp), dates, forties, 'law_not_righteousness' in dd['daemons'], d.get('given_at'), d.get('installed_by'))
+    return got == (1, 1, 4, 1, 1, 2, 1, ((1, 3, 7), (1, 4, 17), (1, 4, 18), (1, 5, 29)), (40, 40, 40), True, 'Deut 9:1', 'boot'), 'got (decree_relented on Israel, blotted_from_the_book on the sinners, tablets_delivered over moses / the tablets / the ark, fire_sank, atoned_forgiven on aaron — the kin UNMOVED; moses_interceded lines, moses_pleaded lines — no third intercession; THE CLOCK: the four markers\' dates, the three forties (the last to 10 Tishri); the daemon registered, given_at, installed_by) = %s' % (got,)
+
+# ---- THE DEUTERONOMY WALK 8b (2026-09-20): THE FORMS COMBINED, NO SEVENTH — chapter 10 is the retelling's tail (10:1-11) and the laws' head (10:12-22): T1 reference
+# rows against the tape's lines by kind and first verse or the kin's cells by CALL; T2 SUPPLIED WITH A WRITE, TWICE (the fragments in the ark, Aaron's burial — two
+# acts told only here, each written ONCE at its own day by a RETROGRADE marker); T6 ONE stretch row (10:10's third forty, measured on the clock); T4 the laws' form on
+# 10:12-22 with the code's holes compiled at the chapter's own day; an OPEN row (the place of the death); a hole outside the span (the go); written to FAIL before the
+# runner exists (the design's Q25-Q27) ----
+def q25():
+    import cold_run_second_tablets as ST
+    tbl = ST.DATA['the_readback']; rows = tbl['value']; holes = tbl.get('holes') or []; opens = tbl.get('open_rows') or []
+    gs = collections.Counter(r['grade'] for r in rows)
+    on_tape = sum(1 for r in rows if r.get('tape_kind') and any(e[2]['kind'] == r['tape_kind'] and WE.first_verse(e[2].get('case_source')) == WE.first_verse(r['tape_verse']) for e in EV))
+    by_call = sum(1 for r in rows if r.get('cell') and r.get('cell_found'))
+    sup = [r for r in rows if r['grade'] == 'SUPPLIED']
+    mk = {str(l[2].get('verse', '')): l for l in W.log if l[0] == 'MARKER'}
+    st = [r for r in rows if r.get('stretch')]
+    def END(name, start):   # a stretch's end — a marker's verse, or 'timer:<effect>' the first TIMER-FIRE of that effect AT OR AFTER the stretch's start on the running world (the third forty ends at the timers' fire (1, 7, 10), not a marker; the first tablets' delivery fired at the breaking, before the marker — read at the tape's second run)
+        if name in mk: return mk[name][1]
+        if name.startswith('timer:'):
+            f = [l for l in W.log if l[0] == 'TIMER-FIRE' and l[2].get('effect') == name[6:] and l[1] >= start]
+            return f[0][1] if f else None
+        return None
+    st_ok = bool(st) and all(r['stretch']['from'] in mk and END(r['stretch']['to'], mk[r['stretch']['from']][1]) is not None and END(r['stretch']['to'], mk[r['stretch']['from']][1]) - mk[r['stretch']['from']][1] == r['stretch']['days'] for r in st)
+    ok = len(rows) == 25 and on_tape + by_call == 23 and gs == collections.Counter({'VERBATIM': 9, 'VARIANT': 10, 'EXPANDED': 3, 'TURNED': 1, 'SUPPLIED': 2}) and len(holes) == 1 and len(opens) == 1 and not any(r.get('open') for r in rows) and len(sup) == 2 and [r['verses'] for r in sup] == ['Deut 10:2', 'Deut 10:6'] and [r.get('write') for r in sup] == ['fragments_in_the_ark', 'buried'] and len(st) == 1 and st_ok
+    return ok, 'rows %d (found on the tape %d, in the kin\'s cells by CALL %d), grades %s, the hole %d, the OPEN rows %d, open-flagged %d, the SUPPLIED rows %s with their writes %s, the STRETCH rows %d measured on the running world %s' % (len(rows), on_tape, by_call, dict(gs), len(holes), len(opens), sum(1 for r in rows if r.get('open')), [r['verses'] for r in sup], [r.get('write') for r in sup], len(st), st_ok)
+def q26():
+    def ENT(*names):
+        for n_ in names:
+            if n_ in W.entities: return W.entities[n_]
+        return None
+    fp = [e for e in EV if e[2]['kind'] == 'fragments_placed_in_the_ark']; ab = [e for e in EV if e[2]['kind'] == 'aaron_buried']
+    mk = {str(l[2].get('verse', '')): l for l in W.log if l[0] == 'MARKER'}; nm = len([l for l in W.log if l[0] == 'MARKER'])
+    D_ = lambda ev: ex.date(ev[0][2]['dated']) if ev and ev[0][2].get('dated') is not None else None
+    m2 = mk.get('Deut 10:2'); m6 = mk.get('Deut 10:6'); m12 = mk.get('Deut 10:12')
+    r2 = bool(m2) and bool(m2[2].get('retrograde')) and m2[2].get('stated') is not None and ex.date(m2[2]['stated']) == (2, 1, 1)
+    r6 = bool(m6) and bool(m6[2].get('retrograde')) and m6[2].get('stated') is not None and ex.date(m6[2]['stated']) == (40, 5, 1)
+    fwd = bool(m12) and not m12[2].get('retrograde') and ex.date(m12[1]) == (40, 11, 1)
+    ark = ENT('the_ark', 'the-ark'); aa = ENT('aaron')
+    fi = [e for e in ark.ledger if e['effect'] == 'fragments_in_the_ark'] if ark else []; bu = [e for e in aa.ledger if e['effect'] == 'buried'] if aa else []
+    DW = lambda ws: ex.date(ws[0]['dated']) if ws and ws[0].get('dated') is not None else None
+    got = (len(fp), D_(fp), len(ab), D_(ab), r2, r6, fwd, nm, ex.date(W.clock.day), len(fi), str(fi[0].get('case_source', ''))[:9] if fi else None, DW(fi), len(bu), str(bu[0].get('case_source', ''))[:9] if bu else None, DW(bu), sorted({e[2].get('placement') for e in fp + ab}), all('told only here' in str(e[2].get('first_telling', '')) for e in fp + ab) and bool(fp + ab))
+    return got == (1, (2, 1, 1), 1, (40, 5, 1), True, True, True, 172, (40, 11, 1), 1, 'Deut 10:2', (2, 1, 1), 1, 'Deut 10:6', (40, 5, 1), ['reading_placed'], True), 'got (fragments_placed_in_the_ark, its dated day, aaron_buried, its dated day, the RETROGRADE marker at Deut 10:2 stated (2, 1, 1), the RETROGRADE marker at Deut 10:6 stated (40, 5, 1), the FORWARD marker at 10:12 at the counter\'s day, markers, the counter, fragments_in_the_ark on the ark, its source, its dated day, buried on aaron, its source, its dated day, the lines\' placement, first_telling told only here) = %s' % (got,)
+def q27():
+    import yaml as _y
+    def ENT(*names):
+        for n_ in names:
+            if n_ in W.entities: return W.entities[n_]
+        return None
+    def L(ent, eff):
+        e_ = ENT(*ent) if isinstance(ent, tuple) else ENT(ent); return [e for e in e_.ledger if e['effect'] == eff] if e_ else []
+    OWN = ('demand_declared', 'heart_circumcision_commanded', 'stranger_love_commanded', 'cleaving_commanded')
+    own = [e for e in EV if e[2]['kind'] in OWN]
+    i12 = [i for i, l in enumerate(W.log) if l[0] == 'MARKER' and str(l[2].get('verse', '')) == 'Deut 10:12']
+    idx = {id(l): i for i, l in enumerate(W.log)}
+    after = bool(i12) and all(idx[id(e)] > i12[0] for e in own)
+    days = sorted({ex.date(e[1]) for e in own}); dated = sum(1 for e in own if e[2].get('dated') is not None)
+    W5 = [('fear_of_heaven_asked', 'Deut 10:1'), ('heart_circumcision_commanded', 'Deut 10:1'), ('stiffening_barred', 'Deut 10:1'), ('love_owed', 'Deut 10:1'), ('cleaving_commanded', 'Deut 10:2')]
+    w5 = tuple((len(L('israel_people', eff)), str(L('israel_people', eff)[0].get('case_source', ''))[:9] if L('israel_people', eff) else None) for eff, _ in W5)
+    dd = _y.safe_load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'daemon_dispositions.yaml'), encoding='utf-8'))
+    d = dd['daemons'].get('law_second_tablets', {})
+    lv = L(('the_levites', 'the-levites'), 'invested_office')
+    kin = (len(L('israel_people', 'shema_commanded')), len(L('israel_people', 'test_barred')), len(lv), tuple(lv[0]['value']) if lv and isinstance(lv[0].get('value'), (list, tuple)) else (lv[0].get('value') if lv else None), len(L(('the_levites', 'the-levites'), 'given_to_aaron')), len(L(('the_levites', 'the-levites'), 'inheritance_barred')), len(L('aaron', 'inheritance_barred')), len(L(('the_levites', 'the-levites'), 'tithe_granted')), len(ENT('aaron').ledger) if ENT('aaron') else None, len(L(('eleazar', 'eleazar_son_of_aaron'), 'invested_office')))
+    got = ([e[2]['kind'] for e in own], after, days, dated, w5, kin, 'law_second_tablets' in dd['daemons'], d.get('given_at'), d.get('installed_by'))
+    return got == (list(OWN), True, [(40, 11, 1)], 0, ((1, 'Deut 10:1'), (1, 'Deut 10:1'), (1, 'Deut 10:1'), (1, 'Deut 10:1'), (1, 'Deut 10:2')), (1, 1, 1, (1, 2), 2, 1, 1, 1, 30, 1), True, 'Deut 10:1', 'boot'), 'got (the four own-day lines in the ink\'s order, all after the forward marker at 10:12, their day, dated fields (none), the five writes on israel_people with their sources\' heads (fear_of_heaven_asked, heart_circumcision_commanded, stiffening_barred, love_owed, cleaving_commanded), THE KIN STANDING (shema_commanded, test_barred, invested_office on the Levites and its value (1, 2), given_to_aaron TWO, inheritance_barred on the Levites and on aaron, tithe_granted, aaron\'s entries 30, eleazar\'s invested_office ONE), the daemon registered, given_at, installed_by) = %s' % (got,)
+
 print('READBACK PROBES (THE LOOP step 6, the first form)')
-for n, f in (('Q1 the table', q1), ('Q2 found', q2), ('Q3 the close by a prior run', q3), ('Q4 the retrograde dating', q4), ('Q5 the open disagreements', q5), ('Q6 the register seats', q6), ('Q7 chapter 4\'s table', q7), ('Q8 the Horeb lines dated', q8), ('Q9 the seats and the debit after chapter 4', q9), ("Q10 chapter 5's table — the laws' readback", q10), ('Q11 the request and the answer dated; the charge closed by the prior run', q11), ('Q12 the seats after chapter 5; the code\'s hole filled', q12), ('Q13 chapter 6\'s table — the readback\'s third form', q13), ('Q14 the two lines on the speech\'s day, no marker', q14), ('Q15 the receipt without the Name; the pointer; the daemon', q15), ('Q16 chapter 7\'s table — the readback on the kin', q16), ('Q17 the three lines on the speech\'s day, no marker; the seven writes', q17), ('Q18 the kin stands; the daemon', q18), ('Q19 chapter 8\'s table — the readback\'s fifth form, the retelling of a state', q19), ('Q20 the three lines on the speech\'s day, no marker; the three writes', q20), ('Q21 the kin stands; the daemon', q21)):
+for n, f in (('Q1 the table', q1), ('Q2 found', q2), ('Q3 the close by a prior run', q3), ('Q4 the retrograde dating', q4), ('Q5 the open disagreements', q5), ('Q6 the register seats', q6), ('Q7 chapter 4\'s table', q7), ('Q8 the Horeb lines dated', q8), ('Q9 the seats and the debit after chapter 4', q9), ("Q10 chapter 5's table — the laws' readback", q10), ('Q11 the request and the answer dated; the charge closed by the prior run', q11), ('Q12 the seats after chapter 5; the code\'s hole filled', q12), ('Q13 chapter 6\'s table — the readback\'s third form', q13), ('Q14 the two lines on the speech\'s day, no marker', q14), ('Q15 the receipt without the Name; the pointer; the daemon', q15), ('Q16 chapter 7\'s table — the readback on the kin', q16), ('Q17 the three lines on the speech\'s day, no marker; the seven writes', q17), ('Q18 the kin stands; the daemon', q18), ('Q19 chapter 8\'s table — the readback\'s fifth form, the retelling of a state', q19), ('Q20 the three lines on the speech\'s day, no marker; the three writes', q20), ('Q21 the kin stands; the daemon', q21), ('Q22 chapter 9\'s table — the readback\'s sixth form, the retelling of a stretch', q22), ('Q23 the retrograde line and its write; the two markers', q23), ('Q24 the kin stands; the clock read back; the daemon', q24), ('Q25 chapter 10\'s table — the forms combined, no seventh', q25), ('Q26 the two retrograde lines and their writes; the three markers', q26), ('Q27 the four own-day lines and their writes; the kin stands; the daemon', q27)):
     probe(n, f)
 n_ok = sum(1 for _, ok in R if ok)
 print('readback_probes: %d/%d' % (n_ok, len(R)))

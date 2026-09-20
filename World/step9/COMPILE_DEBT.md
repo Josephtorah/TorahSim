@@ -1776,7 +1776,7 @@ follows the last check mark.
 ## NOTHING ELSE IN CHAPTER 8 IS OWED TO A LATER SITTING OF ITS OWN.
 
 
-## SITTING 7 — CHAPTER 9 (2026-09-19, the reading; deu_09_not_righteousness frozen) — OWED TO THE COMPILE 7b: (a) THE READBACK'S ROWS OF THE CALF — 9:8-21 and 9:25-29
+## SITTING 7 — CHAPTER 9 (2026-09-19, the reading; deu_09_not_righteousness frozen) — PAID AT 7b (the 7b box below, item by item) — AS WRITTEN AT THE READING, OWED TO THE COMPILE 7b: (a) THE READBACK'S ROWS OF THE CALF — 9:8-21 and 9:25-29
 ## against the kitisa runner's lines (the calf made, God's word to go down, the offer, the prayer, the tablets broken, the calf burned), the ascent's (Exodus
 ## 24:12-18), the second tablets' (34:1-4, 28) and the craftsmen's (31:18): 9:13 VERBATIM (eleven of thirteen tokens with Exodus 32:9), 9:12 VARIANT, 9:9 and 9:18
 ## VARIANT (the forty days), 9:21 VARIANT (the calf ground), 9:17 EXPANDED in Moses' own words, 9:19 TURNED (the relenting as "hearkened"); (b) AARON'S PERIL (9:20)
@@ -1794,3 +1794,122 @@ follows the last check mark.
 ## Menachot 99a-b and Bava Batra 14b (the broken tablets in the ark), Ta'anit 4:6 and 28b, Avodah Zarah 43b-44a with Mishnah Avodah Zarah 3:3 (the calf's
 ## destruction the idol's), Sanhedrin 102a and Vayikra Rabbah 10:5 (Aaron), Beitzah 25b (the stiff neck), Shabbat 55a (the merit of the fathers), Devarim Rabbah 2:1
 ## (the ten names of prayer) — EVERY ROW WHOLE; a docket past ~700 rows its own run. NOTHING ELSE IN CHAPTER 9 IS OWED TO A LATER SITTING OF ITS OWN.
+
+## DEUTERONOMY SITTING 7b — THE COMPILE OF CHAPTER 9 (2026-09-19; DEUTERONOMY_WALK.md "Sitting 7b" design + THE DOCKET — AS RUN + AS BUILT; logic/oral_triage/deu_09_ekev_exam_2026-09-19.md
+## 397 rows, every row read whole from the start; cold_run_not_righteousness.py 51/51; law_not_righteousness the 69th daemon; the tape 10/10 with RUN (1311, 96, 88, 0, 12, 1606, 40, 319, pairs, 127)).
+## THE SITTING-7 BOX (a)-(j) PAID — (a) THE READBACK'S ROWS OF THE CALF — F2 and F6: thirty-two rows against the erection runner's lines (calf_made, moses_interceded twice,
+## tablets_broken, calf_destroyed, moses_ascended) and its cells by CALL; 9:13 VERBATIM (eleven of thirteen), 9:12 VARIANT, 9:9 and 9:18 EXPANDED as STRETCHES (the sixth
+## form), 9:21 VARIANT (the fourth verb dropped), 9:17 EXPANDED (the breaking approved at three seats), 9:19 TURNED; (b) AARON'S PERIL (9:20) — F4: the RETROGRADE WRITE at
+## the morrow of the breaking (1, 4, 18) — the line prayed_for_aaron, the status destruction_halved on aaron (Vayikra Rabbah 10:5), the stretch ended at 9:21; (c) THE
+## STATE "stiff-necked" — F1 stiff_necked: NOTHING on the tape — a state in the first telling, no write, the scan empty at build and at DA6; the six seats a DATA row; (d)
+## THE THREE FORTIES — F3: the clock's markers (1, 3, 7) → (1, 4, 17) → (1, 4, 18) → (1, 5, 29) → (1, 7, 10), the stretches 40 / 40 / 40 measured on the running world (DA4,
+## Q24) and on the runner's bare world; Ta'anit 4:6 MATCH, 28b:9's 24 + 16 reproduced; Shabbat 88a:3's two arms recorded; the second ascent's date OPEN; (e) THE FOUR
+## PROVOCATIONS — F5: the rows 9:22 (three) and 9:23 (two) against fire_of_the_lord_burned, named (Exod 17:7), quail_and_plague, congregation_wept by kind and the kin's cells
+## by CALL, out of the tape's order (a DATA row); TABERAH NOT AMONG THE TEN TRIALS (a DATA row); (f) THE INTERCESSION'S SECOND TELLING — F6: 9:26-29 against moses_interceded
+## (32:11-14) and moses_pleaded_on_the_attributes (Num 14:11-19); the three swaps and the taunt's four forms DATA rows; Solomon and Nehemiah a DATA row; the merit of the
+## fathers a PARAMETER (two arms, four dates) with two exam persons; (g) THE OFFER'S THREE FORMS — a DATA row, the offer fulfilled outside the Torah (Berakhot 7a:35-36);
+## (h) THE THREE SPELLINGS OF "TABLETS" — a DATA row (the erection's count by CALL); (i) THE CHECKPOINT PREFIX SPACE — THE D SERIES OPENED, DA1-DA9 (measured at the design,
+## no code assuming a letter); (j) THE DOCKET — 397 rows by the union rule, EVERY ROW WHOLE FROM THE START (its own run in RUN A's window). OWED FROM 7b: (i) THE FRAGMENTS
+## IN THE ARK — 10:1-5's line at chapter 10's compile writes the fragments' entry (Menachot 99a:12; Bava Batra 14b:4-7; erection.tablets('fragments_by_call') = both_in_the_ark;
+## the tape's testimony_placed at 40:20 holds tablets_delivered on the ark); (ii) THE CALF'S OWN DAY — the marker at the sixteenth of Tammuz (Shabbat 89a:6, the fortieth
+## day's sixth hour; the ascent + 39) ON THE OWNER'S WORD: the tape's calf_made and the first intercession sit on the ascent's day (1, 3, 7) unmarked; (iii) THE SECOND
+## ASCENT'S DATE — the machine's 29 Av against the tradition's 1 Elul (two days by the calendar): the parameter's own open row, Seder Olam Rabbah 6 unreachable in the
+## export; (iv) 10:10's forty (the third forty's end on 10 Tishri — CAL_PARAMS second_tablets_given) and 10:4's "the ten words" at chapter 10, citing 9:9-11 by CALL;
+## (v) THE RECORDER RUNS WITH THE CACHE OFF and THE CACHE'S EIGHTEENTH SLIP (the sequence file in the key) — GATES_CHAIN.md's D38 note (paid in this sitting's records);
+## (vi) 10:12's "what does the LORD your God ask of you" (6b's owed item, unchanged); (vii) the crowns of Horeb (Exodus 33:1-6 — no line) and the three requests (33:12-23 —
+## no line) named as holes outside this chapter's span — an Exodus 33 sitting's, if ever; (viii) THE OWNER'S WORD ON THE SUPPLIED-WITH-A-WRITE form — the sixth form's
+## decision 1 (an act told only in the retelling written at its own day) stands as the design's, the retelling rules' own; ON THE TABLE with the fifth form's SUPPLIED.
+## NOTHING ELSE IN CHAPTER 9 IS OWED TO A LATER SITTING OF ITS OWN.
+
+
+## SITTING 8 — CHAPTER 10 (2026-09-20, the reading; deu_10_second_tablets frozen) — PAID AT 8b (the 8b box below, item by item) — AS WRITTEN AT THE READING, OWED TO THE COMPILE 8b: (a) THE FRAGMENTS IN THE ARK — 10:1-5 against the second
+## tablets' lines (Exodus 34:1-4, 28-29) and the ark's (25:10-16, 37:1-9, 40:20): the ark made BEFORE the ascent and the tablets put in it "as the LORD commanded me";
+## 7b's owed item (i) — the shelf's two arks (Bava Batra 14a-b, Menachot 99a-b: the tablets and the broken tablets in one ark); the readback's rows — 10:2 VERBATIM
+## with Exodus 34:1 (eleven of fourteen) and the ark's clause ADDED, 10:1 VARIANT (the spelling), 10:3 and 10:5 EXPANDED (the ark), 10:4 VARIANT; (b) THE RECEIPT SEATS
+## — 10:5 "as the LORD commanded me" (the register gate lists it declared NONE — its disposition the compile's; 4:5 the kin) and 10:9 "as the LORD your God spoke to
+## him" (by "spoke" — the finder's third form, 4b's owed item; Numbers 18:20 the word); (c) THE STATIONS AND AARON'S DEATH — 10:6-7 against Numbers 33:30-39 (the
+## order reversed: Moseroth then Bene-jaakan there, Beeroth-bene-jaakan then Moserah here) and 20:22-29 (Aaron dies at Mount Hor on the tape, dated the fortieth
+## year's fifth month; at Moserah in the retelling): an OPEN row, the shelf's answer at the docket (Seder Olam 9-10; Rosh Hashanah 3a, Ta'anit 9a); "and he was
+## buried there" the Torah's one seat; (d) "AT THAT TIME" THE LEVITES SEPARATED (10:8) — which time: the calf's (Exodus 32:26-29 "fill your hand") or Numbers 8:14's
+## line on the tape; the three offices (to carry — Numbers 4; to stand and minister — 18; to bless — 6:23-27, the blessing ledger's 10:8 note) by CALL; 10:9 against
+## Numbers 18:20-24 and 18:1-2 (the LORD his inheritance — Onkelos's gifts); (e) THE THIRD FORTY'S END (10:10 — the second ascent to 10 Tishri on 7b's clock: the
+## third stretch row; Seder Olam 6; Ta'anit 30b) and 10:11 against Exodus 32:34 and 33:1 (the command to go; 31:7 and Joshua 1:6 the charge repeated); (f) THE LAWS
+## RESTATED — 10:12-13 and 10:20 against 6:5's and 6:13's cells (hear_o_israel by CALL; 10:20 6:13 with a FOURTH clause "and to Him you shall cleave"), 10:17-19
+## against Exodus 22:20-23, 23:8-9 (the ordinances runner) and Leviticus 19:33-34 (Kedoshim) — the laws' form on the kin, every row graded against the cell that
+## compiles it; (g) "WHAT DOES THE LORD YOUR GOD ASK OF YOU" (10:12 — 6b's and 7b's owed item (vi) paid here: the demand in five infinitives; Berakhot 33b "is the
+## fear of heaven a small thing?", Menachot 43b a hundred blessings from "what", Shabbat 31b, Sotah 14a); (h) THE ATTRIBUTES (10:17 — "God of gods and Lord of lords"
+## Psalm 136:2-3; the great, mighty and awesome God — Yoma 69b's great assembly restoring what Jeremiah and Daniel dropped, Berakhot 33b's one who adds, Megillah
+## 25a; "who lifts no face" against Numbers 6:26's "the LORD lift His face" — Berakhot 20b, Niddah 70b, the Sifrei on Numbers 42:2, the blessing ledger's three
+## reconciliations; the bribe — Ketubot 105a-b, 16:19 the law's seat by CALL); (i) THE STRANGER (10:18-19 — "and you shall love" five in the Torah; "for you were
+## strangers" at all four seats; Onkelos's convert and dwellers; Bava Metzia 59b the thirty-six warnings; Yevamot 47a-b); (j) THE HEART'S FORESKIN AND THE NECK
+## (10:16 — the chapter's one prohibition; the stiff neck 7b left as a state, now a command; 30:6 the LORD circumcises); (k) THE SEVENTY AND THE STARS (10:22 — the
+## register's seat "souls [70]" declared NONE; the Joseph runner's cell by CALL; Bava Batra 123a-b Jochebed the seventieth; the shelf's two spellings of the quoted
+## verse a DATA row; 1:10 and 28:62 the kin); (l) THE PARSER ON "FIRST" — the plural no ordinal, the singular with the article one — a DATA row; NO MEMRA in the
+## chapter a DATA row; (m) THE CHECKPOINT SERIES continues (DA the open series — DA9 the last name; the next DB1, keyed by its first word); (n) THE DOCKET by the
+## union rule — Bava Batra 14a-b, Menachot 99a-b, Berakhot 8b (the ark), Mishnah Shekalim 6:1-2 (the ark hidden), Berakhot 33b, Menachot 43b, Shabbat 31b, Sotah 14a
+## (the demand and the ways), Yoma 69b, Megillah 25a, Berakhot 20b, Niddah 70b, Mishnah Berakhot 9:5 (the attributes), Ketubot 105a-b (the bribe), Bava Metzia 59b,
+## Yevamot 47a-b (the stranger), Ketubot 111b, Shevuot 35b, Temurah 3b-4a, Sanhedrin 56a (the four clauses), Bava Batra 123a-b (the seventy), Rosh Hashanah 3a,
+## Ta'anit 9a, Seder Olam 6 and 9-10 (Aaron and the forty), Mishnah Sotah 7:6 (the blessing in the Name — 10:8) — EVERY ROW WHOLE; a docket past ~700 rows its own run.
+## NOTHING ELSE IN CHAPTER 10 IS OWED TO A LATER SITTING OF ITS OWN.
+
+## DEUTERONOMY SITTING 8b — THE COMPILE OF CHAPTER 10 (2026-09-20; DEUTERONOMY_WALK.md "Sitting 8b" design + THE DOCKET — AS RUN + AS BUILT; logic/oral_triage/deu_10_ekev_exam_2026-09-20.md
+## 532 rows, every row read whole from the start; cold_run_second_tablets.py 62/62; law_second_tablets the 70th daemon; the tape 10/10 with RUN (1317, 96, 88, 0, 12, 1613, 41, 319, pairs, 127)).
+## THE SITTING-8 BOX (a)-(n) PAID — (a) THE FRAGMENTS IN THE ARK — F1: the T2 row SUPPLIED WITH A WRITE, the retrograde line fragments_placed_in_the_ark at the erection's day (2, 1, 1),
+## the status fragments_in_the_ark on the ark with the docket's value (the tablets and the fragments; the scroll inside or beside); 7b's owed item (i) PAID; (b) THE ARK ONE — F1 the_ark_is_one:
+## the Bavli's "the ark that Moses fashioned" (Bava Batra 14a:8) against the Tosefta's two (Sotah 7:9 — a DISPUTE row); the registry's homograph (one id for tevah and aron) a DATA row, the
+## split owed to a gate sitting; (c) THE STATIONS AND AARON'S BURIAL — F2: the stations reversed VARIANT by CALL (journeys.the_stations('moseroth_seven')); the burial SUPPLIED WITH A WRITE
+## at his death (40, 5, 1), buried REUSED (the ninth); THE PLACE OPEN (Moserah / Mount Hor — the retreat of seven stations the parameter already on file, no marker); (d) "AT THAT TIME"
+## THE LEVITES — F3: the tape's own (1, 4, 17), the three offices by CALL (bamidbar, beha, korach, naso), 10:9 portion_declared by kind; "which time" asked by no row (a DATA row); the receipt
+## "spoke to him" the finder's third form (4b's owed item stands); (e) THE THIRD FORTY — F4: the stretch row from the marker at 34:4 to the timers' fire = 40 (DB4); THE SECOND ASCENT'S
+## DATE MATCH — Seder Olam Rabbah 6:2 (7b's owed item (iii) PAID; the "first of Elul" not this shelf's text); (f) THE GO — F4: VARIANT, the hole named OUTSIDE the span (Exodus 32:34,
+## 33:1-3 — an Exodus 33 sitting's; 7b's (vii) form); the charge to Joshua a DATA row; (g) THE DEMAND (10:12-13) — F5: the line demand_declared writing fear_of_heaven_asked (Berakhot 33b:23 —
+## 6b's and 7b's owed item 10:12 PAID); the five infinitives by CALL (hear_o_israel, good_land), "with all your might" dropped a DATA row; (h) THE HEART AND THE NECK (10:16) — F5: the line
+## heart_circumcision_commanded writing the status (the evil inclination — Sukkah 52a:7) and the block stiffening_barred (the chapter's one prohibition; no lashes); the grammar guard
+## (Shabbat 108a:7) a DATA row; (i) THE STRANGER'S LOVE (10:19) — F6: the line stranger_love_commanded writing love_owed FOR THE FIRST TIME (Leviticus 19:34's cell by CALL; a DEBIT by its
+## registry op, the stranger the counterparty); 10:17-18's attributes, face and bribe declarations by CALL, no write; (j) THE CLEAVING (10:20-22) — F6: the line cleaving_commanded writing
+## the status (the scholars — Ketubot 111b:7); the four clauses positive (Temurah 4a:2); 10:22's seventy by CALL (joseph), the register seat NONE with the compile's why; (k) 10:4's "the
+## ten words" and 10:10's forty citing 9:9-11 by CALL (7b's owed item (iv) PAID); (l) THE READBACK'S FORMS COMBINED, NO SEVENTH — twenty-five rows; (m) THE CHECKPOINTS DB1-DB9 (the D
+## series' second name); (n) THE DOCKET — 532 rows by the union rule, EVERY ROW WHOLE FROM THE START (its own run in RUN A's window). OWED FROM 8b: (i) THE REGISTRY'S HOMOGRAPH — one id
+## the_ark for the flood's tevah and the sanctuary's aron (rested_on_ararat beside ark_spec): a split owed to a gate sitting ON THE OWNER'S WORD; (ii) THE RECEIPT FINDER'S THIRD FORM
+## ("as the LORD your God SPOKE to him", 10:9; 4b's owed item) — a gate sitting's; (iii) THE CALF'S OWN DAY — the marker at the sixteenth of Tammuz (Shabbat 89a:6) ON THE OWNER'S WORD
+## (7b's (ii), unchanged); (iv) THE EXODUS 33 HOLES — the go (32:34, 33:1-3), the crowns (33:1-6) and the three requests (33:12-23) with no line: an Exodus 33 sitting's, if ever (7b's
+## (vii), the go joined); (v) love_owed's OPEN DEBIT on Israel toward the stranger — a standing duty with no closer on the tape (Leviticus 19:34's form): its closer, if any, a later
+## sitting's question (the register's open debits 8 -> 9); (vi) 30:6's "the LORD your God will circumcise your heart" (the passive forward — chapter 30's compile cites 10:16 by CALL);
+## 31:26's "beside the ark" (R. Yehuda's arm the ink's own — chapter 31's); 16:19's bribe command (chapter 16's — Exodus 23:8's block written at last there?); 28:62's "as the stars"
+## (chapter 28's); 13:5's "walk after Him" (chapter 13's — Sotah 14a's attributes); (vii) THE OWNER'S WORD ON THE SUPPLIED FORMS — the fifth's (no write) and the sixth's (with a write,
+## twice here) stand as the designs', the retelling rules' own; ON THE TABLE. NOTHING ELSE IN CHAPTER 10 IS OWED TO A LATER SITTING OF ITS OWN.
+
+
+## SITTING 9 — CHAPTER 11 (2026-09-20, the reading; deu_11_bless_curse_set frozen) — OWED TO THE COMPILE 9b: (a) THE RAIN CONDITIONAL (11:13-17) — NO CELL ANYWHERE IN
+## THE MACHINE: a NEW cell with Leviticus 26:3-5 and 19-20 by CALL (the rains in their season, the heavens as iron), 28:12 the treasure and 11:17 the shut heavens the
+## pair the shelf reads (40:12; 306:4, 306:6, 306:9 — "shut" defined by the wombs, Genesis 16:2 and 20:18), the year judged at its head and the rain's measure moved by
+## the deeds (40:5-14; Rosh Hashanah 16a-17b; Mishnah Rosh Hashanah 1:2), the mention and the request of rain (Ta'anit 2a-3a; Mishnah Ta'anit 1:1-3; Berakhot 33a) —
+## the effect a STATUS on the land and a BLOCK on the heavens; (b) THE FRONTLETS, THE TEACHING AND THE DOORPOSTS SAID AGAIN IN THE PLURAL (11:18-20) — 6:8-9's cell
+## (hear_o_israel) by CALL: the four compartments over THE SPELLINGS' OPEN ROW (35:4; 6:8 defective, 11:18 and Exodus 13:16 with the first vav — measured on the
+## pointed tokens; Menachot 34b, Sanhedrin 4b), the doorposts' two plurals (36:3; Menachot 34a), "teach" the piel against 5:1's qal, sons not daughters (46:1;
+## Kiddushin 29b), the second paragraph's place after the first (Mishnah Berakhot 2:2; Berakhot 13a); (c) THE BORDERS (11:24) — Numbers 34 by CALL; the returners'
+## two lines (51:2 — Mishnah Sheviit 6:1 quoted inside the Sifrei; Gittin 8a; the Tosefta Sheviit 4:11 the baraita of the borders, 51:3's thirty-five names) a
+## PARAMETER; the conquest abroad after the Land (51:1 — David's Aram the counter-case; the verbal analogy "shall be" with Numbers 34:6); (d) THE DREAD AND THE
+## RECEIPT (11:25) — "as He spoke to you" pointed at Exodus 23:27 by 52:4 (the terror sent before; the escort runner's cell): a RUN_CITATION pointer with its why —
+## THE FINDER'S THIRD FORM (4b's owed item) measured here at a seat the register gate lists nowhere ("as He spoke" sixteen in the book); the dread on the near and
+## the fear on the far (52:2 — Rahab's Red Sea, Joshua 2:10; Jericho the particular); the pilgrimage guarded (52:4; Exodus 34:24 by CALL; Pesachim 8b); (e) THE
+## DISPOSSESSION (11:23) — "little by little" Exodus 23:29-30 by CALL (chapter 7's find), the sin the pace (50:2); "than you" plural against 4:38 and 9:1 (50:4);
+## (f) THE BLESSING AND THE CURSE SET (11:26-28) — the choice commanded (30:19 by CALL ahead; 53:1's crossroads), the blessing if / the curse if not (54:1), idolatry
+## the whole Torah's denial (54:4; Sotah 37a; the Sifrei on Numbers 111) — a STATUS on Israel: the set before them; (g) GERIZIM AND EBAL (11:29-30) — chapter 27's
+## ceremony by CALL (27:12-13; Mishnah Sotah 7:2-5; Sotah 32a-37b; the Tosefta Sotah 8:10): a blessing precedes a curse, the curses liken the blessings (55:2); the
+## mountains' place (56:3 — Genesis 12:6 by the analogy; R. Eliezer's five readings; Sotah 33b-34a; the Samaritan "Shechem" a variant reading — a DATA row); GILGAL the
+## Torah's one seat, Joshua 4:19-20 and 8:30-35 the run; (h) THE RETELLING ROWS (11:2-7) — the readback's reference rows against the tape's lines: the signs in
+## Egypt, the sea (Exodus 14 — 11:4 against 14:31 three tokens), the wilderness (chapter 8's state row), Dathan and Abiram (Numbers 16:31-33's line; Korah unnamed;
+## "every living thing" the flood's word; 16:14 their own milk and honey) — the generation that saw (11:7 — Joshua 24:31, Judges 2:7 the run); (i) THE STUDY AND
+## THE DEED (41:12-14 — the study first, the deed the greater; Kiddushin 40b) and THE DUTIES OF THE BODY AGAINST THE LAND-BOUND (44:1 — Kiddushin 36b-37a; Mishnah
+## Kiddushin 1:9) DATA rows; the exile's cause (43:34) and the dwelling weighed against all (80:4-5; Ketubot 110b-111a) DATA rows; (j) THE RESURRECTION FROM "TO THEM"
+## (47:2 — Sanhedrin 90b) and the three ages (47:1-2) DATA rows; the sixty ascents by gematria (47:4 — E29) a DATA row; (k) THE PARSER — no number verse in the
+## chapter, one starred token (11:15 "and you shall be satisfied"), "swore" twice no number — a DATA row; the Memra at 11:1, the export's parenthesis at 11:8, the
+## tefillin at 11:18 DATA rows; MOSES UNNAMED chapters 6-14 a DATA row; (l) THE LAND'S ONE GARDEN (11:10 — Genesis 13:10 Lot's clause) and the one spelling quoted
+## plene by the Sifrei (11:12; 40:8-10) DATA rows for the census; (m) THE CHECKPOINT SERIES continues (DB the open series — DB9 the last name; the next DC1, keyed by
+## its first word); (n) THE DOCKET by the union rule — Mishnah Berakhot 2:2, Berakhot 13a-16a (the paragraphs' order); Menachot 34a-37b and Kiddushin 29a-30b
+## CREDITED from 4b's docket (every row read whole there); Kiddushin 36b-37a (the land-bound); Kiddushin 40b (study and deed); Ta'anit 2a-3a, 7a-10a (the rain);
+## Mishnah Ta'anit 1:1-3; Rosh Hashanah 16a-17b, Mishnah Rosh Hashanah 1:2 (the year judged); Berakhot 33a (the mention of rain); Gittin 8a, Mishnah Sheviit 6:1 (the
+## borders); Pesachim 8b (the pilgrimage guarded); Sotah 32a-37b, Mishnah Sotah 7:2-5 (the ceremony), Sotah 33b-34a (the mountains); Ketubot 110b-111a (the dwelling);
+## Sanhedrin 90b (the resurrection); Sotah 37a (idolatry); Sukkah 52a CREDITED from 8b (the inclination) — EVERY ROW WHOLE; a docket past ~700 rows its own run.
+## NOTHING ELSE IN CHAPTER 11 IS OWED TO A LATER SITTING OF ITS OWN.

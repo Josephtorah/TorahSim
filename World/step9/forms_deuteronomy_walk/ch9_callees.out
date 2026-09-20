@@ -1,0 +1,349 @@
+==== ER cells: ['E', 'align', 'anytok', 'ascent', 'bag', 'blood_covenant', 'build', 'calf', 'cell', 'cloud', 'command', 'covenant', 'craftsmen', 'delta', 'donation', 'execution', 'first_in', 'fmt', 'fmt2', 'has', 'initiations', 'jac', 'law_erection', 'load', 'mrow', 'nations', 'norm', 'phrase', 'presence', 'raw', 'repeats', 'scene', 'scene_counts_w6', 'scene_counts_w7', 'seats', 'shares', 'strip', 'tablets', 'tanakh', 'tanakh_any', 'tanakh_phrase', 'toks', 'torah', 'torah_phrase']
+==== ER DATA keys: []
+==== cold_run_erection.ascent sig ('q',) (3348 chars) asks-in-source []
+def ascent(q):
+    if q == 'torah_mitzvah':
+        return cell(2, I, "24:12 'the tablets of stone, and THE TORAH AND THE COMMANDMENT which I have written to teach them' — the pair at %s (Kings' the other); 'to teach them' among the teach-infinitive's %d seats (%s)" % (fmt(c_torah_mitzvah), len(c_lehorot), fmt(c_lehorot)), ['tablets_delivered'])
+    if q == 'canon_channel':
+        return cell(('tablets', 'torah', 'commandment', 'prophets_writings', 'gemara'), M, CVB + "Berakhot 5a:3 — THE CANON CHANNEL from the one verse: 'the tablets — the ten utterances; the torah — Scripture; the commandme
+
+  erection.ascent('forty')                               {'v': 9, 'p': 'INK', 'why': "24:18 'Moses was on the mountain FORTY DAYS AND FORTY NIGHTS' — the phrase at 9 seats: Noah's rain twice, Moses' three ascents (24:18, 34:28; Deut 9:9, 9:11, 9:18, 10:10), Elijah's walk (1 Kgs 19:8)", 'fx': ['—']}
+  erection.ascent('seventeenth_tammuz')                  {'v': '17_tammuz', 'p': 'MOVE', 'why': "the covenant block (round 23, credited): Taanit 28b:9-10 (via Yoma 4b) — 24:16's seventh day (Sivan 7) plus 24:18's forty days and nights = the SEVENTEENTH OF TAMMUZ, 'he came down and broke the tablets' (32:19); Mishnah Taanit 4:6's first of the five things computed from this span's two timestamps", 'fx': ['tablets_delivered']}
+  erection.ascent('sheet_taanit_4_6')                    {'v': 'tablets_broken_17_tammuz', 'p': 'ANSWER-SHEET', 'why': "Mishnah Taanit 4:6 — five things befell our fathers on the seventeenth of Tammuz: THE TABLETS WERE BROKEN, the tamid ceased, the city breached, the Torah burned, an idol set up; the Ninth of Av's five from 40:17's second year (Taanit 29a:2 credited)", 'fx': ['tablets_delivered']}
+  erection.ascent('six_seventh')                         {'v': (1, 1), 'p': 'INK', 'why': "24:16 'the cloud covered it SIX DAYS and He called to Moses on the SEVENTH DAY' — the creation week's two tokens once each in the verse ((1, 1)); the six days the sequestering's source (Yoma 3b:14, the covenant block credited)", 'fx': ['—']}
+  erection.ascent('under_mountain')                      {'v': 3, 'p': 'INK', 'why': "'UNDER THE MOUNTAIN' at ['Deut 4:11', 'Exod 24:4', 'Exod 32:19'] — the covenant altar (24:4), the tablets' breaking (32:19), and Deuteronomy's 'you stood under the mountain' (4:11): the altar and the breaking at one place-token", 'fx': ['—']}
+  erection.ascent('canon_channel')                       {'v': ('tablets', 'torah', 'commandment', 'prophets_writings', 'gemara'), 'p': 'MOVE', 'why': "the covenant block (round 23, credited): Berakhot 5a:3 — THE CANON CHANNEL from the one verse: 'the tablets — the ten utterances; the torah — Scripture; the commandment — Mishnah; which I have written — the Prophets and Writings; to teach them — Gemara' (Berakhot 48b:10, the conduct block: the Torah's blessing from the same 'I will give')", 'fx': ['oral_law_unwritten']}
+==== cold_run_erection.calf sig ('q',) (11302 chars) asks-in-source []
+def calf(q):
+    if q == 'molten_calf':
+        return cell(4, I, "'a MOLTEN CALF' at %s — the two calf verses, Deuteronomy's retelling, and Nehemiah's confession; 'these are your gods, Israel' at %s and 'who brought you UP' (plural) at %s — Jeroboam's calves at Bethel and Dan (1 Kgs 12:28) the formula's run" % (fmt(c_molten_calf), fmt(c_these_gods), fmt(c_heelukha)), ['molten_image_barred'])
+    if q == 'vav_plural':
+        return cell('they_desired_many_gods', M, CPB + "Sanhedrin 63a:17 — R. Shimon b. Yochai: 'which brought you UP' (plural) — they desired many gods; Avodah Zarah 53b:10 (opened): the plural formula proves the intent for Mishnah Avodah Zarah 4:4's 'an Israelite's idol forbidden once worshipped'", ['molten_image_barred'])
+    if q == 'chag_layhwh':
+        return cell(5, I, "32:5 'a FEAST TO THE LORD tomorrow' — Aaron's phrase at %s: the Passover's (12:14, 13:6), the calf's, Sukkot's (Lev 23:41, Num 29:12); 32:6 'they offered burnt offerings and BROUGHT peace offerings' — 'brought peace offerings' a hapax: the calf's feast in the altar's own two nouns" % (fmt(c_chag_layhwh),), ['accepted'])
+    if q == 'services_by_call':
+        return cell(ORD_ROW, P, "32:8 'they
+
+  erection.calf('molten_calf')                           {'v': 4, 'p': 'INK', 'why': "'a MOLTEN CALF' at ['Deut 9:16', 'Exod 32:4', 'Exod 32:8', 'Neh 9:18'] — the two calf verses, Deuteronomy's retelling, and Nehemiah's confession; 'these are your gods, Israel' at ['Exod 32:4', 'Exod 32:8'] and 'who brought you UP' (plural) at ['1Kgs 12:28', 'Exod 32:4', 'Exod 32:8'] — Jeroboam's calves at Bethel and Dan (1 Kgs 12:28) the formula's run", 'fx': ['molten_image_barred']}
+  erection.calf('saru_stiff')                            {'v': (3, 6), 'p': 'INK', 'why': "'they have turned QUICKLY' at 3 seats (['Deut 9:12', 'Exod 32:8', 'Judg 2:17']); 'STIFF-NECKED' at 6 (['Deut 9:6', 'Deut 9:13', 'Exod 32:9', 'Exod 33:3', 'Exod 33:5', 'Exod 34:9']) — four in this span, the phrase born at the calf", 'fx': ['—']}
+  erection.calf('seized')                                {'v': 'moses_seized_him', 'p': 'MOVE', 'why': "Berakhot 32a:16 (opened) — 32:10 'LET ME ALONE' (a hapax): R. Abahu — 'were it not written one could not say it': Moses SEIZED the Holy One as a man seizes his fellow's garment — 'I will not release You until You forgive them' (Onkelos: desist from your prayer — the decree's clause revealing that prayer restrains it)", 'fx': ['decree_relented']}
+  erection.calf('three_legged')                          {'v': 'one_leg_cannot_stand', 'p': 'MOVE', 'why': "Berakhot 32a:17 (opened) — 'I will make YOU a great nation': R. Elazar — a three-legged chair (the fathers) cannot stand before Your anger, a one-legged chair how much less — the a-fortiori inside the intercession", 'fx': ['decree_relented']}
+  erection.calf('vayechal')                              {'v': 14, 'p': 'INK', 'why': "32:11 'and Moses BESEECHED' (ויחל) — the token at 14 seats of the Tanakh (Jehoahaz, Hezekiah's Micah, Jonah's Nineveh among them); Berakhot 30b:9: the prayer's posture from it", 'fx': ['decree_relented']}
+  erection.calf('vow_annulled')                          {'v': 'annulled_his_vow_by_the_vows_law', 'p': 'MOVE', 'why': "Berakhot 32a:19 (opened) — RAVA: 'vayechal' — until He ANNULLED His vow for Him: 'vayechal' here, 'he shall not profane (yachel) his word' there (Num 30:3) — he cannot annul but others annul for him: THE VOW-ANNULMENT LAW applied to the decree (R. Elazar: until He fell ill; Shmuel: Moses gave himself to death — 32a:20)", 'fx': ['decree_relented']}
+  erection.calf('oath_endures')                          {'v': 'oath_by_the_name_endures', 'p': 'MOVE', 'why': "Berakhot 32a:24 (opened) — 32:13 'whom You swore to them BY YOURSELF': had You sworn by heaven and earth, as they pass so the oath; by Your great Name — as it lives forever, the oath stands forever — the oath's durability read from its object", 'fx': ['decree_relented']}
+  erection.calf('relent')                                {'v': (5, 5), 'p': 'INK', 'why': "32:14 'and the LORD RELENTED of the evil' — 'and the LORD relented' at 5 seats (['2Sam 24:16', 'Exod 32:14', 'Gen 6:6', 'Jer 26:13', 'Jer 26:19']); 'relented... of the evil' at 5 (['1Chr 21:15', 'Exod 32:14', 'Joel 2:13', 'Jonah 3:10', 'Jonah 4:2']): Jonah's Nineveh, Joel's call, and DAVID'S CENSUS (1 Chr 21:15 — the plague halted: the incense-shekel engine's negative branch)", 'fx': ['decree_relented']}
+  erection.calf('four_verbs')                            {'v': ['וישרף', 'ויטחן', 'ויזר', 'וישק'], 'p': 'INK', 'why': "32:20 the calf's end in FOUR verbs — ['וישרף', 'ויטחן', 'ויזר', 'וישק']: burned, ground, scattered, made-to-drink; 'until it was fine' at ['Deut 9:21', 'Exod 32:20'] (Deut 9:21 adds 'to dust'); 'and made... drink' (וישק) at 13 seats, eight of them 'and he KISSED' — the drink-verb and the kiss-verb one written form", 'fx': ['ground_and_scattered', 'made_to_drink']}
+  erection.calf('nullification_dispute')                 {'v': ('grind_and_scatter', 'becomes_manure'), 'p': 'ANSWER-SHEET', 'why': "Mishnah Avodah Zarah 3:3 — R. Yosei: GRIND AND SCATTER to the wind or cast into the sea; the sages: even so it becomes manure ('you shall not let anything of the banned cleave to your hand', Deut 13:18) — the two arms", 'fx': ['ground_and_scattered']}
+  erection.calf('fourth_verb_decides')                   {'v': 'a_test_not_a_nullification', 'p': 'MOVE', 'why': "Avodah Zarah 44a:2 (opened) — the sages to R. Yosei: 'from there a proof? it says (32:20) he scattered on the water and made the children of Israel DRINK — he intended only to TEST them like suspected wives' — the fourth verb decides the reading of the second and third: the calf is no precedent for grinding", 'fx': ['made_to_drink']}
+  erection.calf('great_sin')                             {'v': 4, 'p': 'INK', 'why': "'a GREAT SIN' at ['Exod 32:21', 'Exod 32:30', 'Exod 32:31', 'Gen 20:9'] — three times in this chapter (Moses to Aaron, Moses to the people, Moses to God) and Abimelech's (Gen 20:9): the token shared by idolatry and adultery; Arakhin 15b:18 (opened): the slanderer's 'great things' weighed against it", 'fx': ['confessed']}
+  erection.calf('individual_rule')                       {'v': 'him_I_will_blot', 'p': 'INK', 'why': "32:33 'WHOEVER has sinned against Me, HIM I will blot from My book' — a hapax: substitution refused, each entry answering for itself (Onkelos: 'whoever sinned before Me, HIM'); the individual rule the attributes' 'visits the iniquity of fathers' (34:7) stands against", 'fx': ['blotted_from_the_book']}
+  erection.calf('surcharge')                             {'v': 'one_twenty_fourth', 'p': 'MOVE', 'why': "Sanhedrin 102a:15 (opened) — R. Yitzchak: no punishment comes to the world without one twenty-fourth of a litra of the first calf in it — 32:34 'and on the day I VISIT I will visit their sin upon them' (a hapax): the clause read as a standing surcharge on every later visitation", 'fx': ['blotted_from_the_book']}
+  erection.calf('plague')                                {'v': (5, 31), 'p': 'INK', 'why': "32:35 'and the LORD PLAGUED the people' — the verb at 5 seats (['1Sam 25:38', '2Chr 14:11', '2Sam 12:15', 'Exod 32:35', 'Judg 20:35']); the plague-noun's family at 31 seats, 30:12's 'no plague when you count them' among them: the calf's plague the ransom clause's negative in the same book", 'fx': ['plague_struck']}
+  erection.calf('reading_law')                           {'v': 'second_read_not_translated', 'p': 'ANSWER-SHEET', 'why': "Mishnah Megillah 4:10 (the link row at 32:21) — the first calf account read and translated, the SECOND read and NOT translated; Megillah 25b:11 (opened): 'which is the second? from and Moses said (32:21) until and Moses saw (32:25)' — the boundary drawn on the chapter's own tokens; 25b:12: Aaron's 'this calf came out' (32:24) the heretics' opening", 'fx': ['—']}
+  erection.calf('boshesh')                               {'v': 'the_sixth_hour_came', 'p': 'MOVE', 'why': "Shabbat 89a:6 (opened) — R. Yehoshua b. Levi: 32:1 'Moses was LATE (boshesh)' — read not boshesh but BA'U SHESH, the sixth hour came: the calf's timing derived by a recorded revocalization of the narrative's verb (move M-16 in a narrative seat)", 'fx': ['—']}
+  erection.calf('confess_specify')                       {'v': ('specify', 'do_not_specify'), 'p': 'MOVE', 'why': "Yoma 86b:14 (opened) — 'one must SPECIFY the sin, as it says (32:31) this people has sinned a great sin, and they made themselves gods of gold' (R. Yehuda b. Bava); R. Akiva: 'happy is he whose sin is covered' — the confession's specificity a fork on Moses' wording", 'fx': ['confessed']}
+==== cold_run_erection.tablets sig ('q',) (10922 chars) asks-in-source []
+def tablets(q):
+    if q == 'pesal_two':
+        return cell(c_pesal, I, "'HEW for yourself' at %s — 34:1 and its Deuteronomy restatement; 'like the first' at %d seats (%s); 'which you broke' at %s" % (fmt(c_pesal), len(c_karishonim), fmt(c_karishonim), fmt(c_shibarta)), ['tablets_delivered'])
+    if q == 'chips_yours':
+        return cell('the_chips_his', M, "Nedarim 38a:3 (opened) — R. Chama b. R. Chanina: Moses became rich only from the CHIPS of the tablets: 'hew for YOURSELF' — their chips shall be yours; 38a:4: 'WRITE for yourself' (34:27) paired — as the chips are his so the writing is h
+
+  erection.tablets('breaking_ratified')                  {'v': 'yishar_kochakha', 'p': 'MOVE', 'why': "Yevamot 62a:4 and Menachot 99b:1 (opened) — 'which you BROKE' (34:1): 'may your strength be firm that you broke' — the spec of the second tablets cites the run of the first's breaking (32:19) and ratifies it (Shabbat 87a:5, the covenant block credited: Moses' own a-fortiori)", 'fx': ['tablets_delivered']}
+  erection.tablets('fragments_by_call')                  {'v': 'both_in_the_ark', 'p': 'IMPORT', 'why': "the broken tablets' whereabouts by call — cold_run_sanctuary_build.ark(tablets_and_fragments) -> 'both_in_the_ark' [IMPORT, live call]: 40:20's 'he put the testimony into the ark' carries both sets (Menachot 99a-b)", 'fx': ['tablets_delivered']}
+  erection.tablets('finger_and_forms')                   {'v': {'לחת': 12, 'לוחת': 3, 'הלחת': 9, 'לחות': 2}, 'p': 'INK', 'why': "'the finger of God' at ['Deut 9:10', 'Exod 8:15', 'Exod 31:18']; 'two tablets of the testimony' a hapax; the tablets-word's written forms in the Torah — {'לחת': 12, 'לוחת': 3, 'הלחת': 9, 'לחות': 2}: 'luchot' written defective (לחת) twelve times, plene (לוחת) three", 'fx': ['tablets_delivered']}
+==== cold_run_erection.craftsmen sig ('q',) (3725 chars) asks-in-source []
+def craftsmen(q):
+    if q == 'called':
+        return cell(c_called, I, "31:2 'SEE, I HAVE CALLED BY NAME Bezalel' at %s; the run's 'the LORD has called by name' at %s (35:30) — the first person rewritten in the third" % (fmt(c_called[0]), fmt(c_called[1])), ['appointed_by_name'])
+    if q == 'announced_leader':
+        return cell('a_good_leader_announced_by_heaven', M, "Berakhot 55a:10 (opened) — R. Yochanan: three things the Holy One announces Himself — famine, plenty, and a GOOD LEADER: 'see, I have called by name Bezalel' (31:2)", ['appointed_by_name'])
+    if q == 'named_by_call':
+     
+
+  erection.craftsmen('finger')                           {'v': 3, 'p': 'INK', 'why': "31:18 'written with THE FINGER OF GOD' — at ['Deut 9:10', 'Exod 8:15', 'Exod 31:18'] (the magicians' 'the finger of God' at 8:15 the first); 'two tablets of the testimony' a hapax; Onkelos keeps the finger", 'fx': ['tablets_delivered']}
+==== cold_run_exodus_story.trials sig ('q',) (1671 chars) asks-in-source []
+def trials(q):
+    if q == 'count_by_exodus': return cell(6, M, "Arakhin 15a:14-15b:2 restricted to the span — the trials the ink narrates by Exodus 19: the sea's descent (14:11 'were there no graves in Egypt'), Marah (15:24), the fleshpot (16:3 — the first quail, 15b:2), the manna twice (16:20 left till morning; 16:27 went out on the seventh), Rephidim (17:2-3): SIX on the ledger (CS7)", ['tested_the_lord'])
+    if q == 'ten_list': return cell(('two_at_the_sea', 'two_at_the_water', 'two_at_the_manna', 'two_at_the_quail', 'one_at_the_calf', 'one_at_paran'), M, "Arakhin 15a:14 — Rabbi Yehuda: t
+
+  exodus_story.trials('ten_list')                        {'v': ('two_at_the_sea', 'two_at_the_water', 'two_at_the_manna', 'two_at_the_quail', 'one_at_the_calf', 'one_at_paran'), 'p': 'MOVE', 'why': 'Arakhin 15a:14 — Rabbi Yehuda: ten trials our fathers tried the Holy One: two at the sea, two at the water, two at the manna, two at the quail, one at the calf, one in the wilderness of Paran', 'fx': ['tested_the_lord']}
+  exodus_story.trials('count_by_exodus')                 {'v': 6, 'p': 'MOVE', 'why': "Arakhin 15a:14-15b:2 restricted to the span — the trials the ink narrates by Exodus 19: the sea's descent (14:11 'were there no graves in Egypt'), Marah (15:24), the fleshpot (16:3 — the first quail, 15b:2), the manna twice (16:20 left till morning; 16:27 went out on the seventh), Rephidim (17:2-3): SIX on the ledger (CS7)", 'fx': ['tested_the_lord']}
+==== cold_run_exodus_story.sinai sig ('q',) (4073 chars) asks-in-source []
+def sinai(q):
+    if q == 'new_moon': return cell(True, M, "Shabbat 86b:5 — Rava: all agree that on the NEW MOON they came to the wilderness of Sinai ('on THIS day', 19:1 — 'this month', 12:2); Mekhilta Bachodesh ch.1 row 3 the same", ['encamped_at'])
+    if q == 'days_r_yose': return cell((2, 3, 4, 7), M, "Shabbat 86b:5-87a:1 — Rabbi Yose: the new moon on a Sunday; on the first nothing (the weariness of the road); on the SECOND 'you shall be to Me a kingdom of priests' (the ascent, 19:3-6); on the THIRD the boundary (19:12); on the FOURTH the separation (19:15); the Torah on the SEVENTH (86b:
+
+  exodus_story.sinai('treasure_seats')                   {'v': 4, 'p': 'INK', 'why': "'a treasure' (סגלה) at 19:5 in Exodus; Deut 7:6, 14:2, 26:18 the Torah's other seats (measured): the offer's HEAVEN entry, conditional on 'if you will surely hear My voice'", 'fx': ['treasured_people']}
+==== cold_run_exodus_story.sea sig ('q',) (3290 chars) asks-in-source []
+def sea(q):
+    if q == 'not_one': return cell(1, I, "'not one of them remained' (14:28 'ad echad — until one) — the destroy entry on Pharaoh's host; 14:30 'Israel saw Egypt dead on the shore of the sea'", ['egypt_drowned'])
+    if q == 'saved_seat': return cell('Exod 14:30', I, "'and the LORD SAVED Israel that day from the hand of Egypt' — the verb's only seat in the Torah (measured): the pursuit's body entry and the second expression (delivered) close here", ['saved'])
+    if q == 'faith_song': return cell('in_the_merit_of_faith', M, "Mekhilta Shirata ch.1 row 1 — Rabbi Nechemya: whoever acc
+
+==== cold_run_beha.taberah_and_quail sig ('case', 'data') (7777 chars) asks-in-source ['day_ladder', 'dew', 'families_weeping', 'fire_at_edge', 'fire_sank', 'fish_for_nothing', 'five_foods', 'graves', 'manna_fell', 'manna_form', 'manna_taste', 'manna_taste_word', 'meat_between_teeth', 'month_of_days', 'nursing_father', 'quail_height', 'quail_slaughter', 'rabble', 'shortened_hand', 'six_hundred_thousand', 'spread_or_slaughtered', 'taberah_name', 'ten_homers', 'the_people', 'three_gifts', 'trials', 'two_timers', 'wilderness_meat']
+def taberah_and_quail(case, data):
+    del P[:]
+    ask = case['ask']
+    if ask == 'the_people':
+        ink('11:1', '"the people were as murmurers"'); move('Sifrei Bamidbar 85:1', '"the people" everywhere the wicked, "My people" the upright — a lexical rule with proof-seats')
+        return out("'the people' the wicked, 'My people' the upright", ['fire_sank'])
+    if ask == 'fire_at_edge':
+        dat('the row fire_at_the_edge = %s' % data['fire_at_the_edge']['value']); ink('11:1', '"consumed at the edge of the camp"'); move('Sifrei 85:1 (R. Shimon b. Menassia the other arm)', 'the proselyte
+
+  beha.taberah_and_quail({ask:fire_at_edge})             ('the proselytes at the edge (Sifrei); the officers (R. Shimon b. Menassia)', ['fire_sank'])
+  beha.taberah_and_quail({ask:fire_sank})                ("sank at Moses' prayer", ['fire_sank'])
+  beha.taberah_and_quail({ask:graves})                   ('Kibroth-hattaavah — the graves of lust', ['buried'])
+  beha.taberah_and_quail({ask:manna_form})               ('by rank — baked, cakes, raw', ['lusted'])
+==== cold_run_beha.march sig ('case', 'data') (6272 chars) asks-in-source ['ark_bearers', 'cloud_and_trumpets', 'clouds', 'date', 'day_stack', 'eighty_five', 'hobab', 'jethro_at_sinai', 'levites_places', 'order', 'princes_order', 'sanctuary_name', 'shekhinah_minimum', 'signs', 'spy_verb', 'three_days', 'year_turns']
+def march(case, data):
+    del P[:]
+    ask = case['ask']
+    if ask == 'date':
+        ink('10:11', '"in the second year, in the second month, on the twentieth of the month" — ordinals %s, the day %s' % (DATE_ORD, DATE))
+        move('Rosh Hashanah 3a:5; Taanit 29a:2', 'Nisan and Iyar in one year — the year does not turn in Iyar; the day-stack opens')
+        return out('(2, 2, 20) — the twentieth of Iyar, year two; the year does not turn in Iyar', ['arrayed_by_banners'])
+    if ask == 'order':
+        v = BM.camp({'ask': 'march'}, BM.DATA)[0]
+        ink('10:14-27', 'the twelve princes in th
+
+  beha.march({ask:three_days})                           ("three days' journey — the timer; that very day they turned (the first punishment)", ['journey_of_three_days'])
+  beha.march({ask:date})                                 ('(2, 2, 20) — the twentieth of Iyar, year two; the year does not turn in Iyar', ['arrayed_by_banners'])
+==== cold_run_shelach.decree sig ('case', 'data') (10737 chars) asks-in-source ['ability', 'as_i_live', 'attributes_deleted', 'caleb_entitlement', 'congregation', 'count_from', 'day_for_year', 'deaths_ceased', 'due', 'egypt_will_hear', 'exceptions', 'fell_and_rent', 'hormah', 'joshua_childless', 'ninth_of_av_reading', 'now_ten', 'offer_second_seat', 'pardon', 'plea', 'presumption', 'set', 'set_edges', 'spies_death_mode', 'spies_portions', 'spies_share', 'stones_upward', 'ten_trials', 'that_night', 'turn_back', 'upon_children', 'wilderness_share']
+def decree(case, data):
+    del P[:]
+    ask = case['ask']
+    if ask == 'that_night':
+        ink('14:1', '"and the people wept that night"'); dat('the row return_day = %s' % (data['return_day']['value'],)); move('Taanit 29a:7; Sotah 35a:11; Sanhedrin 104b:4', 'the night of the Ninth of Av — a weeping for generations; Mishnah Ta\'anit 4:6 the decree\'s day')
+        return out("the night of the Ninth of Av — a weeping for generations (Taanit 29a:7; Sotah 35a:11; Sanhedrin 104b:4); Mishnah Ta'anit 4:6", ['wept'])
+    if ask == 'ten_trials':
+        ink('14:22', '"tried Me these ten times" — th
+
+  shelach.decree({ask:ability})                          ('the ability — yekholet, the feminine noun (Berakhot 32a:27)', ['—'])
+  shelach.decree({ask:egypt_will_hear})                  ("Moses' Egypt argument at both intercessions (Exod 32:12; Num 14:13)", ['—'])
+  shelach.decree({ask:offer_second_seat})                ("the offer's second seat — Exod 32:10 / Num 14:12 / Deut 9:14 (M-23)", ['—'])
+  shelach.decree({ask:plea})                             ('the attributes quoted back — "as You have spoken": long of anger even for the wicked (Sanhedrin 111b:1)', ['—'])
+  shelach.decree({ask:attributes_deleted})               ('a subsequence of Exod 34:6-7 — eleven words dropped, none added; Onkelos restores "and sins"', ['—'])
+  shelach.decree({ask:exceptions})                       ('Caleb and Joshua (14:24, 14:30); the children brought in (14:31)', ['exempt'])
+  shelach.decree({ask:pardon})                           ('"I have pardoned according to your word" — God conceded (R. Yochanan); so it will be (the school of R. Yishmael)', ['pardoned'])
+  shelach.decree({ask:ninth_of_av_reading})              ('the Ninth of Av\'s Torah reading — "how long will this people provoke Me" (R. Natan bar Yosef); today Deut 4:25 (Abaye)', ['—'])
+  shelach.decree({ask:day_for_year})                     ('[40, 40] — forty days, a day for a year, a day for a year (14:34; Ezek 4:6 verbatim)', ['—'])
+==== cold_run_shelach.spies sig ('case', 'data') (8142 chars) asks-in-source ['caleb_hushed', 'cluster', 'consumes_inhabitants', 'eshcol', 'forty_days', 'fourth_order', 'giants', 'going_like_coming', 'grasshoppers', 'hebron_visitor', 'hebron_zoan', 'job', 'joshua_caleb_equal', 'joshua_name', 'named_after_deeds', 'one_per_tribe', 'punished_for', 'questionnaire', 'report_answers', 'report_form', 'send_for_yourself', 'slander_sealed', 'stronger_than']
+def spies(case, data):
+    del P[:]
+    ask = case['ask']
+    if ask == 'send_for_yourself':
+        ink('13:2', '"send FOR YOURSELF men" — the sending Moses\' own; Deut 1:22-23 the people\'s asking, "good in my eyes"'); move('Sotah 34b:3 (Reish Lakish)', 'at your discretion, not a divine command')
+        return out("at Moses' discretion — 'for yourself' (Reish Lakish); the people's asking (Deut 1:22)", [FX.NONE])
+    if ask == 'one_per_tribe':
+        ink('13:2', '"one man, one man for his fathers\' tribe... every one a prince" — the parser\'s [1, 1] the distributive'); ink('13:4-15', 'twelv
+
+  shelach.spies({ask:giants})                            ('Ahiman the skilled, Sheshai the pits, Talmai the furrows; the sun a necklace (Sotah 34b:9-10; Yoma 10a)', ['—'])
+  shelach.spies({ask:forty_days})                        ('40 days (13:25) — the timer; a day for a year (14:34)', ['—'])
+==== cold_run_opening_speech.the_spies_read_back sig ('case', 'data') (10446 chars) asks-in-source ['good_is_the_land', 'joshua_shall_go_in', 'many_days_at_kadesh', 'the_asking', 'the_bars_ground', 'the_carrying', 'the_exceptions', 'the_little_ones', 'the_murmuring', 'the_oath', 'the_pillar', 'the_presumption', 'the_readback_table', 'the_turn_back', 'the_twelve', 'the_valley', 'the_weeping']
+def the_spies_read_back(case, data):
+    del P[:]
+    ask = case['ask']
+    if ask == 'the_asking':
+        ink('1:22', '"you came near to me, all of you, and said: let us send men before us, that they may search the land for us" — %s, %s one seat each' % (LET_US_SEND, SEARCH_FOR_US))
+        move('cold_run_shelach (CALL) — SL.spies(send_for_yourself) = %s' % SL_SEND[0][:70], "Sotah 34b:3 — 'send for yourself' at Moses' discretion; the people asked; 34b:4 'that they may search' with the moon's embarrassment")
+        dat('the row the_spies_asked: %s' % data['the_spies_asked']['value'])
+       
+
+  opening_speech.the_spies_read_back({ask:the_murmuring}) ("the murmuring (1:27-28) — two words (Shevuot 47b:5); the spies' words in the people's mouths, 'greater and taller than we' the plain sense of 13:31 (Sotah 35a:7): TURNED", ['accepted'])
+  opening_speech.the_spies_read_back({ask:the_presumption}) ("the presumption (1:41-44) — presumed_to_go_up and defeated read back; 'as bees do', 'in Seir' EXPANDED; the receipt in the people's mouth a run citation (1:41 NONE)", ['accepted'])
+  opening_speech.the_spies_read_back({ask:the_asking})   ("the asking (1:22) — the people's, against 13:2's 'send for yourself' (Sotah 34b:3; SL by CALL): the two tellings reconciled on the shelf — the readback row TURNED", ['accepted'])
+  opening_speech.the_spies_read_back({ask:the_exceptions}) ('the exceptions — Caleb, Joshua, the children (SL by CALL): exempt from the oath', ['exempt'])
+  opening_speech.the_spies_read_back({ask:the_carrying}) ("the carrying (1:31) — as a man carries his son: Exodus 19:4's eagle the kin", ['accepted'])
+==== cold_run_opening_speech.the_plea sig ('case', 'data') (4991 chars) asks-in-source ['beth_peor', 'command_joshua', 'lebanon', 'pisgah', 'the_names', 'the_plea', 'the_refusal']
+def the_plea(case, data):
+    del P[:]
+    ask = case['ask']
+    if ask == 'the_plea':
+        ink('3:23-26', '"and I besought the LORD at that time … let me go over, I pray, and see the good land … but the LORD was wroth with me for your sakes and did not hear me: let it suffice you; speak no more to Me of this matter" — %s, %s, %s, %s, %s, %s' % (BESOUGHT, LET_ME_GO_OVER, WROTH_FOR_YOU, NOT_HEAR_ME, SUFFICE_YOU, SPEAK_NO_MORE))
+        move('Berakhot 32a:32; Avodah Zarah 7b:18; Berakhot 30b:9; Sotah 13b:13 (credited); cold_run_beha (CALL) — BH.march(hobab) = %s' % BH_HOBAB[0][:40], "praise b
+
+  opening_speech.the_plea({ask:the_plea})                ('the plea (3:23-26) — told only here: plea_made on Moses with the refusal in the value; the barred entry OPEN read; praise before the request (Berakhot 32a:32)', ['plea_made'])
+  opening_speech.the_plea({ask:the_refusal})             ("the refusal (3:26) — 'let it suffice you' the singular's one seat, measure for measure for Korach's (Sotah 13b:13); 'did not hear' 1:45's phrase; the barred entry read", ['accepted'])
+==== cold_run_obey_horeb.the_one_god sig ('case', 'data') (7194 chars) asks-in-source ['because_he_loved_your_fathers', 'from_heaven_the_voice', 'keep_the_statutes', 'know_this_day', 'the_former_days', 'the_nation_from_a_nation', 'the_voice_and_lived', 'to_dispossess_nations', 'you_were_shown']
+def the_one_god(case, data):
+    del P_[:]
+    ask = case['ask']
+    if ask == 'the_former_days':
+        ink('4:32', '"ask now of the former days which were before you, since the day God created man upon the earth, from one end of heaven to the other" — "ask now of the days" %s; "former" the adjective (%s); "God created man" %s — the create-verb\'s eleven Torah seats %s, the book\'s one' % (P('שאל', 'נא', 'לימים'), lemma_of('Deut', 4, 32, 'ראשנים'), P('אשר', 'ברא', 'אלהים', 'אדם'), CREATED))
+        move('cold_run_pre_sinai (CALL) — PS.creation(created_made) = %s' % (PS_CREATED['v'],), "'crea
+
+  obey_horeb.the_one_god({ask:to_dispossess_nations})    ('to dispossess nations (4:38) — the open dispossess debit of Numbers 33:50-56 READ; 9:1 the kin', ['accepted'])
+  obey_horeb.the_one_god({ask:because_he_loved_your_fathers}) ("because he loved your fathers (4:37) — the choice of the seed (Genesis 17's phrase; PR by CALL); the outbringing READ BACK", ['accepted'])
+  obey_horeb.the_one_god({ask:you_were_shown})           ("you were shown (4:35) — the creed's first seat: 'none else beside him' (even sorcery — Chullin 7b); the kingship verses disputed", ['accepted'])
+==== cold_run_obey_horeb.no_image sig ('case', 'data') (7317 chars) asks-in-source ['consuming_fire_jealous_god', 'image_for_study', 'image_of_the_host', 'no_form_seen', 'the_bar_third_telling', 'the_covenant_not_forgotten', 'the_host_apportioned', 'the_image_list', 'the_iron_furnace']
+def no_image(case, data):
+    del P_[:]
+    ask = case['ask']
+    if ask == 'no_form_seen':
+        ink('4:15', '"take good heed to yourselves — for you saw no form on the day the LORD spoke to you at Horeb from the midst of the fire" — %s (Joshua 23:11 the kin); "no form" %s' % (P('ונשמרתם', 'מאד', 'לנפשתיכם'), P('לא', 'ראיתם', 'כל', 'תמונה')))
+        return out("no form seen (4:15) — the guard's reason: the voice without a form (4:12 read back)", ['accepted'])
+    if ask == 'the_image_list':
+        ink('4:16-18', '"lest you corrupt yourselves and make a graven image, the form of any figure
+
+  obey_horeb.no_image({ask:consuming_fire_jealous_god})  ("a consuming fire, a jealous God (4:24) — the second word's 'jealous' (Exodus 20:5 by reference); jealousy at the worshipper, not the idol (Avodah Zarah 54b-55a)", ['accepted'])
+==== cold_run_obey_horeb.horeb_retold sig ('case', 'data') (7164 chars) asks-in-source ['commanded_to_teach', 'learn_and_teach', 'take_heed_lest_you_forget', 'the_daughters_excluded', 'the_day_at_horeb', 'the_mountain_burning', 'the_ten_words_and_the_tablets', 'the_voice_and_no_form']
+def horeb_retold(case, data):
+    del P_[:]
+    ask = case['ask']
+    if ask == 'take_heed_lest_you_forget':
+        ink('4:9', '"only take heed to yourself and keep your soul diligently, lest you forget the things your eyes saw … and make them known to your sons and to your sons\' sons" — "only take heed to yourself" %s; "keep your soul diligently" %s; the forget-root\'s thirteen seats in the book; "to your sons and your sons\' sons" %s; "make known" %s' % (P('רק', 'השמר', 'לך'), P('ושמר', 'נפשך', 'מאד'), P('לבניך', 'ולבני', 'בניך'), U('והודעתם')))
+        move('Menachot 99b:3; Pirkei Avot 3:
+
+  obey_horeb.horeb_retold({ask:the_ten_words_and_the_tablets}) ("the ten words and the tablets (4:13) — three seats of 'the ten words' (ER by CALL); the tablets plene; Exodus 31:18's giving written once at (1, 4, 17) — tablets_delivered on Moses (SUPPLIED)", ['tablets_delivered'])
+  obey_horeb.horeb_retold({ask:the_day_you_stood})       ('no verdict in span', ['—'])
+==== cold_run_obey_horeb.the_exile_case sig ('case', 'data') (4961 chars) asks-in-source ['in_your_distress_return', 'perish_and_scatter', 'seek_and_find', 'serve_wood_and_stone', 'the_case_head', 'the_merciful_god', 'the_witnesses']
+def the_exile_case(case, data):
+    del P_[:]
+    ask = case['ask']
+    if ask == 'the_case_head':
+        ink('4:25', '"WHEN you beget sons and sons\' sons and have grown old in the land and deal corruptly and make a graven image … and do evil in the eyes of the LORD your God to provoke him" — the case token %s with the imperfect; "when you beget sons" %s; "grown old" %s one seat; "evil in the eyes of the LORD" five Torah seats' % (CASE_TOK['4:25'], P('כי', 'תוליד', 'בנים'), U('ונושנתם')))
+        move('Gittin 88a:15-17; Sanhedrin 38a:6; Megillah 31b:2', "'grown old' by its letters eight hund
+
+  obey_horeb.the_exile_case({ask:the_merciful_god})      ("the merciful God (4:31) — Exodus 34:6's attribute; the fathers' covenant sworn (Genesis 22:16, 26:3 by reference); Leviticus 26:42 the first telling", ['accepted'])
+  obey_horeb.the_exile_case({ask:the_witnesses})         ("the witnesses (4:26) — heaven and earth called: a STATUS on Israel (the Sifrei 306:1's chain, the third of eleven)", ['heaven_and_earth_witness'])
+==== cold_run_covenant_at_horeb.the_voice_and_the_request sig ('case', 'data') (3820 chars) asks-in-source ['added_no_more', 'hear_and_do', 'the_request', 'the_tablets_given_to_me', 'the_write', 'you_came_near']
+def the_voice_and_the_request(case, data):
+    del P_[:]
+    ask = case['ask']
+    if ask == 'added_no_more':
+        ink('5:22', '"these words the LORD spoke to all your assembly … with a great voice, and he added no more" — "to all your assembly" %s; "and added no more" %s; against 4:13 (tokens %d for %d, %d shared)' % (P('אל', 'כל', 'קהלכם'), P('ולא', 'יסף'), VOICE_DELTA[0], VOICE_DELTA[1], VOICE_DELTA[2]))
+        move('obey_horeb.horeb_retold by CALL', "2b's supplied lines FOUND — %r; %r" % (OH_VOICE[1], OH_TABLETS[1]))
+        move('Sanhedrin 17a:12; Sotah 10b:12', "'did not cease' — Eld
+
+  covenant_at_horeb.the_voice_and_the_request({ask:the_tablets_given_to_me}) ('the tablets given to me (5:22) — tablets_given FOUND at (1, 4, 17); no second write', ['accepted'])
+==== cold_run_covenant_at_horeb.the_first_tablet sig ('case', 'data') (6148 chars) asks-in-source ['keep_and_remember', 'the_first_word', 'the_fourth_word', 'the_ox_and_the_ass', 'the_receipt_5_12', 'the_second_word_row', 'the_servants_rest', 'the_third_word', 'the_two_grounds']
+def the_first_tablet(case, data):
+    del P_[:]
+    ask = case['ask']
+    if ask == 'the_first_word':
+        r = _row(6)
+        ink('5:6', '"I am the LORD your God, who brought you out of the land of Egypt, out of the house of bondage" — %s VERBATIM (the diff %s); "I am the LORD your God" %s; "house of bondage" twelve seats' % (r['grade'], DIFF(('Deut', 5, 6), ('Exod', 20, 2)) or 'none', P('אנכי', 'יהוה', 'אלהיך')))
+        move('Makkot 24a:1', "the first of the six hundred thirteen, from the Almighty's mouth")
+        dat('the row: NO CELL — a declaration, not a case')
+        return out("t
+
+  covenant_at_horeb.the_first_tablet({ask:the_first_word}) ("the first word (5:6) — VERBATIM; NO CELL: a declaration heard from the Almighty's mouth", ['accepted'])
+==== cold_run_covenant_at_horeb.the_second_tablet sig ('case', 'data') (4531 chars) asks-in-source ['the_counts', 'the_eighth_word', 'the_fifth_word', 'the_ninth_word', 'the_receipt_5_16', 'the_reward_clause', 'the_seventh_word', 'the_sixth_word', 'the_tenth_word_row']
+def the_second_tablet(case, data):
+    del P_[:]
+    ask = case['ask']
+    if ask == 'the_fifth_word':
+        ink('5:16', '"honor your father and your mother" %s — the infinitive absolute (%s); the diff %s' % (P('כבד', 'את', 'אביך', 'ואת', 'אמך'), INFA[16], DIFF(('Deut', 5, 16), ('Exod', 20, 12))))
+        move('holiness.frame by CALL (Kiddushin 30b-31b)', "honor %s; fear %s; the order %r; the partners %s; the woman %r" % (HO_HONOR['v'], HO_FEAR['v'], HO_ORDER['v'], HO_THREE['v'], HO_WOMAN['v']))
+        move('mishpatim_3 and sanctions by CALL', "the striker %r, the curser %r (the woman %r)" 
+
+==== cold_run_hear_o_israel.the_test_and_the_right sig ('case', 'data') (4106 chars) asks-in-source ['surely_keep', 'the_right_and_the_good', 'the_write', 'thrust_out_enemies', 'you_shall_not_test']
+def the_test_and_the_right(case, data):
+    """F5 — Deut 6:16-19: you shall not test (Massah — a run citation by name; the write test_barred); surely keep; the right and the good; thrust out"""
+    del P_[:]
+    ask = case['ask']
+    if ask == 'you_shall_not_test':
+        ink('6:16', '"you shall not test the LORD your God, as you tested him at MASSAH" — "you shall not test" %s; Massah %s; "as you tested" %s; the test lemma\'s fourteen Torah seats %s; a PLURAL prohibition %s' % (U('תנסו', 'תנסה', 'תנסון'), U('מסה', 'במסה', 'ומסה', 'המסה'), U('נסיתם', 'נסיתו', 'נסיתי'), TEST_LEM, PROHIB[16]))
+ 
+
+  hear_o_israel.the_test_and_the_right({ask:you_shall_not_test}) ("you shall not test (6:16) — Massah the tape's named line (Exodus 17:7), a run citation by name; the ten trials (Arakhin 15a; ES by CALL): the block test_barred on Israel", ['accepted'])
+==== cold_run_seven_nations.the_seven_nations sig ('case', 'data') (14789 chars) asks-in-source ['no_covenant', 'no_favor', 'no_marriage', 'no_other_way', 'praise_of_the_creator', 'the_asherah_shade', 'the_asherah_wood', 'the_ban', 'the_bans_condition', 'the_child_follows_the_mother', 'the_four_objects', 'the_seven', 'the_write']
+def the_seven_nations(case, data):
+    """F1 — Deut 7:1-5: the seven counted, THE BAN (the code's hole — the debit open to Joshua), no covenant, NO FAVOR (the hole), no marriage both ways, the four objects; the writes"""
+    del P_[:]
+    ask = case['ask']
+    if ask == 'the_seven':
+        ink('7:1', '"the Hittite, the Girgashite, the Amorite, the Canaanite, the Perizzite, the Hivite and the Jebusite, SEVEN NATIONS greater and mightier than you" — the parser\'s [%d] with %d gentilic tokens as its witness %s; the seven-name lists %s, the six-name lists %d (the Girgashite\'s seven seats %s); "g
+
+  seven_nations.the_seven_nations({ask:the_seven})       ('the seven (7:1) — the list counted by its own verse: seven where every Exodus list has six, the Girgashite the seventh (ER by CALL); the readback row EXPANDED', ['accepted'])
+  seven_nations.the_seven_nations({ask:the_ban})         ("the ban (7:2) — 'you shall utterly devote them': the code's hole compiled — a DEBIT on Israel open to Joshua; the east's devotings runs before the spec; the dispossession's debit referenced (JO by CALL), not doubled", ['accepted'])
+==== SD cells: ['anyprefix', 'anytok', 'calf', 'cell', 'day', 'eras', 'fire', 'has', 'law_eighth_day', 'load', 'mrow', 'order', 'peace', 'people', 'phrase', 'ram', 'scene', 'scene_cell', 'seats', 'strip', 'tanakh', 'tanakh_phrase', 'toks']
+==== SD DATA keys: []
+==== cold_run_shemini_day.day sig ('q',) (7948 chars) asks-in-source []
+def day(q):
+    if q == 'eighth_of':
+        return cell('the_count', M, "9:1 'and it was on the EIGHTH day' — eighth of what? " + SM + "1: 'and it was on the THIRD day' (Exod 19:16) is "
+                    "third OF THE COUNT, so this is eighth of the count — Lev 8:33's 'seven days he shall fill your hand' closing it; the phrase at "
+                    f"{len(c_eighth)} Tanakh seats (the circumcision, the leper, the festival, Solomon's and Ezekiel's eighth days among them)", ['released'])
+    if q == 'date':
+        return cell('first_of_nisan', M, SM + "14: the tabernacle was raised on the
+
+  shemini_day.day('aaron_chatat_run')                    {'v': 'calf', 'p': 'INK', 'why': "9:2 'take for yourself a CALF (עגל), son of the herd, for a sin offering' — the calf token at 9:[2, 3, 8] and at no other Leviticus seat; not the spec's bull", 'fx': ['accepted']}
+==== cold_run_shemini_day.calf sig ('q',) (6806 chars) asks-in-source []
+def calf(q):
+    if q == 'slaughterer':
+        return cell('aaron', I, "9:8 'and Aaron drew near to the altar and SLAUGHTERED the calf of the sin offering which was his' — Aaron himself; "
+                    + SM + "9: 'with alacrity'", [FX.NONE])
+    if q == 'blood_bearers':
+        return cell('sons', I, f"9:9 'and the sons of Aaron BROUGHT the blood to him' — 'the sons of Aaron' at 9:{c_sons}, each time handing the "
+                    "blood; Moed Katan 28b:13 (R. Tarfon): Nadav and Avihu did 'only one commandment' — this bringing", [FX.NONE])
+    if q == 'blood_run':
+        return cel
+
+==== cold_run_shemini_day.fire sig ('q',) (8492 chars) asks-in-source []
+def fire(q):
+    if q == 'hand_ketiv':
+        return cell('singular_written_plural_read', I, f"9:22 'and Aaron lifted HIS HAND (ידו)' — the consonants at 9:22 are singular ({c_yado!r}); "
+                    "Mishnah Sotah 7:6 quotes the verse 'his hands' — the lifting of PALMS rides the read form", ['blessed_the_people'])
+    if q == 'regime':
+        return cell('one_blessing_name_as_written_hands_above_head', A, "Mishnah Sotah 7:6 (= Tamid 7:2): in the province three blessings, in the "
+                    "Temple ONE; the Name as written in the Temple, by epithet outside; hands to the sho
+
+==== cold_run_good_land.the_way_of_forty_years sig ('case', 'data') (11808 chars) asks-in-source ['forty_years', 'keep_walk_fear', 'not_by_bread_alone', 'the_discipline', 'the_garment_and_the_foot', 'the_humbling', 'the_manna', 'the_messianic_forty', 'the_test']
+def the_way_of_forty_years(case, data):
+    """F2 — Deut 8:2-6: the forty years (the decree by kind, SL by CALL), the test (16:4's clause), the humbling (the analogy's guards), the manna (ES and BH by CALL), not by bread alone, THE GARMENT AND THE FOOT (the fifth form — SUPPLIED), the discipline (1:31 by CALL), walk and fear"""
+    del P_[:]
+    ask = case['ask']
+    if ask == 'forty_years':
+        ink('8:2, 8:4', '"these FORTY years" — the parser\'s [%d] at 8:2 and 8:4 (2:7 the same phrase %s; the wilderness\'s forty at every seat: 16:35 %s, 14:33 %s, 14:34 %s, 32:13 %s); "and you shall reme
+
+  good_land.the_way_of_forty_years({ask:forty_years})    ("forty years (8:2, 8:4) — [40] twice, 2:7 the same phrase; the decree's years (SL by CALL: [40, 40] a day for a year; ES's forty years of manna): the readback row 8:2 EXPANDED — the purpose supplied", ['accepted'])
+erection DATA keys                                       []
+exodus_story DATA keys                                   []
+beha DATA keys                                           ['lamps_geometry', 'lampstand_material', 'trumpet_material', 'trumpet_scope', 'levite_age', 'bull_age', 'blast_unit', 'teruah_form', 'blast_count_at_journeys', 'oppression_scope', 'temple_blasts', 'blasts_per_musaf', 'pestilence_threshold', 'seven_clouds', 'shekhinah_minimum', 'jethro_at_sinai', 'spies_sent_day', 'fire_at_the_edge', 'fish_for_nothing', 'five_foods', 'manna_taste_word', 'wilderness_meat', 'spread_or_slaughtered', 'sanhedrin_size', 'lots_mechanism', 'eldad_medad_prophecy', 'continued', 'restrain_them
+shelach DATA keys                                        ['hebron_visitor', 'hebron_before_zoan', 'cluster_bearers', 'cluster_weight', 'return_day', 'tammuz_length', 'the_ten_trials', 'congregation', 'deaths_ceased', 'wilderness_share', 'spies_share', 'spies_death_mode', 'count_from', 'hin_in_logs', 'libation_floors', 'oil_donation', 'libations_from', 'altar_eras', 'which_take_libations', 'lamb_and_ram_ages', 'gentile_libations', 'convert_offering', 'convert_congregation', 'challah_measure', 'challah_minimum', 'terumah_measure', 'outside_produce', 'territories', 'challah
+opening_speech DATA keys                                 ['the_readback', 'the_officers_table', 'the_seven_qualities', 'the_judges_charge', 'the_compromise', 'the_gentile_litigant', 'the_frame', 'the_date', 'the_horeb_command', 'the_spies_asked', 'the_bars_ground', 'the_dispossessions', 'the_bypass_commands', 'the_thirty_eight', 'the_edom_disagreement', 'the_ban', 'the_sixty_cities', 'ogs_bed', 'the_easts_borders', 'the_armed_passage', 'joshuas_charge', 'the_plea', 'the_four_directions', 'the_commission']
+obey_horeb DATA keys                                     ['the_readback', 'the_law_bal_tosif', 'the_teach_your_sons', 'the_horeb_hole', 'the_ten_words_seats', 'the_tablets_plene', 'the_no_image_list', 'the_host_apportioned', 'the_bars_third_telling', 'the_exile_case', 'the_witnesses_chain', 'the_creed', 'the_inquiry_limits', 'the_instruments', 'the_three_cities', 'the_manslayer_definition', 'the_second_frame', 'the_number_switching', 'the_export_chapter_5']
+covenant_at_horeb DATA keys                              ['the_readback', 'the_second_word', 'the_visiting', 'the_no_image_list', 'the_tenth_word', 'the_sabbath_grounds', 'the_ninth_word', 'keep_and_remember', 'the_reward_clause', 'the_honor_by_call', 'the_receipts', 'the_two_copies', 'the_second_hole', 'the_export_division', 'the_mediator', 'the_return_to_tents', 'the_charge_to_teach', 'the_face_in_face', 'the_fathers_and_us', 'the_hear_and_do']
+hear_o_israel DATA keys                                  ['the_readback', 'the_large_letters', 'the_spellings', 'the_two_sets', 'the_recitation_times', 'the_postures', 'the_exemptions', 'the_passages_order', 'the_tefillin_table', 'the_mezuzah_table', 'the_seven', 'the_list', 'the_oath_by_the_name', 'the_abutter', 'the_four_sons', 'the_receipt_without_the_name', 'the_creed_terms', 'the_files_diverge']
+seven_nations DATA keys                                  ['the_readback', 'the_devotings', 'the_three_readings_of_favor', 'the_shittim_exhibit', 'the_renaming', 'the_fewest', 'the_supplied_doctrine', 'the_written_read_pair', 'the_heel', 'the_blessing_list', 'the_name_from_under_heaven', 'the_two_lemmas', 'the_abomination_seats', 'the_morph_tag', 'the_eleven_uncited', 'the_credits', 'the_calfs_agency', 'the_bans_condition', 'the_pitys_row']
+shemini_day DATA keys                                    []
+good_land DATA keys                                      ['the_readback', 'not_by_bread_alone', 'the_garment_and_the_foot', 'honey_without_milk', 'the_seven_species_seat', 'the_measures_seat', 'the_kings_law_tokens', 'my_power_my_hand', 'the_written_read_pair', 'the_interrogative_he', 'the_two_rocks', 'the_serve_bow_order', 'the_ten_uncited', 'the_credits', 'the_grace_conditional', 'the_four_blessings', 'the_blessing_before', 'the_heart_lifted']
+opening_speech.READBACK len / grades                     (42, {'SUPPLIED': 11, 'TURNED': 10, 'SHORTENED': 6, 'DISAGREES': 2, 'EXPANDED': 12, 'VERBATIM': 1})
+obey_horeb.READBACK len / grades                         (11, {'SHORTENED': 3, 'EXPANDED': 5, 'SUPPLIED': 2, 'DISAGREES': 1})
+covenant_at_horeb.READBACK len / grades                  (21, {'VERBATIM': 5, 'VARIANT': 5, 'EXPANDED': 5, 'TURNED': 4, 'SUPPLIED': 2})
+hear_o_israel.READBACK len / grades                      (7, {'VERBATIM': 3, 'EXPANDED': 3, 'SHORTENED': 1})
+seven_nations.READBACK len / grades                      (21, {'EXPANDED': 8, 'VARIANT': 5, 'VERBATIM': 4, 'TURNED': 3, 'SHORTENED': 1})
+good_land.READBACK len / grades                          (18, {'VERBATIM': 6, 'EXPANDED': 4, 'TURNED': 2, 'SUPPLIED': 1, 'VARIANT': 5})
+==== THE TAPE'S LINES (kind | subject | first verse | the source head | the line's other fields):
+  sworn_by_himself                 abraham                ('Gen', 22, 16)    Gen 22:16-18                                                 {}
+  rock_struck                      the-rock               ('Exod', 17, 6)    Exod 17:6                                                    {}
+  named                            the-place-rephidim     ('Exod', 17, 7)    Exod 17:7                                                    {'name': 'Massah and Meribah (מסה ומריבה — testing and quarrel, 17:7)', 'by': 'moses'}
+  moses_ascended                   moses                  ('Exod', 24, 18)   Exod 24:18 — forty days and forty nights; the tablets at 31: {'ascender': 'moses', 'ascent': 'first', 'law': 'W7'}
+  calf_made                        aaron                  ('Exod', 32, 4)    Exod 32:4 — the molten calf made (not yet worshipped)        {'maker': 'aaron', 'worshipped': False, 'law': 'W7'}
+  moses_interceded                 moses                  ('Exod', 32, 11)   Exod 32:11-14 — vayechal; the LORD relented; Berakhot 32a    {'intercessor': 'moses', 'plea': 'relent', 'sin_specified': False, 'law': 'W7'}
+  tablets_broken                   moses                  ('Exod', 32, 19)   Exod 32:19 — under the mountain, the seventeenth of Tammuz ( {'breaker': 'moses', 'law': 'W7'}
+  calf_destroyed                   moses                  ('Exod', 32, 20)   Exod 32:20 + Avodah Zarah 44a:2 — the four verbs; a test, no {'destroyer': 'moses', 'idol': 'the-calf', 'purpose': 'to_test', 'law': 'W7'}
+  levites_gathered                 the-levites            ('Exod', 32, 26)   Exod 32:26-29 + Yoma 66b:15 — whoever is for the LORD; fill  {'tribe': 'the-levites', 'slain': 'the-three-thousand', 'gathered_by': 'moses', 'law': 'W7'}
+  moses_interceded                 moses                  ('Exod', 32, 31)   Exod 32:31-33 + Yoma 86b:14 + Rosh Hashanah 16b:14 — blot me {'intercessor': 'moses', 'plea': 'blot_me', 'sin_specified': True, 'sinners': 'the-sinners', 'law': 'W7'}
+  tent_pitched_outside             moses                  ('Exod', 33, 7)    Exod 33:7-11 + Mishnah Avot 1:1 + Sanhedrin 5b:9 — the tent, {'pitcher': 'moses', 'servant': 'joshua', 'distance_from_camp': 'twelve_mil', 'law': 'W7'}
+  moses_ascended                   moses                  ('Exod', 34, 2)    Exod 34:2-4, 34:28 — the second forty days; the radiant face {'ascender': 'moses', 'ascent': 'second', 'law': 'W7', 'slot': 'morning'}
+  attributes_proclaimed_at_sinai   the-repentant          ('Exod', 34, 6)    Exod 34:6-7 + Yoma 86a:5 — He clears those who repent        {'hearer': 'the-repentant', 'repented': True, 'sin_kind': 'other', 'law': 'W7'}
+  fire_of_the_lord_burned          israel                 ('Num', 11, 1)     Num 11:1-3 — and the people were as murmurers, evil in the e {'edge': True, 'who': 'the proselytes', 'prayer': 'Moses prayed', 'name': 'Taberah'}
+  quail_and_plague                 the-lusters            ('Num', 11, 31)    Num 11:31-35 — and a wind went out from the LORD and brought {'height': 2, 'gathered': 10, 'blow': 'a very great blow', 'graves': 'Kibroth-hattaavah', 'hazeroth': True}
+  congregation_wept                israel                 ('Num', 14, 1)     Num 14:1-4 — and all the congregation lifted up and gave the {'night': 'that night', 'murmur': 'would that we had died in Egypt or in this wilderness', 'head': 'let us appoint a head and return to Egypt', 'slot': 'night'}
+  moses_pleaded_on_the_attributes  moses                  ('Num', 14, 11)    Num 14:11-19 — and the LORD said to Moses: how long will thi {'offer': 'I will make of you a greater nation', 'argument': 'Egypt will hear', 'attributes': "'יהוה ארך אפים ורב חסד נשא עון ופשע ונקה לא ינקה פקד עון אבות על בנים על שלשים ו"}
+  pardoned_and_decreed             israel                 ('Num', 14, 20)    Num 14:20-25 — and the LORD said: I have pardoned according  {'pardon': 'I have pardoned according to your word', 'ten_times': 10, 'caleb': 'him I will bring into the land where he went', 'turn': 'tomorrow turn and journey by the way of the Red Sea'}
+  decree_declared                  israel                 ('Num', 14, 26)    Num 14:26-35 — and the LORD spoke to Moses and to Aaron sayi {'set': 603550, 'exceptions': ['Caleb', 'Joshua'], 'years': 40, 'day_for_year': [40, 40]}
+  presumed_to_go_up                israel                 ('Num', 14, 39)    Num 14:39-44 — and Moses spoke these words to all the childr {'mourned': True, 'warning': 'the LORD is not among you', 'ark_stayed': True}
+  smitten_to_hormah                israel                 ('Num', 14, 45)    Num 14:45 — and the Amalekite and the Canaanite who dwelt in {'by': 'the Amalekite and the Canaanite', 'to': 'Hormah'}
+  tablets_given                    moses                  ('Deut', 4, 13)    Deut 4:13 — and he wrote them on two tablets of stone (Exodu {'first_telling': 'Exod 31:18', 'plene': 'the tablets written plene (4:13)'}
+  witnesses_called                 israel                 ('Deut', 4, 25)    Deut 4:25-31 — when you beget sons and sons' sons and have g {'case': 'when you beget sons (4:25)', 'witnesses': 'heaven and earth (4:26)'}
+==== THE MARKERS Exod 24:18 / 32:19 / 32:30 / 34:4 in the TAPE block:
+  assert_ink('Exod 24:18', [40, 40]); M['ascent'] = w.clock.day_in('exodus', 1, 3, 7); w.marker('Exod 24:18', M['ascent'], value='forty days and forty nights — Moses ascended on the seventh of Sivan (Taanit 28b:8-9): a transfer, taught', placement='reading_place
+  assert_ink('Exod 32:19', []); M['breaking'] = w.clock.day_in('exodus', 1, 4, 17); w.marker('Exod 32:19', M['breaking'], value='the tablets broken — the seventeenth of Tammuz (Mishnah Taanit 4:6; Taanit 28b:9): a transfer, taught', placement='reading_placed')  
+  assert_ink('Exod 32:30', [], words=['ממחרת']); M['morrow'] = M['breaking'] + 1; w.marker('Exod 32:30', M['morrow'], value='and it was on the morrow — the intercession\'s ascent (32:31): the ink\'s own day-word', placement='reading_placed')   # the morrow of th
+  assert_ink('Exod 34:28', [40, 40, 10]); M['second_tablets'] = w.clock.day_in('exodus', 1, WE.CAL_PARAMS['second_tablets_given']['value']['month'], WE.CAL_PARAMS['second_tablets_given']['value']['day']); M['second_ascent'] = M['second_tablets'] - 40; w.marker('
+  assert_ink('Deut 5:23', []); M['request_told'] = M['giving']; w.marker('Deut 5:23', M['request_told'], value='when you heard the voice out of the midst of the darkness … you came near to me, all the heads of your tribes and your elders (5:23) — the request for
+  assert_ink('Deut 5:32', []); M['charge'] = M['speech']; w.marker('Deut 5:32', M['charge'], value='and you shall observe to do as the LORD your God commanded you (5:32) — the charge at the speech\'s own day: the retrograde stretch of the request and the answer 

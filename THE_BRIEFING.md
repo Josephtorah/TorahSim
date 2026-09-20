@@ -14,8 +14,13 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   baked into an epub.
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
-## SCOREBOARD (as of 2026-09-19, latest)
+## SCOREBOARD (as of 2026-09-20, latest)
+- **CHAPTER 11 READ AND FROZEN — THE SIFREI COMES BACK ONTO THE PAGE: TWENTY-TWO SECTIONS ON ONE CHAPTER, OPENING AT THE LAND'S PRAISE; THE RAIN CLAUSE HAS NO CODE IN THE MACHINE; THE FRONTLETS ARE SPELLED THREE WAYS AND THE TRADITION'S COUNT NEEDS A FOURTH; JOSHUA SAYS THE CHAPTER'S SENTENCES BACK AT SEVEN PLACES; A MISHNAH QUOTED BY NAME INSIDE THE SIFREI; "AS HE SPOKE TO YOU" POINTED AT EXODUS 23 BY THE TEACHER** (2026-09-20; sitting 9, one run with a clean point inside it; the ledger deu_11_ekev_reeh_2026-09-20.md — 210 sources, every row whole; the 225th unit; every gate green).
+- **CHAPTER 10 COMPILED — THE FORMS COMBINE: TWO ACTS TOLD ONLY IN THE RETELLING (THE FRAGMENTS IN THE ARK, AARON'S BURIAL) WRITTEN ONCE INTO THEIR OWN DAYS; THE SHELF'S OWN CHRONOLOGY GIVES THE MACHINE'S DATE FOR THE SECOND ASCENT; FOUR LAWS WITH NO CODE COMPILED, THE STRANGER'S LOVE WRITTEN ON THE TAPE FOR THE FIRST TIME** (2026-09-20, on your "Go", "The docket go" and "Go"; World/step9/DEUTERONOMY_WALK.md "Sitting 8b" + THE DOCKET — AS RUN + AS BUILT): cold_run_second_tablets.py the 65th runner (62/62), law_second_tablets the 70th daemon (478 functions); the readback twenty-five rows in the forms combined — two SUPPLIED with a write, one stretch, the laws by CALL; the tape 10/10 with RUN (1317, 96, 88, 0, 12, 1613, 41, 319, pairs, 127) as predicted, markers 172; the docket 532 rows every row whole; every gate green (the chain three times — the first pass stopped at the probes step (three older probes' marker counts retyped) and the dependency gate (four homograph edges FALSE, the two predicted pointers RUN_CITATION); the second green to the register gate and failed at the eight-worker positions table (a worker raising on the cached path, the cache's own report masked by a shadowed name — the nineteenth slip, fixed); the positions by four workers and the third pass from the checkpoint probe ALL GREEN), the sweep 64/64; the two-run rule's third compile sitting, three clean points.
+- **CHAPTER 10 READ AND FROZEN — THE ARK PUT INTO GOD'S QUOTED WORD: MOSES RETELLS EXODUS 34 WORD FOR WORD AND ADDS AN ARK; THE STATIONS COME BACK REVERSED AND AARON DIES AT ANOTHER PLACE; THE SHEMA'S "FEAR, SERVE, SWEAR" COMES BACK WITH "CLEAVE"; THE SIFREI QUOTES ONE VERSE TWO WAYS** (2026-09-20, on your "Go"; World/step9/DEUTERONOMY_WALK.md "Sitting 8" and "Sitting 8 — AS BUILT"; the ledger deu_10_ekev_2026-09-19.md, 25 sources whole; the unit deu_10_second_tablets the 224th, standing 2227, hash unmoved; six claims 6/0; every gate green; one run, every row whole).
+- **CHAPTER 9 COMPILED — THE RETELLING OF A STRETCH: FORTY DAYS IS NOT AN EVENT BUT A SPAN OF THE CLOCK, AND THE TALMUD'S OWN COUNT COMES OUT OF THE CALENDAR; AARON'S PERIL WRITTEN ONCE INTO EXODUS'S OWN DAY, ITS EFFECT NAMED BY THE MIDRASH; THE SCENE RECORDER MUST RUN WITH THE CACHE OFF** (2026-09-19, on your "Ok do ch 9", "Go" and "Go"; World/step9/DEUTERONOMY_WALK.md "Sitting 7b" + THE DOCKET — AS RUN + AS BUILT): cold_run_not_righteousness.py the 64th runner (51/51), law_not_righteousness the 69th daemon (472 functions); the readback's sixth form thirty-two rows, four stretches, one SUPPLIED with a write; the tape 10/10 with RUN (1311, 96, 88, 0, 12, 1606, 40, 319, pairs, 127) as predicted, markers 169; the docket 397 rows every row whole; every gate green over the chain's third to fifth passes, the sweep 63/63; the two-run rule's second compile sitting, three clean points.
 - **CHAPTER 9 READ AND FROZEN — THE CALF RETOLD: GOD'S WORD COMES BACK VERBATIM, MOSES' ACTS COME BACK IN HIS OWN WORDS, AND AARON'S DANGER IS TOLD NOWHERE ELSE; STIFF-NECKED SIX TIMES IN THE BIBLE, ALL FOR THE CALF; THE PRAYER SOLOMON AND NEHEMIAH QUOTE IS THIS ONE** (2026-09-19, on your "Let's keep run as it is and do another section"; World/step9/DEUTERONOMY_WALK.md "Sitting 7" and "Sitting 7 — AS BUILT"; the ledger deu_09_ekev_2026-09-19.md, 36 sources whole; the unit deu_09_not_righteousness the 223rd, standing 2221, hash unmoved; six claims 6/0; every gate green; one run, every row whole).
+- **THE RUNNERS' LOAD CACHED AND PROVED THE SAME — 135 s OF SELF-CHECKS AT EVERY LOAD BECOME ~34 s; A MISS OR THE SWEEP RUNS THE CHECKS IN FULL; THE PROBE COMPARES A FULL LOAD AGAINST A CACHED ONE VALUE BY VALUE, OBJECT BY OBJECT, 8/8 AFTER SEVENTEEN SLIPS (2026-09-19; GATES_CHAIN.md D38; ink_cache.py).**
 - **THE GATES CHAIN CUT FROM NINETY MINUTES TO 18 MIN 27 S — THE COST WAS LOADING THE RUNNERS' CODE, NOT RUNNING THE WORLD; THE RUNNING WORLD SAVED ONCE AND READ BY EVERY GATE, THE PROBES SIDE BY SIDE, THE SWEEP EIGHT AT A TIME AND ONLY WHAT MOVED, THE CHECKPOINT TABLE BY EIGHT WORKERS, EVERY SHORT CUT GUARDED BY A DIGEST OF THE SOURCE AND ONE STRUCK BY ITS OWN TEST** (2026-09-19, on your "Yes make that change. It's too long as it is"; World/step9/GATES_CHAIN.md).
 - **CHAPTER 8 COMPILED — THE RETELLING OF A STATE: A CONDITION HAS NO DAY, SO THE MACHINE GRADES IT AND WRITES NOTHING BACK; THE TORAH'S ONE COMMAND TO BLESS AND THE FORGETTING BARRED COMPILED AT THE CHAPTER'S OWN DAY; THE SHELF SAYS THE GRACE FOLLOWS THE EATING AND THE FIRST BLESSING CAME BEFORE ITS VERSE** (2026-09-19, on your "Next", "Go" and "Go run b"; World/step9/DEUTERONOMY_WALK.md "Sitting 6b" + AS BUILT): cold_run_good_land.py the 63rd runner (55/55), law_good_land the 68th daemon (466 functions); the readback's fifth form eighteen rows, one SUPPLIED; the tape 10/10 with RUN (1310, 96, 88, 0, 12, 1605, 39, 319, pairs, 127) as predicted; the docket 451 rows every row whole; every gate green, the sweep 63/63; the two-run rule's first compile sitting, three clean points.
 - **CHAPTER 8 READ AND FROZEN — THE MANNA AND THE GOOD LAND: THE SIFREI QUOTES THE CHAPTER SIXTEEN TIMES FROM ELSEWHERE, ONE VERSE HOLDS ALL SEVEN KINDS OF FRUIT, AND THE TORAH'S ONE COMMAND TO BLESS HAS NO CELL YET** (2026-09-18, on your "Go" after chapter 7's commit and the two-run rule, then "Reread" — ONE run, every row whole; World/step9/DEUTERONOMY_WALK.md "Sitting 6"): Onkelos on all 20 verses and the Sifrei's sixteen rows from elsewhere (five reread whole) — 36 sources, coverage computed, the kin's spine credited by name from the Numbers walk; the seven kinds at one seat, honey without milk; "eat, be satisfied, bless" the one command to bless; the king's law's words at 8:13; the extra token in our store at 8:2; the forty years a state the tape never wrote; one unit frozen (the 222nd), 6 claims verified, the ritual 13 PASS, standing facts 2215 (+6 as predicted), hash unmoved, every gate green. NEXT: the commit on your word; then the compile of chapter 8 in two runs, or the schema sitting first.
@@ -491,6 +496,104 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   Next alongside it: Leviticus (new spine — Sifra).
 
 ## ENTRIES (newest first)
+
+### 2026-09-20 — CHAPTER 11 READ: THE SPINE RETURNS, THE RAIN CLAUSE WITHOUT A CELL, THE FRONTLETS' THREE SPELLINGS
+
+Chapter 11 closes the long charge and opens the laws: the discipline your
+children have not seen, the land that drinks the rain of heaven, the rain if
+you hearken and the shut heavens if you turn, the words on hand and eyes and
+doorposts said again to all of you, the borders and the dread, and a blessing
+and a curse set on two mountains across the Jordan. For four chapters the
+Sifrei on Deuteronomy had no section at all; here it has twenty-two, and it
+opens them not at the chapter's head but at the Land's praise. Every row was
+read whole in both files — one hundred and seventy-one on the chapter and seven
+from elsewhere — and forty-one earlier readings of thirty-seven of them were
+found in the older ledgers by computation, not memory. The reading laid each
+verse beside its kin and counted the shared words: Joshua says this chapter's
+sentences back at seven places, Rahab among them. The rain clause has no code
+anywhere in the machine yet — the compile's first job. The frontlets are
+spelled three ways at their three seats, and the tradition's four compartments
+need a spelling the text does not have — measured now, carried to the compile
+with its measurement. The Sifrei quotes a Mishnah by name inside its own text
+for the borders, and where Moses says "as He spoke to you", the teacher names
+the place: Exodus 23:27. The chapter is frozen as one unit, every gate green,
+in one run with a clean compaction point inside it.
+
+### 2026-09-20 — CHAPTER 10 COMPILED: TWO ACTS WRITTEN INTO THE PAST, A DATE THE SHELF CONFIRMS, AND FOUR LAWS THAT HAD NO CODE
+
+Chapter 10 is the tail of one thing and the head of another — the last of Moses' retelling of the calf, then the first of his restatement of the law — so the
+machine graded it with the forms it already had and needed no new one. The retelling gave it two acts told nowhere else. "Put them in the ark": the sages read
+"them" as both sets, the whole tablets and the broken ones, and the tape had never recorded the fragments anywhere. "And he was buried there" of Aaron: Numbers
+gives his death, the thirty days of mourning, the date and the age, and never the burial. Each act was written once into its own day — the fragments on the day
+the tabernacle was raised and the tablets placed, the burial on the day Aaron died — and the entries took their content from the shelf: the ark held the
+tablets and the fragments, with a Torah scroll inside it or beside it depending on whether a cubit is six handbreadths or five; Aaron was the ninth person the
+world had buried. Where he died is left open inside the line, Moserah against Mount Hor, because the sages' reconciliation — the people retreated seven
+stations and mourned him there — was already a parameter the machine held from Numbers. The third forty days measured forty on the calendar, from the mark at
+the second ascent to the day the tablets came down, which is a timer's firing rather than a mark; and the shelf's own chronology, read in full this time,
+puts the ascent on the twenty-ninth of Av, exactly the machine's date — the earlier worry that tradition said the first of Elul was a misreading, now closed.
+Then the law. Four commands in the chapter had no code in any runner. "What does the LORD your God ask of you but to fear" — the sages' "everything is in the
+hands of Heaven except the fear of Heaven" is their name for this verse, and it became the entry's name. "Circumcise the foreskin of your heart, and stiffen
+your neck no more" — the Talmud names the evil inclination "foreskin" from this verse, and its grammar refuses to let the heart's foreskin fall under the law
+of circumcision, so the entry is new and the neck's clause is the chapter's one prohibition, a block that carries no lashes because it has no act. "Love the
+stranger" — Leviticus's own effect for that love had been in the vocabulary since the holiness chapters and had never once been written on the tape; it was
+written here, a standing debt toward the stranger with no closer. "Cleave to Him" — the scholars, the sages say; and since every clause of that verse is a
+positive command, the entry is a status, not a bar. The runner matched its sheet on the first run; the tape reached ten of ten on the second, one of last
+sitting's own checks having held the old marker count; the chain three times — the first pass stopped at the probes step (three older probes' marker counts retyped) and the dependency gate (four homograph edges FALSE, the two predicted pointers RUN_CITATION); the second green to the register gate and failed at the eight-worker positions table (a worker raising on the cached path, the cache's own report masked by a shadowed name — the nineteenth slip, fixed); the positions by four workers and the third pass from the checkpoint probe ALL GREEN. Next, on your word: the commit, then chapter 11.
+
+### 2026-09-20 — CHAPTER 10 READ: THE ARK ADDED TO GOD'S WORD, THE STATIONS REVERSED, THE FOURTH CLAUSE
+
+Chapter 10 is the end of Moses' retelling and the start of the law. The reading
+laid each verse beside its first telling and counted shared words. God's command
+to hew a second pair of tablets comes back from Exodus 34 word for word — eleven
+words of fourteen — and between its two halves Moses puts something Exodus never
+says there: "make for yourself an ark of wood … and you shall put them in the
+ark". He makes the ark before he climbs; he puts the tablets in it "as the LORD
+commanded me" — a receipt inside a story, which the register gate already lists
+as a seat waiting for its compile. The wilderness stations come back in a
+different order from the itinerary in Numbers, and Aaron dies at a different
+station. The book calls the ark "of the covenant"; Exodus always calls it "of
+the testimony". The Shema's "fear, serve, swear by His name" comes back with a
+fourth clause, "cleave to Him". And the Sifrei, silent on the chapter, quotes
+its last verse twice with two spellings of "your fathers". The chapter is frozen
+as one unit, every gate green, in one run with every row read whole. The compile
+next: the fragments in the ark, the stations' open row, the third forty's end on
+the clock, and the laws graded against the cells that already compile them.
+
+### 2026-09-19 — The two minutes of loading became half a minute, with a proof that nothing changed
+
+You asked whether we really need to rebuild everything on every run, and then said make it permanent. The two minutes that every step of the test
+bench was paying is the runners checking themselves against the text when they load — the same checks with the same answers every time. Now the
+machine remembers: the first load after a change runs every check and writes down what each line of each runner produced; every later load puts
+those results back and runs only what must run. If a runner or anything it reads has moved, its checks run again in full, and the sweep that
+grades every runner always runs them in full. The honest part is the proof: a probe loads the machine both ways in two separate processes and
+compares everything — every value in every runner, which values are the same object, what the engine's own parts hold. It found seventeen ways
+the shortcut was wrong before it found none: a trail one runner leaves in another, a counter a caller moves, a block of imports skipped so the
+runners loaded in a different order, two names that should be one object coming back as two. Each one is a rule now, and the probe runs in the
+chain. The load went from 169 seconds to 35; the whole chain to 16 min 23 s with a full sweep, against ninety minutes two days ago.
+
+### 2026-09-19 — CHAPTER 9 COMPILED: A STRETCH OF THE CLOCK, AND A PRAYER WRITTEN INTO THE PAST
+
+The machine has graded retellings four ways before — against the tape's own lines, against an older law's cell, inside a law, and, last chapter, a state
+with no day. Chapter 9 needed a fifth thing. Three times Moses says "forty days and forty nights". That is not an act the tape can hold as a line; it is a
+stretch of the calendar between two marks the tape already carries — the day he went up, the day the tablets broke, the day after, the day he went up again.
+So the sitting measured the stretches on the machine's own calendar and graded them against what the sages say. The Talmud's count is explicit: twenty-four
+days remaining in Sivan and the first sixteen of Tammuz make forty, and the tablets broke on the seventeenth. The calendar, asked for the days between the
+two marks, gives forty; asked for the month's length, gives thirty; the seventeenth of Tammuz is the Mishnah's date and it was already the tape's. Match.
+The second forty is a stretch Exodus never states at all — it says only "on the morrow Moses returned" — and the retelling supplies it; the machine holds it
+as the span from the morrow to the second ascent, forty exactly. The third forty ends on the Day of Atonement and belongs to the next chapter. One sentence in
+the chapter is told nowhere else: the LORD was very angry with Aaron, to destroy him, and I prayed for Aaron also at that time. Exodus has Aaron's excuse and
+the plague; it has no anger at him and no prayer for him. So that act was written once into Exodus's own day — the day after the breaking, when Moses went
+back up — and the entry it writes on Aaron took its name from the midrash rather than from the design: destruction is the eradication of children, and since
+Moses prayed, half the edict was withheld; two of Aaron's sons died at the eighth day and two lived to succeed him, and both halves were already on the
+tape. The shelf, read whole, corrected the design three times: the proof that Moses fasted on the mountain is this chapter's own verse, not Exodus's;
+Taberah, which the chapter names first among the provocations, is not one of the ten trials the sages count; and whether the merit of the fathers still
+stands is a dispute with four proposed dates for its ending, the last a verse in Kings. The machine learned one rule about itself. The instrument that
+records every runner's scene for the tape ran under the new import cache and captured almost nothing, because a runner restored from the cache never
+re-runs its scene; the tape it stitched was a stub. It was rerun natively and the tape came back whole. That rule is now written where the cache is
+described. The runner matched its sheet on the first run; the tape reached ten of ten on the second, one old check having listed the book's date marks by
+name and grown by one; the chain's first pass asked for three dispositions and caught three older checks and the cache's own key holding stale counts and text — each retyped from its
+print — its second pass, started past the tape, showed that the checks which read the tape's own record need the tape run first; its third pass was green through seven steps and cut off by the memory watchdog, its fourth cut off at the same eight-worker step, the table then measured by
+four workers and the fifth pass finishing the rest. Next, on your word: the commit, then chapter 10.
 
 ### 2026-09-19 — CHAPTER 9 READ: THE CALF TOLD TWICE, AND WHAT THE SECOND TELLING ADDS
 

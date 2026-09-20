@@ -41,6 +41,7 @@ import functools
 import os
 import re
 import yaml
+import ink_cache; ink_cache.install()   # THE VERIFIED-IMPORT CACHE (2026-09-19): the cold_run_* modules load through it — see ink_cache.py
 import effects_layer as FX
 import events_layer as EV      # THE EVENT-TYPE REGISTRY (D9-i): an unregistered kind refuses the tape
 

@@ -3561,3 +3561,158 @@ dust (2 Kings 23:6, 12). THE CAUTION: the English Sifrei mis-cites 306:25's Exod
 row kept. THE LESSONS (ten, in the map): the shelf's bytes spell their own words; a summarizer counting runs misses single tokens; a spelling splits a census; a
 derived tuple is retyped whole. OWED TO 7b: the readback's rows of the calf, Aaron's retrograde write, the state of the stiff neck, the three forties and their
 dates (Ta'anit 4:6), the four provocations, the intercession's second telling, a new checkpoint series.
+
+## 2026-09-19 — THE VERIFIED-IMPORT CACHE: THE RUNNERS' 135 s OF SELF-CHECKS AT EVERY LOAD RESTORED FROM A HARVEST, PROVED THE SAME BY AN EIGHT-PROBE COMPARE
+## OF A FULL LOAD AGAINST A CACHED ONE — SEVENTEEN SLIPS, EACH A RULE
+
+On the owner's "ok do it make it permanent" (2026-09-19, after "Do we really need to rebuild everything on every run?"). World/step9/ink_cache.py
+(THE_LOOP D38; GATES_CHAIN.md's D38 section). THE FINDINGS OF THE BUILD: (1) the import's cost is the runners' own module-level checks — twenty
+runners over 2 s each, good_land 14.3 s — not the engine; (2) a per-statement harvest is the only honest form (a name bound twice, a container a
+loop fills); (3) THE RESIDUE A CALLEE LEAVES IS STATE: twenty-one runners' provenance trails and two counters end the full import holding the LAST
+CALLER's marks, and a self-test's result tuple holds a callee's trail by reference — reproduced by a call tracer, in-place restores and nested
+aliases, so the probe sets nothing aside; (4) THE ORDER OF THE IMPORTS IS STATE: a skipped block holding imports loaded the runners in another
+order — any block holding an import runs; (5) PICKLE BYTES ARE NOT THE STATE — the memo and the interning differ across processes; the compare is
+over the canonical form's text; (6) an alias (erection's VS_E29 is vestments' E29_ORDER; seventeen sharing groups) survives only if a touched,
+unchanged name is KEPT and an object that is another name's live object is bound as that object. MEASURED: the full load 169 s, the harvest 211 s,
+the cached load 35 s; the probe 8/8; the tape 10/10 through the cache; the chain 16 min 23 s with a full sweep (against 18 min 27 s, and ninety minutes
+before the cut). THE GUARDS: the sweep and --full at INK_CACHE=0; the probe in the chain; a stamp by a green import only; a cached-path failure
+names its statement.
+
+
+## 2026-09-19 — DEUTERONOMY 9 COMPILED (THE DEUTERONOMY WALK sitting 7b — CHAPTER 9): THE READBACK'S SIXTH FORM — THE RETELLING OF A STRETCH; THE CLOCK READ BACK
+## AGAINST THE ANSWER SHEET'S OWN ARITHMETIC; AARON'S PERIL WRITTEN ONCE AT ITS OWN DAY WITH A WRITE NAMED BY THE SHELF; THE RECORDER RUNS WITH THE CACHE OFF
+
+THE READBACK OF A STRETCH. Chapter 9 is Moses telling the calf in his own voice, so its rows are reference rows against the tape's Exodus 24-34 and Numbers 11-14
+lines and the kin's cells by CALL — thirty-two rows, VERBATIM 14 / VARIANT 12 / EXPANDED 4 / TURNED 1 / SUPPLIED 1: God's word comes back VERBATIM (9:13 eleven of
+thirteen tokens with Exodus 32:9), Moses' acts in his own words (9:17 one token shared with 32:19 — the breaking approved at three seats of the shelf), the calf's
+destruction without its fourth verb (9:21 — the drinking dropped, the dispute's hinge). And a row-kind no chapter had: "forty days and forty nights" told at 9:9,
+9:11, 9:18 and 9:25 is not a line but a STRETCH between two of the tape's markers, graded against THE CLOCK'S OWN ARITHMETIC — the ascent (1, 3, 7) to the breaking
+(1, 4, 17) is forty by the calendar, Ta'anit 28b:9's "twenty-four days of Sivan plus sixteen of Tammuz" reproduced by the machine's month lengths; the morrow
+(1, 4, 18) to the second ascent (1, 5, 29) is the forty Exodus never gives and the retelling supplies; the second ascent to the last tablets on 10 Tishri the
+third, next chapter's. The answer sheet's date (Mishnah Ta'anit 4:6, the seventeenth of Tammuz) was already the tape's: MATCH — asserted on the running world's
+markers (DA4, Q22, Q24) and on the runner's bare world alike. AARON'S PERIL (9:20) is told only here — Exodus has Aaron's report and the plague, no anger at
+Aaron, no prayer for him — the tape's hole, filled with a write: the act prayed_for_aaron written ONCE at its own day by a retrograde marker at Deut 9:20 (the
+morrow of the breaking — "at that time" the second forty's ascent), the status destruction_halved on aaron NAMED BY THE DOCKET (Vayikra Rabbah 10:5: destruction
+is the eradication of children; since Moses prayed, half the edict was withheld — two died and two remained, both halves already on the tape), the stretch
+ended by a forward marker at 9:21. THE STIFF NECK a state in the first telling — no write, the scan empty at build and on the running world. THE SHELF'S FINDS
+THE DESIGN DID NOT PREDICT: Taberah is NOT among the ten trials (Arakhin 15a:14) though the retelling names it first; the fasting's seat is 9:9's own (Yoma 75b:11
+cites this verse, not 34:28); the merit of the fathers is a PARAMETER with two arms and four dates (Shabbat 55a:11-16 — 2 Kings 13:23 the last mention); the calf
+is forbidden from its making (52a:4 — the tape's worshipped=False with its row); the crowns of Horeb stripped (Shabbat 88a:7 — Exodus 33:6) and Moses' three
+requests (Berakhot 7a:23-25 — 33:12-23) have NO LINE on the tape; Aaron's report is read and not translated while the retelling of his peril is (Mishnah
+Megillah 4:10's asymmetry). THE MACHINE'S LESSONS: THE RECORDER RUNS WITH THE CACHE OFF — a module restored from the import cache never runs its scene, so the
+recorder captured 118 submits of 2,983 and the stitcher wrote a truncated tape (rerun native, 1,682 lines); the line at the marker's own verse takes the marker's
+class (reading_placed, not page_order — the placement read at the stitcher's print); an older checkpoint that LISTS the Deuteronomy markers as a literal (CA1)
+moved with the new marker — the count literals were retyped as the design said, the list literal read from the tape's first print (9/10). THE NUMBERS:
+cold_run_not_righteousness.py the 64th runner 51/51 on its first graded run; the tape 10/10 on its second (the first 9/10, CA1); RUN (1311, 96, 88, 0, 12, 1606,
+40, 319, the four pairs, 127) as predicted; markers 167 -> 169; kinds 1135, effects 1032, daemons 69, eleven CALL edges; the docket 397 rows (link 16 / topic 381; LAW 46, DERIVATION 48, DISPUTE 10, CONTEXT 160, OUTSIDE 133; credited 203; 220,355 bytes), EVERY ROW READ WHOLE FROM THE START — no cut, no overlay (the parts' WHOLE dicts empty, the correction counts zero and computed); every gate green in one
+chain's third to fifth passes (the first stopped at three demands — two homograph edges filed FALSE, one pointer a run citation — and at three older probes holding the
+marker count; the second, from the probes step, at the readback probe without the tape's live journal; the third green to the register gate and killed at the positions table by
+the session's memory watchdog, the fourth killed there again, the positions then by four workers and the fifth finishing from the checkpoint probe; the sweep 63/63; the import cache 8/8 after its eighteenth slip was keyed — the sequence file a runner reads at import). THE TWO-RUN RULE'S SECOND COMPILE SITTING: RUN A the design, the docket its own run
+in the same window on the owner's word, RUN B the build after one compaction — three clean points.
+
+
+## 2026-09-20 — DEUTERONOMY 10 READ AND FROZEN (THE DEUTERONOMY WALK sitting 8, one run): THE ARK INSERTED INTO GOD'S QUOTED WORD; THE STATIONS REVERSED AND AARON MOVED;
+## THE BOOK'S ARK IS THE COVENANT'S, EXODUS'S THE TESTIMONY'S; THREE RECEIPT FORMS IN ONE CHAPTER; THE SHEMA'S LAW SAID AGAIN WITH A FOURTH CLAUSE; "AND YOU SHALL
+## LOVE" FIVE TIMES IN THE TORAH; THE SHELF QUOTES ONE VERSE TWO WAYS
+On the owner's "Go" after the reread that followed 7b's compaction (2026-09-19/20). THE READING: Deuteronomy 10:1-22 with Onkelos whole (the export's 22 rows the
+DB's 22 — the identity, asserted) and the Sifrei on Deuteronomy SILENT ON THE CHAPTER (36 on 6:9, 37 on 11:10), its whole voice three rows from elsewhere found by
+the union of both files' citations and read whole (32:1 act from love — 10:20 the fearer's seat; 301:4 with few — the seventy quoted plene; 311:5 the hundred and
+forty nations against seventy souls — E10, quoted defective); two reread whole. FROZEN as ONE unit deu_10_second_tablets (the 224th; standing 2227 = 2221 + 6 as
+predicted, hash unmoved); the ledger deu_10_ekev_2026-09-19.md (25 sources — Onkelos 22: MATERIAL 19 / CONTEXT 3; the outside rows 3: MATERIAL 3 / CONTEXT
+0; coverage computed, lint 0, no cut missed); six claims DV10-01..06 verified 6/0, seated as six WITNESS_READ at 10:1, 5, 6, 10, 12, 17; the ritual 13 PASS; the
+fold +14 on the journal; the display layer +89 by reference and +38 by gloss. THE FINDS: 10:1-2 QUOTE EXODUS 34:1 word for word (six tokens, then eleven of
+fourteen) and INSERT THE ARK — "come up to Me on the mountain" (Exodus 24:12's call, the two seats), "make for yourself an ark of wood" (one seat), "and you shall
+put them in the ark" (two tokens Exodus 34 never gives); 10:3 makes the ark of acacia BEFORE the ascent; 1 Kings 8:9 reads the ark's contents from this telling;
+THE STATIONS REVERSED — Numbers 33:30-34 Moseroth then Bene-jaakan, 10:6 Beeroth-bene-jaakan then Moserah, one token shared, and AARON'S DEATH MOVED from Mount Hor
+(33:38, dated) to Moserah; "and he was buried there" the Torah's one seat; "ministered as priest" the wayyiqtol at 10:6 and Numbers 3:4 alone; "separated" the hiphil
+perfect at 10:8 and Numbers 16:9 alone; THE BOOK'S ARK IS "OF THE COVENANT" (four seats, never in Exodus), EXODUS'S "OF THE TESTIMONY" (seven, in two spellings,
+never in the book); THREE RECEIPT FORMS — "as the LORD commanded me" (10:5, 4:5 — the register gate's seat, declared NONE), "as the LORD your God spoke to him"
+(10:9 — by "spoke"), "which I swore to their fathers" (10:11 — repeated to Joshua in seven shared tokens); "at that time" twice (10:1, 10:8); THE THIRD FORTY (10:10)
+the phrase's fifth seat in the book; THE DEMAND IN FIVE INFINITIVES (10:12-13) with the Shema's seven tokens inside and Micah 6:8's five; THE HEAVEN OF HEAVENS six
+in the Bible, with the vav at Solomon's dedication as here; "circumcise the foreskin of your heart" the command's one seat and "stiffen your neck no more" the
+chapter's one prohibition — the calf's adjective made a command; "God of gods and Lord of lords" Psalm 136:2-3; "who lifts no face" against Numbers 6:26; the
+judge's bribe law (16:19, Exodus 23:8) made the Judge's nature; "AND YOU SHALL LOVE" FIVE IN THE TORAH (the LORD twice, the neighbor, the stranger twice) and "for you
+were strangers" at all four seats; 10:20 AGAINST 6:13 SEVEN OF EIGHT — the fourth clause "and to Him you shall cleave" added; "He is your praise" one seat; THE
+SEVENTY TOLD IN NEW WORDS (two tokens with Genesis 46:27, one with Exodus 1:5); THE PARSER reads the plural "first" as no ordinal and the singular "the first
+writing" as [1]; NO MEMRA IN THE CHAPTER; MOSES UNNAMED from chapter 6 to 11; ONKELOS — the gifts supplied for "the LORD is his inheritance" (18:2 and Numbers
+18:20 the same), the ways "that are right before Him", the foolishness of the heart, God of JUDGES and Lord of KINGS, the CONVERT loved and the DWELLERS you were,
+"draw near to His fear" for cleave, "establish" for swear. THE CAUTION: the shelf quotes 10:22 two ways — 301:4 "your fathers" plene, 311:5 defective, the DB
+defective (chapter 6's lesson in a new form). THE LESSONS (thirteen, in the map): the retelling's additions are the compile's questions; the helpers copied by
+content markers; a sum of searches is not one search; the ledgers' book names differ by age; a middah code is checked before it is typed. OWED TO 8b: the fragments
+in the ark, the receipt seats, the stations' open row, the Levites' "at that time", the third forty's end, the laws restated by CALL, the demand, the attributes
+against the blessing, the stranger, the seventy.
+
+
+## 2026-09-20 — DEUTERONOMY 10 COMPILED (THE DEUTERONOMY WALK sitting 8b — CHAPTER 10): THE READBACK'S FORMS COMBINED, NO SEVENTH; TWO ACTS TOLD ONLY IN THE
+## RETELLING WRITTEN ONCE AT THEIR OWN DAYS; THE SECOND ASCENT'S DATE MATCHES SEDER OLAM'S; THE CODE'S FOUR HOLES COMPILED AT THE CHAPTER'S OWN DAY
+
+THE FORMS COMBINED. Chapter 10 is the retelling's tail (10:1-11) and the laws' head (10:12-22), so its rows took the forms already on file and no seventh:
+twenty-five rows, VERBATIM 9 / VARIANT 10 / EXPANDED 3 / TURNED 1 / SUPPLIED 2 — ten on the tape by kind and first verse (the second ascent's line at 34:2, the
+ark's making at 37:1, the testimony placed at 40:20, Aaron's death at Numbers 20:28, the Levites gathered at Exodus 32:26, the portion declared at Numbers
+18:20, the intercession, the oath), thirteen in the kin's cells by CALL. TWO ACTS ARE TOLD ONLY HERE: "and you shall put THEM in the ark" (10:2 — the two
+tokens Exodus 34:1 never gives; the shelf reads 'them' of both sets, the whole tablets and the fragments: Rav Yosef's baraita at Bava Batra 14b:6 and Menachot
+99a:12, Rav Huna's doubled Name from 2 Samuel 6:2, R. Yehuda's double restriction from 1 Kings 8:9) and "and he was buried there" (10:6 — the Torah's one
+seat; Numbers tells the death, the mourning, the date and the age, never the burial). Each was written ONCE at its own day by a retrograde marker: the
+fragments at the erection's day (2, 1, 1), the day Exodus 40:20 placed the tablets, with a status on the ark whose VALUE the docket supplied (the tablets and
+the fragments; the scroll inside for R. Meir, beside for R. Yehuda — the cubit six or five); the burial at Aaron's death (40, 5, 1), the status buried REUSED
+— Aaron the world's ninth buried, Sarah to Miriam before him. THE PLACE IS OPEN: Moserah in the retelling, Mount Hor on the tape — and the shelf's
+reconciliation (Seder Olam Rabbah 9:2's retreat of seven stations) was already a parameter of the Numbers compile, found on file at journeys and chukat; no
+marker for the retreat, the disagreement inside the burial line's own field. THE THIRD FORTY (10:10) is a stretch on the clock from the second ascent's marker
+at Exodus 34:4 (1, 5, 29) to THE TIMERS' FIRE at (1, 7, 10) — forty on the running world, and its end is a fire, not a marker: the probe's resolver takes both.
+And THE SECOND ASCENT'S DATE MATCHES THE SHELF: Seder Olam Rabbah 6:2, read whole under the export's empty key, says up on the twenty-ninth of Av and down
+on the tenth of Tishri — the machine's (1, 5, 29) by subtraction from 10 Tishri is the shelf's own date; 7b's OPEN row ("the tradition's first of Elul") was
+the reader's error and is closed. THE LAWS' HEAD: 10:12-22 graded by CALL against the cells that compile them (the creed, 6:13, 8:6, 4:1, 4:39, 4:37, 7:7, 7:9,
+Numbers 6:26, Exodus 23:8, 22:21, Leviticus 19:34, 6:13 again, 7:19, Genesis 46:27) — and FOUR HOLES IN THE CODE compiled at the chapter's own day (40, 11, 1)
+after a forward marker at 10:12: the demand (fear_of_heaven_asked — the tradition's own name for 10:12, "everything is in the hands of Heaven except the fear
+of Heaven", Berakhot 33b:23), the heart and the neck (heart_circumcision_commanded — its value the evil inclination, Moses' name for it "foreskin" from this
+verse, Sukkah 52a:7; guarded by grammar at Shabbat 108a:7, where the verbal analogy takes the complete form and refuses the construct; stiffening_barred the
+chapter's one prohibition, a block with no lashes), the stranger's love (love_owed — Leviticus 19:34's effect in the vocabulary since the holiness compile
+and NEVER WRITTEN ON THE TAPE until this line; a debit by its registry op, the stranger the counterparty; R. Natan's rule on the reason clause, the convert's
+intake as the exam), the cleaving (cleaving_commanded — its value the scholars, Ketubot 111b:7; the four clauses of 10:20 positive by Temurah 4a:2, a status
+not a block). THE MACHINE'S LESSONS: a stretch may end at a timer's fire; the line at a FORWARD marker's own verse takes the marker's class too (the
+placement read at the stitcher's print — text_constrained 110, page_order 1149); a reused effect brings its registry op (a debit moves the open-debit counts);
+the newest sitting's own checkpoints join the stale-literal list (7b's DA1 held 'markers 169' in a form the ten retypes missed — the tape 9/10 on its first
+run, 10/10 on its second); the callees' print drops a design's edge before it is typed (no cell on 1:10's stars — seventeen CALL edges, not eighteen). THE
+NUMBERS: cold_run_second_tablets.py the 65th runner 62/62 on its first graded run; the tape 10/10 on its second (the first 9/10, DA1); RUN (1317, 96, 88, 0, 12,
+1613, 41, 319, the four pairs, 127) as predicted; markers 169 -> 172; kinds 1142, effects 1037, daemons 70, seventeen CALL edges; the docket 532 rows (link 31 / topic 501; LAW 78, DERIVATION 76, DISPUTE 14, CONTEXT 117, OUTSIDE 247; credited 308; 239,117 bytes), EVERY ROW READ WHOLE FROM THE START — no cut, no overlay (the parts' WHOLE dicts empty, the correction counts zero and computed); every gate green
+(the chain three times — the first pass stopped at the probes step (three older probes' marker counts retyped) and the dependency gate (four homograph edges FALSE, the two predicted pointers RUN_CITATION); the second green to the register gate and failed at the eight-worker positions table (a worker raising on the cached path, the cache's own report masked by a shadowed name — the nineteenth slip, fixed); the positions by four workers and the third pass from the checkpoint probe ALL GREEN; the sweep 64/64). THE TWO-RUN RULE'S THIRD COMPILE SITTING: RUN A the design, the docket its own run in the same window on the owner's word, RUN B the
+build after one compaction — three clean points.
+
+
+## 2026-09-20 — DEUTERONOMY 11 READ AND FROZEN (THE DEUTERONOMY WALK sitting 9, one run with a clean point inside it): THE SPINE RETURNS — TWENTY-TWO SECTIONS OF THE
+## SIFREI ON ONE CHAPTER, OPENING AT THE LAND'S PRAISE; THE RAIN CONDITIONAL HAS NO CELL; THE FRONTLETS' THREE SPELLINGS MEASURED AT THEIR SEATS; JOSHUA SAYS THE
+## CHAPTER'S SENTENCES AT SEVEN SEATS; THE MISHNAH QUOTED BY NAME INSIDE THE SIFREI; THE RECEIPT BY "SPOKE" POINTED AT EXODUS 23:27 BY THE TEACHER
+On the owner's "Go" after the reread that followed 8b's compaction and "Continue" after the clean point #198 (2026-09-20). THE READING: Deuteronomy 11:1-32 with Onkelos
+whole (the export's 32 rows the DB's 32 — the identity, asserted) and THE SIFREI ON DEUTERONOMY ON THE CHAPTER for the first time since chapter 6 — piskaot 37-58
+heading on 11:10-32 (45 without a head citation, the spine's by its opening words; 36 on 6:9 before, 59 on 12:1 after), 171 rows read whole in both files
+(37 read before at twenty earlier sittings and reread whole — found by computation), seven rows outside the spine read whole (234:6 excluded — the English's
+slip for 22:12), the kin credited by name (Numbers 16; 6:4-9; 8:7-10; Exodus 23:27-31; Leviticus 26). FROZEN as ONE unit deu_11_bless_curse_set (the 225th; the
+portion edge Ekev / Re'eh inside it; standing 2233 = 2227 + 6 as predicted, hash unmoved); the ledger deu_11_ekev_reeh_2026-09-20.md (210 sources — Onkelos 32:
+MATERIAL 29 / CONTEXT 3; the spine 171: MATERIAL 104 / CONTEXT 67; the outside rows 7: MATERIAL 7; coverage computed, lint 0, no cut missed); six claims
+DV11-01..06 verified 6/0, seated as six WITNESS_READ at 11:1, 8, 13, 22, 25, 26; the ritual 13 PASS; the fold +14 on the journal; the display layer +158 by
+reference and +64 by gloss. THE FINDS: THE SPINE OPENS AT 11:10, the Land's praise, not at the paragraph's head — Egypt watered by the foot against the Land drinking
+by heaven's rain (37-39), the rain's measure fixed at the year's head and moved by the deeds (40); "garden" fifteen in the Torah, 11:10 THE ONLY SEAT OUTSIDE GENESIS,
+"like the land of Egypt" Lot's clause (Genesis 13:10) and 11:10 alone; "from the beginning of the year" spelled without the aleph THE BIBLE'S ONE SEAT — QUOTED PLENE
+BY THE SIFREI; "the discipline of the LORD" the Torah's one seat of the noun; "made flow" the hiphil's one Bible seat; "the waters of the Red Sea" 11:4 and Rahab's
+Joshua 2:10 (the Sifrei 52:2 quotes her); DATHAN AND ABIRAM WITHOUT KORAH — eight seats each, never apart; "every living thing" the flood's word (Genesis 7:4, 7:23,
+11:6); Numbers 16:14 "a land flowing with milk and honey" IN THEIR OWN MOUTHS of Egypt; "every great deed of the LORD" Joshua 24:31 and Judges 2:7 — JOSHUA SAYS THE
+CHAPTER'S SENTENCES AT SEVEN SEATS (1:3-5 the borders and no man standing, 1:11 the crossing, 5:6 the oath, 22:5 the charge whole with twelve tokens, 23:16 the curse
+whole with eleven, 24:31; Rahab's 2:10); "My commandments" at 11:13 INSIDE MOSES' SPEECH (5:29 the other seat, inside God's word); the two infinitive absolutes
+"hearken, hearken" and "keep, keep" the shelf pairs (48:1); THE RAIN CONDITIONAL (11:13-17) HAS NO CELL ANYWHERE IN THE MACHINE — 28:12 and 11:17 the pair the song's
+rows read (306:4, 306:6, 306:9), "and He shut the heavens" defined by the wombs (Genesis 16:2, 20:18) with the ink agreeing on the verb's Torah seats; THE FRONTLETS'
+THREE SPELLINGS MEASURED — 6:8 defective, 11:18 and Exodus 13:16 with the first vav — the shelf's four compartments (35:4) need a defective 11:18 the DB does not
+write (4b's open row carried with its measurement); the doorposts 6:9 one vav / 11:20 two (36:3); "teach" the piel at 11:19 against 5:1's qal; "as the days of the
+heavens above the earth" one seat — the resurrection from "to them" (47:2); "than you" plural against the singular 4:38, 9:1 (50:4); "the river, the river Euphrates"
+one; "AS HE SPOKE TO YOU" (11:25) — the receipt by "spoke", sixteen in the book against the finder's "commanded" forms: THE TEACHER POINTS IT AT EXODUS 23:27 (52:4 —
+"and where did He speak?"); THE MISHNAH QUOTED BY NAME INSIDE THE SIFREI (Sheviit 6:1 at 51:2) and the baraita of the borders (51:3 — thirty-five Aramaic names);
+Re'eh opens at 11:26 inside the chapter — "See" the singular imperative, seven in the book; "a blessing and a curse" one seat; Gerizim four, Ebal eight (three a man);
+GILGAL THE TORAH'S ONE SEAT; "the terebinths of Moreh" one — 56:3's analogy against R. Eliezer's five readings, the Samaritan "Shechem" a forgery that changes
+nothing; "possess it and dwell in it" one — the sages at the border (80:4-5); the four terms of the frame the four kinds of the oral shelf (58:1); MOSES UNNAMED
+chapters 6-14; NO NUMBER VERSE in the chapter; ONKELOS — the Word at 11:1, "teaching" for discipline, the export's parenthesis at 11:8, "demands it, always", "accept,
+accept", "shut" one row, tefillin at 11:18, "teach" against 6:7's "repeat", "the blessers and the cursers", "the plains of Moreh". THE CAUTIONS: the two files divide
+piska 37 differently (chapter 8's lesson again); the ledger writer's two typed sums; the prose's own mark against the computed list. THE LESSONS (thirteen, in the
+map): the spine returns at the Land's praise; a piska's membership on the consonants; a typed sum printed first; the prose's mark checked; a transliteration glossed;
+the prior reads by computation; the manifest's spine from the cite index; the point where the design put it; the receipt by "spoke" the finder's third form. OWED TO
+9b: the rain conditional a NEW cell (Leviticus 26 by CALL), the frontlets and the doorposts by 6:8-9's cell, the borders by Numbers 34 with the returners' lines, the
+receipt's pointer at 11:25, the dispossession little by little, the blessing and the curse set, Gerizim and Ebal by chapter 27's ceremony, Gilgal, the retelling
+rows, the study/deed clock, the land-bound partition, the docket.

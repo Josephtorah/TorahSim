@@ -1,7 +1,7 @@
 # REGISTER_INDEX.md — written by register_census.py each run (documentation, never runtime)
 
-THE REGISTER GATE — the ink's own formulas against the world (population table rows 148; ledger entries 1617)
-COVERAGE: counts 110 {'MEASURE-ONLY': 44, 'NONE': 16, 'ELSEWHERE': 14, 'ROW': 29, 'LEDGER': 7}; receipts 69 {'CHAPTER': 11, 'NONE': 14, 'ACT': 23, 'EVENT': 5, 'CLOSE': 16}; footers 9 {'DAEMONS': 6, 'EMPTY': 3}; registers 18 {'NONE': 14, 'ROWS': 4}
+THE REGISTER GATE — the ink's own formulas against the world (population table rows 148; ledger entries 1625)
+COVERAGE: counts 110 {'MEASURE-ONLY': 44, 'NONE': 16, 'ELSEWHERE': 14, 'ROW': 29, 'LEDGER': 7}; receipts 69 {'CHAPTER': 11, 'NONE': 13, 'ACT': 24, 'EVENT': 5, 'CLOSE': 16}; footers 9 {'DAEMONS': 6, 'EMPTY': 3}; registers 18 {'NONE': 14, 'ROWS': 4}
 DECLARED 100; DEBT 0; FAILS 0
 -- A. THE COUNT LINES (110)
    Gen 11:10   MEASURE-ONLY  green    footer: these are the generations of [100, 2] | measures [100, 2]
@@ -112,7 +112,7 @@ DECLARED 100; DEBT 0; FAILS 0
    Num 31:46   LEDGER        green    souls [16000] | ledger [('the-warriors-portion', 16000, 'Num 31:36-41 —'), ('the-congregations-half', 16000, 'Num 31:42-47 —')
    Num 35:15   MEASURE-ONLY  green    souls [6] | measures [6]
    Num 35:30   MEASURE-ONLY  green    souls [1] | measures [1]
-   Deut 10:22  NONE          declared souls [70] |  | why: the seventy restated in Deuteronomy — Deuteronomy is not on the tape (the book not read) — the seat 
+   Deut 10:22  NONE          declared souls [70] |  | why: THE DEUTERONOMY WALK 8b (2026-09-20) | "with seventy persons your fathers went down to Egypt" — the 
    Deut 19:11  MEASURE-ONLY  green    souls [1] | measures [1]
 -- B. THE RECEIPTS (69)
    Gen 7:5     CHAPTER       declared  | [('noach', 'boarding_owed'), ('the_generation_of_the_flood', 'to_be_wiped')] | why: THE NUMBERS WALK 10b (2026-09-12; the receipt finder's SECOND FORM, 'according to ALL that the LORD 
@@ -181,7 +181,7 @@ DECLARED 100; DEBT 0; FAILS 0
    Deut 5:12   CHAPTER       declared  | [('moses', 'commanded')] | why: THE DEUTERONOMY WALK 3b (2026-09-16) | "KEEP the sabbath day to sanctify it, AS THE LORD YOUR GOD CO
    Deut 5:16   CHAPTER       declared  | [('moses', 'commanded')] | why: THE DEUTERONOMY WALK 3b (2026-09-16) | "honor your father and your mother, AS THE LORD YOUR GOD COMM
    Deut 5:32   CHAPTER       declared  | [('moses', 'commanded')] | why: THE DEUTERONOMY WALK 3b (2026-09-16) | "you shall observe to do AS THE LORD YOUR GOD COMMANDED YOU; 
-   Deut 10:5   NONE          declared  | [] | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
+   Deut 10:5   ACT           declared  | [('the_ark', 'fragments_in_the_ark', 'status')] | why: THE DEUTERONOMY WALK 8b (2026-09-20) | "and I turned and came down from the mountain, and put the ta
    Deut 20:17  NONE          declared  | [] | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
    Deut 34:9   NONE          declared  | [] | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
 -- C. THE FOOTERS AND HEADERS (9)

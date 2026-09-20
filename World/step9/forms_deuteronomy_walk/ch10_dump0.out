@@ -1,0 +1,88 @@
+==== A0. THE TWO DIVISIONS — the export's chapter 10 against the DB's
+  DB verses 22 | export verses HE 22 EN 22 | per-chapter export lengths vs DB, chapters 1-10: [(5, 30, 33)]
+  the alignment cost 14 | export verses mapped to MORE THAN ONE DB verse: {}
+  the offset per export verse (DB minus export, the first DB verse of each): Counter({0: 22}) | the runs: [(1, 1, 1), (16, 16, 16), (17, 17, 17), (18, 18, 18), (19, 19, 19)]
+  the shared export verse against its DB verses (tokens, negations): []
+==== A. THE SHELF BY POSITION — the Sifrei on Deuteronomy around chapter 10
+  piskaot 357 357 rows 2357 2357
+  heads 34-39 (HE first citation | rows | EN first quote):
+    34 head (6, 7) | HE rows 10 EN rows 10 | 'And drill them (shinantem)85The root, sh-n-n, is etymologica'
+    35 head (6, 8) | HE rows 12 EN rows 12 | 'And bind them'
+    36 head (6, 9) | HE rows 10 EN rows 10 | 'And inscribe them (ketavtam)'
+    37 head (11, 10) | HE rows 16 EN rows 16 | 'And as a result of obeying these laws . . .then HASHEM your '
+    38 head (11, 10) | HE rows 11 EN rows 11 | 'It is not like the land of Egypt'
+    39 head (11, 11) | HE rows 11 EN rows 11 | 'But the Land, which you are crossing to possess,is a land of'
+  heads whose chapter is 10 : [] | heads by chapter 1-10: [(1, 24), (3, 4), (6, 6), (11, 21), (12, 20), (13, 14), (14, 14), (15, 16), (16, 19), (17, 16)]
+  HE rows citing Deut 10 (the export's verse → the DB's): 3 [(32, 1, 20, [20]), (301, 4, 22, [22]), (311, 5, 22, [22])]
+  EN rows citing Deut 10 : 3 [(32, 1, 20, [20]), (301, 4, 22, [22]), (311, 5, 22, [22])]
+  EN "ibid 10:n" candidates: 0
+  the union of rows (both files): 3 [(32, 1), (301, 4), (311, 5)]
+  outside rows file bytes 6216
+==== B. ONKELOS chapter 10 and the DB (the dump per DB verse; a shared export row printed at its first DB verse)
+  the store's chapter 10 verses 22 | verses whose store token count differs from the DB: []
+  token count chapter 10 : 324
+  onkelos dump bytes 27231
+==== C. THE PARSER on every verse of chapter 10
+  10:1   N [2]                      O []             marked ['שני^']
+  10:3   N [2, 2]                   O []             marked ['שני^', 'ושני^']
+  10:4   N [10]                     O [1]            marked []
+  10:10  N [40, 40]                 O []             marked []
+  10:22  N [70]                     O []             marked []
+  number-word tokens present per verse (the bare check against the parser): {'10:1': ['שני'], '10:3': ['שני', 'ושני'], '10:4': ['הראשון', 'עשרת'], '10:10': ['ארבעים', 'וארבעים'], '10:20': ['תשבע']}
+  10:1 tokens: ['בעת', 'ההוא', 'אמר', 'יהוה', 'אלי', 'פסל', 'לך', 'שני^', 'לוחת', 'אבנים', 'כראשנים', 'ועלה', 'אלי', 'ההרה', 'ועשית', 'לך', 'ארון', 'עץ']
+  10:3 tokens: ['ואעש', 'ארון', 'עצי', 'שטים', 'ואפסל', 'שני^', 'לחת', 'אבנים', 'כראשנים', 'ואעל', 'ההרה', 'ושני^', 'הלחת', 'בידי']
+  10:4 tokens: ['ויכתב', 'על', 'הלחת', 'כמכתב', 'הראשון', 'את', 'עשרת', 'הדברים', 'אשר', 'דבר', 'יהוה', 'אליכם', 'בהר', 'מתוך', 'האש', 'ביום', 'הקהל', 'ויתנם', 'יהוה', 'אלי']
+  10:10 tokens: ['ואנכי', 'עמדתי', 'בהר', 'כימים', 'הראשנים', 'ארבעים', 'יום', 'וארבעים', 'לילה', 'וישמע', 'יהוה', 'אלי', 'גם', 'בפעם', 'ההוא', 'לא', 'אבה', 'יהוה', 'השחיתך']
+  10:20 tokens: ['את', 'יהוה', 'אלהיך', 'תירא', 'אתו', 'תעבד', 'ובו', 'תדבק', 'ובשמו', 'תשבע']
+  10:22 tokens: ['בשבעים', 'נפש', 'ירדו', 'אבתיך', 'מצרימה', 'ועתה', 'שמך', 'יהוה', 'אלהיך', 'ככוכבי', 'השמים', 'לרב']
+==== D. CASE TOKENS, FRAMES, REGISTER, NAMES
+  case tokens (כי "when/for" / אם "if" / ואם / או "or" / פן "lest"): {'10:12': ['כי', 'אם'], '10:17': ['כי'], '10:19': ['כי']}
+  divine frames (ויאמר/וידבר + יהוה): ['10:11']
+  לאמר "saying" seats: []
+  narrative-form verbs (V.w) per verse: {3: ['ואעש', 'ואפסל', 'ואעל'], 4: ['ויכתב', 'ויתנם'], 5: ['ואפן', 'וארד', 'ואשם', 'ויהיו'], 6: ['ויקבר', 'ויכהן'], 10: ['וישמע'], 11: ['ויאמר'], 15: ['ויבחר']}
+  first-person verb forms (1cs / 1cp) per verse: {5: [('עשיתי', 'HVqp1cs'), ('צוני', 'HVpp3ms/Sp1cs')], 10: [('עמדתי', 'HVqp1cs')], 11: [('נשבעתי', 'HVNp1cs')]}
+  imperatives (Vq.v / Vp.v / Vh.v) per verse: {}
+  prohibitions לא + imperfect (the ten's form) per verse: {9: [], 10: [], 16: [('תקשו', 'HVhi2mp')], 17: [('ישא', 'HVqi3ms'), ('יקח', 'HVqi3ms')]}
+  name tokens (Np): {1: ['יהוה'], 4: ['יהוה', 'יהוה'], 5: ['יהוה'], 6: ['ישראל', 'מבארת', 'בני', 'יעקן', 'מוסרה', 'אהרן', 'אלעזר'], 7: ['הגדגדה', 'הגדגדה', 'יטבתה'], 8: ['יהוה', 'יהוה', 'יהוה'], 9: ['ללוי', 'יהוה', 'יהוה'], 10: ['יהוה', 'יהוה'], 11: ['יהוה', 'נשבעתי'], 12: ['ישראל', 'יהוה', 'יהוה', 'יהוה'], 13: ['יהוה'], 14: ['ליהוה'], 15: ['יהוה'], 17: ['יהוה'], 19: ['מצרים'], 20: ['יהוה'], 22: ['מצרימה', 'יהוה']}
+  second-person plural vs singular (2mp / 2ms tokens per verse): {1: (0, 5), 2: (0, 2), 3: (0, 0), 4: (1, 0), 5: (0, 0), 6: (0, 0), 7: (0, 0), 8: (0, 0), 9: (0, 1), 10: (0, 1), 11: (0, 2), 12: (0, 5), 13: (0, 1), 14: (0, 1), 15: (1, 1), 16: (4, 0), 17: (1, 0), 18: (0, 0), 19: (2, 0), 20: (0, 5), 21: (0, 4), 22: (0, 3)}
+==== E. THE REGISTER GATE on Deut 10
+  dispositions naming Deut 10: ["    why: 'the seventy with Joseph''s two sons — the restated total (Exod 1:5 and Deut 10:22 repeat it); the Joseph runner''s cell; no row — the backward seeding is FILED (COMPILE_DEBT.md''s sitting-8b box:", '  Deut 10:22:', '  Deut 10:5:']
+  REGISTER_INDEX lines on Deut 10:
+       Gen 46:27   NONE          declared souls [2, 70] |  | why: the seventy with Joseph's two sons — the restated total (Exod 1:5 and Deut 10:22 repeat it); the Jos
+       Deut 10:22  NONE          declared souls [70] |  | why: the seventy restated in Deuteronomy — Deuteronomy is not on the tape (the book not read) — the seat 
+       Deut 10:5   NONE          declared  | [] | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
+==== F. THE PRIOR READS
+  ledgers with an Onkelos Deut 10 row: []
+  prior Sifrei Devarim rows anywhere (strict form), those among the outside rows: [('deu_06_vaetchanan_2026-09-17.md', 32, 1), ('gen_25_babel_2026-08-25.md', 311, 5), ('gen_29_separation_promise_2026-08-25.md', 311, 5)] | all prior rows count 320
+  ledgers NAMING a verse of Deut 10: 17
+    ('exodus_block_sanctuary_2026-09-04.md', 1, ['Deut 10:1'])
+    ('lev_09_eighth_day_2026-09-05.md', 1, ['Deut 10:8'])
+    ('num_04_07_naso_exam_2026-09-10.md', 3, ['Deut 10:17'])
+    ('num_06_priest_blessing_2026-09-09.md', 2, ['Deut 10:17', 'Deut 10:8'])
+    ('num_08_12_beha_exam_2026-09-10.md', 1, ['Deut 10:1'])
+    ('num_10_trumpets_depart_2026-09-10.md', 2, ['Deut 10:1', 'Deut 10:19'])
+    ('num_12_miriam_2026-09-10.md', 1, ['Deut 10:1'])
+    ('num_14_rejection_2026-09-10.md', 1, ['Deut 10:11'])
+    ('num_18_priest_levite_dues_2026-09-10.md', 2, ['Deut 10:9'])
+    ('num_19_21_chukat_exam_2026-09-11.md', 2, ['Deut 10:6'])
+    ('num_20_meribah_edom_aaron_2026-09-11.md', 3, ['Deut 10:6'])
+    ('num_25_peor_pinchas_2026-09-11.md', 2, ['Deut 10:3', 'Deuteronomy 10:3'])
+    ('num_26_second_census_2026-09-11.md', 1, ['Deuteronomy 10:22'])
+    ('num_31_midian_2026-09-12.md', 2, ['Deuteronomy 10:8'])
+    ('num_33_journeys_2026-09-12.md', 10, ['Deuteronomy 10:4', 'Deuteronomy 10:6', 'Deuteronomy 10:7'])
+    ('num_33_journeys_exam_2026-09-12.md', 2, ['Deuteronomy 10:6'])
+    ('num_36_heiresses_2026-09-09.md', 1, ['Deut 10:20'])
+  ledgers with an Onkelos Exod 25, 34 or 37 row (the kin's reading — the ark 25:10-22, the second tablets 34:1-4 and 28-29, the ark made 37:1-9): ['erection_docket_2026-09-06.md', 'exo_25_ark_table_menorah_2026-09-01.md', 'exo_34_second_tablets_2026-09-01.md', 'exo_37_furniture_made_2026-09-02.md', 'sanctuary_build_docket_2026-09-06.md'] | Tanchuma rows on Exod 25/34/37 anywhere: 9 | ledgers with an Onkelos Num 3, 8, 18, 20 or 33 row (the Levites 3:5-13, 8:5-26, 18:20-24; Aaron's death 20:22-29; the journeys 33:30-39): ['num_03_aaron_levi_replace_2026-09-09.md', 'num_03_firstborn_redeem_2026-09-09.md', 'num_03_levite_clans_count_2026-09-09.md', 'num_08_menorah_levites_2026-09-10.md', 'num_18_priest_levite_dues_2026-09-10.md', 'num_20_meribah_edom_aaron_2026-09-11.md', 'num_33_journeys_2026-09-12.md']
+==== G. THE DRAFTS
+  deu_09_not_righteousness: refs 9:1-29; steps (9, 1)..(9, 29) n=29; draft False; operators True; depends_on ['    - "deu_08_manna_humility"\n    - "exo_32_golden_calf"\n']; scenarios 36; binary_trees True; step E True; comment lines 34
+  deu_10_second_tablets: refs 10:1-22; steps (10, 1)..(10, 22) n=22; draft True; operators False; depends_on ['    - "deu_09_not_righteousness"\n    - "exo_34_second_tablets"\n']; scenarios 29; binary_trees True; step E False; comment lines 26
+    the step verses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22] | covers DB 22 ? True
+  the units' claim prefixes present anywhere? {'DV10': 0, 'DV10A': 0, 'DV10B': 0, 'DV09': 2, 'DV11': 0}
+  existing manifests deu_10*: [] | ledgers deu_*: ['deu_01_03_devarim_2026-09-15.md', 'deu_01_03_devarim_exam_2026-09-15.md', 'deu_04_vaetchanan_2026-09-16.md', 'deu_04_vaetchanan_exam_2026-09-16.md', 'deu_05_vaetchanan_2026-09-16.md', 'deu_05_vaetchanan_exam_2026-09-16.md', 'deu_06_vaetchanan_2026-09-17.md', 'deu_06_vaetchanan_exam_2026-09-17.md', 'deu_07_vaetchanan_ekev_2026-09-17.md', 'deu_07_vaetchanan_ekev_exam_2026-09-18.md', 'deu_08_ekev_2026-09-18.md', 'deu_08_ekev_exam_2026-09-19.md', 'deu_09_ekev_2026-09-19.md', 'deu_09_ekev_exam_2026-09-19.md']
+  unit count and standing (CORPUS_TRUTH literals): []
+==== H. THE STORE'S GLOSSES on chapter 10
+  gloss Counter (the 50 commonest): [('YHWH', 20), ('obj-marker·et', 13), ('which', 10), ('God-you/your', 8), ('to-me/my', 5), ('the-meaning-to-glisten', 5), ('over', 4), ('not', 4), ('the-he/it', 3), ('to-you/your', 3), ('box', 3), ('be', 3), ('the-first', 3), ('make', 3), ('there', 3), ('he/it', 3), ('the-heavens', 3), ('in-time', 2), ('two', 2), ('meaning-to-glisten', 2), ('stone', 2), ('like-first', 2), ('and-go-up', 2), ('the-mountain-suffix', 2), ('and-make', 2), ('tree', 2), ('and-grave', 2), ('the-word/thing', 2), ('in-box', 2), ('speak', 2), ('in-mountain', 2), ('like-as/which', 2), ('Israel', 2), ('journey', 2), ('?', 2), ('the-Gudgodah-suffix', 2), ('to-face', 2), ('the-day', 2), ('the-this', 2), ('to-him/its', 2), ('like-day', 2), ('the-people', 2), ('the-earth', 2), ('swear', 2), ('to-set', 2), ('and-now', 2), ('in-all', 2), ('obj-marker·et-him/its', 2), ('and-obj-marker·et', 2), ('that', 2)]
+  gloss file bytes 10123
+  overrides already for Deut.10: [] | by_ref last Deut.9 line: ['  "Deut.9.5:18": "to-establish"   # הקים']
+==== I. THE SPINE ON THE CHAPTER — none: no piska head in chapter 10 (the heads by chapter above); the outside rows are the spine here
+  the heads whose chapter is 10 : [] | the nearest heads: {36: (6, 9), 37: (11, 10)}

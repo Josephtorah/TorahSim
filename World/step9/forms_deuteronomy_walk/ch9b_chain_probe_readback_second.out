@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/Users/Shared/TorahSim/World/step9/readback_probes.py", line 47, in <module>
+    W = RG.running_world()
+  File "/Users/Shared/TorahSim/World/step9/register_census.py", line 196, in running_world
+    w, M = CS.run_world(CS.PARAMS['sojourn_start']['value'], reg, 'register-gate')
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Shared/TorahSim/World/step9/cold_run_sequence.py", line 2533, in run_world
+    path, n, coerced = WJ.sink(w, source='cold_run_sequence/%s' % setting)     # THE LOOP step 1: this world's run as one L3 segment
+                       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Shared/TorahSim/World/step9/world_journal.py", line 102, in sink
+    return j.seal(quiet=False)
+           ~~~~~~^^^^^^^^^^^^^
+  File "/Users/Shared/TorahSim/World/step9/world_journal.py", line 208, in seal
+    os.remove(self.body)
+    ~~~~~~~~~^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/Shared/TorahSim/World/journal/data/L3_run_cold_run_sequence_seed_isaac.jsonl.live'

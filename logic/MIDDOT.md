@@ -1769,6 +1769,122 @@ narrative strength. By cluster:
   · THE HARSH WORDS FIRST (342:1 on 33:1 from 9:7-8): "at Horeb you provoked the LORD", "you have been rebellious" among the hard words
     before the blessing — a reading of order, no rule (the range citation "9:7-8" in the Hebrew's form, found through the English).
 
+- THE CHAPTER-9 COMPILE (THE DEUTERONOMY WALK sitting 7b RUN B, 2026-09-19; cold_run_not_righteousness.py — the docket's rules carried into the cells' asks, each
+  code checked in this file's lists before it was typed):
+  · THE A-FORTIORI (I1, qal wa-chomer) at four seats the cells cite — Shabbat 87a:5 (F2 the_breaking_in_my_own_words: from the Paschal lamb's "no alien shall eat" to the
+    tablets and the apostates — Moses' own reasoning, ratified "may your strength be true"); Berakhot 32a:17 (F2 let_me_alone, F6 remember_your_servants: the three-legged
+    chair against the one leg); Yoma 75b:11 (F3 bread_i_did_not_eat: from the man who ascends on high and does not eat to the angels — FROM 9:9 ITSELF, the fasting's seat
+    this chapter's own); Arakhin 15a:11 (F5 — the spies' se'ah, credited).
+  · THE VERBAL ANALOGY (I2, gezerah shavah) at two seats — Berakhot 32a:19 (F6 do_not_destroy_your_people: vayechal / "he shall not profane [yachel] his word", Numbers 30:3
+    — the vow annulled by the vows' own law, the intercession's mechanism); Berakhot 7a:36 (F2 let_me_alone: "were very many" / "were very many" — Rehaviah's sons more
+    than 600,000, the offer of 9:14 FULFILLED outside the Torah).
+  · THE PARABLE (E26, mashal) at Berakhot 32a:9-11 and 32a:15 (F2 gods_word_verbatim: the well-wisher's parable on "leave Me be" — the matter depends on Moses).
+  · THE "DO NOT READ" READINGS NAMED, NO CODE — Shabbat 89a:6 (F2 the_calfs_own_day: boshesh read ba'u shesh, the sixth hour — the OPEN row's shelf source); Berakhot 32a:5
+    (F5 taberah: "to" [el] read "onto" [al] — Moses' impertinence); Shabbat 55a:9 (F6: the letter tav's readings behind the merit of the fathers' two arms).
+  · THE CLOCK READ BACK AS A COMPILE RULE'S TEST (no middah — the machine's own): Ta'anit 28b:9's "twenty-four days remaining in Sivan plus the first sixteen of Tammuz
+    = forty" is an ARITHMETIC RULE on the calendar; the tape's markers reproduce it by the calendar's own month lengths (Sivan thirty that year) — the sixth form grades a
+    stretch against the rule's arithmetic and the answer sheet's date (Mishnah Ta'anit 4:6) at once: MATCH; the two arms of the giving's day (Shabbat 88a:3) a PARAMETER
+    recorded, R. Yosei's the tape's.
+  · THE HYPERBOLE RULE (a reading rule on the code's own words — Rabban Shimon ben Gamliel at Chullin 90b:12, Tamid 29a:8, the Sifrei 25:4): "fortified to the heavens"
+    (9:1) an exaggeration, not a height — the parser's silence on the phrase its own witness (F1 fortified_to_the_heavens).
+  · A DISPUTE'S HINGE ON AN OMISSION (Mishnah Avodah Zarah 3:3; Avodah Zarah 44a:1-2; Tosefta 4:3 — F2 the_calf_ground_to_dust): R. Yosei's proof from the RETELLING'S verbs
+    (9:21 — grind and scatter), the Rabbis' from the FIRST TELLING'S fourth verb (32:20 — the drinking, a test as the sotah's) which the retelling DROPS: the readback's
+    VARIANT grade is the dispute's ground; the ruling the Rabbis' (the tape's calf_destroyed purpose to_test).
+  · HALF THE EDICT (Vayikra Rabbah 10:5 — F4 half_the_edict): "destruction" DEFINED as the eradication of children by Amos 2:9 (a definition by a proof-text), the edict on
+    Aaron's four sons halved by prayer — TWO DIED AND TWO REMAINED: the effect's NAME taken from the row's own words (destruction_halved), the dispute's other arm (R.
+    Yehuda: prayer all, repentance half) recorded.
+  · A PARAMETER WITH TWO ARMS AND FOUR SETTINGS (Shabbat 55a:11, 55a:13-16 — F6 remember_your_servants, the_merit_ceased): the merit of the fathers ceased (Shmuel) or
+    stands (R. Yochanan); from when — Hosea's, Hazael's (2 Kings 13:23 the last mention), Elijah's, Hezekiah's days: two exam persons, one accepted and one exempt.
+  · THE FEMININE NOUN KEPT (Berakhot 32a:27 — F6 lest_the_land_say): "not the ABILITY [yekholet] of the LORD" (Numbers 14:16) where "was not able" was expected — the
+    retelling keeps the noun's form at 9:28 (מבלי יכלת); a grammar rule read as the taunt's content.
+  · "AT THAT TIME" A TIME ORDAINED FOR CALAMITY (Sanhedrin 102a:5 — F4 at_that_time): R. Yosei's seats of the phrase — the marker's placement word read by the shelf.
+- **THE SIFREI ON DEUTERONOMY'S OWN CASE LAW ON CHAPTER 10 (Deuteronomy 10:1-22; THE DEUTERONOMY WALK sitting 8, 2026-09-20;
+  the ledger logic/oral_triage/deu_10_ekev_2026-09-19.md — THE SPINE SILENT ON THE CHAPTER, no piska head between 36 on 6:9 and 37 on
+  11:10; its three rows outside any piska read whole in both files, the one that argues by a numbered rule and the two that do not):**
+  · BORDERS, NOT BORDER (311:5 on 32:8 from 10:22): "he set the borders of the peoples according to the number of the children of
+    Israel" — sixty queens and eighty concubines are a hundred and forty nations against the seventy souls who went down (10:22), so
+    the plural "borders" gives each nation two shares — E10 (the repeated expression signifies: the noun read for its number; the row's
+    own form "אין כתוב כאן אלא" ("is not written here but") on its bytes; the code checked in MIDDOT.md AFTER it was typed on chapter
+    9's precedent — the rule's order missed, the outcome held); THE INK: 10:22 quoted DEFECTIVE here ("your fathers" without the vav,
+    as the DB writes it) and PLENE at 301:4 — the shelf's two spellings of one quoted verse (asserted on both rows' bytes).
+  · ACT FROM LOVE, NOT FROM FEAR (32:1 on 6:5 from 10:20): "the LORD your God you shall fear and Him you shall serve" (10:20) quoted
+    as the fearer's seat against 6:5's "you shall love" — the lover's reward doubled; love and fear together in the All-Present alone —
+    NO MIDDAH CODE (a distinction argued between two verses; the E10 typed first RELABELED before the ledger stood); THE INK: 10:20
+    against 6:13 seven of eight tokens, "and to Him you shall cleave" the fourth clause; 10:12 puts fear and love in one demand.
+  · WITH FEW — THE SEVENTY (301:4 on 26:5 from 10:22): the first-fruits confession's "with few" measured by "with seventy persons your
+    fathers went down" — NO MIDDAH CODE (a proof-text read for its count; the E10 typed first RELABELED); THE INK: "with seventy
+    persons" 10:22 the one seat, Exodus 1:5 the words in the other order, Genesis 46:27 "seventy" alone; the parser [70].
+
+- THE CHAPTER-10 COMPILE (THE DEUTERONOMY WALK sitting 8b RUN B, 2026-09-20; cold_run_second_tablets.py — the docket's rules carried into the cells' asks, each
+  code checked in this file's lists before it was typed):
+  · THE A-FORTIORI (I1, qal wa-chomer) at Ketubot 105a:16 (F6 takes_no_bribe: the bribe blinds the eyes of the WISE — how much more the foolish); R. Yishmael bar R.
+    Yosei's own at 105b:12 (F6 the_bribe_of_words: "if I who did not take feel so, how much more those who take" — the judge's reasoning on himself).
+  · THE VERBAL ANALOGY (I2, gezerah shavah) at three seats — Shabbat 108a:7 (F5 the_grammar_guard: foreskin / foreskin between Leviticus 12:3 and 19:23 takes the COMPLETE
+    form orlato / orlato and REFUSES 10:16's construct orlat — the analogy's own grammar guard: the heart's foreskin is not the circumcision law's object); Shevuot 35b:23
+    (F6 swear_by_his_name: ala / ala — the oath by the appellations liable as by the Name); Menachot 43b:9 (credited — chapter 6's, the tzitzit's).
+  · THE ET-EXTENSION (E1, ribui) at Pesachim 22b:11 (F6 the_et_of_10_20: Shimon HaAmmassoni's retraction at "you shall fear [et] the LORD your God" and R. Akiva's "to
+    include Torah scholars" — the fear's object extended as the cleaving's value) and Bava Batra 123a:21 (F6 seventy_persons: "with" extends — Dinah's twin refuted, Jochebed
+    the seventieth).
+  · RESTRICTION AFTER RESTRICTION, WHICH EXTENDS (E4) at Bava Batra 14a:10 (F1 the_fragments_in_the_ark: 1 Kings 8:9's "nothing in the ark EXCEPT the two tablets" — the
+    fragments' third derivation, R. Yehuda's).
+  · THE PARABLE (E26, mashal) at Berakhot 33b:25 (F5 a_small_thing: the large vessel that seems small to him who has it — the fear of Heaven a small thing for Moses) and
+    Berakhot 33b:22 / Megillah 25a:8 (F6 the_attributes_three: the king with a thousand thousand gold dinars praised for silver — the one who adds praises).
+  · NOTARIKON (E30) at Ketubot 105b:5 (F6 the_bribe_of_words: shochad = she-hu chad, "he is one" with the giver).
+  · THE "DO NOT READ" READINGS NAMED, NO CODE — Menachot 43b:15 (F5 a_hundred_blessings: ma read me'a); Ta'anit 9a:11 (F2 arad_heard: "saw" read "were seen" — the clouds
+    departed); Rosh Hashanah 3a:2 (the same row's juxtaposition of Arad's hearing to Aaron's death).
+  · THE JUXTAPOSITIONS NAMED, NO CODE — Sotah 38a:8 (F3 to_bless_in_his_name: 18:5's "to stand to minister" through 10:8 to Leviticus 9:22's lifted hands); Megillah 31a:13
+    (10:17-18's greatness beside the humility — credited).
+  · THE POSITIVE FORM RULE (a form rule on the code's own imperfects — Temurah 4a:2; Sanhedrin 56a:11): "you shall fear the LORD your God" A WARNING STATED AS A POSITIVE
+    COMMAND — 10:20's four clauses positive, the write a STATUS not a BLOCK, no lashes (F6 fear_serve_cleave_swear); the chapter's ONE prohibition 10:16's neck (F5
+    stiffen_no_more) a BLOCK without lashes (Makkot 13b:6's form — a prohibition without an action).
+  · THE CLOCK READ BACK AGAINST THE SHELF'S OWN DATE (no middah — the machine's own): Seder Olam Rabbah 6:2's twenty-ninth of Av IS the calendar's subtraction from 10 Tishri
+    (CAL_PARAMS second_tablets_given): the third forty measured on the running world between the second ascent's marker and the timers' fire — MATCH (DB4); 7b's OPEN row
+    on the clock was the reader's error ("the tradition's first of Elul" not this shelf's text), closed by the row read whole (F4 the_second_ascents_date).
+  · A DISPUTE'S TWO ARMS AS A PARAMETER'S SECOND ARM (Tosefta Sotah 7:9 against Bava Batra 14a:8 — F1 the_ark_is_one): two arks (the war ark with the scroll, the camp ark
+    with the fragments) against one ("that Moses fashioned" with 25:10's cubits): the tape's one id the Bavli's reading, the Tosefta's arm recorded; and WHAT ELSE THE
+    ARK HELD (14a:12-14b:1 — R. Meir's cubit six with the scroll inside, R. Yehuda's cubit five with the scroll beside): the effect's value's second parameter.
+  · THE REASON CLAUSE'S RULE (Bava Metzia 59b:15 — F6 the_thirty_six_warnings): R. Natan on "for you were strangers in the land of Egypt" — a defect in you, do not
+    mention in another: the four seats' reason clause read as a rule about speech.
+  · THE FEAR OF HEAVEN THE ONE FREE VARIABLE (Berakhot 33b:23; Megillah 25a:9; Niddah 16b:13 — F5 the_fear_of_heaven): a principle stated FROM the verse's question form
+    ("what … but to fear") — the effect fear_of_heaven_asked NAMED by the row's own words.
+- **THE SIFREI ON DEUTERONOMY'S OWN CASE LAW ON CHAPTER 11 (Deuteronomy 11:1-32; THE DEUTERONOMY WALK sitting 9, 2026-09-20;
+  the ledger logic/oral_triage/deu_11_ekev_reeh_2026-09-20.md — THE SPINE ON THE CHAPTER for the first time since chapter 6, piskaot
+  37-58, 171 rows read whole in both files, and seven rows outside the spine; EVERY CODE CHECKED IN MIDDOT.md BEFORE IT WAS TYPED,
+  none relabeled; the census from the ledger's own rows: E1 at 48:10, 50:2; E3 at 36:3; E10 at 39:4, 39:8, 39:9, 39:10, 41:20, 50:4, 52:2; E26 at 37:3, 38:4, 40:12, 43:23, 43:32, 43:34, 45:1, 48:2, 48:3, 53:1, 53:2, 306:4; E28 at 43:7; E29 at 47:4; I1 at 37:2, 37:7, 37:8, 37:9, 37:10, 37:11, 38:5, 38:9, 43:11, 43:12, 43:33, 47:5, 47:7, 47:8, 48:12, 52:4; I2 at 38:8, 41:17, 41:18, 43:9, 43:25, 51:2, 56:3; I3 at 44:1; I12 at 39:1, 43:1; I13 at 39:2, 40:7):**
+  · THE COMMON GROUND OF TWO (44:1 on 11:18): tefillin and the study of Torah are not alike, but both are duties of the body not bound
+    to the land — so every duty of the body binds in the Land and abroad, and the land-bound only in the Land (orlah and mixed kinds
+    the exceptions; the new grain R. Eliezer's) — I3 (binyan av from two verses; the row's own words "מבנין אב שבין שניהם" ("from
+    the common ground of the two") on its bytes); THE INK: 11:18's two commands the row's two cases — the compile's partition.
+  · EXTENSION AFTER EXTENSION RESTRICTS (36:3 on 6:9 from 11:20): "doorposts" twice, the plural read down to ONE doorpost — E3; THE
+    INK: 6:9 מזוזת ("doorposts") with one vav, 11:20 מזוזות ("doorposts") with two — the two plurals the shelf counts, measured at
+    their seats.
+  · THE VERBAL ANALOGY "SHALL BE" (51:2 on 11:24): "to the sea shall be your border" against "the Great Sea and its border shall be
+    your sea border" (Numbers 34:6) — what lies opposite in the sea is the Land's — I2; the Hebrew carries it at 51:2, the English at
+    51:1 (the two files' division); THE MISHNAH QUOTED BY NAME INSIDE THE SIFREI (Sheviit 6:1 — the answer sheet inside the spine).
+  · THE VERBAL ANALOGY "TEREBINTH OF MOREH" (56:3 on 11:30): 11:30's Moreh is Genesis 12:6's — Shechem — I2; R. Eliezer's five
+    readings against it (the Jordan's bank, the sunset, the Hivites, the hills, Gilgal unseen); the Samaritan "Shechem" named a forgery
+    that changes nothing — a variant reading witnessed inside the spine; THE INK: Gilgal the Torah's one seat, "the terebinths of
+    Moreh" one (Genesis 12:6 singular, plene).
+  · THE A-FORTIORI FROM NAAMAN'S EARTH (52:4 on 11:25): if Naaman feared to take two mules' burden of earth without leave, how would a
+    man take goods and cattle — the Land guarded at the pilgrimage (Exodus 34:24) — I1 (qal wa-chomer (a-fortiori)); and THE RECEIPT
+    NAMED: "as He spoke to you" — "and where did He speak? \"I will send My terror before you\" (Exodus 23:27)" — the teacher pointing
+    11:25's receipt at its callee (the compile's RUN_CITATION with its why; the finder's third form).
+  · THE REPEATED EXPRESSION READ FOR ITS NUMBER (50:4 on 11:23): "than you" said again after 7:1 — one of the seven peoples greater than
+    all Israel (Amos 2:9's Amorite) — E10; THE INK: "than you" plural here, singular at 4:38 and 9:1. (52:2: "the dread of you" and "the
+    fear of you" two nouns read apart — the near and the far — E10; Rahab's "the waters of the Red Sea" the ink's find, Joshua 2:10.)
+  · THE EXTENSION BY "ALL" (48:10 on 11:22; 50:2 on 11:23): "the commandment, the commandment, all the commandment" — midrash, laws and
+    lore; "all these nations" — their helpers included after "these" restricts — E1 (ribui); "too" the second extension (48:10, gam).
+  · THE GEMATRIA OF THE ASCENTS (47:4 on 11:21): "a song for the ascents" — thirty ascents by the preposition's letter-value, sixty by
+    the plural — E29 (checked; the English's note the computation).
+  · THE PARABLES (E26): the king's dressing on the wound — words of Torah a potion against the inclination (45:1, the piska without a
+    head; Genesis 4:7 "if you do well, it is lifted"); the king's bird given to the servant (48:2 — "it is no empty thing for you: it is
+    your life"); the two brothers and the denar (48:3 — the disciple who lays by); the crossroads and the two paths (53:1 — Re'eh's
+    opening); the feast and the fine portion (53:2); the two stewards (306:4 — 28:12 and 11:17 the pair from the song).
+  · NAMED WITHOUT A CODE: the affirmation implying its negation (46:1 — "from the yes the no"); the likening of the curses to the
+    blessings (55:2 — the Levites, the voice, the tongue, the Amen); the definition by another seat (306:6 — "opening" by Leah's womb,
+    "shutting" by Abimelech's); the particular that leaves the general (52:2 — Jericho, Saul, Pharaoh's daughter); the four terms of the
+    frame assigned to the four kinds of the oral shelf (58:1 — Mishnah, deed, expositions, laws).
+
 ## Exodus block campaign — owner's word "Do 3")
 
 The campaign's exam rounds banked RULES-ABOUT-RULES on the corpus's
@@ -2103,3 +2219,38 @@ ONE exemplar, watching for a second.
 - The book's worked example for I1 is the BAILEE ladder of Exodus 22
   (Bava Metzia 95a) — TOP10 block 4's own territory; first real
   workout for QAL_WACHOMER when block 4 opens.
+
+### THE DEUTERONOMY WALK 7b — THE DOCKET OF CHAPTER 9 (2026-09-19; logic/oral_triage/deu_09_ekev_exam_2026-09-19.md, 397 rows whole)
+Every code checked in this file's tables before it was typed. I1 (qal wa-chomer, the a fortiori): Shabbat 87a:5 — Moses' own reasoning for the breaking,
+the Paschal lamb's "no alien shall eat" (one of 613) to the tablets (the whole Torah) and the apostates at the calf; Berakhot 32a:17 — the chair with three
+legs (the fathers' merit) cannot stand, the chair with one leg (Moses') all the more; Yoma 75b:11 — if a man on high did not eat (9:9), the angels do not;
+Arakhin 15a:11 — the spies who defamed wood and stones, one who defames a person all the more. I2 (gezerah shavah, the verbal analogy): Berakhot 7a:36 —
+"very many" (Rehaviah's sons, 1 Chronicles 23:17) / "very many" (Israel in Egypt, Exodus 1:7) — 600,000, the offer of 9:14 fulfilled; Berakhot 32a:19 —
+vayechal (Exodus 32:11) / lo yachel (Numbers 30:3) — the vow annulled by the vows' law. E26 (mashal, the parable): Berakhot 32a:9-11 the lion over the
+basket of meat, the cow and the lupines, the son at the brothel's door (the calf's cause — the wealth); 32a:15 the king beating his son and the
+well-wisher ("leave Me be" — the matter depends on Moses); Vayikra Rabbah 10:5 Cain's half. THE READINGS "DO NOT READ" (al tikrei, 'do not read') — NO CODE IN THIS
+FILE, named by their rows: Berakhot 32a:5 (el/al — Taberah's prayer as impertinence, Numbers 11:2), Shabbat 89a:6 (boshesh / ba'u shesh — the calf's
+sixth hour), Shabbat 55a:9 (mikdashi / mekudashai). THE DISPUTES AS PARAMETERS (the machine's data channel, this file's "received" rule): Mishnah Avodah
+Zarah 3:3 / Tosefta 4:3 (grind and scatter / becomes manure — the fourth verb decides, 44a:2); Shabbat 55a:11 and 55a:13-16 (the merit of the fathers —
+ceased / stands; the four dates); Shabbat 88a:3 (the ascent's date — R. Yosei's seventh / the Rabbis' sixth; the tape holds the seventh by Ta'anit
+28b:9); Yoma 86b:14 (the confession specified — R. Yehuda ben Bava / R. Akiva); Berakhot 7a:29 (Moses' three requests — all / two).
+
+### THE DEUTERONOMY WALK 8b — THE DOCKET OF CHAPTER 10 (2026-09-20; logic/oral_triage/deu_10_ekev_exam_2026-09-20.md, 532 rows whole)
+Every code checked in this file's tables before it was typed. I1 (qal wa-chomer, the a fortiori): Ketubot 105a:16 — "a bribe blinds the eyes of the wise", a
+fortiori the fools; "perverts the words of the righteous", a fortiori the wicked (Deuteronomy 16:19). I2 (gezerah shavah, the verbal analogy): Shabbat 108a:7
+— orlato / orlato (Leviticus 12:3 the circumcision, 19:23 the orlah tree): the complete form alone, the construct orlat of Deuteronomy 10:16's "foreskin of
+your heart" REFUSED — the analogy's own grammar rule; Menachot 43b:9 — oto / oto (Numbers 15:39 "look upon it"; Deuteronomy 6:13 "Him you shall serve") the
+Presence; Shevuot 35b:23 — ala / ala (Leviticus 5:1; Numbers 5:21) the oath in the Name. E1 (ribui, the extension by et): Pesachim 22b:11 — Shimon
+HaAmmassoni's every "et" and his withdrawal at "you shall fear ET the LORD your God" (10:20), R. Akiva's et = the Torah scholars; Bava Batra 123a:21 — "ET
+his daughter Dinah" a twin (refuted by "ET Benjamin"). E4 (restriction after restriction, which extends): Bava Batra 14a:10 — "there was NOTHING in the ark
+EXCEPT the two tablets" (1 Kings 8:9) includes the Torah scroll (R. Meir) or the fragments (R. Yehuda, 14a:15). E26 (mashal, the parable): Berakhot 33b:22
+and Megillah 25a:8 — the king's gold dinars praised as silver; Berakhot 33b:25 and Megillah 25a:10 — the large vessel owned seems small; Menachot 99b:7 —
+the sparrow entrusted to the slave; Niddah 70b:11 — the king's feast sent to those he loves; Bava Batra 123a:12 — the orphan raised in the house. E30
+(notarikon, a word read as words): Ketubot 105b:5 — shochad, "bribe", read she-hu chad, "he is one" with the giver. THE READINGS "DO NOT READ" (al tikrei) —
+NO CODE IN THIS FILE, named by their rows: Menachot 43b:15 (ma / me'a — a hundred blessings from 10:12's "what"), Rosh Hashanah 3a:2 and Ta'anit 9a:11
+(vayiru / vayera'u — "they saw" / "they were seen", the clouds gone at Aaron's death). THE JUXTAPOSITIONS (hekkesh, a likening by adjacency) — no code,
+named: Sotah 38a:8 (the blessing beside the service in 10:8; the sons beside Aaron in 18:5), Megillah 31a:13 (10:17's greatness beside 10:18's humility).
+THE DISPUTES AS PARAMETERS (the machine's data channel): Bava Batra 14a:8-14b:5 (the cubit six / five; the scroll inside / beside; the silver columns);
+Tosefta Sotah 7:9 against Bava Batra 14a:8 (two arks / one); Chagigah 12b:4 (two firmaments / seven); Yevamot 47a:1 (the convert's proof — in the land only /
+everywhere), 47a:9-12 (the private convert's word — his children), 47b:16-19 (the emancipated slave's yoke; the captive); Bava Metzia 59b:14 (thirty-six /
+forty-six warnings); Ketubot 105a:11-13 (bribe / salary / evident loss); Seder Olam 10:2's Aaron in Av against the editor's Tammuz variant.

@@ -1123,3 +1123,107 @@ bytes spell their own words; a summarizer counting runs misses single tokens; a 
 counted. OWED TO 7b (COMPILE_DEBT's box): the readback's rows of the calf, Aaron's retrograde write, the stiff neck as a state, the three forties and Ta'anit 4:6's
 date, the four provocations, the intercession's second telling, a NEW checkpoint series, the docket. The records on the sheet; the forms in
 World/step9/forms_deuteronomy_walk/ (copy_ch9_forms.py).
+
+## 47. ADDENDUM (2026-09-19, THE VERIFIED-IMPORT CACHE — the runners' load 169 s → 35 s, proved the same by an eight-probe compare; the owner: "Do we really need to rebuild everything on every run?" → "ok do it make it permanent")
+
+After the gates cut (§45) the long steps were still the ones that LOAD the sixty-three runners — 135 s of their own self-checks at import (a
+profile by statement: good_land 14.3 s, joseph 9.0, hear_o_israel 8.8; twenty over 2 s). BUILT: World/step9/ink_cache.py, a meta-path finder
+installed by world_engine.py (THE_LOOP D38; GATES_CHAIN.md's D38 section the full record). A MISS runs the runner statement by statement and
+harvests, after each statement, every value it bound or mutated — in the runner and in the callees whose functions ran inside it (a call tracer),
+aliases and nested aliases by identity — into content-addressed blobs (World/journal/data/ink_cache/, gitignored), keyed on the runner's source
+digest and the SHARED KEY (the text store, the shelf's files, the snapshot store, the engine's modules, the registries); a HIT restores each
+statement's own values at its place (a bound name fresh, a mutated name in place, an alias the live object) and runs only what must (imports and
+any block holding one, defs, classes, calls into modules, the unpicklable). THE GUARDS: the sweep and the chain's --full run INK_CACHE=0; the probe
+ink_cache_probes.py in the chain's probes step — two fresh processes, full against cached, EIGHT probes: the same runners, every picklable value
+equal in canonical form with NOTHING SET ASIDE, no name lost, the daemons, the registry map, the same sharing groups, three times faster, the
+engine's own modules the same — 8/8 after SEVENTEEN SLIPS (in GATES_CHAIN.md), among them: a callee's trail and counter left by the last caller,
+a result tuple holding a trail by reference, a with-block of imports skipped so the runners loaded in another order, pickle bytes that memoize
+and intern differently across processes, an alias broken by a fresh restore of a touched name. MEASURED: the full load 169 s, the harvest 211 s,
+the cached load 35 s; the tape step 155 → 27 s; the checkpoint suite 205 → 75 s; THE CHAIN 16 min 23 s WITH A FULL SWEEP. THE RECORDS: GATES_CHAIN.md,
+THE_LOOP, RECORD_FORMS' cost paragraph, THE_STEPS, THE_BRIEFING, RESEARCH_LOG, RESUME, SETUP, the recovery page, the state doc's #197 addendum 2,
+this section, the memory; the forms (cache_*) and the third chain's folder in World/step9/forms_gates_cut_2026-09-19/. THE LESSONS: a cache's
+probe is the cache; a callee's residue is state; the imports' order is state; pickle bytes are not the state; the full path is one variable away.
+
+## 48. ADDENDUM (2026-09-19, THE DEUTERONOMY WALK sitting 7b — THE COMPILE OF CHAPTER 9, Deuteronomy 9:1-29 COMPILED AND ON THE TAPE in two runs with the docket its own run; the owner: "Ok do ch 9", "Go", "Go"; the state doc's #197 addenda 3-5)
+
+THE SHAPE: THE TWO-RUN RULE's second compile sitting — RUN A the rereads, the measurements (ch9_compile_recon.py, ch9_docket_scan.py, the running world's snapshot: the
+clock's dates at the calf, every retold act on the tape, Aaron's peril on none; the checkpoint prefix space measured — the D series) and the design in the map; THE
+DOCKET its own run in the same window on "Go" (397 rows in three parts, every row whole; deu_09_ekev_exam_2026-09-19.md — the effect NAMED destruction_halved from
+Vayikra Rabbah 10:5); RUN B the build after one compaction (the probes to fail — a refusal, the types, the callees' print, the runner in parts with the fast
+checker, the cases generated, the recorder and the stitcher TWICE — THE RECORDER RUNS WITH THE CACHE OFF — the literals with the D series, the tape twice, the
+checkpoint check, the chain three times — three demands (two homograph edges FALSE, one pointer), three older probes' count literals, the cache's eighteenth slip (the
+sequence file in the key), a rerun with the probes starting at the tape, the third and fourth passes killed at the eight-worker positions table by the memory watchdog, the table by four workers, the fifth finishing it — the records in one call, the forms) — three clean points. THE SIXTH FORM: a stretch between two markers is graded
+against the clock's own arithmetic — the three forties 40 / 40 / 40, Ta'anit 28b:9's 24 + 16 reproduced by the calendar, Mishnah Ta'anit 4:6's seventeenth of
+Tammuz already the tape's: MATCH (DA4, Q22, Q24); Aaron's peril (9:20) SUPPLIED WITH A WRITE — the act written once at the morrow of the breaking (1, 4, 18) by
+a retrograde marker at Deut 9:20, the status on aaron, the stretch ended at 9:21; the stiff neck a state, no write. THE DESIGN'S ERRORS caught by prints: the
+placement (the line at the marker's verse takes the marker's class — reading_placed, not page_order), CA1's LIST literal (9/10 on the first tape run), the
+narrative's entity count, DELTA's token counts, 14:11 the line's first verse, the rows thirty-two at 14/12/4/1/1, the effect's name. THE SHELF'S UNPREDICTED:
+Taberah outside the ten trials (Arakhin 15a:14), the fasting's seat 9:9's own (Yoma 75b:11), the merit of the fathers a parameter with four dates (Shabbat
+55a:11-16), the calf forbidden from its making (52a:4), the crowns of Horeb and the three requests with no line (Shabbat 88a:7; Berakhot 7a:23-25), Megillah 4:10's
+asymmetry. THE NUMBERS: cold_run_not_righteousness.py 51/51; the tape 10/10 on its second run, RUN (1311, 96, 88, 0, 12, 1606, 40, 319, pairs, 127) as predicted,
+markers 169; kinds 1135, effects 1032, daemons 69, eleven CALL edges; the docket 397 rows; the sweep 63/63; every gate green over the chain's third to fifth passes. OWED FORWARD:
+the fragments in the ark (10:1-5), the calf's own day on the owner's word (Shabbat 89a:6), the second ascent's date (29 Av / 1 Elul), 10:10's forty and 10:4,
+10:12, the Exodus 33 holes, the owner's word on the two SUPPLIED forms. The records on the sheet, the forms in World/step9/forms_deuteronomy_walk/ (copy_ch9b_forms.py).
+
+## 49. ADDENDUM (2026-09-20, THE DEUTERONOMY WALK sitting 8 — CHAPTER 10, Deuteronomy 10:1-22 READ AND FROZEN in ONE run under THE TWO-RUN RULE, every row whole; the owner: "Go" after the reread that followed 7b's compaction; the state doc's #197 addendum 6)
+THE READING: Onkelos Deuteronomy 10 whole (22 = 22, the identity, cost 14); the Sifrei SILENT on the chapter — three rows outside any piska by the union of both files
+(32:1 reread whole from sitting 4; 311:5 reread whole from the Babel sitting; 301:4 fresh); the kin credited by name (the Exodus ledgers on the second tablets, the ark
+and its making, the craftsmen; the Numbers ledgers on the journeys, Aaron's death, the Levites and their dues; the Exodus and Leviticus ledgers on the stranger); the
+unit deu_10_second_tablets the 224th (standing 2227, hash unmoved); the ledger 25 sources (Onkelos MATERIAL 19 / CONTEXT 3; the outside rows MATERIAL 3 /
+CONTEXT 0); six claims 6/0 seated at 10:1, 5, 6, 10, 12, 17; the display layer +89 by reference, +38 by gloss; every gate green in one chain (ch10_gates.sh).
+THE INK ASSEMBLED, not retyped: derive_ch10_ink.py copies the prior ink's generic helpers by content markers; eight asserts fell on the first pass (four a sum of
+searches read as one), none a fact. THE FINDS: THE ARK INSERTED INTO GOD'S QUOTED WORD (10:1-2 against Exodus 34:1 eleven of fourteen, the ark's clause added; 24:12's
+call; the ark before the ascent; 10:5's receipt the register's seat; 1 Kings 8:9); THE STATIONS REVERSED AND AARON MOVED (the OPEN row); the ark of the covenant
+against the ark of the testimony; three receipt forms; "at that time" twice; the third forty; the demand in five infinitives; the heaven of heavens; the heart's
+foreskin and the one prohibition; God of gods, the face not lifted, the bribe; "and you shall love" five, "for you were strangers" four; 10:20 against 6:13 with
+"cleave" added; the seventy in new words; the plural "first" no ordinal; no Memra; Onkelos's gifts, right ways, foolishness, judges and kings, convert and dwellers;
+the shelf's two spellings of the quoted 10:22. THE LESSONS (thirteen, in the map): the retelling's additions are the compile's questions; the helpers copied by
+content markers; a sum of searches is not one search; the ledgers' book names differ by age; the Genesis ledgers have no row line; A MIDDAH CODE IS CHECKED BEFORE IT
+IS TYPED (relearned); the census wants a label to end in its note; the piece cap is seven; a nested heredoc is written by hand; the verifier takes the path. OWED TO
+8b (COMPILE_DEBT's box (a)-(n)): the fragments in the ark, the receipt seats, the stations' open row, the Levites' "at that time", the third forty's end, the laws
+restated by CALL, the demand, the attributes against the blessing, the stranger, the seventy, the docket. The records on the sheet; the forms in
+World/step9/forms_deuteronomy_walk/ (copy_ch10_forms.py).
+
+## 50. ADDENDUM (2026-09-20, THE DEUTERONOMY WALK sitting 8b — THE COMPILE OF CHAPTER 10, Deuteronomy 10:1-22 COMPILED AND ON THE TAPE in two runs with the docket its own run; the owner: "Go", "The docket go", "Go"; the state doc's #197 addenda 7-9)
+
+THE SHAPE: THE TWO-RUN RULE's third compile sitting — RUN A the rereads, the measurements (ch10_compile_recon.py, ch10_measure2.py, ch10_measure3.py, ch10_docket_scan.py on the
+running world's snapshot: every retold act on the tape with its day, the fragments on no entry, Aaron unburied, the Levites' investiture at the calf, the laws' kin's cells
+with no write for 6:13, the register's one receipt seat) and the design in the map; THE DOCKET its own run in the same window on "The docket go" (532 rows in three parts,
+every row whole; deu_10_ekev_exam_2026-09-20.md — THE SECOND ASCENT'S DATE MATCHES SEDER OLAM RABBAH 6:2; the ark one in the Bavli, two in the Tosefta; the effects' names and
+values from the rows); RUN B the build after one compaction (the probes to fail 23/27, the types, the callees' print — one edge dropped, the runner in parts with part 1
+derived by content markers, the fast checker, the cases generated, the recorder with the cache off, the stitcher twice, the literals with the D series' second name, the tape
+twice — the eleventh stale literal 7b's own DA1, the checkpoint check, the chain — the chain three times — the first pass stopped at the probes step (three older probes' marker counts retyped) and the dependency gate (four homograph edges FALSE, the two predicted pointers RUN_CITATION); the second green to the register gate and failed at the eight-worker positions table (a worker raising on the cached path, the cache's own report masked by a shadowed name — the nineteenth slip, fixed); the positions by four workers and the third pass from the checkpoint probe ALL GREEN — the records in one call, the forms) — three clean points. THE FORMS COMBINED: T1
+reference rows, T2 SUPPLIED WITH A WRITE twice (the fragments in the ark at (2, 1, 1), Aaron's burial at (40, 5, 1) — two retrograde markers, no clock walk), T6 one stretch
+row (10:10 to the timers' fire — forty), T4 the laws' form with the code's four holes compiled at (40, 11, 1) after the forward marker at 10:12 (fear_of_heaven_asked,
+heart_circumcision_commanded + stiffening_barred, love_owed's first write — a debit, cleaving_commanded); the OPEN row the place of the death (the retreat of seven stations
+the parameter already on file); the hole the go, outside the span. THE DESIGN'S ERRORS caught by prints: the stretch's end a timer's fire (Q25's resolver extended), the
+placement at a forward marker's own verse (text_constrained 110, page_order 1149), the opening_speech edge (no cell on 1:10), love_owed's op (a debit — the open debits 8 -> 9),
+DA1's count literal (9/10 on the first tape run), the clock's Hor-to-death 29, the rows twenty-five at 9/10/3/1/2, the persons twenty-four. THE NUMBERS:
+cold_run_second_tablets.py 62/62; the tape 10/10 on its second run, RUN (1317, 96, 88, 0, 12, 1613, 41, 319, pairs, 127) as predicted, markers 172; kinds 1142, effects 1037,
+daemons 70, seventeen CALL edges; the docket 532 rows; the sweep 64/64; every gate green. OWED FORWARD: the registry's homograph (one id for tevah and aron) on the owner's word,
+the finder's third form, the calf's own day on his word, the Exodus 33 holes, love_owed's open debit, the forward kin (13:5, 16:19, 28:62, 30:6, 31:26), the owner's word on the
+SUPPLIED forms. The records on the sheet, the forms in World/step9/forms_deuteronomy_walk/ (copy_ch10b_forms.py).
+
+## 51. ADDENDUM (2026-09-20, THE DEUTERONOMY WALK sitting 9 — CHAPTER 11, Deuteronomy 11:1-32 READ AND FROZEN in ONE run under THE TWO-RUN RULE with a clean compaction point inside it (#198), every row whole; the owner: "Go" after the reread that followed 8b's compaction, "Continue" after the point; the state doc's #198 and its addendum 1; the map's "Sitting 9 — CHAPTER 11 … THE DESIGN" and "Sitting 9 — CHAPTER 11 — AS BUILT")
+THE READING: Onkelos Deuteronomy 11 whole (32 = 32, the identity, cost 18); THE SIFREI ON THE CHAPTER for the first time since chapter 6 — piskaot 37-58 heading on
+11:10-32 (45 without a head citation, the spine's by its opening words), 171 rows read whole in both files (37 read before at twenty earlier sittings and reread
+whole, found by computation); seven rows outside the spine by the union of both files (35:4, 36:3 reread from sitting 4; 80:4, 80:5; 306:4, 306:6, 306:9 — the ibid.
+form found through the English); 234:6 excluded; the kin credited by name (Numbers 16 — 35 rows; 6:4-9 — 6; 8:7-10 — 4; Exodus 23:27-31 — 3; Leviticus 26 — 5; the
+Mekhilta's 38 on the sea and the frontlets); the unit deu_11_bless_curse_set the 225th (standing 2233, hash unmoved; the portion edge inside it); the ledger 210
+sources (Onkelos MATERIAL 29 / CONTEXT 3; the spine MATERIAL 104 / CONTEXT 67; the outside rows MATERIAL 7); six claims 6/0 seated at 11:1, 8, 13, 22, 25, 26; the
+display layer +158 by reference, +64 by gloss; every gate green in one chain (ch11_gates.sh). THE INK ASSEMBLED by derive_ch11_ink.py (the helpers by content
+markers); ten asserts fell on the first pass (a range citation, a colon, a verse count, a morphology filter, a sort, an offset, three counts), none a fact. THE
+FINDS: THE SPINE OPENS AT THE LAND'S PRAISE (11:10), not the paragraph's head; the one garden outside Genesis and Lot's clause; the one spelling (11:12) quoted plene;
+the discipline's noun, the hiphil "made flow", Rahab's Red Sea; Dathan and Abiram without Korah, "every living thing" the flood's word, 16:14 their own milk and
+honey; JOSHUA AT SEVEN SEATS; "My commandments" inside Moses' speech; the two doubled infinitives paired by 48:1; THE RAIN CONDITIONAL WITH NO CELL — 28:12 and 11:17
+the pair, "shut" by the wombs; THE FRONTLETS' THREE SPELLINGS and the doorposts' two plurals measured (4b's open row carried); "teach" piel against qal; the
+resurrection from "to them"; "than you" plural; Joshua 1:3-5 the borders' receipt; "AS HE SPOKE TO YOU" pointed at Exodus 23:27 by 52:4 (the finder's third form);
+the Mishnah quoted by name inside the Sifrei (Sheviit 6:1) and the baraita of the borders; Re'eh inside the chapter, "See" seven; Gerizim four, Ebal eight; Gilgal
+the Torah's one; Moreh's analogy against R. Eliezer's five readings and the Samaritan variant; the sages at the border; the four terms of the frame; Moses unnamed
+6-14; no number verse. THE LESSONS (thirteen, in the map): the spine returns at the Land's praise; a piska's membership on the consonants; the two files divide a
+piska differently; the first pass fell ten ways on forms; A TYPED SUM IS PRINTED FIRST; THE PROSE'S MARK IS CHECKED AGAINST THE COMPUTED LIST; a transliteration is
+glossed; the prior reads by computation; the manifest's spine from the cite index; the point where the design put it; a code checked first is not relabeled; the
+receipt by "spoke"; the sixth reading in one run. OWED TO 9b (COMPILE_DEBT's box (a)-(n)): the rain cell, the frontlets and the doorposts by CALL, the borders, the
+receipt's pointer, the dispossession, the blessing and the curse set, Gerizim and Ebal by chapter 27, the retelling rows, the study/deed clock, the land-bound
+partition, the resurrection row, the parser's DATA rows, the series DC, the docket. The records on the sheet; the forms in World/step9/forms_deuteronomy_walk/
+(copy_ch11_forms.py).

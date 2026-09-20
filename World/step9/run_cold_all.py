@@ -105,7 +105,7 @@ def run_one(path):
     t0 = time.time()
     try:
         r = subprocess.run([sys.executable, path], cwd=HERE, capture_output=True,
-                           text=True, timeout=900)
+                           text=True, timeout=900, env=dict(os.environ, INK_CACHE='0'))   # THE VERIFIED-IMPORT CACHE (2026-09-19): the sweep runs every check in full
         out = r.stdout + r.stderr
         rc = r.returncode
     except subprocess.TimeoutExpired:
