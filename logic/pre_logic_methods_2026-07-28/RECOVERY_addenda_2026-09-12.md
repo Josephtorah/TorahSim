@@ -1227,3 +1227,11 @@ receipt by "spoke"; the sixth reading in one run. OWED TO 9b (COMPILE_DEBT's box
 receipt's pointer, the dispossession, the blessing and the curse set, Gerizim and Ebal by chapter 27, the retelling rows, the study/deed clock, the land-bound
 partition, the resurrection row, the parser's DATA rows, the series DC, the docket. The records on the sheet; the forms in World/step9/forms_deuteronomy_walk/
 (copy_ch11_forms.py).
+
+## §52 — THE DEUTERONOMY WALK sitting 9b (2026-09-20): CHAPTER 11 COMPILED — the state doc's #199 and its addenda 1-2; the map's "Sitting 9b … THE DESIGN", "THE DOCKET — AS RUN" and "Sitting 9b — AS BUILT"
+The two-run rule's fourth compile sitting with the docket clause: RUN A (the rereads, the recon and the scan derived by line-based substitutions, the design), THE DOCKET
+(1,048 rows — 477 read whole, 571 carried with their ledgers' own verdict lines: THE NEW FORM OF THE CREDIT), RUN B (the probes to FAIL, the types, the callees' print,
+the runner 59/59 first run, the recorder with the cache off, the stitcher with no marker, the literals, the tape 10/10 first run with DC1-DC9, the chain, the records).
+The crowns: the rain conditional's cell (the tape's first entries naming the rain; "in its season" the free variable after the decree; the shutting the clouds and the
+winds), the yoke of the commandments the Mishnah's name, the ceremony's debit open to Joshua 8:30-35, the place a three-arm parameter, the receipt's pointer taught twice.
+The lessons in the AS BUILT (twelve). Uncommitted since 2f4ec5b: 9b whole; the message at <scratch>/commit_msg_ch11.txt.

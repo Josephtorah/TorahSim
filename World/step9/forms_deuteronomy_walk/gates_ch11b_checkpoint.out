@@ -1,0 +1,16 @@
+THE CHECKPOINTS AS THEY FALL: the fire-probes
+  PASS  K1 the function: checkpoints(w, M, reg) on the whole base world gives the tape's pinned verdicts; rows carry name, declared, computed, ok
+        rows 280; shape True; verdicts equal the pinned list True (first difference None)
+  PASS  K2 the executor on a whole world: checkpoints_partial gives the same verdicts as the function
+        verdicts equal True; statements that raised 0
+  PASS  K3 the executor on a partial world (the left edge of Genesis 7:11): never raises; C1 NOT YET; C0 computed
+        rows 278; statements that raised 66; C1 None; C0 True
+  PASS  K4 the table: one row per checkpoint of the block, no other; a verse, an ordinal within the base, a pause index, a final verdict
+        rows 280 vs checkpoints 280 (distinct 280); rows well-formed True; missing []; extra []
+  PASS  K5 the positions off the base: C1 no earlier than Gen 8:4's marker line; CR1 no earlier than Num 35's first event line; C0 at the first pause
+        C1 at 221 (the ark-rested marker line 221); CR1 at 3474 (Num 35's first event line 3361); C0 pause 0
+  PASS  K6 the stepper shows them: stepped to the left edge of Genesis 8:5, exactly the table's checkpoints at or before that ordinal, live verdicts, C1 not NOT YET
+        ordinal 223; shown 58, the table says 58; equal True; C1 DIVERGE
+  PASS  K7 asking writes nothing: the world's log and the sink's lines unchanged by a call
+        log 3580 -> 3580; sink lines 3580 -> 3580
+7/7 probes

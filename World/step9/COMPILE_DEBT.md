@@ -1880,7 +1880,7 @@ follows the last check mark.
 ## twice here) stand as the designs', the retelling rules' own; ON THE TABLE. NOTHING ELSE IN CHAPTER 10 IS OWED TO A LATER SITTING OF ITS OWN.
 
 
-## SITTING 9 — CHAPTER 11 (2026-09-20, the reading; deu_11_bless_curse_set frozen) — OWED TO THE COMPILE 9b: (a) THE RAIN CONDITIONAL (11:13-17) — NO CELL ANYWHERE IN
+## SITTING 9 — CHAPTER 11 (2026-09-20, the reading; deu_11_bless_curse_set frozen) — PAID AT 9b (the 9b box below, item by item) — OWED WAS: (a) THE RAIN CONDITIONAL (11:13-17) — NO CELL ANYWHERE IN
 ## THE MACHINE: a NEW cell with Leviticus 26:3-5 and 19-20 by CALL (the rains in their season, the heavens as iron), 28:12 the treasure and 11:17 the shut heavens the
 ## pair the shelf reads (40:12; 306:4, 306:6, 306:9 — "shut" defined by the wombs, Genesis 16:2 and 20:18), the year judged at its head and the rain's measure moved by
 ## the deeds (40:5-14; Rosh Hashanah 16a-17b; Mishnah Rosh Hashanah 1:2), the mention and the request of rain (Ta'anit 2a-3a; Mishnah Ta'anit 1:1-3; Berakhot 33a) —
@@ -1913,3 +1913,22 @@ follows the last check mark.
 ## borders); Pesachim 8b (the pilgrimage guarded); Sotah 32a-37b, Mishnah Sotah 7:2-5 (the ceremony), Sotah 33b-34a (the mountains); Ketubot 110b-111a (the dwelling);
 ## Sanhedrin 90b (the resurrection); Sotah 37a (idolatry); Sukkah 52a CREDITED from 8b (the inclination) — EVERY ROW WHOLE; a docket past ~700 rows its own run.
 ## NOTHING ELSE IN CHAPTER 11 IS OWED TO A LATER SITTING OF ITS OWN.
+
+## THE SITTING-9 BOX (a)-(n) PAID — (a) THE RAIN CONDITIONAL — F3 the_second_paragraph: THE LINE second_paragraph_declared writing rain_in_its_season and
+## heavens_shut_for_turning (conditional HEAVEN entries; Leviticus 26:4 and 26:19-20 by CALL — tochacha.covenant, tochacha.cascade) and
+## yoke_of_the_commandments_accepted (a STATUS — Mishnah Berakhot 2:2's name); 28:12's pair a DATA row; the shutting the clouds and the winds (Ta'anit 3b:6), the
+## wombs' verb (8a:18); the year judged at its head and the season free (Rosh Hashanah 17b:11-13); the mention and the request (rain_dates). (b)-(n) the frame,
+## the land, the duties, the borders, the dread, the receipt, the blessing and the curse, the ceremony, the dwelling, the docket — each a cell's ask (F1-F6, 59
+## asks) or a DATA row (twenty-nine); THE DOCKET (n) — 1,048 rows by the union rule, 477 READ WHOLE here and 571 CARRIED with their ledgers' own verdicts (its own run).
+## OWED FROM 9b: (i) THE RECEIPT'S THIRD AND FOURTH SHAPES — the finder's forms need "commanded" and the Name; 10:9's "spoke" with the Name and 1:11's / 11:25's
+## "spoke" without it (sixteen "as … spoke" in the book) OWED to a gate sitting on the owner's word (the pointer at 11:25 DEMANDED by the census); (ii) THE SUPPLIED
+## FORMS on the owner's word — the state row without a write (8b's, 9b's 11:5), the law's first seat with its write (11:29); (iii) THE CALF'S DAY MARKER (Shabbat
+## 89a:6 — 7b's) on the owner's word; (iv) THE REGISTRY'S HOMOGRAPH (the-ark one id for two words — 8b's) a split at a gate sitting; (v) 28:12's "to give the rain
+## of your land in its season" and 28:24's "powder and dust" — the pair at chapter 28's compile (rain_in_its_season's forward twin); (vi) 27:11-13 THE CEREMONY'S
+## FORM SEAT at chapter 27's compile (the Levites, the loud voice, the Amen); the debit's closer Joshua 8:30-35 THE RUN outside the Torah — the install hypothesis's
+## test; (vii) 30:15-20 THE PAIR'S RUN ("choose life") at chapter 30; (viii) 12:1 REOPENS THE STATUTES — chapter 12's reading next; (ix) THE FRONTLETS' SPELLINGS
+## the tefillin cell's OPEN row stands (11:18 plene — the compartments' count needs it defective); (x) THE RECON'S SUBSTRING COUNT — a registry scan by substring
+## reads homographs (restraint_failed): the recon's form owes a word-bounded scan; (xi) THE CREDIT CARRY'S GUARD — a carried verdict is the ledger's own; the fifty-one
+## unresolved forms (the Exodus and Genesis triages' CREDIT rows, the topic dockets' lists) owe a verdict line if ever credited again; (xii) THE CHECKPOINT SERIES
+## continues (DC the third name — DC9 the last; the next DD1, keyed by its first word); (xiii) THE CALENDAR RUNNER has no askable cell — an ask on its warranty
+## (Exodus 34:24) owed if a chapter calls it again. NOTHING ELSE IN CHAPTER 11 IS OWED TO A LATER SITTING OF ITS OWN.

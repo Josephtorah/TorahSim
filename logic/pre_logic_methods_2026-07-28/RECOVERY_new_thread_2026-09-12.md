@@ -13,14 +13,14 @@ tape of events in verse order; every verse adds a line or installs a law (a daem
 EVERYTHING ELSE IN A COMPUTER PROGRAM (his frame). The repo <repo> = /Users/Shared/TorahSim, public under CC0 at
 github.com/Josephtorah/TorahSim.
 
-## 2. WHERE IT STANDS (2026-09-20, after sitting 9; the state doc #198 addendum 1 the newest)
-- NUMBERS CLOSED. DEUTERONOMY 1:1-10:22 COMPILED AND ON THE TAPE (1-7 at 29c189b, 8 at a985fbc — PUSHED; 9 at 7/7b, 10 at 8/8b); 11 READ.
-- 225 frozen units, standing 2233, hash 8b8fff1fa28953af. 65 runners, 70 daemons, 478 functions; 1142 kinds / 1037 effects.
-- THE TAPE at RUN (1317, 96, 88, 0, 12, 1613, 41, 319, pairs, 127), markers 172, closes 127; the sweep 64/64; every gate GREEN.
+## 2. WHERE IT STANDS (2026-09-20, 9b done; the state doc #199 addendum 2 the newest)
+- NUMBERS CLOSED. DEUTERONOMY 1:1-11:32 COMPILED AND ON THE TAPE (1-7 at 29c189b, 8 at a985fbc — PUSHED; 9 at 7/7b, 10 at 8/8b, 11 at 9/9b).
+- 225 frozen units, standing 2233, hash 8b8fff1fa28953af. 66 runners, 71 daemons, 484 functions; 1145 kinds / 1042 effects.
+- THE TAPE at RUN (1319, 96, 88, 0, 12, 1618, 42, 319, pairs, 127), markers 172, closes 127; the sweep 65/65; every gate GREEN.
 - SITTING 9 (chapter 11 read, one run): THE SPINE BACK ON THE CHAPTER — twenty-two Sifrei sections on 11:10-32, 210 sources whole; the
   rain conditional (11:13-17) has NO CELL; the frontlets' three spellings measured; 11:25's receipt pointed at Exodus 23:27 by the shelf.
-- Uncommitted since a985fbc: the cache, 7b, 8, 8b, 9; ONE message at <scratch>/commit_msg_ch9b.txt covers all, on his word.
-- NEXT ON HIS WORD: the commit; then 9b (two runs: the rain cell with Leviticus 26, the frontlets by CALL, the borders, the ceremony).
+- COMMITTED 2f4ec5b (2026-09-20, on "Commit" — NOT PUSHED; a985fbc the last push): the cache, 7b, 8, 8b, 9 in one message.
+- 9b DONE (66th runner 59/59, tape 10/10, no marker; the credit carried). UNCOMMITTED. NEXT: commit on his word; chapter 12.
 
 
 ## 3. THE STANDING LAWS (owner-ruled; verbatim in spirit — long forms: addenda §3)

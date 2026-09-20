@@ -1885,6 +1885,8 @@ narrative strength. By cluster:
     "shutting" by Abimelech's); the particular that leaves the general (52:2 — Jericho, Saul, Pharaoh's daughter); the four terms of the
     frame assigned to the four kinds of the oral shelf (58:1 — Mishnah, deed, expositions, laws).
 
+- THE CHAPTER-11 COMPILE (THE DEUTERONOMY WALK sitting 9b RUN B, 2026-09-20; cold_run_blessing_and_curse.py — the docket's rules carried into the cells; every code checked in this file before typed): I2 (gezerah shavah, the verbal analogy) at four cells' asks — Kiddushin 36a:9 "between your eyes" / "between your eyes" (the tefillin's exemption carried to the baldness bar — F3 the_frontlets_plural), Rosh Hashanah 8b:6 and 9b:11 "year" / "year" (11:12 the calendar's anchor; 7a:18 the analogy REFUSED for the months — F2 the_eyes_from_the_years_beginning), Sotah 32a:7-8 and 33a:13-14 "speak and say" / "voice" / "voice" (the ceremony's tongue — F5 the_ceremonys_tongue, with 32b:8's guard and 33b:2's THE ANALOGY NEEDS A TEACHER), Sotah 33b:5-6 "the terebinths of Moreh" / Genesis 12:6 (Shechem — F5 the_samaritan_shechem); I1 (qal wa-chomer, the a-fortiori) at Pesachim 8b:8 (the pilgrim's guard — F4 the_pilgrims_guard); E26 (mashal, the parable) at Ta'anit 10a:3 (the cheese-kneader — F2 the_land_watered_first); E28 (from-the-preceding, the adjacency reading) at Shabbat 32b:4 (the days multiplied — F3 the_days_multiplied); the do-not-read readings NAMED, no code (Bava Batra 21a:2 "you yourselves"; Rosh Hashanah 16b:3 the poor year) and the juxtaposition NAMED (Ta'anit 2a:11 — the prayer from 11:13's clause). THE DISPUTES AS PARAMETERS carried into the registry: rain_dates (calendar_parameters.yaml — the mention's and the request's arms), gerizim_ebal_place (three arms), the shutting's causes (many arms — a DATA row).
+
 ## Exodus block campaign — owner's word "Do 3")
 
 The campaign's exam rounds banked RULES-ABOUT-RULES on the corpus's
@@ -2254,3 +2256,35 @@ THE DISPUTES AS PARAMETERS (the machine's data channel): Bava Batra 14a:8-14b:5 
 Tosefta Sotah 7:9 against Bava Batra 14a:8 (two arks / one); Chagigah 12b:4 (two firmaments / seven); Yevamot 47a:1 (the convert's proof — in the land only /
 everywhere), 47a:9-12 (the private convert's word — his children), 47b:16-19 (the emancipated slave's yoke; the captive); Bava Metzia 59b:14 (thirty-six /
 forty-six warnings); Ketubot 105a:11-13 (bribe / salary / evident loss); Seder Olam 10:2's Aaron in Av against the editor's Tammuz variant.
+
+### THE DEUTERONOMY WALK 9b — THE DOCKET OF CHAPTER 11 (2026-09-20; logic/oral_triage/deu_11_ekev_reeh_exam_2026-09-20.md, 1048 rows — 571 carried, 477 read whole here)
+Every code checked in this file's tables before it was typed. I1 (qal wa-chomer, the a-fortiori): Berakhot 14a:3 — the Shema interrupted for a greeting, so hallel
+(the praise psalms) all the more (refused for the miracle's publicity); 33a:1 — the pious man before the King of kings; 33a:33 — havdala (the distinction blessing)
+over the cup from the prayer's; Rosh Hashanah 16b:11 — the priests' defilement to the festival's purification; Pesachim 8b:8 — the animals guarded on the
+pilgrimage, the men all the more; Sukkah 52a:1 — the eulogy's separation to the water-drawing's. I2 (gezerah shavah, the verbal analogy): Kiddushin 36a:9 —
+"between your eyes" (Deuteronomy 14:1) / "between your eyes" (11:18): women exempt from the baldness bar as from tefillin (Isi); Rosh Hashanah 8b:6 and 9b:11 —
+"year" (Leviticus 25:4; 19:24) / "year" (11:12 "from the beginning of the year"): the sabbatical and the planting counted from Tishri; 7a:18 — the same analogy
+REFUSED for the months' count (a "year" with "months" learns only from a "year" with "months"); Ta'anit 2a:9 — "beyond comprehension" (Job 5:9) / (Isaiah 40:28):
+the rain's might the creation's; Sotah 32a:7, 32a:8, 33a:13 — "speak and say" (26:5; 25:9) / "the Levites shall speak and say" (27:14): the first fruits and
+halitza (the shoe-loosing) in the holy tongue; 33b:1 — the analogy reversed for R. Yehuda (the Levites' tongue from halitza's); 33a:14 — "a loud voice" (27:14) /
+"by a voice" (Exodus 19:19): the Levites' own Hebrew; 32a:10, 33b:5, 33b:6 — "the terebinths of Moreh" (11:30) / (Genesis 12:6): Shechem — the Samaritans'
+forged "Shechem" conceded and refuted by the analogy they do not use; 33a:12 — "sins" (Leviticus 5:21) / "sins" (5:1): the deposit oath in any language; Ketubot
+111a:9 — "an altar of earth" (Exodus 20:21) / "the land of His people" (32:43): burial in the Land as under the altar; 111a:19 — "to the people upon it" (Isaiah
+42:5) / "with the donkey" (Genesis 22:5). THE ANALOGY'S GUARDS AT TWO SEATS: Sotah 32b:8 — the bare "say" learns only from the bare "say", not from "speak and
+say"; Sotah 33b:2 — "he learned 'speak' / 'speak' from his teacher, and did not learn 'voice' / 'voice' from his teacher": THE ANALOGY NEEDS A TEACHER — the
+link review law's own sentence on the shelf (Pesachim 66a's rule at a second seat). E26 (mashal, the parable): Ta'anit 10a:3 — the cheese-kneader who takes the
+food and leaves the refuse (the Land drinks first); Kiddushin 40b:6-7 — the tree in a pure place with branches over an impure (the righteous), and its mirror;
+Rosh Hashanah 17b:18 — the king's oath and the friend's debt (between man and God, between man and man). E28 (from-the-preceding, the adjacency reading):
+Shabbat 32b:4 — "that your days be multiplied" (11:21) read with the mezuzah's verse before it alone, or with the teaching's verse before that too: children
+die for the one neglect or the other — THE ADJACENCY'S REACH THE DISPUTE. THE READINGS "DO NOT READ" (al tikrei) — NO CODE IN THIS FILE, named by their rows:
+Bava Batra 21a:2 ("them" / "you yourselves" — the father teaches, 11:19), Rosh Hashanah 16b:3 ("from the beginning" / "poverty" — the year's arc, 11:12),
+Berakhot 14a:11 ("how" / "an altar") and 14a:18 ("satisfied" / "seven"), Ta'anit 7b:9 ("is changed" / "is hated"), Sotah 37a:1 ("ruling them" / "descending to
+the sea"), Sukkah 52a:8 ("reward" / "reconcile"). THE JUXTAPOSITIONS (the likening by adjacency) — no code, named: Ta'anit 2a:11 (11:13's service of the heart =
+prayer, 11:14's rain next to it — the request for rain in the prayer); Kiddushin 34a:8 (the mezuzah beside study — REFUSED by the reward clause 11:21);
+Shabbat 32b:4 (E28 above). THE DISPUTES AS PARAMETERS (the machine's data channel): Mishnah Ta'anit 1:1-3 through 2a:1-3 and 10a:11-12 (the mention from the
+first / the last day of the feast; the request from the third / the seventh of Marcheshvan; the diaspora's sixty days); Ta'anit 9b:10-11, 9b:14-16, 10a:4-7 (the
+source of rain — the ocean sweetened in the clouds / the upper waters, 11:11 R. Yehoshua's); Ta'anit 3b:6 (the shutting — the clouds and the winds); 7b:5-8a:6
+(the shutting's cause — many arms); Sotah 33b:4-10 (the ceremony's place — Shechem / two mounds by the Jordan / a route); Sotah 37a:7-9 and Tosefta Sotah 8:7 (the
+Levites' placement — the elders below / the fit below / all below); Tosefta Sotah 8:5 (the writing on the stones / on the plaster); Sotah 32b:19 (the Shema as
+written / in any language); Berakhot 33a:24 (havdala's seat); Ketubot 111a:1-6 (the ascent — the exile's decree and the oaths / the individual's leave); 111a:16-21
+(the dead outside the Land — not rising / rising by tunnels); Rosh Hashanah 17a:12-13 (how He tilts the scale; the first sin overlooked).

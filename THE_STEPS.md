@@ -4491,6 +4491,16 @@ and Ebal by chapter 27's ceremony — or the ten-commandments schema first.
 
 
 
+
+**Deuteronomy 11 compiled (2026-09-20, sitting 9b — the two-run rule's fourth compile sitting, the docket its own run):** the rain conditional had no cell anywhere in the
+machine, so the second paragraph is compiled at the chapter's own day — one line writing the rain in its season and the heavens shut as conditional heaven entries
+(Leviticus 26 by call — it has no line on the tape) and the yoke of the commandments as a status, the Mishnah's own name for the paragraph; the blessing and the
+curse set as a status with the ceremony at Gerizim and Ebal a debit open to Joshua 8:30-35 — the run outside the Torah. No marker: every act the chapter retells
+already had a line, and the tape already left Korah unnamed at the swallowing as the chapter does. The readback's forms on file held with no new form — thirty-two
+rows, one per verse. The docket took a new form of the credit: a credited row is carried with its ledger's own verdict line, parsed by script; a form without a
+verdict is read whole here. The rain's dates and the ceremony's place are parameters, never constants — every value a docket row. The tape 10/10 and the runner
+59/59 each on their first run; the gates chain the gates chain twice — the first pass stopped at the probes step (readback 29/30: q30's retype had put its comment inside the return's tuple, the second element swallowed, the probe's unpack a typeerror; ink_cache 7/8: c2 fell on the runner's two raw scan names alone, the database's state at the harvest — before the tape sealed the sitting's own five entries — against the full load's after it; the raw names dropped from the module, the derived own-excluded lists kept, equal on both loads) and at the dependency gate by three demands (the token census matched 'pharaoh king of egypt' at 11:3 to the sanctions span's molech — a homograph filed false, 5b's lesson a second time; the sequential run's registration edge sequence -> blessing_and_curse filed with link none, 8b's form; the as_when pointer at deut 11:25 'as he spoke to you' dispositioned run_citation of exodus 23:27 by two teachers — the design's prediction, the census's demand); the dependency gate rerun alone green, the runner rerun 59/59 with the cache off, then the second pass whole from the tape green to the register gate (readback 30/30, ink_cache 8/8, the dependency gate satisfied) and killed at the positions table by the session's memory watchdog (eight workers each the whole tape — 7b's kill, not the machine's own gate); the positions table then by four workers with the step's own command (checkpoint_positions.py --jobs 4, its print in the chain's folder), and the third pass from the checkpoint probe all green.
+
 ## Step 6 — Publish
 Export, parity check against the public repo, deploy. Owner's word.
 
