@@ -4542,6 +4542,27 @@ you" points at nothing written — the rite is a parameter the cell reads as dat
 no new form — thirty-one rows, one per verse; five law rows supplied with their writes. The exam has two flogged persons this time (the Name's eraser, the tithe's
 eater outside the wall) and three exempt. The runner 65/65 on its first run; the tape 10/10 on its first run, dd1-dd9 match; the gates chain the gates chain three times — the first pass (449 s) stopped at the dependency gate by eight demands where the design predicted one: the registration edge from the sequence file (rule 9), three edges the token census matched on homographs of sense (the family runner's inheritance law against the land's rest at 12:9 and the levite's barred share at 12:12; the cattle tithe of temurah and yovel against the second tithe of grain, wine and oil at 12:6, 11, 17) filed false with their whys, one edge to the offerings runner (12:6's burnt offerings are leviticus 1's, reached through the ordinances runner's altar cell by call) filed via — the yaml's own form for a reference without a call, verified by the gate against the live import — and three as_when pointers filed run_citation: 12:20 the design's predicted pointer demanded after all (exodus 34:24 through the erection runner; the sifrei 75:2's dispute on the callee), 12:21 the receipt without the name seen by the token census where the register's finder is blind (its referent oral — the rite of slaughter, chullin 28a:5), 12:22 the comparison that teaches and is taught (leviticus 17:13 through the sanctions runner; the sifrei 75:15, chullin 28a:4); the state doc's correction had counted seven, the print's line 79 read whole made eight; the second pass from that step green through the dependency gate, the build, the journal gate and the register gate and killed at the positions table (eight workers, each the whole tape) by the session's memory watchdog — 7b's and 8b's precedent, not the machine's own gate; the positions table then measured by four workers with the step's own command outside the chain; the third pass from the checkpoint step all green. Every step timed: 2860
 machine seconds over 64 steps for the compile.
+DEUTERONOMY — SITTING 11 — CHAPTER 13, Deuteronomy 13:1-19 (2026-09-21, on Brian's "Go" after the reread; World/step9/DEUTERONOMY_WALK.md "Sitting 11" and "Sitting 11
+— AS BUILT"; a reading sitting is one run to a clean point, then the tail after the compaction). Chapter 13 is the chapter of the seducers: first the header — all
+the word that I command you, keep it, add nothing to it and take nothing from it; then three cases that open the same way. A prophet or a dreamer gives a sign, and
+the sign comes true, and he says "let us go after other gods" — do not listen, the LORD is testing you; that prophet dies. Your brother, your son, your daughter,
+the wife of your bosom, your friend who is as your own soul entices you in secret with the same words — do not consent, do not pity, do not shield him; your hand is
+on him first, then everyone's, and he is stoned; all Israel hears and fears. You hear that men of no worth have drawn a whole city after other gods — inquire,
+search, ask thoroughly, and if it is true, put the city to the sword, burn it and everything in it as a whole offering, leave it a heap forever, and keep nothing of
+it, so that the LORD turns from His anger and shows you mercy. Then the footer: when you listen to His voice and do what is right in His eyes. The Sifrei has fifteen
+sections on the chapter, one of them with no opening verse and placed by its own words, and one that runs past the chapter's end into the next — those four rows
+were left for chapter 14; every row was read whole in both files, with six more rows from elsewhere. Laying each verse beside every verse of the Bible and counting
+the shared words showed the chapter's shape: the header's "add nothing, take nothing" has exactly one twin in the Bible, the plural form in chapter 4; the seducers'
+sentence is one formula said three times, each case the other cases' nearest kin; "purge the evil from your midst", which the book will say nine times, is said here
+for the first time; and the verse about inquiring "thoroughly" is the source the tradition uses to teach every capital court its seven questions. The tradition also
+reads the header as a rule of the whole chapter: every "keep" is a prohibition beside every "do". The chapter is frozen as one unit, the 227th, the world's standing
+facts up by six as predicted, its hash unmoved, every gate green. The run stopped at a clean point after the ledger — it had already passed the 600k cap when the
+context was read, a lesson for the next reading — you compacted, and the rest ran on a small context: the display patch, the claims, the seat, the gates in the
+background while the records were typed. Every step was timed: the machine's own work came to 9 min 57 s in a sitting of 84 min 2 s; the rest was the reading and
+the typing. Next: the commit on your word; then the compile of chapter 13 in two runs — the prophet's test and the inciter's hand as cells with their parameters, the
+condemned city's decision table, the purge as an effect — or the ten-commandments schema first.
+
+
 
 ## Step 6 — Publish
 Export, parity check against the public repo, deploy. Owner's word.

@@ -3802,3 +3802,61 @@ own verdict lines; its crowns in the map's three AS RUN paragraphs. THE RECORD K
 retyped); the calendar's cells askable after all (9b's dropped edge the regex's blindness); the platform's 'forbidden_forever' against the table's 'banned'; the exam's
 two lashes persons (Makkot 22a:9; Mishnah Makkot 3:3) and three exempt; the register's 12:1 EMPTY by the gate's rule (lo < given_at <= hi). THE TIMING TABLE (every step timed — the owner's ask at sitting 10; the machine's seconds per step, the model's reading and writing between them the rest): SITTING 10 (the reading) 0 timed steps, 0 machine seconds; SITTING 10b (the compile — RUN A, the docket's three runs, RUN B, the tail) 64 timed steps, 2860 machine seconds; the first row 20:28:43, the last 09:31:32; THE SLOWEST OF 10b: T the gates chain, third pass (--from checkpoint; LAUNCHED in the background) 470s; B the gates chain, first pass (LAUNCHED at the run's end) 449s; T the positions table by FOUR workers, outside the chain (the eight killed by the session's watchdog) 418s; docket scan (second run, the empty chapter guarded) 346s; B fast checker (parts 1-4) 229s; B callees' facts printed (ch12_callees.py) 220s; B the recorder (INK_CACHE=0) 185s; B the tape, first run 182s. The table itself: <scratch>/ch12_timing.tsv, copied to the forms folder (ch12_timing.tsv). The forms in
 World/step9/forms_deuteronomy_walk/.
+
+
+## 2026-09-21 — DEUTERONOMY 13 READ AND FROZEN (THE DEUTERONOMY WALK sitting 11 — a reading sitting under THE COST RULES: one run to the clean point #202, the
+## compaction, the tail; EVERY STEP TIMED): THE SEDUCERS' ONE FORMULA AT THREE CASES; THE HEADER'S TWIN 4:2 — THE ONLY TWO SEATS OF "NOT ADD NOR TAKE AWAY";
+## "PURGE THE EVIL FROM YOUR MIDST" AT ITS FIRST SEAT OF NINE; THE INQUIRY THAT TEACHES EVERY CAPITAL COURT ITS SEVEN QUESTIONS; A PROSCRIPTION FOR EVERY
+## PRESCRIPTION; THE PISKA THAT RUNS PAST THE CHAPTER; AND THE RUN THAT PASSED THE CAP BY /context
+On the owner's "Go" after the reread that followed 10b's compaction (2026-09-21). THE READING: Deuteronomy 13:1-19 with Onkelos whole (the export's 19 rows the DB's 19 —
+the identity, asserted; the English's 12:32 the DB's 13:1, no row of the shelf citing 12:32) and THE SIFREI ON DEUTERONOMY ON THE CHAPTER A FIFTH TIME — piskaot
+82-96 (fourteen heading on the chapter's verses; 88 WITHOUT A HEAD CITATION, folded in on its consonants — 13:8's "of the gods of the peoples round about you"; PISKA
+96's ROWS 9-12 ON 14:1 LEFT FOR CHAPTER 14), 97 rows read whole in both files (2 read before at sitting 1 and a Genesis sitting and reread whole — found by
+computation), six rows outside the spine read whole (117:3 Belial at 15:9 — the English's "(Dt.13:4)" a wrong verse, the Hebrew right; 149:1-2 the inquiry at 17:4;
+189:1 the rebellion at 19:16; 190:7-8 the inquiry at 19:17-18 — the two files dividing the piska differently), none excluded; the kin credited by name from twenty
+ledgers (Exodus 22:19 — the ban's first seat; 32:1-8 the calf's "these are your gods"; Leviticus 20:2, 20:27, 24:14-23 the stonings; 27:28-29 the devoted thing;
+Numbers 12:6, 15:30-36, 21:2-3, 25:4; Deuteronomy 4:2, 5:6, 6:13-14, 7:2-26, 8:2-16, 9:26, 10:20, 11:22-28, 12:25-28); NEVER READ AHEAD — no Onkelos row of Deuteronomy
+14-20 or the Prophets in any ledger (asserted). FROZEN as ONE unit deu_13_seducers (the 227th; no portion edge inside it; standing 2245 = 2239 + 6 as predicted, hash
+unmoved); the ledger deu_13_reeh_2026-09-21.md (122 sources — Onkelos 19: MATERIAL 19 / CONTEXT 0; the spine 97: MATERIAL 59 / CONTEXT 38; the outside rows 6:
+MATERIAL 6 / CONTEXT 0; coverage computed, lint 0, no cut missed, written clean on its first run); six claims DV13-01..06 verified 6/0, seated as six WITNESS_READ at
+13:1, 2, 7, 13, 17, 19; the ritual 13 PASS; the fold +14 on the journal; the display layer +139 by reference and +34 by gloss. THE FINDS: THE HEADER'S TWIN IS 4:2 —
+"you shall not add to it nor take from it" the singular here and the plural there, THE ONLY TWO SEATS of the clause (seven tokens in order), the shelf reading it at
+the word's grain (82:5 — the priests' blessing), the count's (82:4 — the four species, the fringes) and the rite's (82:3 — the mixed bloods); A PROSCRIPTION FOR EVERY
+PRESCRIPTION — R. Eliezer son of Jacob's rule at the header and at the six verbs (82:2, 85:3); THE SEDUCER'S ONE FORMULA — "let us go (and serve) other gods which you
+have not known" at 13:3, 13:7, 13:14, each the others' closest kin by computation; THE DREAM'S NOUN AND VERB in the book only at the chapter's three seats; "is
+testing" the participle's one seat (Genesis 22:1 the first; the sign in the heavens and the wonder on the earth — 83:4-5); THE SIGN DISPUTED — true and barred (R. Yose
+the Galilean) or a fallen prophet's, Hananiah's (R. Akiva; 189:1 his sentence) — a PARAMETER; THE FIRST VERB IS THE CLOUD (85:1 — a run citation inside a law), "His
+voice obey" the voice of His prophets (85:4); THE DEATH'S MODE BY ANALOGY run both ways (86:6, 90:2; R. Shimon strangling) — a PARAMETER; its reason an a fortiori from
+the plotting witness (86:3); "AND YOU SHALL PURGE THE EVIL FROM YOUR MIDST" NINE SEATS IN THE BIBLE, ALL IN THE BOOK, 13:6 THE FIRST — the doer removed (86:10);
+"ENTICE" THE TORAH'S ONE TOKEN (Jezebel's and Saul's the shelf's two senses — 87:1-2); THE INCITER'S KIN AN INCLUSION TABLE with the father found in "as your own soul"
+(87:4-11); "the wife of your bosom", "your friend as your own soul", "the son of your mother" one seat each; 6:14's clause SPELLED DEFECTIVE at 13:8; THE FIVE
+PROHIBITIONS OF 13:9 each against a standing duty (89:1-5 — the neighbor's love, the enemy's ass, the neighbor's blood, the defense, the silence), "spare" the Torah's
+two with Saul's order the third; THE COURT'S RULE INVERTED (89:6-7); THE HAND FIRST — 17:7's twin, "afterward" the Torah's two seats both this clause; TWO VERBS OF
+STONING in the Torah (Deuteronomy's, Leviticus's and Numbers', 21:21 both) and the stones and the stone one rite (90:1); "ALL ISRAEL SHALL HEAR AND FEAR" the formula's
+first of four with the paragogic nun — the festival's execution a PARAMETER of timing (91:1-2); THE FIFTEEN UTTERANCES (91:3) and the honors not capital (91:4);
+"IN ONE OF YOUR CITIES" THE CHAPTER'S ONE NUMBER VERSE [1] given its rule — one city, not three (92:3), Jerusalem excluded by "to dwell there" THE TORAH'S ONE SEAT
+(92:5), the border (93:3); SONS OF BELIAL the Torah's two (13:14, 15:9 — 117:3's analogy), Naboth's witnesses the closest verse, "without a yoke" (93:2); THE ONE
+NARRATIVE VERB inside the third case; THE SEVEN INQUIRIES FROM THE CHAPTER — "diligently, diligently" at three seats (93:6; 149:1; 190:7), 17:4 the twin (nine of twelve
+tokens in order), the two examinations' two rules (93:8-9 — Mishnah Sanhedrin 5:1-2); THE INFINITIVE ABSOLUTES FOUR (kill, diligently, smite, devote — "by any means",
+94:1); THE KETIV AT 13:16 ("that city" — the feminine never written in the Torah, the Prophets write it; the store carrying both forms, 329 against 328; the shelf
+quoting the read form); THE PROPERTY TABLE (94:4-5, 95:1) and Heaven's spoil (95:4-5); "WHOLLY TO THE LORD" 13:17 and Samuel's lamb, the word the priest's meal
+offering's; "A HEAP FOREVER" Ai's and "not built again" Tyre's — JERICHO THE RUN'S CASE read by Joshua's oath (95:6-7, 96:1); the devoted thing's benefit to the Salt
+Sea (96:2); "FROM THE FIERCENESS OF HIS ANGER" — Achan's valley says the words back (Joshua 7:26), the anger keyed to idolatry's presence (96:3); THE MERCY TWO-ARMED
+(96:4); "AS HE SWORE TO YOUR FATHERS" (13:18) the AS_WHEN form, 19:8 its twin — a run citation for 11b's census, the register's finder finding no receipt in the
+chapter; THE FOOTER THE BLESSING'S AND THE CURSE'S OPENING (28:1 fourteen tokens in order, 28:15 twelve, 15:5 eleven), "to do the right in the eyes of the LORD"
+Jehoshaphat's measure, THE FOOTER THE HEADER'S SENTENCE (82:1, 96:7); THE REGISTER: singular but for the prophet's case (13:4-5 plural), the seducers' "we" the
+chapter's only first person plural, NO IMPERATIVE, NO "IF" (the three cases on "when"), thirteen consecutive perfects, one wayyiqtol, no divine frame, Moses never
+named, Israel once; THE PARSER: one number verse (13:13 [1]), no starred token; THE INSTRUMENT'S TWO SLIPS asserted (the tagger's "Np" substring, the bare number check
+inside "swore"); ONKELOS: "the fear of" supplied at 13:5 twice and 13:11, "accept" for hearken four times, "the errors of the peoples" four times, the Memra at 13:5
+and 13:19, "a fabrication" for rebellion (the two Torah seats), "the wife of your covenant", "he counsels you", "sons of wickedness", "a ruined mound", "finished" for
+wholly, "He established" for swore, "well" at all five seats of "diligently", the same letters read two ways at 13:3 and 13:14. THE COST RULES: one run to the clean
+point #202 after the ledger, THE RUN PAST THE CAP BY /context (651.7k where the counter had shown far less — the rows the heavy half; the next reading in two halves
+or the clean point before the ledger), the owner's compaction, the tail on a small context — the patch, the manifest, the seat, the fast steps in the foreground before
+the freeze, the chain in the background with the writers typed during its run; EVERY STEP TIMED — the machine's share 9 min 57 s of 84 min 2 s wall time from 10:36:30;
+the table in the map's AS BUILT. THE CAUTIONS: the piska that runs past the chapter; the English's three citation slips and its dropped Leviticus at 89:3; the two
+files dividing 190 differently; the driver's launch from the scratchpad. THE LESSONS (thirteen, in the map): a piska's boundary is not a chapter's; the ink green
+first pass with the launch from the repo root; a substring test on a code is a test of nothing; the cap by /context; the English's slips asserted; the two files'
+division; the form's name protected in every shell; the fast steps in the foreground; the kin by computation the first instrument; the purge formula's first seat;
+a proscription for every prescription; the store carries the ketiv; every step timed. OWED TO 11b: the prophet's test with two parameters, the header's not-adding,
+the inciter's table and the court's rule inverted, the condemned city's decision table with the seven inquiries and the property table, the effects (the purge, the
+anger, the mercy), the run citations (the cloud, the oath), the kin by call, chapter 14's split of piska 96, the register's rows, the series DE, the docket.

@@ -1928,6 +1928,47 @@ narrative strength. By cluster:
     "like water" four ways (71:14).
 
 - THE CHAPTER-12 COMPILE (THE DEUTERONOMY WALK sitting 10b RUN B, 2026-09-21; cold_run_place_name.py — the docket's rules carried into the cells; every code checked in this file before typed): I1 (qal wa-chomer, the a-fortiori) at Bekhorot 33a:1-5 (the comparison's three seats — F4 the_unclean_and_the_clean), Makkot 17a:12-17b:1 with Rava's refutations 17b:3-8 (THE LADDER on 12:17's list — F4 the_ladder_of_a_fortiori; 17b:10's rider — no punishment from an inference; 18a:1-2 the repetition designates), Makkot 23b:2 (the blood's reward — F5 the_good_and_the_right), Bekhorot 33b:16 (the firstling's flesh); I2 (gezerah shavah, the verbal analogy) at Sotah 38a:10 "to put His name there" / "to put My name there" (F2 the_name_pronounced_only_there); I6 (kelal u-frat u-kelal, general–particular–general → include) at Keritot 21a:5 on Leviticus 7:26 (the blood's classes — F5 the_bloods_classes) with 21a:7's rider (R. Yishmael's school on unlike generalizations); I12 (a matter derived from its context) at Chullin 115b:2 (Rabbi's redundant "you shall not eat it" — F5 flesh_in_milk); E29 (gematria, the letter-values) at Makkot 23b:18 (the 613 — F5 the_good_and_the_right); THE TRANSPOSITION named (Sotah 38a:11 — R. Yoshiya on Exodus 20:20, F2), THE LIST READ BACKWARD named (Makkot 17b:9 — F4 the_list_read_backward), the do-not-read reading named (Sotah 38b:10), the juxtapositions named (Makkot 19a:3-5 — the second tithe and the firstborn; 19a:10 the chain rule; 19a:7 I3 refuted) — no code. THE DISPUTES AS PARAMETERS carried into the registry: the_rite_of_slaughter (calendar_parameters.yaml — the signs, the bird, the uncertainty, the agent), the_wilderness_flesh (R. Yishmael, R. Akiva, the exile), the woman's rejoicing (Rosh Hashanah 6b:15-16 — a DATA row with two arms), the rest and the inheritance four ways (Zevachim 119a-b — a DATA row).
+- **THE SIFREI ON DEUTERONOMY'S OWN CASE LAW ON CHAPTER 13 (Deuteronomy 13:1-19; THE DEUTERONOMY WALK sitting 11, 2026-09-21;
+  the ledger logic/oral_triage/deu_13_reeh_2026-09-21.md — THE SPINE ON THE CHAPTER A FIFTH TIME, piskaot 82-96 (88 without a head
+  citation folded in on its consonants; 96:9-12 on 14:1 left for chapter 14), 97 rows read whole in both files, and six rows outside
+  the spine; EVERY CODE CHECKED IN MIDDOT.md BEFORE IT WAS TYPED, none relabeled; the census from the ledger's own rows: E30 at 93:2; I1 at 86:3; I2 at 86:6, 90:2, 93:6, 117:3, 149:1, 190:7):**
+  · THE A-FORTIORI FROM THE PLOTTING WITNESS (86:3 on 13:6): if one who falsifies his fellow's words is liable to death, one who
+    falsifies the words of the Omnipresent how much more — I1 (checked; the row's own words קַל וָחוֹמֶר ("an a fortiori") on its bytes);
+    the death's reason; the answer sheet Mishnah Makkot 1:4-6 at the compile's docket; THE INK: "for he spoke rebellion" the noun's two
+    Torah seats (13:6, 19:16 — 189:1 reads each by the other).
+  · THE VERBAL ANALOGY OF THRUSTING, RUN BOTH WAYS (86:6 on 13:6; 90:2 on 13:11): "thrusting" is said here and "thrusting" is said
+    there — as the inciter's is by stoning, so the prophet's; and from the prophet's seat back to the inciter's — I2 (checked; גְּזֵרָה
+    שָׁוָה ("a verbal analogy") at both seats); R. Shimon strangling the dissent (Mishnah Sanhedrin 11:1) — the death's mode a PARAMETER;
+    THE INK: the verb ten in the book, the chapter's three (13:6, 11, 14).
+  · THE VERBAL ANALOGY "DILIGENTLY, DILIGENTLY" AT THREE SEATS (93:6 on 13:15; 149:1 on 17:4; 190:7 on 19:18): the seven inquiries
+    taught to every capital court from the condemned city's verse — I2 (checked at each seat); the probes from "true and certain" (93:7),
+    the two examinations' two rules (93:8-9; 149:2 — Mishnah Sanhedrin 5:1-2); THE INK: "diligently" an infinitive absolute, five in the
+    book, 17:4 the twin with nine of twelve tokens in order.
+  · THE VERBAL ANALOGY OF BELIAL (117:3 on 15:9 from 13:14): "Belial" is said here and "Belial" is said there — as the sons of Belial
+    there are idolatry, so the word of Belial here — I2 (checked); THE INK: the Torah's two seats of the word, computed; the English's
+    "(Dt.13:4)" a wrong verse, the Hebrew right.
+  · "SONS OF BELIAL" READ AS "WITHOUT A YOKE" (93:2 on 13:14): the word split into its parts — E30 (checked; the notarikon, a word
+    read as parts); THE INK: "Belial" twenty-seven in the Bible, Naboth's witnesses the closest verse.
+  · A PROSCRIPTION FOR EVERY PRESCRIPTION (82:2 on 13:1; 85:3 on 13:5): R. Eliezer son of Jacob — "keep" the prohibition's verb, "do"
+    the command's, a prohibition set on every positive command in the passage — named by the rows' own words, no code typed; the
+    compile's rule that each positive cell carries its negative.
+  · THE INCLUSION TABLE OF THE INCITER'S KIN (87:4-11 on 13:7): the brother by the father, the mother's son, the son and the daughter of
+    any kind, the betrothed and the married, the convert, and the father found in "as your own soul" — named without a code; THE INK:
+    "the wife of your bosom" and "your friend as your own soul" one seat each.
+  · THE COURT'S RULE INVERTED (89:6-7 on 13:10): "kill" — convicted, not brought back to acquit; "you shall kill him" — acquitted, brought
+    back to convict: the doubled verb's two halves read as two rules against Mishnah Sanhedrin 4:1's ordinary procedure — named without a
+    code; THE INK: "kill, you shall kill him" one seat, the infinitive absolute.
+  · THE STONES AND THE STONE (90:1 on 13:11): Leviticus 20:27's singular and the chapter's plural reconciled — not dead by the first,
+    dies by the second — named without a code; THE INK: two verbs of stoning in the Torah, 21:21 alone holding both.
+  · THE INFINITIVE ABSOLUTE READ AS "BY ANY MEANS" (94:1 on 13:16): smite by any death, light or heavy, and by any hand; and (91:4 on
+    13:12) "this" — this one by stoning and not the eight honors of an idol — the doubling and the demonstrative each read for its scope,
+    named without a code; THE INK: the chapter's four infinitive absolutes.
+  · THE PROPERTY TABLE (94:4-5, 95:1 on 13:16-17): the righteous' inside lost and outside saved, the wicked's lost either way — from
+    "devote it", "all that is in it", "all its spoil" — Mishnah Sanhedrin 10:5's table read off three clauses, named without a code.
+  · NAMED WITHOUT A CODE: the prophet's forms are Moses' (83:1); the sign disputed — true and barred, or a fallen prophet (84:1-2); the
+    first verb the cloud (85:1); "purge the evil" the doer removed (86:10 — the formula's first seat); one city, not three (92:3);
+    Jerusalem excluded by "to dwell there" (92:5); the three verbs three sources (92:2); "a heap forever" read by Joshua's oath (95:6);
+    the anger keyed to idolatry (96:3); the mercy two-armed (96:4); the footer the header's sentence (96:7).
 
 ## Exodus block campaign — owner's word "Do 3")
 

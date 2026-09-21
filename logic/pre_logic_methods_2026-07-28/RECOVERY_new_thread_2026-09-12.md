@@ -13,13 +13,13 @@ tape of events in verse order; every verse adds a line or installs a law (a daem
 EVERYTHING ELSE IN A COMPUTER PROGRAM (his frame). The repo <repo> = /Users/Shared/TorahSim, public under CC0 at
 github.com/Josephtorah/TorahSim.
 
-## 2. WHERE IT STANDS (2026-09-21, 10b done; the state doc #201 add. 4 the newest)
-- NUMBERS CLOSED. DEUTERONOMY 1:1-12:31 COMPILED AND ON THE TAPE (PUSHED through bb62e90; 12 uncommitted).
-- 226 frozen units, standing 2239, hash 8b8fff1fa28953af. 67 runners, 72 daemons, 491 functions; 1150 kinds / 1049 effects.
+## 2. WHERE IT STANDS (2026-09-21, 11b RUN A closed; the state doc #203 the newest)
+- NUMBERS CLOSED. DEUTERONOMY 1:1-12:31 COMPILED AND ON THE TAPE (PUSHED through 2b0c9c8); 13 READ AND FROZEN.
+- 227 frozen units, standing 2245, hash 8b8fff1fa28953af. 67 runners, 72 daemons, 491 functions; 1150 kinds / 1049 effects.
 - THE TAPE at RUN (1323, 96, 88, 0, 12, 1626, 43, 319, pairs, 127), markers 172, closes 127; the sweep 66/66; every gate GREEN.
-- SITTINGS 10/10b (ch 12; EVERY STEP TIMED — 10b 2860 s / 64 steps): the place INSTALLED (high_places_banned REUSED — the eras
-  table's ink); the slaughter law a STATUS conditional on the entry; the rite a PARAMETER; four lines, no marker.
-- COMMITTED 4af2953 (NOT PUSHED). 10b DONE (65/65; tape 10/10; the docket 1,538 rows). UNCOMMITTED. NEXT: commit on his word; ch 13.
+- SITTING 11 (ch 13 read and frozen, timed; past the cap): the seducers' one formula; the header's twin 4:2; the purge's
+  first seat; piska 96:9-12 are 14:1's. 11b RUN A CLOSED — the design in the map (4 lines, 8 writes, 3 reuses).
+- UNCOMMITTED since 2b0c9c8: sitting 11 + the design. NEXT ON HIS WORD: THE DOCKET, one run (566 addresses, 196 credited); RUN B.
 
 
 ## 3. THE STANDING LAWS (owner-ruled; verbatim in spirit — long forms: addenda §3)
@@ -70,7 +70,7 @@ the gates (gates_chain.sh; GATES_CHAIN.md; sweep_stamp.json), the
 probes (*_probes.py), checkpoint_check.py, world_stepper.py, world_board.py, forms_deuteronomy_walk/. World/journal/data/world.sqlite the one database; Data/tanakh.sqlite the text store. Memory: <memory>/ — MEMORY.md the
 index; deuteronomy-walk.md; cost-rules-no-polling.md; step9-exam-era.md.
 
-## 5. THE SITTING SHAPES (the long forms: the addenda's section 5; the newest instances: the map's "Sitting 10b" and "Sitting 10")
+## 5. THE SITTING SHAPES (the long forms: the addenda's section 5; the newest instances: the map's "Sitting 11b" and "Sitting 11")
 THE READING: measure first (Onkelos whole + the spine by position; the parser on every number verse) → the ink asserts → the rows → the ledger
 with coverage COMPUTED → the unit yaml + manifest → the claims seated → the fold predicted and matched → build_world → the records from the sheet.
 THE COMPILE: the measurements → THE DESIGN in the map before any code → probes to FAIL → the docket by the union rule → the types by script →
@@ -82,7 +82,7 @@ with THE REST → `gates_chain.sh` (one summary) → the records from the sheet 
 - THE LOOP (the sink, the index, installation, the cursor, scenarios, the readback, the stepper, the port, the board, the gates cut, the import cache, D1-D38): THE_LOOP.md.
 - Numbers' sittings and lessons: NUMBERS_WALK.md; the addenda §8-17. §18 the project review.
 - The one database, the portable repo: the addenda §23-24, §27-29; reviews/PORTABLE_repo_2026-09-15.md.
-- Deuteronomy's sittings: the map; the addenda §31-54 (§39 the whole-row rule). The cost cuts: §35, §45, §47, §53.
+- Deuteronomy's sittings: the map; the addenda §31-57 (§39 the whole-row rule). The cost cuts: §35, §45, §47, §53.
 - ON THE TABLE: the Decalogue-schema question (the state doc's #185 addendum 1); THE INSTALL HYPOTHESIS (the map's tail section).
 - THE_STEPS Step 2, Step 5, the compiler block: before a reading's ledger.
 - THE OTHER THREAD (Torah Grok Main): its state in <memory>/main-thread-checkpoint-2026-09-18.md; a relayed finding is never a ruling.

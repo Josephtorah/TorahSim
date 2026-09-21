@@ -2010,3 +2010,39 @@ follows the last check mark.
 ## you rest … then the place' recorded as the ink's own installer; the installer boot as the form until the owner's word; (viii) THE ERAS TABLE — three cells hold it
 ## (shemini_day, sanctions, journeys) and the fourth reads it: a merge into one seat on the owner's word at a gate sitting; (ix) THE CHECKPOINT SERIES continues (DD
 ## the fourth name — DD9 the last; the next DE1, keyed by its first word). NOTHING ELSE IN CHAPTER 12 IS OWED TO A LATER SITTING OF ITS OWN.
+
+
+## SITTING 11 — CHAPTER 13 (2026-09-21, the reading; deu_13_seducers frozen) — OWED TO THE COMPILE 11b: (a) THE PROPHET'S TEST (13:2-6) — the sign's status a PARAMETER
+## (granted true and barred anyway — R. Yose the Galilean, 84:1; a fallen prophet's standing — R. Akiva, 84:2, Hananiah son of Azzur at 189:1) with the test the
+## reason either way (13:4; 8:2 and 8:16 by CALL), the death's mode a PARAMETER (stoning by the analogy of "thrusting" — 86:6, 90:2; strangling — R. Shimon, Mishnah
+## Sanhedrin 11:1; Sanhedrin 89a-90a with Mishnah 11:5-6), the sign not decisive (Bava Metzia 59b) and the prophet's temporary uprooting (Yevamot 90b — 85:4's "the
+## voice of His prophets"), the death's reason the a fortiori from the plotting witness (86:3 — Mishnah Makkot 1:4-6), the exemptions of duress and error (86:1-2 —
+## the exam's persons), THE CLOUD a RUN CITATION (85:1 — the tape's Numbers 9-10 lines inside a law); (b) THE HEADER'S NOT-ADDING (13:1) — 4:2's cell by CALL, the
+## four species and the fringes (82:4 — Mishnah Sukkah 3:4; Sukkah 34b; Menachot 41b-42a), the priests' blessing (82:5 — Rosh Hashanah 28b; Eruvin 96a; Sanhedrin
+## 88b), the mixed bloods (82:3 — Mishnah Zevachim 8:10; Zevachim 80a-81b; Tosefta Zevachim 8:23): a PARAMETER with no play; R. ELIEZER SON OF JACOB'S RULE (82:2,
+## 85:3 — "keep" the prohibition, "do" the command) the compile rule that each positive cell carries its negative; the light commandment as the weighty (82:1, 96:7 —
+## Avot 2:1); (c) THE INCITER (13:7-12) — the concealed witnesses and the entrapment (Mishnah Sanhedrin 7:10; Sanhedrin 67a), the inclusion table (87:4-11), the two
+## senses of "entice" (87:1-2), the five prohibitions each against a standing duty (89:1-5 — Leviticus 19:16, 19:18 and Exodus 23:5 by CALL), THE COURT'S RULE INVERTED
+## (89:6-7 — Mishnah Sanhedrin 4:1), the hand first the enticed's own (89:8; 17:7 ahead), the stones and the stone one rite (90:1 — Leviticus 20:27 by CALL; the two
+## verbs of stoning measured: Leviticus 20 and 24, Numbers 15 by CALL), THE FESTIVAL'S EXECUTION a PARAMETER of timing (91:1-2 — Mishnah Sanhedrin 11:4; Sanhedrin
+## 89a; Tosefta 11:7), the fifteen utterances (91:3), the honors of an idol not capital (91:4 — Mishnah Sanhedrin 7:6); the exodus formula with redeeming (13:6, 13:11 —
+## 5:6 by CALL); (d) THE CONDEMNED CITY (13:13-18) — one city at a time, two allowed, not three (92:3 — Mishnah Sanhedrin 1:5), Jerusalem excluded by "to dwell there"
+## (92:5 — chapter 12's place outside the ban) and the border (93:3), the seducers' parameters (93:1-5 — adult, male, two at least, of the city, with a warning —
+## Mishnah 10:4; Sifrei Numbers 113), THE SEVEN INQUIRIES AND THE PROBES (93:6-9; 149:1-2; 190:7-8 — Mishnah Sanhedrin 5:1-2; Sanhedrin 40a-41a: the two examinations'
+## two rules, a decision table), "by any means" (94:1), the children (94:3 — Abba Hanan against the rule), THE PROPERTY TABLE (94:4-5, 95:1 — Mishnah Sanhedrin 10:5),
+## Heaven's spoil and the consecrated (94:6, 95:4-5 — Mishnah 10:6), the heap and Jericho (95:6-7, 96:1 — Joshua 6:26, 1 Kings 16:34 the run's cases ahead), the
+## devoted thing's benefit to the Salt Sea (96:2 — Mishnah Avodah Zarah 3:9; Avodah Zarah 49b-50a); Mishnah Sanhedrin 10:4-6 and Sanhedrin 111b-113b whole; Tosefta
+## Sanhedrin 14:1-6; (e) THE EFFECTS — "purge the evil from your midst" THE PERSON REMOVED (86:10 — the formula's first seat of nine, all in the book), THE ANGER KEYED
+## TO IDOLATRY'S PRESENCE (96:3), THE MERCY TWO-ARMED (96:4 — Tosefta Bava Kamma 9:30; Shabbat 151b), the fathers' merit (96:5 — 7b's parameter); (f) THE RUN
+## CITATIONS — the cloud (85:1), THE OATH (13:18 "as He swore to your fathers", the AS_WHEN form; 19:8 ahead) for the census, the register's finder finding no receipt
+## in the chapter (measured); (g) THE KIN BY CALL — Exodus 22:19 (the ban's first seat), Leviticus 27:28-29, Numbers 21:2-3 and 25:4, 7:2-26, 6:13-14, 10:20,
+## 11:22-28, 12:25-28; (h) NEVER READ AHEAD — 17:2-7 (the idolater, the hand first, the inquiry's twin), 18:20-22 (the false prophet), 19:16-19 (the plotting witness),
+## 24:16, 28:64 wait for their sittings — their cells by CALL when they come; (i) CHAPTER 14's SPLIT OF PISKA 96 — rows 9-12 are 14:1's (96:9, 96:11 and 96:12 by their
+## citations of 14:1; 96:10 cites Amos 9:6 alone and is folded by the consonant rule): chapter 14's dump reads them, this ledger's union left them (asserted); (j) THE
+## REGISTER's DATA rows — no imperative, no "if" (the three cases on "when"), the seducers' "we" the chapter's only first person plural, the four infinitive absolutes,
+## the one wayyiqtol, THE KETIV AT 13:16 (the store carries both forms), the parser's [1] at 13:13, the tagger's substring slip ("Np" inside "VNp"; the bare number
+## check inside "swore"); (k) THE CHECKPOINT SERIES continues (DD the fourth name — DD9 the last; the next DE1, keyed by its first word); (l) THE DOCKET by the union
+## rule — the testing shelf as the design listed it (Sanhedrin's nine Mishnah rows and its folios; Makkot 1:4-6; Zevachim 8:10 and 80a-81b; Sukkah 3:4 and 34b;
+## Menachot 41b-42a; Rosh Hashanah 28b; Eruvin 96a; Avodah Zarah 3:9 and 49b-50a; Bava Metzia 59b; Yevamot 90b; Tosefta Bava Kamma 9:30; Shabbat 151b; Avot 2:1, 3:9,
+## 3:14; Sifrei Numbers 103, 113, 114; the Sifra on Leviticus 20 and 24 credited from their sittings) — EVERY ROW WHOLE; a docket past ~700 rows its own run; THE COST
+## RULES: two runs + the tail, the chain launched at RUN B's end. NOTHING ELSE IN CHAPTER 13 IS OWED TO A LATER SITTING OF ITS OWN.

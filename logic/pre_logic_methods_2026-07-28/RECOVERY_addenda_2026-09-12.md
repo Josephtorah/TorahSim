@@ -1273,3 +1273,29 @@ launched at the run's end), THE TAIL (the summary read once, the demands filed, 
 table's own ink (high_places_banned reused), the slaughter law a status conditional on the entry with its arms a parameter, the rite a parameter (the oral law's seat),
 the gates' bar with the ladder and the lashes, the grep's booleans. The lessons in the AS BUILT (twelve). Every step timed. Uncommitted since 4af2953: 10b whole; the
 message at <scratch>/commit_msg_ch12b.txt.
+
+## §57 — THE DEUTERONOMY WALK sitting 11 (2026-09-21): CHAPTER 13 READ AND FROZEN — the state doc's #202 and its addendum 1; the map's "Sitting 11 — CHAPTER 13 … THE DESIGN" and "Sitting 11 — CHAPTER 13 — AS BUILT"; the owner: "Go" (a reading sitting under THE COST RULES), "Get ready to compact", "Reread" and "Go" after the compaction at #202
+THE READING: Onkelos Deuteronomy 13 whole (19 = 19, the identity; the English's 12:32 the DB's 13:1); THE SIFREI ON THE CHAPTER A FIFTH TIME — piskaot 82-96, fourteen
+heading on the chapter and 88 without a head citation folded in on its consonants, 97 rows read whole in both files (2 read before and reread whole, found by
+computation); PISKA 96's ROWS 9-12 ON 14:1 LEFT FOR CHAPTER 14 (never read ahead; asserted on the rows' bytes); six rows outside the spine by the union of both files
+(117:3, 149:1-2, 189:1, 190:7-8), none excluded; the kin credited by name from twenty ledgers; the unit deu_13_seducers the 227th (standing 2245, hash unmoved); the
+ledger 122 sources (Onkelos MATERIAL 19 / CONTEXT 0; the spine MATERIAL 59 / CONTEXT 38; the outside rows MATERIAL 6 / CONTEXT 0); six claims 6/0 seated at
+13:1, 2, 7, 13, 17, 19; the display layer +139 by reference, +34 by gloss; every gate green in one chain (ch13_gates.sh, in the background; the manifest, the verifier
+and the labels census in the foreground before it). THE ONE RUN AND ITS TAIL: the measurements (the kin by computation beside the law kin named), the ink (GREEN ON ITS
+FIRST TYPED PASS — the one red the driver's launch from the scratchpad), the design, the rows (three spine files, the Onkelos file, the outside file — every cut held),
+the ledger (clean on its first run), the clean point #202 — /context 651.7k, PAST THE 600k CAP (the counter had shown far less; the rows the heavy half); the owner's
+compaction; the tail on "Reread" and "Go" — the patch, the manifest, the seat, the shells with the form's name protected, the chain launched with the writers typed
+during its run, the records, the forms, the message. EVERY STEP TIMED: the machine's share 9 min 57 s of 84 min 2 s from 10:36:30 — the table in the map's AS BUILT. THE
+FINDS: THE HEADER'S TWIN 4:2 (the only two seats of "not add nor take away"), read at the word's, the count's and the rite's grain; A PROSCRIPTION FOR EVERY
+PRESCRIPTION (82:2, 85:3); THE SEDUCERS' ONE FORMULA AT THREE CASES; the dream's noun and verb only at the chapter's three seats; "is testing" the participle's one
+seat; THE SIGN DISPUTED — a PARAMETER; THE FIRST VERB THE CLOUD; THE DEATH'S MODE BY ANALOGY — a PARAMETER; "PURGE THE EVIL" AT ITS FIRST SEAT OF NINE; "entice" the
+Torah's one token; THE INCLUSION TABLE with the father in "as your own soul"; THE FIVE PROHIBITIONS against standing duties; THE COURT'S RULE INVERTED; THE HAND FIRST
+17:7's twin; TWO VERBS OF STONING; "all Israel shall hear and fear" the first of four — the festival's execution a PARAMETER; ONE CITY [1] and Jerusalem excluded by
+"to dwell there"; SONS OF BELIAL the Torah's two; THE SEVEN INQUIRIES at three seats; the four infinitive absolutes; THE KETIV AT 13:16 in the store; THE PROPERTY
+TABLE; "wholly", "a heap forever", "not built again" with Samuel's, Ai's and Tyre's; JERICHO the run's case; the anger keyed to idolatry; THE MERCY TWO-ARMED; "as He
+swore" the AS_WHEN form; the footer the blessing's opening and the header's sentence; the register (no imperative, no "if", the seducers' "we"). THE LESSONS
+(thirteen, in the map): a piska's boundary is not a chapter's; the ink green first pass; a substring test on a code; THE CAP BY /context; the English's slips asserted;
+the two files' division; the form's name protected; the fast steps in the foreground; the kin by computation; the purge's first seat; a proscription for every
+prescription; the store carries the ketiv; every step timed. OWED TO 11b (COMPILE_DEBT's box (a)-(l)): the prophet's test, the header's not-adding, the inciter, the
+condemned city, the effects, the run citations, the kin by call, never-read-ahead's cells, chapter 14's split of piska 96, the register's rows, the series DE, the
+docket. The records on the sheet; the forms in World/step9/forms_deuteronomy_walk/ (copy_ch13_forms.py).
