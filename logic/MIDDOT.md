@@ -1886,6 +1886,46 @@ narrative strength. By cluster:
     frame assigned to the four kinds of the oral shelf (58:1 — Mishnah, deed, expositions, laws).
 
 - THE CHAPTER-11 COMPILE (THE DEUTERONOMY WALK sitting 9b RUN B, 2026-09-20; cold_run_blessing_and_curse.py — the docket's rules carried into the cells; every code checked in this file before typed): I2 (gezerah shavah, the verbal analogy) at four cells' asks — Kiddushin 36a:9 "between your eyes" / "between your eyes" (the tefillin's exemption carried to the baldness bar — F3 the_frontlets_plural), Rosh Hashanah 8b:6 and 9b:11 "year" / "year" (11:12 the calendar's anchor; 7a:18 the analogy REFUSED for the months — F2 the_eyes_from_the_years_beginning), Sotah 32a:7-8 and 33a:13-14 "speak and say" / "voice" / "voice" (the ceremony's tongue — F5 the_ceremonys_tongue, with 32b:8's guard and 33b:2's THE ANALOGY NEEDS A TEACHER), Sotah 33b:5-6 "the terebinths of Moreh" / Genesis 12:6 (Shechem — F5 the_samaritan_shechem); I1 (qal wa-chomer, the a-fortiori) at Pesachim 8b:8 (the pilgrim's guard — F4 the_pilgrims_guard); E26 (mashal, the parable) at Ta'anit 10a:3 (the cheese-kneader — F2 the_land_watered_first); E28 (from-the-preceding, the adjacency reading) at Shabbat 32b:4 (the days multiplied — F3 the_days_multiplied); the do-not-read readings NAMED, no code (Bava Batra 21a:2 "you yourselves"; Rosh Hashanah 16b:3 the poor year) and the juxtaposition NAMED (Ta'anit 2a:11 — the prayer from 11:13's clause). THE DISPUTES AS PARAMETERS carried into the registry: rain_dates (calendar_parameters.yaml — the mention's and the request's arms), gerizim_ebal_place (three arms), the shutting's causes (many arms — a DATA row).
+- **THE SIFREI ON DEUTERONOMY'S OWN CASE LAW ON CHAPTER 12 (Deuteronomy 12:1-31; THE DEUTERONOMY WALK sitting 10, 2026-09-20;
+  the ledger logic/oral_triage/deu_12_reeh_2026-09-20.md — THE SPINE ON THE CHAPTER AGAIN, piskaot 59-81 (three without a head
+  citation folded in on their consonants), 159 rows read whole in both files, and seven rows outside the spine; EVERY CODE CHECKED
+  IN MIDDOT.md BEFORE IT WAS TYPED, none relabeled; the census from the ledger's own rows: E1 at 63:2, 68:4, 68:5, 70:5, 76:7, 78:4, 81:6; E10 at 67:4, 68:6; I1 at 71:6, 72:9, 72:10, 72:11, 73:1, 74:1, 76:2, 76:5, 76:7, 76:8, 76:9, 145:3, 286:16; I2 at 62:4, 63:9, 64:2, 69:1, 71:6, 138:1; I12 at 59:5; I13 at 62:2, 62:3, 70:4):**
+  · THE LADDER OF A FORTIORI (72:9-11, 73:1, 74:1 on 12:17): the five items of "you may not eat within your gates" assigned by
+    elimination — each item's plain reading shown redundant by an a fortiori from the item before (the first fruits before the
+    declaration, the thank and peace offerings before the throwing, the firstborn by a non-priest, the sin and guilt outside the
+    curtains, the burnt offering anywhere), one method five times over — I1 (qal wa-chomer (a-fortiori)) as a DECISION TABLE of
+    prohibitions; THE INK: 12:17's list against 12:6's and 12:11's item by item, the tithe starred by the parser; the answer sheet
+    Mishnah Makkot 3:3 at the compile's docket.
+  · THE A-FORTIORI FROM THE BURNING TO THE PLANTING (145:3 on 16:21 from 12:3): "their Asherim you shall burn in fire" — a fortiori
+    that one not plant one; so "you shall not plant" is assigned to maintaining — I1 (checked; the row's own words קַל וָחוֹמֶר
+    ("an a fortiori") on its bytes); the method of the ladder at a single seat.
+  · THE A-FORTIORI FROM THE BLOOD (286:16 on 25:1 from 12:23; 76:2, 76:9 on 12:23): if one who abstains from blood, from which a
+    man's soul recoils, receives a reward, how much more one who abstains from robbery and forbidden unions, which the soul craves —
+    I1 (checked); Mishnah Makkot 3:15's argument with the reward's generations (79:2's phrase); THE INK: "be steadfast" the word said
+    to Joshua (1:38, 31:7, 31:23) said to the eater.
+  · THE REFUTED A-FORTIORI ARGUMENTS (76:5 and 76:7-8 on 12:23-24): the limb from the living and flesh in milk argued from the blood's
+    clauses and refuted, the verse itself then cited — I1 (checked) in its refuted form; THE INK: "the life with the flesh" one seat,
+    "you shall not eat it" 12:24-25 the pair.
+  · THE VERBAL ANALOGY OF THE REJOICING (138:1 on 16:11 from 12:7; 64:2 on 12:7): "and you shall rejoice" here and at 27:7 — peace
+    offerings — I2 (checked; the English adds "(Dt.12:7)" to the Hebrew's 27:7); THE INK: "and you shall rejoice" 12:7, 12:12, 12:18
+    and the feasts' 16:11, 16:14 — 12:18 sharing thirteen tokens in order with 16:11.
+  · THE TWO VERSES RECONCILED (62:2-3, 70:4 on 12:5 and 12:14): "from all your tribes" against "in one of your tribes" — the money
+    from all, the ground from one; Shiloh and Jerusalem — named by the rows' own words, no code typed; THE INK: each phrase one seat,
+    12:14 the chapter's one number verse [1].
+  · THE DOUBLED VERB READ FOR ITS NUMBER (60:1 on 12:2): "destroy, you shall destroy" — even ten times — the infinitive absolute
+    read as repetition, named without a code; THE INK: the doubling is "perish, you shall perish" (4:26, 8:19, 30:18) in the piel.
+  · THE COMPARISON THAT TEACHES AND IS TAUGHT (75:15 on 12:22; 71:7-8 on 12:15): "as the gazelle and the hart are eaten" — the wild
+    animal's slaughter taught by it, the bird's by the scribes (named by the row's own words; E12-E25's scope moves carry no fixed
+    number for it — used by name, no code); THE INK: the gazelle's consonants "the beauty" elsewhere (2 Samuel 1:19) — the DB's two
+    lemmas.
+  · THE RESTRICTIVE PARTICLES (71:1, 71:5, 71:11, 75:14, 76:2, 77:9 on "only" and "but"): "only" four times and "but" once in the
+    chapter, each read as a restriction of the clause before it — named without a code; THE INK: "only" twenty in the book, "but"
+    (12:22) the chapter's one.
+  · NAMED WITHOUT A CODE: the prohibition from "take heed to yourself lest" three times (70:1, 74:6-7, 81:1); "so" for the service and
+    for the thing served (81:5); the parents from "even" (81:6 — R. Akiva's witness); the header's four nouns as exposition, law,
+    learning and deed (59:1-4); the stations of the high places as a history (65:1-2, 66:1-2 — Mishnah Zevachim 14); the callee of
+    "as He has spoken" disputed (75:2 — Genesis 15 or Ezekiel 48); the oral law's seat at "as I have commanded you" (75:6, 75:15);
+    "like water" four ways (71:14).
 
 ## Exodus block campaign — owner's word "Do 3")
 

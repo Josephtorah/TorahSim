@@ -15,6 +15,8 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
 - Kept current unprompted, the same standing duty as THE_STEPS.md.
 
 ## SCOREBOARD (as of 2026-09-20, latest)
+- **THE COST AUDIT AND THE THREE RULES — THE BILL READ OFF THE TRANSCRIPTS: CACHE RE-WRITES AFTER FIVE-MINUTE WAITS A THIRD OF IT, THE FAT CONTEXT ANOTHER THIRD, THE TYPING A SIXTH; RULED: THE CACHE LAW (long jobs at a run's end, the clean point before the wait), THE 400k CAP, FEWER CALLS — the same work at about a third of the price per chapter** (2026-09-20; World/step9/COST_AUDIT_2026-09-20.md).
+- **CHAPTER 12 READ AND FROZEN — "THE PLACE WHICH THE LORD WILL CHOOSE" IS INSTALLED HERE, WITH NO SEAT BEFORE IT; THE CHAPTER'S FIRST LINE HAS ONE TWIN, THE LAST LINE OF THE LEVITICUS LAWS; THE PERMISSION TO EAT FLESH ANYWHERE IS AN OLD LAW CHANGED BY A PLACE; "AS I HAVE COMMANDED YOU" POINTS AT A COMMAND THE WRITTEN TEXT NEVER GIVES; AND THE FIRST SITTING UNDER THE COST RULES, EVERY STEP TIMED** (2026-09-20; sitting 10, one run to a clean point and its tail; the ledger deu_12_reeh_2026-09-20.md — 197 sources, every row whole; the 226th unit; every gate green; the machine's share 11 min 49 s of 115 min 30 s).
 - **CHAPTER 11 COMPILED — THE RAIN CONDITIONAL GETS ITS CELL: THE TAPE'S FIRST ENTRIES NAMING THE RAIN, 'IN ITS SEASON' THE FREE VARIABLE AFTER THE DECREE (Rosh Hashanah 17b), THE SHUTTING THE CLOUDS AND THE WINDS (Ta'anit 3b); THE SECOND PARAGRAPH'S STATUS THE MISHNAH'S OWN NAME (the yoke of the commandments); THE BLESSING AND THE CURSE SET WITH THE CEREMONY'S DEBIT OPEN TO JOSHUA; NO MARKER — EVERY RETOLD ACT ALREADY HAD A LINE; THE DOCKET'S NEW FORM — A CREDITED ROW CARRIED WITH ITS LEDGER'S OWN VERDICT** (2026-09-20, sitting 9b — the two-run rule's fourth compile sitting; the runner 59/59 and the tape 10/10 on their first runs; the chain the gates chain twice — the first pass stopped at the probes step (readback 29/30: q30's retype had put its comment inside the return's tuple, the second element swallowed, the probe's unpack a typeerror; ink_cache 7/8: c2 fell on the runner's two raw scan names alone, the database's state at the harvest — before the tape sealed the sitting's own five entries — against the full load's after it; the raw names dropped from the module, the derived own-excluded lists kept, equal on both loads) and at the dependency gate by three demands (the token census matched 'pharaoh king of egypt' at 11:3 to the sanctions span's molech — a homograph filed false, 5b's lesson a second time; the sequential run's registration edge sequence -> blessing_and_curse filed with link none, 8b's form; the as_when pointer at deut 11:25 'as he spoke to you' dispositioned run_citation of exodus 23:27 by two teachers — the design's prediction, the census's demand); the dependency gate rerun alone green, the runner rerun 59/59 with the cache off, then the second pass whole from the tape green to the register gate (readback 30/30, ink_cache 8/8, the dependency gate satisfied) and killed at the positions table by the session's memory watchdog (eight workers each the whole tape — 7b's kill, not the machine's own gate); the positions table then by four workers with the step's own command (checkpoint_positions.py --jobs 4, its print in the chain's folder), and the third pass from the checkpoint probe all green; the 66th runner, the 71st daemon; the open debits on Israel 9 -> 10).
 - **CHAPTER 11 READ AND FROZEN — THE SIFREI COMES BACK ONTO THE PAGE: TWENTY-TWO SECTIONS ON ONE CHAPTER, OPENING AT THE LAND'S PRAISE; THE RAIN CLAUSE HAS NO CODE IN THE MACHINE; THE FRONTLETS ARE SPELLED THREE WAYS AND THE TRADITION'S COUNT NEEDS A FOURTH; JOSHUA SAYS THE CHAPTER'S SENTENCES BACK AT SEVEN PLACES; A MISHNAH QUOTED BY NAME INSIDE THE SIFREI; "AS HE SPOKE TO YOU" POINTED AT EXODUS 23 BY THE TEACHER** (2026-09-20; sitting 9, one run with a clean point inside it; the ledger deu_11_ekev_reeh_2026-09-20.md — 210 sources, every row whole; the 225th unit; every gate green).
 - **CHAPTER 10 COMPILED — THE FORMS COMBINE: TWO ACTS TOLD ONLY IN THE RETELLING (THE FRAGMENTS IN THE ARK, AARON'S BURIAL) WRITTEN ONCE INTO THEIR OWN DAYS; THE SHELF'S OWN CHRONOLOGY GIVES THE MACHINE'S DATE FOR THE SECOND ASCENT; FOUR LAWS WITH NO CODE COMPILED, THE STRANGER'S LOVE WRITTEN ON THE TAPE FOR THE FIRST TIME** (2026-09-20, on your "Go", "The docket go" and "Go"; World/step9/DEUTERONOMY_WALK.md "Sitting 8b" + THE DOCKET — AS RUN + AS BUILT): cold_run_second_tablets.py the 65th runner (62/62), law_second_tablets the 70th daemon (478 functions); the readback twenty-five rows in the forms combined — two SUPPLIED with a write, one stretch, the laws by CALL; the tape 10/10 with RUN (1317, 96, 88, 0, 12, 1613, 41, 319, pairs, 127) as predicted, markers 172; the docket 532 rows every row whole; every gate green (the chain three times — the first pass stopped at the probes step (three older probes' marker counts retyped) and the dependency gate (four homograph edges FALSE, the two predicted pointers RUN_CITATION); the second green to the register gate and failed at the eight-worker positions table (a worker raising on the cached path, the cache's own report masked by a shadowed name — the nineteenth slip, fixed); the positions by four workers and the third pass from the checkpoint probe ALL GREEN), the sweep 64/64; the two-run rule's third compile sitting, three clean points.
@@ -497,6 +499,44 @@ reading ledgers. The rules it lives by (your order, 2026-09-01):
   Next alongside it: Leviticus (new spine — Sifra).
 
 ## ENTRIES (newest first)
+
+### 2026-09-20 — CHAPTER 12 READ: THE PLACE INSTALLED, A LAW CHANGED BY A PLACE, A COMMAND THE TEXT NEVER GIVES, AND EVERY STEP TIMED
+
+Chapter 12 is where the laws begin: destroy the nations' shrines, bring the
+offerings only to the place the LORD will choose, eat and rejoice there with
+your household and the Levite, but slaughter and eat flesh in any gate you
+like — only not the blood. Three things stood out when each verse was laid
+beside every verse of the Bible and the shared words counted. The phrase "the
+place which the LORD will choose" has no seat anywhere before this chapter;
+the chapter installs it, and the tradition gives the variable five values in
+turn — the Tabernacle, Gilgal, Shiloh, Nob and Gibeon, Jerusalem. The
+permission to eat flesh anywhere shares one word with the older law that sent
+every slaughter to the tent's door; the tradition says the change came with
+the entry into the Land, which makes it a law switched by a place — a question
+for the compile. And where Moses says "as I have commanded you" about the
+slaughter, nothing in the written text was ever commanded; the tradition puts
+the rules of slaughter there, and the machine's receipt-finder cannot see the
+sentence because it carries no Name — the fourth such seat. The Sifrei has
+twenty-three sections on the chapter, three of them with no opening verse and
+placed by their own words; every row was read whole. The chapter is frozen as
+one unit, every gate green. This was the first sitting under the cost rules:
+the run stopped at a clean point after the ledger, Brian compacted, and the
+rest ran on a small context with the gates in the background while the records
+were typed. Every step was timed, as he asked: the machine's own work came to
+11 min 49 s in a sitting of 115 min 30 s; the rest was the reading and the typing.
+
+### 2026-09-20 — THE COST AUDIT: WHERE A CHAPTER'S PRICE GOES, AND THREE RULES
+Brian asked for a complete audit: the program had grown and each chapter cost more, and he asked whether one book at a time and then integrating
+would help. The answer came from the transcripts, one usage per API call, not from a guess. The bill splits three ways: cache writes 45%, cache
+reads 37%, output 17%. Under the writes sat one mechanism: 169 calls that re-wrote the whole context from nothing, 126 of them after a wait of
+five to sixty minutes — the gates chain, the sweep, the positions table, a pause. The prompt cache dies at five minutes, and on the far side of
+every longer wait the whole pile is written again. That is a third of nine days' bill, and it grows with the program because every wait grew.
+Under the reads sat the context itself: a third of the calls ran past 600k against the rule's 300k and carried 57% of the reads. The typing —
+the runners, the dockets' verdicts, the records — was a sixth; the paperwork per sitting under a twentieth. So "one book at a time" was set
+aside: it trims the paperwork, and a slip found after ten chapters is ten chapters wide. Three rules instead, none of which touches what is read,
+typed or gated: the cache law (every long job launched at the end of its run, the clean point before the wait, compaction before a break; a short
+run on a small context reads the result), the 400k cap, and fewer calls (batching, never skipping). Projected: the same work at about a third of
+the price. The record with its numbers: World/step9/COST_AUDIT_2026-09-20.md.
 
 ### 2026-09-20 — CHAPTER 11 COMPILED: THE RAIN GETS ITS CELL, THE CEREMONY ITS DEBIT, AND THE DOCKET A NEW FORM OF THE CREDIT
 Chapter 11 is a chapter that retells and legislates in one breath. The retelling needed nothing new: every act it names — the plagues, the sea, Dathan and Abiram

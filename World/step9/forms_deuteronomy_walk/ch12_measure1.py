@@ -1,0 +1,258 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
+#!/usr/bin/env python3
+# DEUTERONOMY CHAPTER 12, THE READING (THE DEUTERONOMY WALK sitting 10, 2026-09-20; the owner: "Monitor how long each step takes and report when the
+# chapter is done"; ONE RUN + ITS TAIL under the cost rules A-B-C): THE SECOND MEASUREMENT PASS — every candidate ink fact PRINTED from the Tanakh DB, the
+# store and the shelf's bytes, so that ch12_ink.py's asserts are typed FROM THE PRINT. THE KIN FOUND BY COMPUTATION (every verse against the whole Bible by
+# shared tokens, the closest re-scored in order) beside THE LAW KIN NAMED (Leviticus 17's slaughter and blood, Exodus 20:21's altar, Numbers 18's dues,
+# 7:5's demolition, Molech, the rest and the inheritance, the Levite's portion, the desire of the soul); the phrase censuses over the whole DB; the parser on
+# the chapter's one number verse (12:14 'in one of your tribes') and its starred tithe (12:17); Onkelos's renderings' seats over the book; the English's
+# bracketed supplements; the store's gloss families over the whole store; the prior reads on the kin; the register's finder on the chapter. Chapter 11's
+# helpers and register block by asserted substitutions (derive_ch12_measure1.py); the sections chapter 12's own. Nothing asserted.
+import json, os, re, html, sqlite3, subprocess, unicodedata, sys, io, contextlib
+from collections import Counter
+ROOT = _ROOT
+sys.path.insert(0, f'{ROOT}/World/step9')
+def clean(s): return re.sub(r'<[^>]+>', '', html.unescape(s))
+def plain(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
+def pointed(w): return ''.join(c for c in w if c != '/' and not (0x0591 <= ord(c) <= 0x05AF))
+def NF(s): return unicodedata.normalize('NFC', s)
+db = sqlite3.connect(f'file:{ROOT}/Data/tanakh.sqlite?mode=ro', uri=True)
+rows = db.execute("SELECT v.book, v.chapter, v.verse, w.he, w.morph, w.lemma, w.wtype FROM words w JOIN verses v ON w.verse_id=v.id ORDER BY v.id, w.idx").fetchall()
+by = {}
+for b, c, v, he, m, lem, wt in rows: by.setdefault((b, c, v), []).append((plain(he), m, he, lem, wt))
+T = ('Gen', 'Exod', 'Lev', 'Num', 'Deut')
+def words(b, c, v): return [x for x, _, _, _, _ in by[(b, c, v)]]
+def wm(b, c, v): return [(x, m) for x, m, _, _, _ in by[(b, c, v)]]
+def base(l): return (l or '').split('/')[-1].strip()
+def hits(sub, books=None, exact=True): return sorted({f'{b} {c}:{v}' for (b, c, v), ws in by.items() if (books is None or b in books) and any((x == sub) if exact else (sub in x) for x, _, _, _, _ in ws)})
+def U(*toks, books=None): return sorted({f'{b} {c}:{v}' for (b, c, v), ws in by.items() if books is None or b in books for x, _, _, _, _ in ws if x in toks})
+def phrase(seq, books=None):
+    out = []
+    for (b, c, v), ws in by.items():
+        if books is not None and b not in books: continue
+        w = [x for x, _, _, _, _ in ws]
+        if any(w[i:i + len(seq)] == list(seq) for i in range(len(w) - len(seq) + 1)): out.append(f'{b} {c}:{v}')
+    return sorted(out)
+def P(*seq, books=None): return phrase(list(seq), books)
+def LEMT(lem, books=None): return [(f'{b} {c}:{v}', x, m) for (b, c, v), ws in by.items() if (books is None or b in books) for x, m, _, l, _ in ws if base(l) == lem]
+def LEMV(lem, books=None): return sorted({s for s, _, _ in LEMT(lem, books)})
+def lemma_of(b, c, v, tok): return [base(l) for x, _, _, l, _ in by[(b, c, v)] if x == tok]
+def PT(b, c, v, tok): return [NF(pointed(r)) for x, _, r, _, _ in by[(b, c, v)] if x == tok]
+def FAM(sub, books=None): return sorted({f'{b} {c}:{v}' for (b, c, v), ws in by.items() if (books is None or b in books) for x, _, _, _, _ in ws if sub in x})
+def SEAT(s): b, cv = s.split(); c, v = map(int, cv.split(':')); return (b, c, v)
+def DIFF(a, b_):
+    A, B = words(*a), words(*b_)
+    import difflib
+    sm = difflib.SequenceMatcher(a=A, b=B)
+    out = []
+    for tag, i1, i2, j1, j2 in sm.get_opcodes():
+        if tag == 'equal': out.append('=' + ' '.join(A[i1:i2]))
+        else: out.append(f'[{tag}: {" ".join(A[i1:i2])!r} -> {" ".join(B[j1:j2])!r}]')
+    return f'{a[0]} {a[1]}:{a[2]} ({len(A)}) vs {b_[0]} {b_[1]}:{b_[2]} ({len(B)}): ' + ' '.join(out)
+onk = json.load(open(f'{ROOT}/Data/sefaria_export/Onkelos_Deuteronomy/en.json', encoding='utf-8'))['text']
+onk_he = json.load(open(f'{ROOT}/Data/sefaria_export/Onkelos_Deuteronomy/he.json', encoding='utf-8'))['text']
+def arm(c, v): return [plain(x).strip('.:') for x in clean(onk_he[c - 1][v - 1]).rstrip(':').split()]
+def onk_seats(sub): return [(c + 1, v + 1) for c in range(34) for v in range(len(onk_he[c])) if sub in ' '.join(arm(c + 1, v + 1))]
+def onk_tok(tok): return [(c + 1, v + 1) for c in range(34) for v in range(len(onk_he[c])) if tok in arm(c + 1, v + 1)]
+CH = 12
+VC = dict(db.execute("SELECT chapter, COUNT(*) FROM verses WHERE book='Deut' GROUP BY chapter").fetchall())
+NV = VC[CH]
+EXP2DB = {e: [e] for e in range(1, NV + 1)}   # typed from ch12_dump0's A0 print: 31 = 31, the identity, cost 26 (chapter 5 the book's one split)
+DB2EXP = {d: e for e, ds in EXP2DB.items() for d in ds}
+def L(label, val): print(f'  {label}: {val}')
+V12 = lambda v: words('Deut', 12, v)
+
+print('==== A. THE KIN FOUND BY COMPUTATION — every verse of the chapter against every verse of the Bible: the shared DISTINCT tokens outside a stop list of particles and the Name (the count), the top eight by that count in the Bible\'s order, the three closest re-scored IN ORDER by SequenceMatcher; then THE LAW KIN NAMED AND DIFFED IN FULL (the closest two per verse)')
+import difflib
+STOP = set('את ואת אשר כל וכל על ועל אל ואל לא ולא כי אם יהוה אלהיך אלהיכם לך לכם בו שם שמה גם מן ממך עד הוא היא אתם אתה אנכי אני לו לה בכל כאשר כן הימים היום אלה האלה בארץ הארץ אשר ואם או פן ופן'.split())
+ORD = {k: i for i, k in enumerate(by)}
+TOK = {k: set(words(*k)) - STOP for k in by}
+def SH(a, b_): return sum(s for _, _, s in difflib.SequenceMatcher(a=words(*a), b=words(*b_)).get_matching_blocks())
+D12 = lambda v: ('Deut', CH, v)
+KINC = {}
+for v in range(1, NV + 1):
+    me = D12(v); t = TOK[me]
+    sc = sorted(((len(t & TOK[k]), k) for k in by if k != me and len(t & TOK[k]) >= 2), key=lambda x: (-x[0], ORD[x[1]]))[:8]
+    KINC[v] = [(f'{k[0]} {k[1]}:{k[2]}', n, SH(me, k) if i < 3 else None) for i, (n, k) in enumerate(sc)]
+    L(f'{CH}:{v} ({len(t)} distinct non-stop tokens of {len(words(*me))})', KINC[v])
+LAWKIN = [((12, 1), [('Deut', 4, 45), ('Deut', 6, 1), ('Deut', 5, 1), ('Deut', 4, 1), ('Deut', 11, 32), ('Deut', 4, 10), ('Deut', 31, 13)]),
+ ((12, 2), [('Deut', 7, 5), ('Exod', 34, 13), ('Num', 33, 52), ('2Kgs', 17, 10), ('Jer', 2, 20), ('1Kgs', 14, 23), ('Deut', 19, 1)]),
+ ((12, 3), [('Deut', 7, 5), ('Deut', 7, 25), ('Exod', 34, 13), ('Exod', 23, 24), ('Judg', 2, 2), ('Deut', 16, 21)]),
+ ((12, 4), [('Deut', 12, 31), ('Deut', 18, 9)]),
+ ((12, 5), [('Exod', 20, 21), ('Deut', 14, 23), ('Deut', 16, 2), ('Deut', 16, 6), ('Deut', 26, 2), ('1Kgs', 8, 29), ('1Kgs', 11, 36), ('Deut', 31, 11)]),
+ ((12, 6), [('Deut', 12, 11), ('Deut', 12, 17), ('Lev', 7, 16), ('Lev', 22, 18), ('Num', 15, 3), ('Num', 29, 39), ('Lev', 23, 38)]),
+ ((12, 7), [('Deut', 12, 12), ('Deut', 12, 18), ('Deut', 14, 26), ('Deut', 16, 11), ('Deut', 26, 11), ('Deut', 27, 7), ('Deut', 15, 10), ('Deut', 23, 21)]),
+ ((12, 8), [('Judg', 17, 6), ('Judg', 21, 25), ('Deut', 13, 19), ('Exod', 15, 26)]),
+ ((12, 9), [('Deut', 3, 20), ('Josh', 1, 13), ('Josh', 1, 15), ('Josh', 22, 4), ('1Kgs', 8, 56), ('Ps', 95, 11), ('Ps', 132, 14), ('Num', 10, 33)]),
+ ((12, 10), [('Deut', 25, 19), ('Josh', 21, 44), ('Josh', 23, 1), ('2Sam', 7, 1), ('1Kgs', 5, 18), ('Deut', 33, 28), ('Lev', 25, 18), ('Lev', 25, 19), ('Deut', 3, 20)]),
+ ((12, 11), [('Deut', 12, 5), ('Deut', 12, 6), ('Deut', 14, 23), ('Deut', 16, 2), ('Deut', 16, 11), ('Deut', 26, 2), ('Neh', 1, 9), ('Jer', 7, 12)]),
+ ((12, 12), [('Deut', 12, 18), ('Deut', 16, 11), ('Deut', 16, 14), ('Deut', 26, 11), ('Deut', 10, 9), ('Deut', 14, 27), ('Deut', 14, 29), ('Deut', 18, 1), ('Num', 18, 20), ('Num', 18, 24)]),
+ ((12, 13), [('Deut', 12, 19), ('Deut', 12, 30), ('Deut', 4, 9), ('Deut', 6, 12), ('Deut', 8, 11), ('Exod', 34, 12), ('Deut', 11, 16)]),
+ ((12, 14), [('Deut', 12, 5), ('Deut', 12, 11), ('Deut', 12, 18), ('Deut', 12, 21), ('Deut', 12, 26), ('Exod', 20, 21), ('Lev', 17, 8), ('Lev', 17, 9)]),
+ ((12, 15), [('Lev', 17, 3), ('Lev', 17, 4), ('Lev', 17, 5), ('Deut', 12, 20), ('Deut', 12, 21), ('Deut', 12, 22), ('Deut', 15, 22), ('Deut', 14, 5), ('Deut', 15, 23), ('Deut', 18, 6)]),
+ ((12, 16), [('Deut', 12, 23), ('Deut', 12, 24), ('Deut', 15, 23), ('Lev', 17, 10), ('Lev', 17, 12), ('Lev', 17, 13), ('Lev', 3, 17), ('Lev', 7, 26), ('Gen', 9, 4), ('Lev', 19, 26)]),
+ ((12, 17), [('Deut', 12, 6), ('Deut', 12, 11), ('Deut', 14, 23), ('Deut', 15, 19), ('Deut', 15, 20), ('Num', 18, 15), ('Num', 18, 17), ('Deut', 14, 22), ('Deut', 26, 12), ('Lev', 27, 30)]),
+ ((12, 18), [('Deut', 12, 7), ('Deut', 12, 12), ('Deut', 14, 23), ('Deut', 14, 26), ('Deut', 15, 20), ('Deut', 16, 11), ('Deut', 16, 14), ('Deut', 26, 11), ('Deut', 5, 14)]),
+ ((12, 19), [('Deut', 14, 27), ('Deut', 14, 29), ('Deut', 12, 12), ('Deut', 26, 12), ('Deut', 26, 13)]),
+ ((12, 20), [('Deut', 19, 8), ('Exod', 34, 24), ('Deut', 12, 15), ('Deut', 12, 21), ('Num', 11, 4), ('Num', 11, 18), ('Num', 11, 34), ('Gen', 15, 18), ('Gen', 28, 14), ('Deut', 11, 24)]),
+ ((12, 21), [('Deut', 12, 5), ('Deut', 12, 15), ('Deut', 12, 20), ('Deut', 14, 24), ('Deut', 16, 2), ('Lev', 17, 3), ('Lev', 17, 4), ('Deut', 6, 25), ('Deut', 11, 25)]),
+ ((12, 22), [('Deut', 12, 15), ('Deut', 15, 22), ('Deut', 14, 5), ('Lev', 11, 47)]),
+ ((12, 23), [('Lev', 17, 11), ('Lev', 17, 14), ('Gen', 9, 4), ('Lev', 17, 10), ('Deut', 12, 16), ('Lev', 3, 17), ('Lev', 7, 27)]),
+ ((12, 24), [('Deut', 12, 16), ('Deut', 15, 23), ('Lev', 17, 13), ('Deut', 12, 25)]),
+ ((12, 25), [('Deut', 4, 40), ('Deut', 6, 18), ('Deut', 12, 28), ('Deut', 5, 16), ('Deut', 5, 29), ('Deut', 6, 3), ('Deut', 13, 19), ('Deut', 21, 9), ('Exod', 15, 26), ('1Kgs', 11, 38), ('2Kgs', 18, 3)]),
+ ((12, 26), [('Deut', 12, 17), ('Deut', 12, 6), ('Deut', 12, 5), ('Deut', 14, 24), ('Deut', 14, 25), ('Num', 18, 8), ('Num', 5, 9), ('Lev', 22, 15)]),
+ ((12, 27), [('Lev', 1, 9), ('Lev', 1, 5), ('Lev', 3, 2), ('Lev', 17, 6), ('Lev', 17, 11), ('Exod', 20, 21), ('Exod', 24, 6), ('Exod', 29, 12), ('Lev', 4, 7), ('Lev', 4, 18), ('2Kgs', 16, 13)]),
+ ((12, 28), [('Deut', 4, 40), ('Deut', 5, 16), ('Deut', 6, 18), ('Deut', 12, 25), ('Deut', 13, 1), ('Deut', 13, 19), ('Deut', 6, 3), ('Deut', 31, 12), ('Deut', 32, 46), ('Deut', 5, 1), ('Deut', 11, 32)]),
+ ((12, 29), [('Deut', 19, 1), ('Deut', 7, 1), ('Deut', 11, 23), ('Deut', 9, 1), ('Deut', 18, 12), ('Deut', 18, 14), ('Deut', 31, 3), ('Num', 33, 53), ('Deut', 6, 10), ('Josh', 23, 4), ('Deut', 12, 10)]),
+ ((12, 30), [('Deut', 7, 25), ('Deut', 7, 16), ('Exod', 23, 33), ('Exod', 34, 12), ('Exod', 34, 15), ('Deut', 18, 9), ('Deut', 20, 18), ('Deut', 13, 7), ('Deut', 13, 15), ('Deut', 4, 19), ('Deut', 6, 14), ('Judg', 2, 3), ('Ps', 106, 36), ('Deut', 11, 16), ('Deut', 29, 17)]),
+ ((12, 31), [('Deut', 18, 9), ('Deut', 18, 10), ('Deut', 18, 12), ('Lev', 18, 21), ('Lev', 20, 2), ('Lev', 20, 3), ('2Kgs', 17, 31), ('2Kgs', 17, 17), ('2Kgs', 16, 3), ('2Kgs', 21, 6), ('Jer', 7, 31), ('Jer', 19, 5), ('Jer', 32, 35), ('Ps', 106, 37), ('Ps', 106, 38), ('Deut', 7, 25), ('Deut', 7, 26), ('Deut', 13, 15), ('2Chr', 28, 3), ('2Chr', 33, 6), ('Ezek', 16, 20), ('Ezek', 20, 31)]),
+]
+print('  --- THE LAW KIN (named; scored by SequenceMatcher in order; the two closest diffed in full; a name absent from the DB printed as MISSING)')
+for (c, v), kin in LAWKIN:
+    kin = [k for k in dict.fromkeys(kin)]
+    missing = [k for k in kin if k not in by]
+    scored = sorted(((SH(('Deut', c, v), k), k) for k in kin if k in by), key=lambda t: -t[0])
+    L(f'{c}:{v} law kin', [(f'{k[0]} {k[1]}:{k[2]}', s) for s, k in scored] + (['MISSING ' + str(m) for m in missing]))
+    for s, k in scored[:2]: print('     ' + DIFF(('Deut', c, v), k))
+print('==== B. THE PHRASE CENSUSES over the whole DB (Torah where marked; the book where marked)')
+DT = ('Deut',)
+L('"these are the statutes and the judgments" (אלה החקים והמשפטים) / "the statutes and the judgments" any article form / 4:45 and 6:1', (P('אלה', 'החקים', 'והמשפטים'), P('החקים', 'והמשפטים'), P('החקים', 'ואת', 'המשפטים'), words('Deut', 4, 45), words('Deut', 6, 1)))
+L('"you shall keep to do" with the paragogic nun (תשמרון) / all תשמרון seats / "keep to do" plural and singular seats in the book', (U('תשמרון'), P('ושמרתם', 'לעשות', books=DT), P('ושמרת', 'לעשות', books=DT), P('תשמרון', 'לעשות')))
+L('"the LORD the God of your fathers" (יהוה אלהי אבתיך) seats / "all the days that you live on the earth" (כל הימים אשר אתם חיים על האדמה) / "on the earth" (על האדמה) count in the book', (P('יהוה', 'אלהי', 'אבתיך'), P('כל', 'הימים', 'אשר', 'אתם', 'חיים', 'על', 'האדמה'), P('הימים', 'אשר', 'אתם', 'חיים'), len(P('על', 'האדמה', books=DT))))
+L('"destroy, you shall destroy" (אבד תאבדון) — the infinitive absolute; אבד the lemma 6 forms in the chapter; "all the places" (כל המקמות)', (P('אבד', 'תאבדון'), [(s, x, m) for s, x, m in LEMT('6', books=DT) if s.startswith('Deut 12:')], P('כל', 'המקמות'), U('המקמות', 'מקמות', 'המקומות')))
+L('"where the nations served their gods" (אשר עבדו שם הגוים) / "on the high mountains" (על ההרים הרמים) / "and under every leafy tree" (תחת כל עץ רענן) every seat / "leafy" רענן', (P('אשר', 'עבדו', 'שם', 'הגוים'), P('על', 'ההרים', 'הרמים'), P('תחת', 'כל', 'עץ', 'רענן'), P('כל', 'עץ', 'רענן'), U('רענן')))
+L('THE FIVE VERBS OF 12:3 — tear down (ונתצתם / נתץ 5422 in the Torah), break (ושברתם … מצבתם), burn (תשרפון), cut down (תגדעון / גדע 1438 every seat), destroy the name (ואבדתם את שמם)', ([(s, x) for s, x, _ in LEMT('5422', books=T)], P('ושברתם', 'את', 'מצבתם'), U('מצבתם', 'מצבתיהם', 'מצבתיו'), U('תשרפון'), [(s, x) for s, x, _ in LEMT('1438')], P('ואבדתם', 'את', 'שמם')))
+L('7:5 and Exodus 34:13 and 23:24 (the demolition\'s earlier forms — the tokens) / "their Asherim" every token / "the graven images of their gods" (פסילי אלהיהם)', (words('Deut', 7, 5), words('Exod', 34, 13), words('Exod', 23, 24), U('ואשריהם', 'אשריהם', 'ואשרים', 'אשרים', 'ואשירים', 'אשירים', 'אשרתם', 'ואשריהם'), P('פסילי', 'אלהיהם'), P('ופסילי', 'אלהיהם')))
+L('"from that place" (מן המקום ההוא) / "that place" (המקום ההוא) count in the Bible / "you shall not do so to the LORD your God" plural (12:4) and singular (12:31) — the pair\'s seats', (P('מן', 'המקום', 'ההוא'), len(P('המקום', 'ההוא')), P('לא', 'תעשון', 'כן', 'ליהוה', 'אלהיכם'), P('לא', 'תעשה', 'כן', 'ליהוה', 'אלהיך'), P('לא', 'תעשה', 'כן')))
+L('"THE PLACE WHICH THE LORD WILL CHOOSE" (המקום אשר יבחר יהוה) every seat / (במקום אשר יבחר יהוה) every seat / "will choose" (יבחר) in the book / the lemma 977 count in the chapter and in the book', (P('המקום', 'אשר', 'יבחר', 'יהוה'), P('במקום', 'אשר', 'יבחר', 'יהוה'), U('יבחר', books=DT), len([s for s, _, _ in LEMT('977', books=DT) if s.startswith('Deut 12:')]), len(LEMT('977', books=DT))))
+L('"from all your tribes" (מכל שבטיכם) / "in one of your tribes" (באחד שבטיך) / "to put His name there" (לשום את שמו שם / לשום שמו שם) / "to make His name dwell there" (לשכן שמו שם) every seat / "His dwelling" (לשכנו) every seat', (P('מכל', 'שבטיכם'), P('באחד', 'שבטיך'), P('לשום', 'את', 'שמו', 'שם'), P('לשום', 'שמו', 'שם'), P('לשכן', 'שמו', 'שם'), U('לשכנו')))
+L('"you shall seek" (תדרשו) / דרש 1875 in the chapter — the same verb at 12:5 (His dwelling) and 12:30 (their gods) / "and you shall come there" (ובאת שמה)', (U('תדרשו'), [(s, x, m) for s, x, m in LEMT('1875', books=DT) if s.startswith('Deut 12:')], P('ובאת', 'שמה')))
+L('THE LIST OF 12:6 — "your burnt offerings and your sacrifices" (עלתיכם וזבחיכם) / "your tithes" (מעשרתיכם) / "the heave offering of your hand" (תרומת ידכם / תרומת ידך) / "your vows and your freewill offerings" (ונדריכם ונדבתיכם) / "the firstlings of your herd and your flock" (ובכרת בקרכם וצאנכם / ובכרת בקרך וצאנך) every seat', (P('עלתיכם', 'וזבחיכם'), U('מעשרתיכם'), P('תרומת', 'ידכם'), P('תרומת', 'ידך'), P('ונדריכם', 'ונדבתיכם'), P('ובכרת', 'בקרכם', 'וצאנכם'), P('ובכרת', 'בקרך', 'וצאנך')))
+L('12:11\'s list (עולתיכם וזבחיכם מעשרתיכם ותרמת ידכם וכל מבחר נדריכם) / "the choice of your vows" (מבחר נדריכם) / 12:17\'s "the tithe of your grain, your wine and your oil" (מעשר דגנך ותירשך ויצהרך) every seat / "your grain, your wine and your oil" (דגנך ותירשך ויצהרך)', (P('עולתיכם', 'וזבחיכם', 'מעשרתיכם'), P('מבחר', 'נדריכם'), P('מעשר', 'דגנך', 'ותירשך', 'ויצהרך'), P('דגנך', 'ותירשך', 'ויצהרך')))
+L('"and you shall eat there before the LORD your God" (ואכלתם שם לפני יהוה אלהיכם) / "before the LORD your God" plural and singular counts in the chapter / "and you shall rejoice" (ושמחתם / ושמחת) seats in the book / the lemma 8055 in the book', (P('ואכלתם', 'שם', 'לפני', 'יהוה', 'אלהיכם'), len([v for v in range(1, NV + 1) if any(V12(v)[i:i + 3] == ['לפני', 'יהוה', 'אלהיכם'] for i in range(len(V12(v)) - 2))]), len([v for v in range(1, NV + 1) if any(V12(v)[i:i + 3] == ['לפני', 'יהוה', 'אלהיך'] for i in range(len(V12(v)) - 2))]), U('ושמחתם', 'ושמחת', books=DT), len(LEMT('8055', books=DT))))
+L('"in all that you put your hand to" (בכל משלח ידכם / משלח ידך) every seat / "you and your households" (אתם ובתיכם) / "wherein the LORD your God has blessed you" (אשר ברכך יהוה אלהיך) seats', (P('משלח', 'ידכם'), P('משלח', 'ידך'), P('אתם', 'ובתיכם'), P('אשר', 'ברכך', 'יהוה', 'אלהיך')))
+L('"every man what is right in his own eyes" (איש כל הישר בעיניו) / Judges\' form (איש הישר בעיניו יעשה) / "here today" (פה היום) / "we" (אנחנו) seats in the book', (P('איש', 'כל', 'הישר', 'בעיניו'), P('הישר', 'בעיניו', 'יעשה'), P('פה', 'היום'), U('אנחנו', books=DT)))
+L('"the rest and the inheritance" (המנוחה ואל הנחלה) / "rest" (מנוחה 4496) seats in the Torah and the Bible count / "until now" (עד עתה) seats in the book', (P('המנוחה', 'ואל', 'הנחלה'), [(s, x) for s, x, _ in LEMT('4496', books=T)], len(LEMT('4496')), P('עד', 'עתה', books=DT)))
+L('"and He gives you rest from all your enemies round about" (והניח לכם מכל איביכם מסביב) / "rest … from all enemies round about" forms (הניח … מכל איביכם/איביו מסביב) / "and you shall dwell in safety" (וישבתם בטח / וישבת בטח) / "safety" (בטח) in the Torah', (P('והניח', 'לכם', 'מכל', 'איביכם', 'מסביב'), P('מכל', 'איביכם', 'מסביב'), P('מכל', 'איביו', 'מסביב'), P('מכל', 'איביך', 'מסביב'), P('וישבתם', 'בטח'), U('בטח', 'לבטח', books=T)))
+L('"the Levite that is within your gates" (והלוי אשר בשעריכם / והלוי אשר בשעריך) every seat / "for he has no portion nor inheritance with you" (כי אין לו חלק ונחלה) every seat / "with you" (אתכם / עמך) at those seats', (P('והלוי', 'אשר', 'בשעריכם'), P('והלוי', 'אשר', 'בשעריך'), P('אין', 'לו', 'חלק', 'ונחלה'), P('חלק', 'ונחלה')))
+L('"your sons and your daughters, your menservants and your maidservants" plural (ובניכם ובנתיכם ועבדיכם ואמהתיכם) / singular (ובנך ובתך ועבדך ואמתך) every seat — THE SABBATH\'S LIST (5:14)', (P('ובניכם', 'ובנתיכם', 'ועבדיכם', 'ואמהתיכם'), P('ובנך', 'ובתך', 'ועבדך', 'ואמתך'), P('אתה', 'ובנך', 'ובתך', 'ועבדך', 'ואמתך')))
+L('"take heed to yourself lest" (השמר לך פן) every seat in the Bible / (השמרו לכם פן) / "take heed" השמר the niphal imperative count in the book', (P('השמר', 'לך', 'פן'), P('השמרו', 'לכם', 'פן'), len(U('השמר', books=DT))))
+L('"in every place that you see" (בכל מקום אשר תראה) / "there you shall offer your burnt offerings" (שם תעלה עלתיך) / "all that I command you" singular (כל אשר אנכי מצוך) count in the book', (P('בכל', 'מקום', 'אשר', 'תראה'), P('שם', 'תעלה', 'עלתיך'), len(P('כל', 'אשר', 'אנכי', 'מצוך', books=DT))))
+L('"only" רק (7535) seats in the chapter and count in the book / אך (389) seats in the chapter', ([s for s, _, _ in LEMT('7535', books=DT) if s.startswith('Deut 12:')], len(LEMT('7535', books=DT)), [s for s, _, _ in LEMT('389', books=DT) if s.startswith('Deut 12:')]))
+L('"with all the desire of your soul" (בכל אות נפשך) every seat / "desire" אוה the noun 185 every seat / the verb 183 seats in the Torah', (P('בכל', 'אות', 'נפשך'), [(s, x) for s, x, _ in LEMT('185')], [(s, x) for s, x, _ in LEMT('183', books=T)]))
+L('"you may slaughter and eat flesh" (תזבח ואכלת בשר) / "according to the blessing of the LORD your God which He has given you" (כברכת יהוה אלהיך אשר נתן לך) every seat / "in all your gates" (בכל שעריך) count in the book', (P('תזבח', 'ואכלת', 'בשר'), P('כברכת', 'יהוה', 'אלהיך', 'אשר', 'נתן', 'לך'), P('כברכת', 'יהוה', 'אלהיך'), len(P('בכל', 'שעריך', books=DT))))
+L('"the unclean and the clean" (הטמא והטהור) every seat / "as the gazelle and as the hart" (כצבי וכאיל) / "the gazelle and the hart" (הצבי ואת האיל / הצבי והאיל) every seat / "gazelle" צבי every token (THE HOMOGRAPH — the beauty)', (P('הטמא', 'והטהור'), P('כצבי', 'וכאיל'), P('הצבי', 'ואת', 'האיל'), U('צבי', 'כצבי', 'הצבי', 'וצבי', 'צביה'), [(s, x) for s, x, _ in LEMT('6643 b')][:20], len(LEMT('6643 b')), [(s, x) for s, x, _ in LEMT('6643 a')][:12]))
+L('"only the blood you shall not eat" (רק הדם לא תאכלו) / "the blood you shall not eat" forms / "on the earth you shall pour it like water" (על הארץ תשפכנו כמים) every seat / "like water" (כמים) in the Torah', (P('רק', 'הדם', 'לא', 'תאכלו'), P('הדם', 'לא', 'תאכלו'), P('דם', 'לא', 'תאכלו'), P('כל', 'דם', 'לא', 'תאכלו'), P('על', 'הארץ', 'תשפכנו', 'כמים'), U('כמים', books=T)))
+L('"you may not eat within your gates" (לא תוכל לאכל בשעריך) / "you may not" (לא תוכל) count in the book and its seats / "your vows which you vow" (נדריך אשר תדר)', (P('לא', 'תוכל', 'לאכל', 'בשעריך'), len(P('לא', 'תוכל', books=DT)), P('לא', 'תוכל', books=DT), P('נדריך', 'אשר', 'תדר')))
+L('"but before the LORD your God you shall eat it" (כי אם לפני יהוה אלהיך תאכלנו) / "you shall eat it" (תאכלנו) seats in the book / "in the place which the LORD your God will choose" singular with "your God" (במקום אשר יבחר יהוה אלהיך בו) every seat', (P('כי', 'אם', 'לפני', 'יהוה', 'אלהיך', 'תאכלנו'), U('תאכלנו', books=DT), P('במקום', 'אשר', 'יבחר', 'יהוה', 'אלהיך', 'בו')))
+L('"lest you forsake the Levite" (פן תעזב את הלוי) / "all your days on your land" (כל ימיך על אדמתך) / "the Levite" הלוי count in the chapter and the book', (P('פן', 'תעזב', 'את', 'הלוי'), P('כל', 'ימיך', 'על', 'אדמתך'), len([s for s, _, _ in LEMT('3881', books=DT) if s.startswith('Deut 12:')]), len(LEMT('3881', books=DT))))
+L('"when the LORD your God enlarges your border" (כי ירחיב יהוה אלהיך את גבולך) every seat / Exodus 34:24\'s "I will enlarge your border" (והרחבתי את גבלך) / "enlarge" רחב hiphil seats in the Torah', (P('כי', 'ירחיב', 'יהוה', 'אלהיך', 'את', 'גבולך'), P('והרחבתי', 'את', 'גבלך'), [(s, x, m) for s, x, m in LEMT('7337', books=T) if m and 'Vh' in m]))
+L('"AS HE HAS SPOKEN TO YOU" (כאשר דבר לך) every seat in the book — THE AS_WHEN FORM / "as He spoke" (כאשר דבר) count in the book / "I will eat flesh" (אכלה בשר) / "because your soul craves to eat flesh" (כי תאוה נפשך לאכל בשר) / "flesh" בשר count in the chapter', (P('כאשר', 'דבר', 'לך', books=DT), len(P('כאשר', 'דבר', books=DT)), P('אכלה', 'בשר'), P('כי', 'תאוה', 'נפשך', 'לאכל', 'בשר'), sum(1 for v in range(1, NV + 1) for x in V12(v) if x in ('בשר', 'הבשר', 'והבשר'))))
+L('"if the place be too far from you" (כי ירחק ממך המקום) every seat / "AS I HAVE COMMANDED YOU" (כאשר צויתך) every seat in the Bible — THE RECEIPT WITHOUT THE NAME / (כאשר צויתי) / (כאשר צוה) count in the book / "and you shall eat within your gates" (ואכלת בשעריך)', (P('כי', 'ירחק', 'ממך', 'המקום'), P('כאשר', 'צויתך'), P('כאשר', 'צויתי'), len(P('כאשר', 'צוה', books=DT)), P('ואכלת', 'בשעריך')))
+L('"as the gazelle and the hart are eaten" (כאשר יאכל את הצבי ואת האיל) / "together" (יחדו) seats in the book / "so you shall eat it" (כן תאכלנו)', (P('כאשר', 'יאכל', 'את', 'הצבי', 'ואת', 'האיל'), U('יחדו', books=DT), P('כן', 'תאכלנו')))
+L('"only be steadfast not to eat the blood" (רק חזק לבלתי אכל הדם) / "be strong" חזק the imperative seats in the book / "FOR THE BLOOD IS THE LIFE" (כי הדם הוא הנפש) / Leviticus 17:11 and 17:14 and Genesis 9:4 (the tokens) / "you shall not eat the life with the flesh" (ולא תאכל הנפש עם הבשר)', (P('רק', 'חזק', 'לבלתי', 'אכל', 'הדם'), [(s, x, m) for s, x, m in LEMT('2388', books=DT) if m and m.endswith('v2ms')], P('כי', 'הדם', 'הוא', 'הנפש'), words('Lev', 17, 11), words('Lev', 17, 14), words('Gen', 9, 4), P('ולא', 'תאכל', 'הנפש', 'עם', 'הבשר')))
+L('"you shall not eat it" (לא תאכלנו) every seat / "that it may go well with you and with your children after you" (למען ייטב לך ולבניך אחריך) every seat / "when you do what is right in the eyes of the LORD" (כי תעשה הישר בעיני יהוה) every seat / "the good and the right" (הטוב והישר) / "the right in the eyes of the LORD" (הישר בעיני יהוה) count in the Bible', (P('לא', 'תאכלנו'), P('למען', 'ייטב', 'לך', 'ולבניך', 'אחריך'), P('כי', 'תעשה', 'הישר', 'בעיני', 'יהוה'), P('הטוב', 'והישר'), len(P('הישר', 'בעיני', 'יהוה'))))
+L('"only your holy things which you have and your vows" (רק קדשיך אשר יהיו לך ונדריך) / "your holy things" (קדשיך) every seat / "you shall take and go to the place" (תשא ובאת אל המקום)', (P('רק', 'קדשיך', 'אשר', 'יהיו', 'לך', 'ונדריך'), U('קדשיך'), P('תשא', 'ובאת', 'אל', 'המקום')))
+L('"and you shall offer your burnt offerings, the flesh and the blood" (ועשית עלתיך הבשר והדם) / "the blood of your sacrifices shall be poured on the altar" (ודם זבחיך ישפך על מזבח) / "shall be poured" ישפך seats in the Torah / "the altar of the LORD your God" (מזבח יהוה אלהיך) every seat / "and the flesh you shall eat" (והבשר תאכל)', (P('ועשית', 'עלתיך', 'הבשר', 'והדם'), P('ודם', 'זבחיך', 'ישפך', 'על', 'מזבח'), U('ישפך', books=T), P('מזבח', 'יהוה', 'אלהיך'), P('והבשר', 'תאכל')))
+L('"observe and hear all these words which I command you" (שמר ושמעת את כל הדברים האלה) / "all these words" (כל הדברים האלה) count in the book / "forever" (עד עולם) seats in the book / 13:1 (the DB\'s next verse — the English\'s 12:32) tokens', (P('שמר', 'ושמעת', 'את', 'כל', 'הדברים', 'האלה'), len(P('כל', 'הדברים', 'האלה', books=DT)), P('עד', 'עולם', books=DT), words('Deut', 13, 1)))
+L('"when the LORD your God cuts off the nations" (כי יכרית יהוה אלהיך את הגוים) every seat / "whither you go to dispossess them" (אשר אתה בא שמה לרשת אותם) / "and you dispossess them and dwell in their land" (וירשת אתם וישבת בארצם) / 19:1 tokens', (P('כי', 'יכרית', 'יהוה', 'אלהיך', 'את', 'הגוים'), P('אשר', 'אתה', 'בא', 'שמה', 'לרשת', 'אותם'), P('וירשת', 'אתם', 'וישבת', 'בארצם'), words('Deut', 19, 1)))
+L('"lest you be ensnared to follow them" (פן תנקש אחריהם) / נקש 5367 every seat / 7:25\'s "lest you be snared by it" (פן תוקש בו — יקש 3369) seats in the Torah / "after they are destroyed from before you" (אחרי השמדם מפניך) / "lest you inquire after their gods" (ופן תדרש לאלהיהם) / "how" איכה in the Torah / "and I will do so too" (ואעשה כן גם אני)', (P('פן', 'תנקש', 'אחריהם'), [(s, x, m) for s, x, m in LEMT('5367')], [(s, x, m) for s, x, m in LEMT('3369', books=T)], P('אחרי', 'השמדם', 'מפניך'), P('ופן', 'תדרש', 'לאלהיהם'), U('איכה', books=T), P('ואעשה', 'כן', 'גם', 'אני')))
+L('"every abomination of the LORD which He hates" (כל תועבת יהוה אשר שנא) / "abomination of the LORD" (תועבת יהוה) every seat / תועבה 8441 count in the book / "which He hates" (אשר שנא) seats / 16:22\'s "which the LORD your God hates"', (P('כל', 'תועבת', 'יהוה', 'אשר', 'שנא'), P('תועבת', 'יהוה'), len(LEMT('8441', books=DT)), P('אשר', 'שנא'), words('Deut', 16, 22)))
+L('"for even their sons and their daughters they burn in the fire to their gods" (כי גם את בניהם ואת בנתיהם ישרפו באש לאלהיהם) / "their sons and their daughters … in the fire" forms (Jeremiah 7:31, 19:5; 2 Kings 17:31; Psalm 106:37-38) / "burn in the fire" (ישרפו באש / שרפים באש / לשרף … באש) / "to Molech" (למלך) seats / "pass through the fire" (מעביר בנו ובתו באש) 18:10', (P('כי', 'גם', 'את', 'בניהם', 'ואת', 'בנתיהם', 'ישרפו', 'באש', 'לאלהיהם'), P('בניהם', 'ואת', 'בנתיהם'), P('את', 'בניהם', 'ואת', 'בנתיהם', 'באש'), U('ישרפו'), P('שרפים', 'באש'), P('לשרף', 'את', 'בניהם'), U('למלך'), P('מעביר', 'בנו', 'ובתו', 'באש')))
+L('THE NAME bare tokens per verse and the count / "the LORD your God" singular (יהוה אלהיך) and plural (יהוה אלהיכם) per verse / "to the LORD" (ליהוה) seats in the chapter', ({v: sum(1 for x in V12(v) if x == 'יהוה') for v in range(1, NV + 1) if 'יהוה' in V12(v)}, sum(1 for v in range(1, NV + 1) for x in V12(v) if x == 'יהוה'), [v for v in range(1, NV + 1) if any(V12(v)[i:i + 2] == ['יהוה', 'אלהיך'] for i in range(len(V12(v)) - 1))], [v for v in range(1, NV + 1) if any(V12(v)[i:i + 2] == ['יהוה', 'אלהיכם'] for i in range(len(V12(v)) - 1))], [v for v in range(1, NV + 1) if 'ליהוה' in V12(v)]))
+L('THE CHAPTER\'S OWN WORDS (per-verse seats): "the place" (מקום 4725) / "there" (שם / שמה) / "your gates" (שער 8179) / "eat" (398) / "flesh" (1320) / "blood" (1818) / "soul" (5315) / "burnt offering" (5930) / "sacrifice" the noun (2077) and the verb (2076) / "tithe" (4643) / "vow" the noun (5088) and the verb (5087) / "freewill offering" (5071) / "heave offering" (8641) / "firstling" (1062) / "rejoice" (8055) / "their gods" (אלהיהם / לאלהיהם) / "nations" (1471)', {lab: [s for s, _, _ in LEMT(lem, books=DT) if s.startswith('Deut 12:')] for lab, lem in (('place', '4725'), ('gate', '8179'), ('eat', '398'), ('flesh', '1320'), ('blood', '1818'), ('soul', '5315'), ('burnt', '5930 a'), ('sacrifice-n', '2077'), ('sacrifice-v', '2076'), ('tithe', '4643'), ('vow-n', '5088'), ('vow-v', '5087'), ('freewill', '5071'), ('heave', '8641'), ('firstling', '1062'), ('rejoice', '8055'), ('nations', '1471 a'))})
+L('"there" (שם / שמה) per verse / "their gods" per verse / "your God" the suffix forms per verse', ({v: [x for x in V12(v) if x in ('שם', 'שמה', 'ושם')] for v in range(1, NV + 1) if any(x in ('שם', 'שמה', 'ושם') for x in V12(v))}, {v: [x for x in V12(v) if x in ('אלהיהם', 'לאלהיהם')] for v in range(1, NV + 1) if any(x in ('אלהיהם', 'לאלהיהם') for x in V12(v))}))
+L('THE FRAME OF THE BOOK — 12:1 against 4:44-45, 5:1, 6:1, 11:32 (the tokens shared) / "which you shall keep to do" and "which I set before you" head forms', (SH(D12(1), ('Deut', 4, 45)), SH(D12(1), ('Deut', 6, 1)), SH(D12(1), ('Deut', 5, 1)), SH(D12(1), ('Deut', 11, 32)), words('Deut', 4, 44)))
+print('==== C. THE PARSER — the number verses of the chapter and of the kin (the engine\'s ink_numbers / ink_ordinals; the marked tokens)')
+with contextlib.redirect_stdout(io.StringIO()):
+    import cold_run_sequence as CS
+PARSE = {v: (CS.ink_numbers(CS.verse_words('Deut', CH, v)), CS.ink_ordinals(CS.verse_words('Deut', CH, v)), [t for t in CS.verse_words('Deut', CH, v) if t[-1] in '#~^%@|*']) for v in range(1, NV + 1)}
+L('the chapter\'s verses with a number, an ordinal or a marked token', {v: p for v, p in PARSE.items() if p[0] or p[1] or p[2]})
+L('12:14 and 12:17 as the engine reads them', (CS.verse_words('Deut', CH, 14), CS.verse_words('Deut', CH, 17)))
+KINK = [('Num', 18, 26), ('Deut', 14, 22), ('Deut', 14, 28), ('Lev', 27, 30), ('Lev', 27, 32), ('Deut', 15, 22), ('Lev', 17, 3), ('Lev', 17, 11), ('Gen', 9, 4), ('Exod', 20, 21), ('Deut', 7, 5), ('Num', 33, 52), ('Deut', 14, 23), ('Deut', 16, 2), ('Deut', 26, 12), ('Judg', 17, 6), ('Deut', 19, 8), ('Exod', 34, 24), ('Num', 18, 21), ('Deut', 12, 14)]
+L('the kin\'s numbers (ink_numbers on the kin verses)', {k: CS.ink_numbers(CS.verse_words(*k)) for k in KINK if k in by})
+L('"ten"/"tithe" tokens starred over the book — every מעשר* form the engine marks', sorted({(b, c, v) for (b, c, v) in by if b == 'Deut' for t in CS.verse_words(b, c, v) if t.startswith('מעשר') and t.endswith('*')}))
+L('"one" (אחד / באחד) tokens in the chapter and the engine\'s reading of "in one of your tribes"', ([(v, x) for v in range(1, NV + 1) for x in V12(v) if x in ('אחד', 'באחד', 'אחת')], PARSE[14]))
+print('==== D. THE REGISTER — the second-person number by verse (2mp count, 2ms count), the first person, the verb forms, the written/read pair')
+NUM = {v: (sum(1 for _, m, _, _, _ in by[('Deut', 12, v)] if m and '2mp' in m), sum(1 for _, m, _, _, _ in by[('Deut', 12, v)] if m and '2ms' in m)) for v in range(1, NV + 1)}
+L('2mp / 2ms per verse', NUM); L('singular-only verses', [v for v, (p, s) in NUM.items() if s and not p]); L('plural-only', [v for v, (p, s) in NUM.items() if p and not s]); L('both', [v for v, (p, s) in NUM.items() if p and s]); L('neither', [v for v, (p, s) in NUM.items() if not p and not s])
+L('the plural tokens in the mixed and plural verses', {v: [(x, m) for x, m, _, _, _ in by[('Deut', 12, v)] if m and '2mp' in m] for v in range(1, NV + 1) if NUM[v][0]})
+L('first-person plural (1cp) per verse', {v: [(x, m) for x, m, _, _, _ in by[('Deut', 12, v)] if m and '1cp' in m] for v in range(1, NV + 1) if any(m and '1cp' in m for _, m, _, _, _ in by[('Deut', 12, v)])}); L('first-person singular (1cs)', {v: [(x, m) for x, m, _, _, _ in by[('Deut', 12, v)] if m and '1cs' in m] for v in range(1, NV + 1) if any(m and '1cs' in m for _, m, _, _, _ in by[('Deut', 12, v)])})
+L('imperatives (any stem: HV.v / HV..v) per verse', {v: [(x, m) for x, m, _, _, _ in by[('Deut', 12, v)] if m and re.match(r'^HV.?.?v', m)] for v in range(1, NV + 1) if any(m and re.match(r'^HV.?.?v', m) for _, m, _, _, _ in by[('Deut', 12, v)])})
+L('infinitive absolutes (HV.a)', {v: [(x, m) for x, m, _, _, _ in by[('Deut', 12, v)] if m and re.match(r'^H(?:C/)?V.a$', m)] for v in range(1, NV + 1) if any(m and re.match(r'^H(?:C/)?V.a$', m) for _, m, _, _, _ in by[('Deut', 12, v)])})
+L('consecutive perfects (V.q) per verse — the law\'s form', {v: [x for x, m, _, _, _ in by[('Deut', 12, v)] if m and re.search(r'^HC/V.q', m)] for v in range(1, NV + 1) if any(m and re.search(r'^HC/V.q', m) for _, m, _, _, _ in by[('Deut', 12, v)])})
+L('imperfect second person (V.i2) per verse', {v: [(x, m) for x, m, _, _, _ in by[('Deut', 12, v)] if m and re.search(r'^H(?:Ti/)?V.i2', m)] for v in range(1, NV + 1) if any(m and re.search(r'^H(?:Ti/)?V.i2', m) for _, m, _, _, _ in by[('Deut', 12, v)])})
+L('narrative (wayyiqtol, V.w) per verse', {v: [x for x, m, _, _, _ in by[('Deut', 12, v)] if m and re.search(r'^HC/V.w', m)] for v in range(1, NV + 1) if any(m and re.search(r'^HC/V.w', m) for _, m, _, _, _ in by[('Deut', 12, v)])})
+L('participles (V.r) per verse', {v: [(x, m) for x, m, _, _, _ in by[('Deut', 12, v)] if m and re.search(r'^H(?:C/|R/|Td/|C/R/)?V.r', m)] for v in range(1, NV + 1) if any(m and re.search(r'^H(?:C/|R/|Td/|C/R/)?V.r', m) for _, m, _, _, _ in by[('Deut', 12, v)])})
+L('the article + participle chain (HTd/V.r) — "who brought you out … who led you … who fed you"', [(v, x) for v in range(1, NV + 1) for x, m, _, _, _ in by[('Deut', 12, v)] if m and m.startswith('HTd/V') and 'r' in m[6:8]])
+L('perfects (V.p) per verse', {v: [(x, m) for x, m, _, _, _ in by[('Deut', 12, v)] if m and re.match(r'^H(?:C/)?V.p', m)] for v in range(1, NV + 1) if any(m and re.match(r'^H(?:C/)?V.p', m) for _, m, _, _, _ in by[('Deut', 12, v)])})
+L('prohibitions לא + imperfect', {v: [(by[('Deut', 12, v)][i + 1][0], by[('Deut', 12, v)][i + 1][1]) for i, (x, _, _, _, _) in enumerate(by[('Deut', 12, v)][:-1]) if x in ('לא', 'ולא') and by[('Deut', 12, v)][i + 1][1] and by[('Deut', 12, v)][i + 1][1].startswith('HV')] for v in range(1, NV + 1) if any(x in ('לא', 'ולא') for x, _, _, _, _ in by[('Deut', 12, v)])})
+L('"not" (לא / ולא) seats per verse', {v: [x for x in V12(v) if x in ('לא', 'ולא')] for v in range(1, NV + 1) if any(x in ('לא', 'ולא') for x in V12(v))})
+L('case tokens per verse', {f'12:{v}': [x for x in V12(v) if x in ('כי', 'אם', 'ואם', 'או', 'פן')] for v in range(1, NV + 1) if any(x in ('כי', 'אם', 'ואם', 'או', 'פן') for x in V12(v))}); L('"saying" (לאמר) seats', [v for v in range(1, NV + 1) if 'לאמר' in V12(v)]); L('divine frames (ויאמר/וידבר יהוה)', [v for v in range(1, NV + 1) if any(V12(v)[i] in ('ויאמר', 'וידבר') and V12(v)[i + 1] == 'יהוה' for i in range(len(V12(v)) - 1))])
+L('"so that" (למען) seats per verse', {v: [x for x in V12(v) if x in ('למען', 'ולמען')] for v in range(1, NV + 1) if any(x in ('למען', 'ולמען') for x in V12(v))}); L('"so that" count in chapter 12 and in Deuteronomy', (sum(1 for v in range(1, NV + 1) for x in V12(v) if x in ('למען', 'ולמען')), len(U('למען', 'ולמען', books=('Deut',)))))
+L('tokens per verse', {v: len(V12(v)) for v in range(1, NV + 1)}); L('the chapter\'s tokens and letters', (sum(len(V12(v)) for v in range(1, NV + 1)), sum(len(x) for v in range(1, NV + 1) for x in V12(v))))
+L('wtype values in chapter 12', Counter(wt for v in range(1, NV + 1) for _, _, _, _, wt in by[('Deut', 12, v)])); L('the ketiv token(s) of chapter 12', [(v, x, m, wt) for v in range(1, NV + 1) for x, m, _, _, wt in by[('Deut', 12, v)] if wt])
+
+
+
+print('==== E. ONKELOS — the renderings\' seats over the book (the export\'s verse numbers; the export\'s chapter 12 = the DB\'s, the identity)')
+L('THE SHEKHINAH for "His name" — 12:5 "to set His name there, His dwelling" rendered (לאשראה שכנתיה תמן לבית שכנתיה); every שכנת seat in the book / "the house of His Shekhinah" (בית שכנת) seats', (arm(12, 5), onk_seats('שכנת'), onk_seats('בית שכנת')))
+L('"chooses" (יתרעי) for "will choose" — every seat in the book / "the desire of your soul" (רעות נפשך) seats / רעו forms', (onk_tok('יתרעי'), onk_seats('רעות נפש'), onk_seats('רעו')))
+L('"THEIR ERRORS" (טעות) for "their gods" — every seat in the book (the idols\' word) / the chapter\'s seats', (len(onk_seats('טעות')), onk_seats('טעות')[:40], [(c, v) for c, v in onk_seats('טעות') if c == 12]))
+L('"BEFORE THE LORD" (קדם יי) for "to the LORD" and "before the LORD" — the chapter\'s seats; 12:4 and 12:31 "to the LORD" made "before" / 12:11 "which you vow to the LORD" made "before the LORD"', ([(c, v) for c, v in onk_seats('קדם יי') if c == 12], arm(12, 4), arm(12, 31)[:6], arm(12, 11)[-4:]))
+L('"holy sacrifices" (נכסת קודש) for "your sacrifices" — every seat / "the separation of your hand" (אפרשות יד) for the heave offering — every seat / "the tithe of your holy things" SUPPLIED at 12:26 (מעשר קודשיך) — every מעשר seat in the book', (onk_seats('נכסת קודש'), onk_seats('אפרשות יד'), arm(12, 26), onk_tok('מעשר'), onk_seats('מעשר')))
+L('"distanced before the LORD" (דמרחק קדם יי) for "abomination of the LORD" — every מרחק seat / "the flesh of the gazelle" SUPPLIED at 12:15 and 12:22 (בשר טביא) / "the men of your houses" SUPPLIED at 12:7 (אנש בתיכון)', (onk_seats('מרחק'), arm(12, 15)[-5:], arm(12, 22)[:7], arm(12, 7)))
+L('"the house of rest" (בית ניחא) for "the rest" at 12:9 / "securely" (לרחצן) seats / "the unclean and the clean" (מסאבא ודכיא) seats / "you shall slaughter" (תכוס / ותכוס) for זבח — the seats of the Aramaic slaughter verb (נכס) in the book', (arm(12, 9), onk_tok('לרחצן'), onk_seats('מסאבא ודכיא'), onk_seats('תכוס'), onk_seats('ותכוס')))
+L('"you have no permission" (לית לך רשו) for "you may not" — every רשו seat in the book', (arm(12, 17)[:5], onk_seats('רשו')))
+L('"what is fit before him" (דכשר קדמוהי) for "right in his eyes" at 12:8 / "what is proper and fit before the LORD" at 12:28 (דתקן ודכשר קדם יי) / "the right in the eyes of the LORD" at 12:25 (דכשר קדם יי) — every כשר seat', (arm(12, 8), arm(12, 28)[-6:], arm(12, 25)[-4:], onk_seats('כשר')))
+L('"be snared" (תתקל) at 12:30 / "as He spoke to you" (כמא די מליל לך) at 12:20 — the seats of מליל / "as I commanded you" (כמא די פקדתך) at 12:21 — the seats of פקדתך / "let me do so too" (ואעבד כן אף אנא)', (arm(12, 30)[:6], onk_seats('מליל לך'), onk_tok('פקדתך'), arm(12, 30)[-5:]))
+L('"the Memra" (מימר) in the chapter — none expected / the parenthesized supplements in the Aramaic export for chapter 12 / "burn" (יוקדין / תוקדון) seats', ([(c, v) for c, v in onk_seats('מימר') if c == 12], [(12, v + 1, clean(onk_he[11][v])) for v in range(len(onk_he[11])) if '(' in clean(onk_he[11][v])], onk_seats('וקד')))
+L('the Aramaic of 12:2-3 (the demolition) and 12:23 (the blood) and 12:20 (the flesh)', (arm(12, 2), arm(12, 3), arm(12, 23), arm(12, 20)))
+print('==== F. THE ENGLISH\'S BRACKETS (the translator\'s supplements) per verse of chapter 12')
+BR = {v: re.findall(r'\[([^\]]+)\]', clean(onk[CH - 1][v - 1])) for v in range(1, NV + 1)}
+L('bracket count per verse and the total', ({v: len(b) for v, b in BR.items() if b}, sum(len(b) for b in BR.values()))); L('the bracketed strings by verse', {v: b for v, b in BR.items() if b}); L('parenthesis rows in the English', [v for v in range(1, NV + 1) if '(' in clean(onk[CH - 1][v - 1])])
+print('==== G. THE STORE\'S GLOSS FAMILIES (every gloss of chapter 12\'s tokens censused over the whole store: the tokens carrying it, with counts; the glosses ALREADY rewritten by the by-gloss overrides listed apart)')
+store = sqlite3.connect(f'file:{ROOT}/torah_grok.SNAPSHOT-main-51801ca.sqlite?mode=ro', uri=True)
+SG = {}
+for c_, v_, i_, hp, g in store.execute("SELECT v.chapter, v.verse, w.idx, w.he_plain, w.gloss FROM words w JOIN verses v ON w.verse_id=v.id WHERE v.book='Deut' AND v.chapter=? ORDER BY v.id, w.idx", (CH,)):
+    SG.setdefault((c_, v_), []).append((i_, hp.replace('/', ''), g))
+ALLG = {}
+for hp, g in store.execute("SELECT w.he_plain, w.gloss FROM words w"): ALLG.setdefault(g, Counter())[hp.replace('/', '')] += 1
+CHG = sorted({g for k in SG for _, _, g in SG[k]})
+import yaml
+OVY = yaml.safe_load(open(f'{ROOT}/logic/glosses/word_gloss_overrides.yaml', encoding='utf-8'))
+BG = OVY.get('by_gloss', OVY.get('gloss', {})) if isinstance(OVY, dict) else {}
+L('distinct glosses in the chapter / already in the by-gloss overrides', (len(CHG), len([g for g in CHG if g in BG])))
+L('the chapter\'s glosses ALREADY in the by-gloss overrides (gloss -> rewrite)', {g: BG[g] for g in CHG if g in BG})
+for g in CHG:
+    if g in BG: continue
+    fam = ALLG.get(g, Counter()); print(f'  {g!r}: {sum(fam.values())} tokens in {len(fam)} words — {fam.most_common(4)} | in the chapter: {sorted({(k[1], hp) for k in SG for _, hp, gg in SG[k] if gg == g})[:6]}')
+L('the store\'s "?" glosses in the chapter (verse, idx, token)', [(k[1], i_, hp) for k in sorted(SG) for i_, hp, g in SG[k] if g == '?'])
+L('the overrides file\'s top-level keys and sizes', {k: (len(v) if hasattr(v, '__len__') else v) for k, v in OVY.items()} if isinstance(OVY, dict) else type(OVY))
+print('==== H. THE PRIOR READS — the kin\'s ledgers and their Onkelos rows on the kin verses (computed from the ledgers themselves); THE REGISTER\'S FINDER on the chapter')
+TRI = f'{ROOT}/logic/oral_triage'
+LED = {f: open(f'{TRI}/{f}', encoding='utf-8').read() for f in os.listdir(TRI) if f.endswith('.md') and os.path.isfile(f'{TRI}/{f}')}
+def kinrows(f, pat): return len(re.findall(r'^- Onkelos ' + pat, LED[f], re.M))
+for pref in ('lev_17', 'lev_18', 'lev_20', 'num_18', 'deu_07', 'exo_20', 'gen_09', 'num_33', 'exo_34', 'exo_23', 'lev_01', 'lev_03', 'lev_07', 'lev_27', 'deu_13', 'deu_14', 'deu_15', 'deu_16', 'jos_', 'jdg_', 'num_11'):
+    fs = sorted(f for f in LED if f.startswith(pref))
+    print(f'  {pref}*: {[(f, len(re.findall(r"^- Onkelos ", LED[f], re.M))) for f in fs]}')
+L('the slaughter at the tent and the blood (Leviticus 17:1-16) Onkelos rows by ledger', [(f, kinrows(f, r'Lev 17:(?:[1-9]|1[0-6])\b')) for f in LED if kinrows(f, r'Lev 17:(?:[1-9]|1[0-6])\b')])
+L('the priests\' and Levites\' dues (Numbers 18:8-32) Onkelos rows by ledger', [(f, kinrows(f, r'Num 18:(?:[89]|[12]\d|3[0-2])\b')) for f in LED if kinrows(f, r'Num 18:(?:[89]|[12]\d|3[0-2])\b')])
+L('the shrines destroyed and the idols\' silver (Deuteronomy 7:5, 7:25-26) Onkelos rows by ledger', [(f, kinrows(f, r'Deut 7:(?:5|25|26)\b')) for f in LED if kinrows(f, r'Deut 7:(?:5|25|26)\b')])
+L('Molech (Leviticus 18:21, 20:2-5) Onkelos rows by ledger', [(f, kinrows(f, r'Lev (?:18:21|20:[2-5])\b')) for f in LED if kinrows(f, r'Lev (?:18:21|20:[2-5])\b')])
+L('the altar in every place (Exodus 20:21) — Onkelos rows and Mekhilta rows naming 20:21 / Bachodesh 11 by ledger', ([(f, kinrows(f, r'Exod 20:21\b')) for f in LED if kinrows(f, r'Exod 20:21\b')], [(f, len(re.findall(r'Mekhilta[^\n]{0,60}(?:20:2[01]|Bachodesh 11)', t))) for f, t in LED.items() if re.search(r'Mekhilta[^\n]{0,60}(?:20:2[01]|Bachodesh 11)', t)]))
+L('the blood at the flood\'s covenant (Genesis 9:4) Onkelos rows by ledger / the dispossession (Numbers 33:52) / the renewed covenant (Exodus 34:13, 34:24) / the angel\'s clauses (Exodus 23:24, 23:33)', ([(f, kinrows(f, r'Gen 9:4\b')) for f in LED if kinrows(f, r'Gen 9:4\b')], [(f, kinrows(f, r'Num 33:52\b')) for f in LED if kinrows(f, r'Num 33:52\b')], [(f, kinrows(f, r'Exod 34:(?:13|24)\b')) for f in LED if kinrows(f, r'Exod 34:(?:13|24)\b')], [(f, kinrows(f, r'Exod 23:(?:24|33)\b')) for f in LED if kinrows(f, r'Exod 23:(?:24|33)\b')]))
+L('NEVER READ AHEAD — ledgers with an Onkelos row of Deuteronomy 13-16 (expected none)', [(f, kinrows(f, r'Deut 1[3-6]:')) for f in LED if kinrows(f, r'Deut 1[3-6]:')])
+L('the ledgers naming a verse of chapter 12 (strict, both book forms)', sorted((f, sorted(set(re.findall(r'Deut(?:eronomy)? 12:\d+', t)))) for f, t in LED.items() if re.search(r'Deut(?:eronomy)? 12:\d+', t)))
+PRIOR = sorted({(f, int(a), int(b)) for f, t in LED.items() for a, b in re.findall(r'Sifrei Devarim (\d+):(\d+)', t)})
+L('prior Sifrei reads among piskaot 59-81 (ledger, piska, row) and the count', ([(f, p, r) for f, p, r in PRIOR if 59 <= p <= 81], len([(f, p, r) for f, p, r in PRIOR if 59 <= p <= 81]), len(PRIOR)))
+L('prior reads among the outside rows 2:2, 106:5, 138:1, 145:3, 147:2, 179:2, 286:16', [(f, p, r) for f, p, r in PRIOR if (p, r) in [(2, 2), (106, 5), (138, 1), (145, 3), (147, 2), (179, 2), (286, 16)]])
+try:
+    with contextlib.redirect_stdout(io.StringIO()):
+        import register_census as RC
+        ink = RC.read_ink()
+    L('THE FINDER — the receipt lines the register gate finds in chapter 12 (both forms with the Name)', [k for k in RC.receipts(ink) if k[0] == 'Deut' and k[1] == 12])
+    L('THE FINDER — the footers/headers and the register headers in chapter 12', ([x for x in RC.footers(ink) if x[0][0] == 'Deut' and x[0][1] == 12], [x for x in RC.register_headers(ink) if x[0][0] == 'Deut' and x[0][1] == 12]))
+    L('THE FINDER — the receipts in the book so far (chapters 1-12)', [k for k in RC.receipts(ink) if k[0] == 'Deut' and k[1] <= 12])
+except Exception as e: print('  THE FINDER could not be run here:', repr(e)[:300])

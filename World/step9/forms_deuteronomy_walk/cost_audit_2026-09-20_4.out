@@ -1,0 +1,19 @@
+DEDUPED — THE SPLIT BY DAY at the yardstick prices (Opus-class list: $15 in / $18.75 cache write / $1.5 cache read / $75 out per M)
+  2026-09-12  calls  327  $  654 = writes $ 325 (49%) + reads $ 198 (30%) + output $ 131 (20%)  avg ctx 456k  output  1.8M
+  2026-09-13  calls  475  $  832 = writes $ 346 (41%) + reads $ 336 (40%) + output $ 150 (18%)  avg ctx 510k  output  2.0M
+  2026-09-14  calls  322  $  313 = writes $  33 (10%) + reads $ 226 (72%) + output $  54 (17%)  avg ctx 474k  output  0.7M
+  2026-09-15  calls  513  $  623 = writes $ 173 (27%) + reads $ 363 (58%) + output $  87 (13%)  avg ctx 489k  output  1.2M
+  2026-09-16  calls  503  $  987 = writes $ 500 (50%) + reads $ 324 (32%) + output $ 163 (16%)  avg ctx 482k  output  2.2M
+  2026-09-17  calls  226  $  355 = writes $ 178 (50%) + reads $ 106 (29%) + output $  72 (20%)  avg ctx 354k  output  1.0M
+  2026-09-18  calls  266  $  509 = writes $ 290 (56%) + reads $ 135 (26%) + output $  84 (16%)  avg ctx 396k  output  1.1M
+  2026-09-19  calls  393  $  779 = writes $ 386 (49%) + reads $ 271 (34%) + output $ 122 (15%)  avg ctx 512k  output  1.6M
+  2026-09-20  calls  410  $  887 = writes $ 449 (50%) + reads $ 248 (27%) + output $ 189 (21%)  avg ctx 462k  output  2.5M
+  TOTAL       calls 3435  $ 5940 = writes $2679 (45%) + reads $2207 (37%) + output $1052 (17%)
+THE FULL RE-WRITES (a call writing over 300k): count, their share of all writes, the gaps, the entry before
+  169 full re-writes = 102M of 143M written (71%); gaps: <1m 5, 1-5m 22, 5-60m 126, >60m 16; before them: {'after-a-tool-result': 102, 'owner-text': 64, 'output-limit-continuation': 3}
+  the reads on those calls: min 20k, median 20k (a full miss reads only the system prompt)
+THE CONTEXT PER CALL (deduped)
+  context    0k- 300k:  1138 calls (33%), reads    179M (12%), writes    20M (14%)
+  context  300k- 600k:  1092 calls (31%), reads    442M (30%), writes    43M (30%)
+  context  600k-1100k:  1205 calls (35%), reads    851M (57%), writes    79M (55%)
+OUTPUT: 613 calls over 5k output tokens (of 3435) carry 10.3M of 14.0M (73%); the largest 64k

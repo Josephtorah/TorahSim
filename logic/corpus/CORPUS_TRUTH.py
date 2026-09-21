@@ -24,12 +24,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 import corpus_world
 
 W = corpus_world.fold(write=False)
-assert len(W["units"]) == 225
+assert len(W["units"]) == 226
 assert len(W["facts"]) == 1809
 assert len(W["demands"]) == 341
 assert len(W["events"]) == 557
 assert len(W["names"]) == 81
-assert len(W["standing"]) == 2233
+assert len(W["standing"]) == 2239
 open_d = sorted((d["unit"], d["ref"], d["mood"], d["demand"])
                 for d in W["demands"] if d["status"] == "OPEN")
 assert len(open_d) == 191

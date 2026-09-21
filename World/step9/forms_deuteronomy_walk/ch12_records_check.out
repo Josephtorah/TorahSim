@@ -1,0 +1,23 @@
+PARSED: {'ritual_pass': 13, 'verify_text': ('31', '7'), 'journal': ('12', '9758', 14), 'register': ('100', '0', '0'), 'corpus': ('226', '1809', '341', '191'), 'ledger': ('197', '31', '166', '30', '1', '102', '57', '6', '1', 149777, 4, 1), 'codes': {'I12': 1, 'I13': 3, 'I2': 6, 'E1': 7, 'E10': 2, 'I1': 13}, 'overrides': (124, 983, 673), 'claims': 6, 'labels': '3,299 claims in 229 manifests', 'ink': 121, 'large_letter': '6/6', 'timing': (17, 707, 6881, '2026-09-20 17:34:53'), 'chain': ('chain 54 s; fold 89 s; build_world 61 s; journal_gate 250 s; register_gate 2 s; large_letter 1 s; home_gate 2 s', 459)}
+CODES BY ROW: E1 at 63:2, 68:4, 68:5, 70:5, 76:7, 78:4, 81:6; E10 at 67:4, 68:6; I1 at 71:6, 72:9, 72:10, 72:11, 73:1, 74:1, 76:2, 76:5, 76:7, 76:8, 76:9, 145:3, 286:16; I2 at 62:4, 63:9, 64:2, 69:1, 71:6, 138:1; I12 at 59:5; I13 at 62:2, 62:3, 70:4
+| step | began | ran | the gap before it (reading, typing, the owner's compaction) |
+|---|---|---|---|
+| rereads (the page, the map, the memory, THE_STEPS, sitting 9) | 17:36:08 | 75 s | 1 min 15 s |
+| dump0 (the measurements' first pass) | 17:38:34 | 12 s | 1 min 11 s |
+| measure1 (the second measurement pass) | 17:50:32 | 18 s | 11 min 46 s |
+| ink (the first typed pass, assert_driver) | 18:13:40 | 18 s | 22 min 50 s |
+| ink (the second pass) | 18:14:47 | 18 s | 0 min 49 s |
+| design (the map's section) | 18:17:27 | 0 s | 2 min 22 s |
+| ledger (the rows and the writer) | 18:33:47 | 19 s (rc 1) | 16 min 20 s |
+| ledger (the second run) | 18:34:58 | 18 s | 0 min 52 s |
+| rereads (the tail: the page, the map's Sitting 10, the memory) | 19:06:03 | 32 s | 30 min 47 s |
+| patch (the display layer, ch12_patch_overrides.py) | 19:10:28 | 18 s | 3 min 53 s |
+| ink (the third pass, PATCHED) | 19:10:46 | 19 s | 0 min 0 s |
+| manifest (write_ch12_manifest.py — six claims) | 19:19:17 | 0 s | 8 min 12 s |
+| verify_claims (the six claims) | 19:19:17 | 0 s | 0 min 0 s |
+| labels census --strict | 19:19:17 | 0 s | 0 min 0 s |
+| gates chain (ch12_gates.sh: the seat, verify_text, the ritual, the fold, build_world, the journal gate, the register gate --strict, large_letter, the home gate) | 19:19:17 | 460 s | 0 min 0 s |
+| records --check (write_ch12_records.py) | 19:29:18 | 0 s (rc 1) | 2 min 21 s |
+| records --check (second run) | 19:29:34 | 0 s (rc 1) | 0 min 16 s |
+lint before: {'STAMP_LEDGER.md': 1, 'PROMPT_continue_solo_era_2026-08-06.md': 146, 'RESUME.md': 0, 'THE_STEPS.md': 1, 'THE_BRIEFING.md': 0, 'COMPILE_DEBT.md': 0, 'RESEARCH_LOG.md': 52, 'MIDDOT.md': 1, 'RECOVERY_new_thread_2026-09-12.md': 0, 'RECOVERY_addenda_2026-09-12.md': 0, 'MISHNAH_TOPICS.md': 0} | recovery page bytes 10154 | MEMORY.md bytes 16985 | commit message bytes 11890
+CHECK ONLY — nothing written

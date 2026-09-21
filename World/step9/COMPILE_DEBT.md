@@ -1932,3 +1932,49 @@ follows the last check mark.
 ## unresolved forms (the Exodus and Genesis triages' CREDIT rows, the topic dockets' lists) owe a verdict line if ever credited again; (xii) THE CHECKPOINT SERIES
 ## continues (DC the third name — DC9 the last; the next DD1, keyed by its first word); (xiii) THE CALENDAR RUNNER has no askable cell — an ask on its warranty
 ## (Exodus 34:24) owed if a chapter calls it again. NOTHING ELSE IN CHAPTER 11 IS OWED TO A LATER SITTING OF ITS OWN.
+
+
+## SITTING 10 — CHAPTER 12 (2026-09-20, the reading; deu_12_place_name frozen) — OWED TO THE COMPILE 10b: (a) THE PLACE WHICH THE LORD WILL CHOOSE (12:5, 11, 14, 18, 21, 26)
+## — INSTALLED HERE ("will choose" twenty-three seats in the book, none before chapter 12): a PARAMETER the run assigns — the shelf's five stations (the Tabernacle,
+## Gilgal, Shiloh, Nob and Gibeon, Jerusalem — 65:1-2, 66:1-2; Mishnah Zevachim 14:4-8; Zevachim 112b-119b), the procedure (seek and find, then the prophet confirms —
+## 62:1; David and Gad the run's citation), the two verses reconciled (62:2-3, 70:4 — the money from all, the ground from one), the Name pronounced only there (62:4 —
+## Mishnah Sotah 7:6; Sotah 37b-38b); the effect a STATUS on the place; 12:8's "every man what is right in his eyes" the run's witness (Judges 17:6, 21:25) that the
+## place was not yet chosen; the three commandments of the entry ordered (67:1-3 — Sanhedrin 20b; 12:10's "rest" 2 Samuel 7:1's); (b) THE DEMOLITION SAID IN NEW
+## WORDS (12:2-3) — 7:5's and Exodus 34:13's cells by CALL (two tokens in order with 7:5, three with 34:13; five verbs where 7:5 had four), the decision tables (the
+## three Asherim, the three houses — 61:5-6; Mishnah Avodah Zarah 3:5, 3:7; Avodah Zarah 45a-48b), the renaming for the worse (61:7 — R. Eliezer against R. Akiva),
+## "from that place" the Land the duty's scope (61:6), "even ten times" (60:1); Numbers 33:52 and Exodus 23:24 by CALL; 145:3's a fortiori to 16:21 ahead; (c) THE
+## HEADER (12:1) — the register's declared EMPTY seat, its twin Leviticus 26:46 (the fold's footer): the four nouns as exposition, law, learning and deed (59:1-4) and
+## the land-bound rule (59:5 — Mishnah Kiddushin 1:9; Kiddushin 36b-37a) DATA rows; "you shall not do so to the LORD" plural 12:4 and singular 12:31 the pair (61:8;
+## 81:5 the wrong altar's liability — Zevachim's rite); (d) THE SLAUGHTER LAW RELEASED (12:15, 20-22) — Leviticus 17:3-5's cell by CALL and A LAW CHANGED BY A PLACE:
+## R. Ishmael's repeal on entering the Land against R. Akiva's no repeal (75:3-4 — Chullin 16b-17a): the tape's entry the switch, the design's question; "as He has
+## spoken to you" (12:20) the AS_WHEN pointer with two teachers (75:2 — Genesis 15:19-20 or Ezekiel 48); "AS I HAVE COMMANDED YOU" (12:21) — THE RECEIPT WITHOUT THE
+## NAME (Exodus 23:15 its one kin), the register's finder BLIND to it (measured): a RUN_CITATION pointer with its why — THE FINDER'S THIRD FORM owed since 4b and 6b,
+## 12:21 its fourth seat; the shelf's seat of the oral law of slaughter (75:6, 75:15 — Mishnah Chullin 2:1; Chullin 28a) and the partitive's civility (75:5 — Chullin
+## 84a-b) DATA rows; "as the gazelle and the hart" the comparison that teaches and is taught (75:15; 71:7-8) — the wild animal's slaughter, the bird's by the scribes;
+## the unclean and the clean together (75:11), the blemished consecrated redeemed (71:1-6 — Mishnah Bekhorot 2:2-3; Bekhorot 15a-16a), the tithe's joint owners (71:9-10
+## — Chullin 10:1); (e) THE BLOOD FOUR WAYS (12:16, 23-25, 27) — Leviticus 17:11-13's cell by CALL: "like water" no vessel, permitted for benefit, susceptibility, no
+## covering (71:14 — Mishnah Chullin 6:1; Makhshirin 6:4), one prohibition not two (71:13), "the blood is the life" 17:11's clause turned, "be steadfast" the word said
+## to Joshua — Israel steeped in blood (76:1), the lightest commandment the measure of all (76:2, 76:9, 286:16 — Mishnah Makkot 3:15; Makkot 23b), the limb from the
+## living (76:5 — Chullin 102b-103a) and flesh in milk (76:7-8 — Mishnah Chullin 8:1-4; Chullin 113a-116a) by refuted a fortiori arguments — the effects BLOCKS on the
+## eater; "shall be poured" the sin offering's verb at 12:27 — no blood no flesh (78:1-2 — Tosefta Zevachim 4:1), the one application (78:7-8 — Zevachim 37a), the bones
+## and the sinews (78:4-5 — Mishnah Zevachim 9:5-6; Zevachim 83a-86a); the persecution (76:3 — Sanhedrin 74a-b) and the blood's classes (Yevamot 47b; Keritot 20b-22a)
+## DATA rows; (f) THE OFFERINGS ONLY THERE (12:6, 11, 13-14, 17, 26) — the three lists compared (68:6 Shiloh's and Jerusalem's; "the choice of your vows" added at
+## 12:11), the burnt offerings in every place you see a PROHIBITION (70:1) with a prophet's word the exception (70:3), the rest of the offerings included (70:5-6),
+## THE LADDER OF A FORTIORI on 12:17's five items (72:9-11, 73:1, 74:1 — Mishnah Makkot 3:3; Makkot 13a-b, 17a-19b; 106:5, 147:2 — Mishnah Zevachim 10:1-2) a decision
+## table of prohibitions, "you may not" read "not permitted" (72:1), "do not delay" (63:5 — Rosh Hashanah 4a-6b), the substitute (77:5-6, 78:9-10 — Mishnah Temurah 3:5;
+## Temurah 3b-4a, 17b), from abroad (77:1), "the heave offering of your hand" the first fruits (63:9; Tosefta Menachot 9:2 at 68:4), the tithe STARRED by the parser
+## (12:17; 14:23, 14:28, 26:12 ahead) — Numbers 18:8-32's cell by CALL; (g) THE TABLE AND THE HOUSEHOLD (12:7, 12, 18-19) — "before the LORD" within the partition (64:1;
+## 67:4's two partitions), the rejoicing peace offerings (64:2; 138:1 — I2 with 27:7), "your households" his wife (64:4 — Mishnah Yoma 1:1), 5:14's household said
+## again (69:3, 74:4 — the dearer first; 16:11, 14 ahead), the Levite's ladder (69:4, 74:5) and THE LEVITE'S VERSE ALONE (12:19 — even in sabbaticals and jubilees, not in
+## the exile: 74:8-9; Pesachim 8b the pilgrimage) — the Levite's support a STATUS; Numbers 18:20's "no portion" by CALL; (h) THE NATIONS CUT OFF AND THE ABOMINATION
+## (12:29-31) — 19:1 the twin (build anywhere — 80:3, 179:2), the sages at the border (80:4-5 — Ketubot 110b-111a credited from 9b), "lest you be ensnared" the root
+## not 7:25's (a DATA row), "how did these nations serve" the seeker's one "saying", "so" for the service and the thing served (81:5), the parents from "even" (81:6 —
+## R. Akiva's witness), THE KING-WORD'S HOMOGRAPH (Molech's consonants "to the king" — the census's slip at 7:8 and 11:3; 12:31 names no Molech: Leviticus 18:21 and
+## 20:2-5 by CALL); (i) THE REGISTER'S SWITCH AT THE CHAPTER'S MIDDLE (plural 2-12, singular 13-31; the one plural verb at 12:16; the paragogic nun six, all in the
+## plural half; no wayyiqtol; no divine frame) and THE PARSER (12:14's [1]; the starred tithe; the gazelle's two lemmas; the Kings' formula at 12:2; "leafy" the
+## Torah's one) DATA rows for the census; Moses unnamed chapters 6-14 a DATA row; (j) THE CHECKPOINT SERIES continues (DC the open series — DC9 the last name; the
+## next DD1, keyed by its first word); (k) THE DOCKET by the union rule — the testing shelf as the design listed it (Zevachim 14 and 112b-119b; Avodah Zarah 3 and
+## 45a-48b; Chullin's eight stretches with its Mishnah; Bekhorot; Temurah; Makkot 3 and its folios; Sotah 7:6 and 37b-38b; Sanhedrin 20b and 74a-b; Zevachim 9 and 83a-86a,
+## 37a; Tosefta Zevachim 4:1; Kiddushin 1:9 and 36b-37a; Rosh Hashanah 4a-6b; Yoma 1:1; Tosefta Sheqalim 2:1; Avot 2:1; Pesachim 8b; Tosefta Menachot 9:2; Yevamot 47b;
+## Keritot 20b-22a; Makhshirin 6:4; Seder Olam 11; the Sifra on Leviticus 17 credited from its sitting) — EVERY ROW WHOLE; a docket past ~700 rows its own run; THE COST
+## RULES: two runs + the tail, the chain launched at RUN B's end. NOTHING ELSE IN CHAPTER 12 IS OWED TO A LATER SITTING OF ITS OWN.

@@ -1,0 +1,11 @@
+5 failing statements
+--- line 194: assert '(Dt.13:29)' in E(179, 2) and '(Dt.12:29)' not in E(179, 2) and he_cites(Hb(179, 2)) == [('דברים', 12, 29)] and 'וישבת בארצם' in HB0(179, 2)
+    AssertionError()
+--- line 195: assert he_cites(Hb(138, 1)) == [('דברים', 27, 7)] and '(Dt.12:7' in E(138, 1) and 'נאמרה כאן שמחה' in HB0(138, 1)
+    AssertionError()
+--- line 257: assert [(v, i, hp, g) for (c, v), L in sorted(SG.items()) for i, hp, g in L if '?' in g] == [(11, 15, 'אנכי', '?'), (14, 15, 'אנכי', '?'), (28, 7, 'אנכי', '?'),
+    AssertionError()
+--- line 321: assert P('פן', 'תעזב', 'את', 'הלוי') == ['Deut 12:19'] and P('כל', 'ימיך', 'על', 'אדמתך') == ['Deut 12:19'] and KINC[19] == []
+    ERROR NameError("name 'KINC' is not defined")
+--- line 384: assert len(OVERRIDE_REF) == len({k for k, _ in OVERRIDE_REF}) == len(OVERRIDE_REF_SPEC) == 124 and len(OVERRIDE_GLOSS) == 70 and len({k for k, _ in OVERRIDE_GLO
+    AssertionError((124, 69))

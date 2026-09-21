@@ -3734,3 +3734,52 @@ a dispute (9b:10-11), the cattle before the man (Berakhot 40a:1), the ceremony's
 (Tosefta Sotah 8), the receipt's pointer taught a second time (Tosefta Sotah 8:6), the dwelling weighed (Ketubot 110b:23). THE RECORD KEPT: two calendar parameters
 (rain_dates, gerizim_ebal_place — every value a docket row); the recon's substring count corrected at the print ("fire_rained" a misreading — the registry's "rain"
 effects restraint_failed and speech_restrained); the census's "history" column unmoved (a statute is not HISTORY). The forms in World/step9/forms_deuteronomy_walk/.
+
+
+## 2026-09-20 — DEUTERONOMY 12 READ AND FROZEN (THE DEUTERONOMY WALK sitting 10 — the first sitting under THE COST RULES: one run to the clean point, the compaction,
+## the tail; EVERY STEP TIMED on the owner's word): THE PLACE THE LORD WILL CHOOSE INSTALLED HERE — NO SEAT BEFORE CHAPTER 12; THE HEADER'S TWIN IS THE FOLD'S FOOTER;
+## THE SLAUGHTER LAW RELEASED IN NEW WORDS — A LAW CHANGED BY A PLACE; "AS I HAVE COMMANDED YOU" THE RECEIPT WITHOUT THE NAME, THE FINDER'S FOURTH SEAT; THE LADDER OF
+## A FORTIORI ON FIVE ITEMS; THE KIN FOUND BY COMPUTATION
+On the owner's "Monitor how long each step takes and report when the chapter is done" (2026-09-20). THE READING: Deuteronomy 12:1-31 with Onkelos whole (the export's
+31 rows the DB's 31 — the identity, asserted; the English's 12:32 the DB's 13:1) and THE SIFREI ON DEUTERONOMY ON THE CHAPTER AGAIN — piskaot 59-81 (twenty heading
+on the chapter's verses; 68, 73, 74 WITHOUT A HEAD CITATION, folded in on their consonants — 12:11's "your burnt offerings", 12:17's "your herd and your flock" and
+"your vows"), 159 rows read whole in both files (4 read before at chapter 7, chapter 11 and two Genesis sittings and reread whole — found by computation), seven
+rows outside the spine read whole (2:2 the rest as the Land; 106:5; 138:1; 145:3; 147:2; 179:2 — the English's "(Dt.13:29)" a wrong chapter, the Hebrew right;
+286:16), none excluded; the kin credited by name (Leviticus 17:1-16 — 16 rows; Numbers 18:8-32 — 25; 7:5, 7:25-26 — 3; Leviticus 20:2-5 — 4; 18:21 — 1; Numbers
+33:52 — 1; Exodus 23:24 — 1; Exodus 20:21 through the Mekhilta's two rows); NEVER READ AHEAD — no Onkelos row of Deuteronomy 13-16 in any ledger (asserted). FROZEN as
+ONE unit deu_12_place_name (the 226th; no portion edge inside it; standing 2239 = 2233 + 6 as predicted, hash unmoved); the ledger deu_12_reeh_2026-09-20.md (197
+sources — Onkelos 31: MATERIAL 30 / CONTEXT 1; the spine 159: MATERIAL 102 / CONTEXT 57; the outside rows 7: MATERIAL 6 / CONTEXT 1; coverage computed,
+lint 0, no cut missed); six claims DV12-01..06 verified 6/0, seated as six WITNESS_READ at 12:1, 5, 13, 15, 20, 29; the ritual 13 PASS; the fold +14 on the
+journal; the display layer +124 by reference and +69 by gloss. THE FINDS: THE PLACE WHICH THE LORD WILL CHOOSE INSTALLED HERE — "will choose" twenty-three seats
+in the book and NONE BEFORE CHAPTER 12 (ten with the article, seven with "in the place"); "to put His name there" and "to make His name dwell there" the two forms,
+"HIS DWELLING" (12:5) one seat in the Bible — Onkelos "the house of His Shekhinah" (12:5 and 32:40 alone); "seek" His dwelling (12:5) and "inquire" after their gods
+(12:30) ONE VERB FOR TWO SEEKINGS; the shelf's five stations (the Tabernacle, Gilgal, Shiloh, Nob and Gibeon, Jerusalem — 65-66, Mishnah Zevachim 14) and "every man
+what is right in his eyes" Judges' refrain (17:6, 21:25) the run's own witness; THE HEADER'S TWIN IS THE FOLD'S FOOTER — "these are the statutes and the judgments"
+12:1 and Leviticus 26:46 alone (59:1-4 the four nouns; 59:5 the land-bound rule); THE VERB OF ISRAEL'S PERISHING TURNED ON THE SHRINES — "destroy, you shall destroy"
+(12:2) is 4:26's, 8:19's and 30:18's "perish, you shall perish" in the piel; "UNDER EVERY LEAFY TREE" THE KINGS' FORMULA (ten seats, 12:2 the Torah's one; "leafy" the
+Torah's one); THE DEMOLITION SAID IN NEW WORDS — 12:3 two tokens in order with 7:5, three with Exodus 34:13, 12:2 none; five verbs where 7:5 had four, the fifth the
+renaming (61:7); "you shall not do so to the LORD" plural 12:4 and singular 12:31; THE SEVEN OFFERINGS listed three times with the list changing (68:6 Shiloh's and
+Jerusalem's); THE SABBATH'S HOUSEHOLD (5:14) at 12:18 and the feasts (12:18 — 16:11 thirteen tokens in order, THE KIN FOUND BY COMPUTATION); "take heed to yourself
+lest" THREE TIMES in one chapter (nine in the Bible), each a prohibition on the shelf; "only" four and "but" one; THE SLAUGHTER LAW SAID IN NEW WORDS — Leviticus
+17:3-5 one token in order with 12:15, the release named by the shelf (75:3 R. Ishmael; R. Akiva no repeal) — A LAW CHANGED BY A PLACE; THE GAZELLE'S HOMOGRAPH ("the
+beauty" — the DB's two lemmas; the store's "splendor"); "on the earth you shall pour it like water" — Leviticus 17:13's dust nowhere (71:14 four ways); "YOU MAY NOT"
+read "not permitted" (72:1; Onkelos "no permission"); THE LADDER OF A FORTIORI on 12:17's five items (72:9-11, 73:1, 74:1); THE LEVITE'S VERSE ALONE (12:19 — no verse
+of the Bible shares two non-stop tokens with it); "AS HE HAS SPOKEN TO YOU" (12:20) the AS_WHEN form with two teachers on the callee (75:2); "AS I HAVE COMMANDED
+YOU" (12:21) — THE RECEIPT WITHOUT THE NAME, Exodus 23:15 its one kin, the register's finder BLIND to it (measured) — the oral law's seat on the shelf (75:6, 75:15;
+Mishnah Chullin 2:1): the finder's third form owed since 4b and 6b, its fourth seat; "BE STEADFAST" (12:23) the word said to Joshua said to the eater; "THE BLOOD IS
+THE LIFE" Leviticus 17:11's clause turned; "SHALL BE POURED" the sin offering's verb at 12:27; "the good and the right" 6:18's pair (79:5 Heaven's eyes and men's);
+"LEST YOU BE ENSNARED" (12:30) another root than 7:25's snare, the Torah's one niphal of each; "abomination of the LORD" eight in the book; THE CHILDREN BURNED
+(Jeremiah 7:31 six tokens) and NO MOLECH NAMED — the king-word's homograph (the census's slip at 7:8 and 11:3); THE DB'S 13:1 IS THE ENGLISH'S 12:32; THE REGISTER
+SWITCHES AT THE CHAPTER'S MIDDLE (plural 2-12, singular 13-31, the one plural verb at 12:16; the paragogic nun six, all in the plural half; no wayyiqtol; no divine
+frame; Moses unnamed 6-14); THE PARSER: one number verse (12:14 [1]) and the tithe starred (12:17 — the ten-word's homograph at every tithe seat of the book); the
+store = the DB (520 tokens, 2,051 letters, no written/read pair); ONKELOS: the Shekhinah for the Name, "their errors" for their gods, "before the LORD" for "to the
+LORD", "the separation of your hand", the tithe SUPPLIED at 12:26, "as the FLESH of the gazelle" supplied at 12:22, "keep and RECEIVE" at 12:28, "the house of rest"
+at 12:9. THE COST RULES ON THEIR FIRST SITTING: one run to the clean point after the ledger (#200), the owner's compaction, the tail on a small context — the patch,
+the manifest, the seat, the chain launched as soon as its inputs existed with the writers typed during its run; EVERY STEP TIMED — the machine's share 11 min 49 s of
+115 min 30 s wall time from 2026-09-20 17:34:53; the table in the map's AS BUILT. THE CAUTIONS: the English's unopened "Dt.13:29)"; three piskaot without a head; fourteen cuts
+fell on spellings the eye supplies; the gates shell's comment lost its form's name to a global replace. THE LESSONS (thirteen, in the map): the kin by computation;
+the heads the first sort and the words the second; the English's slip asserted; the first pass fell five ways on forms; a cut from the row's own bytes; the receipt's
+fourth seat; the place installed not named; a law changed by a place; the header the fold's footer; the clean point after the ledger; the chain launched when its
+inputs exist; the form's name protected; every step timed. OWED TO 10b: the place a PARAMETER with five stations, the demolition's cells by CALL, the header's DATA
+rows, the slaughter's switch by the entry, the receipt's pointer at 12:21, the blood's cells, the offerings' ladder, the table and the household, the nations cut off,
+the register's switch, the series DD, the docket.

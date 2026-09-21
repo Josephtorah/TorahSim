@@ -1,0 +1,24 @@
+THE SPLIT BY DAY at the yardstick prices (new input / cache writes / cache reads / output) and the count of calls
+  2026-09-12  calls 1085  $  2120  = writes $  992 (46%) + reads $  638 (30%) + output $  489 (23%)   avg ctx 441k
+  2026-09-13  calls 1430  $  2486  = writes $  999 (40%) + reads $  974 (39%) + output $  512 (20%)   avg ctx 491k
+  2026-09-14  calls  854  $   831  = writes $   97 (11%) + reads $  561 (67%) + output $  173 (20%)   avg ctx 443k
+  2026-09-15  calls 1153  $  1525  = writes $  469 (30%) + reads $  776 (50%) + output $  280 (18%)   avg ctx 470k
+  2026-09-16  calls 1496  $  3017  = writes $ 1468 (48%) + reads $  983 (32%) + output $  564 (18%)   avg ctx 490k
+  2026-09-17  calls  657  $  1153  = writes $  557 (48%) + reads $  314 (27%) + output $  282 (24%)   avg ctx 363k
+  2026-09-18  calls  732  $  1492  = writes $  821 (54%) + reads $  369 (24%) + output $  302 (20%)   avg ctx 395k
+  2026-09-19  calls  871  $  1847  = writes $  933 (50%) + reads $  591 (32%) + output $  322 (17%)   avg ctx 509k
+  2026-09-20  calls 1122  $  2434  = writes $ 1127 (46%) + reads $  689 (28%) + output $  618 (25%)   avg ctx 462k
+WHERE THE CACHE WRITES COME FROM (calls bucketed by their own write size) — all days
+  writes    0k-   5k per call:  4323 calls,     8.9M tokens written ( 2% of all writes)
+  writes    5k-  20k per call:  2841 calls,    29.8M tokens written ( 7% of all writes)
+  writes   20k- 100k per call:  1633 calls,    57.6M tokens written (14% of all writes)
+  writes  100k- 300k per call:   150 calls,    31.6M tokens written ( 7% of all writes)
+  writes  300k-2000k per call:   453 calls,   270.2M tokens written (67% of all writes)
+THE BIG WRITES (over 300k in one call): the gap since the call before, in minutes — a gap past the hour is the cache expired; a short gap is a compaction or a changed prefix
+  453 big writes; gaps over 60 min: 16; gaps under 5 min: 368; their writes 270.2M of 398.0M
+THE CONTEXT PER CALL (cache reads are the context re-read every call) — all days
+  context    0k- 300k:  3194 calls (33%), reads   504.1M (12% of all reads)
+  context  300k- 600k:  3094 calls (32%), reads  1253.6M (31% of all reads)
+  context  600k-1100k:  3112 calls (33%), reads  2172.6M (55% of all reads)
+THE OUTPUT PER CALL — all days: calls over 5k output tokens carry what share of the output?
+  2087 calls over 5k output (of 9400) carry 35.6M of 47.2M output (75%)

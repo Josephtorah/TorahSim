@@ -4381,6 +4381,16 @@ tape never wrote as an event — a question for the compile. The chapter is froz
 its hash unmoved, every gate green. Next: the commit on your word; then the compile of chapter 8 in two runs — the grace after meals, the seven kinds, the
 manna, the forty years as a state, the discipline, the warnings, the testimony — or the ten-commandments schema first.
 
+THE COST RULES (2026-09-20, on Brian's "Yes I like a b and c" and "Let's go to 400 a b and c", after the cost audit). Brian asked for an audit of the
+process: the program had grown and each chapter cost more. The bill was read off the session transcripts, not guessed: nearly half of it was the
+context being re-written from scratch after a wait longer than five minutes — the gates chain, the sweep, the positions table, a pause — because the
+cache dies at five minutes; another third was every call re-reading a context that had grown past 600k; the typing was under a fifth, and the paperwork
+per sitting under a twentieth. So three rules, and none of them touches what is read, typed or gated: A. THE CACHE LAW — no wait past five minutes on a
+big context; every long job is launched at the end of its run, the clean point is written, Brian compacts, and a short run on a small context reads
+the result; compact before a break. B. THE 400k CAP — a run ends at the clean point nearest 400k. C. FEWER CALLS — one call per step, batching, never
+skipping. "One book at a time and then integrate" was weighed and set aside: it trims the paperwork, which is not the cost, and a slip found after ten
+chapters is ten chapters wide. The record: World/step9/COST_AUDIT_2026-09-20.md.
+
 
 DEUTERONOMY — SITTING 6b — CHAPTER 8 COMPILED (2026-09-18/19, on Brian's "Next" for the design, "Go" for the docket and "Go run b" for the build;
 World/step9/DEUTERONOMY_WALK.md "Sitting 6b" and "Sitting 6b — AS BUILT"). Chapter 8 tells the wilderness again as a reason — remember the way, lest you
@@ -4500,6 +4510,27 @@ already had a line, and the tape already left Korah unnamed at the swallowing as
 rows, one per verse. The docket took a new form of the credit: a credited row is carried with its ledger's own verdict line, parsed by script; a form without a
 verdict is read whole here. The rain's dates and the ceremony's place are parameters, never constants — every value a docket row. The tape 10/10 and the runner
 59/59 each on their first run; the gates chain the gates chain twice — the first pass stopped at the probes step (readback 29/30: q30's retype had put its comment inside the return's tuple, the second element swallowed, the probe's unpack a typeerror; ink_cache 7/8: c2 fell on the runner's two raw scan names alone, the database's state at the harvest — before the tape sealed the sitting's own five entries — against the full load's after it; the raw names dropped from the module, the derived own-excluded lists kept, equal on both loads) and at the dependency gate by three demands (the token census matched 'pharaoh king of egypt' at 11:3 to the sanctions span's molech — a homograph filed false, 5b's lesson a second time; the sequential run's registration edge sequence -> blessing_and_curse filed with link none, 8b's form; the as_when pointer at deut 11:25 'as he spoke to you' dispositioned run_citation of exodus 23:27 by two teachers — the design's prediction, the census's demand); the dependency gate rerun alone green, the runner rerun 59/59 with the cache off, then the second pass whole from the tape green to the register gate (readback 30/30, ink_cache 8/8, the dependency gate satisfied) and killed at the positions table by the session's memory watchdog (eight workers each the whole tape — 7b's kill, not the machine's own gate); the positions table then by four workers with the step's own command (checkpoint_positions.py --jobs 4, its print in the chain's folder), and the third pass from the checkpoint probe all green.
+DEUTERONOMY — SITTING 10 — CHAPTER 12, Deuteronomy 12:1-31 (2026-09-20, on Brian's "Monitor how long each step takes and report when the chapter is done" — the first
+sitting under the cost rules; World/step9/DEUTERONOMY_WALK.md "Sitting 10" and "Sitting 10 — AS BUILT"; a reading sitting is one run to a clean point, then the
+tail after the compaction). Chapter 12 opens the laws themselves: tear down every place where the nations served their gods — on the high mountains, on the hills,
+under every leafy tree — and do not do so to the LORD; instead, the place which the LORD will choose to put His name there is where the offerings go and where you
+eat and rejoice with your household and the Levite; not as we do here today, every man what is right in his eyes, for you have not yet come to the rest; burnt
+offerings only there — but flesh you may slaughter and eat in all your gates, the unclean and the clean alike, as the gazelle and the hart, only not the blood, which
+you pour on the earth like water; the tithe, the firstlings and the vows not in your gates but before the LORD; when your border is enlarged and the place is far,
+slaughter as I have commanded you and eat; be steadfast about the blood, for the blood is the life; take your holy things to the place and pour the blood on the altar;
+and when the nations are cut off, do not be ensnared into asking how they served their gods — they burned their sons and daughters. The Sifrei has twenty-three
+sections on the chapter, three of them with no opening verse and placed by their own words; every row was read whole in both files, with seven more rows from
+elsewhere. The reading laid each verse beside every verse of the Bible and counted the shared words, a new form: the phrase "the place which the LORD will choose"
+has no seat anywhere before this chapter — the chapter installs it, and the tradition gives it five stations; the chapter's opening line has one twin in the Bible,
+the last line of the Leviticus laws; the permission to slaughter and eat flesh anywhere is a change of the older law that the tradition says came with the entry
+into the Land; and where Moses says "as I have commanded you", nothing in the written text was ever commanded — the tradition places the rules of slaughter there,
+and the machine's finder cannot see the sentence because it carries no Name. The chapter is frozen as one unit, the 226th, the world's standing facts up by six as
+predicted, its hash unmoved, every gate green. The run stopped at a clean point after the ledger, you compacted, and the rest ran on a small context — the display
+patch, the claims, the seat, the gates in the background while the records were typed. Every step was timed: the machine's own work came to 11 min 49 s in a sitting
+of 115 min 30 s; the rest was the reading and the typing. Next: the commit on your word; then the compile of chapter 12 in two runs — the place as a parameter, the
+slaughter's switch, the receipt's pointer — or the ten-commandments schema first.
+
+
 
 ## Step 6 — Publish
 Export, parity check against the public repo, deploy. Owner's word.
