@@ -2,7 +2,7 @@
 # live import scan of World/step9/cold_run_*.py. Do not edit: rerun the gate. Documentation and the
 # site's dependency view; never a runtime path (the two-thread consensus of 2026-09-06).
 #
-# coverage: 66 runners, 5238 verses, 42 type tokens, 5 pointer forms; required edges 273, pointers 205; live import edges 465
+# coverage: 67 runners, 5269 verses, 42 type tokens, 5 pointer forms; required edges 278, pointers 208; live import edges 483
 
 ## cold_run_balak.py — Num 22:1-41; Num 23:1-30; Num 24:1-25; Num 25:1-19
 - calls out (live): bamidbar, chukat, erection, exodus_story, family, korach, mamre, mekoshesh, offerings, priesthood, primeval, shelach
@@ -35,7 +35,7 @@
 
 ## cold_run_beha.py — Num 8:1-26; Num 10:1-36; Num 11:1-35; Num 12:1-16
 - calls out (live): bamidbar, chukat, moadim, negaim, pesach, sanctuary_build
-- called by (live): good_land, journeys, midian, not_righteousness, opening_speech, second_tablets, sequence
+- called by (live): good_land, journeys, midian, not_righteousness, opening_speech, place_name, second_tablets, sequence
 - required edges from the ink:
   - -> chatat [chatat] at Num 12:11, Num 8:12, Num 8:7, Num 8:8: OWED link reference — THE NUMBERS WALK 3b (2026-09-10) | 8:8 'a second young bull for a SIN OFFERING' and 8:12 'offer the one for a sin offering' — the Levites' bulls: the sin-offering engine's procedure is a REFERENCE the ink names; the cell answers the docket's rows on them (the order — Zevachim 89b; not eaten — Horayot 5b) without the procedure: the CALL OWED to the sitting that compiles the rite's offerings; 8:7 'the water of PURIFICATION' (מי חטאת) is the heifer's water (the heifer row OWED) and 12:11 'we have SINNED' (חטאנו) the verb — the noun and verb of sin, not offerings
   - -> lev24 [talion_formula] at Num 8:16, Num 8:18: FALSE link none — THE NUMBERS WALK 3b (2026-09-10) | 8:16 'INSTEAD OF the opener of every womb' and 8:18 'the Levites INSTEAD OF every firstborn' (תַּחַת) — the substitution preposition, never the talion formula (Bamidbar's 3:12, 3:41, 3:45 the same)
@@ -50,7 +50,7 @@
 
 ## cold_run_blessing_and_curse.py — Deut 11:1-32
 - calls out (live): borders, covenant_at_horeb, exodus_story, good_land, hear_o_israel, korach, not_righteousness, obey_horeb, ordinances, primeval, second_census, second_tablets, seven_nations, tochacha
-- called by (live): sequence
+- called by (live): place_name, sequence
 - required edges from the ink:
   - -> sanctions [molech_ov] at Deut 11:3: FALSE link none — THE DEUTERONOMY WALK 9b (2026-09-20) | 11:3's 'His signs and His deeds which He did in the midst of Egypt to Pharaoh KING of Egypt' — the token census matches the king-word (the lemma 4428, 'king') to the sanctions span's Molech (Leviticus 20:2-5 — the lemma 4432, the same consonants): A HOMOGRAPH, named (5b's 7:8 the same title; the standing lesson: name homographs, never count them); the verse the discipline retold — plague_struck on the tape by kind (the readback row 11:3 VARIANT), Pharaoh's title at its one seat in the chapter; no call; the census's three demands this sitting — this edge, the sequential run's registration edge, the pointer at 11:25; the design's fourteen CALL edges the census's own
 - pointers in the ink:
@@ -58,14 +58,14 @@
 
 ## cold_run_borders.py — Num 34:1-29
 - calls out (live): bamidbar, chukat, gad_reuben, journeys, korach, naso, second_census, shelach, zelophehad
-- called by (live): blessing_and_curse, obey_horeb, opening_speech, refuge, sequence
+- called by (live): blessing_and_curse, obey_horeb, opening_speech, place_name, refuge, sequence
 - required edges from the ink:
   - -> family [inheritance] at Num 34:13, Num 34:14, Num 34:15, Num 34:17, Num 34:2, Num 34:5: VIA via second_census link reference — THE NUMBERS WALK 14b (2026-09-13) | THE GATE'S DEMAND PAST THE IMPORTS, read on the DB: the inheritance token at 34:2 בְּֽנַחֲלָה ('as an inheritance'), 34:13 תִּתְנַחֲלוּ ('you shall inherit' — the reflexive), 34:14-15 נַחֲלָתָם ('their inheritance'), 34:17 יִנְחֲלוּ ('who shall divide') — THE LAND'S inheritance by the lot of 26:52-56, the verb the family engine's inheritance token reads at 27:7-11 and 32:18: C2.the_land('by_lot' / 'only_excludes' / 'lots_mouth' / 'possession_before_assignment') CALLED (the OPEN divide_the_land debit cited, not rewritten — CW3): VIA second_census, the same reading as gad_reuben → family at 32:18 and journeys → family at 33:54; AND 34:5 נַחְלָה מִצְרָיִם ('the BROOK of Egypt') is the inheritance's CONSONANTS with another word's points (the reading's find) — a HOMOGRAPH BY SENSE at that one seat, the brook not the inheritance (Joshua 15:4 and 1 Kings 8:65's נַחַל 'brook', the same brook): no family reading at 34:5
   - -> offerings [shelamim] at Num 34:27: FALSE link none — THE NUMBERS WALK 14b (2026-09-13) | Num 34:27 שְׁלֹמִי ('SHELOMI' — the father of Ahihud, Asher's prince; a proper name, Np, its lemma 8015 at this one seat) against שְׁלָמַי ('my PEACE OFFERINGS', Leviticus 10:14 — the offerings engine's token) and the four other seats of the consonants (2 Samuel 20:19 'the peaceful', Nahum 2:1, Nehemiah 7:48): A HOMOGRAPH BY TOKEN — the runner's tok('שלמי') five seats, the lemma's one (the find of the compile: the reading's 'a Nethinim family's name' at Nehemiah 7:48 the same consonants); no offering in the chapter — FALSE
 
 ## cold_run_calendar.py — Exod 23:10-19
 - calls out (live): pesach, yovel
-- called by (live): erection, incense_shekel, moadim, pre_sinai, sequence
+- called by (live): erection, incense_shekel, moadim, place_name, pre_sinai, sequence
 - required edges from the ink:
   - -> moadim [appointed_time,first_fruits] at Exod 23:15, Exod 23:16, Exod 23:19: REVERSE link transfer taught by Mishnah Bikkurim 1:3 ('one does not bring first fruits before Atzeret' — read on Exod 23:16's own clause) — Exod 23:16 and 23:19's first fruits are the two-loaves day of Lev 23:17-20; moadim calls calendar.first_fruits and calendar.pilgrimage
   - -> pesach [matzah] at Exod 23:15: CALL carries window link reference — Exod 23:15's unleavened bread 'as I commanded you' — matzah() calls pesach.leaven_machine (window, purge)
@@ -119,7 +119,7 @@
 
 ## cold_run_covenant_at_horeb.py — Deut 5:1-33
 - calls out (live): decalogue, erection, exodus_story, holiness, mishpatim_3, obey_horeb, opening_speech, ordinances, pre_sinai, refuge, sanctions
-- called by (live): blessing_and_curse, good_land, hear_o_israel, not_righteousness, second_tablets, sequence, seven_nations
+- called by (live): blessing_and_curse, good_land, hear_o_israel, not_righteousness, place_name, second_tablets, sequence, seven_nations
 - required edges from the ink:
   - -> pre_sinai [sabbath] at Deut 5:12, Deut 5:14, Deut 5:15: CALL carries verdict link reference — THE DEUTERONOMY WALK 3b (2026-09-16) | 5:15's ground — the exodus for the creation: the first copy's creation ground at 20:11 is the pre-Sinai runner's (PS.sabbath('delta_20_11') CALLED — the fourth word's two grounds a DATA row); 5:30's 'return to your tents' repeats procreation at Sinai (PS.noahide('repeated_at_sinai', 'procreation_israel') CALLED — Sanhedrin 59b:3-4)
   - -> sanctions [molech_ov] at Deut 5:9: CALL carries verdict link reference — THE DEUTERONOMY WALK 3b (2026-09-16) | 5:18's 'you shall not commit adultery' has its code at Leviticus 20:10 (SA.adultery('mode', 'both') CALLED — the readback row 5:18 VARIANT); 5:16's curser at Leviticus 20:9 (SA.curser('mode') CALLED)
@@ -136,7 +136,7 @@
 
 ## cold_run_erection.py — Exod 24:1-18; Exod 31:1-11; Exod 31:18-18; Exod 32:1-35; Exod 33:1-23; Exod 34:1-35; Exod 35:4-29; Exod 40:1-38
 - calls out (live): calendar, incense_shekel, moadim, offerings, ordinances, pesach, priesthood, sanctuary_build, shemini_day, tzav, vestments
-- called by (live): balak, covenant_at_horeb, hear_o_israel, journeys, not_righteousness, obey_horeb, opening_speech, pre_sinai, second_tablets, sequence, seven_nations
+- called by (live): balak, covenant_at_horeb, hear_o_israel, journeys, not_righteousness, obey_horeb, opening_speech, place_name, pre_sinai, second_tablets, sequence, seven_nations
 - required edges from the ink:
   - -> chatat [chatat] at Exod 32:30, Exod 32:32, Exod 32:34: FALSE link none — 32:30 'perhaps I shall atone for your SIN', 32:32 'if You will bear their SIN', 32:34 'I will visit their SIN upon them' (חטאתם / חטאתכם) — the noun 'sin', not the sin offering; no chatat is brought for the calf in the span (the calf's atonement is the ransom-less intercession, Berakhot 32a); the sin-offering engine is not imported
   - -> family [inheritance] at Exod 32:13: FALSE link none — Exod 32:13 'they shall INHERIT it forever' (ונחלו) — the land-possession verb in Moses' plea, not the estate
@@ -235,7 +235,7 @@
 
 ## cold_run_good_land.py — Deut 8:1-20
 - calls out (live): beha, chukat, covenant_at_horeb, exodus_story, hear_o_israel, joseph, mamre, obey_horeb, opening_speech, ordinances, sanctions, seven_nations, shelach
-- called by (live): blessing_and_curse, not_righteousness, second_tablets, sequence
+- called by (live): blessing_and_curse, not_righteousness, place_name, second_tablets, sequence
 - pointers in the ink:
   - Deut 8:5 AS_WHEN "כאשר ייסר איש": RUN_CITATION link reference — THE DEUTERONOMY WALK 6b (2026-09-19) | 'and you shall know with your heart that AS A MAN DISCIPLINES HIS SON, so the LORD your God disciplines you' (כַּאֲשֶׁר יְיַסֵּר אִישׁ — as a man disciplines) — the readback row 8:5 VARIANT: 1:31's 'AS A MAN CARRIES HIS SON' (the same three tokens 'a man … his son'; the form's three Bible seats with 2 Kings 23:10) made the discipline — a RUN CITATION of the first form's row (opening_speech.the_spies_read_back('the_carrying') CALLED by F2 the_discipline) and of the shelf's row Berakhot 5a:22 (the Land through suffering — 8:5 then 8:7); Onkelos 'as a man TEACHES his son'; the frame writes nothing (R6); no ledger write pays a citation (R5); the register gate lists no seat (its finder scans 'commanded', not 'disciplines'); the census's one demand this sitting — no edge demanded, the design's thirteen CALL edges the census's own
 
@@ -245,7 +245,7 @@
 
 ## cold_run_hear_o_israel.py — Deut 6:1-25
 - calls out (live): covenant_at_horeb, decalogue, erection, exodus_story, joseph, mamre, mekoshesh, obey_horeb, opening_speech, pesach
-- called by (live): blessing_and_curse, good_land, not_righteousness, second_tablets, sequence, seven_nations
+- called by (live): blessing_and_curse, good_land, not_righteousness, place_name, second_tablets, sequence, seven_nations
 - required edges from the ink:
   - -> tzav [installation] at Deut 6:11: FALSE link none — THE DEUTERONOMY WALK 4b (2026-09-17) | 6:11's 'and you shall EAT and be satisfied' — the token census matches the eating of the offerings (Leviticus 6-7, the tzav span's institution: 'it shall be eaten'); here the eating is the land's good — the houses, the cisterns, the vineyards and the olives 'which you did not …' (6:10-11; 8:10 and 11:15 the phrase's other seats): A HOMOGRAPH, named; no call
 - pointers in the ink:
@@ -320,7 +320,7 @@
 
 ## cold_run_journeys.py — Num 33:1-56
 - calls out (live): balak, beha, chukat, erection, exodus_story, gad_reuben, holiness, pesach, second_census, shelach
-- called by (live): borders, opening_speech, refuge, second_tablets, sequence, seven_nations
+- called by (live): borders, opening_speech, place_name, refuge, second_tablets, sequence, seven_nations
 - required edges from the ink:
   - -> family [inheritance] at Num 33:54: VIA via second_census link reference — THE NUMBERS WALK 13b (2026-09-12) | Num 33:54 וְהִתְנַחַלְתֶּם … תִּתְנֶחָלוּ ('and you shall inherit … you shall inherit' — the land's inheritance by the lot: the verb the family engine's inheritance token reads at 27:7-11 and 32:18) — THE LAND'S inheritance by the lot of 26:52-56, C2.the_land('by_lot' / 'by_number_of_names') CALLED (the OPEN divide_the_land debit cited, not rewritten): VIA second_census — the same reading as gad_reuben → family at 32:18
   - -> pesach [firstborn,pesach] at Num 33:3, Num 33:4: CALL carries verdict link reference — THE NUMBERS WALK 13b (2026-09-12) | 33:3's 'on the morrow of THE PASSOVER' and 33:4's 'every FIRSTBORN' are the Passover's own names (Exodus 12:11, 12:12's 'every firstborn'); PS.firstborn({'kind': 'human'}) CALLED (the firstborn cell — 13:15's 'on the day I struck every firstborn in the land of Egypt'); Exodus 12:12's SPEC 'on all the gods of Egypt I will execute judgments' lies inside the pesach runner's span with NO CELL on the gods (measured: jou_compile_measure.out (4)) — the record at 33:4 cites the spec verse in its law note and writes the status itself: the reference by the shared names
@@ -330,7 +330,7 @@
 
 ## cold_run_korach.py — Num 16:1-35; Num 17:1-28; Num 18:1-32
 - calls out (live): bamidbar, chatat, holiness_b, incense_shekel, minchah, moadim, naso, offerings, pesach, priesthood, temurah, tzav, vayikra5, yovel, zelophehad
-- called by (live): balak, blessing_and_curse, borders, second_census, second_tablets, sequence, shelach
+- called by (live): balak, blessing_and_curse, borders, place_name, second_census, second_tablets, sequence, shelach
 - required edges from the ink:
   - -> chatat [chatat] at Num 16:26, Num 18:9: CALL carries verdict link reference — THE NUMBERS WALK 5b (2026-09-10) | 18:9 'every sin offering of theirs' — the sin offering among the most holy given to the priests: cold_run_chatat.domain({'intent': 'unwitting'}) CALLED (the engine's own object); 16:26 'lest you be swept away in all their SINS' the homograph (the noun, not the offering)
   - -> family [inheritance] at Num 16:14, Num 18:20, Num 18:21, Num 18:23, Num 18:24, Num 18:26: VIA via zelophehad link reference — THE NUMBERS WALK 5b (2026-09-10) | the inheritance tokens at 16:14 (Dathan's 'an inheritance of field and vineyard'), 18:20-26 ('you shall not inherit', 'for an inheritance', 'no inheritance') — the inheritance engine's institution reached through cold_run_zelophehad (inheritance_order(excluded) CALLED), which calls the family engine
@@ -522,7 +522,7 @@
 
 ## cold_run_obey_horeb.py — Deut 4:1-49
 - calls out (live): balak, borders, chukat, decalogue, erection, exodus_story, opening_speech, pre_sinai, primeval, refuge, tochacha
-- called by (live): blessing_and_curse, covenant_at_horeb, good_land, hear_o_israel, not_righteousness, second_tablets, sequence, seven_nations
+- called by (live): blessing_and_curse, covenant_at_horeb, good_land, hear_o_israel, not_righteousness, place_name, second_tablets, sequence, seven_nations
 - required edges from the ink:
   - -> family [inheritance] at Deut 4:20, Deut 4:21, Deut 4:38: FALSE link none — THE DEUTERONOMY WALK 2b (2026-09-16) | Deut 4:20 עַם נַחֲלָה ('a people of INHERITANCE' — Israel the LORD's own possession), 4:21 and 4:38 הָאָרֶץ … נֹתֵן לְךָ נַחֲלָה ('the land … gives you for an INHERITANCE') — נַחֲלָה ('inheritance', the noun, lemma 5159, HNcfsa) in the sense of a possession GIVEN whole, the giver the LORD: no estate divided, no heir, no lot; the family engine's inheritance token is homed to the estate's division (Num 27:8-11), and the land's division by lot was reached VIA second_census at 12b where Num 32:18-19 spoke of every man's inheritance by the lot — here the land is a gift named whole and the people a possession: a homonym by the sense; the readback rows 4:20 and 4:37-38 grade the two verses against the tape (the furnace, the fathers chosen)
   - -> lev24 [talion_formula] at Deut 4:11, Deut 4:19, Deut 4:49: FALSE link none — THE DEUTERONOMY WALK 2b (2026-09-16) | Deut 4:11 וַתַּעַמְדוּן תַּחַת הָהָר ('and you stood UNDER the mountain'), 4:19 תַּחַת כָּל־הַשָּׁמָיִם ('UNDER the whole heaven'), 4:49 תַּחַת אַשְׁדֹּת הַפִּסְגָּה ('UNDER the slopes of Pisgah') — תַּחַת ('under', the preposition, HR, lemma 8478) in its plain sense 'beneath'; the talion's 'eye FOR eye' (Exod 21:24 — the same lemma four times, the exchange formula the lev24 engine's talion_formula token is homed to) is an exchange of like for like; no exchange in the three verses — a homograph by the sense, 12b's reading at Num 32:14
@@ -567,7 +567,7 @@
 
 ## cold_run_ordinances.py — Exod 20:19-26; Exod 22:17-30; Exod 23:1-9; Exod 23:20-33
 - calls out (live): decalogue, holiness, holiness_b, offerings, pesach, sanctions, yovel
-- called by (live): blessing_and_curse, covenant_at_horeb, erection, family, good_land, opening_speech, pre_sinai, priesthood, sanctuary_build, second_tablets, sequence, seven_nations, vestments
+- called by (live): blessing_and_curse, covenant_at_horeb, erection, family, good_land, opening_speech, place_name, pre_sinai, priesthood, sanctuary_build, second_tablets, sequence, seven_nations, vestments
 - required edges from the ink:
   - -> family [inheritance] at Exod 23:30: FALSE link none — Exod 23:30 'until you INHERIT the land' (ונחלת) — the land-possession verb, not the estate: the same root, the other sense (Deut 21:16 'the day he causes his sons to inherit' is the estate's Sinai seat, uncompiled)
   - -> lev24 [talion_formula] at Exod 23:5: FALSE link none — 23:5's תחת ('under its burden') is the preposition, not the talion formula
@@ -598,9 +598,23 @@
   - -> moadim [appointed_time] at Num 9:2, Num 9:3: PARAMETER carries window link reference — 9:2, 9:3 'in its APPOINTED TIME' — the appointed-times engine's token names a DATE, the third registry's row (calendar_parameters.yaml festival_dates: passover, and from this sitting passover_sheni — Num 9:11) read through the Clock, not a procedure; the Sabbath and impurity OVERRIDES the phrase carries (Sifrei Bamidbar 65:1, 70:1) are this span's own cells at 9:3 and 9:13
   - -> pesach [pesach] at Num 9:10, Num 9:12, Num 9:13, Num 9:14, Num 9:2, Num 9:4, Num 9:5, Num 9:6: CALL carries procedure link reference — 9:12 'according to ALL THE STATUTE OF THE PASSOVER they shall keep it', 9:14 'according to the statute of the Passover and its ordinance so shall he do', 9:2-6 and 9:10-13 the Passover named — the ink naming the institution and the edge calling its definition: PS.paschal_procedure(break_bone / leftover / preparation) for the body statutes at the second Passover (Sifrei Bamidbar 69:2's eighth middah bounds 'all the statute' to the body), PS.access_filter(convert) for the proselyte as the native (9:14 — Exod 12:48-49's own 'one law')
 
+## cold_run_place_name.py — Deut 12:1-31
+- calls out (live): beha, blessing_and_curse, borders, calendar, covenant_at_horeb, erection, good_land, hear_o_israel, journeys, korach, obey_horeb, ordinances, pre_sinai, sanctions, seven_nations, shemini_day, tochacha
+- called by (live): sequence
+- required edges from the ink:
+  - -> family [inheritance] at Deut 12:12, Deut 12:9: FALSE link none — THE DEUTERONOMY WALK 10b (2026-09-21) | the token census matched the inheritance-noun at 12:9 ('you have not yet come to THE REST AND TO THE INHERITANCE' — הנחלה, the inheritance) and 12:12 ('the Levite … has no portion NOR INHERITANCE with you' — ונחלה, nor inheritance) to the family runner's inheritance law (Numbers 27's daughters, Genesis 48-49's testament — the transfer of land between heirs; 7b's 9:26 the precedent): here the noun names THE LAND ITSELF as Israel's rest — Shiloh and Jerusalem, the two nouns four ways (Zevachim 119a:9-13, 119b:1-5, read whole at the docket; the state row 12:9 SUPPLIED, no write) — and THE LEVITE'S BARRED SHARE, Numbers 18:20's 'I am your portion and your inheritance' (portion_declared on the tape by kind; inheritance_barred the BLOCK on the Levites; KR.the_tithe by CALL — the Levite's reason at 12:12): not an heir's share; no cell of the family runner compiles a verse of the chapter — A HOMOGRAPH OF SENSE, filed FALSE with its why
+  - -> offerings [olah] at Deut 12:6: VIA via ordinances link reference — THE DEUTERONOMY WALK 10b (2026-09-21) | 12:6's 'your burnt offerings' (עלתיכם — your burnt offerings) ARE Leviticus 1's olah, the offerings runner its home — the chapter asks WHERE it is brought, not HOW it is offered: the olah's seat at the place is reached through OR.altar('olah_on_it', 'shelamim_on_it') CALLED (Exodus 20:24's 'you shall sacrifice on it your burnt offerings and your peace offerings … in every place where I cause My name to be mentioned' — 'in every place' against 'the place', the transposition's seat Sotah 38a:11) and SA.outside CALLED (Leviticus 17:8-9's burnt offering outside against 12:13-14's 'in every place that you see'); 12:27's 'the flesh and the blood on the altar' the same cell (Leviticus 1:5's blood named in the sanctions edge's why); no rite of the olah compiled here — VIA ordinances, the link reference (the ink names the offering); the readback rows 12:6 and 12:27 VARIANT
+  - -> pre_sinai [shed] at Deut 12:27: CALL carries verdict link reference — THE DEUTERONOMY WALK 10b (2026-09-21) | 12:23's 'the blood is the life; you shall not eat the life with the flesh' is Genesis 9:4's limb from the living — PS.noahide('blood_ban_by_call', 'blood_scope_by_call', 'shed_homograph') CALLED (limb_barred on the tape, Gen 9:4 — THE LIMB FROM THE LIVING ALREADY A LINE: the readback row 12:23 by kind; its source divided, Chullin 102b:11-12; its measure any amount, 102b:1; the seven Noahide laws' limb at Sanhedrin 74b:9; 'shall be poured' / 'he shall pour' one string at Leviticus 4 — 12:27's verb the sin offering's, the one application Zevachim 37a); the readback row 12:27 by CALL
+  - -> temurah [tithe] at Deut 12:11, Deut 12:17, Deut 12:6: FALSE link none — THE DEUTERONOMY WALK 10b (2026-09-21) | the token census matched 'your tithes' at 12:6 and 12:11 (מעשרתיכם — your tithes) and 'the tithe of your grain, your wine and your oil' at 12:17 (מעשר — the tithe) to the temurah runner's home for the tithe type — Leviticus 27:32-33's CATTLE TITHE (the tenth under the rod, not substituted, not redeemed): the chapter's tithe is THE SECOND TITHE of the field's produce, eaten by its owner at the place (12:17-18 its first seat; 14:22-26 ahead its law; Makkot 19a:3-5 the juxtaposition to the firstborn, 19b:15 the bar's onset at the wall — read whole at the docket) — against the Levites' first tithe eaten anywhere (Numbers 18:31; KR.the_tithe('every_place') by CALL; THE TWO TITHES the runner's DATA row): the same noun, a third institution — no cattle tithed in the chapter, no cell of temurah compiles a verse of it; A HOMOGRAPH OF SENSE, filed FALSE with its why
+  - -> yovel [tithe] at Deut 12:11, Deut 12:17, Deut 12:6: FALSE link none — THE DEUTERONOMY WALK 10b (2026-09-21) | the token census matched the same tithe-noun (12:6, 12:11 מעשרתיכם — your tithes; 12:17 מעשר — the tithe) to the yovel runner's second home for the tithe type — its tithe-naming cells on Leviticus 27:32-33 (the tenth animal called tithe whatever it was called, its substitute and its redemption barred — the cattle tithe again): the chapter's is THE SECOND TITHE of grain, wine and oil eaten at the place (the temurah edge's why the ground; THE TWO TITHES the DATA row); no jubilee, no valuation and no cattle tithe in the chapter, no cell of yovel compiles a verse of it — A HOMOGRAPH OF SENSE, filed FALSE with its why
+- pointers in the ink:
+  - Deut 12:20 AS_WHEN "כאשר דבר לך": RUN_CITATION link reference — THE DEUTERONOMY WALK 10b (2026-09-21) | 'when the LORD your God enlarges your border, AS HE HAS SPOKEN TO YOU, and you say: let me eat flesh' (כאשר דבר לך — as He has spoken to you; the gate's own print): a RUN CITATION of Exodus 34:24's 'I will enlarge your border' — ER.repeats by CALL (the appearance's clauses 34:23-24), THE CALLEE NAMED BY THE TEACHER WITH A DISPUTE ON IT — the Sifrei Devarim 75:2 (read whole at the reading): what did He speak to you? Genesis 15:19's Kenite, Kenizzite and Kadmonite (the covenant of the pieces, the three beyond the seven); Rabbi: those are already said — Ezekiel 48:1-7's strips; the readback row 12:20 VARIANT; the register gate lists no seat (its finder scans 'commanded', not 'spoken' — the fourth shape owed to a gate sitting); no debit paid (R5), the frame writes nothing (R6); the design's predicted pointer (decision 9), the census's own demand (a seventh time) beside two it did not predict
+  - Deut 12:21 AS_WHEN "כאשר צויתך ואכלת": RUN_CITATION link reference — THE DEUTERONOMY WALK 10b (2026-09-21) | 'when the place … is too far from you, you shall slaughter of your herd and of your flock … AS I HAVE COMMANDED YOU, and eat within your gates' (כאשר צויתך ואכלת — as I have commanded you, and eat; the gate's own print): THE RECEIPT WITHOUT THE NAME — the register's finder blind to it (its forms carry the Name; the fourth shape owed to a gate sitting), THE TOKEN CENSUS NOT (the design's 'no pointer the census can see' was the finder's blindness, not the census's): a RUN CITATION whose referent is ORAL — no verse of the written program commands the rite: Rabbi at the Sifrei Devarim 75:15 and Chullin 28a:5 (read whole) — Moses was commanded on the gullet and the windpipe, the majority of one sign for a bird and of two for a beast — THE PARAMETER the_rite_of_slaughter (calendar_parameters.yaml; Mishnah Chullin 2:1 the answer sheet's value), read by F5 as data (the code/data separation law's own case); the written kin Exodus 23:15's 'as I commanded you' — CA.matzah('as_commanded') by CALL (the receipt's two kinds a DATA row: 23:15's callee written, 12:21's oral); SA.outside by CALL (Leviticus 17:3-5 released for the far place); the readback row 12:21 VARIANT; no debit paid (R5); the census's demand, not the design's
+  - Deut 12:22 AS_WHEN "כאשר יאכל את": RUN_CITATION link reference — THE DEUTERONOMY WALK 10b (2026-09-21) | 'AS THE GAZELLE AND THE HART ARE EATEN, so you shall eat it; the unclean and the clean together' (כאשר יאכל את — as is eaten; the gate's own print): the comparison that comes to teach and is found taught — a RUN CITATION of the hunted animal's eating at Leviticus 17:13 (SA.covering('hunted_of_any_kind') by CALL — the covering for the hunted alone; Chullin 84a:11's 'like water'): R. Elazar HaKappar at the Sifrei Devarim 75:15 and Chullin 28a:4 (read whole) — as the domestic animal by slaughter so the wild animal by slaughter, the bird by the words of the scribes (the_wilderness_flesh's arm; Bekhorot 15a:6-8 the firstborn and the gifts excluded by the same words, 33a:4 a gentile eats it); the readback row 12:22 VARIANT; the register gate lists no seat; no debit paid (R5); the census's demand — one the design did not predict
+
 ## cold_run_pre_sinai.py — Gen 1:1-31; Gen 2:1-3; Gen 2:16-17; Gen 2:24-24; Gen 9:1-17; Gen 17:1-27
 - calls out (live): calendar, clocks, decalogue, erection, holiness, holiness_b, incense_shekel, mishpatim, moadim, offerings, ordinances, pesach, priesthood, sanctions, tochacha, tzav, yoma, yovel
-- called by (live): covenant_at_horeb, exodus_story, joseph, mamre, obey_horeb, primeval, sequence
+- called by (live): covenant_at_horeb, exodus_story, joseph, mamre, obey_horeb, place_name, primeval, sequence
 - required edges from the ink:
   - -> moadim [appointed_time] at Gen 17:21, Gen 1:14: CALL carries procedure link transfer taught by Bereshit Rabbah 6:1 ('and for seasons — these are the three pilgrim festivals') — G1 (CALL — the cell fetches it live) | 'for signs and for SEASONS' (Gen 1:14 — the luminaries for the festival calendar) and 'at this SET TIME next year' (17:21 — Isaac's date); day_boundary('seasons') will call MO — flipped to CALL at the cell — DONE
   - -> sanctions [life_blood] at Gen 9:4: CALL carries procedure link transfer taught by Sanhedrin 59a:11-13 (R. Yosei son of R. Chanina: a command said to the sons of Noah and repeated at Sinai — M-24's exemplar; the limb from the living at Gen 9:4, Lev 17:14) — G1 (CALL — the cell fetches it live) | 'flesh with its LIFE, its blood' (Gen 9:4) — 'its blood in its life' stands at Gen 9:4 and Lev 17:14 alone in the Tanakh: the blood ban's law seat is the sanctions engine (Lev 17:10-14), the Noahide limb-from-the-living its first seat here; noahide('limb') will call SAN.blood — flipped to CALL at the cell — DONE
@@ -652,7 +666,7 @@
 
 ## cold_run_sanctions.py — Lev 17:1-16; Lev 18:1-30; Lev 20:1-27
 - calls out (live): chatat, clocks, offerings, shemini
-- called by (live): chukat, covenant_at_horeb, family, good_land, holiness_b, mishpatim_3, ordinances, pre_sinai, priesthood, primeval, refuge, sequence, zelophehad
+- called by (live): chukat, covenant_at_horeb, family, good_land, holiness_b, mishpatim_3, ordinances, place_name, pre_sinai, priesthood, primeval, refuge, sequence, zelophehad
 - required edges from the ink:
   - -> clocks [niddah] at Lev 18:19, Lev 20:21: CALL carries status link reference — 18:19 and 20:21's menstruant — CL.zav / the niddah status
   - -> offerings [olah,shelamim] at Lev 17:5, Lev 17:8: CALL carries window link reference — 17:5's 'slaughter them as peace offerings' and 17:8's burnt offering — dispatch(shelamim), dispatch(olah:flock) in platform(classes)
@@ -697,12 +711,12 @@
   - Deut 10:9 AS_WHEN "כאשר דבר יהוה": RUN_CITATION link reference — THE DEUTERONOMY WALK 8b (2026-09-20) | 'therefore Levi has no portion nor inheritance with his brothers; the LORD is his inheritance, AS THE LORD YOUR GOD SPOKE TO HIM' (כַּאֲשֶׁר דִּבֶּר יְהוָה אֱלֹהֶיךָ לוֹ — the one seat of the full form; 18:2, Joshua 13:14, 1 Kings 5:26 'as He spoke to him'): a RUN CITATION of portion_declared — Numbers 18:20-24's 'I am your portion and your inheritance among the children of Israel' on the tape (inheritance_barred on aaron and on the Levites, tithe_granted; korach.the_tithe by CALL; the readback row 10:9 VERBATIM in kind); THE RECEIPT FINDER'S THIRD FORM ('spoke', not 'commanded' — the register gate lists no seat at 10:9; 4b's owed item stands, a gate sitting's); no debit paid; riding the CALL edge to korach (the design's prediction — the census decides)
 
 ## cold_run_sequence.py — 
-- calls out (live): balak, bamidbar, beha, blessing_and_curse, borders, calendar, chatat, chukat, clocks, covenant_at_horeb, decalogue, erection, exodus_story, family, gad_reuben, good_land, hear_o_israel, holiness, holiness_b, incense_shekel, joseph, journeys, korach, lev24, mamre, mekoshesh, metzora, midian, minchah, mishpatim, mishpatim_2, mishpatim_3, moadim, musafim, naso, negaim, not_righteousness, obey_horeb, offerings, opening_speech, ordinances, pesach, pesach_sheni, pre_sinai, priesthood, primeval, refuge, sanctions, sanctuary_build, second_census, second_tablets, seven_nations, shelach, shemini, shemini_day, temurah, tochacha, tzav, vayikra5, vestments, vows, yoma, yovel, zelophehad
+- calls out (live): balak, bamidbar, beha, blessing_and_curse, borders, calendar, chatat, chukat, clocks, covenant_at_horeb, decalogue, erection, exodus_story, family, gad_reuben, good_land, hear_o_israel, holiness, holiness_b, incense_shekel, joseph, journeys, korach, lev24, mamre, mekoshesh, metzora, midian, minchah, mishpatim, mishpatim_2, mishpatim_3, moadim, musafim, naso, negaim, not_righteousness, obey_horeb, offerings, opening_speech, ordinances, pesach, pesach_sheni, place_name, pre_sinai, priesthood, primeval, refuge, sanctions, sanctuary_build, second_census, second_tablets, seven_nations, shelach, shemini, shemini_day, temurah, tochacha, tzav, vayikra5, vestments, vows, yoma, yovel, zelophehad
 - called by (live): none
 
 ## cold_run_seven_nations.py — Deut 7:1-26
 - calls out (live): balak, covenant_at_horeb, decalogue, erection, exodus_story, hear_o_israel, joseph, journeys, mamre, obey_horeb, opening_speech, ordinances, shemini
-- called by (live): blessing_and_curse, good_land, not_righteousness, second_tablets, sequence
+- called by (live): blessing_and_curse, good_land, not_righteousness, place_name, second_tablets, sequence
 - required edges from the ink:
   - -> sanctions [molech_ov] at Deut 7:8: FALSE link none — THE DEUTERONOMY WALK 5b (2026-09-18) | 7:8's 'from the hand of Pharaoh KING of Egypt' — the token census matches the king-word (the lemma 4428, 'king') to the sanctions span's Molech (Leviticus 20:2-5 'who gives of his seed to Molech' — the lemma 4432, the same consonants): A HOMOGRAPH, named; the verse is the going out read back (brought_out at 12:51 — the readback row 7:8 EXPANDED), Pharaoh's title at its one seat in the chapter; no call; the design's (n) RUN_CITATION pointers (7:6, 7:8, 7:12, 7:13, 7:18, 7:19, 7:22) were NOT demanded — the citations ride the CALL edges' whys (exodus_story, mamre, joseph, ordinances)
 
@@ -731,7 +745,7 @@
 
 ## cold_run_shemini_day.py — Lev 9:1-24
 - calls out (live): chatat, minchah, offerings, tzav
-- called by (live): erection, not_righteousness, second_census, sequence
+- called by (live): erection, not_righteousness, place_name, second_census, sequence
 - required edges from the ink:
   - -> chatat [chatat] at Lev 9:10, Lev 9:15, Lev 9:2, Lev 9:22, Lev 9:3, Lev 9:8: CALL carries procedure link reference — 9:2's calf and 9:3's goat 'for a sin offering'; 9:8-11 the calf's rite and 9:15's goat 'like the first' — the run graded against the sin-offering engine's tiers by live call: CH.rank (the spec's bull against the run's calf and goat), CH.blood / sprinklings / carcass (the outer protocol at 9:9 against the anointed tier's inner one; the burning at 9:11 against the outer tier's eating), CH.precedence_bulls, CH.burn_site, CH.inquiry (Lev 10:16-18's goat)
   - -> minchah [minchah] at Lev 9:17, Lev 9:4: CALL carries procedure link reference — 9:4's meal offering mixed with oil and 9:17's palm filled and smoked — MIN.fistful (the disqualifiers synced by the Sifra's fill-fill analogy; the left hand from Menachot 9b's reading of THIS verse's 'his palm'), MIN.oil_ops, MIN.frankincense_quantity, MIN.remainder
@@ -754,7 +768,7 @@
 
 ## cold_run_tochacha.py — Lev 26:1-46
 - calls out (live): none
-- called by (live): blessing_and_curse, obey_horeb, pre_sinai, sequence, yovel
+- called by (live): blessing_and_curse, obey_horeb, place_name, pre_sinai, sequence, yovel
 - required edges from the ink:
   - -> offerings [olah] at Lev 26:36: FALSE link none — 26:36 עָלֶה 'a driven LEAF' — the noun leaf, not the burnt offering
   - -> pesach [matzah] at Lev 26:14: FALSE link none — 26:14 הַמִּצְוֺת 'all these COMMANDMENTS' — the homograph of the unleavened bread

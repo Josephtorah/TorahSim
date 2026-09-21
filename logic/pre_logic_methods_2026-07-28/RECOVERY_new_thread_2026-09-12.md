@@ -13,13 +13,13 @@ tape of events in verse order; every verse adds a line or installs a law (a daem
 EVERYTHING ELSE IN A COMPUTER PROGRAM (his frame). The repo <repo> = /Users/Shared/TorahSim, public under CC0 at
 github.com/Josephtorah/TorahSim.
 
-## 2. WHERE IT STANDS (2026-09-20, after sitting 10; the state doc #200 addendum 1 the newest)
-- NUMBERS CLOSED. DEUTERONOMY 1:1-11:32 COMPILED AND ON THE TAPE (PUSHED through bb62e90); 12 READ AND FROZEN.
-- 226 frozen units, standing 2239, hash 8b8fff1fa28953af. 66 runners, 71 daemons, 484 functions; 1145 kinds / 1042 effects.
-- THE TAPE at RUN (1319, 96, 88, 0, 12, 1618, 42, 319, pairs, 127), markers 172, closes 127; the sweep 65/65; every gate GREEN.
-- SITTING 10 (ch 12; EVERY STEP TIMED, the table in the AS BUILT): the place INSTALLED here; 12:21's receipt without the Name; the
-  slaughter law released in new words; 197 sources whole.
-- UNCOMMITTED since bb62e90: the cost audit + sitting 10 (<scratch>/commit_msg_ch12.txt). NEXT ON HIS WORD: the commit; then 10b.
+## 2. WHERE IT STANDS (2026-09-21, 10b done; the state doc #201 add. 4 the newest)
+- NUMBERS CLOSED. DEUTERONOMY 1:1-12:31 COMPILED AND ON THE TAPE (PUSHED through bb62e90; 12 uncommitted).
+- 226 frozen units, standing 2239, hash 8b8fff1fa28953af. 67 runners, 72 daemons, 491 functions; 1150 kinds / 1049 effects.
+- THE TAPE at RUN (1323, 96, 88, 0, 12, 1626, 43, 319, pairs, 127), markers 172, closes 127; the sweep 66/66; every gate GREEN.
+- SITTINGS 10/10b (ch 12; EVERY STEP TIMED — 10b 2860 s / 64 steps): the place INSTALLED (high_places_banned REUSED — the eras
+  table's ink); the slaughter law a STATUS conditional on the entry; the rite a PARAMETER; four lines, no marker.
+- COMMITTED 4af2953 (NOT PUSHED). 10b DONE (65/65; tape 10/10; the docket 1,538 rows). UNCOMMITTED. NEXT: commit on his word; ch 13.
 
 
 ## 3. THE STANDING LAWS (owner-ruled; verbatim in spirit — long forms: addenda §3)
@@ -41,8 +41,8 @@ github.com/Josephtorah/TorahSim.
   World/step9/gates_chain.sh <out_dir>`; the SUMMARY read once; GATES_CHAIN.md); the records from the sheet in ONE call. ⚠ OWNER-RULED
   2026-09-20: A THE CACHE LAW — the cache dies at FIVE MINUTES: no wait past five minutes on a big context; every long job (the chain, the
   sweep, the positions) LAUNCHED at a run's END, its readers written first; the clean point announced; the owner compacts; THE TAIL (a small
-  run) reads the SUMMARY, files demands, runs the writers; compact before a break. B THE 400k CAP — a run ends at the clean point nearest
-  400k, never past 450k. C FEWER CALLS — one call per step, reads batched, batching never skipping. ⚠ A COMPILE SITTING IS TWO RUNS + THE
+  run) reads the SUMMARY, files demands, runs the writers; compact before a break. B THE 600k CAP (his word 2026-09-20, from 400k) — a run ends at the clean point nearest
+  600k, never past 650k. C FEWER CALLS — one call per step, reads batched, batching never skipping. ⚠ A COMPILE SITTING IS TWO RUNS + THE
   TAIL: RUN A the rereads, the design, the docket (its own run past ~700 rows); RUN B the types, the runner, the tape to 10/10, the chain
   LAUNCHED; THE TAIL the records, the forms, the message; a READING sitting ONE run + its tail.
   ⚠ EVERY SHELF ROW READ WHOLE, NEVER A CUT (owner-ruled 2026-09-17); a docket takes the runs it needs.
@@ -70,7 +70,7 @@ the gates (gates_chain.sh; GATES_CHAIN.md; sweep_stamp.json), the
 probes (*_probes.py), checkpoint_check.py, world_stepper.py, world_board.py, forms_deuteronomy_walk/. World/journal/data/world.sqlite the one database; Data/tanakh.sqlite the text store. Memory: <memory>/ — MEMORY.md the
 index; deuteronomy-walk.md; cost-rules-no-polling.md; step9-exam-era.md.
 
-## 5. THE SITTING SHAPES (the long forms: the addenda's section 5; the newest instances: the map's "Sitting 10" and "Sitting 9b")
+## 5. THE SITTING SHAPES (the long forms: the addenda's section 5; the newest instances: the map's "Sitting 10b" and "Sitting 10")
 THE READING: measure first (Onkelos whole + the spine by position; the parser on every number verse) → the ink asserts → the rows → the ledger
 with coverage COMPUTED → the unit yaml + manifest → the claims seated → the fold predicted and matched → build_world → the records from the sheet.
 THE COMPILE: the measurements → THE DESIGN in the map before any code → probes to FAIL → the docket by the union rule → the types by script →

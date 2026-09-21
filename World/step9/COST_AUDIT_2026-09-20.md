@@ -85,3 +85,6 @@ before a break; and the owner to check the plan's overage state. Nothing changes
 
 ## 6. THE RULING (2026-09-20)
 "Yes I like a b and c. Do you agree? Will that save money not lose quality" — agreed: the three change WHEN things happen and HOW MANY calls, not what is read, typed or gated. "What if we remove the cap for B" — the pile keeps its rent (reads 37%); the cap at 400k recommended as one compaction per sitting. **"Let's go to 400 a b and c" — RULED: A THE CACHE LAW, B THE 400k CAP, C FEWER CALLS.** Written into the recovery page, RECORD_FORMS, THE_STEPS, GATES_CHAIN.md, the map, THE_BRIEFING, the state doc (#199 addendum 4), the addenda §53, the memory.
+
+## 7. THE AMENDMENT (2026-09-20, the evening — after sitting 10's tail)
+The owner: "Let's set the cutoff at 600". RULE B AMENDED: a run ends at the clean point nearest 600k, never past 650k (400k / 450k until then). The occasion: chapter 12's tail left the context at 350k with the compile's RUN A ahead; under 400k the run would have waited for a compaction. A and C unchanged. Written into the recovery page, RECORD_FORMS, THE_STEPS, the map's rules section, THE_BRIEFING, the state doc (#200 addendum 3), the addenda §55, the memory.

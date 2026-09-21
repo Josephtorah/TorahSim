@@ -1934,7 +1934,7 @@ follows the last check mark.
 ## (Exodus 34:24) owed if a chapter calls it again. NOTHING ELSE IN CHAPTER 11 IS OWED TO A LATER SITTING OF ITS OWN.
 
 
-## SITTING 10 — CHAPTER 12 (2026-09-20, the reading; deu_12_place_name frozen) — OWED TO THE COMPILE 10b: (a) THE PLACE WHICH THE LORD WILL CHOOSE (12:5, 11, 14, 18, 21, 26)
+## SITTING 10 — CHAPTER 12 (2026-09-20, the reading; deu_12_place_name frozen) — PAID AT 10b (the 10b box below, item by item) — OWED WAS: (a) THE PLACE WHICH THE LORD WILL CHOOSE (12:5, 11, 14, 18, 21, 26)
 ## — INSTALLED HERE ("will choose" twenty-three seats in the book, none before chapter 12): a PARAMETER the run assigns — the shelf's five stations (the Tabernacle,
 ## Gilgal, Shiloh, Nob and Gibeon, Jerusalem — 65:1-2, 66:1-2; Mishnah Zevachim 14:4-8; Zevachim 112b-119b), the procedure (seek and find, then the prophet confirms —
 ## 62:1; David and Gad the run's citation), the two verses reconciled (62:2-3, 70:4 — the money from all, the ground from one), the Name pronounced only there (62:4 —
@@ -1978,3 +1978,35 @@ follows the last check mark.
 ## 37a; Tosefta Zevachim 4:1; Kiddushin 1:9 and 36b-37a; Rosh Hashanah 4a-6b; Yoma 1:1; Tosefta Sheqalim 2:1; Avot 2:1; Pesachim 8b; Tosefta Menachot 9:2; Yevamot 47b;
 ## Keritot 20b-22a; Makhshirin 6:4; Seder Olam 11; the Sifra on Leviticus 17 credited from its sitting) — EVERY ROW WHOLE; a docket past ~700 rows its own run; THE COST
 ## RULES: two runs + the tail, the chain launched at RUN B's end. NOTHING ELSE IN CHAPTER 12 IS OWED TO A LATER SITTING OF ITS OWN.
+
+## THE SITTING-10 BOX (a)-(k) PAID — (a) THE PLACE — F2 the_place_chosen: THE LINE place_chosen_declared writing place_chosen_required (a STATUS on Israel; the Name
+## pronounced only there, Sotah 38a; in one of your tribes [1]) and REUSING high_places_banned (the erection's BLOCK on the-land — a third entry, the eras table's own
+## ink: shemini_day.eras, sanctions.platform, journeys.the_command by CALL, the six rows unmoved); the three commandments of the entry and David's rest (Sanhedrin
+## 20b) DATA rows; (b) THE DEMOLITION — F1: the five verbs by CALL (ER.covenant('demolition_grows') = [3, 4, 5]), the three Asherim and the mountains (Mishnah Avodah
+## Zarah 3:5, 3:7), the renaming (61:7) — NO new debit; (c) THE HEADER — the twin of Leviticus 26:46 a DATA row, the four nouns and the land-bound rule (BR by CALL),
+## the pair 12:4 / 12:31 with THE WRITE name_erasure_barred (a BLOCK); the register's 12:1 REDECLARED (the class EMPTY by the gate's open bound); (d) THE SLAUGHTER LAW
+## RELEASED — F4 and F5: THE LINE profane_slaughter_permitted writing profane_slaughter_permitted (a STATUS conditional on the entry — the_wilderness_flesh a PARAMETER
+## with R. Yishmael's release, R. Akiva's rite and the exile's third state), the receipt without the Name — the_rite_of_slaughter a PARAMETER (Mishnah Chullin 2:1;
+## Chullin 28a:5; Exodus 23:15's written kin by CALL — calendar.matzah), the pointer at 12:20 to Exodus 34:24 (DEMANDED by the census), the civility, the comparison,
+## the blemished consecrated; (e) THE BLOOD — F4 and F5: 'like water' four ways (SA.covering, SA.blood by CALL), the blood is the life with limb_barred (Gen 9:4) on
+## the tape, the blood's classes (Keritot 20b-22a — the one who eats human blood EXEMPT), flesh in milk from 12:25 (CA.kid_in_milk by CALL), the sin offering's verb
+## (PS.noahide('shed_homograph')), the persecution's edges; (f) THE OFFERINGS ONLY THERE — F3 and F4: the reuse's second entry at 12:13, the prophet's exception (Elijah
+## EXEMPT), the karet matrix by CALL, THE WRITE holy_things_in_the_gates_barred (a BLOCK — the ladder at Makkot 17a-19b, the list read backward, the lashes of Mishnah
+## Makkot 3:3 — the tithe's eater outside the wall LASHED, the impure tithe's warning from the chapter's own gates, THE TWO TITHES by CALL — KR.the_tithe('every_place')),
+## the seven offerings' three lists, your holy things (Temurah 17b); (g) THE TABLE AND THE HOUSEHOLD — F2 and F4: THE WRITE rejoicing_before_the_lord_commanded (a
+## STATUS — the law's first seat supplied with its write; the woman's rejoicing a two-arm row), 5:14's household by CALL (CH.the_first_tablet), THE WRITE
+## levite_forsaking_barred (a BLOCK — the verse alone; the exile's forsaker EXEMPT); (h) THE NATIONS CUT OFF — F6: THE LINE nations_cut_off_warned writing
+## foreign_rite_inquiry_barred (a BLOCK); the snare's root, the parents from 'even', NO MOLECH NAMED (SA.molech by CALL — the homograph not matched); (i) THE REGISTER'S
+## SWITCH, THE PARSER'S [1] AND THE STARRED TITHE, Moses unnamed — DATA rows (census_probes UNMOVED at 224); (j) THE CHECKPOINT SERIES — DD1-DD9 the fourth name;
+## (k) THE DOCKET — 1,538 rows in three runs (1,115 read whole here, 423 carried), the writer derived from 9b's, the crowns the cells' rows.
+## OWED FROM 10b: (i) THE RECEIPT'S THIRD AND FOURTH SHAPES — 12:21's "as I have commanded you" without the Name (its referent ORAL — the parameter) beside 10:9's and
+## 11:25's: the finder's forms OWED to a gate sitting on the owner's word; (ii) THE SUPPLIED FORMS on the owner's word — the state row without a write (12:9), a law's
+## first seat with its write (12:4, 12:7, 12:17, 12:19, 12:30 — five this chapter); (iii) THE CALF'S DAY MARKER (7b's) and THE REGISTRY'S HOMOGRAPH (8b's; the-place ->
+## the_place_luz_bethel this chapter) on the owner's word; (iv) THE SECOND TITHE AT 14:22-26 (holy_things_in_the_gates_barred's forward twin — 'too far' 14:24's twelve
+## tokens; the confession 26:12-14), THE FIRSTLING'S EATING AT 15:19-23 (the blemished's release), THE FEASTS' REJOICING AT 16:11, 16:14 (the status's seats ahead),
+## 16:22's pillar 'which He hates', 19:1's twin of 12:29, 17:8's and 26:2's place formula, 27:7's peace offerings and rejoicing; (v) 13:1 THE DB'S SEAM (the English
+## 12:32) at chapter 13's reading — the seducer's 'other gods whom you have not known' 11:28's; (vi) THE CALLEES' REGEX — the scan owes the case['ask'] form (9b's
+## calendar edge dropped on its silence: a look at chapter 16's compile when the calendar is called again); (vii) THE INSTALL HYPOTHESIS — 12:10-11's 'when He gives
+## you rest … then the place' recorded as the ink's own installer; the installer boot as the form until the owner's word; (viii) THE ERAS TABLE — three cells hold it
+## (shemini_day, sanctions, journeys) and the fourth reads it: a merge into one seat on the owner's word at a gate sitting; (ix) THE CHECKPOINT SERIES continues (DD
+## the fourth name — DD9 the last; the next DE1, keyed by its first word). NOTHING ELSE IN CHAPTER 12 IS OWED TO A LATER SITTING OF ITS OWN.

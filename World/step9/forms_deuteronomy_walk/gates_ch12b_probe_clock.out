@@ -1,0 +1,51 @@
+CLOCK PROBES (CLOCK.md sections 1-6, 10, 12; each must FAIL on the old engine and PASS on the new):
+  PASS  1 the day counter; the year derived through the count epoch
+        start (0, 1, (1, 7, 1)); at year 3: (3, (3, 7, 1), True)
+  PASS  2 no epoch: the year is None, the day counts
+        day 5 year None
+  PASS  3 a calendar-key period re-arms; the chain logged with rearmed_from
+        fired in years [7, 14]; re-arms 2; pending at [21]
+  PASS  4 an integer period re-arms in days
+        fired on days [1, 2, 3, 4, 5]; pending 1
+  PASS  5 a recurrence ends on cancel_timers (a text event), never on a count
+        cut 1; fired [1, 2, 3]; pending 0
+  PASS  6 the bound: stamped [last marker, open] at submit, closed by the next marker, on the timer and its fire
+        at submit [10, None]; after the marker [10, 40]; timer [10, 40]; fire [10, 40]
+  PASS  7 an intercalated year exists under the modeled season ground; the year still turns at the new-year month
+        thirteen-month years in the first forty-nine: [2, 4, 7, 10, 12, 15, 18, 20, 23, 26, 28, 31, 34, 36, 39, 42, 44, 47]; twelve-month: 31
+  PASS  8 the retrograde marker: logged, the counter unmoved, dated carried, a past due written at submission
+        marker {'verse': 'Num 9:1', 'value': None, 'retrograde': True, 'stated': 30, 'placement': 'text_constrained'}; day 50; dated 30; retro-writes 1; entry day 50 dated 30
+  PASS  9 the jubilee fork: the horn, the servants, all the inhabitants — on the proclamation act
+        no horn: jubilee (Rabbi Yehuda: the servants sent free — Sifra Behar Chapter 2 4: a jubilee even without the horn, not without the servants sent free) | no jubilee (Rabbi Yose: the horn not sounded — Sifra Behar Chapter 2 4: a jubilee even without the servants sent free, not without the horn) || no servants: no jubilee (Rabbi Yehuda: the servants not sent free — Sifra Behar Chapter 2 4: a jubilee even without the horn, not without the servants sent free) | jubilee (Rabbi Yose: the horn sounded — Sifra Behar Chapter 2 4: a jubilee even without the servants sent free, not without the horn) || exiled: no jubilee (both arms: not all its inhabitants upon the land — Arakhin 32b:16 on 25:10 "to ALL its inhabitants": the jubilees ceased; the consecrated field's going out not in effect either — no_going_out (O6)) (returns 0) || all held: jubilee (both arms: the horn sounded and the servants sent free — Sifra Behar Chapter 2 4, both conditions met) (returns 1, entitlement 1)
+  PASS  10 after(6, year) lands on the same date six years on
+        (1, 8, 11) -> (7, 8, 11)
+  PASS  11 OPEN-4: the flood's 150 days (Gen 7:11 -> 8:4) against the received month — DIVERGE, said so
+        computed 147; checkpoint printed 'CHECKPOINT OPEN-4 the flood: 150 days by the text DIVERGE'
+  PASS  12 the close pairing: the tamid offered closes yesterday's open debit
+        open before the second offering 1; open after 0; closed_by 'the tamid offered [INK Exod 29:38-39 "day by day continually... the one lamb in the morning"]'
+  PASS  13 O5: the festival keys resolve from the row on the exodus epoch
+        keys (True, True, True, True); after Yom Kippur the next is year 2's: True
+  PASS  14 O5: a period timer keyed sukkot_1 re-arms to year 2's fifteenth of the seventh month
+        fires [545]; dues [545, 899]
+  PASS  15 O5: the ink's count meets the date — the omer + 49 = the Calendar's atzeret = the sixth of the third month
+        omer 15, fiftieth 64 = (1, 3, 6)
+  PASS  16 O5 (a guard): an unknown festival key refuses, naming the keys
+        CALENDAR: unknown key 'purim' (keys: day, week, month, year, sabbatical, jubilee, passover, passover
+  PASS  17 O8 S1: the WEEKDAY from the creation count — day 0 the first day, day 6 the first Sabbath; None under any other epoch
+        day 0 -> 1, day 6 -> 7, day 13 -> 7, exodus epoch -> None (1 = the first day of the week, 7 = the Sabbath)
+  PASS  18 O8 S1: close BY VALUE — the frogs' removal closes the frogs' plague entry, not the first open plague (the blood)
+        closed True; blood open True, frogs open False
+  PASS  19 O9 T3: ELAPSED — the label less one at the year grain; a life era's elapsed is its age; elapsed_in
+        day 5 (1, 0, 0, -1); year 1657 (1657, 1656); the life era at 1700 (43, 43, 1699, 1700)
+  PASS  20 O9 T2: PLACEMENT — a reading-placed marker stamps its verse's event, page_order the next; a retrograde marker its whole stretch; a proleptic none
+        events ('reading_placed', 'page_order', 'page_order', 'text_constrained', 'text_constrained', 30); markers ['reading_placed', None, 'text_constrained', 'text_constrained']
+  PASS  21 O9 OPEN-5: THE BOUNDARY ORDER — two timers due one day, the morning-boundary one set first: the fires come evening first, the log carrying the boundary
+        fire order ['tamid_owed', 'eating_window']; boundaries [None, 'morning']
+  PASS  22 O9 OPEN-5: THE SLOTS — the table in the ink's order (evening below morning); crosses_day; an unknown slot refuses
+        ranks [0, 1, 2, 3, 4, 5, 6, 7]; refusal "CALENDAR: unknown slot 'afternoon' (slots: evening, night, midnight, dawn, morni"
+clock probes: 22/22 pass
+PARAMETERS CENSUS: 60 rows — derived 3, ink 11, modeled 1, received 44, rounding 1; eras 6
+  UNEXERCISED (visible, never counted as run): regnal_rounding, fiftieth_in_cycle, rachel_remembered_date, flood_months, temple_day_boundary, night_start, between_the_evenings_from, twilight_doubt, era:regnal, era:exile_greek
+  OPEN: day_boundary [OPEN-5 (O9, 2026-09-08; CLOCK.md 12e): the Temple's day is the row temple_day_boundary; 'until the evening' timers run to the next day boundary (day + 1); a timer's opt-in `boundary: morning` orders its fire after the evening-boundary fires of the same day]; month_rounding [OPEN-6]; intercalation_grounds [OPEN-2]; solar_year_days [OPEN-2]; equinox_offset_days [OPEN-2]; count_start_offset_years [OPEN-1]; life_year_reading [OPEN-8]; patriarch_birth_month [Rabbi Yehoshua's arm]; second_tablets_given [the tradition's own date of the second ascent (the first of Elul]; ark_day [Rabbi Chanina bar Papa's arm]; sinai_days [the rabbis' arm (the giving on the sixth)]; iyar_length [the rabbis' arm (Iyar full)]; tammuz_length [Abaye's arm (Tammuz full)]; jethro_timing [the after-arm]; gen6_3_reading [the lifespan arm]; abel_days_bound [UNEXERCISED]; rachel_remembered_date [UNEXERCISED]; labans_pursuit [UNEXERCISED]; covenant_pieces_year [the placed year joins Exod 12:40's four hundred and thirty against the exodus marker (C3d, both settings printed): seventy MATCHES the ink's own five hundred (Isaac's hundred + the seed's four hundred), eighty-five DIVERGES by fifteen]; flood_months [OPEN-4 (O9, 2026-09-08; CLOCK.md 12d): the tradition's reading FOUND; the machine runs its alternation, so C1's DIVERGE (147-148 against the ink's 150) stands as the modeled calendar's with the shelf's reading beside it]; twilight_doubt [UNEXERCISED]; vow_annulment_window [THE NUMBERS WALK 10b (2026-09-12): the vows' state machine reads this row's value for its timer; the twenty-four-hour arm's day-grain rendering is named, never run; the day of LEARNING that annulment exists is a second hearing day (Mishnah Nedarim 11:7]
+DAY SLOTS: 8 in the calendar day's order — evening, night, midnight, dawn, morning, noon, between_the_evenings, sunset
+COUNTER IDIOMS: 6 rows — people: completed_years; kings: one_day_in_a_year_counts_as_a_year [UNEXERCISED]; animals: from_day_to_day [UNEXERCISED]; trees: thirty_days_before_the_new_year_count_as_a_year [UNEXERCISED]; inclusive_day_counts: the_first_day_counts; jubilee_boundary_year: the_fiftieth_sanctified_from_the_new_year

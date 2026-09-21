@@ -1927,6 +1927,8 @@ narrative strength. By cluster:
     "as He has spoken" disputed (75:2 — Genesis 15 or Ezekiel 48); the oral law's seat at "as I have commanded you" (75:6, 75:15);
     "like water" four ways (71:14).
 
+- THE CHAPTER-12 COMPILE (THE DEUTERONOMY WALK sitting 10b RUN B, 2026-09-21; cold_run_place_name.py — the docket's rules carried into the cells; every code checked in this file before typed): I1 (qal wa-chomer, the a-fortiori) at Bekhorot 33a:1-5 (the comparison's three seats — F4 the_unclean_and_the_clean), Makkot 17a:12-17b:1 with Rava's refutations 17b:3-8 (THE LADDER on 12:17's list — F4 the_ladder_of_a_fortiori; 17b:10's rider — no punishment from an inference; 18a:1-2 the repetition designates), Makkot 23b:2 (the blood's reward — F5 the_good_and_the_right), Bekhorot 33b:16 (the firstling's flesh); I2 (gezerah shavah, the verbal analogy) at Sotah 38a:10 "to put His name there" / "to put My name there" (F2 the_name_pronounced_only_there); I6 (kelal u-frat u-kelal, general–particular–general → include) at Keritot 21a:5 on Leviticus 7:26 (the blood's classes — F5 the_bloods_classes) with 21a:7's rider (R. Yishmael's school on unlike generalizations); I12 (a matter derived from its context) at Chullin 115b:2 (Rabbi's redundant "you shall not eat it" — F5 flesh_in_milk); E29 (gematria, the letter-values) at Makkot 23b:18 (the 613 — F5 the_good_and_the_right); THE TRANSPOSITION named (Sotah 38a:11 — R. Yoshiya on Exodus 20:20, F2), THE LIST READ BACKWARD named (Makkot 17b:9 — F4 the_list_read_backward), the do-not-read reading named (Sotah 38b:10), the juxtapositions named (Makkot 19a:3-5 — the second tithe and the firstborn; 19a:10 the chain rule; 19a:7 I3 refuted) — no code. THE DISPUTES AS PARAMETERS carried into the registry: the_rite_of_slaughter (calendar_parameters.yaml — the signs, the bird, the uncertainty, the agent), the_wilderness_flesh (R. Yishmael, R. Akiva, the exile), the woman's rejoicing (Rosh Hashanah 6b:15-16 — a DATA row with two arms), the rest and the inheritance four ways (Zevachim 119a-b — a DATA row).
+
 ## Exodus block campaign — owner's word "Do 3")
 
 The campaign's exam rounds banked RULES-ABOUT-RULES on the corpus's
@@ -2328,3 +2330,38 @@ source of rain — the ocean sweetened in the clouds / the upper waters, 11:11 R
 Levites' placement — the elders below / the fit below / all below); Tosefta Sotah 8:5 (the writing on the stones / on the plaster); Sotah 32b:19 (the Shema as
 written / in any language); Berakhot 33a:24 (havdala's seat); Ketubot 111a:1-6 (the ascent — the exile's decree and the oaths / the individual's leave); 111a:16-21
 (the dead outside the Land — not rising / rising by tunnels); Rosh Hashanah 17a:12-13 (how He tilts the scale; the first sin overlooked).
+
+### THE DEUTERONOMY WALK 10b — THE DOCKET OF CHAPTER 12 (2026-09-20/21, three runs; logic/oral_triage/deu_12_reeh_exam_2026-09-20.md, 1538 rows — 423 carried, 1115 read whole here)
+Every code checked in this file's tables before it was typed. I1 (qal wa-chomer, the a-fortiori): Bekhorot 33a:1-3 — the non-priest's eating from the impure
+priest's (the refutation: the communal service; Beit Hillel: the inference is on the eating); 33b:16 — the cut to the detached (Leviticus 22:24); Temurah
+17b:6-7 — the offspring from the substitute, REFUTED (substitution applies to every offering) so the verse is needed; Makkot 17a:12-18 — R. Shimon's five rungs
+on 12:17's list (the wall from the second tithe, the sprinkling from the peace offering, the non-priest from the firstborn, the curtains from the sin offering),
+17b:3-8 — Rava's refutation of each rung (the acute mourner, the coin, the hands and the waving, the womb, the atonement), 17b:10 — THE RIDER: a mere
+prohibition, no lashes, from an inference; 18a:2 (carried) — Rava: the repetition designates, not the a-fortiori; 23b:2 (carried) — the blood's reward; Keritot
+22a:2-3 — human milk from the non-kosher animal's, REFUSED by Leviticus 11:29; Bekhorot 33a:1, Zevachim 85a:5 and Chullin 84b:6, 102b:2, 114a:9, 114a:13,
+114b:1, 115a:4, 115b:8 (the earlier runs). I2 (gezerah shavah, the verbal analogy): Makkot 18b:14 — "hand" (26:4) / "hand" (Leviticus 7:30): the first
+fruits waved by the priest under the owner's hands; Sotah 38a:4 — "so you shall bless" (Numbers 6:23) / "stand … to bless" (27:12): standing; 38a:6 — the same
+with Aaron's lifted hands (Leviticus 9:22); 38a:10 (carried) — "to put His name there" (12:5) / "put My name" (Numbers 6:27): the Name pronounced only in the
+Temple; the earlier runs' seats (Bekhorot 15b:8, Keritot 3b:12, Makkot 16b:15, 19b:6, Menachot 77b:4, Sanhedrin 47b:18, Yevamot 73b:7, 86a:5, Zevachim 83a:3,
+83a:5, 86a:7, 119a:6; Chullin 115b:4, 115b:7, 116a:7) with the riders at Zevachim 86a:8 (the freeness) and Chullin 115b:13 (not refuted by reasoning). I3
+(binyan av, the common element): Makkot 19a:7 — the first fruits and the firstborn, REFUTED (both have an altar aspect) so the juxtaposition of 14:23 is needed;
+Chullin 114a:15-17, 115b:16, 116a:1-2 (the earlier run — the refutation rule). I6 (kelal u-frat u-kelal, general-particular-general): Keritot 21a:5 — "no
+manner of blood" / "of bird or of animal" / "any blood" (Leviticus 7:26-27): the like of the detail — a light and a severe impurity, forbidden-or-permitted, a
+type of meat; 21a:7 — THE RIDER: R. Yishmael's school expounds even where the generalizations differ (lashes against karet (excision)). I12 (davar ha-lamed
+me-inyano, the context): Chullin 115b:2 — Rabbi's 12:25 defended from the adjacent verses (the earlier run). E28 (from-the-preceding): Chullin 102a:11, 113a:19,
+115b:5 (the earlier runs). E29 (gematria, letter-values): Makkot 23b:18 — "Torah" (33:4) six hundred and eleven, with the two heard from the Mouth the 613
+(the row continues past the range). THE JUXTAPOSITIONS (the likening by adjacency) — no code, named: Bekhorot 15a:12 (the animals of 12:15's comparison),
+15a:15-17 (the fat's karet by "its blood" against the juxtaposition), 16a:14 (the substitutes to the five sin offerings by "split hoof"), Makkot 19a:5 (the
+second tithe to the firstborn in 14:23 — only with the Temple), 19a:10 (the chain rule — a matter derived by juxtaposition teaches by juxtaposition for the
+non-sacred), and the earlier runs' (Bekhorot 14b:13, Chagigah 4b:2, Keritot 3b:13, Zevachim 107a:1, 60b:4, 62b:10, 84b:7, 115a:6, 116a:2, Pesachim 22a:8,
+22b:3, 24a:12, Yevamot 73b:2, Chullin 28a:4, 84a:5, 84a:7, 115a:6). THE READINGS "DO NOT READ" (al tikrei) — no code, named: Sotah 38b:10 ("will be
+blessed" / "will bless"); Zevachim 115b:12, 115b:15, 119b:8; Chullin 115a:5 (the earlier runs). THE TRANSPOSITION — no code, named: Sotah 38a:11 (R. Yoshiya's
+Exodus 20:20 reordered — where I come and bless you, there My name). THE LIST READ FROM ITS END — no code, named: Makkot 17b:9 (R. Shimon on 12:17). THE
+GENERALIZATION AND A DETAIL WITHOUT THE SECOND GENERALIZATION — no code, named: Keritot 21a:4 (refused: the verse generalizes again). THE DISPUTES AS
+PARAMETERS (the machine's data channel): Chullin 16b:15-17a:4 (the wilderness flesh — released at the entry / the rite required; the exile the third state);
+Chullin 28a:4-6 (the bird's slaughter by Torah law or the scribes; which sign); Zevachim 119a:9-13, 119b:1-5 (12:9's two nouns four ways); 117a:8-117b:1 (the
+Gilgal row's five arms); Bekhorot 33a:8-11 (the impure eater of the blemished firstborn — from his own body or from outside); 33b:5-7 (the congested firstborn's
+bloodletting — three arms); Temurah 17b:11-13 (the blemished peace offering's offspring — the altar / grazing); Makkot 23b:4-7 (the flogged exempt from karet
+(excision) or not); Rosh Hashanah 6b:15-16 (the woman's rejoicing — hers or her husband's); Keritot 22a:10-13 (the life-blood's boundary — while it spurts /
+from the last black drop); 21b:11-14 (the blood of creeping animals — lashes under which warning); Megillah 10a:2-9 (the first consecration for its time or
+forever); Chullin 116a:12-14 (the wild animal and the bird in milk).

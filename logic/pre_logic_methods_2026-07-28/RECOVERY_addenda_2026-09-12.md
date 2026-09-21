@@ -1261,3 +1261,15 @@ English's slip asserted; five forms; a cut from the bytes; the receipt's fourth 
 point after the ledger; the chain when its inputs exist; the form's name protected; every step timed. OWED TO 10b (COMPILE_DEBT's box (a)-(k)): the place a PARAMETER,
 the demolition's cells, the header's rows, the slaughter's switch, the receipt's pointer, the blood's cells, the offerings' ladder, the table, the nations cut off, the
 register's rows, the series DD, the docket. The records on the sheet; the forms in World/step9/forms_deuteronomy_walk/ (copy_ch12_forms.py).
+
+## §55 — RULE B AMENDED: THE 600k CAP (2026-09-20, the evening; the owner: "Let's set the cutoff at 600")
+After chapter 12's tail (sitting 10, committed 4af2953 and not pushed) the context stood at 350k with the compile's RUN A ahead; under the 400k cap the run would have waited for a compaction. The owner raised the cap: a run ends at the clean point nearest 600k, never past 650k. A THE CACHE LAW and C FEWER CALLS unchanged; the sitting shapes unchanged (a compile two runs + the tail, a reading one + its tail). COST_AUDIT_2026-09-20.md §7; the state doc's #200 addendum 3.
+
+## §56 — THE DEUTERONOMY WALK sitting 10b (2026-09-20/21): CHAPTER 12 COMPILED — the state doc's #201 and its addenda 1-4; the map's "Sitting 10b … THE DESIGN", the three "THE DOCKET — AS RUN" paragraphs and "Sitting 10b — AS BUILT"
+The two-run rule's fifth compile sitting under the cost rules with the docket clause three times: RUN A (the rereads, the recon and the scan derived by line-based
+substitutions, the design), THE DOCKET in three runs (1,538 rows — 1,115 read whole here, 423 carried with their ledgers' own verdict lines), RUN B (the probes to FAIL,
+the types, the callees' print, the runner 65/65 first run, the recorder with the cache off, the stitcher with no marker, the literals, the tape with DD1-DD9, the chain
+launched at the run's end), THE TAIL (the summary read once, the demands filed, the records, the forms, the message). The crowns: the place installed with the eras
+table's own ink (high_places_banned reused), the slaughter law a status conditional on the entry with its arms a parameter, the rite a parameter (the oral law's seat),
+the gates' bar with the ladder and the lashes, the grep's booleans. The lessons in the AS BUILT (twelve). Every step timed. Uncommitted since 4af2953: 10b whole; the
+message at <scratch>/commit_msg_ch12b.txt.

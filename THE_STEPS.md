@@ -4387,7 +4387,7 @@ context being re-written from scratch after a wait longer than five minutes — 
 cache dies at five minutes; another third was every call re-reading a context that had grown past 600k; the typing was under a fifth, and the paperwork
 per sitting under a twentieth. So three rules, and none of them touches what is read, typed or gated: A. THE CACHE LAW — no wait past five minutes on a
 big context; every long job is launched at the end of its run, the clean point is written, Brian compacts, and a short run on a small context reads
-the result; compact before a break. B. THE 400k CAP — a run ends at the clean point nearest 400k. C. FEWER CALLS — one call per step, batching, never
+the result; compact before a break. B. THE 600k CAP — a run ends at the clean point nearest 600k (set at 400k and raised the same evening on Brian's "Let's set the cutoff at 600"). C. FEWER CALLS — one call per step, batching, never
 skipping. "One book at a time and then integrate" was weighed and set aside: it trims the paperwork, which is not the cost, and a slip found after ten
 chapters is ten chapters wide. The record: World/step9/COST_AUDIT_2026-09-20.md.
 
@@ -4531,6 +4531,17 @@ of 115 min 30 s; the rest was the reading and the typing. Next: the commit on yo
 slaughter's switch, the receipt's pointer — or the ten-commandments schema first.
 
 
+
+
+**Deuteronomy 12 compiled (2026-09-21, sitting 10b — the two-run rule's fifth compile sitting, the docket in three runs):** the place which the LORD will choose is
+installed here, and the machine already held its table — the stations (the Tabernacle, Gilgal, Shiloh, Nob and Gibeon, Jerusalem) sit in three cells, so the
+chapter's law reads that table and REUSES the erection's block on the land as a third entry, with no new parameter. Four laws had no code: the Name's erasure, the
+place's law with the rejoicing, the profane slaughter's release with the gates' bar and the Levite, the inquiry after the nations' gods — four lines at the chapter's
+own day, no marker, eight writes. The slaughter law is a status conditional on the entry, its two arms and the exile's third state a parameter; "as I have commanded
+you" points at nothing written — the rite is a parameter the cell reads as data (Mishnah Chullin 2:1), the oral law's own seat. The readback's forms on file held with
+no new form — thirty-one rows, one per verse; five law rows supplied with their writes. The exam has two flogged persons this time (the Name's eraser, the tithe's
+eater outside the wall) and three exempt. The runner 65/65 on its first run; the tape 10/10 on its first run, dd1-dd9 match; the gates chain the gates chain three times — the first pass (449 s) stopped at the dependency gate by eight demands where the design predicted one: the registration edge from the sequence file (rule 9), three edges the token census matched on homographs of sense (the family runner's inheritance law against the land's rest at 12:9 and the levite's barred share at 12:12; the cattle tithe of temurah and yovel against the second tithe of grain, wine and oil at 12:6, 11, 17) filed false with their whys, one edge to the offerings runner (12:6's burnt offerings are leviticus 1's, reached through the ordinances runner's altar cell by call) filed via — the yaml's own form for a reference without a call, verified by the gate against the live import — and three as_when pointers filed run_citation: 12:20 the design's predicted pointer demanded after all (exodus 34:24 through the erection runner; the sifrei 75:2's dispute on the callee), 12:21 the receipt without the name seen by the token census where the register's finder is blind (its referent oral — the rite of slaughter, chullin 28a:5), 12:22 the comparison that teaches and is taught (leviticus 17:13 through the sanctions runner; the sifrei 75:15, chullin 28a:4); the state doc's correction had counted seven, the print's line 79 read whole made eight; the second pass from that step green through the dependency gate, the build, the journal gate and the register gate and killed at the positions table (eight workers, each the whole tape) by the session's memory watchdog — 7b's and 8b's precedent, not the machine's own gate; the positions table then measured by four workers with the step's own command outside the chain; the third pass from the checkpoint step all green. Every step timed: 2860
+machine seconds over 64 steps for the compile.
 
 ## Step 6 — Publish
 Export, parity check against the public repo, deploy. Owner's word.
