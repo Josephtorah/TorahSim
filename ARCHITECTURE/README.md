@@ -75,7 +75,7 @@ build, none of them rulings. [DATABASE_SPECULATION.md](DATABASE_SPECULATION.md) 
 thread). [DEUTERONOMY_SO_FAR.md](DEUTERONOMY_SO_FAR.md) (the public tutorial, rewritten from scratch 2026-09-18 on the owner's word: what Deuteronomy is, then what each of the five books and the Joseph story do on the machine and where each sits; with its epub). [THE_BOOKS_AS_A_PROGRAM.md](THE_BOOKS_AS_A_PROGRAM.md)
 (2026-09-18, the main thread: law is code and narrative is data; what each book does, Deuteronomy the release, Joshua the install, Judges
 the loop without the operator, the Prophets the event stream, Ezekiel a second spec; the Decalogue as schema and how the pass missed it;
-the proposals that wait on the owner's word; with its epub, 2026-09-18). A finding that becomes a ruling moves into the tutorials and the maps; until then it stays
+the proposals that wait on the owner's word; with its epub, 2026-09-18). [TEACHING_THE_WORLD.md](TEACHING_THE_WORLD.md) (2026-09-21, the main thread on the owner's word: the plan for the public explanation — the two claims kept apart, the vocabulary table and the jargon lint, the five-part example form with Gad and Reuben's account filled in from the running world, the six examples, the machine in C4 pictures, the arc42 map, the design-recovery report of the text, the verify page, the order of work; with its epub). A finding that becomes a ruling moves into the tutorials and the maps; until then it stays
 here, dated.
 
 ## The six layers

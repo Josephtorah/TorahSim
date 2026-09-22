@@ -6788,3 +6788,823 @@ in the background, the clean point -> THE TAIL: the summary read once, the deman
 map's AS BUILT, COMPILE_DEBT's sitting-11 box PAID and the 11b box, MIDDOT, MISHNAH_TOPICS, RESEARCH_LOG, THE_STEPS, THE_BRIEFING, THE_LOOP's step-6 row, RESUME,
 RECORD_FORMS, the state doc, the addenda, the recovery page, the memory), the forms copied (copy_ch13b_forms.py), the commit message (this sitting's and sitting
 11's, for the owner's word).
+
+THE DOCKET — AS RUN (2026-09-21, on "Run" after the compaction at #203 — ITS OWN RUN, ONE RUN under the two-run rule's ~700 clause): logic/oral_triage/
+deu_13_reeh_exam_2026-09-21.md — 565 rows (link 91 in 31 works, topic 474: the 28 Mishnah, Tosefta and Sifrei rows listed as topic rows;
+Sanhedrin 67a-67a 23; Sanhedrin 88b-88b 19; Sanhedrin 89a-90a 64; Sanhedrin 40a-41a 64; Sanhedrin 111b-113b 71; Zevachim 80a-81b 54; Sukkah 34b-34b 9; Menachot 41b-42a 40; Rosh Hashanah 28b-28b 25; Eruvin 96a-96a 14; Avodah Zarah 49b-50a 33; Bava Metzia 59b-59b 16; Yevamot 90b-90b 17; Shabbat 151b-151b 17); the verdicts LAW 127, DERIVATION 103, DISPUTE 88, CONTEXT 111, OUTSIDE 136 (the link rows LAW 35, DERIVATION 27, DISPUTE 14, CONTEXT 15, OUTSIDE 0; the topic rows LAW 92, DERIVATION 76, DISPUTE 74, CONTEXT 96, OUTSIDE 136); LAW by cell, this docket's own
+notes {'F1': 3, 'F2': 11, 'F3': 10, 'F4': 33, 'F5': 11}; credited 196 — 156 CARRIED WITH THEIR LEDGERS' OWN VERDICT LINES (ch13_credit_carry.py, 10b's form) and 40 whose ledger's form carried
+no verdict READ WHOLE HERE from ONE SHARED FILE (ch13_docket_U.py — every part imports it, SPEC = CREDITED_SPEC + OWN_U + OWN: no index lookup for the
+unresolved rows, and the dump's one duplicate — Tosefta Sanhedrin 14:1, a link row and the whole-chapter row — verdicted once there so both parts match the
+same tuple); 370 uncredited rows READ WHOLE in 4 chunk files at 64,000 bytes, ONE READ PAGE EACH (ch13_uncred_00.txt rows 0-187 (95 rows), ch13_uncred_01.txt rows 188-304 (108 rows), ch13_uncred_02.txt rows 305-421 (109 rows), ch13_uncred_03.txt rows 422-562 (58 rows) — 10b's D2
+lesson held); 409 ROWS READ WHOLE IN THIS RUN; VERDICTED in four parts on disk (A 188 rows (LAW 61, DERIVATION 34, DISPUTE 23, CONTEXT 63, OUTSIDE 7; 73 carried, 20 unresolved read here, 94 own); B 117 rows (LAW 31, DERIVATION 28, DISPUTE 32, CONTEXT 8, OUTSIDE 18; 2 carried, 7 unresolved read here, 108 own); C 117 rows (LAW 7, DERIVATION 20, DISPUTE 20, CONTEXT 11, OUTSIDE 59; 5 carried, 3 unresolved read here, 109 own); D 144 rows (LAW 29, DERIVATION 21, DISPUTE 13, CONTEXT 29, OUTSIDE 52; 76 carried, 10 unresolved read here, 57 own); build() asserting each slice matched — no unmatched address on
+the first check of all four; the 41 shared rows all used); coverage computed (missing 0, extra 0; 1 duplicate address); OUTSIDE by work {'Mishnah Makkot': 1, 'Sanhedrin': 24, 'Zevachim': 39, 'Sukkah': 2, 'Menachot': 29, 'Bava Metzia': 11, 'Yevamot': 13, 'Shabbat': 15, 'Tosefta Sanhedrin': 2}; the verses
+no link row cites [3]; lint 0 on the first run. THE INSTRUMENTS derived from 10b's forms by derive_ch13_docket_tools.py with three departures asserted (the
+cells' names; the chunk cap 76,000 → 64,000; NO run boundary — SPLIT_AT empty) and the writer by derive_ch13_docket_writer.py (the four parts, the verse
+regex and range, the header ch13_docket_hdr.py and the crowns ch13_docket_crowns.py spliced in, the FOURTEEN ranges ASSERTED against the scan's print).
+THE CROWNS (the file's finds section): THE SEDUCERS' PARAMETERS FROM ONE NOUN AT THEIR BAVLI SEAT (Sanhedrin 111b:14-15 — "gone out" themselves, "men"
+two and not women or children, "Belial" without a yoke, "from your midst" not the border, "their city", "saying" the witnesses and the forewarning for each:
+93:1-5 clause by clause; Mishnah 10:4's mode-property inverse THE PROPERTY TABLE'S GROUND); JERUSALEM CANNOT BECOME ONE (Bava Kamma 82b:4, 8 — "to dwell
+there", not apportioned to a tribe); THE MAJORITY'S PROCEDURE A PARAMETER (112a:4-5 — imprison each / stone each until half then the sword / multiply the
+courts), THE VENUE the Great Sanhedrin from 17:5 (112a:6), THE THRESHOLD thirty days (112a:7-9), THE SELF-DRAWN CITY THE OPEN DILEMMA (112a:2-3); THE
+PROPERTY TABLE'S FOUR CELLS FROM THE VERSE'S FOUR PHRASES (112a:10) with its edges (112a:11-17 — the deposits, the joint animal, the wig, the carcass; R.
+Shimon's reason), "by any means" (Bava Metzia 31b:3), THE SWORD'S SEAT (Sanhedrin 52b:12); HEAVEN'S SPOIL AT ITS FOLIO (112b:1-113a:2; Temurah 8a:9 — die
+/ redeemed / decay / interred; R. Shimon's exclusions; Shmuel's rule; the wall's two capacities); THE HEAP'S ARMS AT THEIR PRINCIPLE (113a:4-6 — R. Avin's
+rule, I4 refused / applied) and JERICHO the run's case with Hiel (113a:7-10); "WHOLLY" AS THE WHOLE OFFERING'S CREDIT (111b:12); THE BENEFIT BAN'S SOURCE
+AND REACH (Avodah Zarah 12b:7 the stores; 34b:15 the whole animal; Tosefta Avodah Zarah 7:5 the pedestal; Pesachim 48a:5 the warning; Mishnah Shabbat 9:6
+any amount; Sukkah 34b:8 THE CITRON OF A CONDEMNED CITY UNFIT; Avodah Zarah 50a:10 an idolatrous offering never nullified); THE ANGER KEYED AND THE MERCY
+TWO-ARMED at three seats (Mishnah 10:6, 113b:2-3, Tosefta Sotah 10:1; Shabbat 151b:14, Yevamot 79a:3, Beitzah 32b:4 — DATA rows, no write); THE FALSE
+PROPHET'S TABLE AND THE SIGN'S DOMINION (Sanhedrin 90a:2-11 — the essence / the part / the hour; idolatry even a day; R. Yosei HaGelili's dominion at its
+Bavli seat, R. Akiva's Hananiah; Mishnah 11:1 and 11:5; 89b:15-21's arms with their grounds — I2 on "thrust", an unspecified death strangling); THE SIGN
+AND THE PRESUMPTION (89b:6-7 — the established prophet needs none; 13:2 the definition of a prophet, Horayot 13a:12); ELIJAH AT CARMEL HEEDED and
+SAFEGUARDING A MATTER (Yevamot 90b:5-6; the court's emergency stoning the same ground, 90b:10-11); THE INCITER'S MISHNAH AND THE ENTRAPMENT (67a:2-16 — no
+forewarning to two hearers, the fence and the lit room, THE FIFTEEN UTTERANCES a three-by-five table, ben Setada hanged); THE COURT'S RULE INVERTED AT ITS
+SEAT (33b:7, 36b:5, 43a:21; 85b:2 the son against his father; 61b:3-11 the consent alone, the near teach the far; 63b:7 13:12 the inciter's warning); THE
+SEVEN INTERROGATIONS AND THE PROBES (40a:1-4, 40a:15, 40b:1-20 — I2 "diligently" FREE, eleven terms, THE EIGHTH, the tolerance table, the deliberation's
+order the rule 13:9 inverts; 41a:18-23 "CERTAIN" THE CONGRUENCE RULE; 40b:21-41a:12 the forewarning's four sources and its purpose; 41a:25 the capital
+court's end forty years before the destruction — a clock datum); THE EXECUTION'S TIMING NAMING THE CHAPTER'S THREE (Mishnah 11:4; Tosefta Sanhedrin 11:3);
+THE HEADER AT THREE GRAINS (Mishnah Zevachim 8:10 and Zevachim 80a:1-4, 81a:1-4 — the active graver than the passive; Sukkah 34b:3-4 THE COUNTS FROM THE
+VERSE'S OWN NUMBERS; Menachot 41b:12-42a:2 four or three strings, no maximum but a minimum; Chagigah 8b:11 the festival's days); THE CHAPTER'S WORDS SPENT
+ELSEWHERE (Sotah 39b:9; Chullin 139a:1; Kiddushin 80b:6; Chullin 4b:10; the Belial analogies; Sanhedrin 3a:1's waiver; 54b:5's stoning by "kill"); THE
+SPINE'S OWN SEATS ON THE KIN (Sifrei Bamidbar 103, 113 — R. Yitzchak's I1 from idolatry, 114 — the stones and the stone with 13:10-11 inside); THE LAW AS
+A STUDY TEXT (Tosefta Sanhedrin 14:1 — the English machine-translated past its head). THE MIDDOT (checked in MIDDOT.md before typing): I1 at Sifrei
+Bamidbar 113:1, Sanhedrin 40b:7-8, 40b:10, 41a:8 (the "written though derivable" rider), Mishnah Makkot 1:4 (86:3's ground); I2 at Sanhedrin 40b:4-6
+(with the FREENESS rider at 13:15's third verb), 89b:16, 89b:18-19, 84a:14, 54b:5, 41a:4, Bava Batra 10a:10, Ketubot 68a:2, Tosefta Peah 4:19, Berakhot
+31b:4; I4 at Sanhedrin 113a:4-6 (refused by R. Yosei HaGelili under R. Avin's rule, applied by R. Akiva); the doubled verb NAMED at Bava Metzia 31b:3 and
+Sanhedrin 33b:7, no code. THE DISPUTES AS PARAMETERS: the_prophets_death (89b:15-21, 90a:1-11, 67a:7-8, 84a:14, Mishnah 11:1), the_signs_status (90a:10-11,
+89b:6-7), the_execution_timing (Mishnah 11:4, Tosefta 11:3), the_inquiries' COUNT (40b:11-14) and the hour's tolerance (40a:8), the probes' weight
+(41a:23), the majority's procedure (112a:4-5), a city in two tribes (111b:16-19), the self-drawn city (112a:2-3), the square (112a:18), the heap
+(113a:4-6), the consecrated animals (112b:2-6), the heave offering by possession (112b:10-11), the second tithe Heaven's (112b:12), the species' counts
+(Sukkah 34b:2-7), the strings (Menachot 41b:12-15), the mixed bloods (Zevachim 80a:2-4, 81a:2-4; Eruvin 100a:18), the festival's days (Chagigah 8b:11),
+the consent alone (61b:3-9), the deaths' severity order (40b:8). THE LESSONS: ONE SHARED FILE for the unresolved rows spares every part an index lookup and
+verdicts the dump's duplicate once; the check's total counts the duplicate, the writer's drops it — the records assert the difference from the prints; the
+export's empty rows (Sanhedrin 90a:14; Tosefta Sanhedrin 11:1, 12:1-4) are read as empty and said so; a machine-translated Tosefta row is read whole and its
+illegible tail named. COMPILE_DEBT's 11b box (l) is marked PAID with the box at RUN B. THE INSTRUMENTS (the scratchpad, copied by copy_ch13_docket_forms.py):
+derive_ch13_docket_tools.py and its five, ch13_credit_carry.out, ch13_credited_rows.py, ch13_docket_U.py, ch13_docket_A-D.py, ch13_d1_check.py and its
+print, ch13_docket_hdr.py, ch13_docket_crowns.py, derive_ch13_docket_writer.py, write_ch13_docket.py and its print, write_ch13_docket_records.py, the dump.
+RUN B next on the owner's word, after a compaction: the probes to FAIL (Q34-Q36, BEFORE the types; the reuse literals adding_barred / cleaving_commanded /
+pity_barred ONE grepped and retyped from the print), the types with the docket's names and values (the_prophets_death — stoning the Sifrei's and the
+Rabbis' / strangling R. Shimon's and the answer sheet's; the_signs_status — R. Yosei HaGelili's dominion / R. Akiva's fallen prophet; the_execution_timing
+— kept to the Festival / at once with the notice; the_inquiries — the seven, "I do not know" voids the interrogations not the examinations, a contradiction
+both, "certain" the congruence rule; the majority's procedure, the self-drawn city and the property table's edges as DATA rows), the callees' facts, the
+runner cold_run_seducers.py the 68th, the recorder with the cache off, the stitcher, the literals DE1-DE9, the tape, the chain LAUNCHED, the clean point;
+THE TAIL.
+
+## Sitting 11b — THE COMPILE OF CHAPTER 13 — AS BUILT (2026-09-21; on the owner's "Go" after the compaction at #203 addendum 1 — the two-run rule's sixth compile sitting under THE COST RULES, the docket in one run: four clean points, #203 and its addenda 1-3)
+
+THE DESIGN HELD ON ITS SPINE — four own-day lines, no marker, eight writes on Israel (five new, THREE REUSES), no debit, RUN (1327, 96, 88, 0, 12, 1634, 44, 319, the
+four pairs, 127) as the arithmetic wrote it, PREVIOUS_RUN 10b's exactly, the runner 56/56 on its FIRST graded run, THE TAPE 9/10 ON ITS FIRST RUN — DE8 DIVERGED on one typed claim (the seducers' one formula: 13:14's nearest verse by computation is Naboth's witnesses, 1 Kings 21:10, not 13:3 or 13:7 — the reading's comment 'each other's closest kin' held for two of the three, its own assert said so), retyped once from the print in the sequence file, the patch's form, the cell's verdict and the DATA row (the cases regenerated, the runner 56/56 again); 10/10 ON ITS SECOND RUN, DE1-DE9 MATCH, the RUN tuple and THE REST on the first run already. THE DEPARTURES (read at the prints,
+never predicted): (1) THE GREP DECIDED, AND EVERY SEAT WAS A COUNT — the reuses' ONE stood at SEVEN seats (CC3, CQ6, DB2, DC6 in cold_run_sequence.py; Q17, Q27, Q30 in
+readback_probes.py) where the design had named one sure and two doubtful; all seven retyped ONE -> TWO before the tape (10b's booleans turned); (2) AN EIGHTH STALE
+LITERAL the design did not predict — DD7, the register's footer at 12:1: (3) THE BLOCK'S TWO SEATS TURNED DAEMONS BY THE CHAPTER'S OWN DAEMON — law_seducers given_at Deut 13:1
+sits inside (Deut 12:1, Deut 28:69], the one block the header at 12:1 and the footer at 28:69 SHARE, and the gate's verify refuses a declared green as STALE: 12:1's EMPTY declaration REMOVED at the types (10b's why had said 'chapter 13's the first
+candidate'), 28:69's demanded by the chain's first pass and removed at the tail, register_probes' EMPTY 3 -> 1 retyped from the gate's print; DECLARED 100 -> 98 where the design said 'unmoved'; (4) TWENTY CALL edges — the design's nineteen and holiness (13:9's standing duties, Leviticus
+19:16 and 19:18 by CALL); (5) THE READBACK'S CENSUS — seven on the tape, SEVENTEEN by CALL, five rows both (the design's 'nineteen T4 rows by CALL and eleven T1 rows
+by kind'); Q34's sum 24; the eight SUPPLIED rows CARRY THEIR KIN — the rb() form relaxed (10b's asserted a SUPPLIED row references nothing); (6) THE STOREKEEPER A
+CASE, NOT A PERSON — an ask returning a statute's write cannot be a person's (the case dispatch names the case's seven effects alone): forty persons, the exam's
+56 cases in seven cells; (7) A COUNT SLICED AS TEXT — MM.moriah('test_verb_seats') returns 1 and the cell sliced it: the generator found the TypeError the
+fast checker cannot (the checker execs definitions, the generator runs the asks) — every sliced verdict str()'d, fifty-three uses; (8) NINE TOKEN-SEATS in eight verses
+for the stoning verb in Leviticus and Numbers (Lev 24:16 twice) — retyped from the checker's print; (9) THE DATA ROWS thirty-nine (the design's 'about thirty');
+(10) DE8 — 13:14's nearest verse by computation is Naboth's witnesses (1 Kings 21:10): the reading's comment 'each other's closest kin' held for two of the three (its
+own assert said so) — THE TAPE 9/10 ON ITS FIRST RUN — DE8 DIVERGED on one typed claim (the seducers' one formula: 13:14's nearest verse by computation is Naboth's witnesses, 1 Kings 21:10, not 13:3 or 13:7 — the reading's comment 'each other's closest kin' held for two of the three, its own assert said so), retyped once from the print in the sequence file, the patch's form, the cell's verdict and the DATA row (the cases regenerated, the runner 56/56 again); 10/10 ON ITS SECOND RUN, DE1-DE9 MATCH, the RUN tuple and THE REST on the first run already; (11) THE CLEAVING HOMOGRAPH — the chapter-10 runner's hole scan ('cleav' on Israel's ledger) matched chapter 13's
+devoted_thing_cleaving_barred once the tape's first run SEALED the writes: 'nothing of the devoted thing shall cleave to your hand' against 'to Him you shall cleave',
+one root two senses — excluded by name in cold_run_second_tablets.py with its why (a LATER chapter's name in an EARLIER runner's scan: 9b's and 10b's lessons turned
+once more); (12) THE TYPES' GUARD — 'Ketubot 111b' inside cleaving_commanded's ink matched the bare '11b' guard on the first run; retyped to the full marker; (13) THE
+CALLEES' FORMS settled at the print — temurah's devote takes a string case, lev24's talion a default parameter, mekoshesh's 'stoning' needs died_at, holiness's 'blood'
+needs case= (10b's lesson 2 held four times); (14) THE EXAM'S PERSONS forty — SIX EXEMPT (the prophet who keeps part and voids part, the prophet who spoke under duress,
+Elijah at Carmel, the inciter who retracts before the fence, the enticed who did not consent, the inhabitants of Jerusalem drawn away), ONE LASHED (the one who plows
+with the Asherah's wood — Makkot 22a:9), the false prophet and the inciter written TWICE (the death and the purge), THE CONDEMNED CITY an exam entity with a DESTROY
+write (city_devoted) — the scene ?; (15) THE PROBES' FAIL PRINT 30/36 — Q17, Q27 and Q30 failed beside Q34-Q36 by their own retypes; (16) THE POINTER
+at 13:18 DEMANDED by the census; the registry's homographs not matched; (17) THE GATES CHAIN THREE TIMES — the first pass (722 s, LAUNCHED at RUN B's end, its summary read once at the tail) stopped at THREE steps with one cause and one demand: the probes (register_probes R6, the gate on the running world, returned 1 and held EMPTY 3 as a literal), the dependency gate (ONE demand — the one the design predicted, decision 5: the AS_WHEN pointer at 13:18 'as He swore to your fathers', filed RUN_CITATION of the patriarchs' oath — seven_nations.the_holy_people('the_oath') by CALL, the fathers' merit not_righteousness.the_intercession('remember_your_servants') by CALL, the Sifrei 96:5 — the registration edge having been filed at RUN B, no homograph matched), and the register gate (ONE fail: 'footers Deut 28:69: STALE — declared EMPTY, the world now says DAEMONS' — THE HEADER AT 12:1 AND THE FOOTER AT 28:69 SHARE ONE BLOCK (Deut 12:1, Deut 28:69], and the chapter's daemon given_at 13:1 turned both seats DAEMONS: 12:1's EMPTY declaration had been removed at the types, 28:69's is removed at the tail, register_probes' EMPTY count retyped 3 -> 1 from the gate's print, DECLARED 98 with the stale declaration uncounted — one patch, patch_tail_ch13b.py, files all three); the second pass run WHOLE from the tape (a rerun with the probes starts at the tape — 7b's lesson; the clean point's note had said '--from probes') GREEN through the tape, the twelve probe suites, the daemon gate, the dependency gate (208 pointers), the build, the journal gate and the register gate (DECLARED 98, DEBT 0, FAILS 0 — the footers {'DAEMONS': 8, 'EMPTY': 1}), and KILLED at the positions table (eight workers, each the whole tape) by the session's memory watchdog at 704 s — 7b's, 8b's and 10b's precedent, not the machine's own gate; the positions table then measured by FOUR workers with the step's own command outside the chain (298 checkpoints over 174 pauses in 428 s, 56 at pause 0, the last fall at pause 173 — Deut 13:13, DE1-DE9 in the table); the third pass from the checkpoint step ALL GREEN (checkpoint 7/7, the journal stamped, the sweep 67/67 at 7007 graded cells in 438 s, the journal UNMOVED).
+THE RUN: readback_probes.py Q34-Q36 to FAIL (30/36 — patch_probes_ch13.py, the three reuse probes retyped with them) BEFORE the types; add_types_ch13.py (kinds
+1150 -> 1155, effects 1049 -> 1056 with adding_barred's, cleaving_commanded's and pity_barred's rows AMENDED for the reuses, the 73rd daemon with seven WRAPPED, the
+span and the twenty edges, I5 73, the_signs_status, the_prophets_death, the_execution_timing and the_inquiries in calendar_parameters.yaml — 64 rows, exercised by
+the runner's DATA; the register file's 12:1 footer REMOVED); ch13_callees.py (every CALL's asks and results printed — 172 KB, twenty runners); derive_ch13_part1.py
+(the helpers from the chapter-12 runner by content markers, W12 made W13; the ink block from ch13_ink.py in THREE blocks — the kin by computation, the phrases, the
+register — with the one store-bound line dropped: 48 asserts; the counter's day, the four parameters, the one-database scans SEDUCERS_SCAN [] and REUSE_SCAN
+[israel_people] x3, the callees' facts asserted from the print); ch13_part2.py and ch13_part3.py (six cells and the table, 56 asks — {'F1': 5, 'F2': 13, 'F3': 9, 'F4': 11, 'F5': 9, 'F6': 2, 'RB': 7}); ch13_part4.py
+(the nineteen rows, thirty-nine DATA rows, the daemon with its eight writes, forty persons — the scene's forty submits written by ch13_scene_gen.py from the list and
+frozen, the narrative — every census printed before it is asserted); ch13_fastcheck.py over parts 1-4 (six fails on the first pass — five counts retyped, the
+storekeeper made a case; 0 on the second); ch13_cases_gen.py (56 cases); ch13_assemble.py --guard 56; cold_run_seducers.py 56/56 (the 68th runner,
+277 KB); seq_record_ch13.py with the cache OFF (3120 records; seducers statute 4 of 44 submits);
+seq_stitch_ch13.py (no marker; PLACEMENT {'markers': {'text_constrained': 108, 'reading_placed': 49}, 'events': {'text_constrained': 110, 'page_order': 1159, 'reading_placed': 58}}; CENSUS (2520, 1319, 1327, 1185, 6, 10, 9, 0, 71, 172, 131, 15, 26, 872, 272)); patch_seq_literals_ch13.py (the import line, DAEMON_ORDER, RUN, PREVIOUS_RUN, NEWEST_RUNNER,
+PLACEMENT and CENSUS read, DE1-DE9, the VERDICTS; the five stale literals retyped); THE TAPE 9/10 ON ITS FIRST RUN — DE8 DIVERGED on one typed claim (the seducers' one formula: 13:14's nearest verse by computation is Naboth's witnesses, 1 Kings 21:10, not 13:3 or 13:7 — the reading's comment 'each other's closest kin' held for two of the three, its own assert said so), retyped once from the print in the sequence file, the patch's form, the cell's verdict and the DATA row (the cases regenerated, the runner 56/56 again); 10/10 ON ITS SECOND RUN, DE1-DE9 MATCH, the RUN tuple and THE REST on the first run already; checkpoint_check.py --all (298 rows, 18 miss — the eighteen
+known, 0 raised); THE GATES CHAIN THREE TIMES — the first pass (722 s, LAUNCHED at RUN B's end, its summary read once at the tail) stopped at THREE steps with one cause and one demand: the probes (register_probes R6, the gate on the running world, returned 1 and held EMPTY 3 as a literal), the dependency gate (ONE demand — the one the design predicted, decision 5: the AS_WHEN pointer at 13:18 'as He swore to your fathers', filed RUN_CITATION of the patriarchs' oath — seven_nations.the_holy_people('the_oath') by CALL, the fathers' merit not_righteousness.the_intercession('remember_your_servants') by CALL, the Sifrei 96:5 — the registration edge having been filed at RUN B, no homograph matched), and the register gate (ONE fail: 'footers Deut 28:69: STALE — declared EMPTY, the world now says DAEMONS' — THE HEADER AT 12:1 AND THE FOOTER AT 28:69 SHARE ONE BLOCK (Deut 12:1, Deut 28:69], and the chapter's daemon given_at 13:1 turned both seats DAEMONS: 12:1's EMPTY declaration had been removed at the types, 28:69's is removed at the tail, register_probes' EMPTY count retyped 3 -> 1 from the gate's print, DECLARED 98 with the stale declaration uncounted — one patch, patch_tail_ch13b.py, files all three); the second pass run WHOLE from the tape (a rerun with the probes starts at the tape — 7b's lesson; the clean point's note had said '--from probes') GREEN through the tape, the twelve probe suites, the daemon gate, the dependency gate (208 pointers), the build, the journal gate and the register gate (DECLARED 98, DEBT 0, FAILS 0 — the footers {'DAEMONS': 8, 'EMPTY': 1}), and KILLED at the positions table (eight workers, each the whole tape) by the session's memory watchdog at 704 s — 7b's, 8b's and 10b's precedent, not the machine's own gate; the positions table then measured by FOUR workers with the step's own command outside the chain (298 checkpoints over 174 pauses in 428 s, 56 at pause 0, the last fall at pause 173 — Deut 13:13, DE1-DE9 in the table); the third pass from the checkpoint step ALL GREEN (checkpoint 7/7, the journal stamped, the sweep 67/67 at 7007 graded cells in 438 s, the journal UNMOVED): the probe suites (readback 36/36, census 224/224, installation 6/6 with I5 73,
+large_letter 6/6, checkpoint 7/7, ink_cache 8/8), the daemon gate (73 daemons, 498 functions),
+the dependency gate (669 edges, 208 pointers; the link census reference 641 / transfer 48 / hypothesis 9 / none 179), build_world, the journal
+gate (12 kinds, 9772 rows), THE REGISTER GATE --strict (DECLARED 98, DEBT 0, FAILS 0 — the header at 12:1 and the footer at 28:69 DAEMONS by the
+chapter's own daemon, their two EMPTY declarations on the one block removed), the positions table (298 checkpoints), the sweep 67/67 at 7007 graded cells, the home-path gate. THE TIMING TABLE (every step timed — the owner's ask at sitting 10; the machine's seconds per step, the model's reading and writing between them the rest): SITTING 11 (the reading) 21 timed steps, 600 machine seconds; SITTING 11b (the compile — RUN A, the docket's one run, RUN B, the tail) 58 timed steps, 3748 machine seconds; the first row 12:33:18, the last 16:27:17; THE SLOWEST OF 11b: B the gates chain, first pass (LAUNCHED at the run's end) 722s; T the gates chain, second pass (whole — GREEN to the register gate, KILLED at the positions step's eight workers by the session's memory watchdog at 16:17:16; 7b's, 8b's, 10b's precedent) 704s; T the gates chain, third pass (--from checkpoint: checkpoint, stamp, sweep, unmoved) 522s; T the positions table by FOUR workers outside the chain (the step's own command) 428s; B callees' facts printed (ch13_callees.py) 242s; B the recorder (INK_CACHE=0) 195s; B the tape, first run 195s; docket scan (second launch, the past-the-end guard) 135s. The table itself: <scratch>/ch13_timing.tsv, copied to the forms folder (ch13_timing.tsv).
+THE LESSONS (twelve): (1) A REUSE'S COUNT SEATS ARE FOUND BY ONE GREP over the sequence file AND the probes — a count moves in both, and this chapter every seat was a
+count; (2) A DAEMON GIVEN INSIDE A DECLARED-EMPTY BLOCK TURNS EVERY DECLARATION ON THAT BLOCK STALE — a header and a footer share one block (12:1 and 28:69); the gate's own rule refuses a declared green: both declarations go, the probe's EMPTY count with them,
+DECLARED moves down; (3) A PERSON'S ASK NEVER RETURNS A STATUTE'S WRITE — the case dispatch names the case's effects alone; an ask that writes the statute is a case
+row, not a person; (4) A SLICED VERDICT IS str()'D — a cell may return a count; (5) THE FAST CHECKER CHECKS DEFINITIONS, THE GENERATOR RUNS THE ASKS — a cells' dry-run
+belongs in the checker (owed); (6) A READING'S COMMENT IS NOT ITS ASSERT — the kin by computation is typed from the assert; (7) THE SEALED TAPE FEEDS EVERY RUNNER'S
+HOLE SCAN — a later chapter's name in an earlier runner's root pattern is excluded by name with its why; (8) A SUPPLIED ROW MAY CARRY ITS KIN — the chapter's rows all
+have kin: the form's note at THE LOOP's step 6; (9) A MARKER GUARD IS THE FULL MARKER — '11b' sits inside 'Ketubot 111b'; (10) THE PRINT SETTLES EVERY CALLEE FORM
+(10b's lesson 2 held four times); (11) THE PURGE FORMULA NAMED AT ITS FIRST SEAT — the eight seats ahead second entries, the compile's gain (8b's lesson turned
+forward); (12) THE TWO-RUN RULE HELD on its sixth compile sitting under the cost rules: RUN A, the docket in one run, RUN B with the chain launched at its end, THE
+TAIL — four clean points, the owner compacting after each. NEXT on the owner's word: the commit; CHAPTER 14's reading (14:1-29) in one run — the mourning's cuts, the
+clean and the unclean beasts, the second tithe (the chapter's own formula seats: 14:1's 'sons of the LORD', 14:22-26's tithe at the place); on the table: the
+Decalogue-schema sitting, the SUPPLIED forms, the calf's day marker, the registry's homographs, the receipt's third and fourth shapes (a gate sitting), THE INSTALL
+HYPOTHESIS, the eras table's merge, the chain's positions step at four workers.
+
+
+## Sitting 12 — CHAPTER 14, Deuteronomy 14:1-29 (2026-09-21; the owner: "Go" after 11b's tail — the commit of chapter 13 still on his word): the reading and the unit — THE DESIGN, written after the measurements and the ink, before a row is typed; ONE RUN + ITS TAIL under THE COST RULES, every step timed; THE ROWS IN TWO HALVES (sitting 11's lesson 4)
+
+THE ONE RUN (timed step by step in the scratchpad's ch14_timing.tsv; the table in the AS BUILT): the rereads (the recovery page, the map's "Sitting 11b … THE
+DESIGN" with its docket paragraph, the memory index; THE_STEPS' compiler block, Step 2's head and Step 5's head; the map's "Sitting 11" — the reading's newest
+instance, its design and AS BUILT; the 11b box's items owed to 14), the measurements (ch14_dump0.py derived from the forms' ch13_dump0.py by twenty-six asserted
+substitutions — chapter 13's fold of the English's 12:32 dropped, the English's chapter 14 counting as the Hebrew's, A0 the identity at cost 17; the spine split
+with piska 96's tail folded in — 96:10 fetched from the export by the consonant rule; ch14_measure1.py — chapter 13's helpers and register block by substitution,
+its sections chapter 14's own: THE KIN FOUND BY COMPUTATION beside THE LAW KIN NAMED and THE TWIN CHAPTER Leviticus 11 diffed verse by verse, the phrase
+censuses, the parser, Onkelos's renderings, the brackets, the store's gloss families, the prior reads, THE REGISTER'S FINDER), THE INK (ch14_ink.py — the generic
+helpers COPIED from the forms' ch13_ink.py by content markers, the kin by computation recomputed inside it, 100 asserts typed from the prints: 27 fell on the
+FIRST typed pass — every one the INSTRUMENT'S SHAPE, not a fact: the ink's word table holds (token, morph) pairs where the measure's held five, the ink's
+Aramaic helper returns a string where the measure's returned tokens, the book-alone name DT is the measure's — and three lists typed from memory against the
+print (the antelope's letters Ezekiel 40's cells, the ra'ah's the verb "see", the desire clause's vav); 2 on the second (the ra'ah's two homograph seats, the
+sojourner's rendering at 28:43 misassigned from the print's tuple); 0 on the third), THIS DESIGN, then the rows IN TWO HALVES — the food laws (96:9-12, 97-103;
+Onkelos 14:1-20; 312:1 and 228:5) and the carcass, the kid and the tithe (104-110; Onkelos 14:21-29; 76:7) — with the clean point taken between them if the
+counter nears the cap, else after the ledger; the ledger; THE CLEAN COMPACTION POINT; THE TAIL after the compaction: the display patch, the manifest, the seat,
+the chain LAUNCHED with its readers written, the records from the sheet in one call, the forms, the commit message, the timing table.
+
+THE DRAFT: deu_14_food_tithe 14:1-29 — 29 of 29 verses, missing 0 (computed from the DB's verse table: the export's chapter 14 = the DB's, the identity, cost
+17; NO fold of the English's numbering this chapter), depends_on deu_13_seducers (frozen) and lev_11_animals_water_birds (frozen — THE TWIN CHAPTER, the draft's
+own edge), 36 scenarios and 33 comment lines (the dump's G print), the claim prefix DV14 absent from every unit and manifest (computed). The chapter the unit,
+per the ruling CHAPTER NUMBERS; NO PORTION EDGE inside it (Re'eh 11:26-16:17 holds it whole): the ledger deu_14_reeh_2026-09-21.md.
+
+THE SPINE ON THE CHAPTER: the Sifrei on Deuteronomy heads FOURTEEN piskaot in chapter 14 (97 on 14:2, 98 on 14:6, 99 on 14:3, 100 on 14:4, 101 and 102 on
+14:6, 103 on 14:11, 104 on 14:21, 105 on 14:22, 106 on 14:23, 107 on 14:24, 108 on 14:27, 109 on 14:28, 110 on 14:29; 96 on 13:17 before, 111 on 15:1 after) —
+THE HEADS ARE NOT IN VERSE ORDER (98 on 14:6 sits before 99 on 14:3 and 100 on 14:4; three piskaot head on 14:6), 107 rows in both files (HE = EN at every
+piska); AND PISKA 96's TAIL, rows 9-12 on 14:1, which sitting 11 left (96:9 opens with 14:1's citation, 96:11 and 96:12 by their citations, 96:10 by ITS
+CONSONANTS — "you shall not cut yourselves … do not make factions" with Amos 9:6 alone in its brackets; chapter 11's lesson 2 a sixth time), so ONE HUNDRED AND
+ELEVEN spine rows are read here. The union of both files' citations is 100 rows — 94 inside piskaot 97-110, 96's three by citation, THREE outside: 76:7 (on
+12:23 — "you shall not eat it", to include flesh in milk; the English cites 14:21) READ BEFORE at chapter 12's sitting and REREAD WHOLE here, 228:5 (on 22:7
+— the bird's nest, "send away the clean"; the English cites 14:11), 312:1 (on 32:9 — "the LORD's portion is His people", the Hebrew cites 14:2); NONE
+excluded, no interpolation, no "ibid.", NO slip of the English found. The spine rows without a citation in either file: five (98:4, 100:3, 104:6, 105:2,
+110:5). THE PRIOR READS, computed: two reads of two spine rows — 104:8 at chapter 6's sitting (the kid in its mother's milk said three times — the three
+covenants), 106:5 at chapter 12's (the firstling whose year passed) — each REREAD WHOLE and marked; 96's first eight rows chapter 13's (asserted from its ledger).
+
+THE KIN, CREDITED BY NAME (the counts computed from the ledgers): THE TWIN CHAPTER — Leviticus 11 read at its sitting in two ledgers (6 and 5 Onkelos rows: the
+beasts 11:2-8 (2), the water (1), the birds (1), the swarming fowl (1), the close 11:41-47 (1)); the cuts and the baldness — Leviticus 19:27-28 (2) and 21:5
+(1); the holy people — 7:6 (1) at chapter 7, Leviticus 20:26 (1); the carcass and the torn — Leviticus 17:15 (1), 22:8 (1), Exodus 22:30 (1); the kid in its
+mother's milk — Exodus 23:19 (1); the tithe — Leviticus 27:30-33 (4), Numbers 18:21-32 (12), 12:6, 12:11, 12:17-19 (5) at chapter 12; the Levite's portion —
+10:9 (1), 12:12 (1), Numbers 18:20-24 (3); THE PLACE FORMULA — 12:5, 11, 14, 18, 21, 26 (6); the far place and the desire — 12:15, 20-22 (4); the sojourner,
+the fatherless and the widow — 10:18 (1), Leviticus 19:10 (1), 23:22 (1); NO Onkelos row of Genesis 7, 14 or 28, of Exodus 19, 23:10-11 or 34:26 in any ledger
+— read through their spines before the Onkelos standing (asserted); NEVER READ AHEAD — no ledger holds an Onkelos row of Deuteronomy 15-26 or of the Prophets
+(asserted): 15:1's release, 16:11's and 16:14's rejoicing with the four, 18:1's Levite, 24:19-21's gleanings, 26:12-13's tithe confession wait for their sittings.
+
+THE MEASUREMENTS' FINDS (the design's predictions for the rows; every one asserted in the ink): "YOU ARE CHILDREN OF THE LORD" ONE seat (Exodus 4:22's "My
+son, My firstborn" the kin); "YOU SHALL NOT CUT YOURSELVES" the Torah's ONE seat of the root's six (Baal's prophets at Carmel the run's case, 1 Kings 18:28;
+Jeremiah's mourners), "baldness" the Torah's two (the priests' 21:5 and this), "BETWEEN YOUR EYES" THE FRONTLETS' PHRASE at its fifth seat, "for the dead" the
+Torah's two (26:14 ahead); "A HOLY PEOPLE" THREE in the Bible — 7:6, 14:2, 14:21: the chapter holds two, and 14:2 IS 7:6 with the second "your God" dropped
+(18 of 19 tokens in order), "treasure" eight in the Bible (Exodus 19:5 the first; Psalm 135:4 the shelf's own citation at 97:3); "ABOMINATION" the chapter's
+one of the book's seventeen — and LEVITICUS 11'S WORD IS "DETESTABLE" (eight seats), this chapter's "abomination" and "unclean": THE TWIN CHAPTER'S VOCABULARY
+DIFFERS; "THIS IS THE BEAST" against 11:2's "this is the living thing" — the list's header; THE TEN NAMED HERE AND NOT IN LEVITICUS 11 — the roebuck at
+Solomon's table (1 Kings 5:3, 14:5's ONE kin in the Bible by computation), the wild goat and the mountain-sheep hapax, the antelope Isaiah's net (its letters
+Ezekiel 40's cells — a homograph), the pygarg a Horite's name; THE TWO SIGNS — 14:6 IS 11:3 with "TWO HOOFS" for "hoofs" (the number the parser reads; ONE seat),
+"THE CLEFT ONE" ONE seat (14:7 — the shelf's creature, Chullin 60b at the exam), 14:7 FOLDS 11:4-6's THREE INTO ONE (the camel, the hare and the rock-badger in
+one verse), the swine the Torah's two, "of their flesh … their carcass you shall not touch" 11:8's clause verbatim; THE WATER — "fins and scales" five seats,
+14:9 12 of 12 tokens of 11:9 in order; THE BIRDS — "every clean bird" before and "every clean fowl" after: THE PERMITTED BIRDS HAVE NO SIGN IN THE INK (the exam's
+four signs the shelf's), 14:15 IS 11:16 TO THE LETTER, THE RA'AH AND THE DA'AH — resh for dalet (14:13's three names against 11:14's two: the dayyah added;
+the ra'ah's letters the verb "see" at two seats — the shelf's reading of the name), the shalach and the tinshemet moved, the racham spelled rachamah, "after
+its kind" four in each; "THEY SHALL NOT BE EATEN" the chapter's one third-person form; LEVITICUS 11:21-22'S LOCUSTS ARE NOT IN THIS CHAPTER; THE CARCASS — 14:21
+shares no clause with its three kin (Leviticus 17:15's eater washes, 22:8's priest, Exodus 22:30's dog): THE CARCASS GIVEN TO THE SOJOURNER, NOT CAST TO THE DOG,
+"to the sojourner within your gates" ONE seat, "to a foreigner" the Torah's two (23:21 ahead); "THE KID IN ITS MOTHER'S MILK" — THE THIRD AND LAST SEAT (Exodus
+23:19 and 34:26 identical verses), "a holy people" the clause before it; THE INFINITIVE ABSOLUTES two — "sell" at 14:21 (the tagger's) and "TITHE, YOU SHALL
+TITHE" at 14:22 (the doubling ONE seat; Jacob's vow the form's first seat, Genesis 28:22; the king's tithe the run's, 1 Samuel 8), "year by year" ONE seat, "the
+tithe" the Torah's seventeen tokens; THE PLACE FORMULA at its fourth and fifth seats — "to cause His name to dwell" (14:23) and "to put His name" (14:24), both
+of chapter 12's forms reused; 12:17's list said again with the firstlings; "LEARN TO FEAR" 4:10's and 17:19's kin, the closest verse in order 16:11's
+rejoicing; "THE WAY TOO LONG" — 19:6's refuge road the twin, "THE PLACE TOO FAR" 12:21's clause verbatim (twelve tokens in order): THE FAR PLACE RELEASES THE
+FLESH THERE AND THE MONEY HERE, four "when/for" in one verse; "BIND UP THE MONEY IN YOUR HAND" ONE seat (the bundles of Genesis 42:35, Naaman's talents);
+"whatever your soul desires" — chapter 12's noun three times, this chapter's verb once (Jeroboam's and Abner's the Prophets' two); "STRONG DRINK" the Torah's
+six — the priests' bar, the Nazirite's, the libation's, and HERE PERMITTED; "rejoice, you and your household" ONE seat of the book's eight rejoicings; THE LEVITE
+— 12:19's warning said again in a new form (NO token in order), 12:12's clause reused, "portion and inheritance" the Bible's six (Rachel and Leah's the first);
+"AT THE END OF THREE YEARS" — Samaria's fall (2 Kings 18:10) the phrase's one kin, "the tithe of your produce" 26:12's clause (THE THIRD YEAR'S TITHE, its
+confession ahead); THE FOUR AT THE GATE the formula's first seat (16:11, 16:14 ahead; the "to" form at 24:19-21 and 26:12), "eat and be satisfied" ONE seat in
+this form; "THAT THE LORD MAY BLESS YOU IN ALL THE WORK OF YOUR HAND" — 24:19's forgotten sheaf the twin (seven tokens in order). THE REGISTER SPLITS THE
+CHAPTER IN TWO: the food laws PLURAL (14:1, 4-20), the tithe SINGULAR (14:22-29), 14:2-3 singular and 14:21 both (the carcass plural, the sojourner and the kid
+singular); NO "IF" — the one case on "when" (14:24), the eight "for"s reasons; fifteen negations in ten verses, "you shall eat" fourteen times; no first
+person, no imperative, no narrative verb, no "saying", no divine frame — Moses' voice alone, Moses, Israel and Egypt never named; THE NAME eleven tokens, "the
+LORD your God" singular five times, plural never; the law's consecutive perfects in the tithe's half alone. THE PARSER: TWO NUMBER VERSES (14:6 "two hoofs"
+[2], 14:28 "three years" [3]) and THE STARRED TITHE TOKENS (the number word "ten" inside "tithe" marked at 14:22, 23, 28 and at 12:17, 26:12 — no number read);
+the kin's numbers 15:1's and 31:10's seven, Exodus 23:10's six. ONKELOS: "you shall not make incisions" (the Aramaic's own root), "children BEFORE the LORD",
+"BELOVED" for "treasured" at its four seats, "abomination" as "what is removed" at eleven, THE SEVEN WILD IN ARAMAIC NAMES (ya'ala, rema, turbala, ditsa — the
+Talmud's identifications the exam's, Chullin 80a), "two hoofs" carried, "fins and scales" the Aramaic's own pair, the ra'ah "the daughter of the wing",
+"YOU SHALL NOT EAT FLESH WITH MILK" — Onkelos writes the law, not the verse (the English's bracket "[milk with meat]"), "to the UNCIRCUMCISED sojourner" (the
+resident alien supplied), "tithe, you shall tithe" doubled, THE SHEKHINAH AT THE PLACE at the formula's nine seats (the chapter's two), "NEW WINE AND OLD" for
+wine and strong drink, "portion and inheritance" at the Levite's five, no Memra, no parenthesis. THE STORE = THE DB (351 = 351; NO KETIV); 197 distinct glosses,
+25 already rewritten (the "try" of the store "choose", "wealth" "treasure", "goad" "teach"); THE DISPLAY PATCH predicted from the G print at the tail — the
+beasts' and birds' names ("and-gazelle" for the mountain-sheep, "and-kind-of-deer" for the roebuck, "and-leaper" for the pygarg), the hoof and the cud
+("claw", "break-in-pieces"), the carcass ("flabby-thing"), the money ("and-cramp" for bind, "and-deposit" for lay up), the strong drink ("intoxicant").
+
+THE CLAIMS (seven, DV14-01..07, one manifest; the spine's rows distributed by piska from the CITE INDEX): 01 THE CHILDREN AND THE CUTS (14:1-2 — Onkelos 1-2,
+Sifrei 96:9-12, 97, 312:1; the check "you shall not cut yourselves" at 14:1); 02 THE ABOMINATION AND THE BEASTS (14:3-8 — Onkelos 3-8, Sifrei 98, 99, 100,
+101, 102; "parts the hoof" at 14:6); 03 THE WATER AND THE BIRDS (14:9-20 — Onkelos 9-20, Sifrei 103, 228:5; "every clean bird" at 14:11); 04 THE CARCASS AND
+THE KID (14:21 — Onkelos 21, Sifrei 104, 76:7; "a kid in its mother's milk" at 14:21); 05 THE TITHE AT THE PLACE (14:22-23 — Onkelos 22-23, Sifrei 105, 106;
+"tithe, you shall tithe" at 14:22); 06 THE WAY, THE MONEY AND THE LEVITE (14:24-27 — Onkelos 24-27, Sifrei 107, 108; "bind up the money" at 14:25); 07 THE
+THIRD YEAR (14:28-29 — Onkelos 28-29, Sifrei 109, 110; "at the end of three years" at 14:28). Seated as seven WITNESS_READ operators at 14:1, 3, 9, 21, 22, 24,
+28 with step E. THE FOLD predicted: units 227 -> 228, standing 2245 -> 2252, the hash 8b8fff1fa28953af unmoved (the law layer moves no narrative fact). THE
+REGISTER GATE at the reading: no receipt, no header, no footer, no count line in chapter 14 (the finder run — 14:4's "this is the beast" a list's header, not a
+register's; the number verses 14:6 and 14:28 no count lines) — GREEN expected, --strict, DECLARED 98 unmoved (the two seats of the block (12:1, 28:69] DAEMONS
+since 11b).
+
+THE TESTING SHELF routed to 12b's docket (the union rule at the compile): Mishnah Chullin 3:6-7 and Chullin 59a-66b (the signs of the beasts, the fish, the
+birds and the locusts — the shesuah at 60b, the ra'ah at 63b, the seven wild identified at 80a; Sifrei 100-103's own citations); Mishnah Chullin 8:1-4 with
+Chullin 113a-116b (flesh in milk — the three seats read three ways, 115b; the kid, the milk, the mother); Mishnah Chullin 4:4 and Chullin 72b-73a (the carcass);
+Mishnah Makkot 3:5-6 with Makkot 20a-21a (the cuts and the baldness — the counts of lashes; "for the dead" and the frontlets' "between your eyes"); Yevamot
+13b-14a (lo titgodedu — "do not make factions", 96:10's reading); Kiddushin 36a (children of the LORD — R. Judah and R. Meir, 96:9's dispute); Mishnah Maaser
+Sheni 1-5 with Kiddushin 54b (the second tithe — the money, its binding, the desire, the wine and strong drink, the redemption, the confession); Mishnah
+Maasrot 1:1 (the yield liable); Rosh Hashanah 12b-13a and Bekhorot 53b ("year by year" — not from one year on another; the tithe's new year); Mishnah Peah
+8:5-9 and Yevamot 86a-b (the poor man's tithe and the Levite's — Ezra's penalty); Bava Metzia 87b-88b? (the eating in the field — the tithe's onset); Avodah
+Zarah 66a? ; the Sifrei's own Mishnah citations read at the rows; the Sifra on Leviticus 11 and 19 credited from their sittings — every row whole; a docket past
+~700 rows its own run.
+
+THE ORDER (the rest of the one run): the 111 spine rows WHOLE in both files piska by piska (ch14_spine_p96.txt (rows 9-12) … p110.txt) — THE FIRST HALF 96-103
+with Onkelos 14:1-20 and the outside rows 312:1 and 228:5 → ch14_rows_sifrei_96_101.py, _102_103.py, ch14_rows_onkelos.py (14:1-20 typed), ch14_rows_outside.py
+→ the clean point if the counter nears the cap; THE SECOND HALF 104-110 with Onkelos 14:21-29 and 76:7 → ch14_rows_sifrei_104_106.py, _107_110.py (chapter
+13's form; the cuts by consonants SP_) → write_ch14_ledger.py (from write_ch13_ledger.py's form — the prior reads marked REREAD WHOLE, 76:7 among the outside
+rows) → lint 0, coverage computed (the Sifrei 111 + 3; Onkelos 29; the kin's credits by name) → THE CLEAN COMPACTION POINT (the state doc; the recovery page's
+section 2; the reread the map's "Sitting 12 … THE DESIGN" — this section) → THE TAIL: ch14_patch_overrides.py (by gloss and by reference from the G print;
+the anchors sitting 11's last rows), the ink rerun PATCHED with ch14_ink_body_c.py → write_ch14_manifest.py (seven claims) → seat_ch14.py (seven WITNESS_READ at
+14:1, 3, 9, 21, 22, 24, 28; step E) → ch14_gates.sh LAUNCHED in the background (ch14_chain.sh: the seat, verify_text, the ritual; ch14_fold.sh: 228 / 2252 /
+the hash unmoved; build_world; the journal gate; the register gate --strict; large_letter_probes; the home-path gate) with write_ch14_records.py and
+copy_ch14_forms.py written first → the summary read once → the records from the sheet in one call → the forms copied → the commit message → the timing table →
+the report.
+
+
+
+## Sitting 12 — CHAPTER 14 — AS BUILT (2026-09-21; the design above stands as written but for the clean point's place — the one run ran through ALL the rows to the clean point #204 (the design had said "between the halves if the counter nears the cap": the counter stood near 470k and /context read 657.8k — the cap passed a second time), the owner compacted, and THE TAIL ran on "Reread" and "Go" with the ledger its first step; every departure from the design is named here; THE TIMING TABLE is the last section)
+
+THE RESULT: Deuteronomy 14:1-29 READ, FROZEN and SEATED as ONE unit — deu_14_food_tithe (the 228th frozen unit; 29 of 29 verses, missing 0, computed — the
+export's chapter 14 the DB's, the identity; no portion edge inside it): the ledger logic/oral_triage/deu_14_reeh_2026-09-21.md (143 sources — Onkelos 29: MATERIAL 23 /
+CONTEXT 6; THE SIFREI'S SPINE piska 96's tail and piskaot 97-110, 111 rows: MATERIAL 80 / CONTEXT 31, 2 of them read before and REREAD WHOLE (the prior reads
+found in the earlier ledgers by computation — 104:8 at chapter 6's sitting, 106:5 at chapter 12's); the outside rows 3: MATERIAL 3 / CONTEXT 0, 76:7 read before at
+chapter 12's sitting and REREAD WHOLE; 128,798 bytes, lint 0, no cut missed — the ledger written clean on its first run), the manifest 7 claims DV14-01..07
+verified 7/0 (every he_contains cut from the store's own bytes — the seven words' pieces MEASURED in the store before they were typed, the floor four code points;
+every cite index name used by a claim — the spine's rows distributed by piska from the CITE INDEX itself, 96's tail with the children and the cuts, the three
+outside rows with the claims whose verses they cite), seated as seven WITNESS_READ operators at 14:1, 3, 9, 21, 22, 24, 28 with step E; the ritual 13 PASS;
+verify_text GREEN (29 steps, 7 scenarios); the fold predicted and matched (units 227 → 228, standing 2245 → 2252, the hash 8b8fff1fa28953af unmoved —
+CORPUS TRUTH GREEN before and after the bake: 228 units, 1809 facts, 341 demands, 191 open); build_world ALL GREEN; the journal gate GREEN (12 kinds, 9788 rows —
++16 on the fold layer since 11b's chain, the tape unmoved since 11b); the register gate --strict GREEN (DECLARED 98, DEBT 0, FAILS 0 — no receipt, no header,
+no footer in chapter 14; 14:4's "this is the beast" a list's header, not a register's; the number verses 14:6 and 14:28 no count lines — as the design predicted);
+large_letter_probes 6/6; the labels census GREEN (3,312 claims in 231 manifests, Deuteronomy 89); the home-path gate GREEN; the display layer +131 by reference and +49 by gloss
+(1253 / 756 in all).
+
+THE READING: every Onkelos row whole in the Aramaic and the English (ch14_onkelos.txt); THE SPINE ON THE CHAPTER A SIXTH TIME — fourteen piskaot 97-110 heading on
+the chapter's verses NOT IN VERSE ORDER (98 on 14:6 before 99 on 14:3 and 100 on 14:4; three piskaot on 14:6) AND PISKA 96'S TAIL (rows 9-12 on 14:1, left by
+chapter 13's sitting — 96:9, 96:11 and 96:12 by their citations, 96:10 by its consonants with Amos 9:6 alone in its brackets: chapter 13's lesson 1 closed), every
+row read whole in both files (ch14_sifrei_spine.txt, split by piska for the reading — ch14_spine_p96.txt (rows 9-12) … p110.txt); the three outside rows whole in
+both files (ch14_sifrei_outside.txt — flesh in milk at 12:23, reread whole from chapter 12; the bird's nest at 22:7; the LORD's portion at 32:9), none excluded;
+the kin (Leviticus 11 THE TWIN CHAPTER in two ledgers, 17:15, 19:10, 19:27-28, 20:26, 21:5, 22:8, 23:22, 27:30-33; Exodus 22:30, 23:19; Numbers 18:20-32;
+Deuteronomy 7:6, 10:9, 10:18, 12:5-26) credited by name with the counts computed from fourteen ledgers; no ledger holds an Onkelos row of Genesis 7, 14 or 28, of
+Exodus 19, 23:10-11 or 34:26, and NONE OF DEUTERONOMY 15-26 OR THE PROPHETS (asserted — never read ahead; the release at 15:1, the firstling at 15:19-23, the
+rejoicing with the four at 16:11-14, the blemished offering at 17:1, the Levite at 18:1, the bird's nest at 22:6-7, the gleanings at 24:19-21, the tithe confession
+at 26:12-14, the rejoicing at 27:7, the assembly at 31:10 wait for their own sittings).
+
+THE DEPARTURES FROM THE DESIGN: one in the run's shape, four in the tail's instruments. (1) THE CLEAN POINT AFTER ALL THE ROWS, NOT BETWEEN THE HALVES — the design
+had made the halfway point conditional on the counter, and the counter is not /context: 657.8k where the estimate stood near 470k (the #204 NOTE; the rule for the
+next reading below). (2) THE LEDGER IN THE TAIL — written after the compaction from the five row files on disk, clean on its first run (143 sources, no MISMARK, no
+cut missed). (3) THE INK'S PATCH BLOCK (body C) WRITTEN BEFORE THE LEDGER — the ledger reads the patch's prediction (49 by gloss, 131 by reference) from the ink's
+own lists, as chapter 13's did; the fourth pass green. (4) THE FIFTH PASS FELL ON ONE ASSERT OF THE INSTRUMENT'S OWN MAKING — the count of the chapter's glosses
+"already" in the overrides grew by this sitting's forty-nine once the patch ran; the two counting asserts made patch-aware (the store's "already" = the chapter's
+glosses in the overrides minus this sitting's), the sixth pass green: A COUNTING ASSERT ON THE OVERRIDES MUST KNOW WHETHER THE PATCH HAS RUN. (5) THE MANIFEST'S
+CHECK WORDS PROBED IN THE STORE FIRST — the store splits a word into pieces and the check is the longest piece whole with a floor of four code points: "three"
+(three letters) and the design's "you shall not cut yourselves" (one piece, fourteen code points pointed) measured before the seven words were typed — 14:1
+"cut yourselves", 14:6 "parts", 14:11 "bird", 14:21 "a kid", 14:22 "you shall tithe", 14:25 "bind up", 14:28 "at the end of"; the manifest wrote first time. THE
+SHELLS' DERIVE PROTECTED THE FORM'S NAME (chapter 12's lesson 12; chapter 13's forms the source — nothing retyped). THE DISPLAY PATCH held first time (twelve
+asserted substitutions on the chapter-13 form with its portable header stripped; the anchors sitting 11's last rows found by walking, never typed; override rows written: by_ref 131 by_gloss 49 | by_ref total 1253 | by_gloss total 756).
+THE MIDDAH CODES held — every code checked in MIDDOT.md before it was typed, none relabeled: the census from the ledger's rows — I1 at 101:10, 106:3, 106:4, 107:4, 107:7, 76:7; I2 at 96:12, 99:2, 103:3, 103:4, 107:16, 109:2; I3 at 103:8, 105:8, 107:11, 110:1, 110:2, 228:5; "the verse compares"
+(the juxtaposition) named at 106:4-5 by the shelf's own word, no code. THE GATES CHAIN RAN ONCE, ALL GREEN ON ITS FIRST PASS (18:57:52 to 19:06:01 — 8 min 9 s: the seat (seven operators on seven steps, the scenarios in the anchor form), verify_text (29 steps, 7 scenarios), the ritual (13 PASS), the fold (228 / 2252 / the hash unmoved — 1,809 facts, 341 demands, 191 open), build_world, the journal gate (9,788 rows, +16 on the fold layer), the register gate --strict (DECLARED 98, no demand — the register step 4 min 39 s of the chain), large_letter 6/6, the home gate; no demand, no retype; the summary read once) — launched in the background after the manifest (every cite index name used), verify_claims (7 verified / 0 failed) and the labels census (GATE PASSED, debt 0 — 3,312 claims in 231 manifests) had run in the foreground and their prints were read; the records writer and the copier typed during its 489 seconds, the notification the wake.
+
+THE GATES, COMPUTED FROM THEIR PRINTS: the ritual 13 PASS (RITUAL COMPLETE, 228 frozen units); CORPUS TRUTH GREEN twice (228 units, 1809 facts, 341 demands, 191 open;
+the hash unmoved); build_world ALL GREEN; the journal gate GREEN (12 kinds, 9788 rows, +16); the register gate --strict GREEN (DECLARED 98, DEBT 0, FAILS 0);
+verify_claims 7 verified / 0 failed; the labels census GREEN (3,312 claims in 231 manifests); large_letter_probes 6/6; the home-path gate GREEN; the ink 106 asserts — the six passes
+27 / 2 / 0 / 0 / 2 / 0 failing (the first the instrument's shapes and three lists from memory, the second two facts from the print's tuple,
+the third green, the fourth green with the patch's block, the fifth the "already" count, the sixth green PATCHED).
+
+⚠ THE LESSONS (the run's, gathered — the numbered list the sheet asks for): (1) THE 600k CAP WAS PASSED A SECOND TIME BY /context, NOT BY THE COUNTER — 657.8k at
+the clean point after the rows where the run's own estimate stood near 470k, the estimate 170k short (sitting 11's lesson 4 repeated, its remedy not taken far
+enough): A READING OF A CHAPTER THIS SIZE IS TWO RUNS + THE TAIL, like a compile — the measurements, the ink and the design one run to a clean point; the rows and
+the ledger a second; the tail the third; the clean point after the first half of the rows UNCONDITIONALLY, never on the counter's word (the #204 NOTE; the cost
+rules' memory amended). (2) THE INSTRUMENT'S SHAPE, NOT THE FACT — twenty-seven asserts fell on the ink's first typed pass and not one was a fact: the word table's
+pairs where the measure held five-tuples, the Aramaic helper's string where the measure returned tokens, the book-alone name the measure's, and three lists typed
+from memory against the print (the antelope's letters Ezekiel 40's cells, the ra'ah's the verb "see", the desire clause's vav); two on the second (the ra'ah's two
+homograph seats, the sojourner's rendering at 28:43 misassigned from the print's tuple): the ink is retyped from the print, never from the hand. (3) A COUNTING
+ASSERT ON THE OVERRIDES MUST KNOW WHETHER THE PATCH HAS RUN — the fifth pass's one fail. (4) A PISKA'S TAIL FOLDED IN — 96:9-12 read here by citation and by
+consonants, chapter 13's lesson 1 closed: the two files' union left 96:10 (it cites nothing) and the consonant rule fetched it. (5) THE HEADS OUT OF VERSE ORDER —
+the shelf's order is the argument's, not the verse's (98 on the signs before 99 on the abomination and 100 on the list): the reading goes by position, the claims by
+the CITE INDEX's distribution, and no assert may assume the heads climb. (6) THE TWIN CHAPTER DIFFED VERSE BY VERSE IS THE READING'S OWN INSTRUMENT — 14:6 is 11:3
+with "two", 14:15 is 11:16 to the letter, 14:7 folds 11:4-6's three into one, 14:9 twelve of 11:9's twelve with the seas and the rivers dropped, the vocabulary
+changed ("abomination" and "unclean" for "detestable"), the locusts absent, the ra'ah's resh for the da'ah's dalet — and the shelf names the two added names as
+the whole gain of the restatement (98:6): the ink and the shelf agree on what the chapter adds and differ on what it drops. (7) THE PERMITTED BIRDS HAVE NO SIGN
+IN THE INK — the exam's four signs come from the answer sheet inside the spine (103:8 — Mishnah Chullin 3:6 in the row's own Hebrew): the compile's parameter
+the_birds_signs is DATA, the code/data separation law's own case. (8) ONE NOUN, TWO PERSONS IN ONE CHAPTER — the sojourner who eats the carcass (14:21, the
+resident alien — 104:2, Onkelos "uncircumcised") and the sojourner who eats the poor man's tithe (14:29, the convert — 110:2, Onkelos "the convert"): a parameter
+for 12b's cell, the shelf and the translation agreeing. (9) THE KIN BY COMPUTATION AGAIN — 14:2 is 7:6 (eighteen of nineteen), 14:24 holds 12:21's clause (twelve
+in order), 14:29 has 24:19's clause (seven), 14:5's one kin in the Bible Solomon's table, 14:28's Samaria's fall, 14:29's own closest 14:27. (10) THE CUT'S ONE
+MISS THE EXPORT'S OWN SPELLING — "casually" without the aleph at 105:16, retyped from the export: the cut reads the shelf's bytes, never the dictionary's. (11)
+THE MANIFEST'S CHECK WORDS PROBED FIRST — the store's pieces measured before the seven words were typed (the floor four code points). (12) THE FAST STEPS IN THE
+FOREGROUND, THE CHAIN BEHIND — sitting 11's lesson 8 held: the manifest, the verifier and the census read before the ritual froze the unit; the chain launched
+with the records writer and the copier typed during its run. (13) EVERY STEP TIMED — the machine's share of the sitting 12 min 2 s of 130 min 10 s wall time
+from 16:56:48 to the records; the rest the reading, the typing and one compaction: the reading is the sitting, the machine its instrument.
+
+THE TIMING TABLE (every row appended by the scratchpad's timer as the step ran; the gap column is the time between one step's end and the next step's start — the
+reading of the rows, the typing of the scripts, the owner's compaction between the clean point and the tail's rereads; the chain's inner steps from its own summary's
+stamps):
+
+| step | began | ran | the gap before it (reading, typing, the owner's compaction) |
+|---|---|---|---|
+| 12 derive dump0 (from the forms' ch13_dump0.py) | 16:56:48 | 1 s (rc 1) | 0 min 0 s |
+| 12 derive dump0 (from the forms' ch13_dump0.py), second | 16:56:59 | 0 s | 0 min 10 s |
+| 12 dump0 (the measurements' first pass) | 16:56:59 | 12 s | 0 min 0 s |
+| 12 the spine split by piska (96's tail folded) | 17:02:16 | 0 s (rc 1) | 5 min 5 s |
+| 12 the spine split by piska (96's tail folded), second | 17:02:41 | 0 s | 0 min 25 s |
+| 12 derive measure1 (the helpers and the register block from the forms' ch13_measure1.py) | 17:07:56 | 0 s | 5 min 15 s |
+| 12 measure1 (the second measurement pass) | 17:07:56 | 19 s | 0 min 0 s |
+| 12 derive ink (the helpers from the forms' ch13_ink.py) | 17:14:55 | 0 s | 6 min 40 s |
+| 12 ink (the first typed pass, assert_driver) | 17:14:55 | 18 s | 0 min 0 s |
+| 12 ink (the second typed pass — the instrument's shapes and three lists retyped from the print) | 17:16:26 | 18 s | 1 min 13 s |
+| 12 ink (the third typed pass — two facts retyped from the instrument's print) | 17:17:14 | 18 s | 0 min 30 s |
+| 12 design (the map's section) | 17:19:47 | 0 s | 2 min 15 s |
+| 12 rows, the first half (96:9-12, 97-103; the three outside; Onkelos 14:1-20) — the import check | 17:25:12 | 18 s | 5 min 25 s |
+| 12 rows, the second half (104-110; Onkelos 14:21-29) — the import check | 17:31:06 | 18 s (rc 1) | 5 min 36 s |
+| 12 rows, the second half — the import check, second (one cut retyped) | 17:32:37 | 18 s | 1 min 13 s |
+| 12 the clean compaction point (#204, after the rows, before the ledger) | 17:32:55 | 0 s (rc 1) | 0 min 0 s |
+| 12 the clean compaction point (#204), second — the page trimmed under its cap | 17:33:22 | 0 s (rc 1) | 0 min 27 s |
+| 12 the clean compaction point (#204), third — the page under its cap | 17:33:43 | 0 s (rc 1) | 0 min 21 s |
+| 12 the clean compaction point (#204), fourth — the page under its cap | 17:33:59 | 0 s | 0 min 16 s |
+| 12 T derive ink (body_c — the display patch predicted from the G print) | 18:38:54 | 0 s | 64 min 55 s |
+| 12 T ink (the fourth pass — the patch block) | 18:38:54 | 18 s | 0 min 0 s |
+| 12 T ledger (write_ch14_ledger.py — coverage computed, the prior reads marked) | 18:47:13 | 19 s | 8 min 1 s |
+| 12 T lint (the ledger) | 18:47:32 | 0 s | 0 min 0 s |
+| 12 T derive the patch script (from the forms' ch13_patch_overrides.py) | 18:47:32 | 0 s | 0 min 0 s |
+| 12 T derive the shells (chain, fold, gates) | 18:47:32 | 0 s | 0 min 0 s |
+| 12 T the display patch (ch14_patch_overrides.py — by gloss 49, by reference 131) | 18:48:18 | 18 s | 0 min 46 s |
+| 12 T ink (the fifth pass — PATCHED) | 18:48:36 | 19 s | 0 min 0 s |
+| 12 T derive ink (the counting asserts made patch-aware) | 18:51:29 | 0 s | 2 min 34 s |
+| 12 T ink (the sixth pass — PATCHED, green) | 18:51:29 | 18 s | 0 min 0 s |
+| 12 T the manifest (seven claims DV14-01..07) | 18:55:25 | 0 s | 3 min 38 s |
+| 12 T verify_claims | 18:55:25 | 0 s | 0 min 0 s |
+| 12 T the labels census (--strict) | 18:55:25 | 0 s | 0 min 0 s |
+| 12 T the chain (ch14_gates.sh in the background — the seat, verify_text, the ritual, the fold, build_world, the journal gate, the register gate --strict, large_letter, the home gate) | 18:57:52 | 489 s | 2 min 27 s |
+| 12 T the records writer --check (every number parsed from its print) | 19:06:20 | 0 s (rc 1) | 0 min 19 s |
+| 12 T the records writer --check, second (the page trimmed, the chain note typed) | 19:06:57 | 1 s | 0 min 37 s |
+
+The chain's inner steps (ch14_gates_SUMMARY.txt): chain 54 s; fold 91 s; build_world 60 s; journal_gate 279 s; register_gate 2 s; large_letter 1 s; home_gate 2 s; the chain 8 min 9 s in all. The machine's share 12 min 2 s; the sitting 130 min 10 s from 16:56:48
+to the last row above; the records writer's own row and the copier's follow in ch14_timing.tsv (copied into the forms).
+
+THE FORMS: World/step9/forms_deuteronomy_walk/ (copy_ch14_forms.py — derive_ch14_dump0.py, ch14_dump0.py, derive_ch14_measure1.py, ch14_measure1_sections.py,
+ch14_measure1.py, split_ch14_spine.py, ch14_ink_head.py, ch14_ink_body.py, ch14_ink_body_b.py, ch14_ink_body_c.py, derive_ch14_ink.py, ch14_ink.py, assert_driver.py,
+the five row files, write_ch14_ledger.py, write_ch14_design.py, write_ch14_cleanpoint.py, derive_ch14_patch.py, ch14_patch_overrides.py, write_ch14_manifest.py,
+seat_ch14.py, derive_ch14_shells.py, ch14_chain.sh, ch14_fold.sh, ch14_gates.sh, tstep.sh, write_ch14_records.py, copy_ch14_forms.py, the prints, the split
+piskaot and ch14_timing.tsv).
+
+NEXT on the ruling: the commit on the owner's word (chapter 13's compile and chapter 14 stand uncommitted since fb797a1 — ONE message at <scratch>/commit_msg_ch14.txt
+carries both); then THE COMPILE OF CHAPTER 14 (sitting 12b) in TWO RUNS + THE TAIL under the cost rules — RUN A: the rereads (THE_STEPS Step 5 + the compiler
+block; this section; the 12b box in COMPILE_DEBT), the measurements (Leviticus 11's cells for the beasts', the fish's and the birds' signs; Exodus 23:19's cell for
+the kid; Leviticus 17:15's and 22:8's for the carcass; Numbers 18's and Leviticus 27's for the tithes; chapter 12's place cells and eras table; 10:9's and 12:12's for
+the Levite; the register's finder at 14:4, 14:6, 14:28), THE DESIGN (the food laws as cells — the two signs with the four exceptions as the written exception set,
+the water's two, the birds' twenty-one with the_birds_signs a PARAMETER from the answer sheet, the carcass table with R. Judah's dissent a PARAMETER, the kid's
+three readings; the second tithe as a status with the wall, the House and the year its conditions, the money's form two arms, the far place by CALL to chapter 12's
+cell, the rejoicing a peace offering; the third year's tithe with the removal's date a CLOCK DATUM and the four at the gate with the sojourner two persons; the
+checkpoint series DF), the probes to FAIL, THE DOCKET by the union rule (Mishnah Chullin 3:6-7, 8:1-4, 4:4, 1:7 with Chullin 59a-66b, 80a, 113a-116b, 72b-73a,
+68a-69a, 77a; Mishnah Makkot 3:5-6 with Makkot 20a-21a; Yevamot 13b-14a, 47b, 86a-b; Kiddushin 36a, 54b; Mishnah Maaser Sheni 1-5 with its folios; Mishnah
+Maasrot 1:1, 1:3, 2:4, 4:5-6; Rosh Hashanah 12a-13a; Bekhorot 34a-35a, 53b; Mishnah Temurah 6:1; Mishnah Eduyot 3:2; Pesachim 21b, 50b-51a; Bava Metzia 88a;
+Mishnah Zevachim 5:8; Mishnah Peah 8:5-9 with Tosefta Peah 4:2, 4:11; Tosefta Kilayim 1:9; Tosefta Sanhedrin 3:5-6; Avot 3:9, 3:14; the Sifra on Leviticus 11, 19 and
+27 credited from their sittings — every row whole; a docket past ~700 rows its own run); RUN B: the types, the runner, the tape to 10/10, the chain LAUNCHED; THE
+TAIL the records, the forms, the message — or the Decalogue-schema sitting first, on his word.
+
+
+
+## Sitting 12b — THE COMPILE OF CHAPTER 14, Deuteronomy 14:1-29 (2026-09-21; the owner: "Go" after sitting 12's tail — the commit still on his word, sittings 11b and 12 uncommitted since fb797a1): THE DESIGN — written at the close of RUN A under THE COST RULES (two runs + the tail; the rereads: THE_STEPS' compiler block whole, Step 2's head and Step 5's head, the sitting-12 AS BUILT and the 12b box (a)-(o), the 11b design and AS BUILT as the compile's form; the measurements: ch14_compile_recon.py derived from 11b's by asserted line-based block substitutions (derive_ch14_recon.py — the forms folder's copy with its portable header stripped and ROOT from git restored; 18 s), ch14_docket_scan.py derived from 11b's (derive_ch14_docket_scan.py — chapter 13's folded line REMOVED, the export's chapter 14 the DB's; its first derive fell on the header block's suffix, retyped; 241 s) — all in the scratchpad) and BEFORE any code; THE DOCKET TWO RUNS by the ~700 clause (992 addresses in the dump; 288 credited by address at the scan; some 700 to read whole — the clean point after the first half UNCONDITIONALLY, sitting 12's lesson 1)
+
+THE RUNS AND THE DOCKET'S OWN: RUN A the rereads, the measurements and this design — CLOSED HERE, a clean compaction point (#205); THE DOCKET by the union rule in
+TWO RUNS — D1 the 144 link rows, Chullin 59a-66b (178 rows) and the ninety Mishnah rows (412 addresses); D2 the seventeen other folio ranges (Chullin 68a-69a,
+72b-73a, 77a, 80a, 113a-116b; Makkot 20a-21a; Yevamot 13b-14a, 47b, 86a-b; Kiddushin 36a, 54b; Rosh Hashanah 12a-13a; Bekhorot 34a-35a, 53b; Pesachim 21b,
+50b-51a; Bava Metzia 88a) with Tosefta Peah 4 and Tosefta Kilayim 1 (580 addresses; Tosefta Sanhedrin 3 EMPTY in the export — its rows 3:5-6 through the Sifrei's
+citations read whole at the reading, 106:2 and 106:4), EVERY ROW WHOLE — the 288 credited rows CARRIED with their ledgers' own verdict lines (11b's form,
+ch13_credit_carry.py derived), the uncredited read whole in chunk files (the cap 64,000 — 10b's D2 lesson), the writer derived from 11b's, coverage computed —
+each run its own clean point; RUN B the probes to FAIL (readback Q37-Q39, BEFORE the types — 7b's lesson 2), the types by script with the docket's names, the
+callees' facts printed before any assert (every CALL's ask read at the cell's own source — 10b's lesson 2), the runner in parts with the fast checker and the
+generated CASES, the recorder with the cache OFF (7b's lesson 1) and the stitcher, the literals DF1-DF9, the tape to 10/10 with THE REST, checkpoint_check.py
+--all AFTER the tape, the records writer and the copier WRITTEN, gates_chain.sh LAUNCHED in the background (the positions step at FOUR workers if the owner
+rules it; eight the standing form), the clean point; THE TAIL after the compaction: the summary read once, the demands filed, the records from the sheet in one
+call, the forms copied, this section's AS BUILT, the commit message for the owner's word.
+
+THE MEASUREMENTS (what the tape, the runners, the registries and the running world say before a line is typed — ch14_recon.out, 535,054 bytes, read by its
+seven sections): THE COUNTER stands at (40, 11, 1), day 908865 (the snapshot world: entities 319, log 3604); the tape's LAST LINES are chapter 13's four
+own-day lines (word_sealed, prophet_test_declared, inciter_law_declared, condemned_city_law_declared) after chapter 12's four, its LAST MARKER the forward marker
+at Deut 10:12 (M['speech_resumed_10']); RUN (1327, 96, 88, 0, 12, 1634, 44, 319, the four pairs, 127), PREVIOUS_RUN 10b's (1323, 96, 88, 0, 12, 1626, 43, 319,
+the four pairs, 127); markers 172 (text_constrained 108, reading_placed 49), events text_constrained 110 / page_order 1159 / reading_placed 58; CENSUS (2520,
+1319, 1327, 1185, 6, 10, 9, 0, 71, 172, 131, 15, 26, 872, 272); 68 runners, 73 daemons (installed_by boot 32, erected 3, covenant_blood_thrown 14,
+called_from_the_tent 17, sentence_declared 2, statute_declared 2, milluim_blood_sprinkled 1, entered_the_land 1, pending 1), kinds 1155, effects 1056; the D
+series DA, DB, DC, DD and DE in use (nine each) — THE NEXT NAME DF (no code assumes a letter; the two startswith seats are on strings); 68 spans, 669 edges,
+208 pointers — NO pointer naming Deut 14, ONE EDGE naming it already: priesthood -> holiness_b (transfer, taught by Sifra Emor Chapter 1 1-3 and Makkot
+20a:12-14 — "baldness-baldness: Leviticus 21:5 read with Deuteronomy 14:1 and Leviticus 19:27-28 both ways": THE CHAPTER'S FIRST VERSE IS A TEACHER'S SEAT
+BEFORE ITS COMPILE); THE REGISTER: NO seat naming Deut 14 (the reading's finder found no receipt, header or footer; the two number verses 14:6 [2] and 14:28 [3]
+no count lines); the readback probes Q1-Q36 on file (Q10 unused), the next Q37. THE KIN'S CELLS, FOUND BY THE REFS PER DEF: THE TWIN CHAPTER IS A CLASSIFIER —
+shemini.classify (a dict of signs in: {'clazz': 'land', 'hoof': True, 'cud': True} as the sanctions engine calls it — PURE_BEAST; the water's fins and scales;
+THE BIRD BLACKLIST by name, twenty in the ink; the camel "cud yes hoof no", the hare "counter-stated" in its own table — THE FOUR ARE THE CLASSIFIER'S OWN
+EXCEPTION ROWS), shemini.touch_effect (carcass_touched -> impure_until_evening), law_shemini watching forbidden_kind_eaten -> lashes ("the ban layer; the
+answer sheet: Makkot 3:2 lists the eaters of carcasses, terefot (torn), detestables and swarmers"); THE CARCASS'S BAN NAMED HERE BY THE LEVITICUS RUNNER —
+sanctions.carcass('beast_carcass', 'effect', 'equality_test', 'failure', 'garments_boundary', 'impure_species', 'lashes_for_eating', 'minimum', 'pinching',
+'slaughtered', 'where_defiles', 'who' — its lashed cell: "Makkot 3:2 — the eater of carcass and torn: THE BAN IS DEUT 14:21 / EXOD 22:30"; law_sanctions
+watching carcass_eaten -> impure_until_evening, washes_and_bathes, defiles_garments, bears_sin, lashes, karet_cut_off (karet — excision)); THE KID'S CELL —
+calendar.kid_in_milk('cook', 'eat', 'benefit' — each barred, barred_from_it at the case; its move: "the clause stands WRITTEN THREE TIMES (23:19, 34:26, Deut
+14:21 — the census machine-verified in this run's probes): one for cooking, one for eating, one for benefit") and erection.repeats (34:26 the second seat,
+across files); THE TORN — ordinances.torn('cannot_live', 'dogs_wage', 'field_common_case', 'fit_list', 'holy_men', 'lashes', 'to_the_dog', 'torn_seats';
+law_ordinances watching flesh_torn -> torn_flesh_to_dogs, lashes); THE PRIESTS' BALDNESS — priesthood.family('gash_multiplier', 'hair_rend', 'corners' — "per
+bald spot, the whole head (not only 'between the eyes', Deut 14:1), per gash"), THE CUTTINGS — holiness_b.body (19:27-28; the Makkot rows in its ink eleven);
+THE GLEANINGS — holiness.gifts (19:9-10 — leket, olelet, the corner; left_for_the_poor the effect; ITS IMPORT TABLE NAMES THIS CHAPTER: GIFTS_IMPORT
+{'forgotten_sheaf': 'Deut 24:19', 'forgotten_olive': 'Deut 24:20', 'poor_tithe': 'Deut 14:28'} — THE POOR TITHE POINTED AT 14:28 FROM LEVITICUS 19),
+moadim.harvest_reaped (23:22 — barred_from_it); THE FIRST TITHE — korach.the_tithe ('liable_produce', 'exclusion_table', 'levite_he', 'levite_preceded',
+'no_inheritance', 'recipients', 'removal', 'confession', 'mourner', 'every_place', 'agent' … — Numbers 18:20-32; portion_declared and
+tithe_of_the_tithe_commanded ON THE TAPE; tithe_granted and inheritance_barred the Levites' entries; "Rosh Hashanah 12b:3 — the first tithe juxtaposed to an
+inheritance — no interruption in the third year" ALREADY A MOVE THERE; the tithe thresholds by Bava Metzia 88a a DATA row there), korach.the_gifts (the
+firstling — Bekhorot 109 lines); THE HERD'S TITHE — temurah.tithe (27:32 — 'not_a_tithe': the tenth an ordinal, not a proportion), temurah.redeem; THE
+CYCLE — yovel.cycle, yovel.sabbatical, yovel.tithe_naming, calendar.sabbatical (the seventh year's timer on the land); THE HOLY PEOPLE —
+seven_nations.the_holy_people (7:6 — 'the_oath', 'brought_out_redeemed'; treasured_people ON FILE ONCE at Exod 19:5, a HEAVEN entry — CQ5's literal ONE
+UNMOVED; nations_devoted on the tape at 7:1-5); THE LEVITE AND THE FOUR — second_tablets.the_levites_separated (10:9 — no portion) and
+.the_god_of_gods_and_the_stranger (10:18 — stranger_love_commanded on the tape, love_owed the effect); THE PLACE — place_name.the_place_chosen (12:5-14 —
+place_chosen_required, rejoicing_before_the_lord_commanded, high_places_banned ON FILE), .the_profane_slaughter_the_blood_and_the_gates (12:15-19 — the gazelle
+and the hart; holy_things_in_the_gates_barred (the tithe in the gates) and levite_forsaking_barred ON FILE), .the_border_enlarged_and_the_altar (12:20-28 —
+12:21's far clause); THE FIRST SEATS OF THE TENTH — primeval (tithe_given Gen 14:20 ON THE TAPE, a TRANSFER; olah_offered Gen 8:20 with 7:2's clean beasts),
+mamre.bethel (vowed Gen 28:20-22 ON THE TAPE; tithe_vowed the DEBIT on Jacob). THE REGISTRY: 'the-levites' mapped to the_levites (THE TRUE MATCH — the tithe's
+recipients), 'the-place' to the_place_luz_bethel (JACOB'S PLACE — a homograph, FALSE if the census matches it), 'the-raven' to the_raven (Noah's), 'the-flock'
+to the_flock (Jacob's), 'the-beasts' to the_beasts (Noah's), 'the-people' to israel_people; NO registry row for the-levite, the-sojourner, the-stranger,
+the-fatherless, the-widow, the-ox, the-sheep, the-goat, the-kid, the-carcass, the-tithe, the-firstlings, the-herd, the-money, the-gates — the chapter's persons
+are the exam's, no entity; the daemon's writes on israel_people alone. THE KINDS AND EFFECTS ON FILE touching the matter: kid_boiled_in_milk (case — three
+seats), carcass_eaten (case — 17:15), carcass_touched (case — Lev 11), forbidden_kind_eaten (case — shemini's), flesh_torn (case — 22:30), herd_tithed (case —
+27:30-33), tithe_case (Num 18), tithe_given (act — Gen 14:20), tithe_of_the_tithe_commanded, harvest_reaped (case — 19:9, 23:22), firstling_born (case),
+profane_slaughter_permitted (statute — 12:15-19), place_chosen_declared, stranger_love_commanded (statute — 10:17-19), stranger_wronged (case — Exod
+22:20-23), hearing_blessed, nations_devoted; the effects levite_forsaking_barred (block, ONE — 12:19), rejoicing_before_the_lord_commanded (status, ONE —
+12:7), profane_slaughter_permitted (status), holy_things_in_the_gates_barred (block — the tithe in the gates), tithe_granted (status on the Levites),
+inheritance_barred, tithe_given (transfer), tithe_vowed (debit), terumah_of_the_tithe_owed (status), torn_flesh_to_dogs (transfer), treasured_people (heaven,
+ONE), left_for_the_poor, barred_from_it, impure_until_evening, lashes, love_owed, same_day_slaughter_barred, stranger_barred (the terumah's) — and NO effect
+naming the cuttings or the baldness for the dead, the abomination's eating, the carcass's eating (the ban the sanctions engine names at 14:21 has no effect of
+its own), the second tithe or the poor man's tithe (the five names asserted absent from both registries at the design; rejoicing_before_the_lord_commanded and
+levite_forsaking_barred present ONCE each). THE DOCKET SCAN (ch14_docket_scan.out; the dump ch14_docket_dump.txt 636,447 bytes, 2,978 lines): 144 LINK rows in
+38 works (Chullin 30, Bekhorot 13, Kiddushin 9, Makkot 9, Bava Kamma 7, Bava Metzia 7, Pesachim 7, Shabbat 5, Eruvin 4, Nedarim 4, Yevamot 4, Zevachim 4,
+Avodah Zarah 3, Menachot 3, Rosh Hashanah 3, Sukkah 3, Temurah 3, Yoma 3, Keritot 2, Shevuot 2, Tosefta Bekhorot 2, one each in seventeen more), the verses
+cited 14:21 the most (32 rows — the kid and the carcass), 14:25 (19), 14:23 (18), 14:22 and 14:26 (17), 14:1 (12), 14:24 (10); NOT CITED BY ANYONE 14:9 and
+14:14-18 (the water's permission and the birds' names); 817 TOPIC rows (Chullin 59a-66b 178, 68a-69a 62, 72b-73a 32, 77a 16, 80a 21, 113a-116b 135; Makkot
+20a-21a 43; Yevamot 13b-14a 42, 47b 19, 86a-b 23; Kiddushin 36a 22, 54b 16; Rosh Hashanah 12a-13a 39; Bekhorot 34a-35a 51, 53b 17; Pesachim 21b 11, 50b-51a
+24; Bava Metzia 88a 9; the ninety Mishnah rows — Chullin 8, Makkot 2, Maaser Sheni 57 (the five chapters whole), Maasrot 5, Temurah 1, Eduyot 1, Zevachim 1,
+Peah 5, Bekhorot 8 (chapter 9 whole — the cattle tithe), Avot 2); Tosefta Peah 4 (20 rows), Tosefta Kilayim 1 (11 rows), Tosefta Sanhedrin 3 EMPTY; 992
+addresses, 288 CREDITED BY ADDRESS — chapter 12's docket 157 (Chullin 113a-116b 118 of 135: FLESH IN MILK READ WHOLE AT 10b, its rows carried), the Korach
+docket 28, the Exodus triage 27, chapter 10's 21, the priesthood docket 17, the Genesis triage 17, the ordinances docket 12, the leaven block 9, the
+holiness_b docket 9 and the rest; the Mishnah rows credited: Bekhorot 9:1-8, Chullin 3:6-7, 8:1-4, Maaser Sheni 3:8 and more — some 700 rows to read whole: TWO
+DOCKET RUNS.
+
+THE NAME: cold_run_food_tithe.py — the 69th runner (the food laws and the tithes of chapter 14 — the sons and the cuttings, the beasts, the water and the birds,
+the carcass and the kid, the second tithe, the third year's tithe; the unit deu_14_food_tithe); the daemon law_food_tithe, given_at Deut 14:1, installed_by boot
+(the Deuteronomy daemons' form; THE INSTALL HYPOTHESIS on the table unchanged); seven cells F1-F7 on the seven claims' spans (14:1-2, 3-8, 9-20, 21, 22-23,
+24-27, 28-29) and the_readback — EIGHT WRAPPED (10b's lesson 4: the functions block counts what the daemon wraps).
+
+THE READBACK ON THIS CHAPTER — THE FORMS ON FILE, NO NEW FORM: chapter 14 is law from its first word to its last (Moses' voice, no act, no divine frame, no
+"if" — the one case on "and when" at 14:24), so its twenty-nine rows are T4 rows graded against the cells that compile their kin, by CALL (14:1 against
+Leviticus 19:27-28 and 21:5; 14:2 against 7:6; 14:3-20 against Leviticus 11 — THE TWIN CHAPTER, verse by verse; 14:21 against Leviticus 17:15, 22:8, Exodus
+22:30 and the kid's 23:19, 34:26; 14:22-23 against Numbers 18:21-24, Leviticus 27:30 and 12:6, 12:17-18; 14:24 against 12:21; 14:26 against 12:7; 14:27
+against 12:19 and 10:9; 14:28-29 against Leviticus 19:9-10, 23:22 and 10:18) and T1 reference rows against the tape's lines by kind and first verse
+(tithe_given Gen 14:20 — Abram's tenth, the word's first seat; vowed Gen 28:20-22 — Jacob's tithe vowed, the debit OPEN; olah_offered Gen 8:20 — 7:2's clean
+beasts, the word's first seat; covenant_offered Exod 19:5-6 — the treasured people; portion_declared Num 18:20-24 and tithe_of_the_tithe_commanded Num
+18:25-32; nations_devoted Deut 7:1-5 — 7:6's holy people; stranger_love_commanded Deut 10:17-19; place_chosen_declared Deut 12:5 and
+profane_slaughter_permitted Deut 12:15 — the gazelle and the hart, the tithe in the gates barred, the Levite kept); NO tape line for Leviticus 11, 17, 19,
+21-23 or 27 nor for Exodus 22:30, 23:19 or 34:26 — THE TENT'S LAWS ARE INSTALLED BY CALL, NOT WRITTEN AS LINES (their cells by CALL); NO retrograde marker, NO
+act told only here, NO T2 row, NO state row; the run's cases OUTSIDE THE TAPE (Solomon's table — 1 Kings 5:3, 14:5's one kin in the Bible; Samaria's fall at the
+end of three years — 2 Kings 18:10, 14:28's kin; Amos 4:4's tithes; Nehemiah's storerooms — 10:38-39, 13:5-12; Hezekiah's tithes — 2 Chronicles 31:5-12;
+Malachi 3:8-10; the swine's flesh — Isaiah 65:4, 66:17; Ezekiel's carcass — 4:14, 44:31; Samuel's tenth — 1 Samuel 8:15-17; Ruth's gleaning) DATA rows; THE
+CODE'S HOLES compiled at the chapter's own day (40, 11, 1), NO marker, after the tape's last Deut 13 line (condemned_city_law_declared): (a) THE SONS AND THE
+CUTTINGS (14:1-2), (b) THE FOOD LAW (14:3-20 — the beasts, the water, the birds), (c) THE CARCASS AND THE KID (14:21), (d) THE SECOND TITHE with the far place,
+the money, the rejoicing and the Levite (14:22-27), (e) THE THIRD YEAR'S TITHE (14:28-29). THE DECISIONS (the design's, open to the owner's word; the docket to
+confirm the names — 7b's lesson 7): (1) THE SONS AND THE CUTTINGS — sons_and_mourning_declared writes cuttings_for_the_dead_barred, a NEW BLOCK on
+israel_people (14:1 "you shall not cut yourselves nor make baldness between your eyes for the dead" — 96:10 the cut, 96:12 the baldness by the analogy run both
+ways with the priests' 21:5 (I2 — the whole head, not only between the eyes; per spot: priesthood.family('gash_multiplier', 'corners') by CALL; Mishnah Makkot
+3:5-6 and Makkot 20a-21a at the docket — the lashes' count and "for the dead" the conditions), 19:27-28's cuttings by CALL (holiness_b.body); THE SECOND
+READING "no factions" (96:10-11 — lo titgodedu read as "do not make yourselves into factions": Yevamot 13b-14a at the docket) INSIDE THE VALUE as a derived law
+beside the plain one, no parameter — both hold; "sons of the LORD" (14:1 — 96:9: sons when you act as sons, or sons either way — R. Meir; Kiddushin 36a at the
+docket) a DATA row and the exam's persons; 14:2 the ground — seven_nations.the_holy_people by CALL (7:6 VERBATIM in kind — eighteen of nineteen tokens by the
+reading's computation; treasured_people ON FILE ONCE at Exod 19:5, a HEAVEN entry UNMOVED — no write here: the reason clause, not a law). (2) THE FOOD LAW —
+food_law_declared writes abomination_eating_barred, a NEW BLOCK on israel_people (14:3 "you shall not eat any abomination" — 99:1-2: what I have made abominable
+for you; the general clause over the whole list; Chullin 114b-115a at the docket for the abomination's reach) — THE TWIN CHAPTER'S CELLS BY CALL
+(shemini.classify on the signs — the beasts' two, the water's two, the birds by name; carcass_touched by CALL for 14:8's "their carcass you shall not touch");
+THE CHAPTER'S GAIN OVER LEVITICUS 11 inside the value: THE TEN NAMED CLEAN BEASTS (14:4-5 — the three domestic and the seven wild: 100:1-2; nowhere else in the
+Torah; Chullin 59a-b at the docket — the wild beast's horn signs for the fat and the blood, the shesuah (the cleft one, 98:2 — Chullin 60b: a creature of its own
+kind) a DATA row), THE PERMISSION FOR THE CLEAN BIRD (14:11, 14:20 — Leviticus 11 has no "you may eat" for the birds: 103:1) with THE PARAMETER the_birds_signs
+FROM THE ANSWER SHEET (103:8 — Mishnah Chullin 3:6 in the row's own Hebrew: the extra toe, the crop, the peelable gizzard, not a clawer; Chullin 59a, 61a-65a at
+the docket — a bird is clean by signs where the Torah names only the unclean: THE CODE/DATA SEPARATION LAW'S OWN CASE, the value DATA), THE TWO NAMES ADDED
+(the ra'ah for Leviticus's da'ah — 98:5-6, Chullin 63b: one bird two names; the dayyah — 98:6 "the whole gain of the restatement") DATA rows, the locusts
+absent here (Leviticus 11:21-22 by CALL — 103:10 the frames); THE FOUR (14:7-8) the written exception set — the classifier's own rows by CALL, the four named
+the exception and the sign the class (101:10 — I1); the lexicon rule "bird = clean" (98:3; 228:5 — I3) and the counting rule (100:2, 103:7) DATA rows; the
+altar's disqualified by the names (101:1-9 — Mishnah Temurah 6:1) and the afterbirth (101:7 — Chullin 68a-69a, 77a) DATA rows; the exam's rows through
+forbidden_kind_eaten (shemini's case kind REUSED — lashes at the case; Makkot 3:2's list a DATA row) and the chapter's own case kind food_tithe_case. (3) THE
+CARCASS — carcass_and_kid_declared writes carcass_eating_barred, a NEW BLOCK on israel_people (14:21 "you shall not eat any carcass; to the sojourner in your
+gates you may give it that he eat it, or sell it to a foreigner" — THE BAN'S SEAT NAMED BY THE SANCTIONS ENGINE ITSELF: its lashed cell reads "the ban is Deut
+14:21 / Exod 22:30"; Leviticus 17:15's carcass_eaten the impurity's case by CALL, 22:8's priest by CALL (priesthood.holy_food), Exodus 22:30's flesh_torn by
+CALL (ordinances.torn — torn_flesh_to_dogs the TRANSFER); "any carcass" the torn included — 104:1, Chullin 72b-73a, Mishnah Chullin 4:4 — inside the value); THE
+FOUR-CELL TABLE A PARAMETER the_carcass_table with two arms (104:5-6 — giving and selling over the resident alien and the foreigner: the Sages either to
+either, R. Judah "as written" — Pesachim 21b at the docket); the resident alien (104:2 — Onkelos "the uncircumcised sojourner": THE SOJOURNER'S FIRST PERSON)
+and the custom's bar (104:7 — Pesachim 50b-51a) DATA rows. (4) THE KID — NO NEW WRITE: kid_boiled_in_milk the CASE KIND ON FILE (written three times — the
+census machine-verified at the calendar's compile) and calendar.kid_in_milk('cook', 'eat', 'benefit') THE CELL by CALL (barred on all three; barred_from_it at
+the case; 34:26 through erection.repeats by CALL) — THE THIRD SEAT'S GAIN IS THE ASSIGNMENT: the three covenants (104:8, reread whole), R. Akiva's three
+exclusions — the wild beast, the fowl, the unclean (104:9; Mishnah Chullin 8:4; Chullin 113a-116b — 118 of its 135 rows credited from chapter 12's docket and
+CARRIED, the seventeen read whole at D2), the fowl out by "its mother's milk" (104:10), the eating from 12:24's clause (76:7 — I1; Chullin 115b) — the cell
+asserts the three seats on the DB and reads the three verdicts from the calendar's cell: DATA rows; the exam's rows through kid_boiled_in_milk by CALL. (5)
+THE SECOND TITHE — second_tithe_declared writes second_tithe_owed, a NEW STATUS on israel_people (14:22-23 "tithe, you shall tithe all the yield of your seed …
+and you shall eat before the LORD your God in the place which He will choose … the tithe of your grain, your wine and your oil, and the firstlings of your herd
+and your flock, that you may learn to fear the LORD your God all the days" — NAMED THE SECOND BY THE SHELF, 105:2; Numbers 18's first tithe by CALL —
+korach.the_tithe: tithe_granted ON FILE on the Levites UNMOVED, Q33's literal unmoved); THE LIABILITIES FROM THE VERSE'S CLAUSES inside the value (105:1-19 —
+"the yield of your seed" what grows from seed, "the field" what goes out to the field, "year by year" no tithing from one year for another: Mishnah Maasrot 1:1,
+1:3, 2:4, 4:5-6; Rosh Hashanah 12b; Bekhorot 53b; Bava Metzia 88a's courtyard — korach.the_tithe('liable_produce') by CALL; Leviticus 27:30 by CALL
+temurah.tithe); THREE CONDITIONS FOR THE EATING inside the value, each from its row — the wall of Jerusalem (106:3 — I1 with the lesser holies; Mishnah Zevachim
+5:8), the House standing (106:4 — the juxtaposition with the firstling, no code; Tosefta Sanhedrin 3:6 through the Sifrei's note), the year passed no bar
+(106:5, reread whole); the firstling at 14:23 by CALL (ordinances.firstling; korach.the_gifts; Bekhorot 34a-35a at the docket) a DATA row; the firstling from
+outside the Land not brought (106:2 — Tosefta Sanhedrin 3:5; 15:19-23 ahead by CALL when it comes) a DATA row; "that you may learn to fear" (106:6 — the study)
+the effect's ground. (6) THE FAR PLACE, THE MONEY AND THE SPENDING (14:24-26) — inside second_tithe_declared's value and writes: THE FAR PLACE of place not time,
+any distance, the rich too (107:1-3; 12:21's clause by CALL place_name.the_border_enlarged_and_the_altar — twelve tokens in order by the reading's computation)
+a DATA row; THE MONEY'S FORM A PARAMETER the_moneys_form with two arms (107:4 — I1 "and bind up the money in your hand": money with a form — coined, not
+uncoined; Mishnah Maaser Sheni 1:2 the coin; Mishnah Eduyot 3:2's arm — the docket decides the values); the possession (107:5 — "in your hand": one's own) a
+DATA row; Shiloh and the eternal House (107:6 — the eras table by CALL place_name.the_place_chosen) a DATA row; THREE MONEYS THE LAW'S TABLE (107:7 — I1;
+Mishnah Maaser Sheni 3:10) a DATA row; THE CLASS FROM THE FOUR NAMED (14:26 — cattle, sheep, wine, strong drink: 107:8-11, I3 — fruit from fruit, growing from
+the ground, whose keeping is by the land: Mishnah Maaser Sheni 1:5, 1:7, 2:1) inside the value; the containers (107:12-15 — Mishnah Maaser Sheni 1:3; Mishnah
+Chullin 1:7) DATA rows; THE REJOICING — rejoicing_before_the_lord_commanded REUSED, a SECOND ENTRY on israel_people (12:7's the first; 14:26 "and you shall
+rejoice, you and your household" — 107:16: I2 with 27:7 ahead, the rejoicing peace offerings; DD2's count literal ONE and Q32's tuple MOVE — retyped from the
+print BEFORE the tape, 8b's and 10b's lesson: the grep at RUN B decides the list). (7) THE LEVITE (14:27) — levite_forsaking_barred REUSED, a SECOND ENTRY on
+israel_people (12:19's the first; 14:27 "the Levite who is in your gates, you shall not forsake him, for he has no portion or inheritance with you" — 108:1 THE
+LADDER OF FOUR: a status with four sources — 10:9 by CALL second_tablets.the_levites_separated, 12:12 and 12:19 by CALL place_name, Numbers 18:20-24 by CALL
+korach (portion_declared on the tape; inheritance_barred and tithe_granted the Levites' entries UNMOVED), 14:29 the fourth; DD2's and DD4's literals and Q32's
+tuple MOVE). (8) THE THIRD YEAR — third_year_tithe_declared writes poor_tithe_owed, a NEW STATUS on israel_people (14:28-29 "at the end of three years you shall
+bring out all the tithe of your yield in that year and lay it up within your gates; and the Levite … and the sojourner and the fatherless and the widow who are
+in your gates shall come and eat and be satisfied, that the LORD your God may bless you in all the work of your hand" — ONE TITHE NOT TWO: the poor man's
+replaces the second in the third and the sixth year, 109:5, 109:10-11; Numbers 18:21's first tithe by CALL, unmoved); THE REMOVAL'S DATE A CLOCK DATUM — THE
+PARAMETER the_removal_date (109:1-3 — the eve of the last festival day of Passover of the fourth and the seventh year: Mishnah Maaser Sheni 5:6; I2 "at the
+end" with 31:10 ahead; 26:12 ahead — the docket confirms the arms), the years by CALL to the sabbatical cycle (yovel.cycle, yovel.sabbatical, calendar.sabbatical
+— the seventh year exempt: 109:4, Exodus 23:10-11 through its spine; 15:1 ahead: THE CELL READS THE COUNT'S YEAR FROM THE CYCLE, never a constant); THE TITHES'
+NEW YEAR A CLOCK DATUM — THE PARAMETER the_tithes_new_year (109:8 — the vegetables' year; Rosh Hashanah 12a-13a at the docket: the first of Tishri for grain and
+legumes, the fifteenth of Shevat for the tree — Mishnah Rosh Hashanah 1:1's four new years; the docket decides); the gifts exempt (109:12 — Leviticus 19:9-10
+and 23:22 by CALL holiness.gifts and moadim: left_for_the_poor; THE LEVITICUS RUNNER'S IMPORT TABLE ALREADY POINTS AT 14:28 — a REVERSE edge candidate the
+census decides) a DATA row; THE FOUR IN WANT (110:1-2 — I3: the Levite, the sojourner, the fatherless, the widow; the measures at the threshing floor — Mishnah
+Peah 8:5-9 with Tosefta Peah 4:2, 4:11: half a kav of wheat, a kav of barley …) DATA rows and the exam's persons; THE SOJOURNER TWO PERSONS (14:21's resident
+alien, 14:29's convert — 110:2; Onkelos "the convert" against 14:21's "the uncircumcised"; Yevamot 47b, 86a-b at the docket — the convert eats the poor man's
+tithe, the resident alien the carcass: THE CELL READS THE NOUN BY ITS SEAT, no parameter; a DATA row and two exam persons); the storing within the gates
+(14:28 — the tithe left for the poor to come, 109:9) inside the value; the blessing on the work of the hand (14:29) the effect's ground (the confession at
+26:12-14 ahead by CALL when it comes). (9) THE REGISTER — NO seat in chapter 14 (the reading's finder: no receipt, no header, no footer; the two number verses
+14:6 [2] and 14:28 [3] no count lines — census probe rows if the form asks); DECLARED 98 UNMOVED — a second daemon given inside the block (Deut 12:1, Deut
+28:69] moves nothing (11b's lesson 2: both declarations on that block are gone, the header and the footer DAEMONS already); the gate --strict GREEN expected.
+(10) THE HOMOGRAPHS — the_place_luz_bethel (Jacob's place at 'the-place'), the_raven (Noah's), the_flock and the_beasts (Jacob's, Noah's): each filed FALSE with
+its why IF the census matches (the census decides); the_levites the TRUE match (the tithe's recipients — the value's object, the write on israel_people). (11)
+THE INSTRUMENT'S SLIPS AS DATA — the parser's [2] at 14:6 (the two hoofs) and [3] at 14:28; the ra'ah's resh against Leviticus 11:14's da'ah's dalet (the twin
+diffed verse by verse — the reading's lesson 6) a DATA row; the register's DATA rows (the food laws plural, the tithe singular, 14:21 both; no imperative; no
+"if"; the one "and when" at 14:24; no first person; no narrative verb; the starred tithe tokens; no written/read pair). (12) THE KIN BY CALL — EIGHTEEN CALL edges
+predicted: shemini, sanctions, calendar, erection, ordinances, priesthood, holiness, holiness_b, moadim, temurah, korach, yovel, seven_nations, second_tablets,
+place_name, primeval, mamre, seducers (13:1's word sealed — the header of the block both chapters sit in, if the census asks) — the census decides; NO pointer
+predicted (14:23-25's "the place which the LORD your God will choose" the formula's fourth and fifth seats — place_name by CALL, the formula the cell's own; no
+AS_WHEN form in the chapter); the priesthood -> holiness_b edge on file names Deut 14:1 already — a teacher's seat before the compile, a DATA row.
+
+THE ROWS (twenty-nine predicted, one per verse; the grades' census typed from the runner's print at RUN B): 14:1 "sons you are to the LORD your God; you shall
+not cut yourselves nor make baldness between your eyes for the dead" — THE LINE sons_and_mourning_declared; holiness_b.body (19:27-28) and priesthood.family
+(21:5) by CALL: SUPPLIED AS A LAW (the first seat of the cutting's bar for all Israel; "between your eyes" the frontlets' clause 6:8, 11:18 — a DATA row; 96:9's
+sonship, 96:10-11's two readings, 96:12's analogy both ways); 14:2 "for you are a holy people to the LORD your God, and the LORD has chosen you to be His
+treasured people from all the peoples on the face of the earth" — nations_devoted (Deut 7:1) by kind for 7:6, covenant_offered (Exod 19:5) by kind,
+seven_nations.the_holy_people by CALL: VERBATIM in kind (7:6 eighteen of nineteen tokens; 97:1-5 — the holiness your own and your fathers', the chosen, the
+treasured); 14:3 "you shall not eat any abomination" — THE LINE food_law_declared: SUPPLIED AS A LAW (the one clause; 99:1-2 what I made abominable for you;
+Chullin 114b at the docket); 14:4 "this is the beast which you may eat: the ox, the sheep and the goat" — shemini.classify by CALL: VARIANT (Leviticus 11:2-3
+without the names; 100:1 the three domestic); 14:5 "the hart, the gazelle, the roebuck, the wild goat, the ibex, the antelope and the mountain sheep" —
+place_name (12:15's gazelle and hart) by CALL: SUPPLIED (the seven wild beasts nowhere else in the Torah — Solomon's table 1 Kings 5:3 the one kin in the Bible
+a DATA row; 100:2 the count; Chullin 59a-b the wild beast's signs); 14:6 "and every beast that parts the hoof and has the hoof cloven in two and chews the cud
+among the beasts, it you may eat" — shemini.classify by CALL: VARIANT (11:3 with "two" — the parser's [2]; 98:1 the three signs from the three clauses; 101:1-9
+the altar's disqualified); 14:7 "but these you shall not eat of those that chew the cud or part the cloven hoof: the camel, the hare and the coney — for they
+chew the cud but do not part the hoof; they are unclean for you" — shemini.classify by CALL: VARIANT (11:4-6's three folded into one; THE FOUR the written
+exception set — 101:10 I1); 14:8 "and the swine, because it parts the hoof but does not chew the cud, it is unclean for you; of their flesh you shall not eat,
+and their carcass you shall not touch" — carcass_touched by CALL (shemini.touch_effect): VERBATIM in kind (11:7-8; 102:1 the touch); 14:9 "these you may eat of
+all that are in the waters: all that have fins and scales you may eat" — shemini.classify by CALL: VARIANT (11:9's twelve of twelve with the seas and the
+rivers dropped; NOT CITED BY ANYONE on the shelf); 14:10 "and whatever has not fins and scales you shall not eat; it is unclean for you" — by CALL: VARIANT
+(11:10-12 shortened, "unclean for you" for "detestable"; Chullin 66a-b at the docket); 14:11 "every clean bird you may eat" — THE PARAMETER the_birds_signs:
+SUPPLIED (the permission Leviticus lacks — 103:1; 103:8 the answer sheet's four signs); 14:12 "and these are they of which you shall not eat: the eagle, the
+vulture and the osprey" — by CALL: VARIANT (11:13's three; 103:3-4 the list carried by its head — I2); 14:13 "the glede, the kite and the falcon after its kind"
+— by CALL: VARIANT (the ra'ah for the da'ah, the dayyah added — 98:5-6, Chullin 63b); 14:14 "and every raven after its kind" — by CALL: VERBATIM in kind
+(11:15; the_raven the registry's homograph — Noah's); 14:15 "and the ostrich, the nighthawk, the seagull and the hawk after its kind" — by CALL: VERBATIM in kind
+(11:16 to the letter — the reading's diff); 14:16 "the little owl, the great owl and the horned owl" — by CALL: VARIANT (11:17-18's order); 14:17 "the pelican,
+the carrion vulture and the cormorant" — by CALL: VARIANT (11:17-18); 14:18 "the stork, the heron after its kind, the hoopoe and the bat" — by CALL: VERBATIM in
+kind (11:19); 14:19 "and every swarming winged thing is unclean for you; they shall not be eaten" — by CALL: VARIANT (11:20 — "unclean" for "detestable"; the
+locusts 11:21-22 absent here, by CALL — 103:10 the frames); 14:20 "every clean fowl you may eat" — by CALL: SUPPLIED (the second permission — 103:9-10; 228:5 the
+lexicon rule); 14:21 "you shall not eat any carcass; to the sojourner in your gates you may give it that he eat it, or sell it to a foreigner, for you are a holy
+people to the LORD your God; you shall not boil a kid in its mother's milk" — THE LINE carcass_and_kid_declared; carcass_eaten (Lev 17:15) by CALL
+(sanctions.carcass), priesthood.holy_food (22:8) and ordinances.torn (Exod 22:30 — flesh_torn) by CALL, kid_boiled_in_milk by CALL (calendar.kid_in_milk — THE
+THIRD SEAT): EXPANDED (THE FOUR-CELL TABLE 104:5-6; the resident alien 104:2; the custom's bar 104:7; the three covenants 104:8; R. Akiva's three exclusions
+104:9; the fowl out 104:10; 76:7 the eating — the chapter's most-cited verse, 32 link rows); 14:22 "tithe, you shall tithe all the yield of your seed that
+comes out of the field year by year" — THE LINE second_tithe_declared; korach.the_tithe by CALL, temurah.tithe by CALL: SUPPLIED AS A LAW (the second tithe's
+first seat — the doubled verb; the starred tokens; 105:1-19 the liabilities); 14:23 "and you shall eat before the LORD your God in the place which He will
+choose to make His name dwell there, the tithe of your grain, your wine and your oil, and the firstlings of your herd and your flock, that you may learn to fear
+the LORD your God all the days" — place_chosen_declared (12:5) by kind, place_name.the_place_chosen and .the_profane_slaughter_the_blood_and_the_gates (12:6,
+12:17-18) by CALL, ordinances.firstling by CALL: EXPANDED (the place formula's fourth seat; 106:1-6 the three conditions and the firstling; "learn to fear" one
+seat); 14:24 "and when the way is too long for you, so that you cannot carry it, because the place is too far from you which the LORD your God will choose to
+put His name there, when the LORD your God blesses you" — place_name.the_border_enlarged_and_the_altar (12:21) by CALL: VARIANT (12:21's clause twelve in
+order; 107:1-3 the far place; THE ONE "AND WHEN" of the chapter); 14:25 "then you shall turn it into money, and bind up the money in your hand, and go to the
+place which the LORD your God will choose" — THE PARAMETER the_moneys_form: SUPPLIED (the money's first seat; 107:4-7; 19 link rows); 14:26 "and you shall
+spend the money for whatever your soul desires, for cattle or sheep, for wine or strong drink, or whatever your soul asks of you; and you shall eat there before
+the LORD your God and rejoice, you and your household" — rejoicing_before_the_lord_commanded (12:7) REUSED, place_name.the_place_chosen by CALL: EXPANDED
+(the class from the four named 107:8-11 — I3; the containers 107:12-15; 107:16 the rejoicing peace offerings — I2 with 27:7); 14:27 "and the Levite who is in
+your gates, you shall not forsake him, for he has no portion or inheritance with you" — levite_forsaking_barred (12:19) REUSED, second_tablets (10:9) and
+korach (Num 18:20-24 — portion_declared by kind) by CALL: VERBATIM in kind (12:19's clause; 108:1 the ladder of four); 14:28 "at the end of three years you
+shall bring out all the tithe of your yield in that year, and lay it up within your gates" — THE LINE third_year_tithe_declared; THE PARAMETERS the_removal_date
+and the_tithes_new_year; yovel.cycle by CALL: SUPPLIED AS A LAW (the third year's first seat; the parser's [3]; 109:1-12 — the date, the seventh year, one tithe
+not two, the vegetables' year, the gifts exempt; Samaria's fall 2 Kings 18:10 the closest verse a DATA row); 14:29 "and the Levite, because he has no portion
+or inheritance with you, and the sojourner and the fatherless and the widow who are in your gates shall come and eat and be satisfied, that the LORD your God
+may bless you in all the work of your hand which you do" — stranger_love_commanded (Deut 10:17) by kind, second_tablets.the_god_of_gods_and_the_stranger
+(10:18) and holiness.gifts (19:9-10) by CALL: EXPANDED (14:27's clause seven tokens in order — the chapter's own closest kin; 24:19's clause ahead; 110:1-4 the
+four in want, the convert, the measure, the Land; the blessing). THE HOLES: FIVE IN THE CODE compiled at the chapter's own day (the sons and the cuttings; the
+food law; the carcass and the kid; the second tithe; the third year); NONE told only here; no pointer; no state row; no retrograde marker.
+
+THE CELLS (F1-F7 + the_readback; every token probed; effects on every cell; the exam's rows the docket's crowns): F1 THE SONS AND THE CUTTINGS (14:1-2): the
+line and its one write; the exam: Mishnah Makkot 3:5-6 with Makkot 20a-21a (the baldness — how many bald spots, how many lashes; the cuttings for the dead;
+"between your eyes" the whole head), Yevamot 13b-14a (no factions — the two courts in one town; Beit Shammai and Beit Hillel), Kiddushin 36a (sons of the
+LORD — R. Judah and R. Meir), Avot 3:14 (beloved are Israel, called sons — the link row), Leviticus 19:27-28's and 21:5's cells by CALL (the Sifra credited
+from their sittings). F2 THE BEASTS (14:3-8): the line and its one write; the exam: Mishnah Chullin 3:6-7 with Chullin 59a-66b (the signs of the beasts, the
+wild beast's horns, the four, the shesuah (the cleft one), the fish's signs, the birds' signs, the locusts — 178 rows, 18 credited), Mishnah Temurah 6:1 (the
+altar's disqualified by the names — 101:1-9), Chullin 68a-69a (the afterbirth — 101:7), Chullin 77a (the afterbirth's rows), Chullin 80a (the koy — a doubtful
+kind; Tosefta Kilayim 1:9), Bekhorot 34a-35a (the firstling's blemish — 14:23's firstling), Mishnah Bekhorot 9 with Bekhorot 53b (the cattle tithe — 27:32's
+kin by CALL). F3 THE WATER AND THE BIRDS (14:9-20): the parameter the_birds_signs; the exam: Chullin 59a and 61a-65a inside F2's range (the signs of a clean
+bird — the extra toe, the crop, the peelable gizzard, the clawing; the ra'ah and the dayyah; the twenty-four unclean birds; the locusts' four signs), Chullin
+66a-b (fins and scales — a fish with scales has fins), Mishnah Chullin 3:7 (the locusts). F4 THE CARCASS AND THE KID (14:21): the line and its one write; the
+parameter the_carcass_table; the exam: Pesachim 21b (the carcass to the alien — the table; R. Judah), Chullin 72b-73a with Mishnah Chullin 4:4 (the torn and the
+fetus — "any carcass"), Pesachim 50b-51a (the custom's bar — the place's custom), Mishnah Chullin 8:1-4 with Chullin 113a-116b (meat in milk — the three
+readings, the fowl, the beast's and the wild's milk, the cooking's and the eating's warnings; 118 rows carried from chapter 12's docket), Leviticus 17:15's,
+22:8's and Exodus 22:30's cells by CALL. F5 THE SECOND TITHE (14:22-23): the line and its one new write; the exam: Mishnah Maasrot 1:1, 1:3, 2:4, 4:5-6 (the
+liabilities — what is food, guarded, grows from the ground; the courtyard; the seasons), Mishnah Maaser Sheni 1-2 (the tithe's sanctity — not sold, not
+pledged, not weighed; the money; the produce), Mishnah Zevachim 5:8 (the wall — the second tithe eaten within the wall), Kiddushin 54b (the second tithe
+Heaven's property — R. Meir; the docket's link rows), Rosh Hashanah 12a-13a (the tithe's year — grain, legumes, vegetables, the tree; the fifteenth of Shevat),
+Bekhorot 53b (the cattle tithe's years), Bava Metzia 88a (the liability by the courtyard — the pile smoothed, the skimming, the trough: korach's rows), Yevamot
+86a-b (the first tithe to the Levite — Ezra's penalty; the poor tithe to the priest), Numbers 18's and Leviticus 27's cells by CALL. F6 THE FAR PLACE, THE MONEY,
+THE REJOICING AND THE LEVITE (14:24-27): the two reuses; the parameter the_moneys_form; the exam: Mishnah Maaser Sheni 1:2 (coined money), 1:3 (the
+containers), 1:5, 1:7, 2:1 (the class from the four — cattle, sheep, wine, strong drink; not water, not salt), 3:10 (the three moneys), 4-5 (the redemption's
+fifth, the doubtful, the tithe's removal), Mishnah Eduyot 3:2 (the money's form — the docket's arm), Kiddushin 54b, Rosh Hashanah 12a (the link rows), 12:21's
+and 12:7's cells by CALL. F7 THE THIRD YEAR (14:28-29): the line and its one write; the parameters the_removal_date and the_tithes_new_year; the exam: Mishnah
+Maaser Sheni 5:6-15 (the removal — the eve of the festival of the fourth year; the confession's conditions), Mishnah Peah 8:5-9 with Tosefta Peah 4 (the poor
+man's tithe's measures — half a kav of wheat, a kav of barley; the poor who travel; who is poor — two hundred zuz), Yevamot 47b (the convert — the poor tithe;
+the convert's acceptance), 86a-b (the poor tithe's recipients), Rosh Hashanah 12a-13a (the third year's new year), Tosefta Sanhedrin 3:5-6 (through the Sifrei),
+Leviticus 19:9-10's and 23:22's cells by CALL, Avot 3:9 (the link row). THE READBACK TABLE (the_readback — the twenty-nine rows with their grades, the DATA
+rows). THE DATA ROWS (about thirty-five): the readback table; the twin diffed (14:15 = 11:16 to the letter; 14:6 = 11:3 with "two"; 14:7 folds 11:4-6; 14:9
+twelve of 11:9's twelve); 14:2 = 7:6 eighteen of nineteen; 14:24 holds 12:21's twelve; 14:29 has 24:19's seven and 14:27's seven; "between your eyes" the
+frontlets' clause; the sonship's two arms; the two readings of the cutting; the ten named beasts and Solomon's table; the shesuah (the cleft one); the two names
+added; the lexicon rule; the counting rule; the altar's disqualified; the afterbirth; the locusts absent; the resident alien and the convert — the sojourner two
+persons; the custom's bar; the three covenants; R. Akiva's exclusions; the fowl out; the kid's three seats on the DB; the first tithe's liabilities; the three
+conditions; the firstling and the firstling from outside; "learn to fear"; the far place of place not time; the possession; Shiloh and the House; the three
+moneys; the class from the four; the containers; the rejoicing peace offerings; the ladder of four; one tithe not two; the removal's date; the seventh year; the
+vegetables' year; the gifts exempt and the Leviticus runner's pointer; the four in want and their measures; Samaria's fall; the blessing; the parser's [2] and
+[3]; the ra'ah's resh; the register's rows; the homographs (the_place_luz_bethel, the_raven, the_flock, the_beasts); the priesthood -> holiness_b edge naming
+14:1; the verses no one cites (14:9, 14-18).
+
+THE LINES ON THE TAPE (the recorder and the stitcher; the design's arithmetic): NO MARKER; FIVE OWN-DAY LINES after the tape's last Deuteronomy 13 line
+(condemned_city_law_declared) — sons_and_mourning_declared (14:1-2), food_law_declared (14:3-20), carcass_and_kid_declared (14:21), second_tithe_declared
+(14:22-27), third_year_tithe_declared (14:28-29), all STATUTE by form (the form declared — 4b's lesson); THE DAEMON'S SEVEN WRITES AT THE STATUTES —
+cuttings_for_the_dead_barred (a BLOCK), abomination_eating_barred (a BLOCK), carcass_eating_barred (a BLOCK), second_tithe_owed (a STATUS), poor_tithe_owed (a
+STATUS) — five new; rejoicing_before_the_lord_commanded (REUSED — a second entry on israel_people), levite_forsaking_barred (REUSED — a second entry) — two
+reuses; the case's writes at the exam only (lashes, barred_from_it, impure_until_evening, torn_flesh_to_dogs, left_for_the_poor, accepted, exempt). THE TYPES
+(add_types_ch14.py, after the probes' FAIL print): event_vocabulary +6 (the five lines — form statute, witnesses Deut 14:1, 14:3, 14:21, 14:22, 14:28;
+food_tithe_case — the exam's case kind) 1155 -> 1161; effect_vocabulary +5 (cuttings_for_the_dead_barred, abomination_eating_barred, carcass_eating_barred —
+block; second_tithe_owed, poor_tithe_owed — status; the names the docket confirms) 1056 -> 1061, rejoicing_before_the_lord_commanded's and
+levite_forsaking_barred's rows AMENDED with the chapter's seats; daemon_dispositions (law_food_tithe — file, wraps food_tithe, given_at Deut 14:1, installed_by
+boot, watches {sons_and_mourning_declared: [cuttings_for_the_dead_barred], food_law_declared: [abomination_eating_barred], carcass_and_kid_declared:
+[carcass_eating_barred], second_tithe_declared: [second_tithe_owed, rejoicing_before_the_lord_commanded, levite_forsaking_barred], third_year_tithe_declared:
+[poor_tithe_owed], food_tithe_case: [accepted, exempt, lashes, barred_from_it, impure_until_evening, torn_flesh_to_dogs, left_for_the_poor]}; the functions
+block's EIGHT WRAPPED — the seven cells and the_readback); dependency_dispositions (the span [[Deut, 14, 1, 29]]; the CALL edges predicted EIGHTEEN — shemini,
+sanctions, calendar, erection, ordinances, priesthood, holiness, holiness_b, moadim, temurah, korach, yovel, seven_nations, second_tablets, place_name,
+primeval, mamre, seducers — the census decides; NO pointer predicted; FALSE edges on the homographs if matched; the holiness runner's GIFTS_IMPORT pointer at
+14:28 a REVERSE candidate if the census asks); installation_probes I5 73 -> 74; calendar_parameters.yaml +5 (the_birds_signs, the_carcass_table,
+the_moneys_form, the_removal_date, the_tithes_new_year — the sojourn_start form, the docket's values); the register file untouched (DECLARED 98).
+
+THE PREDICTION'S ARITHMETIC: RUN = (1332, 96, 88, 0, 12, 1641, 45, 319, the four pairs, 127) — events +5, timers set +0, fired +0 (no clock walk), cancels 0,
+retro-writes 12 UNMOVED, writes +7 (the daemon's seven at the statutes), daemons fired +1 (law_food_tithe), entities +0 (israel_people on the registry; no
+person, beast or bird an entity), closes +0 (no debit, no close — Jacob's tithe_vowed OPEN unmoved); PREVIOUS_RUN = 11b's RUN EXACTLY (1327, 96, 88, 0, 12,
+1634, 44, 319, the four pairs, 127): THE REST drops the five lines by the runner's tag and the span and the daemon's seven writes with them — no delta;
+NEWEST_RUNNER 'food_tithe'; markers 172 UNMOVED (PLACEMENT markers text_constrained 108, reading_placed 49 unmoved); events page_order 1159 -> 1164,
+text_constrained 110 and reading_placed 58 UNMOVED — READ, never predicted; CENSUS on tape 1327 -> 1332, kinds 872 -> 877, subjects 272 UNMOVED, markers 172,
+closes 71 unmoved; the population table 148 UNMOVED; THE OPEN DEBITS ON israel_people 10 UNMOVED (no debit this chapter); THE BLOCKS on israel_people +4 in
+count (three new; levite_forsaking_barred's second entry — the literals counting the blocks grepped); rejoicing_before_the_lord_commanded ONE -> TWO on
+israel_people (DD2's count literal, Q32's tuple at readback_probes line 459 — retyped from the print BEFORE the tape, 8b's and 10b's lesson), levite_forsaking_barred
+ONE -> TWO (DD2, DD4's holes and Q32 — the grep decides); treasured_people ONE UNMOVED (CQ5, Q17); tithe_granted and inheritance_barred ONE each on the Levites
+UNMOVED (Q33); the scene's tuple PREDICTED BY SCRIPT at the runner step (the exam's persons through food_tithe_case — each written once; no timer; no close);
+the narrative's (its own world: the seven writes, 0 closes, the entity israel, the counter's day (11, 1), no row).
+
+THE CHECKPOINTS DF1-DF9 (the D series at its sixth name; the literals typed from the prints at RUN B):
+DF1 THE LINES — five events on the tape AFTER the tape's last Deuteronomy 13 line: sons_and_mourning_declared, food_law_declared, carcass_and_kid_declared,
+second_tithe_declared and third_year_tithe_declared on the counter's day (40, 11, 1), NO marker (markers 172 UNMOVED); the counter ends at (40, 11, 1).
+DF2 THE WRITES — cuttings_for_the_dead_barred ONE, abomination_eating_barred ONE, carcass_eating_barred ONE, second_tithe_owed ONE, poor_tithe_owed ONE on
+israel_people; rejoicing_before_the_lord_commanded TWO (12:7's and 14:26's), levite_forsaking_barred TWO (12:19's and 14:27's) on israel_people;
+law_food_tithe registered, given_at Deut 14:1, installed_by boot; the eight cells WRAPPED.
+DF3 THE READBACK — the_readback's rows (twenty-nine; the census from the print), every reference row's entry FOUND: the tape lines by kind and first verse
+(tithe_given Gen 14:20, vowed Gen 28:20, olah_offered Gen 8:20, covenant_offered Exod 19:5, portion_declared Num 18:20, tithe_of_the_tithe_commanded Num 18:25,
+nations_devoted Deut 7:1, stranger_love_commanded Deut 10:17, place_chosen_declared Deut 12:5, profane_slaughter_permitted Deut 12:15) and the kin's cells by
+CALL (each returning its verdict on its own ask — the classifier on the four, the kid's cell on its three asks, the carcass's ban naming 14:21, the tithe's
+liabilities); no pointer, no retrograde row, no state row.
+DF4 THE HOLES — NO effect naming the cuttings for the dead, the abomination's eating, the carcass's eating, the second tithe or the poor man's tithe on
+israel_people BEFORE this daemon's lines (the ledger scan on the running world at the tape's Deut 13 end: EMPTY — asserted before the lines run) and ONE each
+after; rejoicing_before_the_lord_commanded and levite_forsaking_barred ONE each before and TWO after; the five new names absent from both registries at sitting
+12's tree (asserted on the registry files).
+DF5 THE KIN STAND — the classifier returning the four by CALL (shemini.classify: the camel, the hare, the coney cud without hoof; the swine hoof without cud),
+the kid's cell barred on 'cook', 'eat' and 'benefit' by CALL (calendar.kid_in_milk), the carcass's ban naming Deut 14:21 by CALL (sanctions.carcass's lashed
+cell), the torn to the dogs by CALL (ordinances.torn), the first tithe's liabilities by CALL (korach.the_tithe), the herd's tenth an ordinal by CALL
+(temurah.tithe), the priests' baldness per spot by CALL (priesthood.family), the corners left by CALL (holiness.gifts); treasured_people ONE UNMOVED (a heaven
+entry, OPEN), tithe_granted ONE and inheritance_barred ONE on the Levites UNMOVED, tithe_given's transfer (Abram's) UNMOVED, tithe_vowed's debit (Jacob's) OPEN
+UNMOVED, holy_things_in_the_gates_barred ONE UNMOVED, profane_slaughter_permitted ONE UNMOVED; the open debits on israel_people 10 UNMOVED.
+DF6 THE PARAMETERS AND THE CLOCK — the_birds_signs, the_carcass_table, the_moneys_form, the_removal_date and the_tithes_new_year on file
+(calendar_parameters.yaml, the sojourn_start form); THE REMOVAL'S YEAR READ FROM THE CYCLE BY CALL (yovel — the fourth and the seventh of the count; the bare
+world before the entry: the count not begun, the cell's verdict "no count" asserted; the running world's count read and printed) — the date's rendering the
+clock's, never a constant; no marker.
+DF7 THE REGISTER AND THE EDGES — NO register seat at Deut 14 (the finder called on the chapter at the tape — the reading's measurement repeated); DECLARED 98
+UNMOVED; the eighteen CALL edges on file as the census filed them (the file read at the gates); the homographs FALSE if matched; no pointer.
+DF8 THE DATA — the twin diffed on the DB (14:15 = Leviticus 11:16 to the letter; 14:6 = 11:3 with "two"; 14:7 folds 11:4-6; 14:9 twelve of 11:9's twelve; the
+ra'ah's resh against the da'ah's dalet); 14:2 = 7:6 eighteen of nineteen; 14:24 holds 12:21's twelve in order; 14:29 holds 14:27's seven; the kid's three seats
+on the DB (23:19, 34:26, 14:21 — the census's own count); the tithe's starred tokens at 14:22, 23, 28; the parser's [2] at 14:6 and [3] at 14:28; the
+sojourner's two renderings from the Onkelos store (14:21 "the uncircumcised", 14:29 "the convert") — every one by CALL to the ink block.
+DF9 THE REST — entities 319 UNMOVED, closes 127, markers 172, the population table 148 UNMOVED, the five kinds present; the other counts 11b's exactly with the
+five lines and the seven writes dropped (THE REST test — NO declared delta). THE STALE LITERALS predicted (grepped at the design): DD2 in cold_run_sequence.py
+("rejoicing_before_the_lord_commanded ONE", "levite_forsaking_barred ONE" — line 3299: MOVES), DD4 (the holes' SEVEN ALONE — line 3305: the grep decides), Q32's
+tuple in readback_probes.py (line 459 — the seven (1, verse) pairs: TWO of them MOVE), the checkpoints counting the blocks on israel_people (if any); every
+miss shown at once by checkpoint_check.py --all AFTER the tape.
+
+THE PROBES (RUN B's FIRST step, before the types — 7b's lesson 2): readback_probes.py Q37-Q39 written to FAIL before the runner exists — Q37 the runner and its
+the_readback table (the rows and their census typed from the print; every reference row's entry found; no pointer, no retrograde row, no state row); Q38 the
+five own-day lines on the counter's day (40, 11, 1) with NO marker (markers 172 UNMOVED) and their seven writes (five new on israel_people;
+rejoicing_before_the_lord_commanded and levite_forsaking_barred TWO each — the reuses); Q39 the kin standing (DF5's counts) and the holes filled (DF4, DF6);
+Q32's tuple retyped from the print; Q22-Q36 otherwise unchanged (no marker count moves); THE PARSER — 14:6's [2] and 14:28's [3] measured at the reading: census
+probe rows IF the form asks (the probes' own count read at RUN B; census_probes 224 at 11b); the register gate --strict (no seat; DECLARED 98 unmoved);
+checkpoint_probes' verse computed (2b's form).
+
+THE ORDER: this design -> the state doc's checkpoint (#205 — RUN A closed) -> THE DOCKET IN TWO RUNS: D1 the dump's 144 LINK rows, Chullin 59a-66b (178 rows,
+18 credited) and the ninety Mishnah rows (Chullin 1:7, 3:6-7, 4:4, 8:1-4; Makkot 3:5-6; Maaser Sheni 1-5 whole; Maasrot 1:1, 1:3, 2:4, 4:5-6; Temurah 6:1;
+Eduyot 3:2; Zevachim 5:8; Peah 8:5-9; Bekhorot 9 whole; Avot 3:9, 3:14) — 412 addresses, the credited CARRIED with their ledgers' own verdict lines (11b's form,
+ch13_credit_carry.py derived), the uncredited read whole in chunk files (the cap 64,000 bytes — one chunk one Read page), the parts on 11b's whole-row
+instruments (ch13_docket_A.py's form, ch13_docket_common.py, ch13_docket_U.py — ONE SHARED FILE for the unresolved rows), EVERY ROW WHOLE, the verdicts LAW /
+DERIVATION / DISPUTE / CONTEXT / OUTSIDE with the credits computed, its own clean point; D2 the seventeen other folio ranges (Chullin 68a-69a 62, 72b-73a 32,
+77a 16, 80a 21, 113a-116b 135 — 118 carried; Makkot 20a-21a 43; Yevamot 13b-14a 42, 47b 19, 86a-b 23; Kiddushin 36a 22, 54b 16; Rosh Hashanah 12a-13a 39;
+Bekhorot 34a-35a 51, 53b 17; Pesachim 21b 11, 50b-51a 24; Bava Metzia 88a 9) with Tosefta Peah 4 (20) and Tosefta Kilayim 1 (11) — 580 addresses, the writer
+derived from write_ch13_docket.py (the eighteen ranges ASSERTED against the scan's print), the docket's records (COMPILE_DEBT's box (o), MIDDOT — every code
+checked in MIDDOT.md before it is typed, MISHNAH_TOPICS, the state doc's checkpoint), its own clean point -> RUN B: the probes to FAIL (patch_probes_ch14.py:
+Q37-Q39; the reuse literals retyped ONE -> TWO), the types (add_types_ch14.py — the docket's names; the five parameters), the callees' facts printed before any
+assert (ch14_callees.py — every CALL named above, each ask read at the cell's own source), the runner in parts with the fast checker (ch14_fastcheck.py) and
+the generated CASES (ch14_cases_gen.py; the guard's count from the generator's print), the recorder (seq_record_ch14.py, INK_CACHE=0) and the stitcher
+(seq_stitch_ch14.py; no marker — the five lines on the counter's day), the literals DF1-DF9 and the VERDICTS entries (patch_seq_literals_ch14.py), the tape to
+10/10 with THE REST, checkpoint_check.py --all AFTER the tape, the records writer (write_ch14b_records.py) and the copier WRITTEN, gates_chain.sh LAUNCHED in
+the background, the clean point -> THE TAIL: the summary read once, the demands filed (a rerun --from the step), the records from the sheet in one call (the
+map's AS BUILT, COMPILE_DEBT's sitting-12 box PAID and the 12b box, MIDDOT, MISHNAH_TOPICS, RESEARCH_LOG, THE_STEPS, THE_BRIEFING, THE_LOOP's step-6 row,
+RESUME, RECORD_FORMS, the state doc, the addenda, the recovery page, the memory), the forms copied (copy_ch14b_forms.py), the commit message (this sitting's
+beneath chapter 14's and 13b's, for the owner's word).
+
+THE DOCKET — AS RUN (D1) (2026-09-21, on the owner's "Go" after the compaction at #205; the timing rows in the scratchpad's ch14b_timing.tsv: 12b D1 derive docket tools (from the forms' ch13 tools) 0s (at 21:09:33, rc 0); 12b D1 credit survey (the ledgers' forms, to disk) 0s (at 21:09:33, rc 0); 12b D1 credit carry (the credited rows with their ledgers' verdicts) 0s (at 21:09:33, rc 0); 12b D1 uncredited chunks (64,000; SPLIT_AT computed) 0s (at 21:09:33, rc 0); 12b D1 the parts A-C and the shared U file — the check (every slice fully matched) 0s (at 21:39:43, rc 0)): THE INSTRUMENTS derived from 11b's forms by asserted substitutions (derive_ch14_docket_tools.py -> ch14_docket_common.py with the cells F1-F7 named, ch14_docket_rows.py, ch14_docket_uncred.py, ch14_credit_survey.py, ch14_credit_carry.py — the unresolved lines led by their dump index so the two runs split them); THE RUN BOUNDARY COMPUTED FROM THE DUMP, NEVER TYPED: SPLIT_AT = the first Chullin topic row past folio 66 = row 406, asserted contiguous — D1 the rows 0-405 (the 144 link rows; the 88 Mishnah topic rows — two of the design's ninety are link rows, Chullin 8:4 and Avot 3:14; Chullin 59a-66b's 174 topic rows — four of its 178 are link rows), D2 the rows 406-991 (the seventeen other ranges, Tosefta Peah 4, Tosefta Kilayim 1); THE CARRY: credited 289 resolved 220 unresolved 68 unresolved bytes 51072 (the 289 counts Tosefta Kilayim 1:6 twice — the dump's one duplicate address, a link row and the whole-chapter row; the header's 288); THE CHUNKS: ch14_uncred_00.txt rows 1-140 (83 rows, 63415 bytes); ch14_uncred_01.txt rows 141-309 (113 rows, 63455 bytes); ch14_uncred_02.txt rows 310-405 (92 rows, 48323 bytes) — D1's three, each one Read page, EVERY ROW WHOLE; the 37 unresolved credited rows of D1 read whole from ch14_uncred_unres_d1.txt (D2's 31 held in ch14_uncred_unres_d2.txt). THE PARTS ON DISK: ch14_docket_A.py (rows 0-143, the link rows — 85 own verdicts), ch14_docket_B.py (rows 144-231, the Mishnah rows — 47), ch14_docket_C.py (rows 232-405, Chullin 59a-66b — 156), ch14_docket_U.py (the shared file — 37 unresolved rows read whole here; D2's appended at D2); ch14_d1_check.py (11b's form, the parts named on the command line) GREEN: 406 rows — LAW 124 / DERIVATION 135 / DISPUTE 64 / CONTEXT 45 / OUTSIDE 38; 81 CARRIED with their ledgers' own verdict lines, 325 READ WHOLE IN THIS RUN (288 uncredited and 37 unresolved); the WHOLE dicts empty, apply_whole's counts 0 (no cut to correct); LAW by cell, the own notes {'F1': 4, 'F2': 12, 'F3': 34, 'F4': 3, 'F5': 5, 'F6': 25, 'F7': 1}. THE FINDS OF D1 (the crowns, for the ledger's own section at D2): THE BIRDS' SIGNS DERIVED FROM THE TWO POLES AND NAMED THE SAGES' TEACHING (Chullin 61a:1 — the nesher and the dove; Abaye: the signs' explanation is not in the Torah; the ladder 61a:2-61b:7; the twenty-four with four signs 61b:6) with THE RULING one sign and no clawing (62a:4 Ameimar), THE KNOWLEDGE CONDITION (62a:1) and THE TRADITION ARM (63b:11 — a clean bird eaten by tradition, the hunter believed; Tosefta Bekhorot 1:5) — the_birds_signs' value in three layers; THE TWO LISTS COUNTED AT THEIR SEAT (63a:17-63b:2 — Leviticus twenty, Deuteronomy twenty-one, the da'ah and the ra'ah one bird, the ayya and the dayya one; R. Abbahu's twenty-three at 63b:5-7) and their purposes (63b:4, Bekhorot 6b:20 — the beasts' list ADDS the shesua, the birds' EXPLAINS the ra'ah): the reading's diff confirmed by the Gemara's own count; THE FOUR CLOSED BY 'IT' (59a:12, 59a:14 — the school of R. Yishmael) and THE OFFSPRING RULE'S DISPUTE (Bekhorot 6b:2, 7a:7, 7a:20; Tosefta Bekhorot 1:5; Bava Kamma 78a:9 — 'camel, camel' and 'the seh of sheep'); THE TEN NAMED AND NO MORE (Chullin 80a:13) with the wild under the beast's name (71a:2; Zevachim 34a:15) and 'seh' the paradigm (Bava Kamma 77b:13); THE SHESUA A CREATURE (60b:7; Niddah 24a:13 — 'was Moses a hunter?'); THE MONEY'S FORM AT THREE SEATS (Bava Metzia 47b:5 — R. Yishmael the blank, R. Akiva the imprint; Mishnah Eduyot 3:2 — R. Dosa / the Sages; Mishnah Maaser Sheni 1:2 — coined, current, IN ONE'S POSSESSION) with any coinage (Bekhorot 50b:5; Kiddushin 11b:3) and the coined arm applied five times outside (Berakhot 47b:10, Eruvin 31b:12, Pesachim 35b:15, Shabbat 128a:3, Bekhorot 51a:6); THE CLASS FROM THE FOUR NAMED BY GENERAL-PARTICULAR-GENERAL (I6 — Bava Kamma 54b:20; Nazir 35b:3: THE CHAPTER'S VERSE THE SOURCE OF THE METHOD; the rival amplification-restriction at Eruvin 27b:14) with water and salt out (Eruvin 26b:18; Mishnah Eruvin 3:1; Maaser Sheni 1:5) and the containers (Eruvin 27b:3 Ben Bag Bag; Maaser Sheni 1:3-4, 3:12-13); THE WALL AT THE ANSWER SHEET (Maaser Sheni 3:5-7), THE HOUSE STANDING (Temurah 21a:17), the firstling from outside the Land (21b:3), the year passed no bar (Zevachim 29b:2); THE EXILE'S THIRD STATE ON THE TITHE (Maaser Sheni 1:5-6 — no Temple: left to rot, buried with its hide); ONE TITHE NOT TWO AND THE LEVITE NEVER INTERRUPTED (Rosh Hashanah 12b:4); THE ANALOGY BOTH WAYS (Makkot 20a:14; 20a:12 and Kiddushin 36a:6 the whole head) with the measure two hairs (Shabbat 94b:8), the count per soul (Makkot 21a:1), Isi's persons (Kiddushin 35b:16), the sonship's arms (36a:11) and NO FACTIONS (Yevamot 13b:17, 14a:6 — two courts in one town); THE CARCASS DEFINED BY FITNESS FOR A RESIDENT ALIEN (Avodah Zarah 67b:8; Bekhorot 23b:2; Chullin 71a:19), the sale clause the paradigm of a permitted benefit (Kiddushin 56b:10), the sanction a dispute (Yoma 36b:1), the table's first arm (Pesachim 21b:7 — R. Meir both to both); THE KID'S THREE READINGS AT THEIR SEAT (Kiddushin 57b:9) with the benefit counter-arm (57b:10; Bekhorot 10a:2; Menachot 101b:6), the fowl out (Shabbat 130a:11) and the Tosefta's measures (Tosefta Chullin 8:3); THE POOR'S MEASURES (Mishnah Peah 8:5-6) and THE CATTLE TITHE'S ANSWER SHEET with the tenth an ordinal (Mishnah Bekhorot 9:1, 9:7); THE VERSE NO ONE CITES (14:9) READ THROUGH ITS TWIN (Chullin 66b:6-7 — the permission's reach: vessels, pits, ditches and caves; the two sides a command and a ban). THE DESIGN'S DEPARTURES NOTED FOR RUN B: (a) the class from the four named is I6 by the Gemara's own method (the design wrote I3) — retyped at the types; (b) the_birds_signs' value in THREE LAYERS (the four signs; the ruling with its knowledge condition; the tradition arm) — the parameter's second arm; (c) the_moneys_form's value gains THE POSSESSION CLAUSE (Mishnah Maaser Sheni 1:2; Bava Kamma 98a:4) beside its two arms; (d) second_tithe_owed's value gets THE EXILE'S ARM (no Temple — rot / bury) as chapter 12's slaughter law had; (e) the carcass's sanction carried by sanctions.carcass('lashes_for_eating') by CALL — the dispute a DATA row; (f) the design's 'the ninety Mishnah rows' are 88 topic rows and two link rows, its 'Chullin 59a-66b 178 rows' 174 topic rows and four link rows — the dump's own arithmetic. NEXT ON HIS WORD (after a compaction: "Reread", then "Go"): D2 — the rows 406-991 read whole (ch14_uncred_03.txt to ch14_uncred_06.txt; ch14_uncred_unres_d2.txt), the parts D, E, … on disk, ch14_docket_U.py extended, the writer derived from write_ch13_docket.py (the parts 'ABCDE…'; the eighteen ranges asserted against the scan's print; the dump's duplicate address dropped, computed), the ledger written with coverage computed and lint 0, the docket's records (COMPILE_DEBT's box (o), MIDDOT with every code checked before typed, MISHNAH_TOPICS, the state doc's checkpoint), its clean point; then RUN B.
+
+THE DOCKET — AS RUN (D2) (2026-09-21, on the owner's "Go" at his /context 375.5k WITHOUT a compaction — his call, the cap kept in view; the timing rows in the scratchpad's ch14b_timing.tsv: 12b D2 the parts D-G and the shared U file extended — the check over ABCDEFG (every slice fully matched) 0s (at 21:56:21, rc 0); 12b D2 derive the docket writer (from the forms' write_ch13_docket.py) 0s (at 21:59:32, rc 0); 12b D2 the docket written (deu_14_reeh_exam_2026-09-21.md — coverage computed) 0s (at 21:59:32, rc 0)): THE SECOND HALF READ WHOLE — the chunks ch14_uncred_03.txt to ch14_uncred_06.txt (rows 406-991; 415 uncredited rows, one page each) and the 31 unresolved credited rows of D2 (ch14_uncred_unres_d2.txt); THE PARTS ON DISK D rows 250 (140 own), E rows 122 (91 own), F rows 74 (60 own), G rows 140 (124 own); ch14_docket_U.py extended to 68 rows; the check over the seven parts GREEN — 992 rows in the parts, every slice fully matched, the WHOLE dicts empty. THE WRITER derived from 11b's by asserted line-based substitutions (derive_ch14_docket_writer.py — the seven parts, the verse range 1-29, the eighteen ranges asserted against the scan's print, the cells F1-F7, the header ch14_docket_hdr.py and the crowns ch14_docket_crowns.py typed): THE LEDGER logic/oral_triage/deu_14_reeh_exam_2026-09-21.md WRITTEN — 293,088 bytes, 991 rows (1 duplicate address dropped, computed — Tosefta Kilayim 1:6), link 144 in 38 works, topic 847 (118 Mishnah and Tosefta rows, the eighteen folio ranges whole — Chullin 59a-66b 178, Chullin 68a-69a 62, Chullin 72b-73a 32, Chullin 77a-77a 16, Chullin 80a-80a 21, Chullin 113a-116b 135, Makkot 20a-21a 43, Yevamot 13b-14a 42, Yevamot 47b-47b 19, Yevamot 86a-86b 23, Kiddushin 36a-36a 22, Kiddushin 54b-54b 16, Rosh Hashanah 12a-13a 39, Bekhorot 34a-35a 51, Bekhorot 53b-53b 17, Pesachim 21b-21b 11, Pesachim 50b-51a 24, Bava Metzia 88a-88a 9); 288 credited (59 link, 229 topic) — 220 CARRIED with their ledgers' own verdict lines, 68 read whole here where the ledger's form carried no verdict; 771 rows read whole in the two runs; THE VERDICTS LAW 188 / DERIVATION 394 / DISPUTE 117 / CONTEXT 109 / OUTSIDE 183 (link LAW 40 / DERIVATION 63 / DISPUTE 25 / CONTEXT 15 / OUTSIDE 1; topic LAW 148 / DERIVATION 331 / DISPUTE 92 / CONTEXT 94 / OUTSIDE 182); LAW by cell {'F1': 10, 'F2': 17, 'F3': 34, 'F4': 9, 'F5': 11, 'F6': 25, 'F7': 12}; OUTSIDE by work {'Taanit': 1, 'Mishnah Makkot': 2, 'Mishnah Maaser Sheni': 2, 'Chullin': 61, 'Makkot': 16, 'Yevamot': 13, 'Kiddushin': 8, 'Rosh Hashanah': 7, 'Bekhorot': 47, 'Pesachim': 13, 'Tosefta Peah': 4, 'Tosefta Kilayim': 9}; the verses cited 1 (12), 2 (1), 3 (2), 4 (9), 5 (6), 6 (6), 7 (9), 8 (1), 10 (2), 11 (3), 12 (3), 13 (2), 19 (3), 20 (1), 21 (31), 22 (16), 23 (18), 24 (10), 25 (19), 26 (17), 27 (2), 28 (4), 29 (3); UNCITED by any row [9, 14, 15, 16, 17, 18]; lint 0. THE FINDS OF D2 (with D1's, the ledger's own crowns section): THE FETUS FROM 14:6'S OWN WORDS (Chullin 68a:1; 69a:19 "in the animal", 69a:22 "and every", 69a:23 "it"; 68b:8 "hoof / hooves" and THE UNCLOVEN FETUS permitted inside its mother; the placenta 77a:11-15) with the limb's dispute (Rav by "flesh in the field, torn" 68a:3-68b:14 / R. Yochanan 68b:10) and THE TORN'S SLAUGHTER PURIFYING (Mishnah Chullin 4:4 at 72b:1-7); THE TEN CLOSED AGAINST PARTICULAR-THEN-GENERAL (80a:14-16 — "why list them all?"; the koy four ways 80a:11-12); the stomach's milk a secretion (116b:16); THE WALL'S TWO CAPACITIES (Makkot 20a:7 — eating Torah law, admission rabbinic; 20a:3 the third set outside; Chullin 68b:13 the tithe that left and returned); THE BALD SPOT'S MEASURE THREE WAYS (Makkot 20b:2-3 — the bean, visible skin, two hairs), the condition "for the dead" (20b:10), the cutting for idolatry beside it (21a:3); NO FACTIONS FROM ONE WORD (Yevamot 13b:18 — "lo titgodedu" two conclusions; 14a:7 Rava's one court split; 14a:8 R. Yosei HaGelili's locale ate fowl in milk); THE ANALOGY BOTH WAYS AT ITS SECOND SEAT (Kiddushin 36a:7-8) and THE FRONTLETS' PLACE FROM THE BALDNESS (36a:10); the sonship's four verses (36a:12); THE SECOND TITHE HEAVEN'S PROPERTY AS RULED (Kiddushin 54b:4 — per R. Meir from the preferred tractate); THE TITHES' NEW YEAR (Rosh Hashanah 12a:6-9), THE SECOND YEAR INTO THE THIRD (12b:1), ONE TITHE (12b:2; the inheritance's juxtaposition 12b:5), THE FIRST THIRD (12b:9-11; 13a:3; Joshua's omer 13a:7-13); THE FIRST TITHE'S RECIPIENT and EZRA'S PENALTY (Yevamot 86a:1, 86a:14, 86b:4-7 — to the poor, or priests as poor); NO ANIMAL TITHE NOW BY DECREE (Bekhorot 53b:5); R. JUDAH "AS WRITTEN" AND THE ALIEN SUSTAINED (Pesachim 21b:8-9 — the_carcass_table's second arm; 104:2's first person defined); THE CUSTOM'S BAR AND ITS DIRECTION (Pesachim 50b:1, 50b:11, 51a:10-11); THE LIABILITY BY THE HOUSE OR THE COURTYARD from 14:29's "in your gates" (Bava Metzia 88a:1-2); THE POOR MAN'S TITHE'S USES BARRED (Tosefta Peah 4:16) and its measure in its years (4:2), "sufficient for his lack" (4:10), the wanderer's loaf (4:8). THE DESIGN'S DEPARTURES NOTED FOR RUN B (with D1's six): (g) 14:29's "in your gates" is the COURTYARD arm of the tithe's liability (Bava Metzia 88a:2) — korach.the_tithe('liable_produce') by CALL carries it, a DATA row at F7; (h) the_carcass_table's second arm R. Judah's, with THE PRECEDENCE (giving to the alien first — R. Meir's "or") a third clause; (i) the_tithes_new_year's value the first third (Rosh Hashanah 13a:3) beside Tishri 1 — the parameter's DATA rows; (j) the animal tithe's present state (Bekhorot 53b:5 — decreed away) a DATA row for temurah's cell, not this runner's. NOT COMMITTED. NEXT ON HIS WORD (after a compaction: "Reread", then "Go"): RUN B — the probes Q37-Q39 to FAIL first, the types (the departures (a)-(j) applied), the callees' print, the runner in parts, the recorder with the cache off, the stitcher, DF1-DF9, the tape to 10/10, the chain LAUNCHED; then THE TAIL.
+
+## Sitting 12b — THE COMPILE OF CHAPTER 14 — AS BUILT (2026-09-22; on the owner's "Reread and go" after the compaction at #205 addendum 2 — the two-run rule's seventh compile sitting under THE COST RULES, the docket in two runs: five clean points, #205 and its addenda 1-4)
+
+THE DESIGN HELD ON ITS SPINE — five own-day lines, no marker, seven writes on Israel (five new, TWO REUSES), no debit, RUN (1332, 96, 88, 0, 12, 1641, 45, 319, the
+four pairs, 127) as the arithmetic wrote it, PREVIOUS_RUN 11b's exactly, the runner 78/78 on its FIRST graded run, THE TAPE 10/10 ON ITS FIRST RUN — DF1-DF9 MATCH, the RUN tuple (1332, 96, 88, 0, 12, 1641, 45, 319, the four pairs, 127) and THE REST as the design's arithmetic wrote them, DD2's retype MATCH; checkpoint_check.py --all 307 rows, 18 miss (the eighteen known), 0 raised. THE DEPARTURES (read at the prints,
+never predicted): (1) THE GREP DECIDED TWO COUNT SEATS for the two reuses — DD2 in cold_run_sequence.py (the seven_pn tuple's third and sixth, its blocks 4 -> 5) and Q32
+in readback_probes.py (the w7 tuple, the blocks) — both retyped ONE -> TWO before the tape, the design's 'DD2, DD4, Q32' read at the grep (DD4 a set of names, unmoved);
+(2) THE CLASSIFIER'S KEYS ARE READ AT THE SOURCE — the callees' print called shemini.classify with the sanctions engine's dict and 'fins' returned impure: the water branch
+reads 'fin' and 'scale', the bird branch 'named_in_list' / 'claws_and_eats' / the three positive signs with 'unresolved_check_tradition' the tradition's own label, the
+locust its four keys — the source read, the asks retyped; (3) MOADIM HAS NO CELL FOR 23:22 — the design's 'moadim.harvest_reaped' is the daemon's watched KIND: the
+daemon's harvest branch called with a literal event (the corner's copy holiness.gifts('copy_23_22') — the Emor copy omits the vineyard); (4) THE PRIESTHOOD -> HOLINESS_B
+EDGE NAMES 14:1 IN ITS taught_by, NOT ITS why — the DATA row's filter retyped from the fast checker's print; (5) THE DATA ROWS 56 (the design's 'about thirty-five'),
+read from the print; (6) THE SCENE AND THE NARRATIVE MATCHED THEIR PREDICTIONS ON THE FIRST PASS — SEVENTY-ONE persons (the seven write asks case rows, not persons —
+11b's lesson 3 held), every one written once, THE EATER OF THE TORN TWICE (the lashes and the torn to the dog — the watched effect torn_flesh_to_dogs given its case),
+eight exempt, ten lashed, eleven barred, two impure, one left for the poor; 7 writes on Israel in the ink's order; (7) THE FAST CHECKER FOUR TIMES — part 1 alone once
+(the moadim event's case_source the daemon's E_ helper reads), then parts 1-4: 2 fails, 1, 0; (8) THE CALLEES' FORMS settled at the print — temurah's tithe a string case
+('took_ten_of_a_hundred' -> not_a_tithe), yovel's cycle a year (3 and 6 work years, 7 the sabbath of the land, 50 the jubilee), tithe_naming a dict of positions, the
+Deuteronomy runners' (case, data) — 10b's lesson 2 held; (9) THE READBACK'S CENSUS AS THE DESIGN WROTE IT — ten on the tape by kind and first verse (nations_devoted,
+olah_offered, profane_slaughter_permitted, covenant_offered, tithe_given, place_chosen_declared, vowed, portion_declared, tithe_of_the_tithe_commanded,
+stranger_love_commanded), twenty-nine by CALL (every row has kin), VERBATIM 6 / VARIANT 11 / EXPANDED 4 / SUPPLIED 8, four SUPPLIED rows with their writes and 14:21
+EXPANDED with its write — Q37's sum typed once; (10) THE EXAM'S CASES 78 in seven cells and the table ({'F1': 8, 'F2': 9, 'F3': 9, 'F4': 12, 'F5': 11, 'F6': 9, 'F7': 14, 'RB': 6}) — the docket's crowns as rows; (11) THE PROBES'
+FAIL PRINT 35/39 — Q32 failed beside Q37-Q39 by its own retype; (12) the pointer not demanded (none predicted); the registry's homographs not matched; (13) THE GATES CHAIN THREE TIMES — the first pass (494 s, LAUNCHED at RUN B's end, its summary read once when the harness notified) stopped at ONE gate with TWO demands: the dependency gate — the LIVE REGISTRATION EDGE sequence -> food_tithe (the design's own note: filed link none, 11b's form) and a HOMOGRAPH (the token census matched 'portion and inheritance' at 14:27 and 14:29 to the family runner's inheritance law — filed FALSE with its why: the Levite's land portion, korach and second_tablets by CALL; 7b's precedent at 9:26, 9:29); the tape, the probes (readback 39/39), the daemon gate, the build, the journal gate and THE REGISTER GATE --strict (DECLARED 98, DEBT 0, FAILS 0 — no seat in chapter 14) PASSED on the first pass; both demands filed by patch_tail_ch14b.py (its own count tripped once — YAML reads the bare FALSE as a boolean); the second pass --from dependency GREEN through the dependency gate (689 edges), the build, the journal gate (291 s) and the register gate, and KILLED at the positions table (eight workers, each the whole tape) by the session's memory watchdog — 7b's, 8b's, 10b's and 11b's precedent, not the machine's own gate; the positions table then measured by FOUR workers with the step's own command outside the chain (307 checkpoints over 174 pauses in 449 s, 59 at pause 0, the last fall at pause 173 — Deut 14:28, DF1-DF9 in the table); the third pass --from checkpoint ALL GREEN (checkpoint 7/7, the journal stamped, the sweep 68/68 in 474 s, the journal UNMOVED).
+THE RUN: readback_probes.py Q37-Q39 to FAIL (35/39 — patch_probes_ch14.py, Q32 retyped with them) BEFORE the types; add_types_ch14.py (kinds 1155 -> 1161,
+effects 1056 -> 1061 with rejoicing_before_the_lord_commanded's and levite_forsaking_barred's rows AMENDED for the reuses, the 74th daemon with eight WRAPPED, the
+span and the 18 CALL edges, I5 74, the five parameters — the_birds_signs in three layers, the_carcass_table with the precedence, the_moneys_form with the possession
+clause, the_removal_date, the_tithes_new_year with the first third — 69 rows, the departures (b), (c), (d), (h), (i) applied; the register file untouched — DECLARED
+98); ch14_callees.py (every CALL's asks and results printed — 193 KB, eighteen runners); derive_ch14_part1.py (the helpers from the chapter-13 runner by content
+markers, W13 made W14; the ink block from ch14_ink.py in THREE blocks — the kin by computation, the ink facts, the register — with two store- and Onkelos-bound lines
+dropped: 47 asserts; the parser's facts typed from the ink's own asserts — a runner cannot import the sequence file; the counter's day, the five parameters with the
+calendar's own keys read, the one-database scans FOOD_SCAN [] and REUSE_SCAN [israel_people] x2, the DB's own seats, the callees' facts asserted from the print);
+ch14_part2.py and ch14_part3.py (seven cells and the table, 78 asks — {'F1': 8, 'F2': 9, 'F3': 9, 'F4': 12, 'F5': 11, 'F6': 9, 'F7': 14, 'RB': 6}); ch14_part4.py (the twenty-nine rows, 56 DATA rows, the daemon with its
+seven writes, seventy-one persons — the scene's submits written by ch14_scene_gen.py from the list and frozen, the narrative — every census printed before it is
+asserted); ch14_fastcheck.py (part 1 alone, then parts 1-4 three passes: 2, 1, 0); ch14_cases_gen.py (78 cases — the labels from part 4's own PERSONS);
+ch14_assemble.py --guard 78; cold_run_food_tithe.py 78/78 (the 69th runner, 315 KB); seq_record_ch14.py with the cache OFF (3198 records; food_tithe
+statute 5 of 76 submits); seq_stitch_ch14.py (no marker; PLACEMENT {'markers': {'text_constrained': 108, 'reading_placed': 49}, 'events': {'text_constrained': 110, 'page_order': 1164, 'reading_placed': 58}}; CENSUS (2520, 1319, 1332, 1185, 6, 10, 9, 0, 71, 172, 131, 15, 26, 877, 272)); patch_seq_literals_ch14.py
+(the import line, DAEMON_ORDER, RUN, PREVIOUS_RUN, NEWEST_RUNNER, PLACEMENT and CENSUS read, DF1-DF9, the VERDICTS; the one stale literal retyped — DD2);
+THE TAPE 10/10 ON ITS FIRST RUN — DF1-DF9 MATCH, the RUN tuple (1332, 96, 88, 0, 12, 1641, 45, 319, the four pairs, 127) and THE REST as the design's arithmetic wrote them, DD2's retype MATCH; checkpoint_check.py --all 307 rows, 18 miss (the eighteen known), 0 raised; checkpoint_check.py --all (307 rows, 18 miss — the eighteen known, 0 raised); THE GATES CHAIN THREE TIMES — the first pass (494 s, LAUNCHED at RUN B's end, its summary read once when the harness notified) stopped at ONE gate with TWO demands: the dependency gate — the LIVE REGISTRATION EDGE sequence -> food_tithe (the design's own note: filed link none, 11b's form) and a HOMOGRAPH (the token census matched 'portion and inheritance' at 14:27 and 14:29 to the family runner's inheritance law — filed FALSE with its why: the Levite's land portion, korach and second_tablets by CALL; 7b's precedent at 9:26, 9:29); the tape, the probes (readback 39/39), the daemon gate, the build, the journal gate and THE REGISTER GATE --strict (DECLARED 98, DEBT 0, FAILS 0 — no seat in chapter 14) PASSED on the first pass; both demands filed by patch_tail_ch14b.py (its own count tripped once — YAML reads the bare FALSE as a boolean); the second pass --from dependency GREEN through the dependency gate (689 edges), the build, the journal gate (291 s) and the register gate, and KILLED at the positions table (eight workers, each the whole tape) by the session's memory watchdog — 7b's, 8b's, 10b's and 11b's precedent, not the machine's own gate; the positions table then measured by FOUR workers with the step's own command outside the chain (307 checkpoints over 174 pauses in 449 s, 59 at pause 0, the last fall at pause 173 — Deut 14:28, DF1-DF9 in the table); the third pass --from checkpoint ALL GREEN (checkpoint 7/7, the journal stamped, the sweep 68/68 in 474 s, the journal UNMOVED): the probe suites (readback
+39/39, census 224/224, installation 6/6 with I5 74, large_letter 6/6, checkpoint
+7/7, ink_cache 8/8), the daemon gate (74 daemons, 506 functions), the dependency gate (689 edges, 208 pointers; the link
+census reference 659 / transfer 48 / hypothesis 9 / none 181), build_world, the journal gate (12 kinds, 9788 rows), THE REGISTER GATE --strict
+(DECLARED 98, DEBT 0, FAILS 0 — no seat in chapter 14; the block (Deut 12:1, Deut 28:69] holds law_seducers and law_food_tithe), the positions table
+(307 checkpoints), the sweep 68/68 at 7085 graded cells, the home-path gate. THE TIMING TABLE (every step timed — the owner's ask at sitting 10; the machine's seconds per step, the model's reading and writing between them the rest): SITTING 12b (the compile — RUN A, the docket's two runs, RUN B, the tail) 55 timed steps, 2629 machine seconds; the first row 19:38:04, the last 07:08:01; THE SLOWEST OF 12b: T the gates chain, third pass (--from checkpoint: checkpoint, stamp, sweep, unmoved) 563s; B the gates chain, first pass (LAUNCHED at the run's end) 494s; T the positions table by FOUR workers outside the chain (the step's own command) 448s; B callees' facts printed (ch14_callees.py) 249s; A docket scan (the link rows, the ranges sized, the credits) 241s; B the tape, first run 212s; B the recorder (INK_CACHE=0) 207s; B cases generated from the cells' asks 25s. The table itself: <scratch>/ch14b_timing.tsv, copied to the forms folder.
+THE LESSONS (eight): (1) A RUNNER CANNOT IMPORT THE SEQUENCE FILE — the reading's parser facts (the ink script reads them through the sequence module) are typed in the
+runner from the ink's own asserts and proven by its own exec of the parser block; (2) A CLASSIFIER'S KEYS ARE READ AT THE SOURCE — the callees' print with a guessed dict
+shows a wrong verdict, not an error: the ask's keys come from the cell's code; (3) A RUNNER WITHOUT A CELL FOR A VERSE IS CALLED THROUGH ITS DAEMON'S BRANCH with a
+literal event carrying the fields the branch reads (case_source too); (4) AN EDGE MAY NAME A VERSE IN ITS taught_by — a DATA row's filter searches the whole edge;
+(5) THE DATA COUNT IS READ FROM THE PRINT (56 for 'about thirty-five'); (6) THE SCENE'S PREDICTION FROM THE DESIGN'S ARITHMETIC HELD ON THE FIRST PASS when every
+ask returns one effect set and a person's second write is named in the design (the eater of the torn); (7) A WRITE ASK IS A CASE ROW, NOT A PERSON — seven this
+chapter (11b's lesson 3 held at the design, not at the print); (8) THE TWO-RUN RULE HELD on its seventh compile sitting under the cost rules: RUN A, the docket in
+two runs, RUN B with the chain launched at its end, THE TAIL — five clean points, the owner compacting after each. NEXT on the owner's word: the commit (13b, 14,
+12b — three messages in one); CHAPTER 15's reading (15:1-23) in one run — the release of the seventh year (the_removal_date's cycle by CALL), the poor, the Hebrew
+slave, the firstling (15:19-23 — the firstling from outside the Land, 106:2, by CALL when it comes); on the table: the Decalogue-schema sitting, the SUPPLIED forms,
+the calf's day marker, the registry's homographs, the receipt's third and fourth shapes, THE INSTALL HYPOTHESIS, the eras table's merge, the chain's positions step at
+four workers, the fast checker's cells' dry-run.

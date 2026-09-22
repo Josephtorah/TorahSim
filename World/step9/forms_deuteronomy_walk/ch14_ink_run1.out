@@ -1,0 +1,56 @@
+THE INK OF CHAPTER 14 — every assert above passed; the cuts' misses: []
+27 failing statements
+--- line 243: assert P('לא', 'תאכל', 'כל', 'תועבה') == ['Deut 14:3'] and [s for s, x in [(s, x) for s, x, _ in LEMT('8441', books=DT)] if s.startswith('Deut 14:')] == ['Deut 
+    ERROR NameError("name 'DT' is not defined")
+--- line 246: assert P('שור', 'שה', 'כשבים', 'ושה', 'עזים') == ['Deut 14:4'] and P('איל', 'וצבי') == ['Deut 14:5'] and P('כצבי', 'וכאיל') == ['Deut 12:15', 'Deut 15:22'] and 
+    AssertionError()
+--- line 254: assert U('והראה', 'הראה', 'ראה') == ['Deut 14:13'] and U('והדאה', 'הדאה', 'דאה', 'דיה', 'והדיה', 'הדיה') == ['Deut 14:13', 'Lev 11:14'] and W14(13) == ['והראה',
+    AssertionError()
+--- line 256: assert P('וכל', 'שרץ', 'העוף', 'טמא', 'הוא', 'לכם') == ['Deut 14:19'] and P('שרץ', 'העוף') == ['Deut 14:19', 'Lev 11:20', 'Lev 11:21', 'Lev 11:23'] and [(x, m) 
+    ERROR ValueError('not enough values to unpack (expected 5, got 2)')
+--- line 262: assert [(v, x, m) for v in range(1, 30) for x, m, _, _, _ in by[('Deut', 14, v)] if m and re.match(r'^H(?:C/)?V.a$', m)] == [(21, 'מכר', 'HVqa'), (22, 'עשר', 'H
+    ERROR ValueError('not enough values to unpack (expected 5, got 2)')
+--- line 266: assert P('במקום', 'אשר', 'יבחר', books=DT) == ['Deut 12:14', 'Deut 12:18', 'Deut 14:23', 'Deut 15:20', 'Deut 16:11', 'Deut 16:15', 'Deut 16:16', 'Deut 16:2', 'D
+    ERROR NameError("name 'DT' is not defined")
+--- line 272: assert P('בכל', 'אשר', 'תאוה', 'נפשך') == ['1Kgs 11:37', '2Sam 3:21', 'Deut 14:26'] and P('בכל', 'אות', 'נפשך') == ['Deut 12:15', 'Deut 12:20', 'Deut 12:21'] an
+    AssertionError()
+--- line 273: assert P('ושמחת', 'אתה', 'וביתך') == ['Deut 14:26'] and U('ושמחת', 'ושמחתם', books=DT) == ['Deut 12:12', 'Deut 12:18', 'Deut 12:7', 'Deut 14:26', 'Deut 16:11', 
+    ERROR NameError("name 'DT' is not defined")
+--- line 277: assert P('מקצה', 'שלש', 'שנים') == ['2Kgs 18:10', 'Deut 14:28'] and U('מקצה', 'מקץ', books=DT) == ['Deut 13:8', 'Deut 14:28', 'Deut 15:1', 'Deut 28:49', 'Deut 2
+    ERROR NameError("name 'DT' is not defined")
+--- line 280: assert P('למען', 'יברכך', 'יהוה', 'אלהיך', 'בכל', 'מעשה', 'ידך') == ['Deut 14:29'] and P('בכל', 'מעשה', 'ידך', books=DT) == ['Deut 14:29', 'Deut 2:7', 'Deut 30:
+    ERROR NameError("name 'DT' is not defined")
+--- line 282: NUM = {v: (sum(1 for _, m, _, _, _ in by[('Deut', 14, v)] if m and '2mp' in m), sum(1 for _, m, _, _, _ in by[('Deut', 14, v)] if m and '2ms' in m)) for v in ra
+    ERROR ValueError('not enough values to unpack (expected 5, got 2)')
+--- line 283: assert [v for v, (p, s) in NUM.items() if s and not p] == [2, 3, 22, 23, 24, 25, 26, 27, 28, 29] and [v for v, (p, s) in NUM.items() if p and not s] == [1, 4, 6
+    ERROR NameError("name 'NUM' is not defined")
+--- line 284: assert NUM[1] == (5, 0) and NUM[21] == (1, 5) and NUM[23] == (0, 9) and NUM[26] == (0, 9)
+    ERROR NameError("name 'NUM' is not defined")
+--- line 285: assert [v for v in range(1, 30) if any(m and re.search(r'1c[sp]', m) and m.startswith('HV') for _, m, _, _, _ in by[('Deut', 14, v)])] == [] and [v for v in ran
+    ERROR ValueError('not enough values to unpack (expected 5, got 2)')
+--- line 288: assert {v: [x for x in W14(v) if x in ('טמא', 'טמאים', 'הטמא')] for v in range(1, 30) if any(x in ('טמא', 'טמאים', 'הטמא') for x in W14(v))} == {7: ['טמאים'], 8
+    ERROR NameError("name 'DT' is not defined")
+--- line 290: assert {v: [x for x, m, _, _, _ in by[('Deut', 14, v)] if m and re.search(r'V.q', m)] for v in (23, 25, 26, 28, 29)} == {23: ['ואכלת'], 25: ['ונתתה', 'וצרת', 'ו
+    ERROR ValueError('not enough values to unpack (expected 5, got 2)')
+--- line 291: assert Counter(wt for v in range(1, 30) for _, _, _, _, wt in by[('Deut', 14, v)]) == Counter({None: 351}) and STORE_MISMATCH == [] and len([x for x, m, _, _, _
+    ERROR ValueError('not enough values to unpack (expected 5, got 2)')
+--- line 301: assert arm(14, 1) == ['בנין', 'אתון', 'קדם', 'יי', 'אלהכון', 'לא', 'תתחממון', 'ולא', 'תשוון', 'מרט', 'בין', 'עיניכון', 'על', 'מית'] and onk_seats('בנין אתון') =
+    AssertionError()
+--- line 302: assert arm(14, 2)[-7:] == ['לעם', 'חביב', 'מכל', 'עממיא', 'די', 'על', 'אפי', 'ארעא'][-7:] and onk_seats('חביב') == [(7, 6), (14, 2), (26, 18), (33, 3)] and onk_
+    AssertionError()
+--- line 303: assert arm(14, 3) == ['לא', 'תיכול', 'כל', 'דמרחק'] and len(onk_seats('מרחק')) == 11 and (14, 3) in onk_seats('מרחק') and onk_seats('שקצ') == [(7, 26)]
+    AssertionError()
+--- line 304: assert arm(14, 4) == ['דין', 'בעירא', 'דתיכלון', 'תורין', 'אמרין', 'דרחלין', 'וגדין', 'דעזין'] and arm(14, 5) == ['אילא', 'וטביא', 'ויחמורא', 'ויעלא', 'ורימא', 
+    AssertionError()
+--- line 305: assert arm(14, 6)[6:8] == ['תרתין', 'פרסתא'] and onk_seats('סדיק') == [(14, 6), (14, 7), (14, 8)] and onk_seats('פשר') == [(14, 6), (14, 7), (14, 8)] and onk_se
+    AssertionError()
+--- line 306: assert onk_seats('ציצין') == [(14, 9), (14, 10)] and arm(14, 11) == ['כל', 'צפר', 'דכיא', 'תיכלון'] and arm(14, 20) == ['כל', 'עופא', 'דכי', 'תיכלון'] and arm(1
+    AssertionError()
+--- line 307: assert arm(14, 21)[-4:] == ['לא', 'תיכול', 'בשר', 'בחלב'] and onk_seats('בשר בחלב') == [(14, 21)] and arm(14, 21)[4:6] == ['לתותב', 'ערל'] and onk_seats('בר עממ
+    AssertionError()
+--- line 308: assert arm(14, 22)[:2] == ['עשרא', 'תעשר'] and arm(14, 22)[-2:] == ['שתא', 'בשתא'] and arm(14, 23)[4:10] == ['באתרא', 'די', 'יתרעי', 'לאשראה', 'שכנתיה', 'תמן'] 
+    AssertionError()
+--- line 309: assert arm(14, 26)[6:11] == ['בתורי', 'ובענא', 'ובחמר', 'חדת', 'ועתיק'] and onk_seats('עתיק') == [(14, 26), (29, 5)] and arm(14, 24)[:4] == ['וארי', 'יסגי', 'מנ
+    AssertionError()
+--- line 310: assert arm(14, 27) == ['ולואה', 'די', 'בקרויך', 'לא', 'תשבקניה', 'ארי', 'לית', 'ליה', 'חלק', 'ואחסנא', 'עמך'] and onk_seats('חלק ואחסנא') == [(10, 9), (12, 12),
+    AssertionError()

@@ -2,7 +2,7 @@
 """A markdown file to an EPUB (2026-09-16, on the owner's "create an epub also" for THE_TEN_AS_A_SCHEMA.md).
     python3 ARCHITECTURE/tools/build_md_epub.py ARCHITECTURE/THE_TEN_AS_A_SCHEMA.md
 Writes the .epub beside the .md. Handles: # / ## / ### headers (each ## opens a chapter), paragraphs, bullet and numbered lists,
-pipe tables, horizontal rules, **bold**, *italic*, `code`, [links] (as their text). No external tool (pandoc is not installed here)."""
+pipe tables, horizontal rules, fenced code blocks, > blockquotes, **bold**, *italic*, `code`, [links] (as their text). No external tool (pandoc is not installed here)."""
 import html, os, re, sys, time, uuid, zipfile
 import xml.etree.ElementTree as ET
 
@@ -22,6 +22,14 @@ def blocks(lines):
         if not l.strip(): i += 1; continue
         if l.startswith('#'):
             m = re.match(r'(#+)\s+(.*)', l); yield ('h', len(m.group(1)), m.group(2).strip()); i += 1; continue
+        if l.strip().startswith('```'):   # a fenced block, verbatim (2026-09-21: diagrams and commands)
+            i += 1; code = []
+            while i < n and not lines[i].strip().startswith('```'): code.append(lines[i]); i += 1
+            i += 1; yield ('pre', '\n'.join(code)); continue
+        if l.startswith('>'):             # a blockquote (2026-09-21)
+            q = []
+            while i < n and lines[i].startswith('>'): q.append(lines[i].lstrip('>').strip()); i += 1
+            yield ('bq', ' '.join(x for x in q if x)); continue
         if l.strip() == '---': yield ('hr',); i += 1; continue
         if l.startswith('|'):
             rows = []
@@ -42,7 +50,7 @@ def blocks(lines):
                 else: break
             yield (kind, items); continue
         para = []
-        while i < n and lines[i].strip() and not lines[i].startswith(('#', '|')) and lines[i].strip() != '---' and not re.match(r'\s*([-*]|\d+\.)\s+', lines[i]):
+        while i < n and lines[i].strip() and not lines[i].startswith(('#', '|', '>', '```')) and lines[i].strip() != '---' and not re.match(r'\s*([-*]|\d+\.)\s+', lines[i]):
             para.append(lines[i].strip()); i += 1
         yield ('p', ' '.join(para))
 
@@ -51,13 +59,15 @@ def render(b):
     if k == 'h': return '<h%d>%s</h%d>' % (b[1], inline(b[2]), b[1])
     if k == 'p': return '<p>%s</p>' % inline(b[1])
     if k == 'hr': return '<hr/>'
+    if k == 'pre': return '<pre>%s</pre>' % html.escape(b[1], quote=False)
+    if k == 'bq': return '<blockquote><p>%s</p></blockquote>' % inline(b[1])
     if k in ('ul', 'ol'): return '<%s>%s</%s>' % (k, ''.join('<li>%s</li>' % inline(x) for x in b[1]), k)
     if k == 'table':
         head = ''.join('<th>%s</th>' % inline(c) for c in b[1])
         body = ''.join('<tr>%s</tr>' % ''.join('<td>%s</td>' % inline(c) for c in r) for r in b[2])
         return '<table><thead><tr>%s</tr></thead><tbody>%s</tbody></table>' % (head, body)
 
-CSS = "body{font-family:Georgia,serif;line-height:1.5;margin:1em}h1{font-size:1.5em}h2{font-size:1.25em;margin-top:1.5em}table{border-collapse:collapse}td,th{border:1px solid #888;padding:.3em .5em;vertical-align:top}code{font-family:Menlo,monospace;font-size:.9em}"
+CSS = "body{font-family:Georgia,serif;line-height:1.5;margin:1em}h1{font-size:1.5em}h2{font-size:1.25em;margin-top:1.5em}table{border-collapse:collapse}td,th{border:1px solid #888;padding:.3em .5em;vertical-align:top}code{font-family:Menlo,monospace;font-size:.9em}pre{font-family:Menlo,monospace;font-size:.8em;white-space:pre-wrap;border:1px solid #bbb;padding:.5em}blockquote{margin:1em 1.5em;font-style:italic}"
 
 def xhtml(title, body):
     return ('<?xml version="1.0" encoding="utf-8"?>\n<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">'

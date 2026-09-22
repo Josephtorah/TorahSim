@@ -3,7 +3,7 @@
 WHY: at 2b the records step spent ten tool calls learning each record file's shape before one call wrote them. This sheet holds the shape of every
 record so the records writer is ONE script built from it (`--check` first, then the write), its numbers parsed from the gates' prints (COVERAGE
 COMPUTED, NEVER RECITED), every text built whole before any file is opened, the ledgers appended only. The writer's form:
-World/step9/forms_deuteronomy_walk/write_ch12b_records.py (write_ch11b_records.py, write_ch10b_records.py, write_ch9b_records.py, write_ch8b_records.py, write_ch7b_records.py, write_ch6b_records.py, write_ch5b_records.py and write_ch4b_records.py the earlier forms; a docket run's close by write_ch9_docket_records.py). Keep this sheet current when a record's anchor moves (a stale anchor fails the writer's
+World/step9/forms_deuteronomy_walk/write_ch14b_records.py (write_ch13b_records.py, write_ch12b_records.py, write_ch11b_records.py, write_ch10b_records.py, write_ch9b_records.py, write_ch8b_records.py, write_ch7b_records.py, write_ch6b_records.py, write_ch5b_records.py and write_ch4b_records.py the earlier forms; a docket run's close by write_ch9_docket_records.py). Keep this sheet current when a record's anchor moves (a stale anchor fails the writer's
 assert — retype it here, never work around it).
 
 | record | path | mode | anchor / place | head form | lint baseline |

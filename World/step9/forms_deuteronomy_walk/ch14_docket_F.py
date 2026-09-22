@@ -1,0 +1,73 @@
+# THE DEUTERONOMY WALK 12b — THE EXAM DOCKET OF CHAPTER 14, part F (D2): the dump's rows 778-851 — Kiddushin 36a (the sons; the baldness and the women;
+# the altar's acts), 54b (the second tithe Heaven's property — R. Meir / R. Yehuda), Rosh Hashanah 12a-13a (the tithes' new year; the third year; the first third).
+# The credited rows CARRIED (CREDITED_SPEC); the uncredited READ WHOLE HERE (ch14_uncred_05.txt); the unresolved in ch14_docket_U.py. LAW names the cell of
+# cold_run_food_tithe.py (F1-F7) or the callee's cell by CALL; the verdicts as in part A. Every middah code checked in logic/MIDDOT.md before it was typed
+# (I2 the verbal analogy). 11b's form.
+from ch14_docket_common import R, build, apply_whole, CREDITED_SPEC
+from ch14_docket_U import OWN_U
+OWN = [
+ ('Kiddushin 36a:1', 'DERIVATION', "… are one prohibition (the tail of 35b's argument on the women's exemption): F1 — a DATA row."),
+ ('Kiddushin 36a:4', 'DERIVATION', "the analogy still needed — else 'the sons of Aaron' closed with the impurity laws and the baldness binds the daughters too: F1 — the analogy's need; a DATA row."),
+ ('Kiddushin 36a:7', 'LAW', "the baraita: from priests to every Israelite — 'baldness' here, 'baldness' there (I2): each spot, the whole head as between the eyes: F1 — THE ANALOGY'S SECOND SEAT (Makkot 20a:14's twin): cuttings_for_the_dead_barred's reach and count; the exam's row."),
+ ('Kiddushin 36a:8', 'LAW', "and back: as Israel's 'for the dead', so the priests' — only over the dead; the one word 'korcha' yields both the women's exemption and the count: F1 — THE ANALOGY BOTH WAYS with 'for the dead' carried to the priests; the exam's row."),
+ ('Kiddushin 36a:10', 'DERIVATION', "Abaye: the phylacteries' 'between your eyes' learned from the baldness — a place where hair grows, the head's height: F1 — 14:1's 'between your eyes' TEACHING THE FRONTLETS' PLACE (6:8, 11:18 — the design's DATA row); a DATA row."),
+ ('Kiddushin 36a:12', 'DISPUTE', "R. Meir: EITHER WAY you are called sons — 'foolish sons' (Jeremiah 4:22), 'sons without faithfulness' (32:20), 'sons who deal corruptly' (Isaiah 1:4), 'sons of the living God' (Hosea 2:1): F1 — 96:9's SONSHIP, the second arm at its seat (R. Yehuda conditional at 36a:11); the exam's persons; a DATA row."),
+ ('Kiddushin 36a:13', 'DERIVATION', "why four verses — foolish yet sons; without faithfulness yet sons: F1 — a DATA row."),
+ ('Kiddushin 36a:14', 'DERIVATION', "idolaters yet sons; repentant — full sons again: F1 — a DATA row."),
+ ('Kiddushin 36a:15', 'OUTSIDE', "MISHNAH: the placing of hands, the waving, the bringing near, the handful, the burning, the pinching, the receiving, the sprinkling — men, not women; the sotah's and the nazirite woman's meal offerings excepted: the altar's acts; OUTSIDE."),
+ ('Kiddushin 36a:16', 'OUTSIDE', "the placing of hands — 'the sons of Israel' (Leviticus 1:2-4): OUTSIDE."),
+ ('Kiddushin 36a:17', 'OUTSIDE', "the waving — 'the sons of Israel' (7:29-30): OUTSIDE."),
+ ('Kiddushin 36a:19', 'OUTSIDE', "the handful — 'the sons of Aaron' (2:2): OUTSIDE."),
+ ('Kiddushin 36a:21', 'OUTSIDE', "the pinching juxtaposed to the burning (1:15): OUTSIDE."),
+ ('Kiddushin 36a:22', 'OUTSIDE', "the receiving — 'the sons of Aaron shall present' (1:5): OUTSIDE."),
+ ('Kiddushin 54b:1', 'DERIVATION', "two teachers on R. Yehuda — was Jerusalem itself sanctified?: F5 — the second tithe's status (the range's head); a DATA row."),
+ ('Kiddushin 54b:2', 'DERIVATION', "Ulla in bar Padda's name: R. Meir — consecrated property desacralized by deliberate misuse, not unwitting; unwitting only for an offering?: OUTSIDE (the misuse law); a DATA row."),
+ ('Kiddushin 54b:3', 'DERIVATION', "Ravin: unwitting misuse desacralizes only what is eaten: OUTSIDE; a DATA row."),
+ ('Kiddushin 54b:4', 'LAW', "Rav Nachman in Rav Adda bar Ahava's name: THE RULING FOLLOWS R. MEIR ON SECOND TITHE — CONSECRATED (Heaven's property); R. Yehuda on consecrated property: F5 — second_tithe_owed's STATUS AS RULED (Mishnah Maaser Sheni 1:1's four bars its ground); the exam's row."),
+ ('Kiddushin 54b:5', 'DERIVATION', "the unattributed mishnah (Peah 7:6): the fourth-year vineyard — Beit Shammai no fifth and no removal, Beit Hillel both: F5 — the tithe's two marks lent to the vineyard; a DATA row."),
+ ('Kiddushin 54b:6', 'DERIVATION', "Beit Shammai: the fallen grapes and the small clusters for the poor apply; Beit Hillel: all to the press: F5/F7 — the poor's gifts against the sanctity; holiness.gifts by CALL; a DATA row."),
+ ('Kiddushin 54b:8', 'DERIVATION', "Beit Hillel per R. Meir (the tithe consecrated — no gifts from it), not R. Yehuda (common — the gifts owed): F5 — the status's consequence; a DATA row."),
+ ('Kiddushin 54b:9', 'DERIVATION', "the mishnah for R. Yehuda on consecrated property (Meilah 21a — the storekeeper's misuse): OUTSIDE; a DATA row."),
+ ('Kiddushin 54b:10', 'DERIVATION', "but Maaser Sheni 4:3 — the fifth added even on a GIFT: per R. Meir can tithe be given? — so R. Yehuda?: F5 — the gift's edge (Mishnah Maaser Sheni 1:1's 'a free gift'); a DATA row."),
+ ('Kiddushin 54b:11', 'DERIVATION', "per R. Meir: the whole crop given untithed — unseparated gifts not as separated: F5 — a DATA row."),
+ ('Kiddushin 54b:12', 'DERIVATION', "Maaser Sheni 4:6's fourth-year gift — 'holy' / 'holy' (I2) makes it Heaven's too?: F5 — a DATA row."),
+ ('Kiddushin 54b:13', 'DERIVATION', "given as a bud — not fruit per R. Meir (against R. Yosei): F5 — a DATA row."),
+ ('Kiddushin 54b:14', 'DERIVATION', "Maaser Sheni 4:6's buyer who pulled the tithe at one sela and it rose — his gain: per R. Meir the consecrated is acquired only by payment (Leviticus 27:19); so R. Yehuda: F5 — a DATA row."),
+ ('Kiddushin 54b:15', 'DERIVATION', "that mishnah R. Yehuda's; but two unattributed ones (Maaser Sheni, Eduyot 4:2) show Beit Hillel per R. Meir: F5 — a DATA row."),
+ ('Kiddushin 54b:16', 'DERIVATION', "Rav Nachman bar Yitzchak: the ruling per R. Meir because the preferred tractate Eduyot teaches it: F5 — the ruling's ground; a DATA row."),
+ ('Rosh Hashanah 12a:1', 'OUTSIDE', "the flood — the Kima constellation's stars removed: primeval's lore; OUTSIDE."),
+ ('Rosh Hashanah 12a:2', 'OUTSIDE', "'the second month' — Iyyar (R. Yehoshua) or Marcheshvan, second to Tishri (R. Eliezer): the flood's month; OUTSIDE (primeval by CALL)."),
+ ('Rosh Hashanah 12a:3', 'OUTSIDE', "what did He change per R. Eliezer?: OUTSIDE."),
+ ('Rosh Hashanah 12a:5', 'CONTEXT', "the baraita: Israel's Sages count the years from Tishri (R. Eliezer), the sun and moon's cycles from Nisan (R. Yehoshua); the nations from Nisan: F7 — the calendar's two heads (calendar by CALL); a DATA row."),
+ ('Rosh Hashanah 12a:6', 'LAW', "the first of Tishri the new year for vegetables, TITHES and vows — the vegetables' tithe: not from before the new year for after: F7 — the_tithes_new_year's VALUE (Mishnah Rosh Hashanah 1:1 — Tishri 1 for the tithes); the exam's row."),
+ ('Rosh Hashanah 12a:7', 'DERIVATION', "the vegetables' tithe rabbinic, then the Torah's tithe (grain, wine, oil) — both Tishri 1: F7 — the two grades; a DATA row."),
+ ('Rosh Hashanah 12a:8', 'DERIVATION', "why the rabbinic first — dear to him; our mishnah's vegetables imply the grain all the more: F7 — a DATA row."),
+ ('Rosh Hashanah 12a:9', 'DERIVATION', "'tithes' plural — the animal tithe and the grain tithe; 'vegetables' plural — bundled and unbundled (their tithing times): F7/F5 — 14:22-23's two tithes at the new year; a DATA row."),
+ ('Rosh Hashanah 12a:10', 'DERIVATION', "vegetables picked before sunset on the eve and after …: F7 — a DATA row."),
+ ('Rosh Hashanah 12b:1', 'LAW', "… not tithed one for the other; THE SECOND YEAR INTO THE THIRD: the second year's picking — first tithe and second tithe; the third's — first tithe and THE POOR MAN'S TITHE: F7 — poor_tithe_owed's YEAR at the answer sheet's Gemara (the sabbatical count by CALL yovel.cycle — the design's the_removal_date and cycle reading); the exam's row."),
+ ('Rosh Hashanah 12b:2', 'LAW', "whence? R. Yehoshua ben Levi: 'the third year, the year of THE tithe' (26:12) — ONE of the two: the first and the poor man's, the second cancelled: F7 — ONE TITHE NOT TWO (109:5) at its seat; the exam's row."),
+ ('Rosh Hashanah 12b:5', 'DERIVATION', "R. Eliezer ben Yaakov: from the Levites' verse — the first tithe juxtaposed to an INHERITANCE (Numbers 18:24): no interruption, as land: F7 — the first tithe uninterrupted by juxtaposition (korach.the_tithe's own move at 'Rosh Hashanah 12b:3'); no code; a DATA row."),
+ ('Rosh Hashanah 12b:6', 'OUTSIDE', "the vows' year — twelve months day to day; 'this year' ends at Tishri 1: the vows' law; OUTSIDE (vows by CALL)."),
+ ('Rosh Hashanah 12b:7', 'OUTSIDE', "even where one day is not a year — the affliction accepted: OUTSIDE."),
+ ('Rosh Hashanah 12b:8', 'OUTSIDE', "vows follow common speech — the year from Tishri: OUTSIDE."),
+ ('Rosh Hashanah 12b:9', 'LAW', "Mishnah Maasrot 1:3: fenugreek from sprouting; grain and olives from A THIRD of their growth: F5 — THE LIABILITY'S ONSET (105:1-19's kin; korach.the_tithe('liable_produce') by CALL); the exam's row."),
+ ('Rosh Hashanah 12b:10', 'DERIVATION', "sprouting for seed: F5 — a DATA row."),
+ ('Rosh Hashanah 12b:11', 'DERIVATION', "whence the third? Rav Asi in R. Yochanan's name: 'at the end of seven years, the release year, the festival of Sukkot' (31:10) — Sukkot is the eighth year: F7 — THE THIRD'S SOURCE from 31:10 (the design's the_removal_date's I2 partner 'at the end'); a DATA row."),
+ ('Rosh Hashanah 12b:12', 'DERIVATION', "the seventh year's laws hold on the eighth's Sukkot for produce that reached a third before Tishri: F7 — the year by the third; a DATA row."),
+ ('Rosh Hashanah 12b:13', 'DERIVATION', "R. Zeira to Rav Asi …: F7 — a DATA row."),
+ ('Rosh Hashanah 13a:5', 'DERIVATION', "forty seah (a measure) less a drop — no immersion; an egg's bulk less a sesame — no impurity: F7 — the Sages' measures exact; a DATA row."),
+ ('Rosh Hashanah 13a:6', 'DERIVATION', "three by three handbreadths less a hair: F7 — a DATA row."),
+ ('Rosh Hashanah 13a:8', 'DERIVATION', "did they bring the omer that year? 'they ate of the land's produce the morrow after Passover' (Joshua 5:11) — only after the omer: F7 — the omer at the entry (moadim by CALL; entered_the_land on the tape's kin); a DATA row."),
+ ('Rosh Hashanah 13a:9', 'DERIVATION', "Rav Kahana: grain that did not reach a third in the gentile's hand: F7 — a DATA row."),
+ ('Rosh Hashanah 13a:10', 'DERIVATION', "R. Yirmeya's proof: they discerned the third — so can the Sages: F7 — a DATA row."),
+ ('Rosh Hashanah 13a:11', 'DERIVATION', "perhaps grain that had not grown at all: F7 — a DATA row."),
+ ('Rosh Hashanah 13a:12', 'DERIVATION', "the tenth of the first month (Joshua 4:19) — full growth in five days?: F7 — a DATA row."),
+ ('Rosh Hashanah 13a:13', 'DERIVATION', "'the land of the deer' (Daniel 11:41) — the Land ripens swiftly: F7 — a DATA row."),
+ ('Rosh Hashanah 13a:14', 'DERIVATION', "R. Chanina: 'gathered from your threshing floor and winepress' (16:13) — the waste for the sukkah's roof, not the harvest: F7 — the proof from 'gathering' cut; a DATA row."),
+ ('Rosh Hashanah 13a:15', 'DERIVATION', "R. Zeira: the proof was in our hands and R. Chanina cut it down: F7 — a DATA row."),
+ ('Rosh Hashanah 13a:16', 'DERIVATION', "then whence the third? R. Yonatan ben Yosef: 'it shall bring forth fruit for the three years' (Leviticus 25:21) …: F7 — the third's second source (the range's end — yovel by CALL); a DATA row."),
+]
+SPEC = CREDITED_SPEC + OWN_U + OWN
+ROWS = build(SPEC, 778, 852)
+WHOLE = {}
+ROWS, WHOLE_STATS = apply_whole(ROWS, WHOLE)

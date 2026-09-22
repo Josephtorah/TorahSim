@@ -2012,7 +2012,7 @@ follows the last check mark.
 ## the fourth name — DD9 the last; the next DE1, keyed by its first word). NOTHING ELSE IN CHAPTER 12 IS OWED TO A LATER SITTING OF ITS OWN.
 
 
-## SITTING 11 — CHAPTER 13 (2026-09-21, the reading; deu_13_seducers frozen) — OWED TO THE COMPILE 11b: (a) THE PROPHET'S TEST (13:2-6) — the sign's status a PARAMETER
+## SITTING 11 — CHAPTER 13 (2026-09-21, the reading; deu_13_seducers frozen) — PAID AT 11b (the 11b box below, item by item) — OWED WAS: (a) THE PROPHET'S TEST (13:2-6) — the sign's status a PARAMETER
 ## (granted true and barred anyway — R. Yose the Galilean, 84:1; a fallen prophet's standing — R. Akiva, 84:2, Hananiah son of Azzur at 189:1) with the test the
 ## reason either way (13:4; 8:2 and 8:16 by CALL), the death's mode a PARAMETER (stoning by the analogy of "thrusting" — 86:6, 90:2; strangling — R. Shimon, Mishnah
 ## Sanhedrin 11:1; Sanhedrin 89a-90a with Mishnah 11:5-6), the sign not decisive (Bava Metzia 59b) and the prophet's temporary uprooting (Yevamot 90b — 85:4's "the
@@ -2046,3 +2046,112 @@ follows the last check mark.
 ## Menachot 41b-42a; Rosh Hashanah 28b; Eruvin 96a; Avodah Zarah 3:9 and 49b-50a; Bava Metzia 59b; Yevamot 90b; Tosefta Bava Kamma 9:30; Shabbat 151b; Avot 2:1, 3:9,
 ## 3:14; Sifrei Numbers 103, 113, 114; the Sifra on Leviticus 20 and 24 credited from their sittings) — EVERY ROW WHOLE; a docket past ~700 rows its own run; THE COST
 ## RULES: two runs + the tail, the chain launched at RUN B's end. NOTHING ELSE IN CHAPTER 13 IS OWED TO A LATER SITTING OF ITS OWN.
+
+## THE SITTING-11 BOX (a)-(l) PAID — (a) THE PROPHET'S TEST — F2 the_prophet_and_the_test: THE LINE prophet_test_declared writing false_prophet_hearing_barred (a BLOCK
+## — the_signs_status a PARAMETER: R. Yosei HaGelili's dominion / R. Akiva's fallen prophet; the false prophet's table Sanhedrin 90a:2-6), tested_by_the_lord (a STATUS
+## — Genesis 22:1 by kind, 8:2 and 8:16 by CALL, 6:16's mirror by CALL) and cleaving_commanded REUSED (the six verbs; 85:1's cloud a run citation); the death the
+## case's — the_prophets_death a PARAMETER (stoning / strangling, the answer sheet's arm), the exemptions (exempt persons), Elijah at Carmel (exempt), the oven of
+## Akhnai, the established prophet; (b) THE HEADER'S NOT-ADDING — F1 the_header: THE LINE word_sealed REUSING adding_barred (4:2's cell by CALL — the second entry;
+## CC3 retyped), the three grains, keep and do, the elder's fifth compartment (carried), the festival's days; (c) THE INCITER — F3 the_inciter: THE LINE
+## inciter_law_declared writing pity_barred REUSED (the five prohibitions against the standing duties — HO.conduct, OR.courts, SN.because_you_hear by CALL; the
+## court's rule inverted) and israel_hears_and_fears (THE FORMULA'S FIRST SEAT OF FOUR — the_execution_timing a PARAMETER); the kin's inclusion table, the entrapment
+## (the retracting inciter exempt), the fifteen utterances, the hand first (L24, SA.molech by CALL), the stoning's rite (MK.capital_procedure by CALL — the inciter
+## stoned with the evil purged), the two verbs of stoning a DATA row on the DB; (d) THE CONDEMNED CITY — F4 and F5: THE LINE condemned_city_law_declared writing
+## condemned_city_inquiry_required (a STATUS — the seducers' parameters from one noun, one city at a time, Jerusalem's inhabitants exempt, the majority's procedure,
+## THE SEVEN INTERROGATIONS with the_inquiries a PARAMETER read as data, the congruence rule) and devoted_thing_cleaving_barred (a BLOCK — the benefit ban's source and
+## reach, the citron unfit, the Asherah's wood in the plow LASHED); the case's city_devoted (a DESTROY effect — the sword by any means, the property table's four
+## cells, Heaven's spoil, the heap forever at R. Avin's principle with Jericho and Hiel), put_to_death on the inhabitant; the law as a study text; (e) THE EFFECTS —
+## evil_purged_from_the_midst NAMED at its first seat of nine (the case's write; DE6), the anger keyed to idolatry (a condition in the value, no write), the mercy
+## two-armed (a DATA row, no write), the fathers' merit by CALL (NR); (f) THE RUN CITATIONS — the cloud (85:1 — cloud_lifted Num 10:11 by kind), THE OATH at 13:18 the
+## pointer row (DEMANDED by the census), the register's finder (no seat — 12:1 and 28:69 DAEMONS by this daemon); (g) THE KIN BY CALL — twenty runners (the
+## design's nineteen and holiness); (h) NEVER READ AHEAD — 17:2-7, 18:20-22, 19:16-19, 24:16, 28:64 wait for their sittings (their cells by CALL to this runner's when
+## they come); (i) CHAPTER 14's SPLIT OF PISKA 96 stands (rows 9-12 are 14:1's); (j) THE REGISTER's DATA rows (no imperative, no 'if', the seducers' 'we', the four
+## infinitive absolutes, the one wayyiqtol (the narrative form), the ketiv at 13:16, the parser's [1]) DATA rows in the runner; (k) THE CHECKPOINT SERIES — DE1-DE9 the
+## fifth name; (l) THE DOCKET — 565 rows in one run (409 read whole here, 156 carried), the writer derived from 10b's, the crowns the cells' rows.
+## OWED FROM 11b: (i) THE FAST CHECKER'S CELLS' DRY-RUN — the checker execs definitions and never runs an ask; the generator found the sliced count: a dry-run of every
+## ask joins ch14's checker; (ii) THE FORMULAS' SEATS AHEAD — evil_purged_from_the_midst at 17:7, 17:12, 19:19, 21:21, 22:21, 22:22, 22:24, 24:7 and israel_hears_and_fears
+## at 17:13, 19:20, 21:21: second entries at their chapters (the reuse's form), 17:4's twin of 13:15 (the_inquiries by CALL), 17:7's hand of the witnesses, 18:20-22's
+## false prophet (the_signs_status and the_prophets_death by CALL), 19:16-19's plotting witness ('rebellion' 189:1), 24:16's children (94:3's arm), 28:64's gods;
+## (iii) THE CLEAVING HOMOGRAPH's kin — every earlier runner's hole scan is a root pattern on the ledger the tape seals: a later chapter's name can match it (the
+## exclusion by name the form; a scan sitting on the owner's word if it recurs); (iv) THE RECEIPT'S THIRD AND FOURTH SHAPES, THE SUPPLIED FORMS (a law's first seat
+## with its write — four this chapter; the SUPPLIED rows with kin — a form note), THE CALF'S DAY MARKER, THE REGISTRY'S HOMOGRAPHS (the_heap, ahuzzath,
+## the_cities_around_shechem not matched), THE INSTALL HYPOTHESIS, THE ERAS TABLE'S MERGE, THE CHAIN'S POSITIONS STEP AT FOUR WORKERS — on the owner's word; (v) THE
+## CHECKPOINT SERIES continues (DE the fifth name — DE9 the last; the next DF1, keyed by its first word). NOTHING ELSE IN CHAPTER 13 IS OWED TO A LATER SITTING OF ITS OWN.
+
+
+## SITTING 12 — CHAPTER 14 (2026-09-21, the reading; deu_14_food_tithe frozen) — PAID AT 12b (the 12b box below, item by item) — OWED WAS: (a) THE CUTS AND THE BALDNESS (14:1) — the mourner's cut and
+## no factions (96:10-11; Yevamot 13b-14a), the baldness by the analogy run both ways with the priests' 21:5 (96:12 — I2; Mishnah Makkot 3:5-6; Makkot 20a-21a):
+## the count of lashes and "for the dead" the conditions; the sonship's two arms (96:9 — Kiddushin 36a); (b) THE SIGNS OF THE BEASTS (14:6-8) — the three signs
+## from the three clauses (98:1), THE FOUR NAMED THE EXCEPTION SET AND THE SIGN THE CLASS (101:10 — I1; Chullin 59a, 60b, 66b; Mishnah Chullin 3:6-7), the cleft
+## one a creature (98:2 — Chullin 60b), the license by the names for the altar's disqualified (101:1-9 — Mishnah Temurah 6:1), the afterbirth (101:7 — Chullin
+## 68a-69a, 77a); Leviticus 11:3-8 by CALL — THE TWIN CHAPTER'S CELLS; (c) THE WATER (14:9-10) — fins and scales, Leviticus 11:9-12 by CALL (Chullin 66a-b); (d)
+## THE BIRDS (14:11-20) — THE PERMITTED BIRDS HAVE NO SIGN IN THE INK: the_birds_signs a PARAMETER FROM THE ANSWER SHEET (103:8 — I3; Mishnah Chullin 3:6 in the
+## row's Hebrew; Chullin 59a, 61a-65a), the lexicon rule "bird" = clean (98:3; 228:5 — I3), the list carried by its head (103:3-4 — I2), the counting rule (100:2,
+## 103:7), the locusts in the frames (103:10 — Chullin 65a-66a; Leviticus 11:21-22 by CALL), the ra'ah and the dayyah (98:5-6 — Chullin 63b); (e) THE CARCASS
+## (14:21) — THE FOUR-CELL TABLE of the two verbs over the two persons against R. Judah's "as written" (104:5-6 — Pesachim 21b): A PARAMETER WITH TWO ARMS; the
+## torn from "any" (104:1 — Chullin 72b-73a; Mishnah Chullin 4:4), the resident alien (104:2), the custom's bar (104:7 — Pesachim 50b-51a); Leviticus 17:15, 22:8
+## and Exodus 22:30 by CALL; (f) THE KID'S THREE READINGS (14:21) — the three covenants (104:8), R. Akiva's three exclusions (104:9 — Mishnah Chullin 8:4; Chullin
+## 113a-116b), the fowl out by "its mother's milk" (104:10), the eating at 12:24's clause (76:7 — I1; Chullin 115b): the cooking, the eating, the benefit — three
+## laws from one verse said three times; Exodus 23:19 by CALL, 34:26 through its spine; (g) THE SECOND TITHE (14:22-27) — NAMED THE SECOND by the shelf (105:2;
+## Numbers 18 the first by CALL), THE LIABILITIES from the verse's clauses (105:1-19 — Mishnah Maasrot 1:1, 1:3, 2:4, 4:5-6; Rosh Hashanah 12b; Bekhorot 53b; Bava
+## Metzia 88a; Leviticus 27:30 and Numbers 18:27 by CALL), THREE STATUSES for the eating — the wall of Jerusalem (106:3 — I1; Mishnah Zevachim 5:8), the House
+## standing (106:4 — the juxtaposition; Tosefta Sanhedrin 3:6), the year passed no bar (106:5), the firstling from outside the Land not brought (106:2 — Tosefta
+## Sanhedrin 3:5; 15:19-23 ahead by CALL when it comes), the study (106:6); THE FAR PLACE — of place not time, any distance, the rich too (107:1-3 — Mishnah Maaser
+## Sheni 1:1?; 12:21's clause by CALL to chapter 12's cell), THE MONEY'S FORM TWO ARMS (107:4 — I1; Mishnah Eduyot 3:2), the possession (107:5 — Mishnah Maaser
+## Sheni 1:2), Shiloh and the eternal House (107:6 — the eras table by CALL), THREE MONEYS THE LAW'S TABLE (107:7 — Mishnah Maaser Sheni 3:10), the class from the
+## four named (107:8-11 — I3; Mishnah Maaser Sheni 1:5, 1:7, 2:1), the containers (107:12-15 — Mishnah Maaser Sheni 1:3; Mishnah Chullin 1:7), THE REJOICING A
+## PEACE OFFERING (107:16 — I2 with 27:7 ahead), THE LEVITE'S LADDER OF FOUR (108:1 — a status with four sources; 10:9, 12:12 and Numbers 18:20-24 by CALL); (h)
+## THE THIRD YEAR (14:28-29) — THE REMOVAL'S DATE A CLOCK DATUM: the eve of the last festival day of Passover of the fourth and the seventh year (109:1-3 — I2 with
+## 31:10 ahead; 26:12 ahead; Mishnah Maaser Sheni 5:6), the seventh year exempt (109:4 — Exodus 23:10-11 through its spine; 15:1 ahead), ONE TITHE NOT TWO — the
+## poor man's replaces the second (109:5, 109:10-11 — Numbers 18:21 by CALL), the vegetables' year (109:8 — Rosh Hashanah 12a-13a), the gifts exempt (109:12 —
+## Leviticus 19:9-10, 23:22 by CALL), THE FOUR IN WANT AND SONS OF THE COVENANT (110:1-2 — I3; Mishnah Peah 8:5-9; Yevamot 47b, 86a-b), THE SOJOURNER TWO PERSONS
+## (14:21 the resident alien, 14:29 the convert — a PARAMETER of the noun), the measure half a kav (110:3 — Tosefta Peah 4:2), the Land (110:4); (i) THE EFFECTS —
+## "a holy people" the ground of the cutting's bar and the custom's bar (97:1, 104:7), the sonship (96:9), "learn to fear" the tithe's effect (106:6), the blessing
+## on the work of the hand (14:29); (j) THE PLACE FORMULA at its fourth and fifth seats — 12b reads chapter 12's cells by CALL (the Shekhinah's nine seats in
+## Onkelos measured); (k) THE KIN BY CALL — Leviticus 11 whole, 17:15, 19:10, 19:27-28, 20:26, 21:5, 22:8, 23:22, 27:30-33; Exodus 22:30, 23:19; Numbers 18:20-32;
+## 7:6, 10:9, 10:18, 12:5-26; (l) NEVER READ AHEAD — 15:1, 15:19-23, 16:11-14, 17:1, 18:1, 22:6-7, 23:21, 24:17-21, 26:12-14, 27:7, 31:10, 32:9 wait for their
+## sittings — their cells by CALL when they come; (m) THE REGISTER's DATA rows — the chapter split in two (the food laws plural, the tithe singular, 14:21 both),
+## no imperative, no "if" (the one case on "and when" at 14:24), no first person, no narrative verb, the two number verses [2] and [3], the starred tithe tokens,
+## no written/read pair; (n) THE CHECKPOINT SERIES continues (DE the fifth name — DE9 the last; the next DF1, keyed by its first word); (o) THE DOCKET by the union
+## rule — the testing shelf as the design and the AS BUILT list it (Mishnah Chullin 3:6-7, 8:1-4, 4:4, 1:7 and Chullin 59a-66b, 80a, 113a-116b, 72b-73a, 68a-69a,
+## 77a; Mishnah Makkot 3:5-6 and Makkot 20a-21a; Yevamot 13b-14a, 47b, 86a-b; Kiddushin 36a, 54b; Mishnah Maaser Sheni 1-5 with Kiddushin 54b; Mishnah Maasrot
+## 1:1, 1:3, 2:4, 4:5-6; Rosh Hashanah 12a-13a; Bekhorot 34a-35a, 53b; Mishnah Temurah 6:1; Mishnah Eduyot 3:2; Pesachim 21b, 50b-51a; Bava Metzia 88a; Mishnah
+## Zevachim 5:8; Mishnah Peah 8:5-9 with Tosefta Peah 4:2, 4:11; Tosefta Kilayim 1:9; Tosefta Sanhedrin 3:5-6; Avot 3:9, 3:14; the Sifra on Leviticus 11, 19 and 27
+## credited from their sittings) — EVERY ROW WHOLE; a docket past ~700 rows its own run; THE COST RULES: two runs + the tail, the chain launched at RUN B's end;
+## A READING IS TWO RUNS + THE TAIL from now (the #204 NOTE). NOTHING ELSE IN CHAPTER 14 IS OWED TO A LATER SITTING OF ITS OWN.
+
+## THE SITTING-12 BOX (a)-(o) PAID — (a) THE CUTS AND THE BALDNESS — F1 the_sons_and_the_cuttings: THE LINE sons_and_mourning_declared writing cuttings_for_the_dead_barred
+## (a BLOCK — the cut and the factions from one word; the baldness by the analogy both ways with the priests' 21:5, PR.family and HB.body by CALL; the measure three ways,
+## the count per spot and per soul, 'for the dead' the condition — the fallen house exempt; the frontlets' place from the baldness; the sonship's two arms a DATA row);
+## (b) THE SIGNS OF THE BEASTS — F2 the_beasts: THE LINE food_law_declared writing abomination_eating_barred (a BLOCK) over SHM.classify by CALL — the four the
+## classifier's own exception rows (the eater of the camel lashed), the ten named and no more (Chullin 80a:13-16), the shesua a creature, the fetus from 14:6's own
+## words, the altar's disqualified (barred_from_it), the carcass touched (SHM.touch_effect); (c) THE WATER — F3 fins_and_scales (SHM by CALL; 14:9 through its twin);
+## (d) THE BIRDS — F3 the_permission (the permission Leviticus lacks — SUPPLIED rows 14:11, 14:20), the_birds_signs A PARAMETER IN THREE LAYERS (the four signs, the ruling
+## with the knowledge condition, the tradition arm — the hunter by tradition accepted, the clawer lashed), the two lists counted, the eggs, the locusts absent by CALL,
+## the swarming fowl; (e) THE CARCASS — F4: THE LINE carcass_and_kid_declared writing carcass_eating_barred (a BLOCK — the ban's seat the sanctions engine names; the
+## sanction by SA.carcass('lashes_for_eating') by CALL), the_carcass_table A PARAMETER (R. Meir / R. Yehuda; THE PRECEDENCE a third clause), 'any carcass' the torn
+## (OR.torn by CALL — the eater of the torn lashed, the torn to the dog), the carcass by fitness (the putrid exempt), the sale clause, the custom's bar; (f) THE KID'S
+## THREE READINGS — F4: CA.kid_in_milk by CALL on cook, eat, benefit (barred_from_it), the benefit counter-arm, the fowl out (exempt), the stomach's milk, 34:26 by
+## ER.repeats; NO NEW WRITE; (g) THE SECOND TITHE — F5 and F6: THE LINE second_tithe_declared writing second_tithe_owed (a STATUS — named the second by the shelf, the
+## liabilities with the courtyard's arm by KO.the_tithe, the wall's two capacities (lashes outside), the House standing (barred), the year passed, THE EXILE'S ARM,
+## Heaven's property (the sale barred), the firstling by OR.firstling and KO.the_gifts, the firstling from outside exempt, 'learn to fear'), the far place by PN
+## ('too_far'), the_moneys_form A PARAMETER WITH THE POSSESSION CLAUSE (the blank coin and the money in the sea barred), the three moneys, THE CLASS FROM THE FOUR
+## NAMED BY I6 (Nazir 35b:3 — water and salt barred), the containers, THE REJOICING REUSED (rejoicing_before_the_lord_commanded's second entry), THE LEVITE'S LADDER
+## OF FOUR REUSED (levite_forsaking_barred's second entry), Shiloh and the House by the eras table; (h) THE THIRD YEAR — F7: THE LINE third_year_tithe_declared writing
+## poor_tithe_owed (a STATUS — one tithe not two, the Levite never interrupted), the_removal_date A CLOCK DATUM (the calendar's key passover_7's eve; the years by
+## YO.cycle and CA.sabbatical — the seventh exempt), the_tithes_new_year A CLOCK DATUM (rosh_hashanah; the first third), the gifts exempt (HO.gifts, the moadim branch —
+## left_for_the_poor), the four in want, the measures, the uses barred, THE SOJOURNER TWO PERSONS (the convert accepted, the resident alien exempt), Ezra's penalty, the
+## courtyard from 'your gates', the animal tithe now (exempt); (i) THE EFFECTS — cuttings_for_the_dead_barred, abomination_eating_barred, carcass_eating_barred (blocks),
+## second_tithe_owed, poor_tithe_owed (statuses) NEW; the two reuses; 'a holy people' the ground (no write); (j) THE PLACE FORMULA at its fourth and fifth seats — PN by
+## CALL; (k) THE KIN BY CALL — eighteen runners (the design's eighteen); (l) NEVER READ AHEAD — 15:1, 15:19-23, 16:11-14, 17:1, 18:1, 22:6-7, 23:21, 24:17-21, 26:12-14,
+## 27:7, 31:10, 32:9 wait for their sittings; (m) THE REGISTER's DATA rows (the plural/singular register from the morphology, the parser's [2] and [3], the starred tithe
+## tokens, the infinitive absolutes) DATA rows in the runner; (n) THE CHECKPOINT SERIES — DF1-DF9 the sixth name; (o) THE DOCKET — 991 rows in two runs (771 read whole
+## here, 220 carried), the writer derived from 11b's, the crowns the cells' rows.
+## OWED FROM 12b: (i) THE FAST CHECKER'S CELLS' DRY-RUN (11b's owed item — still owed); (ii) THE SEATS AHEAD — 15:1's release and 31:10's seven years (the_removal_date by
+## CALL), 15:19-23's firstling (the_firstling_from_outside), 16:11 and 16:14's rejoicing and the four at the gate (second entries; the formula 14:29's first seat), 17:1's
+## blemish, 18:1's Levite, 22:6-7's bird's nest (228:5), 23:21's foreigner, 24:17-21's gifts (the import table), 26:12-14's confession and removal (the_removal_date;
+## KO.the_tithe 'confession'), 27:7's rejoicing peace offerings (I2 — 107:16), 32:9's portion (312:1); (iii) THE RUNNING WORLD'S SABBATICAL COUNT for the removal's year
+## (the cell reads the cycle by CALL; the count not begun before the entry — a measurement at chapter 15); (iv) THE RECEIPT'S THIRD AND FOURTH SHAPES, THE SUPPLIED
+## FORMS, THE CALF'S DAY MARKER, THE REGISTRY'S HOMOGRAPHS (the_place_luz_bethel, the_raven, the_flock, the_beasts not matched), THE INSTALL HYPOTHESIS, THE ERAS
+## TABLE'S MERGE, THE CHAIN'S POSITIONS STEP AT FOUR WORKERS — on the owner's word; (v) THE CHECKPOINT SERIES continues (DF the sixth name — DF9 the last; the next
+## DG1, keyed by its first word). NOTHING ELSE IN CHAPTER 14 IS OWED TO A LATER SITTING OF ITS OWN.

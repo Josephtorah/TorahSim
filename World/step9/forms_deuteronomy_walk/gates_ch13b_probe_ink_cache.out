@@ -1,0 +1,12 @@
+INK CACHE PROBES — the full load against the cached load, two fresh processes
+  the full load 237 s, the warm load (a harvest on a cold cache) 49 s, the cached load 49 s
+  the cached load restored 8804 statements and ran 2791; the slowest run: [[1.7, 'cold_run_pre_sinai', 231, 'with contextlib.redirect_stdout(io.StringIO()):'], [1.1, 'cold_run_incense_shekel', 463, 'with contextlib.redirect_stdout(_buf):'], [0.3, 'cold_run_priesthood', 273, 'with contextlib.redirect_stdout(_buf):']]
+  PASS C1 the same runners loaded: 68 modules
+  PASS C2 every picklable module value equal in canonical form: 6687 values compared, nothing set aside
+  PASS C3 no module name lost on the cached path
+  PASS C4 the daemons the same, by module and name, in order: 73 daemons
+  PASS C5 the registry map the same
+  PASS C6 the objects shared between names are the same groups in both loads (no sharing added by the cache): 18 shared groups
+  PASS C7 the cached load at least three times faster than the full: 49 s against 237 s
+  PASS C8 the engine's own modules hold the same state after both loads (no registration lost to a restored statement): 55 values in compile_guards, effects_layer, events_layer, world_engine, world_journal
+8/8 probes

@@ -1299,3 +1299,52 @@ the two files' division; the form's name protected; the fast steps in the foregr
 prescription; the store carries the ketiv; every step timed. OWED TO 11b (COMPILE_DEBT's box (a)-(l)): the prophet's test, the header's not-adding, the inciter, the
 condemned city, the effects, the run citations, the kin by call, never-read-ahead's cells, chapter 14's split of piska 96, the register's rows, the series DE, the
 docket. The records on the sheet; the forms in World/step9/forms_deuteronomy_walk/ (copy_ch13_forms.py).
+
+## §58 — THE DEUTERONOMY WALK sitting 11b (2026-09-21): CHAPTER 13 COMPILED — the state doc's #203 and its addenda 1-3; the map's "Sitting 11b … THE DESIGN", "THE DOCKET — AS RUN" and "Sitting 11b — AS BUILT"
+The two-run rule's sixth compile sitting under the cost rules with the docket clause once: RUN A (the rereads, the recon and the scan derived by line-based substitutions,
+the design), THE DOCKET in one run (565 rows — 409 read whole here, 156 carried with their ledgers' own verdict lines; the unresolved rows one shared file), RUN B (the
+probes to FAIL with the three reuse probes retyped, the types with the register's footer removed, the callees' print, the runner 56/56 first run, the recorder with the
+cache off, the stitcher with no marker, the literals with five retypes, the tape 9/10 then 10/10 with DE1-DE9, the chapter-10 scan's cleaving homograph excluded, the
+chain launched at the run's end), THE TAIL (the summary read once, the demands filed, the records, the forms, the message). The crowns: the header's seal a reuse, the
+sign real and the hearing barred anyway, the false prophet's death a parameter with the answer sheet's arm, the court's rule inverted, the seven interrogations a table
+read as data, the purge formula named at its first seat, the condemned city devoted. The lessons in the AS BUILT (twelve). Every step timed. Uncommitted since fb797a1:
+the docket and 11b; the message at <scratch>/commit_msg_ch13b.txt.
+
+## §59 — THE DEUTERONOMY WALK sitting 12 (2026-09-21): CHAPTER 14 READ AND FROZEN — the state doc's #204, its NOTE and its addendum 1; the map's "Sitting 12 — CHAPTER 14 … THE DESIGN" and "Sitting 12 — CHAPTER 14 — AS BUILT"; the owner: "Go" (a reading sitting under THE COST RULES), "/context" and "Ready to compact" at #204, "Reread" and "Go" after the compaction
+THE READING: Onkelos Deuteronomy 14 whole (29 = 29, the identity); THE SIFREI ON THE CHAPTER A SIXTH TIME — piska 96's tail (rows 9-12 on 14:1, left by chapter
+13's sitting; 96:10 folded in on its consonants) and piskaot 97-110 with the heads NOT IN VERSE ORDER, 111 rows read whole in both files (2 read before and
+reread whole, found by computation); three rows outside the spine by the union of both files (76:7 reread whole from chapter 12; 228:5; 312:1), none excluded; the
+kin credited by name from fourteen ledgers (Leviticus 11 the twin chapter at its head); the unit deu_14_food_tithe the 228th (standing 2252, hash unmoved); the
+ledger 143 sources (Onkelos MATERIAL 23 / CONTEXT 6; the spine MATERIAL 80 / CONTEXT 31; the outside rows MATERIAL 3 / CONTEXT 0); seven claims 7/0
+seated at 14:1, 3, 9, 21, 22, 24, 28; the display layer +131 by reference, +49 by gloss; every gate green in one chain (ch14_gates.sh, in the background; the
+manifest, the verifier and the labels census in the foreground before it). THE ONE RUN AND ITS TAIL: the measurements (the kin by computation beside the law kin
+named and THE TWIN CHAPTER DIFFED), the ink (27 fell on the first typed pass — every one the instrument's shape or a list from memory; 2 on the second; 0 on the
+third), the design, the rows in five files (every cut held but one — the export's spelling, retyped), THE CLEAN POINT #204 AFTER ALL THE ROWS — /context 657.8k,
+PAST THE 600k CAP A SECOND TIME where the estimate stood near 470k (the NOTE: a reading of this size is TWO RUNS + THE TAIL, the clean point after the first half
+of the rows unconditionally); the owner's compaction; the tail on "Reread" and "Go" — the ledger (clean first run), the patch, the ink's fifth pass on the
+"already" count and the sixth green, the manifest with its checks probed first, the seat, the shells with the form's name protected, the chain launched with the
+writers typed during its run, the records, the forms, the message. EVERY STEP TIMED: the machine's share 12 min 2 s of 130 min 10 s from 16:56:48 — the table in the
+map's AS BUILT. THE FINDS: THE TWIN CHAPTER DIFFED VERSE BY VERSE (14:6 = 11:3 + "two", 14:15 = 11:16, 14:7 folds three, the ra'ah's resh, the locusts and the seas
+dropped, the vocabulary changed; the shelf's reason the two added names); THE THREE SIGNS FROM THREE CLAUSES; THE FOUR THE EXCEPTION SET (I1); "WAS MOSES A
+HUNTER"; THE PERMITTED BIRDS WITHOUT A SIGN IN THE INK — the answer sheet's parameter (I3); THE LEXICON RULE at the bird's nest; THE LIST CARRIED BY ITS HEAD
+(I2); SCRIPTURE SPECIFIES THE FEWER; THE LOCUSTS IN THE FRAMES; "A HOLY PEOPLE" three in the Bible, 14:2 = 7:6; THE SONSHIP TWO-ARMED; THE CUTTING THREE WAYS
+with the baldness by analogy both ways (I2); THE CARCASS GIVEN NOT CAST with the four-cell table and R. Judah's dissent; THE KID'S THIRD SEAT THREE WAYS and the
+eating at 12:24 (I1); THE TITHE'S LIABILITIES and the second tithe named; THE WALL, THE HOUSE, THE YEAR (three statuses); THE WAY OF PLACE; THE MONEY'S TWO ARMS
+(I1); THREE MONEYS FROM THE COUNT; the class from the four named (I3); THE REJOICING A PEACE OFFERING (I2); SHILOH AND THE HOUSE; THE LEVITE'S LADDER; THE
+REMOVAL'S DATE COMPUTED (I2); ONE TITHE NOT TWO; THE FOUR IN WANT, SONS OF THE COVENANT — ONE NOUN TWO PERSONS (I3); the register split in two; the parser's [2]
+and [3] with the starred tithe tokens; Onkelos's flesh with milk. THE LESSONS (thirteen, in the map): the cap by /context a second time and the two-runs rule; the
+instrument's shape not the fact; the counting assert patch-aware; the piska's tail folded in; the heads out of order; the twin chapter diffed; the birds' signs
+data; one noun two persons; the kin by computation; the cut's miss the export's; the checks probed first; the fast steps in the foreground; every step timed.
+OWED TO 12b (COMPILE_DEBT's box (a)-(o)): the cuts, the beasts' signs, the water, the birds' signs, the carcass table, the kid's three readings, the second tithe's
+statuses and the money's arms, the third year's date and the four, the effects, the place formula by call, the kin by call, never-read-ahead's cells, the
+register's rows, the series DF, the docket. The records on the sheet; the forms in World/step9/forms_deuteronomy_walk/ (copy_ch14_forms.py).
+
+## §60 — THE DEUTERONOMY WALK sitting 12b (2026-09-21/22): CHAPTER 14 COMPILED — the state doc's #205 and its addenda 1-4; the map's "Sitting 12b … THE DESIGN", its two "THE DOCKET — AS RUN" paragraphs and "Sitting 12b — AS BUILT"
+The two-run rule's seventh compile sitting under the cost rules with the docket clause twice: RUN A (the rereads, the recon and the scan derived by line-based substitutions,
+the design), THE DOCKET in two runs (991 rows — 771 read whole here, 220 carried with their ledgers' own verdict lines; the boundary computed from the dump), RUN B (the
+probes to FAIL with Q32 retyped, the types with the five parameters, the callees' print with the classifier's keys read at the source, the runner 78/78 first run, the
+recorder with the cache off, the stitcher with no marker, the literals with DD2 retyped, the tape with DF1-DF9, the chain launched at the run's end), THE TAIL (the summary
+read once, the demands filed if any, the records, the forms, the message). The crowns: the birds' signs the Sages' teaching in three layers, the carcass's ban at the seat
+the sanctions engine names, the class from the four named by the method the chapter's verse teaches, the exile's arm on the second tithe, the removal's date a clock datum
+on the calendar's own key with the count by call. The lessons in the AS BUILT (eight). Every step timed. Uncommitted since fb797a1: 13b, 14 and 12b; the messages at
+<scratch>/commit_msg_ch14.txt and commit_msg_ch14b.txt.

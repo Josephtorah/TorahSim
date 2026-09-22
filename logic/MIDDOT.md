@@ -1970,6 +1970,54 @@ narrative strength. By cluster:
     Jerusalem excluded by "to dwell there" (92:5); the three verbs three sources (92:2); "a heap forever" read by Joshua's oath (95:6);
     the anger keyed to idolatry (96:3); the mercy two-armed (96:4); the footer the header's sentence (96:7).
 
+- THE CHAPTER-13 COMPILE (THE DEUTERONOMY WALK sitting 11b RUN B, 2026-09-21; cold_run_seducers.py — the docket's rules carried into the cells; every code checked in this file before typed): I1 (qal wa-chomer, the a-fortiori) at Sifrei Bamidbar 113:1 (R. Yitzchak's from idolatry — the forewarning; F3 the_stoning_rite) and Mishnah Makkot 1:4-6 (86:3's from the plotting witness — F2 the_prophets_death); I2 (gezerah shavah, the verbal analogy) at Sanhedrin 89b:15-19 ('thrust' 13:6 / 13:11 — the false prophet's stoning, the_prophets_death's stoning arm; F2), 40b:4-6 ('diligently' FREE at 13:15's third verb — the seven interrogations pooled from three verses, F4 the_seven_interrogations, with the freeness rider), Berakhot 31b:4 (Hannah's 'base woman' / 13:14's 'base men' — F4 belial_and_naboth); I4 (kelal u-frat, a generalization and a specification apart — R. Avin's rule) at Sanhedrin 113a:4-6 ('a heap forever … it shall not be built' — R. Yosei HaGelili refuses the rule, R. Akiva applies it; F5 the_heap_forever); THE DOUBLED VERB named at Bava Metzia 31b:3 ('smite, you shall smite' — by any means; F4 the_sword) and Sanhedrin 33b:7 ('kill, you shall kill him' — the court's rule inverted; F3 the_courts_rule_inverted), 'CERTAIN' THE CONGRUENCE RULE named at Sanhedrin 41a:18-20 (F4 the_congruence_rule) — no code. THE DISPUTES AS PARAMETERS carried into the registry (calendar_parameters.yaml, exercised by seducers): the_signs_status (R. Yosei HaGelili's dominion / R. Akiva's fallen prophet — Sanhedrin 90a:10-11), the_prophets_death (stoning / strangling — 89b:15-21, Mishnah Sanhedrin 11:1 the answer sheet's arm), the_execution_timing (kept to the Festival / at once — Mishnah Sanhedrin 11:4), the_inquiries (the seven, the examinations, the voiding, the tolerance, the congruence, 'diligently' free, the order, the clock datum — Mishnah Sanhedrin 5:1-2, Sanhedrin 40a-41a); the majority's procedure (112a:4-5), the self-drawn city (112a:2-3), the property table's edges (112a:11-17), Heaven's spoil's arms (112b:1-113a:2), the heap's arms (113a:4-6), the children (94:3) DATA rows with their arms.
+- **THE SIFREI ON DEUTERONOMY'S OWN CASE LAW ON CHAPTER 14 (Deuteronomy 14:1-29; THE DEUTERONOMY WALK sitting 12, 2026-09-21;
+  the ledger logic/oral_triage/deu_14_reeh_2026-09-21.md — THE SPINE ON THE CHAPTER A SIXTH TIME, piska 96's tail (rows 9-12 on 14:1) and
+  piskaot 97-110 with the heads not in verse order, 111 rows read whole in both files, and three rows outside the spine; EVERY CODE
+  CHECKED IN MIDDOT.md BEFORE IT WAS TYPED, none relabeled; the census from the ledger's own rows: I1 at 101:10, 106:3, 106:4, 107:4, 107:7, 76:7; I2 at 96:12, 99:2, 103:3, 103:4, 107:16, 109:2; I3 at 103:8, 105:8, 107:11, 110:1, 110:2, 228:5):**
+  · THE A-FORTIORI FROM THE FOUR TO THE REST (101:10 on 14:7-8): if the camel, the hare, the rock-badger and the swine, which have signs
+    of cleanness, are under a prohibition, the rest, which have none, how much more — I1 (checked; the row's own words קַל וָחוֹמֶר ("an
+    a fortiori") on its bytes): THE WRITTEN LIST THE EXCEPTION SET, THE SIGN THE CLASS — the compile's rule for the beasts' cell; the
+    answer sheet Mishnah Chullin 3:6-7 and Chullin 66b at 12b's docket.
+  · THE A-FORTIORI REFUTED, THEN THE VERSE (76:7 on 12:24 for 14:21; 106:3 and 106:4 on 14:23; 107:4 and 107:7 on 14:25-26): flesh in milk
+    from the carcass, refuted by mixed seeds; the wall from the firstling, refuted by the firstling's narrow time; the House standing from
+    the firstling, twice refuted — the first-fruits prove and are refuted; the money from consecrated property, refuted by its movables;
+    the second money from the tithe, overridden by THE COUNT OF THE WORD (three "money" tokens at 14:25-26 — the ink's count the law's
+    table) — I1 (checked at each seat): the shelf's pattern that a reasoning proposes and the verse decides.
+  · THE VERBAL ANALOGY OF BALDNESS, RUN BOTH WAYS (96:12 on 14:1): "baldness" is said here and "baldness" is said there (Leviticus 21:5)
+    — the priests' verse gives Israel the whole head and the count, Israel's verse gives the priests "for the dead" — I2 (checked; גְּזֵרָה
+    שָׁוָה ("a verbal analogy") on its bytes); THE INK: the Torah's two seats of the word, computed.
+  · THE VERBAL ANALOGIES OF THE LIST (99:2 on 14:3; 103:3 on 14:12; 103:4 on 14:13): "abomination" here and at 17:1 — the disqualified
+    consecrated; "eagle" here and at Leviticus 11:13 — the whole list under "do not feed" and "do not eat"; "ayyah" here and there — the
+    ra'ah a kind of ayyah — I2 (checked at each seat): the list carried by its head from the twin chapter.
+  · THE VERBAL ANALOGIES OF THE TITHE (107:16 on 14:26; 109:2 on 14:28): "rejoicing" here and at 27:7 — peace offerings, then the verse's
+    own pair "eat and rejoice" limits it; "end" here and at 31:10 — a pilgrimage festival, then 26:12's "finished" picks Passover — I2
+    (checked at both seats; 27:7 and 31:10 never read ahead, recorded from their seats): THE REMOVAL'S DATE COMPUTED FROM TWO VERSES.
+  · THE PARADIGM OF THE BIRD (98:3, 228:5 on 14:11): wherever "bird" is said, Scripture speaks of a clean one — applied at the bird's nest
+    (22:7) — I3 (checked; the row's own words בִּנְיַן אָב ("a paradigm") on its bytes); THE PARADIGM OF THE EAGLE (103:8 on 14:12): no crop,
+    no extra toe, no peelable gizzard, seizes and eats — THE PERMITTED BIRDS HAVE NO SIGN IN THE INK, the signs the answer sheet's
+    (Mishnah Chullin 3:6 in the row's Hebrew) — I3 (checked): the code/data separation law's own case inside the spine.
+  · THE PARADIGMS OF THE TITHE (105:8 on 14:22; 107:11 on 14:26; 110:1 and 110:2 on 14:29): the paradigm from grain — rice, millet, poppy
+    and sesame — OVERRIDDEN by the doubled verb; the four named as the father of the class — fruit from fruit and of the earth, water and
+    salt out; the poor's want from Leviticus 19:10 and the covenant's sons from the Levite — I3 (checked at each seat): THE SOJOURNER OF
+    14:29 THE CONVERT against 14:21's resident alien, one noun two persons.
+  · "THE VERSE COMPARES" (106:4-5 on 14:23): the firstling's eating compared to the second tithe's — only while the House stands; the
+    firstling past its year still fit — the juxtaposition, named by the shelf's own word (מַקִּישׁ — "compares") without a code.
+  · THE COUNTING RULE (100:2 on 14:4; 103:7 on 14:15-17): everywhere Scripture specifies the fewer — the unclean beasts by name because
+    fewer, the unclean birds by name because fewer, the clean by a frame — named without a code.
+  · THE TWO VERBS OVER THE TWO PERSONS (104:5 on 14:21): give and sell crossed over the sojourner and the foreigner into a four-cell
+    table, against R. Judah's "the words as they are written" (104:6) — named without a code; a PARAMETER with two arms at 12b.
+  · THE THREE SEATS THREE WAYS (104:8-10 on 14:21): the kid's verse said three times — the three covenants; the wild beast, the fowl and
+    the unclean beast excluded; the fowl out by "its mother's milk" — and the eating at 12:24 (76:7): one verse, three laws — named
+    without a code.
+  · NAMED WITHOUT A CODE: the sonship two-armed (96:9); no factions from the letters (96:10); "sanctify yourself" at both seats of "a holy
+    people" (97:1, 104:7); each one beloved, not above the fathers (97:4-5); the three signs from the three clauses (98:1); the cleft one
+    a creature (98:2); why the names were repeated (98:6); the license by the names (101:1-9); "was Moses a hunter" (102:1); the second
+    tithe named (105:2); the liabilities from the clauses (105:1-19); the way's distance of place (107:1-3); Shiloh and the eternal House
+    (107:6); the Levite's ladder of four (108:1); one tithe not two (109:5, 109:10-11); the measure half a kav (110:3); who chose whom (312:1).
+
+- THE CHAPTER-14 COMPILE (THE DEUTERONOMY WALK sitting 12b RUN B, 2026-09-22; cold_run_food_tithe.py — the docket's rules carried into the cells; every code checked in this file before typed): I1 qal wa-chomer (a fortiori) at four seats — the four named the exception and the sign the class (the Sifrei 101:10, F2 the_four_closed_by_it), the wall from the lesser holies (106:3, F5 the_wall_two_capacities), the three moneys (107:7, F6 the_three_moneys), the eating of meat in milk from 12:24's clause (76:7 at Chullin 115b, F4 the_benefit_counter_arm); I2 gezerah shavah (verbal analogy) at four — the baldness both ways with the priests' 21:5 ('korcha' (baldness), 96:12; Makkot 20a:12-14; Kiddushin 36a:6-8 — F1 the_baldness_both_ways), the removal's date with 31:10's 'at the end of seven years' (109:1-3, F7 the_removal_date), the rejoicing with 27:7's peace offerings (107:16, F6 the_rejoicing — the seat ahead recorded), the birds' list carried by its head (103:3-4, the readback row 14:12); I3 binyan av (a paradigm) — the four in want by the Levite's paradigm (110:1-2, F7 the_four_in_want), 'seh' (a lamb or kid) the paradigm excluding the hybrid (Bava Kamma 77b:13, F2 the_ten_named); I5 prat u-kelal (particular then general) REFUSED — the ten named closed against it (Chullin 80a:14-16); I6 kelal u-frat u-kelal (general, particular, general) — the class from the four named (107:8-11; Bava Kamma 54b:20; NAZIR 35b:3 THE CHAPTER'S VERSE THE SOURCE OF THE METHOD — F6 the_class_from_the_four; the design's I3 retyped, departure (a)); the juxtaposition named without a code — the House standing from the firstling (106:4, F5 the_house_standing) and the Levite never interrupted from the inheritance (Rosh Hashanah 12b:4-5, F7); the disputes as PARAMETERS (the_birds_signs in three layers, the_carcass_table with the precedence, the_moneys_form with the possession clause) and the clock data as parameters (the_removal_date, the_tithes_new_year with the first third) — every arm a docket row, read as data, never a constant.
+
 ## Exodus block campaign — owner's word "Do 3")
 
 The campaign's exam rounds banked RULES-ABOUT-RULES on the corpus's
@@ -2406,3 +2454,62 @@ bloodletting — three arms); Temurah 17b:11-13 (the blemished peace offering's 
 (excision) or not); Rosh Hashanah 6b:15-16 (the woman's rejoicing — hers or her husband's); Keritot 22a:10-13 (the life-blood's boundary — while it spurts /
 from the last black drop); 21b:11-14 (the blood of creeping animals — lashes under which warning); Megillah 10a:2-9 (the first consecration for its time or
 forever); Chullin 116a:12-14 (the wild animal and the bird in milk).
+
+### THE DEUTERONOMY WALK 11b — THE DOCKET OF CHAPTER 13 (2026-09-21, one run; logic/oral_triage/deu_13_reeh_exam_2026-09-21.md, 565 rows — 156 carried, 409 read whole here)
+Every code checked in this file's tables before it was typed. I1 (qal wa-chomer, the a-fortiori): Sifrei Bamidbar 113:1 — R. Yitzchak: if IDOLATRY, the
+gravest, is not liable without forewarning, how much more every commandment — so "those who found him" teaches the warning NAMES THE LABOR (the inciter's
+warning WAIVED at Sanhedrin 67a:4 the chapter's exception — a DATA row); Sanhedrin 40b:7 — the seven interrogations to the strangled and the burned from the
+stoned and the sword; 40b:8 — the inference stands for the Rabbis' severity order, not R. Shimon's (the order a parameter); 40b:10 and 41a:8 — THE RIDER: a
+matter derivable by a-fortiori the verse still writes; Mishnah Makkot 1:4 — the plotting witness defined, the ground of the Sifrei 86:3's a-fortiori for the
+false prophet's death. I2 (gezerah shavah, the verbal analogy): Sanhedrin 40b:4-6 — "diligently" / "diligently" / "diligently" (13:15, 17:4, 19:18) with THE
+FREENESS RIDER (the word superfluous by design; at 13:15 the third verb the freeness — 92:2); 89b:16 — the Rabbis: "thrust" of the prophet (13:6) from
+"thrust" of the layman (13:11), stoned (the Sifrei 86:6, 90:2 at its Bavli seat); 89b:18-19 — the city's subverters' "drawn away" (13:14) from either, R.
+Shimon's from the prophet; 84a:14 — "shall be put to death" of the non-priest (Numbers 18:7) from the prophet's (13:6): stoning (R. Akiva) / strangling (R.
+Yochanan ben Nuri); 54b:5 — "you shall kill" of bestiality from "you shall kill him … stone him" (13:10-11): stoning; 41a:4 — "the matter" (22:24) / speech:
+the verbal forewarning; Bava Batra 10a:10, Ketubot 68a:2, Tosefta Peah 4:19 — "Belial" (15:9) / "Belial" (13:14): the eye averted from charity as idolatry;
+Berakhot 31b:4 — Hannah's "Belial" (1 Samuel 1:16) / 13:14: the drunken prayer as idolatry; Sanhedrin 67a:21-22 (carried, outside) — the witch's death. I4
+(kelal u-frat, general then particular): Sanhedrin 113a:4-6 — "a heap forever" (a positive generalization) and "not built again" (a prohibition's detail):
+R. Yosei HaGelili REFUSES the reading under R. Avin's rule (a positive general followed by a negative detail is two laws), R. Akiva applies it (the general
+means only the detail — gardens permitted); at 113a:6 both accept R. Avin and dispute "again". THE DOUBLED VERB — no code, named: Bava Metzia 31b:3 ("smite,
+you shall smite" — by any means), Sanhedrin 33b:7 (Rav Kahana: "kill, you shall kill him" — the court's rule inverted), 40b:6 (the Torah could have doubled
+one verb — the freeness). THE MNEMONIC — named: Sanhedrin 40b:2 (escapes, sword, forewarning — the three cases' differences). THE DISPUTES AS PARAMETERS
+(the machine's data channel): Sanhedrin 89b:15-21, 90a:1-11, 67a:7-8, 84a:14 with Mishnah Sanhedrin 11:1 (the_prophets_death — stoning / strangling; the
+essence, the part, the hour; idolatry even a day); 90a:10-11 with 89b:6-7 (the_signs_status — R. Yosei HaGelili's dominion / R. Akiva's fallen prophet; the
+established prophet needs no sign); Mishnah Sanhedrin 11:4 and Tosefta Sanhedrin 11:3 (the_execution_timing — kept to the Festival / at once with the notice);
+40b:11-14 (the interrogations' count — seven / eight), 40a:8 (the hour's tolerance — one / two hours), 41a:23 (ben Zakkai's probes weighed as interrogations);
+40b:8 (the deaths' severity — the Rabbis / R. Shimon); 61b:3-9 (the incited's consent alone — the individual / the multitude); 112a:4-5 (the majority's
+procedure — imprison / stone until half / multiply the courts); 111b:16-19 (one city in two tribes); 112a:2-3 (the self-drawn city — open); 112a:18 (the
+square — from the outset / made); 113a:4-6 (the heap — no gardens / gardens); 112b:2-6 (the consecrated animals — die / graze / redeemed), 112b:10-11 (the
+heave offering by possession), 112b:12 (the second tithe Heaven's or the owner's); Sukkah 34b:2-7 (the species' counts — three / one myrtle); Menachot
+41b:12-15 (the strings — four / three); Zevachim 80a:2-4, 81a:2-4 and Eruvin 100a:18 (the mixed bloods — four placements / one; the active graver than the
+passive); Chagigah 8b:11 (the festival's animals completed / an added day). THE JUXTAPOSITION — none this docket.
+
+### THE DEUTERONOMY WALK 12b — THE DOCKET OF CHAPTER 14 (2026-09-21, two runs; logic/oral_triage/deu_14_reeh_exam_2026-09-21.md, 991 rows — 220 carried, 771 read whole here)
+Every code checked in this file's tables before it was typed. I1 (qal wa-chomer, the a-fortiori): Kiddushin 36a:3 — if the priests' baldness binds only the
+sons of Aaron, the Israelites' all the more (the women's exemption's rival ground); Chullin 69a:6 — Rava: the first organ's cut permits the fetus, all the more
+purifies the limb; 116b:11 — Rava the other way on the torn's stomach milk; Bekhorot 53b:13 — new and old flocks tithed together from sheep and goats
+(refuted by the juxtaposition); Mishnah Bekhorot 9:1 — the same refuted by "flock"; Chullin 60a:1, 60a:10-11 — the lore's own (the sun and the Presence; the
+grasses). I2 (gezerah shavah, the verbal analogy): Makkot 20a:14 and Kiddushin 36a:7-8 — "baldness" (14:1) / "baldness" (Leviticus 21:5) RUN BOTH WAYS: each
+spot and the whole head to Israel, "for the dead" to the priests; Kiddushin 36a:2, 36a:4-5 — the same word for the women's exemption (Isi) and the count
+("korcha" one word, two conclusions); Kiddushin 57b:10, Bekhorot 10a:2, Menachot 101b:6, Pesachim 24b:11 — "a holy people" (14:21) / "holy men" (Exodus
+22:30): the benefit arm (R. Shimon ben Yehuda) and the eating's warning (Isi ben Yehuda); Menachot 82a:1, Zevachim 50a:9 — "there" (27:7) / "there" (14:23):
+the peace offerings from tithe money; Pesachim 94b:10, Tosefta Pesachim 8:1 — "a faraway place" of the tithe (14:24) / of the Passover; Kiddushin 54b:7 —
+"holy" (Leviticus 19:24) / "holy" (27:30): the fourth-year vineyard's fifth and removal (Beit Hillel); Rosh Hashanah 12a:4 (outside) — "abated". I3 (binyan
+av, the paradigm): Bava Kamma 77b:13, 78a:3, Chullin 78b:1 — Rava: "the seh of sheep, the seh of goats" (14:4) the paradigm for every "seh" — the hybrid
+excluded; Kiddushin 56b:10, Pesachim 21b:6 — 14:21's "sell it to a foreigner" the paradigm of a permitted benefit (R. Abbahu's rule); Chullin 65b:5 — "you
+derive a paradigm from the three" — the locusts' common denominator; Chullin 140a:2 — "tzippor" (bird) means clean (98:3, 228:5). I4 (kelal u-frat, general
+then particular): Chullin 66a:2 — the study hall's reading of the locusts' verses (the named kinds only); 66b:10 — "in the waters" then "the seas and rivers".
+I5 (prat u-kelal, particular then general): Chullin 80a:14-16 — "the deer and the gazelle …" then "every beast": the generalization would EXTEND the clean
+wild kinds — refused: "why list them all?" — THE TEN NAMED ARE THE ONLY CLEAN WILD KINDS. I6 (kelal u-frat u-kelal): Bava Kamma 54b:20, 63a:6, Nazir 35b:3 —
+14:26 "for anything your soul desires … oxen, sheep, wine, strong drink … whatever your soul asks": THE CHAPTER'S VERSE THE SOURCE OF THE METHOD ("whence
+that the generalization is like the detail?"), the class from the four named (the design's I3 retyped I6 at RUN B); Eruvin 27b:14 — the rival
+amplification-restriction (R. Yehuda ben Gadish, R. Eliezer); Chullin 65a:10-66a:5 — the school of R. Yishmael on the locusts (the long head in), even with
+unlike generalizations; 66b:11-12 — "in the waters" twice. I12 (davar ha-lamed me-inyano, a matter from its context): Chullin 63a:7-8 — the tinshemet among
+the birds and among the creepers, each by its neighbors. THE JUXTAPOSITIONS — no code, named: Bekhorot 53b:14-16, 54b:9, Tosefta Bekhorot 7:1, Rosh Hashanah
+8a:8, 12a:9 (14:22-23 two tithes — the year rule to the herd's tithe; sheep with goats by "flock"); Temurah 21a:17, Zevachim 29b:2, 21b:3 (the tithe and the
+firstling: the House standing, the year, the Land); Shabbat 130a:11 (the carcass and the kid — the fowl out); Rosh Hashanah 12b:5 (the first tithe and an
+inheritance — no interruption; korach's own move at "Rosh Hashanah 12b:3"). THE DISPUTES AS PARAMETERS — named: the_moneys_form (Bava Metzia 47b:5; Mishnah
+Eduyot 3:2; Maaser Sheni 1:2 the possession clause), the_carcass_table (Pesachim 21b:7-9), the_birds_signs' layers (Chullin 62a:4, 63b:11), the_tithes_new_year
+(Rosh Hashanah 8a:8 the cattle arm; 12a:6; 13a:3 the first third), the bald spot's measure (Makkot 20b:2-3), the sonship (Kiddushin 36a:11-12), the factions
+rule's two values (Yevamot 14a:6-7), the first tithe's recipient (Yevamot 86a:1, 86a:14). THE DO-NOT-READ FORM — no code, named: Shabbat 119a:6 ("tithe so that
+you grow wealthy"); Chullin 60a:9 (outside). THE TWO-VERSES-AS-ONE RULE — not among the thirteen, named: Chullin 61b:3-4 (the peres and the ozniyya).

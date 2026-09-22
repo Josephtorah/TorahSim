@@ -1,8 +1,8 @@
 # REGISTER_INDEX.md — written by register_census.py each run (documentation, never runtime)
 
-THE REGISTER GATE — the ink's own formulas against the world (population table rows 148; ledger entries 1638)
-COVERAGE: counts 110 {'MEASURE-ONLY': 44, 'NONE': 16, 'ELSEWHERE': 14, 'ROW': 29, 'LEDGER': 7}; receipts 69 {'CHAPTER': 11, 'NONE': 13, 'ACT': 24, 'EVENT': 5, 'CLOSE': 16}; footers 9 {'DAEMONS': 6, 'EMPTY': 3}; registers 18 {'NONE': 14, 'ROWS': 4}
-DECLARED 100; DEBT 0; FAILS 0
+THE REGISTER GATE — the ink's own formulas against the world (population table rows 148; ledger entries 1653)
+COVERAGE: counts 110 {'MEASURE-ONLY': 44, 'NONE': 16, 'ELSEWHERE': 14, 'ROW': 29, 'LEDGER': 7}; receipts 69 {'CHAPTER': 11, 'NONE': 13, 'ACT': 24, 'EVENT': 5, 'CLOSE': 16}; footers 9 {'DAEMONS': 8, 'EMPTY': 1}; registers 18 {'NONE': 14, 'ROWS': 4}
+DECLARED 98; DEBT 0; FAILS 0
 -- A. THE COUNT LINES (110)
    Gen 11:10   MEASURE-ONLY  green    footer: these are the generations of [100, 2] | measures [100, 2]
    Gen 37:2    MEASURE-ONLY  green    footer: these are the generations of [17] | measures [17]
@@ -192,8 +192,8 @@ DECLARED 100; DEBT 0; FAILS 0
    Num 36:13   DAEMONS       green    FOOTER commandments stamp moab block (Num 30:17, Num 36:13] daemons 5 {'boot': 5} | law_midian@Num 31:21 law_gad_reuben@Num 32:20 law_journeys@Num 33:50 law_borders@Num 34:1 law_refuge@Num 35:1
    Deut 1:1    EMPTY         declared FOOTER words stamp jordan block (Num 36:13, Deut 1:1] daemons 0 {} |  | why: THE DEUTERONOMY WALK 1b (2026-09-15) | the block (Num 36:13, Deut 1:1] holds no law — by the ink (th
    Deut 4:45   DAEMONS       green    FOOTER testimonies stamp none block (Deut 1:1, Deut 4:45] daemons 2 {'boot': 2} | law_opening_speech@Deut 1:16 law_obey_horeb@Deut 4:2
-   Deut 12:1   EMPTY         declared HEADER statutes stamp none block (Deut 12:1, Deut 28:69] daemons 0 {} |  | why: THE DEUTERONOMY WALK 10b (2026-09-21) | REDECLARED at chapter 12's compile — the header "these are t
-   Deut 28:69  EMPTY         declared FOOTER words stamp moab block (Deut 12:1, Deut 28:69] daemons 0 {} |  | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
+   Deut 12:1   DAEMONS       green    HEADER statutes stamp none block (Deut 12:1, Deut 28:69] daemons 2 {'boot': 2} | law_seducers@Deut 13:1 law_food_tithe@Deut 14:1
+   Deut 28:69  DAEMONS       green    FOOTER words stamp moab block (Deut 12:1, Deut 28:69] daemons 2 {'boot': 2} | law_seducers@Deut 13:1 law_food_tithe@Deut 14:1
 -- D. THE REGISTERS (18)
    Gen 2       NONE          declared headers [4] {'generations': 1} |  | why: "these are the generations of the heavens and the earth" (2:4) — the creation register: its rows are
    Gen 6       NONE          declared headers [9] {'generations': 1} |  | why: Noah's generations (6:9) — the named grain lives on the tape (the born / died markers, the life eras
