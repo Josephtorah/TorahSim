@@ -1378,3 +1378,15 @@ compaction his; the receipt's forward pointer; the Mishnah inside the spine; two
 three circumventions; the kin by computation; every step timed. OWED TO 13b (COMPILE_DEBT's box (a)-(o)): the release, the needy and the blessing, the hand
 opened, the Hebrew slave, the awl, the double hire, the firstling, the blemish and the blood, the effects, the kin by call, never-read-ahead's cells, the
 register's rows, the as-measured note, the series DG, the docket. The records on the sheet; the forms in World/step9/forms_deuteronomy_walk/ (copy_ch15_forms.py).
+
+## §62 — THE DEUTERONOMY WALK sitting 13b (2026-09-22/23): CHAPTER 15 COMPILED — the state doc's #207 and its addenda 1-5; the map's "Sitting 13b … THE DESIGN", its three "THE DOCKET — AS RUN" paragraphs and "Sitting 13b — AS BUILT"
+The two-run rule's eighth compile sitting under the cost rules with the docket clause three times: RUN A (the rereads, the recon and the scan, the NFKC re-measure that
+corrected sitting 13's lesson 4, the design), THE DOCKET in three runs (974 rows — 814 read whole here, 160 carried with their ledgers' own verdict lines), RUN B (the
+probes to FAIL with the four kin probes retyped, the types with the twenty-seven parameters, the callees' print read in two cuts, the runner 91/91 first run, the
+recorder with the cache off, the stitcher with no marker, the literals with four seats retyped, the tape in three runs — CU5's stale count, the retype's apostrophes,
+the scan's ground — the chain launched at the run's end), THE TAIL in the same window (the summary read once, the six demands filed from the prints, the chain in three
+passes, the records, the forms, the message). The crowns: the release-year and the firstling's year clock data, the two verses a state row with two arms, the receipt
+pointing ahead an H row and an OWED pointer, the severance gift priced by the erection's value, the two transfers taught, the gift formula's homograph computed by lemma,
+'lame' the Passover's homograph. The lessons in the AS BUILT (eleven — the cut line, the scan's ground, the apostrophes, the clock's era, the callees' forms, the
+consonants' homograph, the gate's live edge, the pointer ahead, the writes read, the chain's late failures, the pass after a source change, the two-run rule). Every step timed. Uncommitted since
+b0eaa56: 13b; the message at <scratch>/commit_msg_ch15b.txt.

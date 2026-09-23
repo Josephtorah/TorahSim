@@ -1,3 +1,10 @@
+# ⚠ THE DEUTERONOMY WALK sitting 13b — CHAPTER 15 COMPILED AND ON THE TAPE (2026-09-23; step9/DEUTERONOMY_WALK.md "Sitting 13b" + the three "THE DOCKET — AS RUN" + "Sitting 13b — AS BUILT"):
+# cold_run_release_firstborn.py the 70th runner (91/91 first run), law_release_firstborn the 75th daemon; FOUR OWN-DAY LINES, NO MARKER — the release
+# (debt_release_owed, exaction_barred; the_release_date a CLOCK DATUM; blessings_for_hearing REUSED), the hand opened (hand_opening_commanded, hand_shutting_barred,
+# base_thought_barred, work_of_the_hand_blessed; cry_heard and bears_sin REUSED), the Hebrew slave (furnishing_commanded, empty_sending_barred; the severance gift a DEBIT
+# at the case), the firstling (firstling_sanctification_commanded, firstling_work_and_shearing_barred; the_firstlings_year a CLOCK DATUM; holy_things_in_the_gates_barred
+# REUSED); the tape 10/10 on its THIRD run (CU5's stale count read from the first run's print; the retype's apostrophes; the scan's ground fixed to exclude the daemon's own writes) (DG1-DG9); the gates chain in three passes (Q17 and the dependency gate's five demands from the first pass, the positions table by four workers, then all green); the register gate DECLARED 98 / DEBT 0 / FAILS 0; the sweep 69/69.
+# UNCOMMITTED since b0eaa56: 13b (the message at <scratch>/commit_msg_ch15b.txt). NEXT on the owner's word: the commit; the push on "push"; chapter 16's reading.
 # ⚠ THE DEUTERONOMY WALK sitting 13 (2026-09-22; step9/DEUTERONOMY_WALK.md "Sitting 13" + "Sitting 13 — AS BUILT"): CHAPTER 15 READ AND FROZEN as ONE unit
 # (deu_15_release_firstborn, the 229th; standing 2259, hash unmoved) — THE ONE CALENDAR by the analogy named in the Hebrew (111:3-8), THE TWO VERSES 15:4 and 15:11
 # UPHELD BY A CONDITION (114:1, 118:1), THE MISHNAH INSIDE THE SPINE FIVE TIMES with HILLEL'S PROZBUL (113:3), THE RECEIPT'S REFERENT POINTING FORWARD to 28:3 (116:1 —
@@ -5,7 +12,7 @@
 # "sanctify" for its value (124:4), "year by year" two days (125:1), the blemish's class (126:1), THE LOAN THAT WEARS MOSES' NAME (15:2, by lemma); the ledger
 # deu_15_reeh_2026-09-22.md (132 sources, every row whole; the heads in verse order, no tail folded in); seven claims seated; the fold +16 on the journal (9804 rows);
 # every gate green; the display layer +168 / +44. TWO RUNS + THE TAIL AS RULED (B1 and B2 in one context on his 260k reading), EVERY STEP TIMED (the machine's
-# share 13 min 16 s of 749 min 12 s). NEXT on the owner's word: the commit (<scratch>/commit_msg_ch15.txt — chapter 15 alone, uncommitted since 049f55c); then 13b —
+# share 13 min 16 s of 749 min 12 s). COMMITTED b0eaa56 on "Commit" (2026-09-22, not pushed; chapter 15 alone, 049f55c..b0eaa56). NEXT on the owner's word: 13b —
 # the compile of chapter 15 (the release an effect with the prozbul a parameter, the poor's ranks, the slave's cases, the awl, the firstling's two-day year; DG the next series).
 # ⚠ THE DEUTERONOMY WALK sitting 12b — CHAPTER 14 COMPILED AND ON THE TAPE (2026-09-22; step9/DEUTERONOMY_WALK.md "Sitting 12b" + the two "THE DOCKET — AS RUN" + "Sitting 12b — AS BUILT"):
 # cold_run_food_tithe.py the 69th runner (78/78 first run), law_food_tithe the 74th daemon; FIVE OWN-DAY LINES, NO MARKER — the sons and the cuttings

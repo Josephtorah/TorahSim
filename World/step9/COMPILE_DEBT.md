@@ -2157,7 +2157,7 @@ follows the last check mark.
 ## DG1, keyed by its first word). NOTHING ELSE IN CHAPTER 14 IS OWED TO A LATER SITTING OF ITS OWN.
 
 
-## SITTING 13 — CHAPTER 15 (2026-09-22, the reading; deu_15_release_firstborn frozen) — OWED TO THE COMPILE 13b: (a) THE RELEASE (15:1-3) — "end" at the year's end
+## SITTING 13 — CHAPTER 15 (2026-09-22, the reading; deu_15_release_firstborn frozen) — PAID AT 13b (the 13b box below, item by item) — OWED WAS: (a) THE RELEASE (15:1-3) — "end" at the year's end
 ## by the analogy with 31:10 (111:1 — I2; 109:3's Booths for the tithe's end), THE ONE CALENDAR — seven years for the whole world, never for each debtor (111:3-8
 ## — I2 named in the Hebrew; Rosh Hashanah 8b-9a): the release-year A DATE PARAMETER read from the world's count (THE RUNNING WORLD'S SABBATICAL COUNT the
 ## measurement owed), the onset after the conquest and the territory in and outside the Land (111:9-11, 112:11, 41:3 — TWO PARAMETERS; Gittin 36a-b the release by
@@ -2201,3 +2201,49 @@ follows the last check mark.
 ## Ketubot 67b; Mishnah Bekhorot 1:1-2, 2:6-9, 3:3-4, 4:1-2, 5:1-6, 6:1-12 with Bekhorot 25a-28b, 26b-27b, 33a-37b, 53b; Mishnah Temurah 3:5; Mishnah Arakhin
 ## 8:7; Mishnah Shekalim 5:6; Mishnah Chullin 2:9; the Sifra on Leviticus 25 credited from its sitting) — EVERY ROW WHOLE; a docket past ~700 rows its own run;
 ## THE COST RULES: two runs + the tail, the chain launched at RUN B's end. NOTHING ELSE IN CHAPTER 15 IS OWED TO A LATER SITTING OF ITS OWN.
+
+## THE SITTING-13 BOX (a)-(o) PAID — (a) THE RELEASE — F1 the_release: THE LINE release_law_declared writing debt_release_owed (a STATUS — 'end' at the year's end by the
+## analogy with 31:10, THE ONE CALENDAR for the whole world; the release-year A CLOCK DATUM the_release_date in the_removal_date's form; the onset and the territory TWO
+## PARAMETERS; the manner said; loans only, the pledge-loan not released, HILLEL'S PROZBUL A PARAMETER FROM THE ANSWER SHEET, the witnesses), exaction_barred (a BLOCK — the
+## exaction a prohibition, the neighbor and the brother two exclusions, the foreigner a positive command); the two years' powers by I1 with Leviticus 25 by CALL (yovel,
+## calendar); THE RUNNING WORLD'S SABBATICAL COUNT measured — the bare world has no count era ('no count' — the clock's method prints and exits; asked for before the call);
+## (b) THE NEEDY AND THE BLESSING — F2: THE TWO VERSES UPHELD BY A CONDITION (I13 without its third verse) — a STATE ROW 15:4 with the blessing's arm and the default
+## (no write); blessings_for_hearing REUSED at 15:5 (the conditional heaven entry, 11:13 by CALL); THE RECEIPT'S REFERENT FORWARD 15:6 -> 28:3 THE READBACK'S H POINTER
+## ROW (the gate's pointer filed OWED, link hypothesis, under 10b's debt line); lend not borrow, rule not be ruled; the register's two near misses a DATA row; (c) THE HAND
+## OPENED — F3 the_hand_opened: THE LINE hand_opening_commanded (the kind and the effect one name) writing hand_opening_commanded (a STATUS), hand_shutting_barred and
+## base_thought_barred (BLOCKS — 'base' without a yoke by the analogy with 13:14, the seducers' Belial cell by CALL, the transfer taught by the Sifrei 117:3), work_of_the_
+## hand_blessed (HEAVEN), cry_heard and bears_sin REUSED (the cry a hastener, the sin unconditional — ordinances' loan by CALL); THE RANKS OF THE POOR a PRECEDENCE
+## PARAMETER, the heart before the hand, the gift dressed as a loan, THE PLEDGE A DISPUTE (two arms), THE MEASURE OF NEED (the horse and the slave, the wife), the secret
+## gift, the four grades, the three measures; 14:28-29's four at the gate by CALL (food_tithe); (d) THE HEBREW SLAVE — F4 the_hebrew_slave: THE LINE hebrew_slave_law_
+## declared writing furnishing_commanded (a STATUS), empty_sending_barred (a BLOCK), work_of_the_hand_blessed again; THE THREE CASES each twin law its own (mishpatim's F1
+## TABLE read as data — PARAMETER; Leviticus 25:39 by yovel; the maidservant's exits by mishpatim_3, the released by mishpatim_2), the exits TWO TABLES, the gift's measure
+## a dispute, the severance gift's price by the erection's own value (five selas — severance_gift_owed a DEBIT at the case), BY DAY THEY PIERCE a time datum, 5:15 by
+## covenant_at_horeb; (e) THE AWL — F5 the_awl_and_the_double_hire: the two sayings and times, illness bars, the tool A DISPUTE, the upper right ear by the analogy with
+## the leper's (metzora's eighth-day members by CALL — the transfer taught by the Sifrei 122:5-6 and Kiddushin 15a), 'FOR EVER' the master's lifetime (serves_for_ever a
+## STATUS at the case), R. ISHMAEL'S THREE CIRCUMVENTIONS a DATA row; (f) THE DOUBLE HIRE — the night's service a dispute of two spines, the blessing beside every money
+## loss (the second work_of_the_hand_blessed); (g) THE FIRSTLING — F6 the_firstling: THE LINE firstling_law_declared writing firstling_sanctification_commanded (a STATUS
+## — 'SANCTIFY' FOR ITS VALUE, NEVER FOR THE ALTAR: temurah's value consecration by CALL, consecrated_firstborn at the case), firstling_work_and_shearing_barred (a BLOCK),
+## holy_things_in_the_gates_barred REUSED (place_name's profane slaughter thrice by CALL); the caesarean out, the refuted a fortiori, 'your' and the two files disputes,
+## 'YEAR BY YEAR' TWO DAYS ACROSS THE YEAR'S EDGE — the_firstlings_year A CLOCK DATUM (354 days by the clock's own count, read from the print); korach's Numbers 18:15-18
+## by CALL (the pesach runner's firstborn VIA korach — the gate's row); (h) THE BLEMISH AND THE BLOOD — F7 the_blemish_and_the_blood: the class visible and permanent by
+## I8 (priesthood's Leviticus 22 list by CALL), the permanent blemish lent to all the consecrated by I2, drinking is eating, the witnesses' warning gating the penalty, THE
+## OLIVE a quantity, the ground not the pit, the neck and the seeds; sanctions' blood ban and place_name's blood and gates by CALL; (i) THE EFFECTS — twelve NEW (debt_
+## release_owed, hand_opening_commanded, furnishing_commanded, serves_for_ever, firstling_sanctification_commanded statuses; exaction_barred, hand_shutting_barred, base_
+## thought_barred, empty_sending_barred, firstling_work_and_shearing_barred blocks; work_of_the_hand_blessed heaven; severance_gift_owed debit), FOUR REUSED (rows
+## amended); (j) THE KIN BY CALL — twenty-one runners (nineteen reference, two transfers taught); (k) NEVER READ AHEAD — 16:5, 16:12-13, 17:1, 17:18, 21:3, 23:17-22,
+## 24:14-22, 26:12-19, 28:1-12, 29:12, 31:10 wait for their sittings; (l) THE REGISTER's DATA rows — singular end to end, the one narrative verb 15:15 (the verse no docket
+## row cites — computed), the four number verses and the ordinal, the homograph of Moses' name at 15:2 by lemma, the two near misses; (m) THE AS-MEASURED NOTE — chapter
+## 14's Aramaic counts re-measured through NFKC: 0 presentation-form code points in 956 rows, 0 of 27 literals moving, 0 verses differing — THE COUNTS
+## STAND, sitting 13's lesson 4 corrected (the rider in the map, the CORRECTION row on the reading's ledger); (n) THE CHECKPOINT SERIES — DG1-DG9 the seventh name;
+## (o) THE DOCKET — 974 rows in three runs (814 read whole here, 160 carried), the writer derived from 12b's, the crowns the cells' rows.
+## OWED FROM 13b: (i) THE FAST CHECKER'S CELLS' DRY-RUN (12b's owed item — still owed); (ii) THE SEATS AHEAD — 16:5 and 16:12-13 (the feasts' rejoicing and the slave's
+## remembrance), 17:1's blemish (147:3-4 by CALL when it comes), 17:18's writing, 21:3's heifer 'not worked' (the firstling's twin), 23:17-22's vows and the foreigner, 24:14-22's
+## hire and pledge (279:4 at 24:15), 26:12-19, 28:1-12 (THE RECEIPT'S REFERENT — the H pointer row 15:6 -> 28:3 RESOLVED at 28:3's sitting: the gate's OWED pointer paid
+## there), 29:12, 31:10's seven years; (iii) THE COUNT ERA — the sabbatical and jubilee counts begin at the entry (no marker before it): the release-year's arithmetic by
+## CALL once the count is set — a measurement at the conquest's sitting; (iv) THE SCAN'S GROUND as a form — every runner's import-time scan of the one database excludes
+## its own daemon's writes (13b's lesson 2; the earlier runners' scans held only because their reuses stood on Israel already — a gate sitting may fold the exclusion into
+## them); (v) THE GREP'S LINES WHOLE — the design's count-seat grep prints its lines uncut (13b's lesson 1; two seats found by runs this sitting); (vi) THE RECEIPT'S
+## THIRD AND FOURTH SHAPES, THE SUPPLIED FORMS, THE CALF'S DAY MARKER, THE REGISTRY'S HOMOGRAPHS (none matched this sitting; the census's two filed), THE INSTALL
+## HYPOTHESIS, THE ERAS TABLE'S MERGE, THE CHAIN'S POSITIONS STEP AT FOUR WORKERS (the eight-worker step skipped and the table measured by four outside the chain again)
+## — on the owner's word; (vii) FOLIO RANGES AT THE SEGMENT GRAIN from chapter 16's design on (13b's docket lesson); (viii) THE CHECKPOINT SERIES continues (DG the seventh
+## name — DG9 the last; the next DH1, keyed by its first word). NOTHING ELSE IN CHAPTER 15 IS OWED TO A LATER SITTING OF ITS OWN.

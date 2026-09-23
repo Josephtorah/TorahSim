@@ -4643,6 +4643,18 @@ the firstling's two-day year on the clock — or the ten-commandments schema fir
 
 
 
+
+**Deuteronomy 15 compiled (2026-09-23, sitting 13b — the two-run rule's eighth compile sitting, the docket in three runs):** four laws at the chapter's own day, no
+marker — the release of debts at the seventh year's end (one calendar for the whole world; the release-year a clock datum on the calendar's own key, read by call from
+the jubilee engine once the count is set — the bare world has no count yet, and the machine says so instead of guessing), the hand opened to the poor (the ranks of the
+poor a parameter, the pledge a dispute in two arms, the cry and the sin second entries on Israel), the Hebrew slave's release with his furnishing (the term clock read
+from Exodus 21's own table; the severance gift priced by the value the erection already fixed), and the firstling sanctified for its value, never for the altar, with
+its year of two days across the year's edge. Two verses that seem to contradict — 'there shall be no needy' and 'the needy shall never cease' — are a condition, not a
+third verse, and the machine keeps them as a state row with two arms. One receipt points forward to a verse the book has not yet spoken (28:3); it is a labeled
+hypothesis until that chapter is compiled, and the dependency gate files it as owed. Four laws were second entries on Israel's ledger; the grep found eight old counts
+of one, and the runs found two more the grep had listed but cut short — the lesson of the whole row, now for greps. The exam has eighty-two persons. The runner
+91/91 on its first run; the tape 10/10 on its THIRD run (CU5's stale count read from the first run's print; the retype's apostrophes; the scan's ground fixed to exclude the daemon's own writes); the gates chain in three passes (Q17 and the dependency gate's five demands from the first pass, the positions table by four workers, then all green). Every step timed: 4326 machine seconds over 82 steps for the compile.
+
 ## Step 6 — Publish
 Export, parity check against the public repo, deploy. Owner's word.
 

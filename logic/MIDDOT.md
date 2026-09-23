@@ -2065,6 +2065,8 @@ narrative strength. By cluster:
     (125:1); the year passed no bar (106:5); drinking is eating, the warning, the olive, the ground, the neck, the seeds (126:2-6); one dish
     and the heave-offering (71:7-8); Moses' one alms (355:9).
 
+- THE CHAPTER-15 COMPILE (THE DEUTERONOMY WALK sitting 13b RUN B, 2026-09-23; cold_run_release_firstborn.py — the docket's rules carried into the cells; every code checked in this file before typed; the codes' seats counted in the runner's own source, never recited): I2 gezerah shavah (verbal analogy) the chapter's spine — the release's 'end' with 31:10's (the Sifrei 111:1, F1 the_release), the one calendar named in the Hebrew (111:3-8), 'base' with 13:14's (117:1-3, F3 the_hand_opened — the transfer taught, the seducers' cell by CALL), the upper right ear with the leper's (122:5-6, F5 the_awl_and_the_double_hire — metzora by CALL), the son not the daughter from 'his' (122:8, F4 the_hebrew_slave), the permanent blemish lent to all the consecrated (71:6, F7 the_blemish_and_the_blood), the firstling's seats (F6) — seven cells and the readback; I1 qal wa-chomer (a fortiori) at the two years' powers (112:2-4, F1) and the consecrated by the refuted argument (124:3, F6 — the refutation the verdict); I6 kelal u-frat u-kelal (general, particular, general) at the gift's kind (119:1-4, F4 — only what resembles the particular, the feature a dispute) and the tool of the piercing (122:1, F5), the blemish's class (F7); I8 (a particular singled out teaches about its general) — lame and blind the particulars that teach the class visible and permanent (126:1, F7); I13 (two verses stand until a third) at 15:4 against 15:11 — UPHELD BY A CONDITION, NOT A THIRD VERSE (114:1, 118:1, F2 the_needy_and_the_blessing — the state row); E30 notarikon (a word read as an abbreviation) at 'base' (117:1-3, F3 — the shelf's reading recorded as data beside the I2 transfer); the disputes as PARAMETERS (the pledge's two arms, the gift's measure four opinions, the tool, 'your' two ways, the two files, the night's service of two spines) and the two clock data (the_release_date, the_firstlings_year — 354 days by the clock's count) — every arm a docket row, read as data, never a constant.
+
 ## Exodus block campaign — owner's word "Do 3")
 
 The campaign's exam rounds banked RULES-ABOUT-RULES on the corpus's
@@ -2560,3 +2562,38 @@ Eduyot 3:2; Maaser Sheni 1:2 the possession clause), the_carcass_table (Pesachim
 (Rosh Hashanah 8a:8 the cattle arm; 12a:6; 13a:3 the first third), the bald spot's measure (Makkot 20b:2-3), the sonship (Kiddushin 36a:11-12), the factions
 rule's two values (Yevamot 14a:6-7), the first tithe's recipient (Yevamot 86a:1, 86a:14). THE DO-NOT-READ FORM — no code, named: Shabbat 119a:6 ("tithe so that
 you grow wealthy"); Chullin 60a:9 (outside). THE TWO-VERSES-AS-ONE RULE — not among the thirteen, named: Chullin 61b:3-4 (the peres and the ozniyya).
+
+### THE DEUTERONOMY WALK 13b — THE DOCKET OF CHAPTER 15 (2026-09-23, three runs; logic/oral_triage/deu_15_reeh_exam_2026-09-23.md, 974 rows — 160 carried, 814 read whole here)
+Every code checked in this file's tables before it was typed. I1 (the a fortiori): Kiddushin 15b:2 — Rabbi's a fortiori (the gentile's slave, redeemable by
+relatives, surely freed by six years too) refuted by "by any of these" (Leviticus 25:54); Kiddushin 16a:14 — Reish Lakish's father's-death exit for the
+maidservant from the signs, REFUTED at 16b:10 (the signs change her body, the death does not — the refutation's form); Bava Kamma 87b:6, Ketubot 43a:11, 58b:7 —
+the equal board of 15:16 ("with you") carried to the daughter and the wife; Kiddushin 20b:20 (outside — the consecrator's field). I2 (the verbal analogy):
+Kiddushin 14b:7, 20a:12, Arakhin 30a:19 — "hired worker" / "hired worker" (Leviticus 25:40, 25:53 / 15:18): the self-seller, the court's sale and the gentile's
+sale one law — the acquisition by money, the redemption's lower price; the teacher who rejects it Rabbi (15a:23-15b:4); Kiddushin 17a:7 — "empty" / "empty"
+(15:13 / Exodus 34:20): R. Meir's five sela; 17a:9 — the rival "empty" with the pilgrimage's (16:16) refused by "of that with which … blessed you"; 17a:10,
+17a:13 — "giving" / "giving" with the gored slave's thirty (Exodus 21:32) and with the valuations' fifty (Leviticus 27:23); 17a:14 — "poverty" / "poverty"
+(Leviticus 27:8 / 25:39) choosing the valuations; Kiddushin 15a:1-2 — "ear" / "ear" with the leper's right ear (Leviticus 14:14): THE DESIGN'S LABELED TRANSFER
+AT ITS BAVLI SEAT; 20b:8 — "his redemption" / "his redemption" (Leviticus 25:52 / 25:26): no partial redemption; Arakhin 28b:7 — 111:1's "end" with 31:10 (the
+sabbatical abrogates at its end); Arakhin 29a:18 — "well" / "well" (15:16 / Leviticus 25:50): the Hebrew slave's institution tied to the jubilee; Chullin
+136b:18 — "flock" / "flock" proposed for the torn; 137a:4 — "shearing" / "shearing": the ox not shorn either; Niddah 40a:14 — "birth" / "birth" (Leviticus
+22:27 / 15:19): the caesarean out; Rosh Hashanah 8b:7 — "year" / "year": the sabbatical's year from Deuteronomy's. I6 (general-particular-general): Bekhorot
+37a:16-18 — "any blemish", "lameness or blindness", "any ill blemish": THE BLEMISH CLASS EXPOSED AND NOT REGENERATING (the design's I8 retyped I6 at the types —
+the Bavli's own form; 37b:5 the particulars' own choice, I8's ground); Kiddushin 21b:8, 21b:6 — Rabbi's "you shall take", "the awl", "through his ear and into
+the door": METAL; Kiddushin 17a:16 — "flock, threshing floor, winepress" the paradigm of the category of blessing (119:4's shape). THE AMPLIFICATION-RESTRICTION —
+the rival method, no code, named: Kiddushin 21b:9 (R. Yosei son of R. Yehuda: anything but a corrosive), Bekhorot 37a:20. E28 (from the preceding): Kiddushin
+15b:8 — R. Yosei HaGelili reads Leviticus 25:49's three redemptions by the verse preceding, R. Akiva by the verse following. THE JUXTAPOSITIONS — no code,
+named: Kiddushin 14b:5 (the Hebrew man beside the Hebrew woman, 15:12 — the modes of acquisition), 14b:8 ("AND if a stranger" — the self-seller beside the
+gentile's sale), 16a:2 ("if he takes another wife" — the maidservant beside a betrothed woman: the document), 19a:10, 19a:12 ("who did not designate her, then
+he shall let her be redeemed" — the designation's timing), Bekhorot 26b:11-12 (Exodus 22:28-29 — the tending term's thirty and fifty; 26b:15 "the interpretation
+of the verse was given only to the Sages"). THE DISPUTES AS PARAMETERS — named: the_severance_gift (Kiddushin 17a:5-14 — fifteen, thirty, fifty),
+the_gift_feature (17a:16-17b:1; Bava Metzia 31b:9-10), the_awl_tool (Kiddushin 21b:5-11; Bekhorot 37b:10-11, 51a:15; Shevuot 4b:11), the_ear (Kiddushin
+15a:1-2, 21b:7, 22b:2; Bekhorot 37b:12-13), the_three_cases (Kiddushin 14b:3-12; Bava Metzia 71a:10), the_exits_tables (Kiddushin 14b:2, 16a:10-16b:6, 17b:10,
+18a:5), the_for_ever (Kiddushin 15a:17-22, 21b:4; Arakhin 29a:18; Bava Metzia 71a:14), the_awl_timing (Kiddushin 15a:4-5, 22a:3-6), the_double_hire
+(Kiddushin 15a:11-12), the_release_object (Mishnah Sheviit 10:1-2; Makkot 3a:15; Shevuot 49a:2; Bava Batra 145b:2; Gittin 30a:16), the_prozbul (Gittin
+36a:11-13, 37a:1; Mishnah Sheviit 10:3-4), the_release_territory (Gittin 36a:13-14; Kiddushin 38b:1, 38b:4; Tosefta Kiddushin 1:10; Arakhin 32b:15),
+the_release_date (Arakhin 28b:7, 32b:18; Rosh Hashanah 8b:7; Mishnah Sheviit 10:2; Tosefta Sheviit 8:11), the_release_onset (Arakhin 32b:5, 32b:10),
+the_measure_of_need (Ketubot 67b:2-15), the_needy_ranks (Bava Metzia 31b:7, 71a:3-4), the_blemish_class (Bekhorot 36b:9-16, 37a:16, 39a:15; Mishnah Bekhorot
+5:3, 5:5), the_caesarean (Niddah 40a:14; Bekhorot 42a:11; Mishnah Bekhorot 2:9; Tosefta Bekhorot 3:2), the_firstlings_year (Bekhorot 26b:9, 27b:3-4; Temurah
+21b:9), the_sanctify_for_value (Arakhin 29a:20; Nazir 4b:11). THE DISAGREES ROWS RESOLVED AS DATA: 15:17's maidservant against Exodus 21:7 (Kiddushin 15a:3,
+15a:5, 15a:18 — she is never pierced; "likewise" reaches the gift, 17b:10-12); 15:19's "sanctify" against Leviticus 27:26 (Arakhin 29a:20; Nazir 4b:11 — for its
+value, never for the altar).
