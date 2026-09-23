@@ -4614,6 +4614,34 @@ known clean (the Sages' teaching in three layers — the code/data separation la
 when the tithes' year begins (Tishri 1 with the first third). The rejoicing and the Levite's bar are second entries on Israel, not new laws, and the grep found the two
 old counts of one. The readback's forms held with no new form — twenty-nine rows, one per verse, eight supplied. The exam has seventy-one persons. The runner
 78/78 on its first run; the tape 10/10 on its first run — df1-df9 match, the run tuple (1332, 96, 88, 0, 12, 1641, 45, 319, the four pairs, 127) and the rest as the design's arithmetic wrote them, dd2's retype match; checkpoint_check.py --all 307 rows, 18 miss (the eighteen known), 0 raised; the gates chain the gates chain three times — the first pass (494 s, launched at run b's end, its summary read once when the harness notified) stopped at one gate with two demands: the dependency gate — the live registration edge sequence -> food_tithe (the design's own note: filed link none, 11b's form) and a homograph (the token census matched 'portion and inheritance' at 14:27 and 14:29 to the family runner's inheritance law — filed false with its why: the levite's land portion, korach and second_tablets by call; 7b's precedent at 9:26, 9:29); the tape, the probes (readback 39/39), the daemon gate, the build, the journal gate and the register gate --strict (declared 98, debt 0, fails 0 — no seat in chapter 14) passed on the first pass; both demands filed by patch_tail_ch14b.py (its own count tripped once — yaml reads the bare false as a boolean); the second pass --from dependency green through the dependency gate (689 edges), the build, the journal gate (291 s) and the register gate, and killed at the positions table (eight workers, each the whole tape) by the session's memory watchdog — 7b's, 8b's, 10b's and 11b's precedent, not the machine's own gate; the positions table then measured by four workers with the step's own command outside the chain (307 checkpoints over 174 pauses in 449 s, 59 at pause 0, the last fall at pause 173 — deut 14:28, df1-df9 in the table); the third pass --from checkpoint all green (checkpoint 7/7, the journal stamped, the sweep 68/68 in 474 s, the journal unmoved). Every step timed: 2629 machine seconds over 55 steps for the compile.
+DEUTERONOMY — SITTING 13 — CHAPTER 15, Deuteronomy 15:1-23 (2026-09-22, on Brian's "Go" after chapter 14's compile; World/step9/DEUTERONOMY_WALK.md "Sitting 13" and
+"Sitting 13 — AS BUILT"; the reading took two runs to two clean points and a tail, as the rule now says). Chapter 15 is the seventh-year release, the poor, the
+Hebrew slave and the firstling. Every seventh year, every lender lets go of what he lent to his brother — but not to the foreigner. There will be no poor among
+you, says one verse; the poor will never cease, says another eight verses later. Do not harden your heart or shut your hand: open it, lend him enough for his
+need, and do not let the thought "the seventh year is near" make you refuse — if he cries to the LORD it is a sin in you; give, and the LORD will bless you. A
+Hebrew man or woman sold to you serves six years and goes free in the seventh, and you do not send him away empty — load him from your flock, your floor and
+your press, because you were a slave in Egypt. If he wants to stay, you take an awl and put it through his ear into the door and he serves for good; and it
+should not seem hard to you, because he served double a hired man's worth. Every firstborn male of your herd and flock is holy: no work, no shearing; eat it
+before the LORD every year at the place He chooses — unless it has a blemish, lame or blind, in which case you eat it at home like any deer, pouring the blood
+out like water. The tradition does most of its work on the calendar and the poor. It settles that the seventh year is one year for the whole world, not seven
+years counted from each loan, by an argument the text itself names as an analogy; it takes the two verses about the poor and makes them a condition — when you
+do God's will the poor are among the other nations, when you do not they are among you; it ranks the poor (your own brother first, your own town first, the
+beggar who goes door to door owed nothing from the fund); it reads "enough for his need" as even a horse and a servant if that is what he had; and it records
+Hillel's workaround, the prozbul, by which a lender hands his debts to the court so the seventh year does not cancel them — written right into the commentary
+because people had stopped lending. On the slave, it reads the three versions of the law (Exodus, Leviticus, here) as three cases, and decides that "do
+likewise to your maidservant" reaches the parting gift but not the awl. On the firstling it settles that "year by year" means the animal may be eaten across the
+year's edge, on two days. Two things surprised the machine: the commentary answers "as He spoke to you" with a verse from chapter 28 that has not been spoken
+yet, so the machine files it as a guess until we get there; and the word for "the loan" in verse 2 has exactly the letters of Moses' name, so "Moses is never
+named in this chapter" had to be checked by the dictionary entry and not by the letters. Every row of the commentary on the chapter was read whole in both
+languages — ninety-nine rows in sixteen sections, plus ten rows from elsewhere. The chapter is frozen as one unit, the 229th, the world's standing facts up by
+seven as predicted, its hash unmoved, every gate green. The two-run rule held: the first run stopped after the measurements and the design, the second after half
+the rows; you read the counter at 260k and said go on, so the rest of the rows and the ledger ran in the same window; you compacted, and the tail ran on a small
+context — the display fixes, the claims, the seat, the gates in the background while the records were typed. Every step was timed: the machine's own work came
+to 13 min 16 s in a sitting of 749 min 12 s; the rest was the reading and the typing. Next: the commit on your word; then the compile of chapter 15 in two
+runs — the release as an effect on the debts with the prozbul a parameter from the answer sheet, the poor's ranking a parameter, the slave's cases, the awl's rite,
+the firstling's two-day year on the clock — or the ten-commandments schema first, on your word.
+
+
 
 ## Step 6 — Publish
 Export, parity check against the public repo, deploy. Owner's word.

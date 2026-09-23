@@ -1348,3 +1348,33 @@ read once, the demands filed if any, the records, the forms, the message). The c
 the sanctions engine names, the class from the four named by the method the chapter's verse teaches, the exile's arm on the second tithe, the removal's date a clock datum
 on the calendar's own key with the count by call. The lessons in the AS BUILT (eight). Every step timed. Uncommitted since fb797a1: 13b, 14 and 12b; the messages at
 <scratch>/commit_msg_ch14.txt and commit_msg_ch14b.txt.
+
+## §61 — THE DEUTERONOMY WALK sitting 13 (2026-09-22): CHAPTER 15 READ AND FROZEN — the state doc's #206, its NOTE, its addenda 1-3 and the addendum-2 NOTE; the map's "Sitting 13 — CHAPTER 15 … THE DESIGN" and "Sitting 13 — CHAPTER 15 — AS BUILT"; the owner: "Go" (RUN A), "Get ready to compact" and "/context" (517k) at #206, "Reread" and "Go" (RUN B1), "/context" (260k) and "Go" (RUN B2 in the same context), "Get ready to compact" at addendum 2, "Reread" and "Go" (the tail)
+THE READING: Onkelos Deuteronomy 15 whole (23 = 23, the identity); THE SIFREI ON THE CHAPTER A SEVENTH TIME — sixteen piskaot 111-126 with the heads IN VERSE
+ORDER and no tail folded in, 99 rows read whole in both files (2 read before and reread whole, found by computation); ten rows outside the spine by the union
+of both files' citations (6 reread whole; 147:3-4, 279:4, 355:9 fresh), none excluded; the kin credited by name from ten ledgers (Leviticus 25 in three at the
+head); the unit deu_15_release_firstborn the 229th (standing 2259, hash unmoved); the ledger 132 sources (Onkelos MATERIAL 23 / CONTEXT 0; the spine MATERIAL 91 /
+CONTEXT 8; the outside rows MATERIAL 10 / CONTEXT 0); seven claims 7/0 seated at 15:1, 4, 7, 12, 16, 19, 21; the display layer +168 by reference, +44 by gloss;
+every gate green in one chain (ch15_gates.sh, in the background; the manifest, the verifier and the labels census in the foreground before it). THE RUNS: RUN A —
+the measurements (the kin by computation beside the law kin named, the twin laws diffed verse by verse), the ink (3 fell on the first typed pass — every one the
+instrument's shape; 0 on the second), the design, THE CLEAN POINT #206 (517k by his reading, under the cap); RUN B1 — the first half of the rows (63, piskaot
+111-118; Onkelos 15:1-11; four outside rows), the import check (8 cut misses, all the export's defective spellings, retyped), THE CLEAN POINT ADDENDUM 1 TAKEN
+UNCONDITIONALLY; RUN B2 in the same context on his 260k reading — the second half (36, piskaot 119-126; Onkelos 15:12-23; six outside rows), the import check over
+all eight files (1 miss, a vav from the word before), the ledger (the writer fell twice on its own asserts — the Name's bare count and the homograph of Moses'
+name), lint 0, THE CLEAN POINT ADDENDUM 2; the compaction; THE TAIL — the ink's body D (the patch predicted, the counts printed then typed), the patch, the fourth
+pass PATCHED, the manifest with its checks probed first, the seat, the shells with the form's name protected, the fast steps in the foreground, the chain launched
+with the writers typed during its run, the records, the forms, the message. EVERY STEP TIMED: the machine's share 13 min 16 s of 749 min 12 s from 08:35:17 — the table
+in the map's AS BUILT. THE FINDS: THE ONE CALENDAR by the analogy named in the Hebrew (I2) with R. Yose the Galilean's "draws near"; "END" AT THE YEAR'S END and at
+Booths (I2); THE TWO RELEASES BOUND; THE ONSET AND THE TERRITORY TWO PARAMETERS; THE MISHNAH INSIDE THE SPINE FIVE TIMES — the manner the word said, the pledge-loan,
+HILLEL'S PROZBUL WITH ITS TEXT, the chamber of the silent, the two exit tables; THE TWO YEARS' POWERS fenced by two "this" (I1); THE OBJECT loans only; THE TWO
+VERSES UPHELD BY A CONDITION, NOT A THIRD VERSE (I13's question); THE WORDS OF THE SCRIBES; THE RECEIPT'S REFERENT FORWARD — 28:3 a HYPOTHESIS; THE RANKS OF THE
+POOR; THE MEASURE OF NEED; "BASE" WITHOUT A YOKE (E30) AND IDOLATRY (I2); THE CRY NEITHER COMMANDED NOR FORBIDDEN; THE FOUR GRADES OF THE GIVER; THE THREE TWIN
+LAWS EACH A CASE; THE GIFT'S FEATURE A DISPUTE (I6); EGYPT THE MODEL; BY DAY THEY PIERCE; THE AWL ANY TOOL OR METAL AND THE THREE CIRCUMVENTIONS; THE UPPER RIGHT EAR
+(I2); "FOR EVER" THE MASTER'S LIFETIME (I2); "LIKEWISE" THE GIFT NOT THE AWL; THE DOUBLE HIRE AGAINST THE MEKHILTA; "SANCTIFY" FOR ITS VALUE; THE TWO FILES OPPOSITE;
+"YEAR BY YEAR" TWO DAYS; LAME AND BLIND THE CLASS (I8); THE BLOOD'S SIX ROWS; MOSES' ONE ALMS; the register singular end to end; the homograph of Moses' name; the
+parser's four number verses and one ordinal; Onkelos's a son of Israel, the Memra thrice, no Shekhinah at the place. THE LESSONS (twelve, in the map): the
+defective spellings; a count in the prose is not the ink; a name's letters are not the name; the presentation-form letters; the clean point unconditional, the
+compaction his; the receipt's forward pointer; the Mishnah inside the spine; two verses upheld by a condition; the two files and the two spines disagree; the
+three circumventions; the kin by computation; every step timed. OWED TO 13b (COMPILE_DEBT's box (a)-(o)): the release, the needy and the blessing, the hand
+opened, the Hebrew slave, the awl, the double hire, the firstling, the blemish and the blood, the effects, the kin by call, never-read-ahead's cells, the
+register's rows, the as-measured note, the series DG, the docket. The records on the sheet; the forms in World/step9/forms_deuteronomy_walk/ (copy_ch15_forms.py).

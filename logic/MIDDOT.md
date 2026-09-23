@@ -2017,6 +2017,53 @@ narrative strength. By cluster:
     (107:6); the Levite's ladder of four (108:1); one tithe not two (109:5, 109:10-11); the measure half a kav (110:3); who chose whom (312:1).
 
 - THE CHAPTER-14 COMPILE (THE DEUTERONOMY WALK sitting 12b RUN B, 2026-09-22; cold_run_food_tithe.py — the docket's rules carried into the cells; every code checked in this file before typed): I1 qal wa-chomer (a fortiori) at four seats — the four named the exception and the sign the class (the Sifrei 101:10, F2 the_four_closed_by_it), the wall from the lesser holies (106:3, F5 the_wall_two_capacities), the three moneys (107:7, F6 the_three_moneys), the eating of meat in milk from 12:24's clause (76:7 at Chullin 115b, F4 the_benefit_counter_arm); I2 gezerah shavah (verbal analogy) at four — the baldness both ways with the priests' 21:5 ('korcha' (baldness), 96:12; Makkot 20a:12-14; Kiddushin 36a:6-8 — F1 the_baldness_both_ways), the removal's date with 31:10's 'at the end of seven years' (109:1-3, F7 the_removal_date), the rejoicing with 27:7's peace offerings (107:16, F6 the_rejoicing — the seat ahead recorded), the birds' list carried by its head (103:3-4, the readback row 14:12); I3 binyan av (a paradigm) — the four in want by the Levite's paradigm (110:1-2, F7 the_four_in_want), 'seh' (a lamb or kid) the paradigm excluding the hybrid (Bava Kamma 77b:13, F2 the_ten_named); I5 prat u-kelal (particular then general) REFUSED — the ten named closed against it (Chullin 80a:14-16); I6 kelal u-frat u-kelal (general, particular, general) — the class from the four named (107:8-11; Bava Kamma 54b:20; NAZIR 35b:3 THE CHAPTER'S VERSE THE SOURCE OF THE METHOD — F6 the_class_from_the_four; the design's I3 retyped, departure (a)); the juxtaposition named without a code — the House standing from the firstling (106:4, F5 the_house_standing) and the Levite never interrupted from the inheritance (Rosh Hashanah 12b:4-5, F7); the disputes as PARAMETERS (the_birds_signs in three layers, the_carcass_table with the precedence, the_moneys_form with the possession clause) and the clock data as parameters (the_removal_date, the_tithes_new_year with the first third) — every arm a docket row, read as data, never a constant.
+- **THE SIFREI ON DEUTERONOMY'S OWN CASE LAW ON CHAPTER 15 (Deuteronomy 15:1-23; THE DEUTERONOMY WALK sitting 13, 2026-09-22;
+  the ledger logic/oral_triage/deu_15_reeh_2026-09-22.md — THE SPINE ON THE CHAPTER A SEVENTH TIME, sixteen piskaot 111-126 with the heads in
+  verse order and no tail folded in, 99 rows read whole in both files, and ten rows outside the spine; EVERY CODE CHECKED IN
+  MIDDOT.md BEFORE IT WAS TYPED, none relabeled; the census from the ledger's own rows: E30 at 117:1; I1 at 112:3, 112:4, 124:3, 124:6, 71:6; I2 at 111:1, 111:7, 117:3, 122:6, 122:8, 71:6; I3 at 111:3; I6 at 119:4; I8 at 126:1):**
+  · THE VERBAL ANALOGY NAMED IN THE HEBREW (111:7 on 15:1): two paradigms deadlocked — the land's release (seven years for the whole
+    world) against the Hebrew slave (seven for each one), each with a feature the other lacks (the jubilee, the territory) — and the
+    deadlock broken by the row's own words ״שֶׁבַע שָׁנִים״ ״שֶׁבַע שָׁנִים״ לִגְזֵרָה שָׁוָה ("seven years, seven years, for an analogy") — I2
+    (checked): THE ONE CALENDAR, the release-year the world's, never the debtor's; R. Yose the Galilean's "draws near" the second proof
+    (111:8, 117:4); the paradigm's own name at 111:3 (I3, checked — the reasoning from the land's release before the analogy decides).
+  · "END" HERE AND "END" THERE (111:1 on 15:1; 109:3 on 14:28): נֶאֱמַר כָּאן ״קֵץ״ וְנֶאֱמַר לְהַלָּן ("end is said here and end is said there")
+    — the release at the year's end by 31:10's assembly; the tithe's end at Booths by the same word, then 26:12's "finished" picks Passover
+    — I2 (checked at both seats; 109:3 REREAD WHOLE from chapter 14).
+  · "BASE" HERE AND "BASE" THERE (117:3 on 15:9): the base thought is idolatry by 13:14's sons of Belial — I2 (checked; REREAD WHOLE from
+    chapter 13); and "BASE" CUT INTO TWO WORDS (117:1): בְלִיַּעַל בְּלִי עוֹל ("base — without a yoke"): whoever withholds mercy throws off the
+    yoke of Heaven — E30 (checked; the row's own division of the word).
+  · "HIS EAR" HERE AND "HIS EAR" THERE (122:6 on 15:17): the right ear by the leper's (Leviticus 14:14), in its upper part by the priest not
+    blemished (122:5) — I2 (checked); "FOR EVER" HERE AND THERE (122:8 on 15:17): the master's lifetime by Exodus 21:6 — the son not the
+    daughter, the pierced one neither — I2 (checked; the row names the analogy on the word); "YOUR GATES" HERE AND THERE (71:6 on 12:15 for
+    15:22): the permanent blemish lent to all the consecrated after the a fortiori from the firstling is refuted — I2 and I1 (checked;
+    REREAD WHOLE from chapter 12).
+  · THE TWO YEARS' POWERS (112:3 and 112:4 on 15:2): if the release, which frees no slave, releases a loan, the jubilee which frees slaves
+    should release a loan — cancelled by "this is the manner of the release"; if the jubilee, which releases no loan, frees slaves, the
+    seventh year should free slaves — cancelled by "in this year of jubilee" (Leviticus 25:13) — I1 (checked at both seats): two verses'
+    "this" the fence around two a fortiori arguments.
+  · THE A-FORTIORI REFUTED, THEN THE VERSE (124:3 on 15:19; 124:6 on 15:19): the work and the shearing of all the consecrated from the
+    firstling's, refuted, then "every firstling"; the ox's shearing and the flock's work crossed by four arguments — I1 (checked; 124:6
+    THE TWO FILES READ THE CLOSING VERSE OPPOSITE WAYS — a dispute of the two files for the exam).
+  · THE GENERAL, THE PARTICULAR AND THE GENERAL (119:4 on 15:14): "furnish, you shall furnish" — everything; "from your flock, your floor and
+    your press" — only what resembles the particular: fit for a blessing, or bearing young, a dispute on the feature — I6 (checked; the
+    row's shape, not its name).
+  · THE PARTICULARS THAT TEACH THE CLASS (126:1 on 15:21; 147:3-4 on 17:1): as the lame and the blind are blemishes visible and permanent,
+    so every blemish visible and permanent — I8 (checked; the row's own words); and "YOU SHALL SANCTIFY" AGAINST "NO MAN SHALL SANCTIFY"
+    (124:4 on 15:19) — for its value, never for the altar, the firstling singled out to teach the consecrated (Mishnah Arakhin 8:7) — I8's
+    shape, named without a code; the release's object narrowed by "the loan of his hand" to standing debts (112:5-7) — I8's shape.
+  · TWO VERSES UPHELD BY A CONDITION, NOT A THIRD VERSE (114:1 on 15:4; 118:1 on 15:11): "there shall be no needy" and "the needy shall
+    never cease" — when you do the will of the Place the needy are among others, when you do not, among you — I13's question ("how are
+    these two verses upheld") answered without its third verse; named without a code: the compile's state variable.
+  · NAMED WITHOUT A CODE: the two releases bound (111:2); the onset not in the wilderness, the territory in and outside the Land (111:9-11,
+    112:11); the manner the word said (112:1 — Mishnah Sheviit 10:8); the pledge-loan and HILLEL'S PROZBUL (113:2-3 — Sheviit 10:2-4);
+    the words of the scribes (115:1); the receipt's referent forward (116:1 — 28:3); the ranks of the poor (116:4-8); the loan for the
+    ashamed and the pledge dispute (116:13-14); the measure of need (116:15-18); the cry a hastener (117:5; 279:4); the four grades of the
+    giver (117:8); the three measures (118:3); the three twin laws each given a case (118:4); the two exit tables (118:5 — Mishnah
+    Kiddushin 1:2); the son not the heir (118:6); Egypt the model (120:1); by day they pierce (120:2); the slave who stays (121:1-4); the
+    awl any tool or metal and R. Ishmael's three circumventions (122:1); the judges (122:3); "likewise" the gift not the awl (122:9); the
+    double hire the night's service (123:1); the blessing beside the money loss (123:3); the caesarean (124:2); "year by year" two days
+    (125:1); the year passed no bar (106:5); drinking is eating, the warning, the olive, the ground, the neck, the seeds (126:2-6); one dish
+    and the heave-offering (71:7-8); Moses' one alms (355:9).
 
 ## Exodus block campaign — owner's word "Do 3")
 

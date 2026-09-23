@@ -3948,3 +3948,48 @@ read whole here and 220 carried with their ledgers' own verdict lines; its crown
 the two reuses (DD2, Q32 — both retyped before the tape); the classifier's keys read at the source after the print's guessed dict; moadim without a cell for 23:22 called
 through its daemon's branch; the priesthood edge naming 14:1 in its taught_by; the scene matched its prediction on the first pass. THE TIMING TABLE (every step timed — the owner's ask at sitting 10; the machine's seconds per step, the model's reading and writing between them the rest): SITTING 12b (the compile — RUN A, the docket's two runs, RUN B, the tail) 55 timed steps, 2629 machine seconds; the first row 19:38:04, the last 07:08:01; THE SLOWEST OF 12b: T the gates chain, third pass (--from checkpoint: checkpoint, stamp, sweep, unmoved) 563s; B the gates chain, first pass (LAUNCHED at the run's end) 494s; T the positions table by FOUR workers outside the chain (the step's own command) 448s; B callees' facts printed (ch14_callees.py) 249s; A docket scan (the link rows, the ranges sized, the credits) 241s; B the tape, first run 212s; B the recorder (INK_CACHE=0) 207s; B cases generated from the cells' asks 25s. The table itself: <scratch>/ch14b_timing.tsv, copied to the forms folder. The forms in
 World/step9/forms_deuteronomy_walk/.
+
+
+## 2026-09-22 — DEUTERONOMY 15 READ AND FROZEN (THE DEUTERONOMY WALK sitting 13 — a reading sitting under THE COST RULES in TWO RUNS + THE TAIL: the measurements,
+## the ink and the design to #206; the rows in two halves to #206 addenda 1-2 with the ledger — B1 and B2 in one context on the owner's reading; the compaction;
+## the tail; EVERY STEP TIMED): THE ONE CALENDAR; THE TWO VERSES UPHELD BY A CONDITION; THE MISHNAH INSIDE THE SPINE FIVE TIMES WITH HILLEL'S PROZBUL; THE
+## RECEIPT'S REFERENT POINTING FORWARD; THE LOAN THAT WEARS MOSES' NAME; THE EXPORT'S DEFECTIVE SPELLINGS; AND THE PRESENTATION-FORM LETTERS OF THE ARAMAIC
+On the owner's "Go" after 12b's commit (2026-09-22). THE READING: Deuteronomy 15:1-23 with Onkelos whole (the export's 23 rows the DB's 23 — the identity, asserted) and
+THE SIFREI ON DEUTERONOMY ON THE CHAPTER A SEVENTH TIME — sixteen piskaot 111-126 whose heads climb in verse order (seven verses without a head), no tail folded in
+(both ends checked on the consonants), 99 rows read whole in both files (2 read before — the base thought at chapter 13, the wife by "for him" at Genesis 2 —
+and reread whole, found by computation), ten rows outside the spine by the union of both files' citations read whole (6 reread whole — 41:3 from chapter 11,
+71:6-8 from chapter 12, 106:5 from chapters 12 and 14 for its third read, 109:3 from chapter 14; 147:3-4, 279:4, 355:9 fresh), none excluded; the kin credited by
+name from ten ledgers (Leviticus 25 in three, 22:17-27, 21:16-23, 27:26; Numbers 18:15-18; Deuteronomy 12:6-24, 14:28-29, 5:15); NEVER READ AHEAD — no Onkelos row of
+Deuteronomy 16-34 or the Prophets in any ledger (asserted; Jeremiah 34 the run's case). FROZEN as ONE unit deu_15_release_firstborn (the 229th; no portion edge
+inside it; standing 2259 = 2252 + 7 as predicted, hash unmoved); the ledger deu_15_reeh_2026-09-22.md (132 sources — Onkelos 23: MATERIAL 23 / CONTEXT 0; the spine
+99: MATERIAL 91 / CONTEXT 8; the outside rows 10: MATERIAL 10 / CONTEXT 0; coverage computed, lint 0, no cut missed); seven claims DV15-01..07 verified 7/0,
+seated as seven WITNESS_READ at 15:1, 4, 7, 12, 16, 19, 21; the ritual 13 PASS; the fold +16 on the journal; the display layer +168 by reference and +44 by gloss
+("release" for "remission", "the-loan-of" for "debt", "the-foreigner" for "the-strange", "needy" for "destitute", "shut", "free", "empty", "and-into-the-door",
+"a-hireling", "blemish" for "stain", "saying" for "to-say"). THE FINDS: THE ONE CALENDAR — two paradigms deadlocked by two features and broken by the analogy
+named in the Hebrew, "seven years, seven years" (111:3-7 — I2), R. Yose the Galilean's "draws near" the second proof (111:8, 117:4): the release-year the
+world's, never the debtor's; "END" AT THE YEAR'S END with 31:10 and at Booths with 14:28 (111:1, 109:3 — I2); THE TWO RELEASES BOUND (111:2); THE ONSET AND THE
+TERRITORY TWO PARAMETERS (111:9-11, 112:11, 41:3); THE MISHNAH INSIDE THE SPINE FIVE TIMES — the creditor's word "I release it" (112:1 — Sheviit 10:8), the
+pledge-loan (113:2 — Sheviit 10:2), HILLEL'S PROZBUL WITH ITS TEXT, ordained because the people transgressed 15:9 (113:3 — Sheviit 10:3-4: the law's foreseen
+failure repaired by a procedure the verse leaves open), the chamber of the silent (117:7 — Shekalim 5:6), the two exit tables (118:5 — Kiddushin 1:2); THE TWO
+YEARS' POWERS fenced by two verses' "this" (112:3-4 — I1); THE OBJECT loans only and standing debts (112:5-7); THE TWO VERSES 15:4 AND 15:11 UPHELD BY A CONDITION,
+NOT A THIRD VERSE (114:1, 118:1 — I13's question); THE WORDS OF THE SCRIBES (115:1); THE RECEIPT'S REFERENT SUPPLIED BY THE SHELF AND POINTING FORWARD — 28:3 at
+116:1, a HYPOTHESIS until its sitting; THE RANKS OF THE POOR (116:4-8); THE MEASURE OF NEED — a horse, a slave, a wife (116:15-18); "BASE" WITHOUT A YOKE (117:1 —
+E30) AND IDOLATRY (117:3 — I2); THE CRY NEITHER COMMANDED NOR FORBIDDEN (117:5; 279:4); THE FOUR GRADES OF THE GIVER (117:8); THE THREE TWIN LAWS EACH GIVEN A CASE
+(118:4); THE GIFT — only what resembles the particular, a dispute (119:4 — I6); EGYPT THE MODEL (120:1); BY DAY THEY PIERCE (120:2); THE AWL any tool or metal and
+R. ISHMAEL'S THREE CIRCUMVENTIONS (122:1); THE UPPER RIGHT EAR (122:5-6 — I2); "FOR EVER" THE MASTER'S LIFETIME (122:8 — I2); "LIKEWISE" THE GIFT NOT THE AWL
+(122:9); THE DOUBLE HIRE THE NIGHT'S SERVICE AGAINST THE MEKHILTA (123:1); "SANCTIFY" FOR ITS VALUE, NEVER FOR THE ALTAR (124:4 — Arakhin 8:7); THE TWO FILES
+OPPOSITE AT 124:6; "YEAR BY YEAR" TWO DAYS ACROSS THE YEAR'S EDGE (125:1); LAME AND BLIND THE PARTICULARS THAT TEACH THE CLASS (126:1 — I8; 147:3-4); THE BLOOD —
+drinking is eating, the warning, the olive, the ground not the pit, the sectarians, the neck, the seeds (126:2-6); MOSES' ONE ALMS (355:9); THE REGISTER SINGULAR
+FROM END TO END with 15:2 addressing no one, one imperative, eight infinitive absolutes, one narrative verb, the Name 12 bare and 3 with "to"; THE HOMOGRAPH —
+15:2's מַשֵּׁה ("the loan") wears Moses' letters, asserted by lemma; THE PARSER'S four number verses and one ordinal; THE STORE = THE DB; ONKELOS — the master of the
+claim, a son of the nations, the Memra thrice, a son of Israel or a daughter of Israel, set apart, the people of your house, a serving servant, two for one, as
+the flesh of, no Shekhinah at the place. THE COST RULES: RUN A to #206 (517k by his reading), RUN B1 to addendum 1 (the clean point taken unconditionally), RUN B2
+to addendum 2 in the same context on his 260k reading, the compaction, the tail on a small context with the chain in the background and the writers typed
+during its run; EVERY STEP TIMED — the machine's share 13 min 16 s of 749 min 12 s wall time from 08:35:17; the table in the map's AS BUILT. THE CAUTIONS: the
+ink's three first-pass fails all the instrument's; the ledger writer's two fails its own (the design's count, the homograph); nine cut misses — eight the export's
+defective spellings; the Aramaic's presentation-form letters. THE LESSONS (twelve, in the map): the defective spellings; a count in the prose is not the ink; a
+name's letters are not the name; the presentation-form letters; the clean point unconditional, the compaction his; the receipt's forward pointer; the Mishnah
+inside the spine; two verses upheld by a condition; the two files and the two spines disagree; the three circumventions; the kin by computation; every step
+timed. OWED TO 13b: the release as an effect with its parameters and the prozbul from the answer sheet, the needy's precedence, the hand opened with the pledge
+dispute and the measure of need, the Hebrew slave's three cases and the gift, the awl's rite, the double hire, the firstling's year of two days, the blemish's
+class, the blood by call, the effects, the kin by call, never-read-ahead's cells, the register's rows, the series DG, the docket.

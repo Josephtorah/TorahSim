@@ -1,3 +1,12 @@
+# ⚠ THE DEUTERONOMY WALK sitting 13 (2026-09-22; step9/DEUTERONOMY_WALK.md "Sitting 13" + "Sitting 13 — AS BUILT"): CHAPTER 15 READ AND FROZEN as ONE unit
+# (deu_15_release_firstborn, the 229th; standing 2259, hash unmoved) — THE ONE CALENDAR by the analogy named in the Hebrew (111:3-8), THE TWO VERSES 15:4 and 15:11
+# UPHELD BY A CONDITION (114:1, 118:1), THE MISHNAH INSIDE THE SPINE FIVE TIMES with HILLEL'S PROZBUL (113:3), THE RECEIPT'S REFERENT POINTING FORWARD to 28:3 (116:1 —
+# a HYPOTHESIS), the ranks of the poor (116:4-8), the three twin laws each a case (118:4), the awl's rite (122), the double hire against the Mekhilta (123:1),
+# "sanctify" for its value (124:4), "year by year" two days (125:1), the blemish's class (126:1), THE LOAN THAT WEARS MOSES' NAME (15:2, by lemma); the ledger
+# deu_15_reeh_2026-09-22.md (132 sources, every row whole; the heads in verse order, no tail folded in); seven claims seated; the fold +16 on the journal (9804 rows);
+# every gate green; the display layer +168 / +44. TWO RUNS + THE TAIL AS RULED (B1 and B2 in one context on his 260k reading), EVERY STEP TIMED (the machine's
+# share 13 min 16 s of 749 min 12 s). NEXT on the owner's word: the commit (<scratch>/commit_msg_ch15.txt — chapter 15 alone, uncommitted since 049f55c); then 13b —
+# the compile of chapter 15 (the release an effect with the prozbul a parameter, the poor's ranks, the slave's cases, the awl, the firstling's two-day year; DG the next series).
 # ⚠ THE DEUTERONOMY WALK sitting 12b — CHAPTER 14 COMPILED AND ON THE TAPE (2026-09-22; step9/DEUTERONOMY_WALK.md "Sitting 12b" + the two "THE DOCKET — AS RUN" + "Sitting 12b — AS BUILT"):
 # cold_run_food_tithe.py the 69th runner (78/78 first run), law_food_tithe the 74th daemon; FIVE OWN-DAY LINES, NO MARKER — the sons and the cuttings
 # (cuttings_for_the_dead_barred), the food law (abomination_eating_barred over shemini.classify by CALL; the_birds_signs a PARAMETER in three layers), the carcass and

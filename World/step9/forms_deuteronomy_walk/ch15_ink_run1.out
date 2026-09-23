@@ -1,0 +1,13 @@
+  PRINT the exaction verb by tokens (the lemma table collides at 5065): ['1Kgs 20:13', '1Sam 13:6', '1Sam 14:24', '2Kgs 23:35', 'Deut 15:2', 'Deut 15:3', 'Exod 20:21', 'Exod 24:14', 'Gen 33:7', 'Isa 14:4', 'Isa 29:13', 'Isa 50:8', 'Isa 53:7', 'Isa 65:5', 'Job 3:18', 'Job 40:19', 'Lev 21:21', 'Lev 21:23', 'Ps 91:7', 'Zech 9:8']
+  PRINT "howbeit" (the lemma table has no 657 in the Torah): ['2Sam 12:14', 'Amos 6:10', 'Amos 9:8', 'Deut 15:4', 'Gen 47:15', 'Gen 47:16', 'Isa 16:4', 'Isa 29:20', 'Isa 34:12', 'Isa 41:29', 'Isa 45:14', 'Isa 45:6', 'Isa 54:15', 'Isa 5:8', 'Judg 4:9', 'Num 13:28', 'Num 23:13'] | "cease" in the book: [('Deut 15:11', 'יחדל'), ('Deut 23:23', 'תחדל')]
+  PRINT "free" every seat in the Bible (the count): 17 [('1Sam 17:25', 'חפשי'), ('Deut 15:12', 'חפשי'), ('Deut 15:13', 'חפשי'), ('Deut 15:18', 'חפשי'), ('Exod 21:2', 'לחפשי'), ('Exod 21:5', 'חפשי'), ('Exod 21:26', 'לחפשי'), ('Exod 21:27', 'לחפשי'), ('Isa 58:6', 'חפשים'), ('Jer 34:9', 'חפשים'), ('Jer 34:10', 'חפשים'), ('Jer 34:11', 'חפשים'), ('Jer 34:14', 'חפשי'), ('Jer 34:16', 'חפשים'), ('Job 3:19', 'חפשי'), ('Job 39:5', 'חפשי'), ('Ps 88:6', 'חפשי')]
+  PRINT "shear" every seat in the Bible: ['1Sam 25:2', '1Sam 25:4', '1Sam 25:7', '1Sam 25:11', '2Sam 13:23', '2Sam 13:24', 'Deut 15:19', 'Gen 31:19', 'Gen 38:12', 'Gen 38:13', 'Isa 53:7', 'Jer 7:29', 'Job 1:20', 'Mic 1:16', 'Nah 1:12']
+  PRINT "needy" (מסכנא) in the Aramaic — the seats read through NFKC: [(15, 4), (15, 7), (15, 9), (15, 11), (24, 14)] | "as He spoke to you" (די מליל לך): [(12, 20), (15, 6), (26, 18), (29, 12)] | "the Memra" in the chapter: [(15, 5), (15, 9), (15, 11)]
+THE INK OF CHAPTER 15 — every assert above passed; the cuts' misses: []
+3 failing statements
+--- line 231: assert kinrows('lev_25_shemittah_yovel_2026-09-05.md', r'Lev 25:[1-7]\b') == 7 and kinrows('lev_25_redemption_2026-09-05.md', r'Lev 25:3[5-8]\b') == 4 and kinro
+    AssertionError()
+--- line 234: assert sum(kinrows(f, r'Exod 21:(?:[2-9]|1[01])\b') for f in LED) == 0 and sum(kinrows(f, r'Exod 23:1[01]\b') for f in LED) == 0 and sum(kinrows(f, r'Exod 22:2[
+    AssertionError()
+--- line 291: assert SH(D15(19), ('Num', 18, 15)) == 4 and KINC[19][:3] == [('1Chr 2:25', 2, 1), ('1Chr 5:1', 2, 2), ('Deut 28:31', 2, 3)] and P('לא', 'תעבד', 'בבכר', 'שורך')
+    AssertionError()

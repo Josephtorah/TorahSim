@@ -7608,3 +7608,295 @@ two runs, RUN B with the chain launched at its end, THE TAIL — five clean poin
 slave, the firstling (15:19-23 — the firstling from outside the Land, 106:2, by CALL when it comes); on the table: the Decalogue-schema sitting, the SUPPLIED forms,
 the calf's day marker, the registry's homographs, the receipt's third and fourth shapes, THE INSTALL HYPOTHESIS, the eras table's merge, the chain's positions step at
 four workers, the fast checker's cells' dry-run.
+
+
+## Sitting 13 — CHAPTER 15, Deuteronomy 15:1-23 (2026-09-22; the owner: "Go" after the compaction at #205 addendum 5 — chapters 1-14 pushed through 049f55c): the reading and the unit — THE DESIGN, written after the measurements and the ink, before a row is typed; TWO RUNS + THE TAIL under THE COST RULES (the #204 NOTE — sitting 12's lesson 1), every step timed; THE ROWS IN TWO HALVES WITH THE CLEAN POINT BETWEEN THEM UNCONDITIONALLY
+
+THE RUNS (timed step by step in the scratchpad's ch15_timing.tsv; the table in the AS BUILT): RUN A — the rereads (the recovery page, the map's "Sitting 12b …
+AS BUILT", the memory index; the state doc's #205 addendum 5; THE_STEPS' compiler block, Step 2 whole and Step 5's head; the map's "Sitting 12" — the reading's
+newest instance, its design and AS BUILT), the measurements (ch15_dump0.py derived from the forms' ch14_dump0.py by twenty-seven asserted substitutions — the
+derive's own guard tripped twice on legitimate text (the file names printed twice; a slice the form's own) and was relaxed to the form's; the spine split by piska
+with NO tail folded in — piska 110's five rows were read whole at chapter 14 and 126's rows stop before 16:1's words, both checked on the consonants;
+ch15_measure1.py — chapter 14's helpers and register block by substitution, its sections chapter 15's own in two files: THE KIN FOUND BY COMPUTATION beside THE
+LAW KIN NAMED and THE TWIN LAWS diffed verse by verse (Exodus 21:2-7 at 15:12-18; Exodus 23:10-11 and Leviticus 25 at 15:1-11; the firstling's and the blemish's
+seats at 15:19-21; chapter 12's clauses at 15:20-23; the formulas at 15:5, 6, 9, 11, 15), the phrase censuses, the parser, Onkelos's renderings, the brackets, the
+store's gloss families, the prior reads, THE REGISTER'S FINDER — 158,092 bytes of print, read in four pages; its first run fell on its own instrument (a list inside a
+set), retyped), THE INK (ch15_ink.py — the generic helpers COPIED from the forms' ch14_ink.py by content markers, the kin by computation recomputed inside it,
+121 asserts typed from the prints: 3 fell on the FIRST typed pass — every one the INSTRUMENT'S SHAPE, not a fact: a ledger's whole-row count typed where the
+Onkelos-row count was measured, a verse range typed one verse too wide (Exodus 22:24-29 where the ledger holds one row of 22:27-28), the firstling's short form
+בְּכֹר ("firstling", 15:19) typed without its preposition — retyped from the print; 0 on the second), THIS DESIGN, THE CLEAN COMPACTION POINT (#206). RUN B1 —
+THE FIRST HALF of the rows: piskaot 111-118 (63 rows — the release, the needy, the blessing, the hand opened and shut, the base thought, the giving) WHOLE in
+both files, Onkelos 15:1-11, the four outside rows on the first half (109:3 on "the end" — REREAD WHOLE from chapter 14; 41:3 on the commandments before the
+conquest — REREAD WHOLE from chapter 11; 279:4 on the hireling's cry; 355:9 on Moses' righteousness) → the import check → THE CLEAN COMPACTION POINT
+UNCONDITIONALLY. RUN B2 — THE SECOND HALF: piskaot 119-126 (36 rows — the slave's gift, the slave remembered, the awl, the double hire, the firstling, the year,
+the blemish, the blood), Onkelos 15:12-23, the six outside rows on the second half (106:5 the firstling whose year passed — REREAD WHOLE from chapters 12 and 14;
+71:6-8 the blemished consecrated and the unclean and the clean — REREAD WHOLE from chapter 12; 147:3-4 the blemishes) → the import check → the ledger with
+coverage COMPUTED → lint 0 → THE CLEAN COMPACTION POINT. THE TAIL after the compaction: the display patch, the manifest, the seat, the chain LAUNCHED with its
+readers written, the records from the sheet in one call, the forms, the commit message, the timing table.
+
+THE DRAFT: deu_15_release_firstborn 15:1-23 — 23 of 23 verses, missing 0 (computed from the DB's verse table: the export's chapter 15 = the DB's, the identity,
+cost 20; NO fold of the English's numbering), depends_on deu_14_food_tithe (frozen), lev_25_shemittah (frozen — the sabbatical year and the sold brother) and
+exo_21_slave_person (frozen — THE TWIN LAW of the Hebrew slave, the draft's own edge; its reading the law era's, no Onkelos row in any ledger), 30 scenarios and
+27 comment lines (the dump's G print), the claim prefix DV15 absent from every unit and manifest (computed). The chapter the unit, per the ruling CHAPTER
+NUMBERS; NO PORTION EDGE inside it (Re'eh 11:26-16:17 holds it whole): the ledger deu_15_reeh_2026-09-22.md.
+
+THE SPINE ON THE CHAPTER: the Sifrei on Deuteronomy heads SIXTEEN piskaot in chapter 15 (111 on 15:1, 112 on 15:2, 113 on 15:3, 114 on 15:4, 115 on 15:5, 116
+on 15:6, 117 on 15:9, 118 on 15:11, 119 on 15:13, 120 on 15:15, 121 on 15:16, 122 on 15:17, 123 on 15:18, 124 on 15:19, 125 on 15:20, 126 on 15:21; 110 on
+14:29 before, 127 on 16:1 after) — THE HEADS IN VERSE ORDER this chapter (chapter 14's were not); seven verses carry no head (7, 8, 10, 12, 14, 22, 23); 99
+rows in both files (HE = EN at every piska); NO TAIL FOLDED IN (piska 110's rows all on 14:29, read at chapter 14; 126's on 15:21-23 — 126:2 cites 15:23), so
+NINETY-NINE spine rows are read here. The union of both files' citations is 99 rows — 89 inside the spine, TEN outside: 41:3 (on 11:13 — the commandments
+observed only after the conquest; the English cites 15:9) READ BEFORE at chapter 11's sitting; 71:6, 71:7, 71:8 (on 12:15 — the blemished consecrated
+slaughtered only for a permanent blemish, "the unclean and the clean"; the Hebrew and the English cite 15:22) READ BEFORE at chapter 12's; 106:5 (on 14:23 —
+the firstling whose year passed; the Hebrew cites 15:20) READ BEFORE at chapters 12 and 14 — its THIRD read; 109:3 (on 14:28 — "the end" here and at 15:1; the
+English cites 15:1 twice) READ BEFORE at chapter 14's; 147:3 and 147:4 (on 17:1 — the blemishes: scabs, warts, tumors; the English cites 15:21); 279:4 (on
+24:15 — the hireling's cry; the Hebrew cites 15:9); 355:9 (on 33:20 — Moses' righteousness; the Hebrew cites 15:7) — the SIX read before REREAD WHOLE and marked,
+the FOUR fresh; NONE excluded, no interpolation, no "ibid.". The spine rows without a citation in either file: five (111:4, 111:6, 112:2, 116:17, 122:5). THE
+PRIOR READS, computed: two spine rows read before — 117:3 at chapter 13's sitting ("take care" — the row cites 13:4), 116:18 at the Genesis 2 sitting ("a
+helper" — the row cites Genesis 2:18) — each REREAD WHOLE and marked; 884 prior Sifrei rows in the ledgers.
+
+THE KIN, CREDITED BY NAME (the counts computed from the ledgers): THE SABBATICAL AND THE SOLD BROTHER — Leviticus 25 in three ledgers (25:1-7 (7 Onkelos
+rows), 25:35-38 (4), 25:39-55 (17)); THE BLEMISH — Leviticus 22:17-27 (11), the priests' 21:16-23 (8); THE FIRSTLING — Leviticus 27:26 (1), Numbers 18:15-18
+(4); THE PLACE, THE GAZELLE AND THE HART, THE BLOOD — 12:6, 15-18, 22-24 (8) at chapter 12; THE POOR AT THE GATE — 14:28-29 (2) at chapter 14; THE SLAVE
+REMEMBERED — 5:15 (1) at chapter 5; AND NO ONKELOS ROW OF EXODUS 21:2-11, 23:10-11, 22:24-26, 22:29, 13:2-16 OR 34:19-20, NOR OF GENESIS 4:4, IN ANY LEDGER
+(asserted) — Exodus 21's slave, 23's seventh year and 13's firstborn were read in the law era through their spines before the Onkelos standing (the units
+exo_21_slave_person, exo_23_justice_calendar, exo_13_* frozen); NEVER READ AHEAD — no ledger holds an Onkelos row of Deuteronomy 16-26 or of the Prophets
+(asserted): 16:5's "one of your gates", 16:12's slave remembered, 17:1's blemish, 23:17's escaped slave, 23:20-21's interest, 24:10-15's pledge and the
+hireling's cry, 24:18-22's sojourner, 28:12's lending, 31:10's release-year assembly wait for their sittings; Jeremiah 34 (the release of the slaves broken)
+the run's case, never a row.
+
+THE MEASUREMENTS' FINDS (the design's predictions for the rows; every one asserted in the ink): "AT THE END OF SEVEN YEARS" THREE in the Bible — the release,
+the assembly (31:10), JEREMIAH 34:14 (the run's case — the verse that quotes this chapter: 15:12's closest kin in the whole Bible by computation, seven of
+fifteen tokens in order, closer than Exodus 21:2's three); "release" the noun FIVE tokens, all in this book (15:1, 2, 2, 9; 31:10), the verb's nine (Exodus
+23:11's land "let rest"; Uzzah's oxen; Jezebel thrown down); "AND THIS IS THE MANNER OF" — 19:4's manslayer and Solomon's levy the kin; THE CREDITOR'S VERB
+thirteen in the Bible (Exodus 22:24 "as a creditor", 24:10-11's pledge, Elisha's widow, Nehemiah's usurers); "proclaim" with liberty — the jubilee's, Isaiah's,
+Jeremiah's; "THE FOREIGNER" the book's five (14:21's carcass, this exaction, 17:15's king, 23:21's interest, 29:21's visitor); "your brother" seven tokens;
+"THERE SHALL BE NO NEEDY" (15:4) AGAINST "THE NEEDY SHALL NEVER CEASE" (15:11) — three tokens shared in order, the two piskaot 114 and 118 each citing BOTH
+verses (the contradiction the shelf reads); "needy" the Torah's nine tokens, six here; "BLESS, HE WILL BLESS YOU" ONE seat (Abraham's "bless, I will bless you"
+the form's first); "for an inheritance to possess it" 25:19's twin; "IF YOU DILIGENTLY HEARKEN" — 28:1's blessing header (fourteen of seventeen in order),
+Marah's (Exodus 15:26); "which I command you this day" eighteen in the book; "AS HE SPOKE TO YOU" FOUR in the book — 12:20's border, this blessing, 26:18-19,
+29:12: THE RECEIPT'S SHAPE WITHOUT THE NAME, and the finder finds NO receipt here (as at 12:20); "YOU SHALL LEND TO MANY NATIONS" — 28:12 THE TWIN with "lend"
+(לוה) for "pledge" (עבט), 28:44 the curse's reversal, the pledge-verb SIX in the Bible (this chapter's four); "WITHIN ONE OF YOUR GATES" the formula's first
+seat of four (16:5, 17:2, 23:17 ahead) — the parser reads its "one" as [1]; "shut your hand" the verb's ONE seat in the Torah of seven; "harden your heart" —
+Sihon's (2:30) the book's other, Zedekiah's the run's; "OPEN, YOU SHALL OPEN YOUR HAND" TWICE (15:8, 15:11), the Psalm's "You open Your hand" the form's other;
+"sufficient for his need" — "need" the Torah's ONE seat of thirteen (the Levite's host at Gibeah the run's, Judges 19:20; Proverbs' eight); "BEWARE LEST" at
+its sixth seat in the book of nine; "base" the Torah's TWO — 13:14's sons of Belial and this thought; "the year of release" 31:10's twin; "AND IT BE SIN IN
+YOU" THREE in the book — the needy's cry, the vow (23:22), THE HIRELING'S CRY (24:15 — seven tokens in order; 279:4 reads them together); "give, you shall
+give" — Jephthah's vow the form's other; "your heart grieved" — Elkanah's; "because of this thing" ONE seat; "all that you put your hand to" the book's six,
+14:29's blessing the twin; "THEREFORE I COMMAND YOU" FIVE in the book — twice in this chapter ("saying" at 15:11, "this thing today" at 15:15), the refuge, the
+sojourner's justice twice; "your poor" — Hagar's "your affliction" the homograph (Genesis 16:11). THE HEBREW SLAVE: "A HEBREW MAN OR A HEBREW WOMAN" —
+"Hebrew" Abram's first (Genesis 14:13), Exodus 21:2's slave; "the Hebrew woman" bare ONE seat (Jeremiah's with the vav); "be sold" the Torah's seven niphals
+(Leviticus 25's five); "six years" the Torah's four; "FREE" seventeen in the Bible (Exodus 21's four, Jeremiah 34's six, Job's, the Psalm's); "EMPTY" sixteen —
+the exodus's spoil "you shall not go out empty" (Exodus 3:21 — 119:4-5's kin), the festivals' "not empty", Jacob's wage, Ruth; "FURNISH, YOU SHALL FURNISH"
+— the verb's ONE seat in the Torah (the Psalm's "chain" the homograph), and 15:14 has NO KIN BY COMPUTATION (no verse of the Bible shares two of its tokens);
+"your floor and your press" 16:13's Sukkot; "REMEMBER THAT YOU WERE A SLAVE" FIVE in the book — the Sabbath's (5:15 "brought you out", eleven in order), this
+("redeemed you" — the chapter's ONE narrative form, a wayyiqtol; the compile's T1 row), 16:12, 24:18 (the closest, fourteen of seventeen), 24:22; "I WILL NOT
+GO OUT" — Exodus 21:5's slave loves his master, his wife and his children; THIS ONE LOVES YOU AND YOUR HOUSE because it is well with him (23:17's escaped slave
+"where it is good for him" the kin); the first person FOUR — Moses' "I command you" thrice and THE SLAVE'S ONE WORD; "THE AWL" the Bible's TWO seats, the
+boring verb Exodus's alone — HERE NO JUDGES, NO DOORPOST, "into the door", ONE token shared in order with Exodus 21:6; "the door" the Torah's four, "the
+doorpost" the Passover's and the frontlets' — absent here; "servant for ever" in this form ONE seat; "AND ALSO TO YOUR MAIDSERVANT YOU SHALL DO LIKEWISE" against
+Exodus 21:7's "she shall not go out as the menservants do" — what "likewise" reaches the shelf decides (122:8-9); "DOUBLE" the Torah's seven — the manna's,
+Joseph's, 17:18's COPY of this law (the same word); "the hire of a hireling" — Malachi's the other seat; Leviticus 25:40-53's sold brother "as a hireling …
+YEAR BY YEAR". THE FIRSTLING: "firstling" three tokens here of the book's eight; "YOU SHALL SANCTIFY" against Leviticus 27:26's "NO MAN SHALL SANCTIFY IT" —
+the shelf's reconciliation at 124:4; Exodus 13:2's "sanctify to Me", 22:29's seven days with the mother, 34:19's opener of the womb, Numbers 18:17's "you
+shall not redeem, they are holy" — the kin by name, none close by computation; "you shall do no work with the firstling of your ox" — 21:3's heifer the twin;
+"shear" the Torah's one verb seat outside Genesis (Jacob's and Judah's shearings); "YEAR BY YEAR" (שנה בשנה) the Torah's TWO — the firstling eaten and the
+hireling reckoned (Leviticus 25:53; 106:5 the shelf's reading, its third read); THE PLACE FORMULA at its fourth seat in this form, 12:18's clause the closest
+(nine of twelve), "you and your household" 14:26's twin, NO Shekhinah in the Aramaic here (the Hebrew has no "to cause His name to dwell"); Numbers 18:18
+gives the firstling's flesh to the priest — 125:1's question; "LAME OR BLIND, ANY ILL BLEMISH" — 17:1's "any evil thing" the twin ahead (six in order; 147:3-4
+cite them together), the priests' "blind or lame" reversed, Malachi's "lame and sick" the run's; 15:22 IS CHAPTER 12'S CLAUSE — "the unclean and the clean
+alike, as the gazelle and as the hart" at its third seat (12:15, 12:22); "pour it on the earth as water" the third seat of chapter 12's formula (12:16 six of
+nine), Leviticus 17:13's hunted blood COVERED with dust the contrast (126:5-6). THE REGISTER: THE CHAPTER IS SINGULAR FROM END TO END — no plural "you" in
+any verse (chapter 14's food laws were plural), 104 singular morphs, 15:2's creditor-law addressing no one; ONE imperative ("beware", 15:9); EIGHT INFINITIVE
+ABSOLUTES (release, bless, hearken, open, lend, give, open, furnish — the shelf's doublings); the consecutive perfects in seven verses; eight verses open on
+"when/for", ONE "if" (15:5), one "lest", two "or"; sixteen negations in thirteen verses; no divine frame, "saying" twice, no "so that"; the Name thirteen bare
+and three with "to", "the LORD your God" in nine verses, Egypt the one other name — Moses, Israel never named. THE PARSER: FOUR NUMBER VERSES (15:1 [7], 15:12
+[6], 15:18 [6] — the starred "years" tokens; 15:7 [1] "one of your brothers … one of your gates") and ONE ORDINAL (15:9 "the seventh" [7]); the kin's numbers
+Exodus 21:2's six, 23:10's six, Leviticus 25:8's sevens and forty-nine, Jeremiah's seven and six, the firstling's seven days; NO count line by the finder.
+ONKELOS: "the creditor" rendered "THE MASTER OF THE CLAIM", "exact" "claim"; "the foreigner" "a son of the nations" at its four seats; "hearken to the voice"
+"receive THE MEMRA" — the Memra's THREE seats in the chapter (15:5, 9, 11); "lend to many nations" the same Aramaic verb at 28:12 (the twin read as one);
+"base" "in wickedness" (13:14's sons of Belial rendered by the same word); "sin in you" "guilt" at its four; "A HEBREW MAN OR A HEBREW WOMAN" RENDERED "A SON OF
+ISRAEL OR A DAUGHTER OF ISRAEL" (ONE seat in the book); "free" "a son of freedom"; "furnish" "SET APART"; "your house" "the PEOPLE of your house" (the English's
+bracket "[the members of]" at 15:16 and 15:20); "servant for ever" "a SERVING servant"; "double" "TWO FOR ONE"; the floor's Aramaic a homograph of Edrei; "as
+the gazelle and as the hart" "AS THE FLESH OF"; "blemish" at 15:21 and 17:1 alone; no parenthesis; the English's brackets sixteen in eleven verses. THE STORE
+= THE DB (354 = 354; NO KETIV); 189 distinct glosses, 25 already rewritten ("leanness" "only", "and-sever-you" "and-redeemed-you", "like-splendor"
+"as-the-gazelle"); THREE "?" GLOSSES — Moses' "I" (אנכי, "I") at 15:5, 11, 15; THE DISPLAY PATCH predicted from the G print at the tail — "remission" (the
+release), "fling-down" (release), "debt" (the creditor), "drive" (exact), "the-strange" (the foreigner), "destitute" (needy), "cessation" (howbeit), "pawn"
+(lend), "draw-together" (shut), "collar" (furnish), "the-Eberite" (the Hebrew), "exempt" (free), "emptily" (empty), "and-in-something-swinging" (the door),
+"repetition" (double), "man-at-wages" (hireling), "cut-off" (shear), "stain" (blemish), "spill-forth" (pour).
+
+THE CLAIMS (seven, DV15-01..07, one manifest; the spine's rows distributed by piska from the CITE INDEX): 01 THE RELEASE (15:1-3 — Onkelos 1-3, Sifrei 111,
+112, 113, 109:3; the check "a release" at 15:1); 02 THE NEEDY AND THE BLESSING (15:4-6 — Onkelos 4-6, Sifrei 114, 115, 116:1-3; "no needy" at 15:4); 03 THE
+HAND OPENED (15:7-11 — Onkelos 7-11, Sifrei 116:4-18, 117, 118:1-3, 41:3, 279:4, 355:9; "open your hand" at 15:8); 04 THE HEBREW SLAVE (15:12-15 — Onkelos
+12-15, Sifrei 118:4-7, 119, 120; "the Hebrew" at 15:12); 05 THE AWL AND THE DOUBLE HIRE (15:16-18 — Onkelos 16-18, Sifrei 121, 122, 123; "the awl" at 15:17);
+06 THE FIRSTLING (15:19-20 — Onkelos 19-20, Sifrei 124, 125, 106:5; "the firstling" at 15:19); 07 THE BLEMISH AND THE BLOOD (15:21-23 — Onkelos 21-23, Sifrei
+126, 71:6-8, 147:3-4; "a blemish" at 15:21). Seated as seven WITNESS_READ operators at 15:1, 4, 7, 12, 16, 19, 21 with step E. THE FOLD predicted: units 228
+-> 229, standing 2252 -> 2259, the hash 8b8fff1fa28953af unmoved (the law layer moves no narrative fact). THE REGISTER GATE at the reading: no receipt, no
+header, no footer, no count line in chapter 15 (the finder run — 15:6's "as He spoke to you" not a receipt by its forms, 15:2's "this is the manner" not a
+header; the number verses no count lines) — GREEN expected, --strict, DECLARED 98 unmoved.
+
+THE TESTING SHELF routed to 13b's docket (the union rule at the compile): Mishnah Sheviit 10:1-9 with Gittin 36a-37b (the release of debts, Hillel's prozbul,
+the release by decree when the jubilee is not; the loan of the seventh year) and Arakhin 32b-33a (the jubilee's link); Makkot 3b (the witnesses in the release);
+Rosh Hashanah 8b-9a ("the year of release" and the year's start); Mishnah Kiddushin 1:2-3 with Kiddushin 14b-22b (the Hebrew slave and the Hebrew woman — the
+acquisition, the six years, "double the hire of a hireling" 15a, the gift 16b-17b, the awl and the ear that heard at Sinai 22a-b, the maidservant's exemption);
+Bava Metzia 31b (the doubled words — "lend, you shall lend", "give, you shall give", "furnish, you shall furnish") and 71a (Exodus 22:24 — the poor of your city
+first); Mishnah Peah 8:7-9 with Ketubot 67b (the poor's "sufficient for his need" — even a horse and a servant; the giving with a good heart); Mishnah Bekhorot
+1:1-2, 2:6-9, 3:3-4, 4:1-2, 5:1-6, 6:1-12 with Bekhorot 25a-28b (the shearing and the work), 26b-27b (the year "year by year"), 33a-37b (the blemish eaten,
+the expert), 53b (the year); Mishnah Temurah 3:5 (the firstling's offspring); Mishnah Arakhin 8:7 (the sanctifying of the firstling — Leviticus 27:26); Sifra
+Behar credited from its sitting; the Sifrei's own Mishnah citations read at the rows; every row whole; a docket past ~700 rows its own run.
+
+THE ORDER (RUN B1, B2 and the tail): the 99 spine rows WHOLE in both files piska by piska (ch15_spine_p111.txt … p126.txt) — THE FIRST HALF 111-118 (63 rows)
+with Onkelos 15:1-11 and the outside rows 109:3, 41:3, 279:4, 355:9 → ch15_rows_sifrei_111_116.py, ch15_rows_sifrei_117_118.py, ch15_rows_onkelos_a.py
+(15:1-11 typed), ch15_rows_outside_a.py → the import check → THE CLEAN COMPACTION POINT UNCONDITIONALLY (the state doc's #206 addendum 1); THE SECOND HALF
+119-126 (36 rows) with Onkelos 15:12-23 and the outside rows 106:5, 71:6-8, 147:3-4 → ch15_rows_sifrei_119_123.py, ch15_rows_sifrei_124_126.py,
+ch15_rows_onkelos_b.py, ch15_rows_outside_b.py (chapter 14's form; the cuts by consonants SP_) → write_ch15_ledger.py (from the forms' write_ch14_ledger.py — the
+prior reads marked REREAD WHOLE: 117:3, 116:18, 41:3, 71:6-8, 106:5, 109:3) → lint 0, coverage computed (the Sifrei 99 + 10; Onkelos 23; the kin's credits by
+name) → THE CLEAN COMPACTION POINT (#206 addendum 2) → THE TAIL: ch15_patch_overrides.py (by gloss and by reference from the G print; the anchors sitting 12's
+last rows), the ink rerun PATCHED with ch15_ink_body_d.py → write_ch15_manifest.py (seven claims; the check words probed in the store first) → seat_ch15.py
+(seven WITNESS_READ at 15:1, 4, 7, 12, 16, 19, 21; step E) → ch15_gates.sh LAUNCHED in the background (ch15_chain.sh: the seat, verify_text, the ritual;
+ch15_fold.sh: 229 / 2259 / the hash unmoved; build_world; the journal gate; the register gate --strict; large_letter_probes; the home-path gate) with
+write_ch15_records.py and copy_ch15_forms.py written first → the summary read once → the records from the sheet in one call → the forms copied → the commit
+message → the timing table → the report.
+
+
+
+## Sitting 13 — CHAPTER 15 — AS BUILT (2026-09-22; the design above stands as written but for one thing — RUN B1 and RUN B2 ran in ONE context: at B1's clean point the owner read /context at 260k and said "Go" without compacting, his call; the clean point itself was taken unconditionally as the design ruled; RUN A ended at 517k by his reading (under the 600k cap); the owner compacted after A and after B2, and THE TAIL ran on "Reread" and "Go"; every departure from the design is named here; THE TIMING TABLE is the last section)
+
+THE RESULT: Deuteronomy 15:1-23 READ, FROZEN and SEATED as ONE unit — deu_15_release_firstborn (the 229th frozen unit; 23 of 23 verses, missing 0, computed — the
+export's chapter 15 the DB's, the identity; no portion edge inside it): the ledger logic/oral_triage/deu_15_reeh_2026-09-22.md (132 sources — Onkelos 23: MATERIAL 23 /
+CONTEXT 0; THE SIFREI'S SPINE piskaot 111-126, 99 rows: MATERIAL 91 / CONTEXT 8, 2 of them read before and REREAD WHOLE (the prior reads found in the
+earlier ledgers by computation — 117:3 at chapter 13's sitting, 116:18 at the Genesis 2 sitting); the outside rows 10: MATERIAL 10 / CONTEXT 0, 6 of them read
+before and REREAD WHOLE — 41:3 from chapter 11, 71:6-8 from chapter 12, 106:5 from chapters 12 and 14 (its third read), 109:3 from chapter 14; 147:3-4, 279:4 and
+355:9 fresh; 138,321 bytes, lint 0, no cut missed — the writer fell twice on its own asserts before it wrote: the Name's bare count and the homograph of Moses'
+name), the manifest 7 claims DV15-01..07 verified 7/0 (every he_contains cut from the store's own bytes — the seven words' pieces PROBED in the store before
+they were typed, every one over the floor of four code points; every cite index name used by a claim — the spine's rows distributed by piska from the CITE
+INDEX itself, piskaot 116 and 118 split at the rows where they turn to the next verse, the ten outside rows with the claims whose verses they cite), seated as
+seven WITNESS_READ operators at 15:1, 4, 7, 12, 16, 19, 21 with step E; the ritual 13 PASS; verify_text GREEN (23 steps, 7 scenarios); the fold predicted
+and matched (units 228 → 229, standing 2252 → 2259, the hash 8b8fff1fa28953af unmoved — CORPUS TRUTH GREEN before and after the bake: 229 units, 1809 facts,
+341 demands, 191 open); build_world ALL GREEN; the journal gate GREEN (12 kinds, 9804 rows — +16 on the fold layer since 12b's chain, the tape unmoved since
+12b); the register gate --strict GREEN (DECLARED 98, DEBT 0, FAILS 0 — no receipt, no header, no footer in chapter 15: 15:6's "as He spoke to you" not a
+receipt by the finder's forms, 15:2's "this is the manner" not a register header, the four number verses no count lines — as the design predicted);
+large_letter_probes 6/6; the labels census GREEN (3,319 claims in 232 manifests, Deuteronomy 96); the home-path gate GREEN; the display layer +168 by reference and +44 by
+gloss (1421 / 800 in all).
+
+THE READING: every Onkelos row whole in the Aramaic and the English (ch15_onkelos.txt); THE SPINE ON THE CHAPTER A SEVENTH TIME — sixteen piskaot 111-126 heading
+on the chapter's verses IN VERSE ORDER (chapter 14's were not), seven verses without a head (7, 8, 10, 12, 14, 22, 23), NO TAIL FOLDED IN (110's rows all on
+14:29 and read at chapter 14; 126's rows stop before 16:1's words — both ends checked on the consonants), every row read whole in both files
+(ch15_sifrei_spine.txt, split by piska for the reading — ch15_spine_p111.txt … p126.txt); the ten outside rows whole in both files (ch15_sifrei_outside.txt —
+the release after the conquest at 11:13, the permanent blemish and the one dish at 12:15, the firstling's year at 14:23, "the end" at 14:28, the blemishes at
+17:1, the hireling's cry at 24:15, Moses' righteousness at 33:20), none excluded; the kin (Leviticus 25's sabbatical, poor brother and sold brother in three
+ledgers; Leviticus 22:17-27 and 21:16-23; Leviticus 27:26; Numbers 18:15-18; Deuteronomy 12:6, 15-18, 22-24; 14:28-29; 5:15) credited by name with the counts
+computed from ten ledgers; no ledger holds an Onkelos row of Exodus 21:2-11, 23:10-11, 22:24-26, 22:29, 13:2-16 or 34:19-20, of Genesis 4:4, and NONE OF
+DEUTERONOMY 16-34 OR THE PROPHETS (asserted — never read ahead; 16:5's gates, 16:12's slave remembered, 17:1's blemish, 17:18's copy, 23:17's escaped slave,
+23:20-21's interest, 24:10-15's pledge and the hireling's cry, 24:18-22's sojourner, 26:12-19, 28:1-12's blessing and its lending, 29:12, 31:10's release-year
+assembly wait for their own sittings; Jeremiah 34 the run's case, never a row).
+
+THE DEPARTURES FROM THE DESIGN: none in the shape of the runs, seven in the instruments. (1) RUN B1 AND RUN B2 IN ONE CONTEXT — at B1's clean point (#206 addendum
+1, taken unconditionally as the design ruled) the owner read /context at 260k and said "Go" without compacting: the clean point is the design's, the compaction
+his. (2) THE LEDGER WRITER FELL TWICE ON ITS OWN ASSERTS — the design's text said "the Name thirteen bare" where the writer's print read 12 (the assert retyped
+from the print — a count in the design's prose is not the ink), and "Moses, Israel never named" fell on 15:2's מַשֵּׁה ("the loan" of his hand), the same letters
+as Moses (lemma 4874 against Moses' 4872 at 1:1 — retyped by lemma and recorded in the register paragraph). (3) NINE CUT MISSES on the rows' first checks — EIGHT
+THE EXPORT'S DEFECTIVE SPELLINGS UNDER ITS VOWELS (כלם "all of them", אפלו "even", תכבש "you will conquer", מצוה "commanded" — the full-spelling habit typed where
+the print's letters differ) and one a vav from the word before (125:1); every one retyped from the print, the second checks green. (4) THE ARAMAIC PIECES ON
+15:4, 7 AND 11 CUT BESIDE "NEEDY" — the export writes its kaf as a presentation-form letter the cutter does not fold; the ink's seat counter reads through NFKC
+and finds the five seats (15:4, 7, 9, 11; 24:14); chapter 14's Aramaic counts stand as measured, a note for 13b. (5) THE SHELLS' DERIVE FELL ONCE ON ITS OWN
+COUNT — the unit named once in the chain, not twice; retyped from the assert's print. (6) verify_claims CALLED WITH THE UNIT'S NAME where it takes the manifest's
+path — the argument retyped from its own error. (7) THE INK'S THIRD PASS CARRIED THE PATCH BLOCK AS BODY D (the design's plan), the fourth pass PATCHED green —
+the counting asserts patch-aware from the start (chapter 14's lesson 3 held). THE DISPLAY PATCH held first time (twelve asserted substitutions on the chapter-14
+form with its portable header stripped; the two counts read from the ink's third-pass print; the anchors sitting 12's last rows found by walking, never typed;
+override rows written: by_ref 168 by_gloss 44 | by_ref total 1421 | by_gloss total 800). THE MIDDAH CODES held — every code checked in MIDDOT.md before it was typed, none relabeled: the census from the ledger's rows — E30 at 117:1; I1 at 112:3, 112:4, 124:3, 124:6, 71:6; I2 at 111:1, 111:7, 117:3, 122:6, 122:8, 71:6; I3 at 111:3; I6 at 119:4; I8 at 126:1; I13's
+question named at 114:1 and 118:1 without its third verse (the two verses upheld by a condition), no code. THE GATES CHAIN RAN ONCE, ALL GREEN ON ITS FIRST PASS (20:53:26 to 21:01:52 — 8 min 26 s: the seat (seven operators on seven steps, the scenarios in the anchor form), verify_text (23 steps, 7 scenarios), the ritual, the fold (229 / 2259 / the hash unmoved — 1,809 facts, 341 demands, 191 open), build_world, the journal gate, the register gate --strict (DECLARED 98, no demand — the register step 4 min 55 s of the chain), large_letter 6/6, the home gate; no demand, no retype; the summary read once) — launched in the background after the manifest (every cite index name used), verify_claims (7 verified / 0 failed) and the labels census (GATE PASSED, debt 0 — 3,319 claims in 232 manifests) had run in the foreground and their prints were read; the records writer and the copier typed in four parts during its 506 seconds, the notification the wake.
+
+THE GATES, COMPUTED FROM THEIR PRINTS: the ritual 13 PASS (RITUAL COMPLETE, 229 frozen units); CORPUS TRUTH GREEN twice (229 units, 1809 facts, 341 demands, 191 open;
+the hash unmoved); build_world ALL GREEN; the journal gate GREEN (12 kinds, 9804 rows, +16); the register gate --strict GREEN (DECLARED 98, DEBT 0, FAILS 0);
+verify_claims 7 verified / 0 failed; the labels census GREEN (3,319 claims in 232 manifests); large_letter_probes 6/6; the home-path gate GREEN; the ink 128 asserts — the four passes
+3 / 0 / 0 / 0 failing (the first the instrument's shapes — a ledger's whole-row count for its Onkelos-row count, a verse range one verse too wide, the
+firstling's short form without its preposition; the second green; the third green with the patch block; the fourth green PATCHED).
+
+⚠ THE LESSONS (the runs', gathered — the numbered list the sheet asks for): (1) THE POINTED EXPORT SPELLS DEFECTIVELY UNDER ITS VOWELS — a cut's consonants are typed
+from the print's letters, never from the full-spelling habit: eight misses of nine were this one shape, and SP_ caught every one. (2) A COUNT IN THE DESIGN'S
+PROSE IS NOT THE INK — "thirteen bare" was a slip of the summary; the assert is retyped from the writer's own print, and the design's number corrected here: the
+Name 12 bare and 3 with "to". (3) A NAME'S LETTERS ARE NOT THE NAME — 15:2's "the loan" wears Moses' letters; "never named" is asserted by lemma, and the
+registry's homographs gain a pair. (4) THE ARAMAIC EXPORT CARRIES PRESENTATION-FORM LETTERS — a substring count misses them unless folded through NFKC; the
+seat counter folds, the piece cutter does not (the pieces are typed around such a word); chapter 14's Aramaic counts owe a re-measure at 13b. (5) THE CLEAN POINT IS
+UNCONDITIONAL, THE COMPACTION IS HIS — B1's clean point was taken at 63 rows as the design ruled; on his /context reading (260k) he ran B2 in the same context and
+the reading ended near 450k by the run's own estimate: the rule stands, the owner reads the counter. (6) THE RECEIPT'S REFERENT CAN POINT FORWARD — 116:1
+answers "as He spoke to you" with 28:3, a verse the book has not yet spoken; for the compile a labeled HYPOTHESIS until 28:3's sitting (the receipt's third shape
+after the Name's and the back-pointer's). (7) THE MISHNAH INSIDE THE SPINE — five times the Sifrei cites the answer sheet by name (Sheviit 10:8, 10:2, 10:3-4;
+Shekalim 5:6; Kiddushin 1:2): the compile rules cite the answer sheet, and HILLEL'S PROZBUL is a procedure the verse leaves open — a parameter, not code. (8) TWO
+VERSES UPHELD BY A CONDITION, NOT A THIRD VERSE — 15:4 against 15:11 at 114:1 and 118:1: I13's question without its third verse; the compile's state variable.
+(9) THE TWO FILES DISAGREE (124:6's closing verse read opposite ways) AND TWO SPINES DISAGREE (123:1's night service against the Mekhilta) — disputes for the exam,
+never resolved by the ink. (10) R. ISHMAEL'S THREE PLACES WHERE THE HALAKHA CIRCUMVENTS SCRIPTURE (122:1 — the blood's dust, the divorce's writ, the awl) — the
+code/data separation law's hardest case, inside the spine. (11) THE KIN BY COMPUTATION AGAIN — Jeremiah 34:14 is 15:12's closest kin in the whole Bible (seven of
+fifteen in order), closer than Exodus 21:2; 15:14 has no kin above two tokens; 15:15's closest is 24:18. (12) EVERY STEP TIMED — the machine's share of the sitting
+13 min 16 s of 749 min 12 s wall time from 08:35:17 to the records; the rest the reading, the typing and two compactions: the reading is the sitting, the
+machine its instrument.
+
+THE TIMING TABLE (every row appended by the scratchpad's timer as the step ran; the gap column is the time between one step's end and the next step's start — the
+reading of the rows, the typing of the scripts, the owner's compactions between the clean points and the rereads; the chain's inner steps from its own summary's
+stamps):
+
+| step | began | ran | the gap before it (reading, typing, the owner's compactions) |
+|---|---|---|---|
+| 13 derive dump0 (from the forms' ch14_dump0.py) | 08:35:17 | 0 s (rc 1) | 0 min 0 s |
+| 13 derive dump0 (from the forms' ch14_dump0.py), second (the count guard the form's) | 08:35:24 | 0 s (rc 1) | 0 min 7 s |
+| 13 derive dump0, third (the guard's slice clause dropped — the NAMING line's own [:14]) | 08:35:32 | 0 s | 0 min 8 s |
+| 13 dump0 (the measurements' first pass) | 08:35:32 | 12 s | 0 min 0 s |
+| 13 the spine split by piska (111-126; no tail folded; 126's tail checked against 16:1) | 08:39:58 | 0 s | 4 min 14 s |
+| 13 derive measure1 (the helpers and the register block from the forms' ch14_measure1.py) | 08:46:37 | 0 s | 6 min 39 s |
+| 13 measure1 (the second measurement pass) | 08:46:37 | 18 s (rc 1) | 0 min 0 s |
+| 13 derive measure1, second (the parser's list made a tuple in the set) | 08:47:08 | 0 s | 0 min 13 s |
+| 13 measure1 (the second measurement pass), second | 08:47:08 | 20 s | 0 min 0 s |
+| 13 derive ink (the helpers from the forms' ch14_ink.py) | 09:11:15 | 0 s | 23 min 47 s |
+| 13 ink (the first typed pass, assert_driver) | 09:11:15 | 19 s | 0 min 0 s |
+| 13 derive ink, second (three asserts retyped from the print) | 09:12:40 | 1 s | 1 min 6 s |
+| 13 ink (the second typed pass) | 09:12:41 | 19 s | 0 min 0 s |
+| 13 design (the map's section) | 09:15:47 | 0 s | 2 min 47 s |
+| 13 the clean compaction point (#206, after the design — RUN A's end) | 09:17:02 | 0 s | 1 min 15 s |
+| 13 the rows' import check, RUN B1 (63 Sifrei + 11 Onkelos + 4 outside; the cuts by consonants) | 15:49:11 | 20 s (rc 1) | 392 min 9 s |
+| 13 the rows' import check, RUN B1, second (eight tokens retyped defective from the print) | 15:49:51 | 19 s | 0 min 20 s |
+| 13 the clean compaction point (#206 addendum 1 — RUN B1's end) | 15:52:20 | 0 s | 2 min 10 s |
+| 13 the rows' import check, RUN B2 (all eight files: 99 Sifrei + 23 Onkelos + 10 outside) | 19:14:51 | 20 s (rc 1) | 202 min 31 s |
+| 13 the rows' import check, RUN B2, second (one token retyped from the print) | 19:16:00 | 20 s | 0 min 49 s |
+| 13 the ledger written (write_ch15_ledger.py — coverage computed, 132 sources) | 19:19:59 | 19 s (rc 1) | 3 min 39 s |
+| 13 the ledger written, second (the Name's bare count retyped from the print: 12) | 19:20:41 | 20 s (rc 1) | 0 min 23 s |
+| 13 the ledger written, third (the homograph of Moses' name at 15:2 asserted by lemma) | 19:21:56 | 19 s | 0 min 55 s |
+| 13 the clean compaction point (#206 addendum 2 — RUN B2's end, the reading done) | 19:23:35 | 1 s | 1 min 20 s |
+| 13 T derive ink (body_d — the display patch predicted from the G print) | 20:41:33 | 0 s | 77 min 57 s |
+| 13 T ink (the third pass — the patch block) | 20:41:33 | 20 s | 0 min 0 s |
+| 13 T derive the patch script (from the forms' ch14_patch_overrides.py; the counts from the ink's print) | 20:43:37 | 0 s | 1 min 44 s |
+| 13 T the display patch (ch15_patch_overrides.py — by gloss 44, by reference 168) | 20:43:37 | 20 s | 0 min 0 s |
+| 13 T ink (the fourth pass — PATCHED) | 20:43:57 | 19 s | 0 min 0 s |
+| 13 T the manifest's check words probed in the store (the pieces and their lengths) | 20:44:17 | 0 s | 0 min 1 s |
+| 13 T derive the shells (chain, fold, gates — from sitting 12's forms, the form's name protected) | 20:44:44 | 1 s (rc 1) | 0 min 27 s |
+| 13 T derive the shells, second (the unit named once in the chain — the count retyped from the assert's print) | 20:48:16 | 0 s | 3 min 31 s |
+| 13 T the manifest (seven claims DV15-01..07; every cite index name used) | 20:51:22 | 0 s | 3 min 6 s |
+| 13 T verify_claims | 20:51:22 | 1 s (rc 1) | 0 min 0 s |
+| 13 T the labels census (--strict) | 20:51:23 | 0 s | 0 min 0 s |
+| 13 T verify_claims, second (the manifest's path, not the unit's name — the argument retyped from the print) | 20:53:24 | 0 s | 2 min 1 s |
+| 13 T the chain (ch15_gates.sh in the background — the seat, verify_text, the ritual, the fold, build_world, the journal gate, the register gate --strict, large_letter, the home gate) | 20:53:26 | 506 s | 0 min 2 s |
+| 13 T the records writer --check (every number parsed from its print) | 21:04:07 | 0 s (rc 1) | 2 min 15 s |
+| 13 T the records writer --check, second (the page trimmed under its cap) | 21:04:27 | 2 s | 0 min 20 s |
+
+The chain's inner steps (ch15_gates_SUMMARY.txt): chain 54 s; fold 91 s; build_world 60 s; journal_gate 295 s; register_gate 3 s; large_letter 0 s; home_gate 3 s; the chain 8 min 26 s in all. The machine's share 13 min 16 s; the sitting 749 min 12 s from 08:35:17
+to the last row above; the records writer's own row and the copier's follow in ch15_timing.tsv (copied into the forms).
+
+THE FORMS: World/step9/forms_deuteronomy_walk/ (copy_ch15_forms.py — derive_ch15_dump0.py, ch15_dump0.py, derive_ch15_measure1.py, ch15_measure1_sections_a.py
+and _b.py, ch15_measure1.py, split_ch15_spine.py, ch15_ink_head.py, ch15_ink_body.py, _b.py, _c.py, _d.py, derive_ch15_ink.py, ch15_ink.py, assert_driver.py, the
+eight row files and their two import checks, write_ch15_ledger.py, write_ch15_design.py, the three clean-point writers, derive_ch15_patch.py,
+ch15_patch_overrides.py, ch15_manifest_probe.py, write_ch15_manifest.py, seat_ch15.py, derive_ch15_shells.py, ch15_chain.sh, ch15_fold.sh, ch15_gates.sh, tstep.sh,
+write_ch15_records.py, copy_ch15_forms.py, the prints, the split piskaot and ch15_timing.tsv).
+
+NEXT on the ruling: the commit on the owner's word (chapter 15 stands uncommitted since 049f55c — the message at <scratch>/commit_msg_ch15.txt); then THE COMPILE
+OF CHAPTER 15 (sitting 13b) in TWO RUNS + THE TAIL under the cost rules — RUN A: the rereads (THE_STEPS Step 5 + the compiler block; this section; the 13b box in
+COMPILE_DEBT), the measurements (Leviticus 25's cells for the sabbatical and the sold brother; Exodus 21's slave cell through its spine; the firstling's cells from
+Numbers 18 and Leviticus 27; chapter 12's blood and place cells; the running world's sabbatical count for the release's year; the register's finder at 15:2 and
+15:6; chapter 14's Aramaic counts re-measured through NFKC), THE DESIGN (the release as an EFFECT on the debts at the year's end with its onset and territory
+PARAMETERS and the prozbul a PARAMETER from the answer sheet; the needy's ranks a PRECEDENCE PARAMETER; the hand opened as a status with the pledge dispute two
+arms and the measure of need a bound; the Hebrew slave's three cases with the exits' two tables and the gift's feature a dispute; the awl's rite by day with the
+judges and the upper right ear, "for ever" the master's lifetime; the double hire the night's service; the firstling's year of two days a CLOCK DATUM, "sanctify"
+for its value; the blemish's class visible and permanent with 17:1 by CALL when it comes; the blood by CALL to chapter 12's cells with the olive and the warning;
+the checkpoint series DG), the probes to FAIL, THE DOCKET by the union rule (Mishnah Sheviit 10:1-9 with Gittin 36a-37b and Arakhin 32b-33a; Makkot 3b; Rosh
+Hashanah 8b-9a; Mishnah Kiddushin 1:2-3 with Kiddushin 14b-22b; Bava Metzia 31b and 71a; Mishnah Peah 8:7-9 with Ketubot 67b; Mishnah Bekhorot 1:1-2, 2:6-9,
+3:3-4, 4:1-2, 5:1-6, 6:1-12 with Bekhorot 25a-28b, 26b-27b, 33a-37b, 53b; Mishnah Temurah 3:5; Mishnah Arakhin 8:7; Mishnah Shekalim 5:6; Mishnah Chullin 2:9; the
+Sifra on Leviticus 25 credited from its sitting — every row whole; a docket past ~700 rows its own run); RUN B: the types, the runner, the tape to 10/10, the chain
+LAUNCHED; THE TAIL the records, the forms, the message — or the Decalogue-schema sitting first, on his word.

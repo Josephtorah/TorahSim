@@ -2155,3 +2155,49 @@ follows the last check mark.
 ## FORMS, THE CALF'S DAY MARKER, THE REGISTRY'S HOMOGRAPHS (the_place_luz_bethel, the_raven, the_flock, the_beasts not matched), THE INSTALL HYPOTHESIS, THE ERAS
 ## TABLE'S MERGE, THE CHAIN'S POSITIONS STEP AT FOUR WORKERS — on the owner's word; (v) THE CHECKPOINT SERIES continues (DF the sixth name — DF9 the last; the next
 ## DG1, keyed by its first word). NOTHING ELSE IN CHAPTER 14 IS OWED TO A LATER SITTING OF ITS OWN.
+
+
+## SITTING 13 — CHAPTER 15 (2026-09-22, the reading; deu_15_release_firstborn frozen) — OWED TO THE COMPILE 13b: (a) THE RELEASE (15:1-3) — "end" at the year's end
+## by the analogy with 31:10 (111:1 — I2; 109:3's Booths for the tithe's end), THE ONE CALENDAR — seven years for the whole world, never for each debtor (111:3-8
+## — I2 named in the Hebrew; Rosh Hashanah 8b-9a): the release-year A DATE PARAMETER read from the world's count (THE RUNNING WORLD'S SABBATICAL COUNT the
+## measurement owed), the onset after the conquest and the territory in and outside the Land (111:9-11, 112:11, 41:3 — TWO PARAMETERS; Gittin 36a-b the release by
+## decree when the jubilee is not; Arakhin 32b-33a), the manner the word said (112:1 — Mishnah Sheviit 10:8), the object loans only and standing debts (112:5-7;
+## Sheviit 10:1-2), the two years' powers (112:2-4 — I1; Leviticus 25:13 by CALL), the exaction a prohibition (112:8), the neighbor and the brother two exclusions
+## (112:9-10), the foreigner a positive command (113:1), THE PLEDGE-LOAN NOT RELEASED (113:2 — Sheviit 10:2) and HILLEL'S PROZBUL — "your hand" and not the
+## court's, the procedure the verse leaves open: A PARAMETER FROM THE ANSWER SHEET (113:3 — Sheviit 10:3-4; Gittin 36a-37b), the witnesses (Makkot 3b); Exodus
+## 23:10-11 through its spine, Leviticus 25:1-7 by CALL; (b) THE NEEDY AND THE BLESSING (15:4-6) — THE TWO VERSES UPHELD BY A CONDITION (114:1, 118:1 — I13's
+## question without its third verse): a state variable with the blessing's arm and the default, the blessing only in the Land (114:2), the reward clause (114:3),
+## THE WORDS OF THE SCRIBES (115:1 — the oral law named), the light as the weighty (115:2), THE RECEIPT'S REFERENT FORWARD — 28:3 a labeled HYPOTHESIS until its
+## sitting (116:1), lend not borrow, rule not be ruled (116:2-3 — Judges 1:7 the run's case); (c) THE HAND OPENED (15:7-11) — THE RANKS OF THE POOR a PRECEDENCE
+## PARAMETER (116:4-8; Bava Metzia 71a), the heart's state before the hand's (116:10-11), open and give a hundred times (116:12, 117:6), the gift dressed as a loan
+## (116:13), THE PLEDGE A DISPUTE — R. Judah and the sages, two arms (116:14; Bava Metzia 31b), THE MEASURE OF NEED — not to enrich, even a horse and a slave, the
+## wife (116:15-18 — Mishnah Peah 8:7-9; Ketubot 67b), "base" without a yoke and idolatry by the analogy with 13:14 (117:1-3 — E30, I2; 13:14's cell by CALL),
+## beware and lest two prohibitions (117:2), the cry a hastener and the sin unconditional (117:5; 279:4 at 24:15 by CALL when it comes), the secret gift (117:7 —
+## Mishnah Shekalim 5:6), the four grades of the giver (117:8), the three measures (118:3); 14:28-29's four at the gate by CALL; (d) THE HEBREW SLAVE (15:12-15)
+## — THE THREE CASES, each twin law its own (118:4 — Exodus 21:2 and Leviticus 25:39 by CALL; Mishnah Kiddushin 1:2-3; Kiddushin 14b-22b), the man's and the
+## woman's exits TWO TABLES (118:5 — Mishnah Kiddushin 1:2), the son not the heir, the fugitive and the sick (118:6-7), THE GIFT — the three sendings, not the
+## heirs, only what resembles the particular with the feature a dispute (119:1-4 — I6; Kiddushin 17a), the measure four opinions (119:5 — a dispute), Egypt the
+## model (120:1), BY DAY THEY PIERCE (120:2 — a time datum); 5:15 by CALL; (e) THE AWL (15:16-17) — two sayings and two times (121:1-2), the love mutual and the
+## house (121:3), illness bars (121:4; Kiddushin 22a-b), any tool or metal A DISPUTE (122:1), the judges present (122:3), the upper right ear by the analogy with
+## the leper's (122:5-6 — I2; Leviticus 14:14 by CALL), through into the door (122:7), "FOR EVER" THE MASTER'S LIFETIME — the son not the daughter, the pierced no
+## heir (122:8 — I2), "likewise" the gift not the awl (122:9); R. ISHMAEL'S THREE CIRCUMVENTIONS a DATA row (122:1); (f) THE DOUBLE HIRE (15:18) — the night's
+## service against the Mekhilta (123:1 — A DISPUTE OF TWO SPINES; Kiddushin 15a), the blessing beside every money loss (123:3 — a rule of the book's form); (g)
+## THE FIRSTLING (15:19-20) — its year and the blemished (124:1), the caesarean out (124:2 — Mishnah Bekhorot 2:9), the consecrated by the refuted a fortiori
+## (124:3 — I1), "SANCTIFY" FOR ITS VALUE, NEVER FOR THE ALTAR (124:4 — Mishnah Arakhin 8:7; Leviticus 27:26 by CALL), "your" two ways (124:5 — a dispute), the
+## two bars crossed and THE TWO FILES OPPOSITE (124:6 — a dispute), "YEAR BY YEAR" TWO DAYS ACROSS THE YEAR'S EDGE (125:1 — a CLOCK DATUM; Bekhorot 26b-27b), the
+## year passed no bar (106:5); the shearing and the work (Bekhorot 25a-28b); Numbers 18:15-18 by CALL; (h) THE BLEMISH AND THE BLOOD (15:21-23) — the class
+## visible and permanent (126:1 — I8; 147:3-4 at 17:1 by CALL when it comes; Bekhorot 33a-37b; Leviticus 22:17-27 and 21:16-23 by CALL), the permanent blemish
+## lent to all the consecrated (71:6 — I2), one dish and the heave-offering apart (71:7-8), drinking is eating (126:2), THE WITNESSES' WARNING gating the penalty
+## (126:3), THE OLIVE a quantity (126:4), the ground not the pit, the house not the market (126:5 — Mishnah Chullin 2:9), the neck and the seeds (126:6); chapter
+## 12's blood and place cells by CALL, Keritot 20b-22a credited from chapter 12's docket; (i) THE EFFECTS — the release on the debts and the exaction's
+## transgression, the blessing on the work of the hand (15:10, 15:18), the sin of the cry (15:9), the gift's status (15:14), the slave's status for ever (15:17);
+## (j) THE KIN BY CALL — Exodus 21:2-11 and 23:10-11 through their spines; Leviticus 25 whole; 22:17-27, 21:16-23, 27:26; Numbers 18:15-18; 5:15, 12:6-24,
+## 14:28-29; (k) NEVER READ AHEAD — 16:5, 16:12-13, 17:1, 17:18, 21:3, 23:17-22, 24:14-22, 26:12-19, 28:1-12, 29:12, 31:10 wait for their sittings — their cells
+## by CALL when they come; (l) THE REGISTER's DATA rows — SINGULAR END TO END, 15:2 addressing no one, one imperative, eight infinitive absolutes, THE ONE
+## NARRATIVE VERB (15:15 "redeemed you" — the T1 row), the four number verses and the ordinal, the homograph of Moses' name at 15:2, no written/read pair; (m)
+## THE AS-MEASURED NOTE — chapter 14's Aramaic counts re-measured through NFKC; (n) THE CHECKPOINT SERIES continues (DF the sixth name — DF9 the last; the next
+## DG1, keyed by its first word); (o) THE DOCKET by the union rule — the testing shelf as the design and the AS BUILT list it (Mishnah Sheviit 10:1-9 with Gittin
+## 36a-37b and Arakhin 32b-33a; Makkot 3b; Rosh Hashanah 8b-9a; Mishnah Kiddushin 1:2-3 with Kiddushin 14b-22b; Bava Metzia 31b, 71a; Mishnah Peah 8:7-9 with
+## Ketubot 67b; Mishnah Bekhorot 1:1-2, 2:6-9, 3:3-4, 4:1-2, 5:1-6, 6:1-12 with Bekhorot 25a-28b, 26b-27b, 33a-37b, 53b; Mishnah Temurah 3:5; Mishnah Arakhin
+## 8:7; Mishnah Shekalim 5:6; Mishnah Chullin 2:9; the Sifra on Leviticus 25 credited from its sitting) — EVERY ROW WHOLE; a docket past ~700 rows its own run;
+## THE COST RULES: two runs + the tail, the chain launched at RUN B's end. NOTHING ELSE IN CHAPTER 15 IS OWED TO A LATER SITTING OF ITS OWN.
