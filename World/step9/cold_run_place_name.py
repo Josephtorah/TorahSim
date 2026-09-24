@@ -240,7 +240,8 @@ def effect_scan(effect):
     return sorted({e for (e,) in c_.execute("SELECT DISTINCT entity FROM run_ledger WHERE effect=?", (effect,)).fetchall()})
 OWN7 = ('name_erasure_barred', 'place_chosen_required', 'rejoicing_before_the_lord_commanded', 'profane_slaughter_permitted', 'holy_things_in_the_gates_barred', 'levite_forsaking_barred', 'foreign_rite_inquiry_barred')
 PLACE_WORDS = r"\b(place_chosen\w*|rejoicing_before\w*|profane_slaughter\w*|holy_things_in_the_gates\w*|levite_forsaking\w*|name_erasure\w*|foreign_rite\w*|the place which the LORD (?:your God )?will choose|profane slaughter|forsake the Levite)\b"
-_ps = ledger_scan('israel_people', PLACE_WORDS); PLACE_SCAN = None if _ps is None else [e for e in _ps if e not in OWN7]   # this sitting's own seven excluded once the fold carries them
+CH16_AT_THE_PLACE = ('passover_at_the_place_commanded', 'weeks_at_the_place_commanded', 'booths_at_the_place_commanded', 'passover_in_the_gates_barred')   # THE DEUTERONOMY WALK 14b (2026-09-23): chapter 16's names carrying the place and the gates
+_ps = ledger_scan('israel_people', PLACE_WORDS); PLACE_SCAN = None if _ps is None else [e for e in _ps if e not in OWN7 and e not in CH16_AT_THE_PLACE]   # THE DEUTERONOMY WALK 14b (2026-09-23; LEAN): chapter 16's own statuses at the place (passover_at_the_place_commanded, weeks_at_the_place_commanded, booths_at_the_place_commanded) and its gates' bar excluded — a later chapter's writes moved this scan's ground once the tape's first run put them in the one database (the same lesson at the second-tablets callee's two seats)
 _hs = effect_scan('high_places_banned'); HPB_SCAN = None if _hs is None else sorted(set(_hs))
 del _ps, _hs   # 9b's lesson: the raw scans are the database's state at import — the derived lists are equal on the cached and the full load
 _FXV = yaml.safe_load(open(_os.path.join(HERE, 'effect_vocabulary.yaml'), encoding='utf-8'))['effects']

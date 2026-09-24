@@ -13,13 +13,13 @@ tape of events in verse order; every verse adds a line or installs a law (a daem
 EVERYTHING ELSE IN A COMPUTER PROGRAM (his frame). The repo <repo> = /Users/Shared/TorahSim, public under CC0 at
 github.com/Josephtorah/TorahSim.
 
-## 2. WHERE IT STANDS (2026-09-23, 13b done; #207 add. 5 newest)
-- NUMBERS CLOSED. DEUTERONOMY 1:1-15:23 ON THE TAPE (PUSHED through 049f55c; 15 COMMITTED b0eaa56 not pushed; 13b uncommitted).
-- 229 frozen units, standing 2259, hash 8b8fff1fa28953af. 70 runners, 75 daemons; 1166 kinds / 1073 effects.
-- THE TAPE at RUN (1336, 96, 88, 0, 12, 1656, 46, 319, pairs, 127), markers 172, closes 127; 10/10 (DG1-DG9); sweep 69/69; all gates GREEN, 5 passes.
-- SITTING 13 (ch 15 read, frozen): 132 sources; 7 claims. 13b: the docket 974 rows; RUN B DONE — release_firstborn 91/91 first
-  run; 4 lines, 15 writes (4 reuses), 27 parameters; the tape 10/10 on its 3rd run (CU5; the scan).
-- 13b DONE (#207 add. 5). NEXT ON HIS WORD: commit (<scratch>/commit_msg_ch15b.txt); push on "push"; ch 16's reading (16:1-22), two runs + tail.
+## 2. WHERE IT STANDS (2026-09-23; #210 sitting 14b newest)
+- NUMBERS CLOSED. DEUTERONOMY 1:1-16:22 ON THE TAPE (PUSHED through e824e52 — 15/13b; 16 uncommitted).
+- 230 frozen units, standing 2267, hash 8b8fff1fa28953af. 71 runners, 76 daemons; 1171 kinds / 1088 effects.
+- THE TAPE at RUN (1341, 96, 88, 0, 12, 1672, 47, 319, pairs, 127), markers 172, closes 127; 10/10 (DH1-DH5); 14b's chain ALL GREEN once (sweep 70/70).
+- SITTING 13/13b (ch 15): 132 sources; release_firstborn 91/91; PUSHED e824e52.
+- ⚠ THE LEAN PASS (#208): 16-34 in 8 lean sittings — core shelf, 4 records, chain once; full process OWED.
+- SITTING 14/14b (ch 16 READ + COMPILED, LEAN) at #210: 136 sources; runner 53/53; 5 lines, 16 writes; the tape 10/10; chain green; UNCOMMITTED. NEXT: the commit; then 15 (ch 17-18 read, lean).
 
 
 ## 3. THE STANDING LAWS (owner-ruled; verbatim in spirit — long forms: addenda §3)

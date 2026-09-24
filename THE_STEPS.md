@@ -4655,6 +4655,11 @@ hypothesis until that chapter is compiled, and the dependency gate files it as o
 of one, and the runs found two more the grep had listed but cut short — the lesson of the whole row, now for greps. The exam has eighty-two persons. The runner
 91/91 on its first run; the tape 10/10 on its THIRD run (CU5's stale count read from the first run's print; the retype's apostrophes; the scan's ground fixed to exclude the daemon's own writes); the gates chain in three passes (Q17 and the dependency gate's five demands from the first pass, the positions table by four workers, then all green). Every step timed: 4326 machine seconds over 82 steps for the compile.
 
+**THE LEAN PASS (ruled 2026-09-23):** Deuteronomy 16 to 34 are done in a lean form so the book can be finished in about four days and the whole architecture studied: every verse is still
+read from its spine with the Sifrei and Onkelos rows whole, every law still becomes a cell with effects on the ledger, the tape and the gates and the commit are unchanged — but the Talmud
+folios are read only where a Mishnah verdict is disputed and a cell needs them, ten of the fourteen records wait for the book's close, the sittings take two or three chapters where the text
+is one unit, and the gates chain runs once. These chapters are owed the full process later; the debt is kept in COMPILE_DEBT.md's lean-pass box.
+
 ## Step 6 — Publish
 Export, parity check against the public repo, deploy. Owner's word.
 

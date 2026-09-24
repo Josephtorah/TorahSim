@@ -16,6 +16,7 @@
 # definitions — the checks run in full on a miss (a runner's source or the text it reads moved) and always in the sweep (INK_CACHE=0); the probe
 # suite ink_cache_probes.py loads the engine full and cached and compares them value by value.
 # --full forces the full sweep and the full loads (INK_CACHE=0 for every step; the positions table is always the whole measure).
+# THE LEAN PASS (owner-ruled 2026-09-23; DEUTERONOMY_WALK.md "THE LEAN PASS"): the positions step at FOUR workers — eight were killed by the session's memory watchdog at 7b, 8b, 10b, 11b, 12b and 13b, and the table was measured by four outside the chain each time (477 s at 13b).
 #
 #   sh World/step9/gates_chain.sh <out_dir> [--from STEP] [--skip STEP,STEP] [--full] [--list]
 #
@@ -63,7 +64,7 @@ run_probes() {   # THE GATES CUT: the suites in parallel, each to its own print;
   done
   return $rc
 }
-POSARGS="--jobs 8"; SWEEPARGS="--changed --jobs 8 --skip cold_run_sequence.py"
+POSARGS="--jobs 4"; SWEEPARGS="--changed --jobs 8 --skip cold_run_sequence.py"
 [ $FULL = 1 ] && { SWEEPARGS="--jobs 8 --skip cold_run_sequence.py"; export INK_CACHE=0; }   # --full: the sweep whole AND every load with the runners' checks in full (ink_cache.py)
 run_step tape        python3 World/step9/cold_run_sequence.py
 run_step probes      run_probes

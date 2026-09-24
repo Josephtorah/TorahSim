@@ -532,6 +532,17 @@ daemons:
       hebrew_slave_law_declared: [furnishing_commanded, empty_sending_barred, work_of_the_hand_blessed]   # Deut 15:12-18: 'furnish, you shall furnish him' — a STATUS on Israel (NEW — the gift's cases, the measure a parameter by call to erection), 'you shall not send him away empty' — a BLOCK (NEW), 'the LORD will bless you in all that you do' — work_of_the_hand_blessed's second seat (15:18); the term six years by CALL to mishpatim's clock, the maidservant's exits by CALL to mishpatim_3, the pierced slave's jubilee by CALL to yovel — no timer on the tape; at the counter's day, no marker
       firstling_law_declared: [firstling_sanctification_commanded, firstling_work_and_shearing_barred, holy_things_in_the_gates_barred]   # Deut 15:19-23: 'you shall sanctify to the LORD' — a STATUS on Israel (NEW — for its value against 27:26; the firstling's year a clock datum), 'you shall do no work … nor shear' — a BLOCK (NEW); 15:20's place — holy_things_in_the_gates_barred REUSED (12:17-18's block, a SECOND ENTRY); the blemish list by CALL to priesthood, the blood by CALL to place_name and sanctions — no new write; at the counter's day, no marker
       release_firstborn_case: [accepted, exempt, lashes, barred_from_it, goes_free, severance_gift_owed, serves_for_ever, consecrated_firstborn]   # the exam's rows on the chapter — the persons through the cells' asks (the creditor who exacts in the eighth year barred from it; the debtor who pays anyway accepted; the slave after six years goes free; the master at the sending owes the severance gift — a DEBIT closed at the giving in the case's own world; the pierced slave serves for ever — a STATUS; the firstling male born of the herd consecrated from the womb; the one who shears the firstling lashed; the one who sanctifies it for the altar barred from it; the sick slave exempt from his years …)
+  law_festivals_judges:
+    file: cold_run_festivals_judges.py
+    wraps: festivals_judges
+    given_at: Deut 16:1
+    installed_by: boot   # THE DEUTERONOMY WALK 14b (2026-09-23; THE LEAN PASS): "OBSERVE THE MONTH OF AVIV AND KEEP THE PASSOVER" — the chapter's first verse at the counter's day (40, 11, 1); installed by boot like law_opening_speech through law_release_firstborn (the Deuteronomy daemons' form; THE INSTALL HYPOTHESIS on the table unchanged); THE COURTS NOT A SECOND DAEMON in the lean form (the three tiers a parameter of F5; the second daemon owed to the full process); FIVE OWN-DAY LINES, NO marker; the readback's rows one per verse graded against the kin's cells by CALL and the tape's lines by kind and first verse; no bench scene, no case kind (the lean form — the Mishnah rows the cells' asks)
+    watches:
+      passover_at_the_place_declared: [passover_at_the_place_commanded, passover_in_the_gates_barred, leaven_with_the_passover_barred, flesh_till_morning_barred, seventh_day_assembly_commanded]   # Deut 16:1-8: the place added to the Passover — a STATUS (NEW), 'you may not sacrifice within your gates', 'you shall not eat leaven with it', 'nor shall the flesh remain until the morning' — BLOCKS (NEW), the seventh day's assembly — a STATUS (NEW; the intermediate days' work the sages' parameter); at the counter's day, no marker
+      weeks_and_booths_declared: [weeks_at_the_place_commanded, booths_at_the_place_commanded]   # Deut 16:9-15: the feast of weeks from the sickle's count and the feast of booths at the gathering, each at the place — STATUSES (NEW); the omer's count and the booths' seven by CALL (moadim), the rejoicing by CALL (place_name), the slave remembered by CALL (covenant_at_horeb) — no second write; at the counter's day, no marker
+      three_pilgrimages_declared: [three_pilgrimages_commanded, empty_appearance_barred]   # Deut 16:16-17: all the males appear three times at the place — a STATUS (NEW; the exempt list a parameter), 'none shall appear empty' — a BLOCK (NEW; the two amounts and the gift of the hand parameters); the appearing owed and the appearance gift by CALL (calendar, erection); at the counter's day, no marker
+      judges_in_every_gate_commanded: [judges_and_officers_commanded, judgment_wresting_barred, person_respecting_barred, bribe_barred, justice_pursuit_commanded]   # Deut 16:18-20: the courts in every gate by the tribes — a STATUS (NEW; the three tiers a parameter), 'you shall not wrest judgment', 'you shall not respect persons' — BLOCKS (NEW), 'you shall not take a bribe' — bribe_barred REUSED, ITS FIRST ENTRY ANYWHERE (Exodus 23:8's block declared at the ordinances' cell, never written — DB7), 'justice, justice you shall pursue' — a STATUS (NEW; the acquittal final a parameter); at the counter's day, no marker
+      asherah_and_pillar_barred: [asherah_beside_the_altar_barred, pillar_barred]   # Deut 16:21-22: no asherah beside the altar, no pillar — BLOCKS (NEW; the pillars' change of state read from the tape's own entries on Jacob's pillars); at the counter's day, no marker
   law_census:
     file: cold_run_bamidbar.py
     wraps: bamidbar
@@ -2171,6 +2182,14 @@ functions:
     the_firstling: {status: WRAPPED, by: law_release_firstborn}
     the_blemish_and_the_blood: {status: WRAPPED, by: law_release_firstborn}
     the_readback: {status: WRAPPED, by: law_release_firstborn}
+  festivals_judges:   # THE DEUTERONOMY WALK 14b (2026-09-23; LEAN)
+    the_passover_at_the_place: {status: WRAPPED, by: law_festivals_judges}
+    the_weeks_from_the_sickle: {status: WRAPPED, by: law_festivals_judges}
+    the_feast_of_booths: {status: WRAPPED, by: law_festivals_judges}
+    the_three_pilgrimages: {status: WRAPPED, by: law_festivals_judges}
+    the_judges_in_every_gate: {status: WRAPPED, by: law_festivals_judges}
+    the_asherah_and_the_pillar: {status: WRAPPED, by: law_festivals_judges}
+    the_readback: {status: WRAPPED, by: law_festivals_judges}
   pre_sinai:
     creation: {status: WRAPPED, by: law_pre_sinai}
     day_boundary: {status: WRAPPED, by: law_pre_sinai}

@@ -4,7 +4,7 @@
 # base_thought_barred, work_of_the_hand_blessed; cry_heard and bears_sin REUSED), the Hebrew slave (furnishing_commanded, empty_sending_barred; the severance gift a DEBIT
 # at the case), the firstling (firstling_sanctification_commanded, firstling_work_and_shearing_barred; the_firstlings_year a CLOCK DATUM; holy_things_in_the_gates_barred
 # REUSED); the tape 10/10 on its THIRD run (CU5's stale count read from the first run's print; the retype's apostrophes; the scan's ground fixed to exclude the daemon's own writes) (DG1-DG9); the gates chain in three passes (Q17 and the dependency gate's five demands from the first pass, the positions table by four workers, then all green); the register gate DECLARED 98 / DEBT 0 / FAILS 0; the sweep 69/69.
-# UNCOMMITTED since b0eaa56: 13b (the message at <scratch>/commit_msg_ch15b.txt). NEXT on the owner's word: the commit; the push on "push"; chapter 16's reading.
+# COMMITTED e824e52 AND PUSHED (2026-09-23, "Commit and push" — 049f55c..e824e52). NEXT on the owner's word: chapter 16's reading (16:1-22).
 # ⚠ THE DEUTERONOMY WALK sitting 13 (2026-09-22; step9/DEUTERONOMY_WALK.md "Sitting 13" + "Sitting 13 — AS BUILT"): CHAPTER 15 READ AND FROZEN as ONE unit
 # (deu_15_release_firstborn, the 229th; standing 2259, hash unmoved) — THE ONE CALENDAR by the analogy named in the Hebrew (111:3-8), THE TWO VERSES 15:4 and 15:11
 # UPHELD BY A CONDITION (114:1, 118:1), THE MISHNAH INSIDE THE SPINE FIVE TIMES with HILLEL'S PROZBUL (113:3), THE RECEIPT'S REFERENT POINTING FORWARD to 28:3 (116:1 —
