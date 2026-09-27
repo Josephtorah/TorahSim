@@ -1,0 +1,39 @@
+israel_people rows in the one database: 268 | all distinct rows: 1607 | chapters 17-18 present: 37 ['abominations_learning_barred', 'augur_barred', 'blemished_offering_barred', 'charmer_barred', 'diviner_barred', 'equal_portions_commanded'] ...
+==== A. THE RUNNERS' HOLE SCANS (ledger_scan on israel_people by a WORDS pattern) ====
+ TRIPS  blessing_and_curse RAIN_WORDS     hits 5, excluded 0, survivors ['blessing_and_curse_set', 'gerizim_ebal_ceremony_owed', 'heavens_shut_for_turning', 'rain_in_its_season', 'yoke_of_the_commandments_accepted']
+ TRIPS  courts_prophet     HOLE_WORDS     hits 37, excluded 0, survivors ['abominations_learning_barred', 'augur_barred', 'blemished_offering_barred', 'charmer_barred', 'diviner_barred', 'equal_portions_commanded', 'false_prophet_fear_barred', 'false_word_test_declared', 'familiar_spirit_barred', 'first_fleece_owed', 'foreign_king_barred', 'ghost_consulting_barred', 'heart_lifting_barred', 'high_court_at_the_place_commanded', 'horses_multiplying_barred', 'idolater_inquiry_required', 'king_from_the_brothers_commanded', 'law_copy_commanded', 'levite_service_at_the_place_permitted', 'necromancer_barred', 'one_witness_barred', 'passing_through_fire_barred', 'priests_standing_chosen', 'prophet_hearkening_commanded', 'prophet_like_moses_promised', 'return_to_egypt_barred', 'sentence_binding_commanded', 'shoulder_cheeks_maw_owed', 'silver_and_gold_multiplying_barred', 'soothsayer_barred', 'sorcerer_barred', 'turning_from_the_word_barred', 'two_witnesses_required', 'wholeness_commanded', 'witnesses_hand_first_commanded', 'wives_multiplying_barred', 'word_required_of_the_hearer']
+ TRIPS  festivals_judges   HOLE_WORDS     hits 15, excluded 0, survivors ['asherah_beside_the_altar_barred', 'booths_at_the_place_commanded', 'empty_appearance_barred', 'flesh_till_morning_barred', 'judges_and_officers_commanded', 'judgment_wresting_barred', 'justice_pursuit_commanded', 'leaven_with_the_passover_barred', 'passover_at_the_place_commanded', 'passover_in_the_gates_barred', 'person_respecting_barred', 'pillar_barred', 'seventh_day_assembly_commanded', 'three_pilgrimages_commanded', 'weeks_at_the_place_commanded']
+ TRIPS  food_tithe         FOOD_WORDS     hits 5, excluded 0, survivors ['abomination_eating_barred', 'carcass_eating_barred', 'cuttings_for_the_dead_barred', 'poor_tithe_owed', 'second_tithe_owed']
+ TRIPS  not_righteousness  STIFF_WORDS    hits 1, excluded 0, survivors ['stiffening_barred']
+ TRIPS  place_name         PLACE_WORDS    hits 10, excluded 0, survivors ['foreign_rite_inquiry_barred', 'high_court_at_the_place_commanded', 'holy_things_in_the_gates_barred', 'levite_forsaking_barred', 'name_erasure_barred', 'passover_at_the_place_commanded', 'place_chosen_required', 'profane_slaughter_permitted', 'rejoicing_before_the_lord_commanded', 'weeks_at_the_place_commanded']
+ TRIPS  release_firstborn  HOLE_WORDS     hits 10, excluded 0, survivors ['base_thought_barred', 'debt_release_owed', 'empty_sending_barred', 'exaction_barred', 'firstling_sanctification_commanded', 'firstling_work_and_shearing_barred', 'furnishing_commanded', 'hand_opening_commanded', 'hand_shutting_barred', 'work_of_the_hand_blessed']
+ TRIPS  seducers           SEDUCER_WORDS  hits 5, excluded 0, survivors ['condemned_city_inquiry_required', 'devoted_thing_cleaving_barred', 'false_prophet_fear_barred', 'false_prophet_hearing_barred', 'tested_by_the_lord']
+==== B. THE PROBES' AND THE TAPE'S SUBSTRING SCANS (every quoted pattern handed to a ledger/effect scan in readback_probes.py, census_probes.py, register_census.py and cold_run_sequence.py; the values of the new rows searched for each) ====
+ TRIPS? readback_probes.py     line 221   entity None           pattern 'commanded'                              -> new rows matched ['equal_portions_commanded', 'high_court_at_the_place_commanded', 'king_from_the_brothers_commanded', 'law_copy_commanded', 'prophet_hearkening_commanded', 'sentence_binding_commanded']
+ TRIPS? readback_probes.py     line 230   entity None           pattern 'commanded'                              -> new rows matched ['equal_portions_commanded', 'high_court_at_the_place_commanded', 'king_from_the_brothers_commanded', 'law_copy_commanded', 'prophet_hearkening_commanded', 'sentence_binding_commanded']
+ TRIPS? readback_probes.py     line 733   entity None           pattern 'kings_promised'                         -> new rows matched ['king_from_the_brothers_commanded']
+ TRIPS? readback_probes.py     line 733   entity None           pattern 'wholeness_owed'                         -> new rows matched ['wholeness_commanded']
+ TRIPS? readback_probes.py     line 733   entity None           pattern 'stoned'                                 -> new rows matched ['familiar_spirit_barred', 'ghost_consulting_barred']
+ TRIPS? readback_probes.py     line 423   entity name           pattern 'rain'                                   -> new rows matched [('israel_people', 'first_fleece_owed')]
+ TRIPS? readback_probes.py     line 552   entity name           pattern 'false_prophet'                          -> new rows matched ['false_prophet_fear_barred']
+ readback_probes.py: 128 scan seats read, 7 name a new row
+ census_probes.py: 0 scan seats read, 0 name a new row
+ register_census.py: 0 scan seats read, 0 name a new row
+ TRIPS? cold_run_sequence.py   line 2707  entity None           pattern 'EVENT'                                  -> new rows matched ['false_word_test_declared']
+ TRIPS? cold_run_sequence.py   line 2993  entity None           pattern 'moses'                                  -> new rows matched ['prophet_like_moses_promised']
+ TRIPS? cold_run_sequence.py   line 3127  entity None           pattern 'moses'                                  -> new rows matched ['prophet_like_moses_promised']
+ TRIPS? cold_run_sequence.py   line 3127  entity None           pattern 'moses'                                  -> new rows matched ['prophet_like_moses_promised']
+ TRIPS? cold_run_sequence.py   line 3127  entity None           pattern 'moses'                                  -> new rows matched ['prophet_like_moses_promised']
+ TRIPS? cold_run_sequence.py   line 3148  entity None           pattern 'moses'                                  -> new rows matched ['prophet_like_moses_promised']
+ TRIPS? cold_run_sequence.py   line 3150  entity None           pattern 'moses'                                  -> new rows matched ['prophet_like_moses_promised']
+ TRIPS? cold_run_sequence.py   line 3172  entity None           pattern 'moses'                                  -> new rows matched ['prophet_like_moses_promised']
+ TRIPS? cold_run_sequence.py   line 3179  entity None           pattern 'moses'                                  -> new rows matched ['prophet_like_moses_promised']
+ TRIPS? cold_run_sequence.py   line 3201  entity None           pattern 'moses'                                  -> new rows matched ['prophet_like_moses_promised']
+ TRIPS? cold_run_sequence.py   line 3369  entity name           pattern 'false_prophet'                          -> new rows matched ['false_prophet_fear_barred']
+ cold_run_sequence.py: 245 scan seats read, 11 name a new row
+ checkpoint_check.py: 0 scan seats read, 0 name a new row
+==== C. THE NEW ROWS' VALUES NAMING OTHER CHAPTERS' EFFECT NAMES (a value that spells an earlier effect's name trips that effect's substring scans) ====
+  heart_lifting_barred -> ['consecrated']
+  king_from_the_brothers_commanded -> ['kings_promised']
+  wholeness_commanded -> ['wholeness_owed']
+SCAN CENSUS DONE — runner scans tripping: 8

@@ -1,0 +1,30 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
+# THE DISPLAY PATCH PROBED (sitting 17, LEAN; THE TAIL): for each candidate gloss of chapters 22-25's seats, the store's token families over the WHOLE store — by gloss where
+# every token is the one word; the counts printed, never typed. Read-only. Sitting 16's form (ch19_patch_probe.py) over four chapters; the candidates the worst glosses
+# read off the four store-gloss dumps (ch22_store_glosses.txt … ch25_store_glosses.txt) — the lean form's patch, the rest OWED.
+import re, sqlite3, subprocess, yaml
+ROOT = _ROOT
+store = sqlite3.connect(f'file:{ROOT}/torah_grok.SNAPSHOT-main-51801ca.sqlite?mode=ro', uri=True)
+CAND = ['member-of-a-flock-him/its', 'push-off', 'and-veil-from-sight', 'to-veil-from-sight', 'and-gather-for-any-purpose-him/its', 'tread', 'tread-him/its', 'concrete', 'wander-away', 'valiant-man', 'wrap-around', 'something-disgusting', 'little-bird', 'brood-of-a-bird', 'the-brood-of-a-bird', 'crouch', 'be--make-well', 'and-be--long', 'the-fall', 'yield-seed', 'garden-you/your', 'the-garden', 'in-garden', 'two-heterogeneities', 'sanctify', 'the-something-fulfilled', 'and-income', 'scratch', 'unit', 'linsey-woolsey', 'thread', 'wing', 'cover-you/your', 'plump', 'and-plump', 'exploit', 'old', 'the-old', 'the-gate-suffix', 'and-break-apart', 'and-urge', 'stability', 'and-be-weighty-her/its', 'and-be-weighty', 'foolishness', 'to-commit-adultery', 'commit-adultery', 'and-kindle', 'from-nearest-part-you/your', 'be-master', 'master', 'the-engage-for-matrimony', 'shriek', 'depress-literally', 'associate-him/its', 'associate-you/your', 'and-fasten-upon', 'to-separation-him/its', 'crime', 'and-dash-in-pieces-him/its', 'be-open', 'and-manipulate-her/its', 'denude', 'split', 'mutilated', 'pipe', 'in-assemblage', 'mongrel', 'project', 'hire', '?', 'Aham-naharaim', 'to-be--light-you/your', 'breathe-after', 'and-turn-about', 'the-vilification', 'to-benediction', 'safe-them/their', 'and-good--in-the-widest-sense-them/their', 'loathe', 'bring-forth', 'and-bring-forth', 'hating-you/your', 'from-occurrence', 'to-turn', 'and-like-come/bring', 'and-peg', 'spade-you/your', 'and-pry-into', 'issue-you/your', 'to-snatch-away-you/your', 'nudity', 'from-hind-part-you/your', 'shut-up', 'sovereign-him/its', 'snatch-away', 'try', 'rage-him/its', 'female-devotee', 'sacred-person', 'gift', 'promise', 'to-promise', 'strike-with-a-sting', 'interest-on-a-debt', 'to-strange', 'sending-out', 'loiter', 'to-be-safe-him/its', 'be-flabby', 'going-forth', 'lip-you/your', 'spontaneity', 'satisfaction--joy)-you/your', 'in-something-that-rises', 'something-that-rises', 'and-strip-off', 'head-of-grain', 'quiver', 'graciousness', 'and-grave', 'writing', 'cutting', 'hinder', 'the-hinder', 'be-foul', 'sin', 'in-host', 'innocent', 'and-brighten-up', 'wind-tightly', 'mill-stone', 'and-vehicle', 'thieve', 'and-gather-grain', 'the-stealer', 'in-blow', 'flow-as-water', 'mark', 'and-mark', 'speck', 'to-pawn', 'pawn-him/its', 'the-pawn', 'the-outside-suffix', 'depressed', 'in-dress-him/its', 'rightness', 'press-upon', 'man-at-wages--by-the-day', 'and-destitute', 'payment-of-contract-him/its', 'lift/carry', 'stretch', 'bereaved-person', 'to-bereaved-person', 'and-sever-you/your', 'dock-off', 'severed-you/your', 'and-mislay', 'mislay', 'heap', 'knock-out', 'olive-you/your', 'gleam', 'effect-thoroughly', 'and-be', 'and-be--right', 'the-just', 'and-be--wrong', 'the-wrong', 'strike', 'and-fall-him/its', 'like-enough', 'wrong-him/its', 'add', 'wound', 'and-be-light', 'in-trample-him/its', 'the-die', 'turn-aside', 'brotherin-law-her/its', "and-marry-a--brother's-widow-her/its", 'stroke', 'sister-in-law-him/its', 'refuse', 'brotherin-law-me/my', "marry-a--brother's-widow-me/my", 'and-pull-off', 'pull-off', 'sandal-tongue-him/its', 'the-sandal-tongue', 'and-eye', 'go-forth', 'to-snatch-away', 'in-pudenda-him/its', 'and-chop-off', 'palm-of-hand-her/its', 'cover', 'in-cup-you/your', 'and-abbreviated', 'complete', 'and-right', 'be--long', 'light-upon-you/your', 'and-curtail', 'the-make--unsteady', 'languid', 'and-tired', 'in-rest', 'from-circle', 'memento', 'the-son', 'blood--of-man', 'from-us/our', 'arise', 'vessel', 'dress', 'set', 'virgin', 'name', 'evil']
+seen = set()
+for g in CAND:
+    if g in seen: continue
+    seen.add(g)
+    fam = store.execute("SELECT REPLACE(w.he_plain,'/',''), COUNT(*) FROM words w WHERE w.gloss=? GROUP BY 1 ORDER BY 2 DESC, 1", (g,)).fetchall()
+    print(f'  {g!r}: {len(fam)} families, {sum(n for _, n in fam)} tokens: {fam[:6]}')
+CH = {}
+for c, v, i, hp, g in store.execute("SELECT v.chapter, v.verse, w.idx, w.he_plain, w.gloss FROM words w JOIN verses v ON w.verse_id=v.id WHERE v.book='Deut' AND v.chapter IN (22, 23, 24, 25) ORDER BY v.id, w.idx"):
+    CH.setdefault((c, v), []).append((i, hp.replace('/', ''), g))
+OV = open(f'{ROOT}/logic/glosses/word_gloss_overrides.yaml', encoding='utf-8').read()
+d = yaml.safe_load(OV); BG = d['by_gloss']
+print('the chapters\' glosses ALREADY rewritten by the earlier walks\' by-gloss overrides:', sorted({g for k in CH for _, _, g in CH[k] if g in BG}))
+print('candidates already in by_gloss (excluded from GL):', sorted(g for g in seen if g in BG))
+M16 = 'THE DEUTERONOMY WALK sitting 16 (2026-09-24, Deuteronomy 19-21, LEAN)'
+i = OV.index(f'  # {M16}: the worst glosses of the three chapters\' seats'); j = OV.index('\n', i) + 1; rows = []
+while True:
+    m = re.match(r'  "[^"]+": "[^"]*"[^\n]*\n', OV[j:])
+    if not m: break
+    rows.append(m.group(0)); j += len(m.group(0))
+print('sitting 16 by-gloss rows walked from its marker:', len(rows), '| its last row:', rows[-1].strip()[:60])
+print('by_gloss total', len(BG), '| by_ref total', len(d['by_ref']), '| the last Deut.21 by_ref line:', [l for l in OV.split('\n') if l.startswith('  "Deut.21.')][-1][:50], '| Deut.22-25 by_ref rows present:', sum(1 for l in OV.split('\n') if re.match(r'  "Deut\.2[2-5]\.', l)))

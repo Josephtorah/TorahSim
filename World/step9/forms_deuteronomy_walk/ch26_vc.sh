@@ -1,0 +1,1 @@
+for u in deu_26_bikkurim_close deu_27_ebal_curses deu_28_blessings deu_28_curses_a deu_28_curses_b; do python3 logic/solo_tools/verify_claims.py logic/oral_audit/manifests/${u}_claims.json || exit 1; done

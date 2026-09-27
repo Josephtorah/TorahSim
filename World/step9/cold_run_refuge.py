@@ -372,6 +372,7 @@ assert len(DATA) == 19, len(DATA)   # the design said eighteen; the_presence_row
 for k, row in DATA.items():
     assert 'value' in row and 'settings' in row and 'source' in row and len(row['settings']) >= 1, k
 
+del k, row   # THE DEUTERONOMY WALK 16b (2026-09-25; LEAN): the loop's stray variables deleted — `row` had stayed bound to the last DATA row (the_presence_rows), the object courts_prophet's RG_PRES shares; the cache probe C6 read the sharing LOST once courts_prophet was cached (16b's chain, first pass) — a stray module value, none kept
 # ===== F1: THE LEVITE CITIES (Num 35:1-8) ===================================================================
 def the_levite_cities(case, data):
     del P[:]

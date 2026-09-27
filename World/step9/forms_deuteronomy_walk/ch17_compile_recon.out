@@ -1,0 +1,363 @@
+==== A. THE TAPE (cold_run_sequence.py) ====
+2490: RUN = (1341, 96, 88, 0, 12, 1672, 47, 319,   # THE DEUTERONOMY WALK 14b (2026-09-23; LEAN): PREDICTED in DEUTERONOMY_WALK.md "Sitting 14b" (THE PREDICTION'S ARITHMETIC) B
+2492:        127)   # THE DEUTERONOMY WALK 14b (2026-09-23; LEAN): 127 UNMOVED — no close this sitting (the blocks and the sta
+2526: PLACEMENT = {'markers': {'text_constrained': 108, 'reading_placed': 49}, 'events': {'text_constrained': 110, 'page_order': 1173, 'reading_placed': 58}}   # THE DEUTERONOM
+2528: NEWEST_RUNNER = 'festivals_judges'   # THE DEUTERONOMY WALK 14b (2026-09-23; LEAN): chapter 16's five own-day lines (after the tape's last Deuteronomy 15 line, no marker;
+2529: PREVIOUS_RUN = (1336, 96, 88, 0, 12, 1656, 46, 319,   # THE DEUTERONOMY WALK 14b (2026-09-23; LEAN): sitting 13b's RUN EXACTLY, read at the design (DEUTERONOMY_WALK.md "S
+2531:        127)   # THE DEUTERONOMY WALK 14b (2026-09-23; LEAN): sitting 13b's 127 — no close this sitting, THE REST keeps 1
+import lines: 30 | DAEMON_ORDER tuples: 44
+checkpoints: 299 | the D series in use: ['DA', 'DB', 'DC', 'DD', 'DE', 'DF', 'DG', 'DH'] | last: CJ11
+VERDICTS DH line: ["            'DH1 MATCH', 'DH2 MATCH', 'DH3 MATCH', 'DH4 MATCH', 'DH5 MATCH',   # THE DEUTERONOMY WALK 14b (2026-09-23; LEAN): chapter 16's five — the D series' "]
+lines naming Deut 17 or 18: [(2394, "    w.submit({'kind': 'stand_here_commanded', 'subject': 'moses', 'first_telling': 'told only here — Deut 18:16-17 forwa")]
+the last submit lines (the tape's newest own-day lines): [(2448, '    w.submit({\'kind\': \'three_pilgrimages_declared\', \'subject\': \'israel\', \'the_three_times\': "three times a yea'), (2449, "    w.submit({'kind': 'judges_in_every_gate_commanded', 'subject': 'israel', 'the_judges_and_officers': 'judge"), (2450, "    w.submit({'kind': 'asherah_and_pillar_barred', 'subject': 'israel', 'the_asherah': 'no asherah of any tree")]
+==== B. THE DISPOSITIONS ====
+edges 730 | pointers 210 | spans 71
+edges/pointers naming Deut 17/18 or courts_prophet: [('shelach', 'sanctions', False)] []
+span festivals_judges: [['Deut', 16, 1, 22]] | opening_speech (a multi-chapter span): [['Num', 27, 12, 23], ['Deut', 1, 1, 46]]
+an edge example (festivals_judges -> opening_speech): [{'from': 'festivals_judges', 'to': 'opening_speech', 'disposition': 'CALL', 'link': 'reference', 'carries': 'verdict', 'why': "THE DEUTERONOMY WALK 14b (2026-09-23) | 16:18-19's judges and 'you shall not respect persons' are Deut 1:16-17's charge by name — OS.the_officers_and_the_judges('the_qualities', 'the_charge', 'no_faces', 'judge_righteously', 'the_court_of_three', 'the_perverting_judge') CALLED (judges_charged ONE on the_court the tape's reference at (1, 2, 16); the qualities, the faces disputed, the court of three by the answer sheet); the readback rows 16:18-20 the kin by CALL"}]
+edges from seducers: [('obey_horeb', 'reference'), ('covenant_at_horeb', 'reference'), ('hear_o_israel', 'reference'), ('seven_nations', 'reference'), ('good_land', 'reference'), ('not_righteousness', 'reference'), ('second_tablets', 'reference'), ('blessing_and_curse', 'reference'), ('place_name', 'reference'), ('ordinances', 'reference'), ('erection', 'reference'), ('sanctions', 'reference'), ('lev24', 'reference'), ('mekoshesh', 'reference'), ('temurah', 'reference'), ('chukat', 'reference'), ('balak', 'reference'), ('beha', 'reference'), ('mamre', 'reference'), ('holiness', 'reference')]
+edges from festivals_judges: [('pesach', 'reference'), ('moadim', 'reference'), ('musafim', 'reference'), ('calendar', 'reference'), ('erection', 'reference'), ('place_name', 'reference'), ('opening_speech', 'reference'), ('exodus_story', 'reference'), ('ordinances', 'reference'), ('holiness', 'reference'), ('second_tablets', 'reference'), ('seven_nations', 'reference'), ('covenant_at_horeb', 'reference'), ('journeys', 'reference'), ('pesach_sheni', 'reference'), ('priesthood', 'none')]
+edges INTO seducers/korach/priesthood/refuge (the count): Counter({'sanctions': 30, 'priesthood': 20, 'ordinances': 19, 'exodus_story': 13, 'korach': 10, 'holiness_b': 8, 'opening_speech': 8, 'refuge': 4, 'seducers': 3})
+daemons 76 | functions (runners) 70 | law_festivals_judges: {'file': 'cold_run_festivals_judges.py', 'wraps': 'festivals_judges', 'given_at': 'Deut 16:1', 'installed_by': 'boot', 'watches': {'passover_at_the_place_declared': ['passover_at_the_place_commanded', 'passover_in_the_gates_barred', 'leaven_with_the_passover_barred', 'flesh_till_morning_barred', 'seventh_day_assembly_commanded'], 'weeks_and_booths_declared': ['weeks_at_the_place_commanded', 'booths_at_the_place_commanded'], 'three_pilgrimages_declared': ['three_pilgrimages_commanded', 'empty_appearance_barred'], 'judges_in_every_gate_commanded': ['judges_and_officers_commanded', 'judgment_wresting_barred', 'person_respecting_barred', 'bribe_barred', 'justice_pursuit_commanded'], 'asherah_and_pillar_barred': ['asherah_beside_the_altar_barred', 'pillar_barred']}}
+functions festivals_judges: {'the_passover_at_the_place': {'status': 'WRAPPED', 'by': 'law_festivals_judges'}, 'the_weeks_from_the_sickle': {'status': 'WRAPPED', 'by': 'law_festivals_judges'}, 'the_feast_of_booths': {'status': 'WRAPPED', 'by': 'law_festivals_judges'}, 'the_three_pilgrimages': {'status': 'WRAPPED', 'by': 'law_festivals_judges'}, 'the_judges_in_every_gate': {'status': 'WRAPPED', 'by': 'law_festivals_judges'}, 'the_asherah_and_the_pillar': {'status': 'WRAPPED', 'by': 'law_festivals_judges'}, 'the_readback': {'status': 'WRAPPED', 'by': 'law_festivals_judges'}}
+daemons of the kin (seducers, korach, priesthood, refuge, sanctions, holiness_b, ordinances): [('law_refuge', 'Num 35:1', 'boot'), ('law_seducers', 'Deut 13:1', 'boot'), ('law_korach', 'Num 16:1', 'boot')]
+register keys: ['counts', 'receipts', 'footers', 'registers'] | seats naming Deut 17/18: []
+==== C. THE PROBES ====
+I5 lines: [(196, "    ok = len(f_bad) == 5 and not f_real and len(real) == 76 and all('given_at' in d and 'installed_by' in d for d in real.values())   # THE DEUTERONOMY WALK 14b (2026-09-23; LEAN): 75 -> 76, law_festi")]
+readback defs: ['def q41():', 'def q42():', 'def q43():'] | the Q43 lines: [(54, '  THE DEUTERONOMY WALK 14b (2026-09-23) (DEUTERONOMY_WALK.md "Sitting 14b" THE PROBES; THE LEAN PASS) — written to FAIL before cold_run_festivals_judges.py exis'), (711, "for n, f in (('Q1 the table', q1), ('Q2 found', q2), ('Q3 the close by a prior run', q3), ('Q4 the retrograde dating', q4), ('Q5 the open disagreements', q5), (")]
+==== D. THE REGISTRIES ====
+effects 1088 | kinds 1171 | the candidate new effects present before: [] | the candidate kinds present before: []
+near names (effects): ['abomination_eating_barred', 'altar_purged', 'appearance_gift_owed', 'azkarah_to_fire', 'bitterness_of_spirit', 'blemish_barred', 'blessed_by_the_priest', 'blessed_by_the_priests', 'blessings_for_hearing', 'blood_required', 'boundary_witnessed', 'breached_the_first_rule', 'bride_switched', 'burned_by_court', 'burned_in_fire', 'came_to_egypt', 'came_whole', 'circumcision_due', 'condemned_city_inquiry_required', 'consecrated_firstborn', 'courts_established', 'cry_heard', 'death_and_slavery_offered', 'death_by_heaven', 'death_day_unknown', 'death_decreed_over_the_woman', 'death_oath_on_the_thief', 'descent_to_egypt_barred', 'divination_claimed', 'divined_blessing', 'dream_of_sun_moon_stars', 'due_to_priest', 'dwelt_in_egypt', 'egypt_drowned', 'egypt_emptied', 'egypt_wept_seventy', 'egyptians_eat_apart', 'elder_to_serve_the_younger', 'evil_purged_from_the_midst', 'evil_report_brought', 'evil_report_spread', 'evil_speech_spoken', 'false_prophet_hearing_barred', 'fear_answered', 'fear_not_promised', 'fear_of_god_doubted', 'fear_of_heaven_asked', 'fear_on_beasts', 'feared', 'feared_at_the_door', 'feared_god', 'feared_joseph', 'fell_before_his_brothers', 'fire_from_before_the_lord', 'fire_sank', 'firstborn_by_the_head', 'firstborn_death_decreed', 'firstling_sanctification_commanded', 'firstling_work_and_shearing_barred', 'foreign_gods_buried', 'foreign_gods_removal_owed', 'foreign_rite_inquiry_barred', 'garments_inherited', 'gift_declined', 'gift_order_barred', 'gift_presented', 'gift_sent_ahead', 'gifts_given', 'given_by_the_heart', 'given_to_the_heart', 'god_fearing_known', 'good_of_egypt_promised', 'ground_of_egypt_acquired', 'head_lifted_off_due', 'head_lifted_up_due', 'heard_by_god', 'heart_circumcision_commanded', 'heart_hardened', 'heart_numb', 'heart_stolen', 'heaven_and_earth_witness', 'house_abomination_barred', 'idolatry_begun', 'inheritance_barred', 'inheritance_questioned', 'inheritance_stayed_in_tribe', 'israel_heard', 'israel_hears_and_fears', 'kingdom_founded', 'kings_promised', 'kings_smitten', 'lashes', 'levirate_owed', 'levite_forsaking_barred', 'levites_portion_given', 'looking_back_barred', 'not_heard', 'offended_the_king', 'other_gods_barred', 'overheard', 'perpetual_fire_duty', 'place_chosen_required', 'pledge_returned_by_sunset', 'portion_added', 'portion_reserved', 'presumed_to_go_up', 'priesthood_removed', 'priestly_dues_granted', 'priests_ground_exempt', 'prophet_declared', 'purge_deadline', 'pursued_by_egypt', 'put_to_death', 'rebelled', 'regretted_making_man', 'rest_required', 'restored_with_gifts', 'returned_to_egypt', 'revealed_to_his_brothers', 'second_passover_due', 'sentence_pronounced', 'servants_feared', 'set_over_egypt', 'severance_gift_owed', 'shaved_whole', 'sold_into_egypt', 'song_sung', 'sons_words_heard', 'spirit_filled', 'spirit_rested', 'spirit_revived', 'spirit_troubled', 'sprinkling_due_seventh_day', 'sprinkling_due_third_day', 'stone_pillow', 'stone_rolled_alone', 'stoned', 'strange_offering_barred', 'stranger_barred', 'substituted_for_the_firstborn', 'sun_set_at_the_place', 'taken_by_the_king', 'wage_due_by_morning', 'waits_for_the_levir', 'well_with_the_stone', 'wholeness_owed', 'witness_declared', 'wives_and_children_claimed', 'wives_summoned_to_the_field', 'younger_set_first']
+near names (kinds): ['abomination_barred', 'altar_fire_tended', 'answered_the_king', 'awoke_and_feared', 'balaam_refused_the_first', 'balak_protested_first', 'bitterness_of_spirit', 'blemish_given', 'blemished_priest_approached', 'blessed_after_the_death', 'blood_required', 'bride_switched', 'brother_grew_poor', 'brother_sold_as_slave', 'brothers_recognized', 'captive_sentence_case', 'court_ruled_in_error', 'court_split', 'death_oath_sworn', 'divination_claimed', 'divination_confessed', 'driven_from_court', 'egyptian_struck', 'elder_approached', 'elders_ascended', 'elders_came_with_divinations', 'elders_case', 'elders_commanded', 'elders_prophesied', 'evil_report_brought', 'evil_report_spread', 'fear_answered', 'fear_set', 'feared_at_the_door', 'feared_greatly', 'feared_joseph', 'fell_before_his_brothers', 'fire_consumed_the_two_hundred_fifty', 'fire_descended', 'fire_of_the_lord_burned', 'fire_rained', 'fire_spread', 'first_fruits_brought', 'first_month_begun', 'first_offerings_brought', 'first_parable_taken_up', 'firstborn_born', 'firstborn_count_commanded', 'firstborn_counted', 'firstborn_death_decreed', 'firstborn_redeemed', 'firstborn_redemption_case', 'firstborn_son', 'firstling_born', 'firstling_law_declared', 'ghost_pit_consulted', 'gift_prepared', 'gift_presented', 'gift_urged', 'gifts_case', 'gifts_given', 'gifts_granted', 'god_came_to_balaam_first', 'god_heard', 'god_met_balaam_first', 'hearing_blessed', 'heart_circumcision_commanded', 'heart_hardened', 'heart_stolen', 'high_priest_died', 'inheritance_crossed_tribes', 'king_arose', 'king_died', 'king_pleaded', 'kingdom_begun', 'kings_and_balaam_slain', 'kings_demand_refused', 'levirate_claimed', 'levirate_commanded', 'levite_age_rule', 'levite_cities_case', 'levite_cities_commanded', 'levite_count_commanded', 'levite_rite_case', 'levite_roll_case', 'levite_service_case', 'levites_counted', 'levites_counted_second', 'levites_exempted', 'levites_gathered', 'levites_given', 'levites_portion_given', 'levites_purification_commanded', 'levites_purified_and_given', 'levites_rebuked', 'levites_work_counted', 'missed_the_first_passover', 'moab_feared_and_loathed', 'new_moon_case', 'not_heard', 'og_came_out_and_fear_not', 'overheard', 'portion_declared', 'portion_given', 'portions_lifted', 'presumed_to_go_up', 'priest_ate_holy', 'priest_body_marked', 'priest_daughter_whored', 'priest_defiled_for_dead', 'priest_impure_approached_holy', 'priest_married', 'priest_succeeded', 'priestly_due_claimed', 'priestly_gifts_case', 'priests_exempted', 'prophet_declared', 'prophet_test_declared', 'purge_commanded', 'rash_sentence_offered', 'release_firstborn_case', 'returned_to_egypt', 'seed_given_to_molech', 'sentence_at_meribah', 'sentence_declared', 'sentenced', 'set_over_egypt', 'seven_altars_built_first', 'sons_words_heard', 'sorcery_done', 'spirit_of_god_upon_balaam', 'spirit_troubled', 'stone_rolled', 'stoned_as_commanded', 'stoning_carried_out', 'stood_to_hear', 'strange_input_offered', 'stranger_approached', 'stranger_case', 'stranger_love_commanded', 'stranger_service_case', 'stranger_wronged', 'sun_rose', 'voice_heard', 'voice_heard_from_the_ark', 'vow_heard', 'well_kings_case', 'went_out_over_egypt', 'witness_declared', 'witness_oath_heard', 'witnesses_called', 'wives_answered', 'wives_summoned']
+ E blemish_barred | block | blemish barred — the BLOCK on the blemished priest: he shall not approach to offer the bread of his God, not t | corpus lev_21_priest_blemish (STEP_Lv_21_17, 21
+ E evil_purged_from_the_midst | body | the evil purged from the midst — THE PURGE FORMULA'S FIRST SEAT OF NINE: 'AND YOU SHALL PURGE THE EVIL FROM YO | corpus deu_13_seducers (STEP_Dt_13_6; the claim
+ E stoned | body | stoned — the death mode named in ink; for the ox, the beast's own docket entry | corpus exo_21_the_ordinances (the goring-ox sta
+ E put_to_death | body | put to death — the court docket opens a capital entry (mode per the compiled law) | corpus exo_21_the_ordinances (18 death-penalty 
+ E lashes | body | liable to lashes — the flogging entry on the court docket | corpus deu_25_courts_yibbum; 6 prose attestatio
+ E false_prophet_hearing_barred | block | the false prophet's hearing barred — the BLOCK the line prophet_test_declared writes on Israel: 'YOU SHALL NOT | corpus deu_13_seducers (STEP_Dt_13_2 through ST
+ E tested_by_the_lord | status | tested by the LORD — the STATUS the line prophet_test_declared writes on Israel: 'FOR THE LORD YOUR GOD IS TES | corpus deu_13_seducers (STEP_Dt_13_4; the claim
+ E cleaving_commanded | status | the cleaving commanded — the STATUS the line cleaving_commanded writes on Israel: 'the LORD your God you shall | corpus deu_10_second_tablets (STEP_Dt_10_20 thr
+ E pity_barred | block | pity barred — the BLOCK the chapter's second line writes on Israel: 'your eye shall not pity them' (7:16 — the | corpus deu_07_nations_cherem (STEP_Dt_7_16; the
+ E israel_hears_and_fears | status | Israel hears and fears — the STATUS the line inciter_law_declared writes on Israel: 'AND ALL ISRAEL SHALL HEAR | corpus deu_13_seducers (STEP_Dt_13_12; the clai
+ E prophet_declared | status | a prophet declared — the STATUS the dream's verdict writes on Abraham: 'for he is a prophet, and he will pray  | corpus gen_36_gerar_dream_prophet (STEP_Gn_20_7
+ E kings_promised | heaven | kings promised — the HEAVEN entry the second appearance writes on Jacob: 'a nation and an assembly of nations  | corpus gen_58_israel_written_three_deaths (STEP
+ E kingdom_founded | status | a kingdom founded — the STATUS the table's one narrative writes on Nimrod: 'and the beginning of his kingdom w | corpus gen_24_nations_table (STEP_Gn_10_8_9, ST
+ E priestly_dues_granted | status | the priestly dues granted — the standing STATUS the grant writes on Aaron: 'and I, behold, I have given you th | corpus num_18_priest_levite_dues (STEP_Nm_18_8 
+ E levites_portion_given | transfer | the Levites' portion given — the TRANSFER the congregation's fiftieth writes on the Levites, the congregation' | corpus num_31_midian (STEP_Nm_31_30, STEP_Nm_31
+ E levite_forsaking_barred | block | the Levite's forsaking barred — the BLOCK the line profane_slaughter_permitted writes on Israel: 'TAKE HEED TO | corpus deu_12_place_name (STEP_Dt_12_19; the cl
+ E inheritance_barred | block | an inheritance barred — the BLOCK on the priests and the Levites in the land's division: 'in their land you sh | corpus num_18_priest_levite_dues (STEP_Nm_18_20
+ E other_gods_barred | block | other gods barred — the BLOCK the second word writes on Israel: 'you shall have no other gods before me; you s | corpus deu_05_decalogue (STEP_Dt_5_7 through ST
+ E wholeness_owed | debit | wholeness owed — the DEBIT the opening charge writes on Abraham: 'walk before Me and be whole' — closed by the | corpus gen_33_shaddai_covenant_flesh (STEP_Gn_1
+ E sentence_pronounced | status | the sentence pronounced — the STATUS the father-in-law's word writes on the accused: 'bring her out and let he | corpus gen_61_yehuda_tamar (STEP_Gn_38_24)
+ E witness_declared | status | a witness declared — the STATUS the declaration writes on the heap: 'this heap is witness between me and you t | corpus gen_54_pursuit_heap_two_tongues (STEP_Gn
+ E foreign_rite_inquiry_barred | block | the inquiry after the nations' gods barred — the BLOCK the line nations_cut_off_warned writes on Israel: 'TAKE | corpus deu_12_place_name (STEP_Dt_12_30, STEP_D
+ E house_abomination_barred | block | the abomination barred from the house — the BLOCK the chapter's third line writes on Israel: 'and you shall no | corpus deu_07_nations_cherem (STEP_Dt_7_25 thro
+ E returned_to_egypt | status | returned to Egypt — the STATUS the return writes on the sons: 'and Joseph returned to Egypt, he and his brothe | corpus gen_73_coffin_in_egypt (STEP_Gn_50_14)
+ E due_to_priest | transfer | due to the priest — a priestly portion transfers (hide, dues, minchah remainder) under its gates | corpus lev_07_asham_procedure (LV07A-05 hide fo
+ E strange_offering_barred | block | a strange offering barred — the BLOCK on the inner altar's input: 'you shall not offer on it strange incense,  | corpus exo_30_incense_shekel (STEP_Ex_30_9)
+ E holy_things_in_the_gates_barred | block | the holy things in the gates barred — the BLOCK the line profane_slaughter_permitted writes on Israel: 'YOU MA | corpus deu_12_place_name (STEP_Dt_12_17, STEP_D
+ E courts_established | status | the courts established — the STATUS the appointment writes on the people: 'rulers of thousands, rulers of hund | corpus exo_18_jethro_and_the_judges (STEP_Ex_18
+ E judges_charged | status | the judges charged — the STATUS Moses' charge writes on the court: 'and I charged your judges at that time, sa | corpus deu_01_frame_officers (STEP_Dt_1_16, STE
+ E judges_and_officers_commanded | status | judges and officers commanded — the STATUS the line judges_in_every_gate_commanded writes on Israel: 'JUDGES A | corpus deu_16_festivals_judges (STEP_Dt_16_1 th
+ E justice_pursuit_commanded | status | the pursuit of justice commanded — the STATUS the line judges_in_every_gate_commanded writes on Israel: 'JUSTI | corpus deu_16_festivals_judges (STEP_Dt_16_1 th
+ E bribe_barred | block | the bribe barred — the BLOCK on the judge: no bribe, even to judge truly; the bribe blinds the open-eyed and t | corpus exo_23_justice_calendar (STEP_Ex_23_8)
+ E condemned_city_inquiry_required | status | the condemned city's inquiry required — the STATUS the line condemned_city_law_declared writes on Israel: 'WHE | corpus deu_13_seducers (STEP_Dt_13_13 through S
+ E descent_to_egypt_barred | block | the descent to Egypt barred — the BLOCK the appearance writes on Isaac: 'do not go down to Egypt; dwell in the | corpus gen_44_isaac_gerar_sister_expel (STEP_Gn
+ E burned_by_court | body | burned by the court — the capital docket entry in the burning mode: the one mode the span names by its own ver | corpus lev_20_sanctions (LV20-05 — the burning'
+ E adding_barred | block | adding barred — the BLOCK the chapter's one law writes on Israel: 'you shall not add to the word which I comma | corpus deu_04_obey_horeb (STEP_Dt_4_1, STEP_Dt_
+a statute kind row (asherah_and_pillar_barred) fields: ['the_asherah', 'the_pillar'] | form statute
+ K prophet_test_declared | statute | the prophet's test declared — 'WHEN A PROPHET ARISES AMONG YOU, OR A DREAMER OF A DREAM, and gives you a sign or a wonder, and the | corpus deu_13_seducers (STEP_Dt_13_1 through ST
+ K inciter_law_declared | statute | the inciter's law declared — 'WHEN YOUR BROTHER, THE SON OF YOUR MOTHER, or your son or your daughter or the wife of your bosom or | corpus deu_13_seducers (STEP_Dt_13_1 through ST
+ K purge_commanded | speech | a purge commanded — 'and Jacob said to his house and to all who were with him: remove the foreign gods that are in your midst, and | corpus gen_58_israel_written_three_deaths (STEP
+ K sentence_declared | speech | the sentence declared — THE TENT'S OUTPUT: 'and the LORD spoke to Moses saying: bring out the curser outside the camp, and let all | corpus lev_24_blasphemer_talion (STEP_Lv_24_13,
+ K priestly_gifts_case | case | the exam's rows on the gifts (Num 18:8-19 — the twenty-four, eaten in greatness, the most holy list and its eating place, impure t | corpus num_18_priest_levite_dues (STEP_Nm_18_8 
+ K stoned_as_commanded | act | stoned as commanded — THE EXECUTION: 'and Moses spoke to the children of Israel, and they brought out the curser outside the camp  | corpus lev_24_blasphemer_talion (STEP_Lv_24_23;
+ K witnesses_called | speech | heaven and earth called to witness — 'WHEN you beget sons and sons' sons and have grown old in the land and deal corruptly and mak | corpus deu_04_obey_horeb (STEP_Dt_4_1 through S
+ K seed_given_to_molech | case | seed given to Molech — 'and of your seed you shall not give to pass to Molech', 'who gives of his seed to Molech shall surely be p | corpus the narrative tape logs no EVENT operato
+ K ghost_pit_consulted | case | a ghost-pit or familiar spirit turned to, borne, or consulted — 'do not turn to the ghost-pits and to the familiar spirits', 'and  | corpus the narrative tape logs no EVENT operato
+ K sorcery_done | case | sorcery done — the clause 'a sorceress you shall not let live' (man and woman alike, the verse speaking of the common case — Mekhi | corpus the narrative tape logs no EVENT operato
+ K abomination_barred | statute | the abomination barred — 'THE GRAVEN IMAGES OF THEIR GODS YOU SHALL BURN WITH FIRE; you shall not covet the silver and gold on the | corpus deu_07_nations_cherem (STEP_Dt_7_1 throu
+ K kings_demand_refused | speech | the king's demand refused — 'and the king of Sodom said to Abram: give me the persons, and take the goods for yourself' (14:21); ' | corpus gen_30_war_of_kings (STEP_Gn_14_21); gen
+ K king_arose | act | a king arose — 'and there arose a new king over Egypt who did not know Joseph' (Sotah 11a:6: Rav and Shmuel — a new king in fact,  | corpus exo_01_names_and_midwives: qam (agent me
+ K kingdom_begun | act | a kingdom begun — 'and the beginning of his kingdom was Babel and Erech and Accad and Calneh, in the land of Shinar' | corpus gen_24_nations_table: build at Gen 10:10
+ K portion_declared | speech | the portion declared — 'and the LORD said to Aaron: in their land you shall not inherit, and you shall have no portion among them; | corpus num_18_priest_levite_dues (STEP_Nm_18_20
+==== E. THE CALENDAR (no clock datum expected — the chapters' laws carry no date) ====
+ parameters 71 | keys naming king|court|prophet|witness: ['the_prophets_death']
+==== F. THE KIN'S CELLS BY STATIC SCAN (every runner's defs; the refs they name among the kin verses) ====
+ balak.census: refs ['1 Kgs 11:8'] | asks 0 [] | keys ['curse_roots', 'word_formula', 'gentile_prophets', 'balaam_blind', 'balaam_and_the_ass', 'moment_of_anger', 'house_of_silver', 'stands', 'altars_total', 'gentile_olah', 'tents_doors', 'shema_candidate', 'star_reading', 'balaam_share', 'gentile_share', 'balaam_disciples']
+ balak.the_stands: refs ['Deut 18:18', 'Gen 49:10'] | asks 0 []
+ balak.peor: refs ['Exod 18:21'] | asks 0 []
+ balak.law_balak: refs ['Deut 18:18', 'Gen 49:10'] | asks 0 []
+ balak.scene: refs ['Exod 18:21'] | asks 0 []
+ balak.narrative: refs ['Exod 18:21', 'Num 18:19'] | asks 0 []
+ bamidbar.scene: refs ['Num 3:10'] | asks 0 []
+ bamidbar.narrative: refs ['Num 3:10', 'Num 3:5'] | asks 0 []
+ beha.scene: refs ['Num 11:26'] | asks 0 []
+ beha.narrative: refs ['Num 11:29', 'Num 12:8', 'Num 3:9'] | asks 0 []
+ blessing_and_curse.the_discipline_retold: refs ['Num 16:31'] | asks 9 ['love_and_keep', 'the_discipline_seen', 'signs_and_deeds', 'the_sea_flowed', 'the_wilderness_state', 'dathan_and_abiram', 'korah_unnamed', 'every_living_thing', 'your_eyes_have_seen']
+ blessing_and_curse.the_borders_and_the_dread: refs ['Deut 7:1'] | asks 7 ['keep_and_cleave', 'nations_greater_than_you', 'every_place_the_sole_treads', 'the_returners_line', 'no_man_shall_stand', 'as_he_spoke_to_you', 'the_pilgrims_guard']
+ blessing_and_curse.rb: refs ['Deut 7:1', 'Num 16:31'] | asks 0 [] | keys ['the_readback', 'the_counter_and_the_parameters', 'rain_dates', 'gerizim_ebal_place', 'korah_unnamed_twice', 'every_living_thing_three_seats', 'the_two_named_rains_added', 'the_frontlets_three_spellings', 'the_doorposts_two_plurals', 'the_receipts_fourth_shape', 'the_borders_four_extents', 'the_returners_line', 'gilgal_one_seat', 'moses_unnamed', 'no_number_verse', 'joshuas_receipts']
+ blessing_and_curse.narrative: refs ['Deut 7:1', 'Num 16:13', 'Num 16:31', 'Num 16:32'] | asks 0 []
+ borders._side: refs ['Num 18:23', 'Num 18:24'] | asks 0 []
+ chatat.timing: refs ['Deut 17:19'] | asks 0 []
+ chatat.share: refs ['Lev 21:21', 'Lev 7:33'] | asks 0 []
+ chatat.table: refs ['Lev 7:30'] | asks 0 []
+ chatat.scene: refs ['Lev 10:14'] | asks 0 []
+ chatat.mrow: refs ['Lev 10:14', 'Lev 10:15', 'Lev 21:22', 'Lev 7:33'] | asks 0 []
+ chukat.sources: refs ['Lev 20:3', 'Lev 27:28'] | asks 0 [] | keys ['heifer_age', 'heifer_hairs', 'heifer_yoke', 'heifer_blemish', 'heifer_pregnant', 'heifer_from_gentile', 'who_burns', 'who_slaughters', 'work_invalidates', 'tvul_yom_fit', 'sprinkle_toward', 'bundle', 'ashes_thirds', 'nine_heifers', 'meilah_on_the_heifer', 'removes']
+ chukat.corpse_tumah: refs ['Gen 49:10'] | asks 55 ['seven_days', 'schedule', 'purification', 'sprinkling_water', 'minor', 'toucher_of_toucher', 'removes', 'karet_entry', 'high_priest_exempt', 'impure_inside', 'metal_vessels_decree', 'tent', 'tent_gentile', 'tent_limbs', 'tent_material', 'tent_measure', 'overshadowing_table', 'open_vessel', 'field_sources', 'sword_like_slain', 'fetus_in_womb', 'quarter_log_blood', 'living_water', 'mixing_order', 'sprinkler_who', 'who_sanctifies']
+ chukat.arad_and_the_serpent: refs ['Lev 27:28'] | asks 13 ['captive_acquired', 'vow_form', 'cherem_law', 'hormah', 'turn_back', 'light_bread', 'spoke_against', 'bite_and_burn', 'singular_serpent', 'pole_word', 'serpent_property', 'serpent_heals', 'nehushtan']
+ chukat.well_and_kings: refs ['Gen 49:10'] | asks 18 ['zered_date', 'book_of_wars', 'arnon_miracle', 'then_sang', 'lawgiver', 'well_mouth', 'mattanah_reading', 'from_his_hand', 'sihon_purified', 'parable_tellers', 'jeremiah_quote', 'ammon_border', 'land_east', 'spy_verb', 'og_lore', 'deut3_delta', 'joshua_refrain', 'sihon_refused']
+ chukat.law_chukat: refs ['Gen 49:10', 'Lev 27:28'] | asks 0 []
+ chukat.scene: refs ['Lev 27:28'] | asks 0 []
+ chukat.narrative: refs ['Gen 49:10', 'Lev 27:28'] | asks 0 []
+ covenant_at_horeb.out: refs ['Deut 17:10', 'Deut 17:11', 'Deut 18:16', 'Deut 18:17', 'Deut 1:15', 'Deut 4:10', 'Deut 5:22', 'Deut 5:23', 'Deut 5:24', 'Deut 5:25', 'Deut 5:26', 'Deut 5:27', 'Deut 5:28', 'Deut 5:29', 'Deut 5:30', 'Deut 5:31'] | asks 0 []
+ covenant_at_horeb.lr: refs ['Deut 17:2', 'Deut 17:3', 'Deut 4:10', 'Deut 5:22', 'Deut 5:23', 'Deut 5:27', 'Deut 5:28'] | asks 0 [] | keys ['the_readback', 'the_second_word', 'the_visiting', 'the_no_image_list', 'the_tenth_word', 'the_sabbath_grounds', 'the_ninth_word', 'keep_and_remember', 'the_reward_clause', 'the_honor_by_call', 'the_receipts', 'the_two_copies', 'the_second_hole', 'the_export_division', 'the_mediator', 'the_return_to_tents']
+ covenant_at_horeb.the_second_word: refs ['Deut 17:3'] | asks 8 ['no_other_gods', 'no_image', 'bow_and_serve', 'in_its_way', 'the_embracer', 'the_visiting', 'the_ketiv', 'the_write']
+ covenant_at_horeb.the_tenth_word: refs ['Deut 5:22'] | asks 4 ['covet_and_desire', 'the_wife_first', 'the_coveter_who_pays', 'the_write']
+ covenant_at_horeb.the_voice_and_the_request: refs ['Deut 5:28'] | asks 6 ['added_no_more', 'the_tablets_given_to_me', 'you_came_near', 'the_request', 'hear_and_do', 'the_write']
+ covenant_at_horeb.law_covenant_at_horeb: refs ['Deut 17:3', 'Deut 5:23', 'Deut 5:28'] | asks 0 []
+ covenant_at_horeb.narrative: refs ['Deut 18:16', 'Deut 5:22', 'Deut 5:23', 'Deut 5:24', 'Deut 5:27', 'Deut 5:28', 'Deut 5:29', 'Deut 5:30', 'Deut 5:31', 'Exod 20:18'] | asks 0 []
+ erection.nations: refs ['Deut 7:1', 'Deut 7:5'] | asks 0 []
+ erection.covenant: refs ['Deut 17:2', 'Deut 7:1', 'Deut 7:3', 'Deut 7:4', 'Deut 7:5'] | asks 0 []
+ erection.repeats: refs ['Lev 27:27'] | asks 0 []
+ erection.calf: refs ['Deut 13:18'] | asks 0 []
+ erection.presence: refs ['Deut 17:6', 'Num 35:30'] | asks 0 []
+ erection.law_erection: refs ['Deut 7:3', 'Deut 7:5'] | asks 0 []
+ exodus_story.scene: refs ['Exod 18:21', 'Exod 18:25'] | asks 0 []
+ family.fmt2: refs ['Deut 5:22', 'Gen 49:10', 'Lev 7:30'] | asks 0 []
+ family.commission: refs ['Exod 22:16'] | asks 0 []
+ family.levirate: refs ['Deut 5:22', 'Num 18:16'] | asks 0 []
+ family.mrow: refs ['Deut 5:22', 'Gen 49:10'] | asks 0 []
+ festivals_judges.effect_scan: refs ['Exod 23:8'] | asks 0 []
+ festivals_judges.the_judges_in_every_gate: refs ['Deut 16:18', 'Exod 23:8'] | asks 8 ['the_court_for_all_israel', 'the_three_tiers', 'the_qualified_judge', 'wrest_no_judgment', 'respect_no_person', 'take_no_bribe', 'justice_justice', 'that_you_may_live']
+ festivals_judges.the_readback: refs ['Exod 23:8'] | asks 5 ['the_table', 'the_supplied_rows', 'no_pointer_no_state_no_open', 'the_twin_diffed', 'no_retrograde_row']
+ festivals_judges.rb: refs ['Deut 16:18', 'Deut 16:19', 'Deut 16:20', 'Deut 1:16', 'Exod 18:25'] | asks 0 []
+ festivals_judges.law_festivals_judges: refs ['Deut 16:18'] | asks 0 []
+ festivals_judges.narrative: refs ['Deut 16:18', 'Deut 16:19', 'Deut 16:20'] | asks 0 []
+ food_tithe.effect_scan: refs ['Deut 14:28', 'Deut 14:29'] | asks 0 []
+ food_tithe.the_sons_and_the_cuttings: refs ['Deut 7:1'] | asks 8 ['the_sonships_arms', 'the_cut_and_the_factions', 'the_mourner_who_cuts', 'the_baldness_both_ways', 'the_measure_and_the_count', 'for_the_dead', 'the_frontlets_place', 'the_holy_people']
+ food_tithe.the_second_tithe: refs ['Num 18:20', 'Num 18:25'] | asks 11 ['named_the_second', 'the_liabilities', 'year_by_year', 'the_wall_two_capacities', 'the_house_standing', 'the_year_passed', 'the_exiles_arm', 'heavens_property', 'the_firstling', 'the_firstling_from_outside', 'learn_to_fear']
+ food_tithe.the_far_place_the_money_the_rejoicing_and_the_levite: refs ['Num 18:20'] | asks 9 ['the_far_place', 'the_moneys_form', 'the_possession', 'the_three_moneys', 'the_class_from_the_four', 'the_containers', 'the_rejoicing', 'the_levites_ladder', 'shiloh_and_the_house']
+ food_tithe.the_third_year: refs ['Deut 14:28', 'Num 18:20'] | asks 14 ['one_tithe_not_two', 'the_levite_never_interrupted', 'the_removal_date', 'the_seventh_year_by_the_cycle', 'the_tithes_new_year', 'the_gifts_exempt', 'the_four_in_want', 'the_measures', 'the_uses_barred', 'the_convert_at_the_gate', 'the_resident_alien_at_the_gate', 'ezras_penalty', 'the_courtyard_from_your_gates', 'the_animal_tithe_now']
+ food_tithe.rb: refs ['Deut 14:27', 'Deut 14:28', 'Deut 14:29', 'Deut 7:1', 'Num 18:20', 'Num 18:25'] | asks 0 [] | keys ['the_readback', 'the_counter_and_the_parameters', 'the_birds_signs', 'the_carcass_table', 'the_moneys_form', 'the_removal_date', 'the_tithes_new_year', 'the_twin_diffed', 'the_parsers_two_and_three', 'the_infinitive_absolutes', 'the_kids_three_seats', 'the_holy_people_three_seats', 'the_sojourner_two_persons', 'the_scans', 'the_registrys_homographs', 'the_priesthood_edge_naming_14_1']
+ food_tithe.law_food_tithe: refs ['Deut 14:28'] | asks 0 []
+ food_tithe.narrative: refs ['Deut 10:9', 'Deut 14:28'] | asks 0 []
+ gad_reuben.tok: refs ['Num 11:28'] | asks 0 [] | keys ['the_order_of_the_offer', 'the_oath_supplied', 'caleb_the_kenizzite', 'doubled_condition', 'the_conditions_four_limbs', 'negative_arm_outcome', 'the_clearance', 'half_manassehs_stipulation', 'the_forty_thousand', 'the_two_crossed_cities', 'jairs_lineage', 'jair_and_machir_survived', 'moses_grave', 'the_land_east_status', 'count_from', 'deaths_ceased']
+ good_land.receipt_seats: refs ['Deut 12:19', 'Deut 12:30', 'Deut 13:11', 'Deut 13:19', 'Deut 13:4', 'Deut 13:6', 'Deut 14:29', 'Deut 16:20', 'Deut 17:17', 'Deut 17:19', 'Deut 17:20', 'Deut 17:3', 'Deut 4:19', 'Deut 5:31', 'Deut 7:25'] | asks 0 []
+ good_land.rb: refs ['Deut 7:1'] | asks 0 [] | keys ['the_readback', 'not_by_bread_alone', 'the_garment_and_the_foot', 'honey_without_milk', 'the_seven_species_seat', 'the_measures_seat', 'the_kings_law_tokens', 'my_power_my_hand', 'the_written_read_pair', 'the_interrogative_he', 'the_two_rocks', 'the_serve_bow_order', 'the_ten_uncited', 'the_credits', 'the_grace_conditional', 'the_four_blessings']
+ good_land.narrative: refs ['Deut 7:1'] | asks 0 []
+ hear_o_israel.rb: refs ['Deut 4:10', 'Deut 5:28'] | asks 0 [] | keys ['the_readback', 'the_large_letters', 'the_spellings', 'the_two_sets', 'the_recitation_times', 'the_postures', 'the_exemptions', 'the_passages_order', 'the_tefillin_table', 'the_mezuzah_table', 'the_seven', 'the_list', 'the_oath_by_the_name', 'the_abutter', 'the_four_sons', 'the_receipt_without_the_name']
+ holiness.shelamim: refs ['Deut 14:28'] | asks 0 []
+ holiness.gifts: refs ['Deut 14:28'] | asks 0 []
+ holiness.conduct: refs ['Exod 23:8'] | asks 0 []
+ holiness.scene: refs ['Lev 19:15'] | asks 0 []
+ holiness.mrow: refs ['Lev 19:15'] | asks 0 []
+ holiness_b.daughter_sanctuary: refs ['Lev 20:27'] | asks 0 []
+ holiness_b.law_holiness_b: refs ['Lev 20:27'] | asks 0 []
+ holiness_b.scene: refs ['Lev 19:15', 'Lev 19:31', 'Lev 20:27'] | asks 0 []
+ holiness_b.mrow: refs ['Lev 19:15', 'Lev 20:27'] | asks 0 []
+ incense_shekel.bull: refs ['Deut 9:10'] | asks 0 []
+ incense_shekel.rams: refs ['Exod 29:27', 'Lev 7:32', 'Lev 7:34', 'Num 18:8'] | asks 0 []
+ incense_shekel.shekel: refs ['Num 18:16'] | asks 0 []
+ incense_shekel.sabbath: refs ['Num 18:19'] | asks 0 []
+ incense_shekel.scene: refs ['Num 16:17'] | asks 0 []
+ incense_shekel.mrow: refs ['Exod 29:27', 'Num 15:35', 'Num 18:16'] | asks 0 []
+ joseph.dinah: refs ['Exod 22:16'] | asks 0 []
+ joseph.scene: refs ['Gen 35:11'] | asks 0 []
+ journeys.narrative: refs ['Deut 7:5'] | asks 0 []
+ korach.clause: refs ['Num 16:1', 'Num 16:30', 'Num 16:32', 'Num 18:11', 'Num 18:12', 'Num 18:14', 'Num 18:15', 'Num 18:16', 'Num 18:17', 'Num 18:18', 'Num 18:19', 'Num 18:20', 'Num 18:21', 'Num 18:27', 'Num 18:29', 'Num 18:30'] | asks 0 [] | keys ['korach_death_mode', 'korach_share', 'earth_mouth', 'sons_of_korach', 'dispute_not_for_heaven', 'maintaining_a_dispute', 'wives', 'incense_stays_plague', 'staff_hidden_with', 'levite_at_another_work', 'zar_who_served', 'genealogy_chamber', 'the_twenty_four', 'settings', 'betrothed_eats', 'terumah_measure']
+ korach.rebellion: refs ['Num 16:1'] | asks 22 ['took', 'two_hundred_fifty', 'too_much_returned', 'congregation_ten', 'summons_procedure', 'test', 'oath', 'oath_warning_formula', 'new_creation', 'death_mode', 'share', 'sons_of_korach', 'exclusion_by_sin', 'not_for_heaven', 'earth_mouth_cain', 'swallowed', 'fire', 'wives', 'names', 'visiting_the_sick', 'elect', 'what_moses_heard']
+ korach.plague_and_staffs: refs ['Lev 21:21'] | asks 14 ['elevate_in_sanctity', 'burning_mode', 'stranger_incense_ban', 'maintaining_a_dispute', 'incense_atones', 'angel_of_death', 'plague_count', 'fire_from_the_altar', 'staffs_count', 'budded', 'staff_hidden', 'three_deaths', 'levite_at_another_work', 'whoever_comes_near']
+ korach.the_watch: refs ['Num 18:8'] | asks 16 ['iniquity_of_the_sanctuary', 'iniquity_of_the_priesthood', 'song', 'fence', 'watch_stories', 'watch_places', 'stranger_warning', 'stranger_death', 'stranger_death_scope', 'no_more_wrath', 'given_to_the_lord', 'service_of_gift', 'lots', 'genealogy_chamber', 'washing_hands', 'why_reiterate']
+ korach.the_gifts: refs ['Lev 7:30', 'Num 18:16', 'Num 18:20', 'Num 18:8'] | asks 61 ['with_joy', 'covenant_reason', 'eaten_in_greatness', 'twenty_four', 'most_holy_list', 'from_the_fire', 'returned', 'most_holy_eating_place', 'every_male', 'most_holy_portion_use', 'impure_terumah_benefit', 'doubtful_terumah_watch', 'breast_and_thigh', 'household', 'betrothed_eats', 'the_best_triad', 'bikkurim', 'devoted', 'devoted_status', 'devoted_to_whom', 'devotion_by_priests', 'devote_firstborn', 'opens_the_womb', 'redemption_rate', 'redemption_before_thirty', 'redemption_timing']
+ korach.the_tithe: refs ['Deut 10:9', 'Num 18:20'] | asks 42 ['no_inheritance', 'exclusion_table', 'tithe_to_levites', 'tithe_recipient', 'third_year', 'tithe_to_foreigners', 'levite_he', 'tithe_of_the_tithe', 'from_it', 'mourner', 'levite_preceded', 'estimate', 'who_separates_tithe_terumah', 'thresholds', 'terumah_measure', 'kind_for_kind', 'the_best', 'inferior_for_superior', 'impure_for_pure', 'one_in_a_hundred', 'what_remains_common', 'every_place', 'household_deputes', 'wage', 'as_wages', 'agent']
+ korach.law_korach: refs ['Num 16:1', 'Num 16:18', 'Num 16:27'] | asks 0 []
+ korach.scene: refs ['Num 16:2', 'Num 16:32', 'Num 18:11', 'Num 18:14', 'Num 18:16', 'Num 18:26', 'Num 18:32'] | asks 0 []
+ korach.narrative: refs ['Deut 10:9', 'Lev 7:34', 'Num 16:1', 'Num 16:12', 'Num 16:15', 'Num 16:16', 'Num 16:18', 'Num 16:2', 'Num 16:20', 'Num 16:22', 'Num 16:23', 'Num 16:25', 'Num 16:28', 'Num 16:31', 'Num 16:32', 'Num 16:35'] | asks 0 []
+ mamre.gerar: refs ['Gen 20:7'] | asks 0 []
+ mekoshesh.out: refs ['Deut 17:7', 'Lev 24:14'] | asks 0 [] | keys ['gatherers_labor', 'settings', 'warning_names_the_death', 'settings', 'hanging_after_stoning', 'settings', 'stoning_house_height', 'settings']
+ mekoshesh.capital_procedure: refs ['Deut 17:7', 'Lev 24:14', 'Num 15:35', 'Num 15:36'] | asks 10 ['custody', 'warning', 'venue', 'confession', 'stripping', 'stoning', 'stones_and_a_stone', 'hanging', 'burial', 'mode']
+ mekoshesh.the_gatherer: refs ['Num 15:35'] | asks 6 ['labor', 'identity', 'liability', 'mode', 'uncertainty', 'the_case']
+ mekoshesh.law_mekoshesh: refs ['Deut 17:7'] | asks 0 []
+ mekoshesh.scene: refs ['Deut 17:7'] | asks 0 []
+ mekoshesh.narrative: refs ['Deut 17:7', 'Num 15:35', 'Num 15:36'] | asks 0 []
+ midian.torah_seats: refs ['Deut 10:8', 'Num 15:36', 'Num 16:9'] | asks 0 [] | keys ['muster_count', 'levi_in_the_muster', 'delivered_how', 'holy_vessels', 'phinehas_lineage', 'balaam_death', 'cozbi_and_zur', 'castles_reading', 'known_a_man_test', 'frontplate_test', 'proselyte_age', 'punish_by_inference', 'goat_work_reading', 'camp_entry_reading', 'kashering_modes', 'immersion_source']
+ midian.narrative: refs ['Deut 10:8', 'Num 16:9'] | asks 0 []
+ minchah.bird: refs ['Lev 22:19'] | asks 0 []
+ mishpatim_2.grade: refs ['Exod 22:16'] | asks 0 []
+ mishpatim_2.scene: refs ['Exod 22:16'] | asks 0 []
+ mishpatim_3.scene: refs ['Exod 21:14'] | asks 0 []
+ naso.sotah: refs ['Deut 17:11', 'Lev 7:30'] | asks 62 ['conditions', 'witnesses', 'secluded', 'status', 'husband_clean', 'husband_first', 'husband_dead', 'warned_about', 'warning_scope', 'court_warns', 'witnesses_overseas', 'witnesses_conspiring', 'rumor', 'witness_of_defilement', 'contradicting', 'escort', 'court', 'admonition', 'confesses', 'place', 'uncovering', 'minchah_form', 'ephah', 'fistful', 'waving', 'bringing_near']
+ naso.narrative: refs ['Lev 7:30'] | asks 0 []
+ not_righteousness.rb: refs ['Deut 9:10'] | asks 0 [] | keys ['the_readback', 'the_clock_read_back', 'the_offers_three_forms', 'the_tablets_three_spellings', 'the_taunts_four_forms', 'the_three_swaps', 'the_fourth_verb_dropped', 'solomon_and_nehemiah', 'the_ten_names_of_prayer', 'the_calfs_own_day', 'the_second_ascents_date', 'the_stiff_necks_six_seats', 'the_three_voices_on_one_pronoun', 'taberah_outside_the_ten', 'the_merit_of_the_fathers', 'the_crowns_of_horeb']
+ not_righteousness.narrative: refs ['Deut 9:10'] | asks 0 []
+ obey_horeb.out: refs ['Deut 10:8', 'Deut 13:1', 'Deut 17:2', 'Deut 4:10', 'Deut 4:19', 'Deut 4:2', 'Deut 5:22', 'Deut 5:23', 'Deut 5:24', 'Deut 5:26', 'Deut 9:10', 'Num 12:8', 'Num 16:30'] | asks 0 []
+ obey_horeb.rb: refs ['Deut 4:10'] | asks 0 [] | keys ['the_readback', 'the_law_bal_tosif', 'the_teach_your_sons', 'the_horeb_hole', 'the_ten_words_seats', 'the_tablets_plene', 'the_no_image_list', 'the_host_apportioned', 'the_bars_third_telling', 'the_exile_case', 'the_witnesses_chain', 'the_creed', 'the_inquiry_limits', 'the_instruments', 'the_three_cities', 'the_manslayer_definition']
+ obey_horeb.horeb_retold: refs ['Deut 4:10'] | asks 8 ['take_heed_lest_you_forget', 'the_daughters_excluded', 'the_day_at_horeb', 'learn_and_teach', 'the_mountain_burning', 'the_voice_and_no_form', 'the_ten_words_and_the_tablets', 'commanded_to_teach']
+ obey_horeb.law_obey_horeb: refs ['Deut 4:10', 'Deut 4:2'] | asks 0 []
+ obey_horeb.narrative: refs ['Deut 4:10', 'Deut 4:19', 'Deut 4:2'] | asks 0 []
+ offerings.cell: refs ['Num 18:18'] | asks 0 []
+ offerings.dispatch: refs ['Lev 7:31', 'Num 18:18'] | asks 0 []
+ offerings.law_offerings: refs ['Lev 7:31', 'Num 18:18'] | asks 0 []
+ opening_speech.lemma_seats: refs ['Deut 16:18', 'Deut 1:15', 'Deut 1:16', 'Deut 1:17', 'Deut 4:19', 'Exod 18:21', 'Exod 18:25', 'Num 16:22', 'Num 16:3', 'Num 16:7', 'Num 27:21'] | asks 0 []
+ opening_speech.rb: refs ['Deut 1:16', 'Exod 18:25'] | asks 0 [] | keys ['the_readback', 'the_officers_table', 'the_seven_qualities', 'the_judges_charge', 'the_compromise', 'the_gentile_litigant', 'the_frame', 'the_date', 'the_horeb_command', 'the_spies_asked', 'the_bars_ground', 'the_dispossessions', 'the_bypass_commands', 'the_thirty_eight', 'the_edom_disagreement', 'the_ban']
+ opening_speech.the_commission: refs ['Num 27:21'] | asks 8 ['the_mountain', 'the_sentence_cited', 'the_shepherd', 'the_hand_laid', 'the_honor', 'the_urim', 'the_receipt', 'the_debit']
+ opening_speech.law_opening_speech: refs ['Deut 1:16'] | asks 0 []
+ opening_speech.narrative: refs ['Deut 1:15', 'Deut 1:16', 'Deut 1:17', 'Num 27:21'] | asks 0 []
+ ordinances.capital: refs ['Deut 18:10', 'Exod 22:19', 'Lev 20:27', 'Lev 27:28'] | asks 0 []
+ ordinances.gifts: refs ['Num 18:16'] | asks 0 []
+ ordinances.courts: refs ['Deut 16:19', 'Exod 23:2', 'Lev 19:15'] | asks 0 []
+ ordinances.land: refs ['Deut 7:2'] | asks 0 []
+ ordinances.law_ordinances: refs ['Num 18:16'] | asks 0 []
+ ordinances.scene: refs ['Deut 18:10', 'Exod 22:18', 'Exod 22:19', 'Exod 23:1', 'Exod 23:2', 'Exod 23:3', 'Exod 23:6', 'Exod 23:7', 'Exod 23:8', 'Lev 19:15'] | asks 0 []
+ pesach.law_pesach: refs ['Num 18:16'] | asks 0 []
+ pesach.scene: refs ['Num 18:16'] | asks 0 []
+ place_name.the_header_and_the_demolition: refs ['Deut 7:1'] | asks 10 ['the_headers_twin', 'the_four_nouns', 'the_land_bound_rule', 'destroy_you_shall_destroy', 'the_five_verbs', 'the_renaming', 'the_mountains_not_their_gods', 'the_three_asherim', 'you_shall_not_do_so', 'the_erasures_lashes']
+ place_name.the_place_chosen: refs ['Num 18:20', 'Num 18:8'] | asks 12 ['the_place_which_the_lord_will_choose', 'the_name_pronounced_only_there', 'in_one_of_your_tribes', 'the_seven_offerings', 'eat_there_and_rejoice', 'your_households', 'not_as_we_do_here_today', 'the_rest_and_the_inheritance', 'the_stations_six_rows', 'the_three_commandments_of_the_entry', 'the_second_answer_sheet', 'the_womans_rejoicing']
+ place_name.the_profane_slaughter_the_blood_and_the_gates: refs ['Num 18:25', 'Num 18:31'] | asks 14 ['with_all_the_desire_of_your_soul', 'the_unclean_and_the_clean', 'the_blemished_consecrated', 'the_eaters', 'the_blood_like_water', 'you_may_not_eat_within_your_gates', 'the_ladder_of_a_fortiori', 'the_list_read_backward', 'the_lashes_outside_the_wall', 'the_impure_tithes_warning', 'the_two_tithes', 'before_the_lord_you_shall_eat_it', 'lest_you_forsake_the_levite', 'the_levites_scope']
+ place_name.the_border_enlarged_and_the_altar: refs ['Num 18:8'] | asks 14 ['when_the_lord_enlarges_your_border', 'the_wilderness_flesh', 'too_far', 'as_i_have_commanded_you', 'the_rite_of_slaughter', 'the_civility', 'as_the_gazelle_and_the_hart', 'the_blood_is_the_life', 'the_limb_from_the_living', 'the_bloods_classes', 'flesh_in_milk', 'your_holy_things', 'the_sin_offerings_verb', 'the_good_and_the_right']
+ place_name.the_nations_cut_off_and_the_abomination: refs ['Deut 12:29', 'Deut 7:1', 'Deut 7:25'] | asks 6 ['when_the_lord_cuts_off_the_nations', 'lest_you_be_ensnared', 'lest_you_inquire_after_their_gods', 'you_shall_not_do_so_singular', 'their_sons_and_their_daughters', 'no_molech_named']
+ place_name.rb: refs ['Deut 12:12', 'Deut 12:18', 'Deut 12:19', 'Deut 12:29', 'Deut 12:30', 'Deut 12:31', 'Deut 7:1', 'Deut 7:25', 'Num 18:20', 'Num 18:31', 'Num 18:8'] | asks 0 [] | keys ['the_readback', 'the_counter_and_the_parameters', 'the_rite_of_slaughter', 'the_wilderness_flesh', 'the_eras_table_unmoved', 'the_two_tithes', 'the_five_verbs', 'the_receipts_two_kinds', 'the_registrys_homograph', 'the_headers_twin', 'the_four_nouns_and_the_land_bound_rule', 'perish_in_the_piel', 'the_kings_formula', 'the_renaming', 'the_pair_12_4_12_31', 'will_choose_none_before']
+ place_name.law_place_name: refs ['Deut 12:29', 'Num 18:20'] | asks 0 []
+ place_name.narrative: refs ['Deut 12:12', 'Deut 12:18', 'Deut 12:19', 'Deut 12:29', 'Deut 12:30', 'Deut 12:31', 'Deut 7:1', 'Deut 7:25', 'Deut 7:5', 'Num 18:20', 'Num 18:31', 'Num 18:8'] | asks 0 []
+ pre_sinai.creation: refs ['Exod 18:13'] | asks 0 []
+ pre_sinai.noahide: refs ['Deut 5:27', 'Lev 24:16'] | asks 0 []
+ pre_sinai.circumcision: refs ['Deut 18:13'] | asks 0 []
+ pre_sinai.mrow: refs ['Deut 18:13', 'Gen 35:11'] | asks 0 []
+ priesthood.blemish: refs ['Lev 21:20'] | asks 0 []
+ priesthood.acceptable: refs ['Lev 22:22', 'Lev 22:23'] | asks 0 []
+ priesthood.scene: refs ['Lev 21:18', 'Lev 22:17'] | asks 0 []
+ priesthood.mrow: refs ['Lev 21:17', 'Lev 21:18', 'Lev 22:18', 'Lev 22:21', 'Lev 22:22', 'Lev 22:25'] | asks 0 []
+ primeval.cell: refs ['Lev 27:26'] | asks 0 []
+ primeval.cain: refs ['Lev 27:26', 'Num 16:32'] | asks 0 []
+ primeval.war: refs ['Num 18:26'] | asks 0 []
+ primeval.build: refs ['Lev 27:26'] | asks 0 []
+ refuge.lemma_tokens: refs ['Deut 17:6', 'Exod 20:16', 'Num 35:30'] | asks 0 [] | keys ['the_measures', 'the_four_sides_order', 'the_forty_eight', 'the_six_cities', 'the_stranger_and_sojourner', 'size_that_can_kill', 'the_case_table', 'the_court_of_twenty_three', 'the_blind_killer', 'the_avengers_hand', 'the_three_high_priests', 'the_terms_rows', 'the_border_rows', 'the_one_witness', 'the_ransom_rows', 'the_lands_atonement']
+ refuge.narrative: refs ['Num 18:20', 'Num 35:30'] | asks 0 []
+ release_firstborn.effect_scan: refs ['Deut 13:14'] | asks 0 []
+ release_firstborn.the_firstling: refs ['Deut 12:18', 'Lev 27:26'] | asks 14 ['consecrated_from_the_womb', 'the_sanctify_for_value', 'the_altars_bar', 'the_caesarean', 'the_your_two_ways', 'the_work_and_the_shearing', 'the_plucking', 'the_shed_hair', 'the_firstlings_year', 'the_blemished_thirty_days', 'the_tending_term', 'before_the_lord_at_the_place', 'the_exiles_arm', 'the_firstling_from_outside']
+ release_firstborn.rb: refs ['Deut 14:28'] | asks 0 []
+ release_firstborn.narrative: refs ['Deut 14:29'] | asks 0 []
+ sanctions.three_are_one: refs ['Lev 19:31'] | asks 0 []
+ sanctions.beast: refs ['Exod 22:18'] | asks 0 []
+ sanctions.molech: refs ['Deut 18:10'] | asks 0 []
+ sanctions.curser: refs ['Lev 24:16'] | asks 0 []
+ sanctions.law_sanctions: refs ['Exod 22:18'] | asks 0 []
+ sanctions.scene: refs ['Lev 19:31', 'Lev 20:2', 'Lev 20:27', 'Lev 20:4'] | asks 0 []
+ sanctions.mrow: refs ['Exod 22:18', 'Lev 20:2', 'Lev 20:27', 'Lev 20:4', 'Lev 20:5'] | asks 0 []
+ second_tablets.effect_scan: refs ['Deut 16:19', 'Exod 23:8'] | asks 0 []
+ second_tablets.the_levites_separated: refs ['Deut 10:8', 'Deut 10:9', 'Num 16:8', 'Num 18:20', 'Num 3:5'] | asks 7 ['at_that_time_separated', 'to_carry_the_ark', 'to_stand_and_minister', 'to_bless_in_his_name', 'which_time', 'levi_has_no_portion', 'as_the_lord_spoke_to_him']
+ second_tablets.the_god_of_gods_and_the_stranger: refs ['Deut 16:19', 'Exod 23:8'] | asks 19 ['god_of_gods', 'the_attributes_three', 'lifts_no_face', 'takes_no_bribe', 'the_permitted_fee', 'a_salary_voids', 'the_bribe_of_words', 'the_orphan_and_the_widow', 'and_you_shall_love_the_stranger', 'the_thirty_six_warnings', 'the_converts_intake', 'the_private_convert', 'fear_serve_cleave_swear', 'cleave_to_the_scholars', 'the_et_of_10_20', 'swear_by_his_name', 'a_truthful_oath', 'he_is_your_praise', 'seventy_persons']
+ second_tablets.rb: refs ['Deut 10:8', 'Deut 10:9', 'Exod 23:8', 'Num 18:20'] | asks 0 [] | keys ['the_readback', 'the_clock_read_back', 'the_two_arks', 'the_arks_contents_two_arms', 'the_stations_reversed', 'the_place_of_the_death', 'the_three_receipt_forms', 'at_that_time_twice', 'the_shemas_tokens_against_the_five', 'and_you_shall_love_five', 'you_were_strangers_four', 'ten_twenty_against_six_thirteen', 'the_heaven_of_heavens_six', 'the_parsers_first', 'no_memra', 'the_seventys_three_forms']
+ second_tablets.narrative: refs ['Deut 10:8', 'Deut 10:9', 'Deut 18:2', 'Deut 5:22', 'Exod 23:8', 'Num 16:9', 'Num 18:20', 'Num 3:5'] | asks 0 []
+ seducers.effect_scan: refs ['Deut 13:11', 'Deut 13:6', 'Deut 17:5'] | asks 0 []
+ seducers.the_header: refs ['Deut 13:1'] | asks 5 ['the_headers_seal', 'the_three_grains', 'keep_and_do', 'the_elders_not_adding', 'the_festivals_days']
+ seducers.the_prophet_and_the_test: refs ['Deut 13:11', 'Deut 13:2', 'Deut 13:6'] | asks 13 ['the_prophet_and_the_dreamer', 'the_sign_and_the_wonder', 'the_signs_status', 'the_lord_is_testing_you', 'the_six_verbs', 'the_false_prophets_table', 'the_prophets_death', 'the_exodus_formula_with_redeeming', 'the_evil_purged', 'the_exemptions', 'elijah_at_carmel', 'the_oven_of_akhnai', 'the_established_prophet']
+ seducers.the_inciter: refs ['Deut 13:7', 'Num 15:36'] | asks 9 ['the_inciters_kin', 'entice_two_senses', 'the_entrapment', 'the_fifteen_utterances', 'the_five_prohibitions', 'the_courts_rule_inverted', 'the_hand_first', 'the_stoning_rite', 'the_execution_timing']
+ seducers.the_city_heard_of_the_inquiry_and_the_sword: refs ['Deut 13:13'] | asks 11 ['one_city_at_a_time', 'to_dwell_there_jerusalem', 'the_seducers_parameters', 'the_majoritys_procedure', 'the_seven_interrogations', 'the_congruence_rule', 'the_sword', 'the_property_table', 'the_devoting', 'belial_and_naboth', 'the_law_as_a_study_text']
+ seducers.the_whole_offering_the_heap_and_the_mercy: refs ['Deut 13:17', 'Deut 13:18'] | asks 9 ['the_whole_offering', 'heavens_spoil', 'the_heap_forever', 'nothing_shall_cleave', 'the_citron_of_a_condemned_city', 'the_devoted_things_lashes', 'the_anger_keyed_to_idolatry', 'the_mercy_two_armed', 'as_he_swore_to_your_fathers']
+ seducers.the_footer: refs ['Deut 13:19'] | asks 2 ['the_footer_the_condition', 'the_light_as_the_weighty']
+ seducers.the_readback: refs ['Deut 13:18'] | asks 7 ['the_table', 'the_supplied_law_rows', 'the_pointer_row', 'no_retrograde_row', 'the_two_verbs_of_stoning', 'the_purge_formulas_nine_seats', 'the_seducers_one_formula']
+ seducers.rb: refs ['Deut 13:1', 'Deut 13:10', 'Deut 13:11', 'Deut 13:12', 'Deut 13:13', 'Deut 13:14', 'Deut 13:15', 'Deut 13:16', 'Deut 13:17', 'Deut 13:18', 'Deut 13:19', 'Deut 13:2', 'Deut 13:3', 'Deut 13:4', 'Deut 13:5', 'Deut 13:6'] | asks 0 [] | keys ['the_readback', 'the_counter_and_the_parameters', 'the_signs_status', 'the_prophets_death', 'the_execution_timing', 'the_inquiries', 'the_three_grains', 'the_six_verbs', 'the_false_prophets_table', 'the_sign_and_the_presumption', 'the_purge_formulas_seats', 'the_inciters_kin', 'the_entrapment', 'the_fifteen_utterances', 'the_five_prohibitions', 'the_courts_rule_inverted']
+ seducers.law_seducers: refs ['Deut 13:1', 'Deut 13:13', 'Deut 13:2', 'Deut 13:7', 'Deut 7:2'] | asks 0 []
+ seducers.scene: refs ['Deut 13:1', 'Deut 7:2'] | asks 0 []
+ seducers.narrative: refs ['Deut 13:1', 'Deut 13:10', 'Deut 13:11', 'Deut 13:12', 'Deut 13:13', 'Deut 13:14', 'Deut 13:15', 'Deut 13:16', 'Deut 13:17', 'Deut 13:18', 'Deut 13:19', 'Deut 13:2', 'Deut 13:3', 'Deut 13:4', 'Deut 13:5', 'Deut 13:6'] | asks 0 []
+ seven_nations.the_seven_nations: refs ['Deut 7:1'] | asks 13 ['the_seven', 'the_ban', 'the_bans_condition', 'no_covenant', 'no_favor', 'praise_of_the_creator', 'no_marriage', 'the_child_follows_the_mother', 'the_four_objects', 'the_asherah_shade', 'no_other_way', 'the_asherah_wood', 'the_write']
+ seven_nations.the_images_and_the_devoted: refs ['Deut 7:25'] | asks 12 ['burn_the_images', 'the_gentile_revokes', 'the_jew_bent_it', 'not_covet_silver_gold', 'the_money_at_the_head', 'lest_snared', 'abomination_to_the_lord', 'into_your_house', 'devoted_like_it', 'utterly_detest', 'the_readback_table', 'the_write']
+ seven_nations.rb: refs ['Deut 5:28', 'Deut 7:1', 'Deut 7:2', 'Deut 7:25', 'Deut 7:3', 'Deut 7:4', 'Deut 7:5'] | asks 0 [] | keys ['the_readback', 'the_devotings', 'the_three_readings_of_favor', 'the_shittim_exhibit', 'the_renaming', 'the_fewest', 'the_supplied_doctrine', 'the_written_read_pair', 'the_heel', 'the_blessing_list', 'the_name_from_under_heaven', 'the_two_lemmas', 'the_abomination_seats', 'the_morph_tag', 'the_eleven_uncited', 'the_credits']
+ seven_nations.law_seven_nations: refs ['Deut 7:1', 'Deut 7:25'] | asks 0 []
+ seven_nations.scene: refs ['Deut 7:1'] | asks 0 []
+ seven_nations.narrative: refs ['Deut 7:1', 'Deut 7:2', 'Deut 7:25', 'Deut 7:26', 'Deut 7:3', 'Deut 7:5'] | asks 0 []
+ shelach.law_shelach: refs ['Num 16:19'] | asks 0 []
+ shemini_day.day: refs ['Num 16:19'] | asks 0 []
+ shemini_day.peace: refs ['Lev 7:30'] | asks 0 []
+ shemini_day.fire: refs ['Deut 10:8'] | asks 0 []
+ temurah.scene: refs ['Lev 27:28'] | asks 0 []
+ tzav.scene: refs ['Lev 7:34'] | asks 0 []
+ vestments.breastplate: refs ['Num 27:21'] | asks 0 []
+ zelophehad.the_daughters: refs ['Num 15:36'] | asks 19 ['plea', 'counsel', 'halt', 'uncertainty', 'levirate_dilemma', 'child_of_any_kind', 'three_portions', 'section_on_high', 'output_frames', 'tribes_plea', 'second_output', 'reach', 'lapse', 'execution', 'the_run', 'names_order', 'identity', 'name_is_inheritance', 'the_case']
+ zelophehad.narrative: refs ['Num 15:35'] | asks 0 []
+==== G. THE RUNNING WORLD (the snapshot) ====
+ W blemish_barred 0 []
+ W evil_purged_from_the_midst 0 []
+ W stoned 2 [('the_blasphemer', 'body'), ('the_wood_gatherer', 'body')]
+ W put_to_death 7 [('the_lusters', 'body'), ('the_ten_spies', 'body'), ('the_wood_gatherer', 'body'), ('korach', 'body'), ('dathan', 'body'), ('abiram', 'body')]
+ W lashes 0 []
+ W false_prophet_hearing_barred 1 [('israel_people', 'block')]
+ W tested_by_the_lord 1 [('israel_people', 'status')]
+ W cleaving_commanded 2 [('israel_people', 'status'), ('israel_people', 'status')]
+ W pity_barred 2 [('israel_people', 'block'), ('israel_people', 'block')]
+ W israel_hears_and_fears 1 [('israel_people', 'status')]
+ W prophet_declared 1 [('abraham', 'status')]
+ W kings_promised 1 [('jacob', 'heaven')]
+ W kingdom_founded 1 [('nimrod', 'status')]
+ W priestly_dues_granted 1 [('aaron', 'status')]
+ W levites_portion_given 1 [('the_levites', 'transfer')]
+ W levite_forsaking_barred 2 [('israel_people', 'block'), ('israel_people', 'block')]
+ W inheritance_barred 2 [('aaron', 'block'), ('the_levites', 'block')]
+ W other_gods_barred 1 [('israel_people', 'block')]
+ W wholeness_owed 1 [('abraham', 'debit')]
+ W sentence_pronounced 2 [('israel_people', 'status'), ('tamar', 'status')]
+ W witness_declared 1 [('the_heap', 'status')]
+ W foreign_rite_inquiry_barred 1 [('israel_people', 'block')]
+ W house_abomination_barred 1 [('israel_people', 'block')]
+ W returned_to_egypt 1 [('the-sons', 'status')]
+ W due_to_priest 3 [('moses', 'transfer'), ('the-priests', 'transfer'), ('the-priests', 'transfer')]
+ W strange_offering_barred 1 [('the_two_hundred_fifty', 'block')]
+ W holy_things_in_the_gates_barred 2 [('israel_people', 'block'), ('israel_people', 'block')]
+ W courts_established 1 [('israel_people', 'status')]
+ W judges_charged 1 [('the_court', 'status')]
+ W judges_and_officers_commanded 1 [('israel_people', 'status')]
+ W justice_pursuit_commanded 1 [('israel_people', 'status')]
+ W bribe_barred 1 [('israel_people', 'block')]
+ W condemned_city_inquiry_required 1 [('israel_people', 'status')]
+ W descent_to_egypt_barred 1 [('isaac', 'block')]
+ W burned_by_court 0 []
+ W adding_barred 2 [('israel_people', 'block'), ('israel_people', 'block')]
+ W blemished_offering_barred 0 []
+ W idolater_inquiry_required 0 []
+ W two_witnesses_required 0 []
+ W one_witness_barred 0 []
+ W witnesses_hand_first_commanded 0 []
+ W high_court_at_the_place_commanded 0 []
+ W sentence_binding_commanded 0 []
+ W turning_from_the_word_barred 0 []
+ W rebel_elder_death 0 []
+ W king_from_the_brothers_commanded 0 []
+ W foreign_king_barred 0 []
+ W horses_multiplying_barred 0 []
+ W return_to_egypt_barred 0 []
+ W wives_multiplying_barred 0 []
+ W silver_and_gold_multiplying_barred 0 []
+ W law_copy_commanded 0 []
+ W heart_lifting_barred 0 []
+ W levi_inheritance_barred 0 []
+ W shoulder_cheeks_maw_owed 0 []
+ W first_fleece_owed 0 []
+ W priests_standing_chosen 0 []
+ W levite_service_at_the_place_permitted 0 []
+ W equal_portions_commanded 0 []
+ W abominations_learning_barred 0 []
+ W passing_through_fire_barred 0 []
+ W diviner_barred 0 []
+ W soothsayer_barred 0 []
+ W augur_barred 0 []
+ W sorcerer_barred 0 []
+ W charmer_barred 0 []
+ W ghost_consulting_barred 0 []
+ W familiar_spirit_barred 0 []
+ W necromancer_barred 0 []
+ W wholeness_commanded 0 []
+ W prophet_hearkening_commanded 0 []
+ W prophet_like_moses_promised 0 []
+ W word_required_of_the_hearer 0 []
+ W presumptuous_prophet_death 0 []
+ W false_word_test_declared 0 []
+ W false_prophet_fear_barred 0 []
+ israel ledger entries 0 | open debits 0 | blocks 0
+ israel_people ledger entries 236 | blocks 42 | statuses 119 | the last eight effects: ['empty_appearance_barred', 'judges_and_officers_commanded', 'judgment_wresting_barred', 'person_respecting_barred', 'bribe_barred', 'justice_pursuit_commanded', 'asherah_beside_the_altar_barred', 'pillar_barred']
+ entities 319 | closes 127 | markers 172 | events 1341 | the day (40, 11, 1) | population rows 148
+ the tape's last six events: [('firstling_law_declared', 'Deut 15:19-2'), ('passover_at_the_place_declared', 'Deut 16:1-8 '), ('weeks_and_booths_declared', 'Deut 16:9-15'), ('three_pilgrimages_declared', 'Deut 16:16-1'), ('judges_in_every_gate_commanded', 'Deut 16:18-2'), ('asherah_and_pillar_barred', 'Deut 16:21-2')]
+ entities naming court|king|prophet|levi|priest|witness: ['aaron', 'aaron-and-sons', 'aarons_staff', 'eleazar_son_of_aaron', 'levi', 'the-priest', 'the-priests', 'the_court', 'the_five_kings', 'the_four_kings', 'the_king_of_arad', 'the_king_of_sodom', 'the_kings_of_edom', 'the_kings_of_midian', 'the_levites', 'the_priesthood', 'the_priests_of_egypt']
+RECON DONE

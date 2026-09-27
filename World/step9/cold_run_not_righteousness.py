@@ -263,7 +263,8 @@ STIFF_WORDS = r"\b(stiff|stiff-necked|neck|nape)\b"
 _peril = ledger_scan('aaron', PERIL_WORDS)
 AARON_PERIL_SCAN = None if _peril is None else [e for e in _peril if e != 'destruction_halved']   # this sitting's own write excluded once the fold carries it: NO OTHER entry names the peril
 _stiff = ledger_scan('israel_people', STIFF_WORDS)
-STIFF_SCAN = None if _stiff is None else [e for e in _stiff if e != 'stiffening_barred']   # THE DEUTERONOMY WALK 8b (2026-09-20): chapter 10's own write EXCLUDED once the fold carries it — 'your neck you shall not stiffen any more' (10:16) the COMMAND, a block on Israel, its value naming the neck; the STATE of Exodus 32:9 still on no entry: the ground of 7b's decision 2 stands as of its own sitting (the peril's form, 7b's lesson 10, applied to an older runner by the sitting that wrote after it)
+CH19_NECK = ('heifer_neck_broken_commanded', 'elders_hands_washed_commanded')   # THE DEUTERONOMY WALK 16b (2026-09-25; LEAN): chapters 19-21's names carrying the neck (21:4's heifer's neck broken; 21:6's hands washed over the heifer whose neck was broken)
+STIFF_SCAN = None if _stiff is None else [e for e in _stiff if e != 'stiffening_barred' and e not in CH19_NECK]   # THE DEUTERONOMY WALK 8b (2026-09-20): chapter 10's own write EXCLUDED once the fold carries it — 'your neck you shall not stiffen any more' (10:16) the COMMAND, a block on Israel, its value naming the neck; the STATE of Exodus 32:9 still on no entry: the ground of 7b's decision 2 stands as of its own sitting (the peril's form, 7b's lesson 10, applied to an older runner by the sitting that wrote after it)
 assert AARON_PERIL_SCAN in ([], None), AARON_PERIL_SCAN   # the hole's ground — no entry on aaron named the peril before this write
 assert STIFF_SCAN in ([], None), STIFF_SCAN   # the stiff neck a STATE in the first telling: no entry, no write (the design's decision 2)
 

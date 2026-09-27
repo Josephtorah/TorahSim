@@ -1,0 +1,9 @@
+4 failing statements
+--- line 213: assert clean(sif[221][0]).startswith('When you see') and clean(sif[222][0])[:5] == 'Pisqa' and clean(sif[235][0]).startswith('To be his wife, but now he hates h
+    AssertionError(('Pisqa’ 22262H:233-234;JN2:130-', 'Pisqa’ 22376', 'Pisqa’ 236172H:245;JN2:154.1. “To be his', 'Pisqa’ 269345H:263-265;JN2:206-2101. “In', 'Pisqa’ 283408H:273-274;JN2:232', 'Pisqa’ 295497H:286;JN2:263-264.1. “S'))
+--- line 223: assert [len(v[5]) for v in _DUMP.values()] == [11, 5, 21, 8] and sorted({k for v in _DUMP.values() for k in v[5] if k[0] not in PISKAOT}) == OUTSIDE and sorted(
+    AssertionError([11, 5, 21, 8])
+--- line 224: assert len(OUTSIDE) == 14 and len(PRIOR_READ) == 10 and len(FRESH) == 4 and sorted(PRIOR_READ) + FRESH == sorted(OUTSIDE) and all(CITED[k] for k in OUTSIDE) and
+    AssertionError()
+--- line 235: assert STORE_MISMATCH == [(22, 15, 14, 12), (22, 16, 13, 12), (22, 20, 10, 9), (22, 21, 23, 22), (22, 23, 12, 11), (22, 24, 32, 31), (22, 25, 19, 18), (22, 26, 
+    AssertionError([(22, 15, 14, 12), (22, 16, 13, 12), (22, 20, 10, 9), (22, 21, 23, 22), (22, 23, 12, 11), (22, 24, 32, 31), (22, 25, 19, 18), (22, 26, 21, 19), (22, 27, 10, 9), (22, 28, 13, 12), (22, 29, 20, 19)])

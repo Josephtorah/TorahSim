@@ -259,7 +259,7 @@ _rs = ledger_scan('israel_people', RAIN_WORDS); RAIN_SCAN = None if _rs is None 
 _cs = effect_scan('gerizim_ebal_ceremony_owed'); CEREMONY_SCAN = None if _cs is None else [e for e in _cs if e != 'israel_people']
 del _rs, _cs   # 9b RUN B, the chain's first pass (2026-09-20): THE RAW SCANS ARE THE DATABASE'S STATE AT IMPORT — the import cache's harvest ran before the tape sealed this sitting's own five entries, the full load after (ink_cache_probes C2 fell on _rs and _cs alone); the derived lists exclude the own entries and are equal on both loads — the raw names dropped from the module
 _FXV = yaml.safe_load(open(_os.path.join(HERE, 'effect_vocabulary.yaml'), encoding='utf-8'))['effects']
-RAIN_VOCAB = sorted(k for k in _FXV if 'rain' in k)
+RAIN_VOCAB = sorted(k for k in _FXV if 'rain' in k and k != 'vow_refraining_permitted')   # THE DEUTERONOMY WALK 17b (2026-09-26; LEAN): the registry's fourth 'rain' is 23:23's vow_refraining_permitted (refRAINing) — the scan census's homograph, excluded by name (the tape's second run read DC4's computed list)
 assert RAIN_SCAN in ([], None), RAIN_SCAN   # THE HOLE'S GROUND — nothing on Israel named the rain, the heavens shut, the yoke, the pair or the ceremony before this sitting (DC4)
 assert CEREMONY_SCAN in ([], None), CEREMONY_SCAN   # the ceremony's debit on no other entity
 assert 'rain_in_its_season' in RAIN_VOCAB and [k for k in RAIN_VOCAB if k.startswith('rain_')] == ['rain_in_its_season'], RAIN_VOCAB   # the vocabulary's rain effects — this sitting's the one naming the rain of the land (the others the registry's own, read at add_types_ch11.out)

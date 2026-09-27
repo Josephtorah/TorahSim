@@ -1,0 +1,35 @@
+=== chain 18:52:41
+deu_28_curses_a: seated 5 operators on 5 steps [15, 20, 25, 30, 38]; scenarios 7 in the anchor form
+=== verify_text deu_28_curses_a 18:54:51
+exit 0 TEXT LAYER GREEN: 30 steps, 7 scenarios — deu_28_curses_a
+=== ritual deu_28_curses_a 18:54:52
+exit 0 Manual next: watchlist (logic/middot_scan/), state-doc update, owner commit word.
+=== seat deu_28_curses_b 18:55:31
+deu_28_curses_b: seated 5 operators on 5 steps [45, 49, 53, 58, 65]; scenarios 7 in the anchor form
+=== verify_text deu_28_curses_b 18:55:31
+exit 0 TEXT LAYER GREEN: 25 steps, 7 scenarios — deu_28_curses_b
+=== ritual deu_28_curses_b 18:55:31
+exit 0 Manual next: watchlist (logic/middot_scan/), state-doc update, owner commit word.
+ALL_DONE
+verify_text deu_26_bikkurim_close: TEXT LAYER GREEN: 19 steps, 7 scenarios — deu_26_bikkurim_close
+verify_text deu_27_ebal_curses: TEXT LAYER GREEN: 26 steps, 7 scenarios — deu_27_ebal_curses
+verify_text deu_28_blessings: TEXT LAYER GREEN: 14 steps, 7 scenarios — deu_28_blessings
+verify_text deu_28_curses_a: TEXT LAYER GREEN: 30 steps, 7 scenarios — deu_28_curses_a
+verify_text deu_28_curses_b: TEXT LAYER GREEN: 25 steps, 7 scenarios — deu_28_curses_b
+=== fold 18:56:10
+=== CHECK AFTER THE BAKE
+CORPUS TRUTH GREEN — one world, 244 units, 1809 facts, 341 demands (191 open), hash 8b8fff1fa28953af
+27:assert len(W["units"]) == 244
+32:assert len(W["standing"]) == 2329
+37:assert corpus_world._state_hash(W) == '8b8fff1fa28953af'
+=== build_world 18:57:40
+exit 0 |   ALL GREEN — the one database agrees with the fold
+=== journal_gate 18:58:41
+exit 0 | GATE GREEN — the replay is the audit, the running world is the instrument
+=== register_gate 19:06:40
+exit 0 | THE REGISTER GATE: GREEN
+=== large_letter 19:06:43
+exit 0 | 6/6
+=== home_gate 19:06:43
+exit 0 | THE HOME-PATH GATE: GREEN — 0 tracked text files carry a username or a home path
+ALL GREEN 19:06:45

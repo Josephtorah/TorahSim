@@ -1,0 +1,11 @@
+THE SIFREI ROWS TYPED (chapters 19-20): 140 | by piska: {179: 2, 180: 8, 181: 6, 182: 2, 183: 8, 184: 3, 185: 3, 186: 2, 187: 7, 188: 11, 189: 2, 190: 21, 191: 1, 192: 3, 193: 6, 194: 6, 195: 7, 196: 3, 197: 4, 198: 1, 199: 5, 200: 7, 201: 4, 202: 2, 203: 10, 204: 6}
+  typed == spine 179-204: True | missing: [] | extra: []
+  Onkelos typed: 41 == SPAN 19-20: True | outside typed: 11 == OUTSIDE: True
+  the verdicts: Counter({'MATERIAL': 133, 'CONTEXT': 7}) Counter({'MATERIAL': 41}) Counter({'MATERIAL': 9, 'CONTEXT': 2})
+  the REREAD marks (spine, outside): [(179, 2), (189, 1), (190, 3), (190, 7), (190, 8), (198, 1), (199, 5), (201, 3)] [(76, 5), (80, 3), (121, 2), (148, 1), (152, 9)] | computed: [(179, 2), (189, 1), (190, 3), (190, 7), (190, 8), (199, 5), (201, 3)] [(76, 5), (80, 3), (121, 2), (148, 1), (152, 9)]
+  the cuts' misses (FAIL): []
+Traceback (most recent call last):
+  File "<scratch>/ch19_rows_check_a.py", line 19, in <module>
+    assert rr == sorted({(p, r) for _, p, r in I.SPINE_PRIOR if p <= 204}) and rro == sorted(I.PRIOR_READ), (rr, rro)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ([(179, 2), (189, 1), (190, 3), (190, 7), (190, 8), (198, 1), (199, 5), (201, 3)], [(76, 5), (80, 3), (121, 2), (148, 1), (152, 9)])

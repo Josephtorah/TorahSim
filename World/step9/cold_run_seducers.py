@@ -232,7 +232,8 @@ def effect_scan(effect):
     return sorted({e for (e,) in c_.execute("SELECT DISTINCT entity FROM run_ledger WHERE effect=?", (effect,)).fetchall()})
 OWN5 = ('false_prophet_hearing_barred', 'tested_by_the_lord', 'israel_hears_and_fears', 'condemned_city_inquiry_required', 'devoted_thing_cleaving_barred')
 SEDUCER_WORDS = r"\b(false_prophet\w*|tested_by_the_lord|hears_and_fears|condemned_city\w*|devoted_thing\w*|evil_purged\w*|city_devoted)\b"
-_ss = ledger_scan('israel_people', SEDUCER_WORDS); SEDUCERS_SCAN = None if _ss is None else [e for e in _ss if e not in OWN5]   # this sitting's own five excluded once the fold carries them
+CH17_FALSE_PROPHET = ('false_prophet_fear_barred',)   # THE DEUTERONOMY WALK 15b (2026-09-24; LEAN): chapters 17-18's name carrying the false prophet (18:22's 'you shall not fear him')
+_ss = ledger_scan('israel_people', SEDUCER_WORDS); SEDUCERS_SCAN = None if _ss is None else [e for e in _ss if e not in OWN5 and e not in CH17_FALSE_PROPHET]   # THE DEUTERONOMY WALK 15b (2026-09-24; LEAN): chapters 17-18's false_prophet_fear_barred excluded — a later chapter's write moved this scan's ground once the tape's first run put it in the one database (the scan census's print; the tape's DE4 read this scan and diverged 9/10 — the same lesson as 14b's place-name seat)
 _rs = [effect_scan(e) for e in ('adding_barred', 'cleaving_commanded', 'pity_barred')]; REUSE_SCAN = None if any(r is None for r in _rs) else _rs
 del _ss, _rs   # 9b's lesson: the raw scans are the database's state at import — the derived lists are equal on the cached and the full load
 _FXV = yaml.safe_load(open(_os.path.join(HERE, 'effect_vocabulary.yaml'), encoding='utf-8'))['effects']

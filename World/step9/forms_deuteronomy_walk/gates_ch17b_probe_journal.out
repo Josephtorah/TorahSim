@@ -1,0 +1,25 @@
+  THE SEAL L3_run_journal_probes_probe.jsonl: 17 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  THE SEAL L3_run_journal_probes_probe.jsonl: 17 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  THE SEAL L3_run_journal_probes_probe.jsonl: 17 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  THE SEAL L3_run_journal_probes_probe.jsonl: 17 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  THE SEAL L3_run_journal_probes_probe.jsonl: 17 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  THE SEAL L3_run_journal_probes_probe.jsonl: 17 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  THE SEAL L3_run_journal_probes_probe.jsonl: 17 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  THE SEAL L3_run_journal_probes_close.jsonl: 4 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  THE SEAL L3_run_journal_probes_close.jsonl: 7 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+PASS J1 a run writes a segment with one journal event per log line
+     log 17 lines in classes {'MARKER': 4, 'EVENT': 5, 'TIMER-SET': 2, 'WRITE': 3, 'TIMER-FIRE': 1, 'TIMER-CANCEL': 1, 'RETRO-WRITE': 1}; segment 17 events + header, coerced 0
+PASS J2 the chain verifies, and a line mutated in place is detected
+     clean verify True; after an in-place mutation of line 3 verify False
+PASS J3 every kind the sink writes is in the register
+     kinds written {'run.marker': 4, 'run.event': 5, 'run.timer_set': 2, 'run.write': 3, 'run.timer_fire': 1, 'run.timer_cancel': 1, 'run.retro_write': 1}; unregistered none; sink classes 10 (all registered: True)
+PASS J4 the subject is the registry id, never the scene token
+     subjects {'clock': 4, 'israel_people': 13}
+PASS J5 two sinks of one world are byte-identical
+     5404 bytes each, identical True, no timestamp field
+PASS J6 the index counts each kind as the log does and answers who wrote this / what is on this subject
+     index {'run.event': 5, 'run.marker': 4, 'run.retro_write': 1, 'run.timer_cancel': 1, 'run.timer_fire': 1, 'run.timer_set': 2, 'run.write': 3} vs log {'run.marker': 4, 'run.event': 5, 'run.timer_set': 2, 'run.write': 3, 'run.timer_fire': 1, 'run.timer_cancel': 1, 'run.retro_write': 1}; writers {'law_probe': 4}; lines on israel_people 13
+PASS J7 a close is its own line: the write line a snapshot with no closer, the close line naming the entry, the earlier sink a byte-identical prefix of the later, the index counting run.close and the ledger view joining the two
+     write line data keys ['amount', 'bound', 'case_source', 'counterparty', 'day', 'due', 'effect', 'op', 'open', 'seq', 'source_law', 'subject', 'written_by', 'year']; close lines 1 [(33, 'the_court', 0, 'law_probe_close')]; prefix identical True (4 then 7 lines); index run.close 1; the view [(0, 33, 'Lev 24:13 — probe: the output')]; the ledger entry open False closed_day 33
+
+7/7 probes

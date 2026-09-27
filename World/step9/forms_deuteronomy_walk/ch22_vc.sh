@@ -1,0 +1,1 @@
+for u in deu_22_return_sex_laws deu_23_qahal_purity_vows deu_24_divorce_poor deu_25_courts_yibbum; do python3 logic/solo_tools/verify_claims.py logic/oral_audit/manifests/${u}_claims.json || exit 1; done

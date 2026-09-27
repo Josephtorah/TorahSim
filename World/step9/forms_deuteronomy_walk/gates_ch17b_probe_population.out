@@ -1,0 +1,23 @@
+  THE SEAL L3_run_population_probes_probe.jsonl: 15 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  THE SEAL L3_run_population_probes_probe.jsonl: 15 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+  THE SEAL L3_run_population_probes_probe.jsonl: 15 lines sealed LATE (the bounds as they stand) in 1 blocks; chain VERIFIED; the fresh conversion EQUAL on every field but the bound's right edge (closed after the seal: 0); the rebuilt index EQUALS the live rows
+PASS P1 a daemon writes counted rows on a census event — the table, the columns, the writer, the day, a ROW line per row
+      counted rows 6 (written_by ['law_probe_rows']; days [10, 10, 10, 20, 20, 20]); ROW lines 10 of 10 rows; the first {'grain': 'counted', 'as_of': 'Num 1:17-19', 'tribe': 'reuben', 'count': 46500}
+PASS P2 a row written by hand — outside a daemon's call — is REFUSED
+      refused: THE POPULATION TABLE: a row of 'population' is written by a daemon consuming an event, never by hand (population_schema.yaml law 1)
+PASS P3 an unknown grain, a missing required column, an unknown column — three refusals
+      refused: THE POPULATION TABLE: grain 'tally' is not a grain of population (the grains: co | refused: THE POPULATION TABLE: a counted row of population lacks its required column(s) c | refused: THE POPULATION TABLE: a counted row of population carries unknown column(s) colo
+PASS P4 the query: by tribe, by grain, by as_of — the rows and nothing else
+      simeon ['counted', 'counted', 'delta']; named 1; as_of 26 6; counted at 1 3; levi 0
+PASS P5 the daemon reads its own rows: delta rows computed from the table — declared, the remainder labeled
+      deltas {'reuben': (-2770, -2770, 0), 'simeon': (-37100, -13100, 1), 'gad': (-5150, -5150, 0)}
+PASS P6 the journal: KINDS carries ROW, the register carries run.row, the sink writes run.row lines with subj / unit / ref
+      KINDS ROW -> run.row; registered True; run.row lines 10 of 10 rows; first subj reuben unit law_probe_rows ref Num 1:17-19 ; the named row's subj the_daughters_of_zelophehad
+PASS P7 the fifth view run_population: one row per run.row with the columns extracted; the views gate carries the population check
+      view rows 10 = run.row 10 = table 10; gate True (population 10); first ('counted', 'Num 1:17-19', 'reuben', None, None, 46500, None, 'law_probe_rows', 'Num 1:17-19 — probe: the first census')
+PASS P8 the fifth question `population [tribe]`: every row, then one tribe's in seq order
+      all 10; simeon [('counted', 59300, None), ('counted', 22200, None), ('delta', None, -37100)]
+PASS P9 the RUN counts do not move: the rows are no writes, no timers, no entities
+      rows 10; writes 0; timers set 0; entities 0; events 3
+
+9/9 population probes

@@ -1,7 +1,7 @@
 # REGISTER_INDEX.md — written by register_census.py each run (documentation, never runtime)
 
-THE REGISTER GATE — the ink's own formulas against the world (population table rows 148; ledger entries 1684)
-COVERAGE: counts 110 {'MEASURE-ONLY': 44, 'NONE': 16, 'ELSEWHERE': 14, 'ROW': 29, 'LEDGER': 7}; receipts 69 {'CHAPTER': 11, 'NONE': 13, 'ACT': 24, 'EVENT': 5, 'CLOSE': 16}; footers 9 {'DAEMONS': 8, 'EMPTY': 1}; registers 18 {'NONE': 14, 'ROWS': 4}
+THE REGISTER GATE — the ink's own formulas against the world (population table rows 148; ledger entries 1845)
+COVERAGE: counts 110 {'MEASURE-ONLY': 44, 'NONE': 16, 'ELSEWHERE': 14, 'ROW': 29, 'LEDGER': 7}; receipts 69 {'CHAPTER': 11, 'NONE': 12, 'ACT': 25, 'EVENT': 5, 'CLOSE': 16}; footers 9 {'DAEMONS': 8, 'EMPTY': 1}; registers 18 {'NONE': 14, 'ROWS': 4}
 DECLARED 98; DEBT 0; FAILS 0
 -- A. THE COUNT LINES (110)
    Gen 11:10   MEASURE-ONLY  green    footer: these are the generations of [100, 2] | measures [100, 2]
@@ -182,7 +182,7 @@ DECLARED 98; DEBT 0; FAILS 0
    Deut 5:16   CHAPTER       declared  | [('moses', 'commanded')] | why: THE DEUTERONOMY WALK 3b (2026-09-16) | "honor your father and your mother, AS THE LORD YOUR GOD COMM
    Deut 5:32   CHAPTER       declared  | [('moses', 'commanded')] | why: THE DEUTERONOMY WALK 3b (2026-09-16) | "you shall observe to do AS THE LORD YOUR GOD COMMANDED YOU; 
    Deut 10:5   ACT           declared  | [('the_ark', 'fragments_in_the_ark', 'status')] | why: THE DEUTERONOMY WALK 8b (2026-09-20) | "and I turned and came down from the mountain, and put the ta
-   Deut 20:17  NONE          declared  | [] | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
+   Deut 20:17  ACT           declared  | [('israel_people', 'nothing_alive_left_commanded', 'status'), ('israel_people', 'abominations_teaching_barred' | why: THE DEUTERONOMY WALK 16b (2026-09-25; LEAN) | 'but you shall utterly devote them … AS THE LORD YOUR 
    Deut 34:9   NONE          declared  | [] | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
 -- C. THE FOOTERS AND HEADERS (9)
    Exod 21:1   DAEMONS       green    HEADER judgments stamp none block (Exod 21:1, Lev 26:46] daemons 32 {'covenant_blood_thrown': 10, 'boot': 1, 'erected': 3, 'called_from_the_tent': 15, 'milluim_blood_sprinkled': 1, 'sentence_declared': 1, 'entered_the_land': 1} | law_slave_term@Exod 21:2 law_mishpatim_3@Exod 21:7 law_mishpatim_2@Exod 21:22 law_goring_ox@Exod 21:28 law_gua
@@ -192,8 +192,8 @@ DECLARED 98; DEBT 0; FAILS 0
    Num 36:13   DAEMONS       green    FOOTER commandments stamp moab block (Num 30:17, Num 36:13] daemons 5 {'boot': 5} | law_midian@Num 31:21 law_gad_reuben@Num 32:20 law_journeys@Num 33:50 law_borders@Num 34:1 law_refuge@Num 35:1
    Deut 1:1    EMPTY         declared FOOTER words stamp jordan block (Num 36:13, Deut 1:1] daemons 0 {} |  | why: THE DEUTERONOMY WALK 1b (2026-09-15) | the block (Num 36:13, Deut 1:1] holds no law — by the ink (th
    Deut 4:45   DAEMONS       green    FOOTER testimonies stamp none block (Deut 1:1, Deut 4:45] daemons 2 {'boot': 2} | law_opening_speech@Deut 1:16 law_obey_horeb@Deut 4:2
-   Deut 12:1   DAEMONS       green    HEADER statutes stamp none block (Deut 12:1, Deut 28:69] daemons 4 {'boot': 4} | law_seducers@Deut 13:1 law_food_tithe@Deut 14:1 law_release_firstborn@Deut 15:1 law_festivals_judges@Deut 16:1
-   Deut 28:69  DAEMONS       green    FOOTER words stamp moab block (Deut 12:1, Deut 28:69] daemons 4 {'boot': 4} | law_seducers@Deut 13:1 law_food_tithe@Deut 14:1 law_release_firstborn@Deut 15:1 law_festivals_judges@Deut 16:1
+   Deut 12:1   DAEMONS       green    HEADER statutes stamp none block (Deut 12:1, Deut 28:69] daemons 7 {'boot': 7} | law_seducers@Deut 13:1 law_food_tithe@Deut 14:1 law_release_firstborn@Deut 15:1 law_festivals_judges@Deut 16:1
+   Deut 28:69  DAEMONS       green    FOOTER words stamp moab block (Deut 12:1, Deut 28:69] daemons 7 {'boot': 7} | law_seducers@Deut 13:1 law_food_tithe@Deut 14:1 law_release_firstborn@Deut 15:1 law_festivals_judges@Deut 16:1
 -- D. THE REGISTERS (18)
    Gen 2       NONE          declared headers [4] {'generations': 1} |  | why: "these are the generations of the heavens and the earth" (2:4) — the creation register: its rows are
    Gen 6       NONE          declared headers [9] {'generations': 1} |  | why: Noah's generations (6:9) — the named grain lives on the tape (the born / died markers, the life eras

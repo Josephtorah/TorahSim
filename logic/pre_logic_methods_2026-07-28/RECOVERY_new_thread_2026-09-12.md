@@ -13,13 +13,13 @@ tape of events in verse order; every verse adds a line or installs a law (a daem
 EVERYTHING ELSE IN A COMPUTER PROGRAM (his frame). The repo <repo> = /Users/Shared/TorahSim, public under CC0 at
 github.com/Josephtorah/TorahSim.
 
-## 2. WHERE IT STANDS (2026-09-23; #210 sitting 14b newest)
-- NUMBERS CLOSED. DEUTERONOMY 1:1-16:22 ON THE TAPE (PUSHED through e824e52 — 15/13b; 16 uncommitted).
-- 230 frozen units, standing 2267, hash 8b8fff1fa28953af. 71 runners, 76 daemons; 1171 kinds / 1088 effects.
-- THE TAPE at RUN (1341, 96, 88, 0, 12, 1672, 47, 319, pairs, 127), markers 172, closes 127; 10/10 (DH1-DH5); 14b's chain ALL GREEN once (sweep 70/70).
-- SITTING 13/13b (ch 15): 132 sources; release_firstborn 91/91; PUSHED e824e52.
+## 2. WHERE IT STANDS (2026-09-26; #224 + its NOTE — sitting 18 DONE, newest)
+- NUMBERS CLOSED. DEUTERONOMY 1:1-25:19 ON THE TAPE (PUSHED through f730559 — 1-16; 17-25 uncommitted); 26-28 READ + FROZEN (uncommitted), not compiled.
+- 244 frozen units, standing 2329, hash 8b8fff1fa28953af. 74 runners, 79 daemons; 1212 kinds / 1249 effects.
+- THE TAPE at RUN (1382, 96, 88, 0, 12, 1833, 50, 319, pairs, 127); 10/10 (DK1-DK5); checkpoint_check 336 rows, 18 known misses.
 - ⚠ THE LEAN PASS (#208): 16-34 in 8 lean sittings — core shelf, 4 records, chain once; full process OWED.
-- SITTING 14/14b (ch 16 READ + COMPILED, LEAN) at #210: 136 sources; runner 53/53; 5 lines, 16 writes; the tape 10/10; chain green; UNCOMMITTED. NEXT: the commit; then 15 (ch 17-18 read, lean).
+- SITTINGS 15-17b (ch 17-25 READ + COMPILED, LEAN): chains green; UNCOMMITTED since f730559; the message at <scratch>/commit_msg_ch22b.txt.
+- SITTING 18 (ch 26-28 READ, LEAN, five units) DONE at #224's NOTE: 215 sources; 21 claims; FROZEN; chain green on its first pass; the patch 104+134; UNCOMMITTED. NEXT: the commit, then 18b (the compile).
 
 
 ## 3. THE STANDING LAWS (owner-ruled; verbatim in spirit — long forms: addenda §3)
@@ -41,7 +41,7 @@ github.com/Josephtorah/TorahSim.
   World/step9/gates_chain.sh <out_dir>`; the SUMMARY read once; GATES_CHAIN.md); the records from the sheet in ONE call. ⚠ OWNER-RULED
   2026-09-20: A THE CACHE LAW — the cache dies at FIVE MINUTES: no wait past five minutes on a big context; every long job (the chain, the
   sweep, the positions) LAUNCHED at a run's END, its readers written first; the clean point announced; the owner compacts; THE TAIL (a small
-  run) reads the SUMMARY, files demands, runs the writers; compact before a break. B THE 600k CAP (his word 2026-09-20, from 400k) — a run ends at the clean point nearest
+  run) reads the SUMMARY, files demands, runs the writers; compact before a break. B THE 600k CAP — a run ends at the clean point nearest
   600k, never past 650k. C FEWER CALLS — one call per step, reads batched, batching never skipping. ⚠ A COMPILE SITTING IS TWO RUNS + THE
   TAIL: RUN A the rereads, the design, the docket (its own run past ~700 rows); RUN B the types, the runner, the tape to 10/10, the chain
   LAUNCHED; THE TAIL the records, the forms, the message; a READING sitting ONE run + its tail.
@@ -65,12 +65,12 @@ first), THE_WORLD.md, RESEARCH_LOG.md, SETUP.md. logic/: MIDDOT.md, MOVE_CATALOG
 oral_triage/ (ledgers + dockets), corpus/CORPUS_TRUTH.py, solo_tools/, pre_logic_methods_2026-07-28/ (the state doc
 PROMPT_continue_solo_era_2026-08-06.md — its newest COMPACTION POINT; this page; the addenda).
 World/step9/: DEUTERONOMY_WALK.md (the walk's map — every sitting's design + AS BUILT), NUMBERS_WALK.md, THE_LOOP.md, THE_TENT.md,
-COMPILE_DEBT.md, RECORD_FORMS.md (the records sheet), cold_run_sequence.py (THE TAPE), cold_run_<span>.py (65 runners), the registries (*_vocabulary.yaml, *_dispositions.yaml, calendar_parameters, population_schema),
+COMPILE_DEBT.md, RECORD_FORMS.md (the records sheet), cold_run_sequence.py (THE TAPE), cold_run_<span>.py (74 runners), the registries (*_vocabulary.yaml, *_dispositions.yaml, calendar_parameters, population_schema),
 the gates (gates_chain.sh; GATES_CHAIN.md; sweep_stamp.json), the
 probes (*_probes.py), checkpoint_check.py, world_stepper.py, world_board.py, forms_deuteronomy_walk/. World/journal/data/world.sqlite the one database; Data/tanakh.sqlite the text store. Memory: <memory>/ — MEMORY.md the
 index; deuteronomy-walk.md; cost-rules-no-polling.md; step9-exam-era.md.
 
-## 5. THE SITTING SHAPES (the long forms: the addenda's section 5; the newest instances: the map's "Sitting 13b" and "Sitting 13")
+## 5. THE SITTING SHAPES (the long forms: the addenda §5)
 THE READING: measure first (Onkelos whole + the spine by position; the parser on every number verse) → the ink asserts → the rows → the ledger
 with coverage COMPUTED → the unit yaml + manifest → the claims seated → the fold predicted and matched → build_world → the records from the sheet.
 THE COMPILE: the measurements → THE DESIGN in the map before any code → probes to FAIL → the docket by the union rule → the types by script →
@@ -81,11 +81,11 @@ with THE REST → `gates_chain.sh` (one summary) → the records from the sheet 
 - The standing laws in full, the old staging form, the corpus bake: the addenda §3-4.
 - THE LOOP (the sink, the index, installation, the cursor, scenarios, the readback, the stepper, the port, the board, the gates cut, the import cache, D1-D38): THE_LOOP.md.
 - Numbers' sittings and lessons: NUMBERS_WALK.md; the addenda §8-17. §18 the project review.
-- The one database, the portable repo: the addenda §23-24, §27-29; reviews/PORTABLE_repo_2026-09-15.md.
+- The one database, the portable repo: the addenda §23-24, §27-29.
 - Deuteronomy's sittings: the map; the addenda §31-61 (§39 the whole-row rule). The cost cuts: §35, §45, §47, §53.
 - ON THE TABLE: the Decalogue-schema question (the state doc's #185 addendum 1); THE INSTALL HYPOTHESIS (the map's tail section).
 - THE_STEPS Step 2, Step 5, the compiler block: before a reading's ledger.
-- THE OTHER THREAD (Torah Grok Main): its state in <memory>/main-thread-checkpoint-2026-09-18.md; a relayed finding is never a ruling.
+- THE OTHER THREAD (Torah Grok Main): its state in <memory>/main-thread-checkpoint-2026-09-18.md.
 
 ## 7. IF THIS COMPACTS MID-SITTING
 The state doc's newest COMPACTION POINT names the step in flight. Reread this page, the map's newest section, the memory index — then
