@@ -1,0 +1,45 @@
+import os as _os
+_ROOT = _os.path.normpath(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..', '..'))   # THE PORTABLE REPO (2026-09-15): the repo root from this file's own place
+#!/usr/bin/env python3
+# THE DEUTERONOMY WALK 20b (2026-09-28): THE READY TO COMPACT NOTE after sitting 20's tail and the owner's "continue" — sitting 20b OPENED in the tail's window, its two
+# mechanical prints launched and UNREAD (the exam rows, the recon); per 19b's lesson 1 RUN A proper opens after the compaction. The state doc's note under #234's NOTE,
+# the recovery page's sitting line, MEMORY.md's walk line, the walk note; every number read from the prints; the caps asserted; the lints asserted unmoved. RUN FROM THE REPO ROOT.
+import os, re, subprocess
+ROOT = _ROOT
+SP = os.path.dirname(os.path.abspath(__file__))
+MEM = os.path.expanduser('~/.claude/projects/-Users-Shared-TorahSim/memory')
+SD = f'{ROOT}/logic/pre_logic_methods_2026-07-28/PROMPT_continue_solo_era_2026-08-06.md'; REC = f'{ROOT}/logic/pre_logic_methods_2026-07-28/RECOVERY_new_thread_2026-09-12.md'
+IDX = f'{MEM}/MEMORY.md'; WALK = f'{MEM}/deuteronomy-walk.md'
+def rd(p): return open(p, encoding='utf-8').read()
+def R(pat, text, name):
+    g = re.search(pat, text, re.M); assert g, (name, pat); return g.groups() if g.re.groups > 1 else g.group(1)
+ER = rd(f'{SP}/ch32_exam_rows.out'); NDC, NTW = R(r'^DISTINCT CITATIONS: (\d+) \| cited at least twice: (\d+)', ER, 'distinct'); CH = R(r'^TOTAL CHARS (\d+)', ER, 'chars'); NOROW = len(re.findall(r'NO SUCH ROW IN THE EXPORT', ER)); CHONLY = R(r'^CHAPTER-ONLY CITATIONS \(no paragraph — the Tosefta chapters the rows name\): (\[.*\])$', ER, 'chonly')
+RC = rd(f'{SP}/ch32b_recon.out'); assert RC.rstrip().endswith('RECON DONE') and 'Traceback' not in RC; RB = len(RC.encode())
+RUN = R(r"^\d+: RUN = \(([\d, ]+),\s+#", RC, 'RUN') + ', the four pairs, ' + R(r"^\d+:\s+(\d+)\)\s+# THE DEUTERONOMY WALK 19b", RC, 'RUN tail'); CPS, DS, LAST = R(r"checkpoints: (\d+) \| the D series in use: (\[.*?\]) \| last: (\w+)", RC, 'cps'); NOLINE_RAW = R(r"lines naming Deut 32: (\[.*?\])\n", RC, 'no line'); NL = [int(x) for x in re.findall(r'\((\d+), ', NOLINE_RAW)]; NOLINE = f'{len(NL)} at the sequence lines {NL} (their text carries the Hebrew keys — read at RUN A)'
+EDG, PTR, SPN = R(r"edges (\d+) \| pointers (\d+) \| spans (\d+)", RC, 'edges'); DMN, FN = R(r"daemons (\d+) \| functions \(runners\) (\d+)", RC, 'daemons'); FXN, EVN = R(r"effects (\d+) \| kinds (\d+) \|", RC, 'registries')
+PRESE = R(r"present before: (\[.*?\]) \| candidate kinds", RC, 'present e'); PRESK = R(r"candidate kinds \d+ present before: (\[.*?\])", RC, 'present k'); RS = R(r"receipt_seats\(32\) = (\[.*?\])", RC, 'receipt')
+ENT, CLO, MRK, EVT, DAY = R(r"entities (\d+) \| closes (\d+) \| markers (\d+) \| events (\d+) \| the day (\(\d+, \d+, \d+\))", RC, 'world')
+CIT = re.search(r"'DM5 MATCH'", RC) is not None
+rows = [l.rstrip('\n').split('\t') for l in open(f'{SP}/ch32_timing.tsv', encoding='utf-8') if l[:1].isdigit()]; T20B = [r for r in rows if r[1].startswith('20b ')]
+NOTE = (f'\n\n— READY TO COMPACT (2026-09-28, after sitting 20\'s tail and the owner\'s "continue"): THE TAIL DONE — the four records, the debt line (12), the message <scratch>/commit_msg_ch32.txt, the forms, the home gate; THE TREE UNCOMMITTED since c4b14ce (sitting 20 whole, the display patch with it) — the commit ON HIS WORD ONLY. SITTING 20b — THE COMPILE OF CHAPTER 32, LEAN — OPENED on "continue" in the tail\'s window: per 19b\'s lesson 1 (a compile\'s RUN A after a reading\'s tail in one window passed the cap at 725k) RUN A PROPER OPENS AFTER A COMPACTION; launched here and UNREAD ({len(T20B)} timed steps): THE EXAM ROWS ch32_exam_rows.out (ch32_exam_rows.py from 19b\'s form — {NDC} distinct Mishnah citations in the reading\'s ledger, {NTW} cited at least twice, {CH} chars; {NOROW} citations with no row in the Mishnah export — Tosefta seats wearing a tractate\'s name, to be read from the Tosefta export at RUN A; the chapter-only citations {CHONLY}) and THE LEAN RECON ch32b_recon.out (ch32_compile_recon.py derived from 19b\'s by asserted substitutions — {RB:,} bytes, RECON DONE: the tape at RUN ({RUN}), {CPS} checkpoints, the D series {DS} (last {LAST}; the next name DN), lines naming Deut 32 {NOLINE}; the dispositions edges {EDG} / pointers {PTR} / spans {SPN}; daemons {DMN} / runners {FN}; effects {FXN} / kinds {EVN}; the candidate names present before: effects {PRESE}, kinds {PRESK}; the receipt finder over 32 = {RS}; the running world entities {ENT}, closes {CLO}, markers {MRK}, events {EVT}, the day {DAY}). AFTER THE COMPACTION, on "Reread" then "Go": the rereads (the recovery page, the map\'s newest section "Sitting 20 — CHAPTER 32 — AS BUILT — LEAN", MEMORY.md, then #234 and its notes; THE_STEPS Step 5\'s head and the compiler block before the design); RUN A — the two prints read (the exam rows WHOLE; the recon\'s sections), the callees\' facts (ch32_callees.py from 19b\'s ch29_callees.py — the cells the song calls: the witnesses\' chain and the court law, the desert and the manna, the eagle, Meribah and Aaron\'s death, Numbers 27\'s commission, the flood\'s and the exodus\'s selfsame day, Babel\'s division, the hidden face and the song commanded of 19b), the spec module (ch32b_spec.py — the names fixed once), THE DESIGN in the map BEFORE ANY CODE (one runner over the two units, the 77th; the song\'s lines in the tape\'s forms with THE FALSE EIGHT at 32:15 and THE JOINED THOUSAND at 32:30 guarded; the frame\'s lines at Moses\' last day (40, 12, 7) — NO MARKER; the Mishnah rows the ledger cites the cases; the retelling rules — the song\'s past lines RUN CITATIONS against the tape, Aaron\'s death a reference row), the probe to FAIL, the lean exam file, the clean point #235, the forms; the owner compacts; RUN B (the types, the tools, the runner, the tape to 10/10, the chain LAUNCHED); the tail.')
+sd = rd(SD); assert 'NOTE UNDER #234 (' in sd and 'READY TO COMPACT (2026-09-28, after sitting 20' not in sd
+rec = rd(REC)
+old = "- SITTING 20 (ch 32 READ, LEAN — THE SONG; the spine IN FORCE 306-341, 249 rows whole; two units) DONE at #234's NOTE: 312 sources; 16 claims; FROZEN; chain green on its first pass; the patch 117+114; UNCOMMITTED. NEXT: the commit (20 alone), then 20b (the compile of 32)."
+new = f"- SITTING 20 (ch 32 READ, LEAN — THE SONG; the spine 306-341; two units) DONE at #234's NOTE: 312 sources; 16 claims; FROZEN; chain green; the patch 117+114; UNCOMMITTED. 20b OPENED on 'continue' — the exam rows ({NDC} citations) and the recon printed, UNREAD; RUN A after the compaction (19b's lesson 1); the commit on his word."
+assert rec.count(old) == 1; rec = rec.replace(old, new); assert len(rec.encode()) <= 10240, len(rec.encode())
+idx = rd(IDX)
+old = "UNCOMMITTED; NEXT: the commit on his word (20 alone), then 20b (the compile of 32)"
+new = f"UNCOMMITTED; 20b OPENED 2026-09-28 on 'continue' in the tail's window (the exam rows {NDC} citations and the recon printed, UNREAD — RUN A proper after a compaction, 19b's lesson 1); NEXT: the commit on his word (20 alone), 20b RUN A after the compaction"
+assert idx.count(old) == 1; idx = idx.replace(old, new); assert len(idx.encode()) < 17000, len(idx.encode())
+wk = rd(WALK).rstrip('\n') + f'\n\nSITTING 20b OPENED 2026-09-28 on "continue" in sitting 20\'s tail window — per 19b\'s lesson 1 RUN A proper opens after a compaction; launched and UNREAD: the exam rows ({NDC} distinct citations, {NTW} twice or more, {NOROW} Tosefta seats wearing a tractate\'s name) and the lean recon ({RB:,} bytes; the day {DAY}; markers {MRK}). NEXT after the compaction: RUN A — the prints read, the callees, the spec, the design, the probe, the exam file, #235.\n'
+for nm, txt in (('NOTE', NOTE), ('rec', rec), ('idx', idx), ('wk', wk)): assert os.path.expanduser('~') not in txt and SP not in txt, nm
+assert not re.search(r'[֐-׿]', NOTE + new + wk[wk.rfind('SITTING 20b OPENED'):]), 'NO HEBREW SCRIPT IN THE NEW TEXT (MEMORY.md\'s glossed rule line is its baseline)'
+L0 = {}
+for p in (SD, REC, IDX, WALK):
+    r = subprocess.run(['python3', f'{ROOT}/logic/solo_tools/gloss_lint.py', p], capture_output=True, text=True); L0[os.path.basename(p)] = int(re.search(r'(\d+) flag', r.stdout).group(1))
+open(SD, 'w', encoding='utf-8').write(sd.rstrip('\n') + NOTE + '\n'); open(REC, 'w', encoding='utf-8').write(rec); open(IDX, 'w', encoding='utf-8').write(idx); open(WALK, 'w', encoding='utf-8').write(wk)
+L1 = {}
+for p in (SD, REC, IDX, WALK):
+    r = subprocess.run(['python3', f'{ROOT}/logic/solo_tools/gloss_lint.py', p], capture_output=True, text=True); L1[os.path.basename(p)] = int(re.search(r'(\d+) flag', r.stdout).group(1))
+assert L0 == L1, (L0, L1)
+print(f'THE READY NOTE WRITTEN under #234\'s NOTE ({len(NOTE.encode())} bytes); the recovery page {len(rec.encode())}; MEMORY.md {len(idx.encode())}; the lints unmoved {L1}; the exam rows {NDC}/{NTW}/{CH}/{NOROW}; the recon {RB} bytes, RUN ({RUN}), D series {DS} last {LAST}, present before e {PRESE} k {PRESK}, receipt {RS}, the world {ENT}/{CLO}/{MRK}/{EVT}/{DAY}')

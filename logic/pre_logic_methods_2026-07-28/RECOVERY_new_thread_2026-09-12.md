@@ -13,13 +13,12 @@ tape of events in verse order; every verse adds a line or installs a law (a daem
 EVERYTHING ELSE IN A COMPUTER PROGRAM (his frame). The repo <repo> = /Users/Shared/TorahSim, public under CC0 at
 github.com/Josephtorah/TorahSim.
 
-## 2. WHERE IT STANDS (2026-09-27; #230 — sitting 19b DONE, newest)
-- NUMBERS CLOSED. DEUTERONOMY 1:1-31:30 ON THE TAPE (1-25 PUSHED through 68191ea; 26-31 uncommitted).
-- units 247 / standing 2344, hash 8b8fff1fa28953af. 76 runners, 81 daemons; 1253 kinds / 1399 effects.
-- THE TAPE at RUN (1423, 102, 94, 0, 12, 2003, 52, 319, pairs, 127); 10/10 on its 3 runs; MARKERS 173 — Moses' last day (40, 12, 7) at 31:1; checkpoint_check 346 rows, 18 miss, 0 raised.
-- ⚠ THE LEAN PASS (#208): 16-34 in 8 lean sittings — core shelf, 4 records, chain once; full process OWED.
-- 18b + 19 + 19b UNCOMMITTED since 68191ea; message <scratch>/commit_msg_ch29b.txt.
-- SITTING 19b (ch 29-31 COMPILE, LEAN) DONE at #230: runner covenant_return_charge 95/95; 37 edges; chain: ten readback probes RED once (the marker's day, the reuses; retyped from the print), then ALL GREEN (sweep 75/75); THE CAP BROKEN in RUN B: a marker sitting splits RUN B. NEXT: commit on his word; then 20 (ch 32, lean).
+## 2. WHERE IT STANDS (2026-09-28; #234 + its NOTE — sitting 20 DONE, newest)
+- NUMBERS CLOSED. DEUTERONOMY 1:1-31:30 ON THE TAPE, ALL PUSHED through c4b14ce (2026-09-27); 32 READ + FROZEN (uncommitted), not compiled.
+- units 249 / standing 2360, hash 8b8fff1fa28953af. 76 runners, 81 daemons; 1253 kinds / 1399 effects.
+- THE TAPE at RUN (1423, 102, 94, 0, 12, 2003, 52, 319, pairs, 127); 10/10; MARKERS 173 — Moses' last day (40, 12, 7) at 31:1; checkpoint_check 346 rows, 18 miss.
+- ⚠ THE LEAN PASS (#208): 16-34 in 8 lean sittings — core shelf, 4 records, chain once; full process OWED. A MARKER sitting splits RUN B (19b).
+- SITTING 20 (ch 32 READ, LEAN — THE SONG; the spine 306-341; two units) DONE at #234's NOTE: 312 sources; 16 claims; FROZEN; chain green; the patch 117+114; UNCOMMITTED. 20b OPENED on 'continue' — the exam rows (24 citations) and the recon printed, UNREAD; RUN A after the compaction (19b's lesson 1); the commit on his word.
 
 
 ## 3. THE STANDING LAWS (owner-ruled; verbatim in spirit — long forms: addenda §3)
