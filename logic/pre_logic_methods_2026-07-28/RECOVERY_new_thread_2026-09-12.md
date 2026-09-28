@@ -13,13 +13,13 @@ tape of events in verse order; every verse adds a line or installs a law (a daem
 EVERYTHING ELSE IN A COMPUTER PROGRAM (his frame). The repo <repo> = /Users/Shared/TorahSim, public under CC0 at
 github.com/Josephtorah/TorahSim.
 
-## 2. WHERE IT STANDS (2026-09-26; #224 + its NOTE — sitting 18 DONE, newest)
-- NUMBERS CLOSED. DEUTERONOMY 1:1-25:19 ON THE TAPE (PUSHED through f730559 — 1-16; 17-25 uncommitted); 26-28 READ + FROZEN (uncommitted), not compiled.
-- 244 frozen units, standing 2329, hash 8b8fff1fa28953af. 74 runners, 79 daemons; 1212 kinds / 1249 effects.
-- THE TAPE at RUN (1382, 96, 88, 0, 12, 1833, 50, 319, pairs, 127); 10/10 (DK1-DK5); checkpoint_check 336 rows, 18 known misses.
+## 2. WHERE IT STANDS (2026-09-27; #230 — sitting 19b DONE, newest)
+- NUMBERS CLOSED. DEUTERONOMY 1:1-31:30 ON THE TAPE (1-25 PUSHED through 68191ea; 26-31 uncommitted).
+- units 247 / standing 2344, hash 8b8fff1fa28953af. 76 runners, 81 daemons; 1253 kinds / 1399 effects.
+- THE TAPE at RUN (1423, 102, 94, 0, 12, 2003, 52, 319, pairs, 127); 10/10 on its 3 runs; MARKERS 173 — Moses' last day (40, 12, 7) at 31:1; checkpoint_check 346 rows, 18 miss, 0 raised.
 - ⚠ THE LEAN PASS (#208): 16-34 in 8 lean sittings — core shelf, 4 records, chain once; full process OWED.
-- SITTINGS 15-17b (ch 17-25 READ + COMPILED, LEAN): chains green; UNCOMMITTED since f730559; the message at <scratch>/commit_msg_ch22b.txt.
-- SITTING 18 (ch 26-28 READ, LEAN, five units) DONE at #224's NOTE: 215 sources; 21 claims; FROZEN; chain green on its first pass; the patch 104+134; UNCOMMITTED. NEXT: the commit, then 18b (the compile).
+- 18b + 19 + 19b UNCOMMITTED since 68191ea; message <scratch>/commit_msg_ch29b.txt.
+- SITTING 19b (ch 29-31 COMPILE, LEAN) DONE at #230: runner covenant_return_charge 95/95; 37 edges; chain: ten readback probes RED once (the marker's day, the reuses; retyped from the print), then ALL GREEN (sweep 75/75); THE CAP BROKEN in RUN B: a marker sitting splits RUN B. NEXT: commit on his word; then 20 (ch 32, lean).
 
 
 ## 3. THE STANDING LAWS (owner-ruled; verbatim in spirit — long forms: addenda §3)
@@ -65,7 +65,7 @@ first), THE_WORLD.md, RESEARCH_LOG.md, SETUP.md. logic/: MIDDOT.md, MOVE_CATALOG
 oral_triage/ (ledgers + dockets), corpus/CORPUS_TRUTH.py, solo_tools/, pre_logic_methods_2026-07-28/ (the state doc
 PROMPT_continue_solo_era_2026-08-06.md — its newest COMPACTION POINT; this page; the addenda).
 World/step9/: DEUTERONOMY_WALK.md (the walk's map — every sitting's design + AS BUILT), NUMBERS_WALK.md, THE_LOOP.md, THE_TENT.md,
-COMPILE_DEBT.md, RECORD_FORMS.md (the records sheet), cold_run_sequence.py (THE TAPE), cold_run_<span>.py (74 runners), the registries (*_vocabulary.yaml, *_dispositions.yaml, calendar_parameters, population_schema),
+COMPILE_DEBT.md, RECORD_FORMS.md (the records sheet), cold_run_sequence.py (THE TAPE), cold_run_<span>.py (76 runners), the registries (*_vocabulary.yaml, *_dispositions.yaml, calendar_parameters, population_schema),
 the gates (gates_chain.sh; GATES_CHAIN.md; sweep_stamp.json), the
 probes (*_probes.py), checkpoint_check.py, world_stepper.py, world_board.py, forms_deuteronomy_walk/. World/journal/data/world.sqlite the one database; Data/tanakh.sqlite the text store. Memory: <memory>/ — MEMORY.md the
 index; deuteronomy-walk.md; cost-rules-no-polling.md; step9-exam-era.md.

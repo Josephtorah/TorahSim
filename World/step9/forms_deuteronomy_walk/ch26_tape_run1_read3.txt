@@ -1,0 +1,71 @@
+CQ6 | e0 2 -> 3
+CU5 | e6 2 -> 3
+DA6 | e0 lists 0->1 only-declared [] only-computed ['iron_yoke_on_neck']
+DC2 | e0 (1, 1, 1, 1, 1) -> (2, 1, 1, 1, 1)
+DC6 | e0 (1, 1, 2, 2, 1, 2, 1, 1, 1) -> (1, 1, 3, 2, 1, 2, 1, 1, 1)
+DD2 | e0 (1, 1, 2, 1, 2, 2, 1) -> (1, 1, 4, 1, 2, 2, 1)
+DF2 | e0 (1, 1, 1, 1, 1) -> (1, 1, 1, 1, 2); e2 ((2, ['Deut 12:5', 'Deut 14:22']), (2, ['Deut 12:15', 'Deut 14:22'])) -> ((4, ['Deut 12:5', 'Deut 14:22', 'Deut 26:1', 'Deut 27:1']), (2, ['Deut 12:15', 'Deut 14:22']))
+DF4 | e3 (2, 2) -> (4, 2)
+DF6 | e5 lists 1->2 only-declared [] only-computed ['firstfruits_ebal_curses']
+DG2 | e3 ((2, ['Deut 7:12', 'Deut 15:1']), (2, ['Exod 2:23', 'Deut 15:7']), (1, ['Deut 15:7']), (2, ['Deut 12:15', 'Deut 15:19'])) -> ((3, ['Deut 7:12', 'Deut 15:1', 'Deut 28:1']), (2, ['Exod 2:23', 'Deut 15:7']), (1, ['Deut 15:7']), (2, ['Deut 12:15', 'Deut 15:19']))
+DG4 | e3 (2, 2, 1, 2) -> (3, 2, 1, 2)
+DH4 | e0 (1, 2, 2, 1) -> (1, 4, 2, 1)
+DK4 | e0 (2, 1, 7, 2, 0, 1, 1, 1, 1, 9, 2, 2, 1, 1, 1, 1, 1, 1, 1, 0, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 2, 2, 1, 1, 0, 0, 0, 0, 0) -> (2, 1, 7, 2, 0, 1, 1, 1, 1, 9, 2, 2, 1, 1, 1, 1, 1, 1, 1, 0, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 3, 2, 1, 1, 0, 0, 0, 0, 0)
+DL3 | e1 53 -> 52
+---- DL3 cp at line [3596]
+    3574     RB_cp = cold_run_persons_poor_court.READBACK; EVk_cp = [l[2] for l in events]
+    3575     found_tape_cp = sum(1 for r_ in RB_cp if r_['tape_kind'] and any(e['kind'] == r_['tape_kind'] and WE.first_verse(e.get('case_source')) == WE.first_verse(r_['tape_verse']) for e in EVk_cp))
+    3576     by_call_cp = sum(1 for r_ in RB_cp if r_['cell'] and r_['cell_found']); sup_cp = [r_ for r_ in RB_cp if r_['grade'] == 'SUPPLIED']
+    3577     cp('DK3 THE READBACK — THE FORMS ON FILE, NO NEW FORM: the_readback\'s rows NINETY-SIX, one per verse (the census from the runner\'s print: SUPPLIED 39, EXPANDED 26, VARIANT 20, TURNED 8, VERBATIM 2, SHORTENED 1), every reference row\'s entry FOU
+    3578     def _nall_cp(eff): return sum(1 for ent in w.entities.values() for e in ent.ledger if e['effect'] == eff)
+    3579     open_deb_cp = [e for e in LG('israel') if e.get('op') == 'debit' and not e.get('closed_by')]; PPm = cold_run_persons_poor_court
+    3580     cp('DK4 THE KIN AND THE HOLES — pity_barred 2, talion_pity_barred 1, put_to_death 7, stoned 2, lashes 0, pays 1, exempt 1, israel_hears_and_fears 1, hanged 1, buried 9, sent_outside_the_camp 2, firstborn_by_the_head 2, inheritance_stayed_in_tribe
+    3581     cp('DK5 THE REST — entities 319 UNMOVED (Israel the written-on party, on the registry; no bride, divorcee, levirate widow, flogged man, hireling, escaped slave or harlot of Israel an entity), closes 127 UNMOVED, the population table 148 UNMOVED, 
+    3582     # ---- THE DEUTERONOMY WALK 18b (2026-09-26; LEAN; DEUTERONOMY_WALK.md "Sitting 18b" THE CHECKPOINTS DL1-DL5): chapters 26-28's twenty-one own-day lines — the D series' twelfth name, the lean block over three chapters ----
+    3583     CP_KINDS = ['first_fruits_declared', 'tithe_confession_declared', 'covenant_formula_declared', 'stones_altar_declared', 'people_this_day_declared', 'gerizim_ebal_tribes_declared', 'twelve_curses_declared', 'blessings_condition_declared', 'enemies
+    3584     ev_cp = [(i, l) for i, l in enumerate(w.log) if l[0] == 'EVENT' and l[2]['kind'] in CP_KINDS]
+    3585     i_last_d25 = max(i for i, l in enumerate(w.log) if l[0] == 'EVENT' and str(l[2].get('case_source', '')).startswith('Deut 25:'))
+    3586     mk_cp = [l for l in markers if str(l[2].get('verse', '')).startswith(('Deut 26:', 'Deut 27:', 'Deut 28:'))]
+    3587     cp('DL1 THE LINES — twenty-one events on the tape AFTER the tape\'s last Deuteronomy 25 line, in the ink\'s order (26:1, 26:12, 26:16, 27:1, 27:9, 27:11, 27:14, 28:1, 28:7, 28:9, 28:11, 28:15, 28:20, 28:25, 28:30, 28:38, 28:45, 28:49, 28:53, 28:5
+    3588     FV_cp = (lambda t_: '%s %d:%d' % t_ if isinstance(t_, tuple) else str(t_))
+    3589     n91_cp = tuple(len([e for e in LG('israel') if e['effect'] == eff]) for eff in OWN91_CP); src_cp = tuple(FV_cp(WE.first_verse(str([e for e in LG('israel') if e['effect'] == eff][0].get('case_source', '')))) if [e for e in LG('israel') if e['effec
+    3590     re_cp = tuple(len([e for e in LG('israel') if e['effect'] == eff]) for eff, _ in [('rejoicing_before_the_lord_commanded', 4), ('poor_tithe_owed', 2), ('blessings_for_hearing', 3), ('rain_in_its_season', 2)])
+    3591     blocks_cp = sum(1 for eff in ['tithe_in_mourning_barred', 'tithe_in_uncleanness_barred', 'tithe_for_the_dead_barred', 'iron_on_altar_barred', 'turning_aside_barred'] for e in LG('israel') if e['effect'] == eff and e.get('op') == 'block'); heaven_
+    3592     cp('DL2 THE WRITES — the ninety-one NEW ONE each on israel_people with their lines\' first verses (26:1 four, 26:12 five, 26:16 five, 27:1 six, 27:9 two, 27:11 two, 27:14 fourteen, 28:1 four, 28:7 two, 28:9 two, 28:11 four, 28:15 five, 28:20 six,
+    3593     RB_cp = cold_run_firstfruits_ebal_curses.READBACK; EVk_cp = [l[2] for l in events]
+    3594     found_tape_cp = sum(1 for r_ in RB_cp if r_['tape_kind'] and any(e['kind'] == r_['tape_kind'] and WE.first_verse(e.get('case_source')) == WE.first_verse(r_['tape_verse']) for e in EVk_cp))
+    3595     by_call_cp = sum(1 for r_ in RB_cp if r_['cell'] and r_['cell_found']); sup_cp = [r_ for r_ in RB_cp if r_['grade'] == 'SUPPLIED']
+    3596     cp('DL3 THE READBACK — THE FORMS ON FILE, NO NEW FORM: the_readback\'s rows ONE HUNDRED AND FOURTEEN, one per verse (the census from the runner\'s print: SUPPLIED 39, EXPANDED 11, VARIANT 44, SHORTENED 2, VERBATIM 2, TURNED 16), every reference r
+---- DL1 cp at line [3587]
+    3583     CP_KINDS = ['first_fruits_declared', 'tithe_confession_declared', 'covenant_formula_declared', 'stones_altar_declared', 'people_this_day_declared', 'gerizim_ebal_tribes_declared', 'twelve_curses_declared', 'blessings_condition_declared', 'enemies_storehouses_blessing_declared', 'holy_people_fear_declared', 'heavens_treasure_lending_declared', 'curses_condition_declared', 'curse_diseases_brass_
+    3584     ev_cp = [(i, l) for i, l in enumerate(w.log) if l[0] == 'EVENT' and l[2]['kind'] in CP_KINDS]
+    3585     i_last_d25 = max(i for i, l in enumerate(w.log) if l[0] == 'EVENT' and str(l[2].get('case_source', '')).startswith('Deut 25:'))
+    3586     mk_cp = [l for l in markers if str(l[2].get('verse', '')).startswith(('Deut 26:', 'Deut 27:', 'Deut 28:'))]
+    3587     cp('DL1 THE LINES — twenty-one events on the tape AFTER the tape\'s last Deuteronomy 25 line, in the ink\'s order (26:1, 26:12, 26:16, 27:1, 27:9, 27:11, 27:14, 28:1, 28:7, 28:9, 28:11, 28:15, 28:20, 28:25, 28:30, 28:38, 28:45, 28:49, 28:53, 28:58, 28:65), all page_order on the counter\'s day (40, 11, 1), no dated field; NO marker at any Deut 26, 27 or 28 verse (chapter 27\'s three frames the 
+---- DK1 counter form ----
+CHECKPOINT DK1 THE LINES — twenty events on the tape AFTER the tape's last Deuteronomy 21 line, in the ink's order (22:1
+---- the verdict count ----
+[(3887, "print('\\n%d/%d checkpoints' % (ok, len(TESTS)))")]
+---- DC2 and DF4 cp source (the form) ----
+ 3385     cp('DC2 THE WRITES — rain_in_its_season ONE and heavens_shut_for_turning ONE on israel_people (conditional HEAVEN entries, source beginning "Deut 11:13"), yoke_of_the_commandments_accepted ONE (a status, "Deut 11:13"), blessing_and_curse_set ONE (a status, "Deut 11:26"), gerizim_ebal_ceremony_owed ONE (a debit toward Heaven, OPEN — no close on the tape); law_blessing_and_curse registered, given_at Deut 11:1, installed_by boot; the six cells WRAPPED', ((1, 1, 1, 1, 1), ('Deut 11:13', 'Deut 11:13', 'Deut 11:13', 'Deut 11:26', 'Deut 11:26'), True, 'HEAVEN', 'Deut 11:1', 'boot', 6), (five_bc, src_bc, bool(deb_bc) and not deb_bc[0].get('closed_by'), deb_bc[0].get('counterparty') if deb_bc else None, dd_bc['daemons'].get('law_blessing_and_curse', {}).get('given_at'), dd_bc['daemons'].get('law_blessing_and_curse', {}).get('installed_by'), sum(1 for v_ in dd_bc['functions'].get('blessing_and
+ 3469     cp('DF4 THE HOLES — the effects naming the cuttings for the dead, the abomination\'s eating, the carcass\'s eating, the second tithe or the poor man\'s tithe on israel_people are this sitting\'s FIVE ALONE (no other entry named them before this daemon\'s lines — the one database scanned EMPTY at the runner\'s import: FOOD_SCAN []); the two reused effects on israel_people ALONE before (REUSE_SCAN) and TWO each after; the five new names absent from both registries at the commit fb797a1 (asserted at add_types_ch14.py)', (sorted(OWN5_FT), True, True, (2, 2)), (holes_ft, cold_run_food_tithe.FOOD_SCAN in ([], None), cold_run_food_tithe.REUSE_SCAN in ([['israel_people'], ['israel_people']], None), tuple(len([e for e in LG('israel') if e['effect'] == eff]) for eff in REUSE2_FT)))
+---- 13b retype form ----
+["cp('CQ6 THE BLESSINGS AND THE PITY — blessings_for_hearing on israel_people TWO since THE DEUTERONOMY WALK 13b (15:5\\'s second entry on the line release_law_declared — the reuse; ONE at 5b: a conditional heaven entry, OPEN; NOT blessing_promised — Abram\\'s ladder entry, the registry decided the name"]
+---- the scan census: the probes and the runner lines ----
+    TRIPS? readback_probes.py     line 224   entity None           pattern 'commanded'                              -> new rows matched ['amen_answered_commanded', 'covenant_words_in_moab_decla
+    TRIPS? readback_probes.py     line 225   entity None           pattern 'blessings_for_hearing'                  -> new rows matched ['curses_for_not_hearkening', 'high_above_all_nations_pro
+    TRIPS? readback_probes.py     line 233   entity None           pattern 'commanded'                              -> new rows matched ['amen_answered_commanded', 'covenant_words_in_moab_decla
+    TRIPS? readback_probes.py     line 266   entity None           pattern 'blessings_for_hearing'                  -> new rows matched ['curses_for_not_hearkening', 'high_above_all_nations_pro
+    TRIPS? readback_probes.py     line 410   entity israel_people  pattern 'gerizim_ebal_ceremony_owed'             -> new rows matched ['six_tribes_on_ebal_for_the_curse']
+    TRIPS? readback_probes.py     line 426   entity name           pattern 'rain'                                   -> new rows matched ['rain_turned_to_dust']
+  sequence lines tripping on israel: [3065, 3080, 3090, 3111, 3112, 3126, 3128, 3141, 3161, 3168, 3191, 3202, 3214, 3221, 3223, 3225, 3227, 3238, 3243, 3252, 3260, 3262, 3268, 3284, 3286, 3292, 3293, 3296, 3298, 3308, 3310, 3317, 3319, 3321, 3342, 3356, 3357, 3372, 3373, 3383, 3384, 3390, 3392, 3393, 3408, 3410, 3416, 3421, 3434, 3435, 3436, 3442, 3443, 3445, 3447, 3460, 3461, 3462, 3468, 3469, 3472, 3473, 3488, 3489, 3490, 3491, 3497, 3498, 3500, 3501, 3516, 3517, 3518, 3525, 3526, 3535, 3536, 3543, 3544, 3553, 3554, 3561, 3571, 3572, 3579, 3589, 3590, 3591, 3598, 3599]
+  rp 224: cmd = [e for e in L('commanded') if e.get('value') == 'devote_the_seven_nations']; hab = L('house_abomination_barred')
+  rp 225: got = (len(nd), len(hb), len(ab), any(k.startswith('Deut 7:') for k in mk), nm, len(cmd), len(L('covenant_barred')), len(L('favor_barred')), len(L('intermarriage_barred')), len(L('blessings_for_hearin
+  rp 233: dsp = [e for e in L('commanded') if str(e.get('value', '')).startswith('dispossess') or e.get('value') == 'destroy_their_images']
+  rp 266: got = (len(L('manna_provided')), len(L('water_from_the_rock')), len(L('serpents_sent')), len(L('shema_commanded')), len(L('test_barred')), len(L('other_gods_barred')), len(L('blessings_for_hearing')),
+  rp 410: deb = L('israel_people', 'gerizim_ebal_ceremony_owed'); deb_open = bool(deb) and not deb[0].get('closed_by') and deb[0].get('counterparty') == 'HEAVEN'
+  rp 426: isr = ENT('israel_people'); rainy = sorted({e['effect'] for e in isr.ledger if any(t in e['effect'] for t in ('rain', 'heavens_shut', 'yoke_of')) and e['effect'] not in ('vow_refraining_permitted', 'r
+  seq 3065: isr_cmd = [e for e in LG('israel') if e['effect'] == 'commanded']; har = [e for e in isr_cmd if e.get('value') == 'harass_the_midianites']
+  seq 3080: npc = [e for e in LG('the-men-of-war') if e['effect'] == 'no_plague_at_counting']; atn = [e for e in LG('the-officers-of-the-host') if e['effect'] == 'atoned_forgiven']; mem = [e for e in LG('israel')
+  seq 3191: sp_os = [e for e in LG('israel') if e['effect'] == 'sentence_pronounced']; carc_os = [l for l in fires if l[2]['effect'] == 'carcasses_fall_in_the_wilderness']; cal_os = [e for e in LG('caleb') if e['
+  seq 3252: tw_ch = [l for l in events if l[2]['kind'] == 'ten_words_declared']; tg_ch = [l for l in events if l[2]['kind'] == 'tablets_given']; cd_ch = [e for e in LG('israel') if e['effect'] == 'covenant_declar
