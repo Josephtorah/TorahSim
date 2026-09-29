@@ -1,6 +1,6 @@
 # REGISTER_INDEX.md — written by register_census.py each run (documentation, never runtime)
 
-THE REGISTER GATE — the ink's own formulas against the world (population table rows 148; ledger entries 2015)
+THE REGISTER GATE — the ink's own formulas against the world (population table rows 148; ledger entries 2060)
 COVERAGE: counts 110 {'MEASURE-ONLY': 44, 'NONE': 16, 'ELSEWHERE': 14, 'ROW': 29, 'LEDGER': 7}; receipts 69 {'CHAPTER': 11, 'NONE': 12, 'ACT': 25, 'EVENT': 5, 'CLOSE': 16}; footers 9 {'DAEMONS': 8, 'EMPTY': 1}; registers 18 {'NONE': 14, 'ROWS': 4}
 DECLARED 98; DEBT 0; FAILS 0
 -- A. THE COUNT LINES (110)

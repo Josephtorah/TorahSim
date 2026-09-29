@@ -16,7 +16,8 @@ sequential): the sweep runs its runners IN PARALLEL (--jobs N, default half the 
 INCREMENTALLY (--changed): the runners whose source moved since the last green sweep's STAMP (World/step9/sweep_stamp.json — every runner's hash and the
 shared pieces' hashes, written only by a green sweep) plus every runner that IMPORTS them, transitively (the callers re-graded when a callee moves);
 a shared piece moved (the engine, the effects layer, the guards, the journal, a registry) or no stamp = the FULL sweep. --skip name,name leaves named
-runners out (the chain skips cold_run_sequence.py, whose full run is the chain's own first step). Nothing changed since the stamp = the stamp stands
+runners out (the chain skips cold_run_sequence.py, whose full run is the chain's own first step). --timeout N (default 2400 s; 900 until 2026-09-29) bounds one runner's run — the song's
+runner with forty-two callees ran past 900 s under INK_CACHE=0 at sitting 20b's third pass: a runner's sweep time is its callees' full loads. Nothing changed since the stamp = the stamp stands
 (printed, exit 0; the stamp's date and count named). The dependency and daemon gates run first as before, whole.
 """
 import glob, os, re, subprocess, sys, time, hashlib, json, concurrent.futures
@@ -68,6 +69,7 @@ def argv_value(flag, default=None):
         i = sys.argv.index(flag); return sys.argv[i + 1] if i + 1 < len(sys.argv) else default
     return default
 JOBS = int(argv_value('--jobs', str(min(8, max(1, (os.cpu_count() or 2) // 2)))))
+TIMEOUT = int(argv_value('--timeout', '2400'))   # THE DEUTERONOMY WALK 20b (2026-09-29): one runner's bound — 900 s from the gates cut until the song's runner (forty-two callees) ran past it under INK_CACHE=0 at 20b's third pass (rc=124; covenant_return_charge 790.9 s, firstfruits_ebal_curses 596.5 s beside it): a runner's sweep time is its callees' full loads
 SKIP = set(x for x in (argv_value('--skip', '') or '').split(',') if x)
 mode = 'FULL'; selected = list(runners); reason = 'every runner'
 stamp = json.load(open(STAMP, encoding='utf-8')) if os.path.exists(STAMP) else None
@@ -105,7 +107,7 @@ def run_one(path):
     t0 = time.time()
     try:
         r = subprocess.run([sys.executable, path], cwd=HERE, capture_output=True,
-                           text=True, timeout=900, env=dict(os.environ, INK_CACHE='0'))   # THE VERIFIED-IMPORT CACHE (2026-09-19): the sweep runs every check in full
+                           text=True, timeout=TIMEOUT, env=dict(os.environ, INK_CACHE='0'))   # THE VERIFIED-IMPORT CACHE (2026-09-19): the sweep runs every check in full
         out = r.stdout + r.stderr
         rc = r.returncode
     except subprocess.TimeoutExpired:

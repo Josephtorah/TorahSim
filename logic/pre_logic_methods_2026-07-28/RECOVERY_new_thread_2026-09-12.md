@@ -13,12 +13,12 @@ tape of events in verse order; every verse adds a line or installs a law (a daem
 EVERYTHING ELSE IN A COMPUTER PROGRAM (his frame). The repo <repo> = /Users/Shared/TorahSim, public under CC0 at
 github.com/Josephtorah/TorahSim.
 
-## 2. WHERE IT STANDS (2026-09-28; #234 + its NOTE — sitting 20 DONE, newest)
-- NUMBERS CLOSED. DEUTERONOMY 1:1-31:30 ON THE TAPE, ALL PUSHED through c4b14ce (2026-09-27); 32 READ + FROZEN (uncommitted), not compiled.
-- units 249 / standing 2360, hash 8b8fff1fa28953af. 76 runners, 81 daemons; 1253 kinds / 1399 effects.
-- THE TAPE at RUN (1423, 102, 94, 0, 12, 2003, 52, 319, pairs, 127); 10/10; MARKERS 173 — Moses' last day (40, 12, 7) at 31:1; checkpoint_check 346 rows, 18 miss.
-- ⚠ THE LEAN PASS (#208): 16-34 in 8 lean sittings — core shelf, 4 records, chain once; full process OWED. A MARKER sitting splits RUN B (19b).
-- SITTING 20 (ch 32 READ, LEAN — THE SONG; the spine 306-341; two units) DONE at #234's NOTE: 312 sources; 16 claims; FROZEN; chain green; the patch 117+114; UNCOMMITTED. 20b OPENED on 'continue' — the exam rows (24 citations) and the recon printed, UNREAD; RUN A after the compaction (19b's lesson 1); the commit on his word.
+## 2. WHERE IT STANDS (2026-09-29; #236 + its NOTE — sitting 20b DONE, newest)
+- NUMBERS CLOSED. DEUTERONOMY 1:1-32:52 ON THE TAPE (1-31 PUSHED through c4b14ce; 32 READ PUSHED 7798bee; its compile 20b's commit).
+- units 249 / standing 2360, hash 8b8fff1fa28953af. 77 runners, 82 daemons; 1269 kinds / 1441 effects.
+- THE TAPE at RUN (1439, 102, 94, 0, 12, 2048, 53, 319, pairs, 127); 10/10 on its 2 runs; MARKERS 173 — Moses' last day (40, 12, 7) at 31:1, none at 32; checkpoint_check 351 rows, 18 miss, 0 raised.
+- ⚠ THE LEAN PASS (#208): 16-34 lean — core shelf, 4 records, chain once; full process OWED.
+- SITTING 20b (ch 32 COMPILE, LEAN) DONE at #236's NOTE: runner song_charge_nebo 72/72; 44 edges; chain FOUR PASSES — 1: 4 readback probes + cache C6 RED (retyped; cleared); 2: C6 RED again (the runner's globals() bindings, retyped); 3: green to the stamp, the sweep's 900 s cap fell (raised); 4: ALL GREEN (sweep 76/76). NEXT: commit on his word; then 21 (ch 33, lean).
 
 
 ## 3. THE STANDING LAWS (owner-ruled; verbatim in spirit — long forms: addenda §3)
@@ -64,7 +64,7 @@ first), THE_WORLD.md, RESEARCH_LOG.md, SETUP.md. logic/: MIDDOT.md, MOVE_CATALOG
 oral_triage/ (ledgers + dockets), corpus/CORPUS_TRUTH.py, solo_tools/, pre_logic_methods_2026-07-28/ (the state doc
 PROMPT_continue_solo_era_2026-08-06.md — its newest COMPACTION POINT; this page; the addenda).
 World/step9/: DEUTERONOMY_WALK.md (the walk's map — every sitting's design + AS BUILT), NUMBERS_WALK.md, THE_LOOP.md, THE_TENT.md,
-COMPILE_DEBT.md, RECORD_FORMS.md (the records sheet), cold_run_sequence.py (THE TAPE), cold_run_<span>.py (76 runners), the registries (*_vocabulary.yaml, *_dispositions.yaml, calendar_parameters, population_schema),
+COMPILE_DEBT.md, RECORD_FORMS.md (the records sheet), cold_run_sequence.py (THE TAPE), cold_run_<span>.py (77 runners), the registries (*_vocabulary.yaml, *_dispositions.yaml, calendar_parameters, population_schema),
 the gates (gates_chain.sh; GATES_CHAIN.md; sweep_stamp.json), the
 probes (*_probes.py), checkpoint_check.py, world_stepper.py, world_board.py, forms_deuteronomy_walk/. World/journal/data/world.sqlite the one database; Data/tanakh.sqlite the text store. Memory: <memory>/ — MEMORY.md the
 index; deuteronomy-walk.md; cost-rules-no-polling.md; step9-exam-era.md.

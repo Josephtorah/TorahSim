@@ -1,0 +1,118 @@
+
+# ---- THE CALLEES' FACTS (every edge live at the cells that consume them; the values PRINTED at the first pass and ASSERTED from that print at the second — 10b's lesson 2, the callees' way; the q-style cells called with their keys, an absent key printed, never guessed silently) ----
+def V(x): return x[0] if isinstance(x, tuple) else x
+def Q(c): return (c.get('v'), c.get('p'), c.get('fx'), str(c.get('why', ''))) if isinstance(c, dict) else tuple(c)   # the (v, p, fx, why) cells — the dict's four keys as a tuple
+def DD(m): return getattr(m, 'DATA', {})
+def ASKS(m, cell): return re.findall(r"if ask == '([a-z_0-9]+)':", inspect.getsource(getattr(m, cell)))
+def A(m, cell, ask):
+    """an ask-style cell called with its data — (verdict, effects, provenance); a q-style cell called with the key; the ask checked against the cell's own source first"""
+    fn = getattr(m, cell); asks = ASKS(m, cell)
+    if asks:
+        assert ask in asks, ('THE ASK IS NOT THE CELL\'S OWN', m.__name__, cell, ask, asks[:6])
+        return fn({'ask': ask}, DD(m))
+    return fn(ask)
+def DK(m, key):
+    d = DD(m); assert key in d, ('THE DATA KEY IS NOT THE CALLEE\'S OWN', m.__name__, key, sorted(d)[:12]); return d[key]
+FACTS_PRINT = []
+def F(name, val):
+    globals()[name] = val; FACTS_PRINT.append((name, (V(val) if not isinstance(val, dict) else val.get('v', val.get('value'))) if val is not None else None)); return val   # a DATA row's value printed (the first pass printed None for the dicts)
+# obey_horeb — THE WITNESSES' CHAIN (4:26, 30:19, 31:28, 32:1 — the fifth seat this chapter's), the host apportioned (4:19 — 32:8's kin), the exile case
+F('OH_CHAIN', DK(OH, 'the_witnesses_chain')); F('OH_HOST', A(OH, 'no_image', 'the_host_apportioned')); F('OH_WIT', A(OH, 'the_exile_case', 'the_case_head'))
+# covenant_return_charge — the song commanded, written and spoken (31:19-30 — the song ahead named forward), the hidden face (31:17), the marker's day, the three gifts
+F('CR_SATED', A(CR, 'the_song_commanded', 'when_they_eat_and_are_sated_and_grow_fat_and_turn')); F('CR_HIDE', A(CR, 'the_apostasy_foretold', 'my_anger_kindled_i_will_forsake_them_and_hide_my_face'))
+F('CR_SPOKE', A(CR, 'the_book_beside_the_ark_and_the_assembly', 'moses_spoke_the_words_of_this_song_in_the_ears_of_all_the_assembly_to_their_end')); F('CR_LIFE', A(CR, 'life_and_death', 'choose_life_love_hearken_and_cleave_the_length_of_days'))
+F('CR_AHEAD', DK(CR, 'the_song_ahead')); F('CR_GIFTS', DK(CR, 'the_three_gifts_and_their_merits')); F('CR_DEATH', DK(CR, 'the_death_date_of_moses')); F('CR_STATE', DK(CR, 'the_life_and_death_state')); F('CR_WITS', DK(CR, 'the_witnesses_of_the_chapter'))
+# good_land — the wilderness, the rock of flint (THE TWO ROCKS), the manna 'in your end', the testimony's forgetting; NO receipt in the chapter
+F('GL_WILD', A(GL, 'the_chain_and_the_covenant', 'the_wilderness')); F('GL_FLINT', A(GL, 'the_chain_and_the_covenant', 'the_rock_of_flint')); F('GL_MANNA', A(GL, 'the_chain_and_the_covenant', 'the_manna_to_do_you_good')); F('GL_FORGET', A(GL, 'the_testimony', 'if_you_forget'))
+F('GL_ROCKS', DK(GL, 'the_two_rocks')); F('GL_HONEY', DK(GL, 'honey_without_milk')); GL_R = GL.receipt_seats(32); F('GL_R', GL_R)
+# exodus_story — the treasure's seats (19:5 — 32:9's kin), the ten plagues (the tape's lines by kind), Moses' birthday (12, 7)
+F('ES_TREASURE', ES.sinai('treasure_seats')); F('ES_TEN', ES.plagues('ten')); F('ES_BIRTH', ES.birth('birthday'))
+# refuge_war_family — one witness for any iniquity (19:15 — the court law read into 32:1's witnesses)
+F('RW_ONE', A(RW, 'the_landmark_and_the_witnesses', 'one_witness_for_any_iniquity'))
+# persons_poor_court — the nest's sending (22:7 — Peah 1:1's list at 336:2), the vineyard's mixture (22:9 — Kilayim 3:2's kin)
+F('PP_NEST', DK(PP, 'the_nests_sending')); F('PP_VINE', DK(PP, 'the_vineyards_mixture'))
+# courts_prophet — two witnesses for every death (17:6), the seven investigations (Sanhedrin 5:2), the three acts (17:3 — 32:17's demons)
+F('CP_TWO', A(CP, 'the_idolaters_trial', 'two_witnesses_for_every_death')); F('CP_SEVEN', A(CP, 'the_idolaters_trial', 'the_seven_investigations')); F('CP_ACTS', A(CP, 'the_idolaters_trial', 'the_three_acts_and_the_associator'))
+# refuge — the one witness (35:30), the land's atonement (35:33 — 32:43's kin), the case table (35:23 — the enemy neither witness nor judge), the ransom rows (35:31)
+F('RF_ONE', DK(RF, 'the_one_witness')); F('RF_ATONE', DK(RF, 'the_lands_atonement')); F('RF_TABLE', DK(RF, 'the_case_table')); F('RF_RANSOM', DK(RF, 'the_ransom_rows'))
+# ordinances — the courts (Exodus 21:22's judges; 21:30's ransom — 329:4's kin)
+OR_COURTS = OR.courts; F('OR_KEYS', sorted(DD(OR))[:8])
+# chukat — Aaron's death (20:22-29 — THE RECEIPT at 32:50), the sentence at Meribah (20:12 — 32:51's reason), the seats, the kiss
+F('CK_DATES', A(CK, 'edom_and_hor', 'death_dates')); F('CK_SUCC', A(CK, 'edom_and_hor', 'succession')); F('CK_AGE', A(CK, 'edom_and_hor', 'aaron_age'))
+F('CK_SENT', A(CK, 'meribah', 'sentence')); F('CK_SEATS', A(CK, 'meribah', 'meribah_seats')); F('CK_KISS', A(CK, 'meribah', 'death_by_the_kiss')); F('CK_DIED', A(CK, 'meribah', 'died_for_sin'))
+# opening_speech — THE COMMISSION (Numbers 27:12-23 — the mountain, the sentence cited, the receipt, the debit OPEN to 34:1-4), Bashan
+F('OS_MTN', A(OS, 'the_commission', 'the_mountain')); F('OS_SENT', A(OS, 'the_commission', 'the_sentence_cited')); F('OS_RECEIPT', A(OS, 'the_commission', 'the_receipt')); F('OS_DEBIT', A(OS, 'the_commission', 'the_debit')); F('OS_OG', A(OS, 'sihon_and_og', 'og_turned'))
+# journeys — Aaron's death RETOLD (33:38-40 — a retelling never writes an act twice), the four writings, the death date (40, 5, 1), the age 123
+F('JR_DATE', A(JR, 'aarons_death_retold', 'the_date')); F('JR_AGE', A(JR, 'aarons_death_retold', 'the_age')); F('JR_NOWRITE', A(JR, 'aarons_death_retold', 'no_write')); F('JR_ADAR', A(JR, 'aarons_death_retold', 'moses_seventh_adar')); F('JR_KISS', A(JR, 'aarons_death_retold', 'by_the_mouth_kiss'))
+F('JR_FOUR', DK(JR, 'the_four_writings')); F('JR_DD', DK(JR, 'the_death_date')); F('JR_AARON', DK(JR, 'aarons_age'))
+# second_tablets — Aaron died there (10:6 — Moserah against Mount Hor, the OPEN row)
+F('ST_THERE', A(ST, 'the_stations_and_the_death', 'aaron_died_there')); F('ST_PLACE', A(ST, 'the_stations_and_the_death', 'the_place_of_the_death'))
+# primeval — Babel's division (Genesis 11 — 32:8's kin by the ink's words), the flood's boarding (7:13 — the selfsame day), the prologue (the inclination)
+PV_BABEL, PV_NATIONS, PV_FLOOD, PV_PROLOGUE = PV.babel, PV.nations, PV.flood, PV.prologue; F('PV_KEYS', sorted(DD(PV))[:8])
+# pre_sinai — the sons of Noah (Genesis 9 — the seven commandments, Tosefta Avodah Zarah 9:4's case), the circumcision (17:23, 26 — the selfsame day)
+PS_NOAHIDE, PS_CIRC = PS.noahide, PS.circumcision; F('PS_KEYS', sorted(DD(PS))[:8])
+# mamre — Sodom's overthrow (Genesis 19:24-25 — 32:32's vine), the possessor of heaven and earth (14:19 — 32:6's acquired)
+MA_SODOM, MA_SCENE = MA.sodom, MA.scene; F('MA_KEYS', sorted(DD(MA))[:8])
+# family — Jacob's seventy souls (Genesis 46:27 — 32:8's number), the testament (49:33 — the gathering)
+FA_MROW, FA_TESTAMENT = FA.mrow, FA.testament; F('FA_KEYS', sorted(DD(FA))[:8])
+# balak — a people that dwells alone (Numbers 23:9 — 32:12's 'alone')
+BK_STANDS = BK.the_stands; F('BK_KEYS', sorted(DD(BK))[:8])
+# beha — the three gifts (the well, the cloud, the manna — Taanit 9a), the manna's taste and form
+F('BH_GIFTS', A(BH, 'taberah_and_quail', 'three_gifts')); F('BH_TASTE', A(BH, 'taberah_and_quail', 'manna_taste')); F('BH_FORM', A(BH, 'taberah_and_quail', 'manna_form'))
+# shelach — Hoshea to Joshua (Numbers 13:16 — 32:44's old name), the decree (14:16's 'lest they say')
+F('SH_NAME', A(SHL, 'spies', 'joshua_name')); SH_DECREE = SHL.decree   # the alias SHL — SH is the shared-run helper (the first pass's two errors)
+# not_righteousness — lest the land say (9:28 — 32:27's kin), the ten trials
+F('NR_LAND', A(NR, 'the_intercession', 'lest_the_land_say')); F('NR_TRIALS', A(NR, 'the_four_provocations', 'the_ten_trials'))
+# seven_nations — the holy people (7:6 — 32:9's portion beside it), chose you, the fewest, the oath (32:40's oath by kind)
+F('SN_HOLY', A(SN, 'the_holy_people', 'holy_people')); F('SN_CHOSE', A(SN, 'the_holy_people', 'chose_you')); F('SN_FEW', A(SN, 'the_holy_people', 'the_fewest')); F('SN_OATH', A(SN, 'the_holy_people', 'the_oath'))
+# hear_o_israel — the LORD is one (6:4 — 32:39's creed), teach your sons (6:7 — 32:46), the recitation times (Berakhot 1:1 — 333:4's case)
+F('HI_ONE', A(HI, 'the_creed', 'the_lord_is_one')); F('HI_TEACH', A(HI, 'the_four_duties', 'teach_your_sons')); F('HI_TIMES', DK(HI, 'the_recitation_times'))
+# blessing_and_curse — the rains' dates (11:14 — 32:2's four rains), the land watered by heaven
+F('BC_RAIN', DK(BC, 'rain_dates')); BC_WATER = BC.the_land_watered_by_heaven; F('BC_ASKS', ASKS(BC, 'the_land_watered_by_heaven')[:6])
+# firstfruits_ebal_curses — the eagle nation (28:49 — 32:21's foolish nation), the first fruits, the things without measure (18b's own row), the false six
+F('FE_EAGLE', A(FE, 'the_curses_of_the_siege_and_the_exile', 'a_nation_from_the_end_of_the_earth_as_the_eagle_flies')); F('FE_MEASURE', DK(FE, 'the_things_without_measure')); F('FE_SIX', DK(FE, 'the_false_six')); F('FE_FIRST_ASKS', ASKS(FE, 'the_first_fruits')[:6])
+# tochacha — the cascade (Leviticus 26:22's beasts, 26:25's sword — the arms), the measures (26:8's five chase a hundred)
+TC_CASCADE, TC_MEASURES, TC_COVENANT = TC.cascade, TC.measures, TC.covenant; F('TC_KEYS', sorted(DD(TC))[:8])
+# seducers — the inciter (13:7 — 32:17's 'gods they knew not')
+SE_INCITER = SE.the_inciter; F('SE_ASKS', ASKS(SE, 'the_inciter')[:6])
+# decalogue — the vain Name (5:11 — 328:4's Name profaned punished at once)
+DC_VAIN = DC.vain_name; F('DC_KEYS', sorted(DD(DC))[:8])
+# covenant_at_horeb — the assembly called (5:1 — 32:44's 'in the ears of the people')
+F('CH_FOUR', A(CH, 'the_assembly_called', 'hear_learn_keep_do'))
+# naso — the sota's order (Sotah 1:7 — the measure for measure at 308:4 and 318:8)
+F('NS_ORDER', DK(NS, 'sotah_order'))
+# incense_shekel — the ransom of the soul (Exodus 30:12 — 329:4's no ransom)
+IS_SHEKEL = IS.shekel; F('IS_KEYS', sorted(DD(IS))[:8])
+# festivals_judges — who appears, not empty, the gift of the hand (16:16 — the appearing among Peah 1:1's things without measure)
+F('FJ_WHO', A(FJ, 'the_three_pilgrimages', 'who_appears')); F('FJ_EMPTY', A(FJ, 'the_three_pilgrimages', 'not_empty')); F('FJ_HAND', A(FJ, 'the_three_pilgrimages', 'the_gift_of_the_hand'))
+# holiness — the gifts of the field (Leviticus 19:9-10 — the corner: Peah 3:2, Tosefta Peah 1:3)
+HL_GIFTS = HL.gifts; F('HL_ASKS', ASKS(HL, 'gifts')[:6])
+# vows — the substitutes' source (Nedarim 1:2 — 306:36), the konam measure, the sage's release (Chagigah 1:8's flying dissolution)
+F('VW_SUBS', DK(VW, 'substitutes_source')); F('VW_KONAM', DK(VW, 'konam_measure')); F('VW_SAGE', DK(VW, 'sage_release'))
+# food_tithe — the sonship's two arms (14:1 — 32:5's 'His children')
+F('FT_SONS', DK(FT, 'the_sonships_arms'))
+# gad_reuben — Moses' grave (Reuben's Nebo, Gad's field — Sotah 13b; the Sifrei 355:6)
+F('GR_GRAVE', DK(GR, 'moses_grave'))
+# borders — the land of Canaan by its border (Numbers 34:2 — 32:49's land of Canaan)
+F('BR_LAND', A(BR, 'the_land_and_its_fall', 'the_land_canaan'))
+# erection — the calf's argument (Exodus 32:12 — 32:27's 'lest they say'), the presence (the shown face against the hidden)
+ER_CALF, ER_PRESENCE = ER.calf, ER.presence; F('ER_KEYS', sorted(DD(ER))[:8])
+# sanctions — the burning's scope (Sanhedrin 9:1 — 307:14's burned and beheaded)
+SA_BURN = SA.burning_scope; F('SA_ASKS', ASKS(SA, 'burning_scope')[:6])
+# vayikra5 — the sacrilege (Leviticus 5:15 — Chagigah 1:8's mountains by a hair)
+V5_SAC = V5.sacrilege; F('V5_KEYS', sorted(DD(V5))[:8])
+# moadim — the feasts (Leviticus 23 — Chagigah 1:8's festival offerings)
+MD_SUK = MD.sukkot; F('MD_KEYS', sorted(DD(MD))[:8])
+# mekoshesh — the gatherer's labor (Numbers 15:32 — Chagigah 1:8's Sabbath laws by a hair)
+F('MK_LABOR', DK(MK, 'gatherers_labor'))
+# THE LIVE CALLS — one cell of every callee CALLED by its literal name (the dependency gate reads `alias.name(` in the runner's source — 19b's lesson: a DATA read is not a live edge; the gate's first print demanded twenty-four)
+F('FA_TESTAMENT', FA.testament('couch_seats')); F('OR_WITNESS', OR.courts('witness_of_violence')); F('PP_NEST_ASK', PP.the_garments_nest_parapet_and_mixtures({'ask': 'the_nest_before_you'}, DD(PP))); F('RF_WITNESSES', RF.the_statute({'ask': 'the_witnesses'}, DD(RF)))
+F('PV_ONE_LANGUAGE', PV.babel('one_language')); F('PV_PELEG', PV.nations('peleg_prophet')); F('PV_FLOOD_150', PV.flood('hundred_fifty')); F('PV_READING_ROW', PV.prologue('reading_row'))
+F('PS_SEVEN', PS.noahide('seven_from_root')); F('MA_LOT', MA.sodom('lot_learned_where')); F('MA_THREE', MA.mamre('three_men')); F('BK_MOST_HIGH', BK.the_stands({'ask': 'most_high_knowledge'}, DD(BK)))
+F('SH_DECREE_TRIALS', SHL.decree({'ask': 'ten_trials'}, DD(SHL))); F('BC_WATER_ASK', BC.the_land_watered_by_heaven({'ask': BC_ASKS[3]}, DD(BC))); F('TC_MEAS', TC.measures()); F('SE_INCITER_KIN', SE.the_inciter({'ask': 'the_inciters_kin'}, DD(SE)))
+F('DC_VAIN_OATH', DC.vain_name({'ask': 'vain_oath'}, DD(DC))); F('NS_SOTAH_CONDITIONS', NS.sotah({'ask': 'conditions'}, DD(NS))); F('IS_RANSOM', IS.shekel('ransom')); F('HL_KINDS', HL.gifts('kinds'))
+F('VW_MAN', VW.the_man({'ask': 'frame'}, DD(VW))); F('FT_SONS_ASK', FT.the_sons_and_the_cuttings({'ask': 'the_sonships_arms'}, DD(FT))); F('GR_CHARGE', GR.the_acceptance_and_the_charge({'ask': 'the_order_reversed'}, DD(GR)))
+F('ER_MOLTEN', ER.calf('molten_calf')); F('ER_TWELVE_MIL', ER.presence('twelve_mil')); F('SA_BURNED', SA.burning_scope()); F('V5_MEILAH', V5.sacrilege({'ask': 'meilah'}, DD(V5))); F('MD_SUKKOT', MD.sukkot()); F('MK_LABOR_ASK', MK.the_gatherer({'ask': 'labor'}, DD(MK)))
+print('THE CALLEES\' FACTS (printed before they are asserted — %d):' % len(FACTS_PRINT))
+for _n, _v in FACTS_PRINT: print('  FACT %s = %s' % (_n, repr(_v)[:150]))
+_FACT_ASSERTS_
