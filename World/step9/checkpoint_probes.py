@@ -52,7 +52,7 @@ def beyond_the_tape():
     import re as _re, sqlite3 as _sq
     src = open(os.path.join(HERE, 'cold_run_sequence.py'), encoding='utf-8').read()
     tape = src[src.find('# ==== TAPE BEGIN'):src.find('# ==== TAPE END ====')]
-    refs = _re.findall(r"'case_source': '(Gen|Exod|Lev|Num|Deut) (\d+):(\d+)", tape)
+    refs = _re.findall(r"'case_source': ['\"](Gen|Exod|Lev|Num|Deut) (\d+):(\d+)", tape)   # THE DEUTERONOMY WALK 21b (2026-09-29): EITHER QUOTE — a case source whose text carries an apostrophe (the blessing's frame) sits in the tape literal in double quotes by repr; the single-quote form read chapter 33's eleven lines as absent, stopped run_to at 33:1 and DO1, DO2, DO5 diverged in K1's world (the positions' finals MATCH)
     order = ['Gen', 'Exod', 'Lev', 'Num', 'Deut']
     last = max(refs, key=lambda r: (order.index(r[0]), int(r[1]), int(r[2])))
     db = _sq.connect('file:' + os.path.join(ROOT, 'Data', 'tanakh.sqlite') + '?mode=ro', uri=True)

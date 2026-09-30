@@ -1,0 +1,68 @@
+# ---- THE ASSERTS TYPED FROM THE PRINTS (block a: the dump's and the split's — the shelf by position, the divisions, the citations; the outside rows' facts COMPUTED) ----
+DT = ('Deut',)
+def PL(s): return ''.join(c for c in s if c != '/' and not (0x0591 <= ord(c) <= 0x05C7))
+def HB0(p, r): return PL(clean(sif_he[p - 1][r - 1]))
+def ARM(c, v): return [PL(unicodedata.normalize('NFKC', x)).strip('.:()') for x in clean(onk_he[c - 1][v - 1]).rstrip(':').split()]
+def SEATS(sub): return [(c + 1, v + 1) for c in range(34) for v in range(len(onk_he[c])) if sub in ' '.join(ARM(c + 1, v + 1))]
+# THE SHELF BY POSITION — THE SPINE IN FORCE on chapter 34: ONE head, 357 on 34:1 (the dump's window 335-357, the export's end); 356 on 33:27 before, NOTHING after; the heads by chapter as sitting 21's table printed them
+assert NV == {34: 12} and VC[33] == 29 and VC[32] == 52 and len(sif) == 357 and len(sif_he) == 357 and sum(len(s) for s in sif) == 2357 and sum(len(s) for s in sif_he) == 2357
+HC = Counter(h[0] for h in heads.values() if h)
+assert (HC[31], HC[32], HC[33], HC[34]) == (1, 36, 15, 1) and sorted(HC.items()) == [(1, 24), (3, 4), (6, 6), (11, 21), (12, 20), (13, 14), (14, 14), (15, 16), (16, 19), (17, 16), (18, 16), (19, 10), (20, 14), (21, 17), (22, 22), (23, 22), (24, 16), (25, 10), (26, 4), (31, 1), (32, 36), (33, 15), (34, 1)], sorted(HC.items())
+WIN = {335: (32, 46), 336: (32, 47), 337: (32, 48), 338: (32, 49), 339: (32, 50), 340: (32, 51), 341: (32, 52), 342: (33, 1), 343: (33, 2), 344: (33, 3), 345: (33, 4), 346: (33, 5), 347: (33, 6), 348: (33, 7), 349: (33, 8), 350: (33, 9), 351: (33, 10), 352: (33, 11), 353: (33, 13), 354: (33, 18), 355: (33, 20), 356: (33, 27), 357: (34, 1)}
+assert {p: heads[p] for p in range(335, 358)} == WIN, {p: heads[p] for p in range(335, 358) if heads[p] != WIN[p]}
+assert heads[357] == (34, 1) and 358 not in heads and HB0(357, 1).startswith('(דברים לד א) ויעל משה מערבת מואב, עליה היא ואינה ירידה') and 'And Moses ascended' in clean(sif[356][0]), (heads[357], HB0(357, 1)[:60])   # 357:1 opens with 34:1's citation: "and Moses went up — an ascent and not a descent"
+HV = {c: [heads[p][1] for p in PISKAOT_BY[c] if heads[p]] for c in CHS}
+assert HV == {34: [1]}, HV
+NOHEAD = {c: [v for v in range(1, NV[c] + 1) if v not in HV[c]] for c in CHS}
+assert NOHEAD == {34: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}, NOHEAD   # eleven verses without a head of their own — every one inside 357 (the one piska carries the whole chapter: the land shown, the oath, the death, the burial, the years, the weeping, Joshua, the prophet, the signs)
+assert {p: (len(sif_he[p - 1]), len(sif[p - 1])) for p in PISKAOT} == {p: (n, n) for p, n in SPINE_ROWS.items()} and sum(SPINE_ROWS.values()) == 44 and len(READ_ROWS) == 44 and len(PISKAOT) == 1 and READ_ROWS[0] == (357, 1) and READ_ROWS[-1] == (357, 44)
+# THE TAILS AND THE EDGES (the split's print): 356's fourteen rows carry no word of 34:1 ("and Moses went up"); 356:14 ends on Joshua 10:24's necks; 357:1 opens with 34:1's ascent; 357:43 reads the mighty hand as the plague of the firstborn and the great terror as the splitting of the sea; 357:44 — THE EXPORT'S LAST ROW — ends on the tablets broken "in the sight of all Israel" (9:17 against 34:12); no piska after 357
+assert not any('ויעל משה' in HB0(356, r) for r in range(1, 15)) and HB0(356, 14).startswith('ואתה על במותימו תדרוך') and '(יהושע י כד)' in HB0(356, 14) and HB0(357, 43) == 'ולכל היד החזקה, זו מכת בכורות. ולכל המורא הגדול, זו קריעת ים סוף.' and HB0(357, 44).startswith('רבי אלעזר אומר: לכל האתת והמופתים ומנין אף לפני הר סיני') and '(דברים ט יז)' in HB0(357, 44) and HB0(357, 44).endswith('אשר עשה משה לעיני כל ישראל.')
+assert all(clean(sif[p - 1][0]).startswith('Pisqa’ %d' % p) for p in PISKAOT) and 'And Moses ascended' in clean(sif[356][0]) and 'The Primordial God is a refuge' in clean(sif[355][0])   # the English rows open with the translator's apparatus before the text (sitting 19's lesson)
+# THE CITATIONS PARSED FROM THE DUMP'S PRINT (the instrument's own lists read back): the row-citations per file, the union, the outside set; the divisions; the store
+import ast as _ast
+_t = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ch34_dump0.out'), encoding='utf-8').read()
+_HE = _ast.literal_eval(re.search(r'^  HE rows citing Deut 34[^:]*: \d+ (\[.*\])$', _t, re.M).group(1)); _EN = _ast.literal_eval(re.search(r'^  EN rows citing Deut 34[^:]*: \d+ (\[.*\])$', _t, re.M).group(1))
+_un = int(re.search(r'^  the union of rows \(both files\): (\d+) \[', _t, re.M).group(1)); _out = _ast.literal_eval(re.search(r'^  the rows OUTSIDE the spine piskaot [^:]*: \d+ (\[.*?\]) \|', _t, re.M).group(1)); _insp = int(re.search(r'\| in-spine rows of the union: (\d+)$', _t, re.M).group(1))
+_two = re.search(r'^  DB verses (\d+) \| export verses HE (\d+) EN (\d+) \| per-chapter export lengths vs DB, chapters 1-34: (\[.*\])$', _t, re.M); _cost = int(re.search(r'^  the alignment cost (\d+) \|', _t, re.M).group(1))
+_mis = _ast.literal_eval(re.search(r'verses whose store token count differs from the DB: (\[.*?\])$', _t, re.M).group(1)); _tok = int(re.search(r'^  token count chapter 34 : (\d+)$', _t, re.M).group(1))
+assert (len(_HE), len(_EN), _un, _insp) == (13, 66, 43, 41) and _out == OUTSIDE and len(_out) == 2, (len(_HE), len(_EN), _un, _insp, _out)   # 13 Hebrew and 66 English row-citations; the union 43 rows — 41 inside 357 (three of its rows cite nothing in the Hebrew and 34's verse in neither file: 357:14, 23, 25), 2 outside
+assert tuple(int(x) for x in _two.groups()[:3]) == (12, 12, 12) and _two.group(4) == '[(5, 30, 33)]' and _cost == 5, 'THE TWO DIVISIONS: the identity; chapter 5 the book\'s one split'
+assert _mis == [] and _tok == 176, (_mis, _tok)   # THE STORE = THE DB at every verse (no ketiv-qere doubling in the chapter); 176 tokens
+_sp = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ch34_split.out'), encoding='utf-8').read()
+assert re.search(r'^spine piskaot 357 - 357 1 \| rows per piska \{357: 44\} \| totals \{34: 44\} 44$', _sp, re.M) and re.search(r'^the run plan under 90000 bytes a slice: \[\(\(357, 357\), 1, 42152\)\] \| slices 1$', _sp, re.M) and 'after: NO PISKA — the export ends at 357' in _sp
+_seat = _ast.literal_eval(re.search(r'^the rows of 357 citing a chapter-34 verse in the Hebrew \(the seat rule by row\): (\[.*\])$', _sp, re.M).group(1))
+SEAT_ROWS = {r: vs[0] for r, vs in _seat}   # the citing rows of 357 and the verse each cites (the Hebrew marker) — the seat rule by row's anchors
+assert SEAT_ROWS == {1: 1, 8: 2, 19: 3, 26: 4, 28: 5, 31: 6, 33: 7, 36: 8, 38: 9, 40: 10, 42: 11} and all(len(vs) == 1 for _, vs in _seat), SEAT_ROWS   # eleven citing rows, one per verse 34:1-11 in order; 34:12 cited by no Hebrew marker (its words quoted at 357:43-44 — the English cites it there)
+# THE OUTSIDE ROWS' FACTS COMPUTED from the dump's lists: the verses each row cites (the DB's numbering), the heads of their piskaot, the prior reads from the ledgers, the fresh rows
+CITED = {}
+for _p, _r, _e, _dbv in _HE + _EN:
+    if (_p, _r) in OUTSIDE:
+        for _d in _dbv: CITED.setdefault((_p, _r), set()).add((34, _d))
+CITED = {k: sorted(v) for k, v in sorted(CITED.items())}
+assert sorted(CITED) == OUTSIDE, (sorted(set(OUTSIDE) - set(CITED)), sorted(set(CITED) - set(OUTSIDE)))
+assert CITED == {(305, 5): [(34, 6)], (341, 1): [(34, 4)]}, CITED   # the angel of death sent for Moses' soul and the burial by the Holy One (305:5 on 34:6, from 31:14's piska, headless); "from afar you shall see the land" read against "you shall not cross over" (341:1 on 34:4, from 32:52's piska)
+HEADS_ON = {p: heads[p] for p in sorted({p for p, _ in OUTSIDE})}
+assert HEADS_ON == {305: None, 341: (32, 52)}, HEADS_ON   # 305's first row opens with no citation marker (headless to the instrument — the piska of 31:14 "behold, your days approach to die")
+assert HB0(305, 5).startswith('באותה שעה אמר הקדוש ברוך הוא למלאך המות: לך והבא לי נשמתו של משה') and HB0(341, 1).startswith('(דברים לב נב) כי מנגד תראה את הארץ ושמה לא תבא, נאמר כאן ושמה לא תבא ונאמר להלן'), (HB0(305, 5)[:60], HB0(341, 1)[:60])
+_TRI = f'{ROOT}/logic/oral_triage'
+LED = {f: open(f'{_TRI}/{f}', encoding='utf-8').read() for f in os.listdir(_TRI) if f.endswith('.md') and os.path.isfile(f'{_TRI}/{f}') and f != os.path.basename(OUT)}
+SPINE_PRIOR = sorted({(f, int(a), int(b)) for f, t in LED.items() for a, b in re.findall(r'Sifrei Devarim (\d+):(\d+)', t) if int(a) in PISKAOT})
+PRIOR_READ = {}
+for f, t in LED.items():
+    for a, b in re.findall(r'Sifrei Devarim (\d+):(\d+)', t):
+        if (int(a), int(b)) in OUTSIDE: PRIOR_READ.setdefault((int(a), int(b)), []).append(f)
+PRIOR_READ = {k: sorted(set(v)) for k, v in sorted(PRIOR_READ.items())}
+FRESH = [k for k in OUTSIDE if k not in PRIOR_READ]
+assert SPINE_PRIOR == [('deu_05_vaetchanan_2026-09-16.md', 357, 40), ('deu_09_ekev_2026-09-19.md', 357, 44), ('deu_29_31_nitzavim_vayelech_2026-09-27.md', 357, 28), ('deu_32_haazinu_2026-09-27.md', 357, 27)], SPINE_PRIOR   # FOUR spine rows READ BEFORE over four ledgers (the dump's list): no prophet like Moses (357:40 at chapter 5), the tablets broken (357:44 at chapter 9), Moses died there (357:28 at 29-31), you shall not cross over (357:27 at the song) — REREAD WHOLE here under the whole-row rule and marked so
+assert sorted(PRIOR_READ) == OUTSIDE and FRESH == [] and PRIOR_READ == {(305, 5): ['deu_29_31_nitzavim_vayelech_2026-09-27.md'], (341, 1): ['deu_32_haazinu_2026-09-27.md']}, (PRIOR_READ, FRESH)   # EVERY OUTSIDE ROW READ BEFORE — 305:5 at chapters 29-31, 341:1 at the song: none fresh (the walk's second reading without a fresh outside row)
+# THE FRAMES AND THE NAMES (the dump's D section): ONE divine frame with "saying" — 34:4 "and the LORD said to him … saying" (the oath to the fathers); "for" (ki) at 34:9 alone; no "if", no "lest"; no imperative; ONE prohibition-form "you shall not cross over" (34:4); the first person at 34:4 alone (I swore, I will give it, I have caused you to see); the second person singular at 34:4 alone
+assert [(c, v) for c, v in SPAN if 'לאמר' in W(c, v)] == [(34, 4)] and [(c, v) for c, v in SPAN for i, x in enumerate(W(c, v)[:-1]) if x == 'ויאמר' and W(c, v)[i + 1] == 'יהוה'] == [(34, 4)] and [(c, v) for c, v in SPAN if 'כי' in W(c, v)] == [(34, 9)] and [(c, v) for c, v in SPAN if 'אם' in W(c, v) or 'ואם' in W(c, v) or 'פן' in W(c, v)] == []
+NARR = {v: [x for x, m in wm('Deut', 34, v) if m and re.search(r'V.w', m)] for _, v in SPAN if any(m and re.search(r'V.w', m) for _, m in wm('Deut', 34, v))}
+assert NARR == {1: ['ויעל', 'ויראהו'], 4: ['ויאמר'], 5: ['וימת'], 6: ['ויקבר'], 8: ['ויבכו', 'ויתמו'], 9: ['וישמעו', 'ויעשו']}, NARR   # the narrative past: he went up, He showed him (34:1); He said (34:4); he died (34:5); He buried (34:6); they wept, they were ended (34:8); they hearkened, they did (34:9) — nine acts in six verses; 34:2-3, 7, 10-12 verbless or descriptive
+assert [(v, x) for _, v in SPAN for x, m in wm('Deut', 34, v) if m and re.search(r'^HV..v', m)] == [] and [(v, x) for _, v in SPAN for x, m in wm('Deut', 34, v) if m and re.search(r'1c[sp]', m) and m.startswith('HV')] == [(4, 'נשבעתי'), (4, 'אתננה'), (4, 'הראיתיך')] and {v: sum(1 for _, m in wm('Deut', 34, v) if m and '2ms' in m) for _, v in SPAN if any(m and '2ms' in m for _, m in wm('Deut', 34, v))} == {4: 4}
+assert 'לא' in W(34, 4) and W(34, 4)[W(34, 4).index('לא') + 1] == 'תעבר' and sum(1 for c, v in SPAN for x in W(c, v) if x in ('לא', 'ולא')) == 5 and [(c, v) for c, v in SPAN if any(x in ('לא', 'ולא') for x in W(c, v))] == [(34, 4), (34, 6), (34, 7), (34, 10)]   # "not" five times: you shall not cross over (34:4), no man knows (34:6), his eye not dim, his force not abated (34:7), no prophet arose (34:10)
+assert 'משה' in W(34, 1) and 'נבו' in W(34, 1) and 'הפסגה' in W(34, 1) and 'ירחו' in W(34, 1) and 'הגלעד' in W(34, 1) and 'דן' in W(34, 1) and 'נפתלי' in W(34, 2) and 'אפרים' in W(34, 2) and 'ומנשה' in W(34, 2) and 'יהודה' in W(34, 2) and 'צער' in W(34, 3) and 'לאברהם' in W(34, 4) and 'ליצחק' in W(34, 4) and 'וליעקב' in W(34, 4) and 'פעור' in W(34, 6) and 'ויהושע' in W(34, 9) and 'נון' in W(34, 9) and 'מצרים' in W(34, 11) and 'לפרעה' in W(34, 11)
+assert [(c, v) for c, v in SPAN if 'ישראל' in W(c, v)] == [(34, 8), (34, 9), (34, 12)] and 'בישראל' in W(34, 10) and 'כמשה' in W(34, 10) and [(c, v) for c, v in SPAN if 'מואב' in W(c, v)] == [(34, 1), (34, 5), (34, 6), (34, 8)] and 'מערבת' in W(34, 1) and 'בערבת' in W(34, 8)   # Israel at 34:8, 9, 12 and "in Israel" 34:10; Moab FOUR times — the plains of Moab at 34:1 and 34:8, the land of Moab at 34:5 and 34:6 (the first pass typed three from memory; the print says four)
+assert 'מאה' in W(34, 7) and 'ועשרים' in W(34, 7) and 'שלשים' in W(34, 8) and W(34, 7)[:5] == ['ומשה', 'בן', 'מאה', 'ועשרים', 'שנה'] and W(34, 8)[7:9] == ['שלשים', 'יום']   # the two number seats: a hundred and twenty years (34:7 — 31:2's number), thirty days (34:8)
+assert [(c, v, x) for c, v in SPAN for x in W(c, v) if x in ('יהוה', 'ליהוה', 'ביהוה', 'ויהוה')] == [(34, 1, 'יהוה'), (34, 4, 'יהוה'), (34, 5, 'יהוה'), (34, 5, 'יהוה'), (34, 9, 'יהוה'), (34, 10, 'יהוה'), (34, 11, 'יהוה')] and not any(x in ('אלהים', 'האלהים', 'אלהיך', 'אלהי', 'אלוה') for c, v in SPAN for x in W(c, v)) and [(c, v) for c, v in SPAN if 'אל' in W(c, v)] == [(34, 1), (34, 10)]   # the Name SEVEN times bare (34:1, 4, 5 twice — the servant of the LORD, by the mouth of the LORD — 9, 10, 11); no "God" in the chapter — the two-letter "el" at 34:1 ("to Mount Nebo") and 34:10 ("face to face") is the PREPOSITION, a homograph of God's name for the compile's scans (the first pass counted it as God)
