@@ -13,13 +13,12 @@ tape of events in verse order; every verse adds a line or installs a law (a daem
 EVERYTHING ELSE IN A COMPUTER PROGRAM (his frame). The repo <repo> = /Users/Shared/TorahSim, public under CC0 at
 github.com/Josephtorah/TorahSim.
 
-## 2. WHERE IT STANDS (2026-09-30; #243 + its NOTE — sitting 22 DONE, newest)
-- NUMBERS CLOSED. DEUTERONOMY 1:1-34:12 READ AND FROZEN (1-32 PUSHED through 472d2a3; 33 READ + COMPILED, 34 READ — uncommitted); 34 not yet on the tape.
-- units 251 / standing 2377, hash 8b8fff1fa28953af. 78 runners, 83 daemons; 1280 kinds / 1469 effects.
-- THE TAPE at RUN (1450, 102, 94, 0, 12, 2076, 54, 319, pairs, 127); 10/10; MARKERS 173 — Moses' last day (40, 12, 7) at 31:1; checkpoint_check 356 rows, 18 miss.
-- ⚠ THE LEAN PASS (#208): 16-34 lean; the full process OWED. A MARKER or BIG-CALLEE compile splits RUN B.
-- 22 (ch 34 READ, LEAN — THE DEATH OF MOSES; the spine's LAST piska 357, 44 rows whole; one unit) DONE at #243's NOTE: 59 sources; 6 claims by THE SEAT RULE BY ROW; FROZEN; chain ALL GREEN on its first pass; the patch 9+54; UNCOMMITTED with 21 and 21b since 472d2a3. NEXT: the commit on his word; then 22b (the compile of 34) — DEUTERONOMY CLOSES.
-
+## 2. WHERE IT STANDS (2026-09-30; #245 — sitting 22b RUN B, newest)
+- NUMBERS CLOSED. DEUTERONOMY 1:1-34:12 READ, FROZEN AND COMPILED — 1-34 ON THE TAPE; 1-33 PUSHED through ec23cf1; 22b UNCOMMITTED (the chain running).
+- units 251 / standing 2377, hash 8b8fff1fa28953af. 79 runners, 84 daemons; 1286 kinds / 1481 effects.
+- THE TAPE at RUN (1456, 102, 94, 0, 12, 2091, 55, 319, '…', 127); 9/10 at RUN B (three older verdicts moved by the reuses, retyped; the chain confirms); MARKERS 173 — Moses' last day (40, 12, 7) at 31:1; checkpoint_check 361 rows, 21 miss.
+- ⚠ THE LEAN PASS (#208): 16-34 lean; the full process OWED.
+- 22b (THE COMPILE OF 34 — THE LAST) RUN B at #245: the types, the runner 23/23, the tape, the receipt 34:9 ACT (the gate's print), THE CHAIN LAUNCHED (ch34b_gates.DONE, its SUMMARY). NEXT: THE TAIL on "Reread"/"Go" after a compaction — the summary once, the records, the message; the commit on his word — DEUTERONOMY CLOSES.
 
 ## 3. THE STANDING LAWS (owner-ruled; verbatim in spirit — long forms: addenda §3)
 - NO AGENTS EVER; main thread only; a sitting opens on his word. DISCUSSION IS NOT A RULING. READ THEN COMPILE PER PORTION, never read ahead.

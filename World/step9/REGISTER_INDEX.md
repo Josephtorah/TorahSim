@@ -1,7 +1,7 @@
 # REGISTER_INDEX.md — written by register_census.py each run (documentation, never runtime)
 
-THE REGISTER GATE — the ink's own formulas against the world (population table rows 148; ledger entries 2088)
-COVERAGE: counts 110 {'MEASURE-ONLY': 44, 'NONE': 16, 'ELSEWHERE': 14, 'ROW': 29, 'LEDGER': 7}; receipts 69 {'CHAPTER': 11, 'NONE': 12, 'ACT': 25, 'EVENT': 5, 'CLOSE': 16}; footers 9 {'DAEMONS': 8, 'EMPTY': 1}; registers 18 {'NONE': 14, 'ROWS': 4}
+THE REGISTER GATE — the ink's own formulas against the world (population table rows 148; ledger entries 2103)
+COVERAGE: counts 110 {'MEASURE-ONLY': 44, 'NONE': 16, 'ELSEWHERE': 14, 'ROW': 29, 'LEDGER': 7}; receipts 69 {'CHAPTER': 11, 'NONE': 11, 'ACT': 26, 'EVENT': 5, 'CLOSE': 16}; footers 9 {'DAEMONS': 8, 'EMPTY': 1}; registers 18 {'NONE': 14, 'ROWS': 4}
 DECLARED 98; DEBT 0; FAILS 0
 -- A. THE COUNT LINES (110)
    Gen 11:10   MEASURE-ONLY  green    footer: these are the generations of [100, 2] | measures [100, 2]
@@ -183,7 +183,7 @@ DECLARED 98; DEBT 0; FAILS 0
    Deut 5:32   CHAPTER       declared  | [('moses', 'commanded')] | why: THE DEUTERONOMY WALK 3b (2026-09-16) | "you shall observe to do AS THE LORD YOUR GOD COMMANDED YOU; 
    Deut 10:5   ACT           declared  | [('the_ark', 'fragments_in_the_ark', 'status')] | why: THE DEUTERONOMY WALK 8b (2026-09-20) | "and I turned and came down from the mountain, and put the ta
    Deut 20:17  ACT           declared  | [('israel_people', 'nothing_alive_left_commanded', 'status'), ('israel_people', 'abominations_teaching_barred' | why: THE DEUTERONOMY WALK 16b (2026-09-25; LEAN) | 'but you shall utterly devote them … AS THE LORD YOUR 
-   Deut 34:9   NONE          declared  | [] | why: Deuteronomy is not on the tape (the book not read) — the seat waits for its reading and compile
+   Deut 34:9   ACT           declared  | [('israel_people', 'israel_hearkened_to_joshua_as_the_lord_commanded_moses', 'status'), ('israel_people', 'no_ | why: THE DEUTERONOMY WALK 22b (2026-09-30; LEAN) | 'and the children of Israel hearkened to him, and did 
 -- C. THE FOOTERS AND HEADERS (9)
    Exod 21:1   DAEMONS       green    HEADER judgments stamp none block (Exod 21:1, Lev 26:46] daemons 32 {'covenant_blood_thrown': 10, 'boot': 1, 'erected': 3, 'called_from_the_tent': 15, 'milluim_blood_sprinkled': 1, 'sentence_declared': 1, 'entered_the_land': 1} | law_slave_term@Exod 21:2 law_mishpatim_3@Exod 21:7 law_mishpatim_2@Exod 21:22 law_goring_ox@Exod 21:28 law_gua
    Lev 26:46   DAEMONS       green    FOOTER statutes stamp sinai block (Exod 21:1, Lev 26:46] daemons 32 {'covenant_blood_thrown': 10, 'boot': 1, 'erected': 3, 'called_from_the_tent': 15, 'milluim_blood_sprinkled': 1, 'sentence_declared': 1, 'entered_the_land': 1} | law_slave_term@Exod 21:2 law_mishpatim_3@Exod 21:7 law_mishpatim_2@Exod 21:22 law_goring_ox@Exod 21:28 law_gua
