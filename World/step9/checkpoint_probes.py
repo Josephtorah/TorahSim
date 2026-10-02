@@ -48,7 +48,9 @@ _W = {}
 def beyond_the_tape():
     """THE DEUTERONOMY WALK 2b (2026-09-16): the first verse of the chapter AFTER the tape's last line, read from the sequence file's own tape section
     and checked against the Tanakh DB (a verse beyond the tape runs the whole tape); at a book's last chapter the next book's 1:1 in the tape's order;
-    past the fifth book the last verse itself (then run_to needs a whole-tape form — filed)."""
+    past the fifth book the NEXT VERSE of the last chapter when it exists (THE DEUTERONOMY WALK 22b, 2026-10-01: the tape ended at Deut 34:10, the Torah's last
+    line; the last verse itself stopped run_to at its LEFT EDGE, the sixth line unrun, and DP1 diverged at index 319 of K1's list — the fourth pass's checkpoint.out);
+    a last line at a chapter's last verse would still need run_to's whole-tape form — filed."""
     import re as _re, sqlite3 as _sq
     src = open(os.path.join(HERE, 'cold_run_sequence.py'), encoding='utf-8').read()
     tape = src[src.find('# ==== TAPE BEGIN'):src.find('# ==== TAPE END ====')]
@@ -60,6 +62,8 @@ def beyond_the_tape():
     b, c = last[0], int(last[1])
     if exists(b, c + 1, 1): return '%s %d:1' % (b, c + 1)
     if order.index(b) + 1 < len(order): return '%s 1:1' % order[order.index(b) + 1]
+    v = int(last[2])
+    if exists(b, c, v + 1): return '%s %d:%d' % (b, c, v + 1)   # THE DEUTERONOMY WALK 22b (2026-10-01): the Torah's end — the verse after the tape's last line in its own chapter (Deut 34:11 — no line at or after it: the whole tape runs)
     return '%s %s:%s' % last
 
 

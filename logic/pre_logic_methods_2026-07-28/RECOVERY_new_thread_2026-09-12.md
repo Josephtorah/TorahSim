@@ -13,12 +13,12 @@ tape of events in verse order; every verse adds a line or installs a law (a daem
 EVERYTHING ELSE IN A COMPUTER PROGRAM (his frame). The repo <repo> = /Users/Shared/TorahSim, public under CC0 at
 github.com/Josephtorah/TorahSim.
 
-## 2. WHERE IT STANDS (2026-10-01 10:38; #245 + its MID-TAIL NOTE — sitting 22b's tail INTERRUPTED for a reboot, newest)
-- NUMBERS CLOSED. DEUTERONOMY 1:1-34:12 READ, FROZEN AND COMPILED — ON THE TAPE; 1-34 PUSHED through d30a31a (22b's RUN B) and the interruption commit after it; the tree clean.
-- units 251 / standing 2377. 79 runners, 84 daemons; 1286 kinds / 1481 effects.
-- THE TAPE at RUN (1456, …, 2091, 55, 319, …, 127); 10/10 at the third pass (killed at the positions); MARKERS 173 — (40, 12, 7) at 31:1.
-- ⚠ THE LEAN PASS (#208): 16-34 lean; the full process OWED.
-- 22b MID-TAIL: the runner 23/23, the receipt ACT, passes 1-2 red at one literal each (retyped), pass 3 KILLED at the positions. ⚠ THE RESUME: read logic/pre_logic_methods_2026-07-28/RESUME_22b_tail_2026-10-01.md WHOLE, then on his word the FOURTH PASS from the forms folder (ch34b_gates4.sh), the SUMMARY once, write_ch34b_tail.py --check/--write, the home gate; the commit on his word — DEUTERONOMY CLOSES.
+## 2. WHERE IT STANDS (2026-10-01; #245 + its NOTE — 22b's tail, newest)
+- DEUTERONOMY CLOSED 2026-10-01: 1:1-34:12 READ, FROZEN AND COMPILED — THE TORAH ON ONE TAPE; 1-34 PUSHED through d30a31a (22b's RUN B); the tail's records UNCOMMITTED.
+- units 251 / standing 2377, hash 8b8fff1fa28953af. 79 runners, 84 daemons; 1286 kinds / 1481 effects.
+- THE TAPE at RUN (1456, 102, 94, 0, 12, 2091, 55, 319); 10/10; MARKERS 173 — Moses' last day (40, 12, 7), 31:1; checkpoint_check 361/21 miss.
+- ⚠ THE LEAN PASS (#208): 16-34 lean; the full process OWED (COMPILE_DEBT 1-17).
+- 22b DONE (THE COMPILE OF 34 — THE LAST): the runner 23/23, the receipt 34:9 ACT, the chain SIX TIMES (the scan list; the heaven count 10 -> 11; the third killed for a reboot; the fourth red at K1 (the probe's helper at the Torah's end); the fifth at the sweep (a count moved by the reuse); the sixth from the tape, killed in the sweep on his word and resumed there ALL GREEN). NEXT: the commit on his word; then his word.
 
 ## 3. THE STANDING LAWS (owner-ruled; verbatim in spirit — long forms: addenda §3)
 - NO AGENTS EVER; main thread only; a sitting opens on his word. DISCUSSION IS NOT A RULING. READ THEN COMPILE PER PORTION, never read ahead.
